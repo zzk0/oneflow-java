@@ -48,11 +48,11 @@ public  final class TensorSliceViewProto extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              dim_ = new java.util.ArrayList<oneflow.Range.RangeProto>();
+              dim_ = new java.util.ArrayList<org.oneflow.core.common.RangeProto>();
               mutable_bitField0_ |= 0x00000001;
             }
             dim_.add(
-                input.readMessage(oneflow.Range.RangeProto.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.common.RangeProto.PARSER, extensionRegistry));
             break;
           }
         }
@@ -83,17 +83,17 @@ public  final class TensorSliceViewProto extends
   }
 
   public static final int DIM_FIELD_NUMBER = 1;
-  private java.util.List<oneflow.Range.RangeProto> dim_;
+  private java.util.List<org.oneflow.core.common.RangeProto> dim_;
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  public java.util.List<oneflow.Range.RangeProto> getDimList() {
+  public java.util.List<org.oneflow.core.common.RangeProto> getDimList() {
     return dim_;
   }
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  public java.util.List<? extends oneflow.Range.RangeProtoOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.common.RangeProtoOrBuilder> 
       getDimOrBuilderList() {
     return dim_;
   }
@@ -106,13 +106,13 @@ public  final class TensorSliceViewProto extends
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  public oneflow.Range.RangeProto getDim(int index) {
+  public org.oneflow.core.common.RangeProto getDim(int index) {
     return dim_.get(index);
   }
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  public oneflow.Range.RangeProtoOrBuilder getDimOrBuilder(
+  public org.oneflow.core.common.RangeProtoOrBuilder getDimOrBuilder(
       int index) {
     return dim_.get(index);
   }
@@ -441,22 +441,22 @@ public  final class TensorSliceViewProto extends
     }
     private int bitField0_;
 
-    private java.util.List<oneflow.Range.RangeProto> dim_ =
+    private java.util.List<org.oneflow.core.common.RangeProto> dim_ =
       java.util.Collections.emptyList();
     private void ensureDimIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        dim_ = new java.util.ArrayList<oneflow.Range.RangeProto>(dim_);
+        dim_ = new java.util.ArrayList<org.oneflow.core.common.RangeProto>(dim_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Range.RangeProto, oneflow.Range.RangeProto.Builder, oneflow.Range.RangeProtoOrBuilder> dimBuilder_;
+        org.oneflow.core.common.RangeProto, org.oneflow.core.common.RangeProto.Builder, org.oneflow.core.common.RangeProtoOrBuilder> dimBuilder_;
 
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public java.util.List<oneflow.Range.RangeProto> getDimList() {
+    public java.util.List<org.oneflow.core.common.RangeProto> getDimList() {
       if (dimBuilder_ == null) {
         return java.util.Collections.unmodifiableList(dim_);
       } else {
@@ -476,7 +476,7 @@ public  final class TensorSliceViewProto extends
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public oneflow.Range.RangeProto getDim(int index) {
+    public org.oneflow.core.common.RangeProto getDim(int index) {
       if (dimBuilder_ == null) {
         return dim_.get(index);
       } else {
@@ -487,7 +487,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder setDim(
-        int index, oneflow.Range.RangeProto value) {
+        int index, org.oneflow.core.common.RangeProto value) {
       if (dimBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -504,7 +504,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder setDim(
-        int index, oneflow.Range.RangeProto.Builder builderForValue) {
+        int index, org.oneflow.core.common.RangeProto.Builder builderForValue) {
       if (dimBuilder_ == null) {
         ensureDimIsMutable();
         dim_.set(index, builderForValue.build());
@@ -517,7 +517,7 @@ public  final class TensorSliceViewProto extends
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public Builder addDim(oneflow.Range.RangeProto value) {
+    public Builder addDim(org.oneflow.core.common.RangeProto value) {
       if (dimBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -534,7 +534,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder addDim(
-        int index, oneflow.Range.RangeProto value) {
+        int index, org.oneflow.core.common.RangeProto value) {
       if (dimBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -551,7 +551,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder addDim(
-        oneflow.Range.RangeProto.Builder builderForValue) {
+        org.oneflow.core.common.RangeProto.Builder builderForValue) {
       if (dimBuilder_ == null) {
         ensureDimIsMutable();
         dim_.add(builderForValue.build());
@@ -565,7 +565,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder addDim(
-        int index, oneflow.Range.RangeProto.Builder builderForValue) {
+        int index, org.oneflow.core.common.RangeProto.Builder builderForValue) {
       if (dimBuilder_ == null) {
         ensureDimIsMutable();
         dim_.add(index, builderForValue.build());
@@ -579,7 +579,7 @@ public  final class TensorSliceViewProto extends
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
     public Builder addAllDim(
-        java.lang.Iterable<? extends oneflow.Range.RangeProto> values) {
+        java.lang.Iterable<? extends org.oneflow.core.common.RangeProto> values) {
       if (dimBuilder_ == null) {
         ensureDimIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -619,14 +619,14 @@ public  final class TensorSliceViewProto extends
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public oneflow.Range.RangeProto.Builder getDimBuilder(
+    public org.oneflow.core.common.RangeProto.Builder getDimBuilder(
         int index) {
       return getDimFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public oneflow.Range.RangeProtoOrBuilder getDimOrBuilder(
+    public org.oneflow.core.common.RangeProtoOrBuilder getDimOrBuilder(
         int index) {
       if (dimBuilder_ == null) {
         return dim_.get(index);  } else {
@@ -636,7 +636,7 @@ public  final class TensorSliceViewProto extends
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public java.util.List<? extends oneflow.Range.RangeProtoOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.common.RangeProtoOrBuilder> 
          getDimOrBuilderList() {
       if (dimBuilder_ != null) {
         return dimBuilder_.getMessageOrBuilderList();
@@ -647,31 +647,31 @@ public  final class TensorSliceViewProto extends
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public oneflow.Range.RangeProto.Builder addDimBuilder() {
+    public org.oneflow.core.common.RangeProto.Builder addDimBuilder() {
       return getDimFieldBuilder().addBuilder(
-          oneflow.Range.RangeProto.getDefaultInstance());
+          org.oneflow.core.common.RangeProto.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public oneflow.Range.RangeProto.Builder addDimBuilder(
+    public org.oneflow.core.common.RangeProto.Builder addDimBuilder(
         int index) {
       return getDimFieldBuilder().addBuilder(
-          index, oneflow.Range.RangeProto.getDefaultInstance());
+          index, org.oneflow.core.common.RangeProto.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.RangeProto dim = 1;</code>
      */
-    public java.util.List<oneflow.Range.RangeProto.Builder> 
+    public java.util.List<org.oneflow.core.common.RangeProto.Builder> 
          getDimBuilderList() {
       return getDimFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Range.RangeProto, oneflow.Range.RangeProto.Builder, oneflow.Range.RangeProtoOrBuilder> 
+        org.oneflow.core.common.RangeProto, org.oneflow.core.common.RangeProto.Builder, org.oneflow.core.common.RangeProtoOrBuilder> 
         getDimFieldBuilder() {
       if (dimBuilder_ == null) {
         dimBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.Range.RangeProto, oneflow.Range.RangeProto.Builder, oneflow.Range.RangeProtoOrBuilder>(
+            org.oneflow.core.common.RangeProto, org.oneflow.core.common.RangeProto.Builder, org.oneflow.core.common.RangeProtoOrBuilder>(
                 dim_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

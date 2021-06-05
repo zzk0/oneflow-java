@@ -144,15 +144,15 @@ public final class JobOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.DlnetConf.getDescriptor(),
-          oneflow.PlacementOuterClass.getDescriptor(),
-          oneflow.JobConf.getDescriptor(),
+          org.oneflow.core.job.DlnetConf.getDescriptor(),
+          org.oneflow.core.job.PlacementOuterClass.getDescriptor(),
+          org.oneflow.core.job.JobConf.getDescriptor(),
           org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor(),
           org.oneflow.core.register.OpBlobArgOuterClass.getDescriptor(),
           org.oneflow.core.register.BlobDesc.getDescriptor(),
-          oneflow.OpConf.getDescriptor(),
-          oneflow.SbpParallelOuterClass.getDescriptor(),
-          oneflow.LbiDiffWatcherInfoOuterClass.getDescriptor(),
+          org.oneflow.core.operator.OpConf.getDescriptor(),
+          org.oneflow.core.job.SbpParallelOuterClass.getDescriptor(),
+          org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_JobParallelViewConf_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -220,15 +220,15 @@ public final class JobOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_Job_descriptor,
         new java.lang.String[] { "Net", "Placement", "JobConf", "JobParallelViewConf", "Helper", });
-    oneflow.DlnetConf.getDescriptor();
-    oneflow.PlacementOuterClass.getDescriptor();
-    oneflow.JobConf.getDescriptor();
+    org.oneflow.core.job.DlnetConf.getDescriptor();
+    org.oneflow.core.job.PlacementOuterClass.getDescriptor();
+    org.oneflow.core.job.JobConf.getDescriptor();
     org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor();
     org.oneflow.core.register.OpBlobArgOuterClass.getDescriptor();
     org.oneflow.core.register.BlobDesc.getDescriptor();
-    oneflow.OpConf.getDescriptor();
-    oneflow.SbpParallelOuterClass.getDescriptor();
-    oneflow.LbiDiffWatcherInfoOuterClass.getDescriptor();
+    org.oneflow.core.operator.OpConf.getDescriptor();
+    org.oneflow.core.job.SbpParallelOuterClass.getDescriptor();
+    org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

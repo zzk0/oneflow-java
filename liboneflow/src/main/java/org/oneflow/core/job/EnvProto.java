@@ -82,11 +82,11 @@ public  final class EnvProto extends
             break;
           }
           case 42: {
-            oneflow.CtrlBootstrap.BootstrapConf.Builder subBuilder = null;
+            org.oneflow.core.control.BootstrapConf.Builder subBuilder = null;
             if (((bitField0_ & 0x00000008) == 0x00000008)) {
               subBuilder = ctrlBootstrapConf_.toBuilder();
             }
-            ctrlBootstrapConf_ = input.readMessage(oneflow.CtrlBootstrap.BootstrapConf.PARSER, extensionRegistry);
+            ctrlBootstrapConf_ = input.readMessage(org.oneflow.core.control.BootstrapConf.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(ctrlBootstrapConf_);
               ctrlBootstrapConf_ = subBuilder.buildPartial();
@@ -214,7 +214,7 @@ public  final class EnvProto extends
   }
 
   public static final int CTRL_BOOTSTRAP_CONF_FIELD_NUMBER = 5;
-  private oneflow.CtrlBootstrap.BootstrapConf ctrlBootstrapConf_;
+  private org.oneflow.core.control.BootstrapConf ctrlBootstrapConf_;
   /**
    * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
    */
@@ -224,14 +224,14 @@ public  final class EnvProto extends
   /**
    * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
    */
-  public oneflow.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf() {
-    return ctrlBootstrapConf_ == null ? oneflow.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+  public org.oneflow.core.control.BootstrapConf getCtrlBootstrapConf() {
+    return ctrlBootstrapConf_ == null ? org.oneflow.core.control.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
   }
   /**
    * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
    */
-  public oneflow.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
-    return ctrlBootstrapConf_ == null ? oneflow.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+  public org.oneflow.core.control.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
+    return ctrlBootstrapConf_ == null ? org.oneflow.core.control.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
   }
 
   public static final int IS_DEFAULT_PHYSICAL_ENV_FIELD_NUMBER = 6;
@@ -1159,9 +1159,9 @@ public  final class EnvProto extends
       return cppLoggingConfBuilder_;
     }
 
-    private oneflow.CtrlBootstrap.BootstrapConf ctrlBootstrapConf_ = null;
+    private org.oneflow.core.control.BootstrapConf ctrlBootstrapConf_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.CtrlBootstrap.BootstrapConf, oneflow.CtrlBootstrap.BootstrapConf.Builder, oneflow.CtrlBootstrap.BootstrapConfOrBuilder> ctrlBootstrapConfBuilder_;
+        org.oneflow.core.control.BootstrapConf, org.oneflow.core.control.BootstrapConf.Builder, org.oneflow.core.control.BootstrapConfOrBuilder> ctrlBootstrapConfBuilder_;
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
@@ -1171,9 +1171,9 @@ public  final class EnvProto extends
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
-    public oneflow.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf() {
+    public org.oneflow.core.control.BootstrapConf getCtrlBootstrapConf() {
       if (ctrlBootstrapConfBuilder_ == null) {
-        return ctrlBootstrapConf_ == null ? oneflow.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+        return ctrlBootstrapConf_ == null ? org.oneflow.core.control.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
       } else {
         return ctrlBootstrapConfBuilder_.getMessage();
       }
@@ -1181,7 +1181,7 @@ public  final class EnvProto extends
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
-    public Builder setCtrlBootstrapConf(oneflow.CtrlBootstrap.BootstrapConf value) {
+    public Builder setCtrlBootstrapConf(org.oneflow.core.control.BootstrapConf value) {
       if (ctrlBootstrapConfBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1198,7 +1198,7 @@ public  final class EnvProto extends
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
     public Builder setCtrlBootstrapConf(
-        oneflow.CtrlBootstrap.BootstrapConf.Builder builderForValue) {
+        org.oneflow.core.control.BootstrapConf.Builder builderForValue) {
       if (ctrlBootstrapConfBuilder_ == null) {
         ctrlBootstrapConf_ = builderForValue.build();
         onChanged();
@@ -1211,13 +1211,13 @@ public  final class EnvProto extends
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
-    public Builder mergeCtrlBootstrapConf(oneflow.CtrlBootstrap.BootstrapConf value) {
+    public Builder mergeCtrlBootstrapConf(org.oneflow.core.control.BootstrapConf value) {
       if (ctrlBootstrapConfBuilder_ == null) {
         if (((bitField0_ & 0x00000010) == 0x00000010) &&
             ctrlBootstrapConf_ != null &&
-            ctrlBootstrapConf_ != oneflow.CtrlBootstrap.BootstrapConf.getDefaultInstance()) {
+            ctrlBootstrapConf_ != org.oneflow.core.control.BootstrapConf.getDefaultInstance()) {
           ctrlBootstrapConf_ =
-            oneflow.CtrlBootstrap.BootstrapConf.newBuilder(ctrlBootstrapConf_).mergeFrom(value).buildPartial();
+            org.oneflow.core.control.BootstrapConf.newBuilder(ctrlBootstrapConf_).mergeFrom(value).buildPartial();
         } else {
           ctrlBootstrapConf_ = value;
         }
@@ -1244,7 +1244,7 @@ public  final class EnvProto extends
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
-    public oneflow.CtrlBootstrap.BootstrapConf.Builder getCtrlBootstrapConfBuilder() {
+    public org.oneflow.core.control.BootstrapConf.Builder getCtrlBootstrapConfBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getCtrlBootstrapConfFieldBuilder().getBuilder();
@@ -1252,23 +1252,23 @@ public  final class EnvProto extends
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
-    public oneflow.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
+    public org.oneflow.core.control.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
       if (ctrlBootstrapConfBuilder_ != null) {
         return ctrlBootstrapConfBuilder_.getMessageOrBuilder();
       } else {
         return ctrlBootstrapConf_ == null ?
-            oneflow.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+            org.oneflow.core.control.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
       }
     }
     /**
      * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.CtrlBootstrap.BootstrapConf, oneflow.CtrlBootstrap.BootstrapConf.Builder, oneflow.CtrlBootstrap.BootstrapConfOrBuilder> 
+        org.oneflow.core.control.BootstrapConf, org.oneflow.core.control.BootstrapConf.Builder, org.oneflow.core.control.BootstrapConfOrBuilder> 
         getCtrlBootstrapConfFieldBuilder() {
       if (ctrlBootstrapConfBuilder_ == null) {
         ctrlBootstrapConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.CtrlBootstrap.BootstrapConf, oneflow.CtrlBootstrap.BootstrapConf.Builder, oneflow.CtrlBootstrap.BootstrapConfOrBuilder>(
+            org.oneflow.core.control.BootstrapConf, org.oneflow.core.control.BootstrapConf.Builder, org.oneflow.core.control.BootstrapConfOrBuilder>(
                 getCtrlBootstrapConf(),
                 getParentForChildren(),
                 isClean());

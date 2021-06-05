@@ -14,11 +14,11 @@ public interface EagerInstructionOrBuilder extends
   /**
    * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
    */
-  oneflow.vm.Instruction.InstructionListProto getInstructionList();
+  org.oneflow.core.vm.InstructionListProto getInstructionList();
   /**
    * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
    */
-  oneflow.vm.Instruction.InstructionListProtoOrBuilder getInstructionListOrBuilder();
+  org.oneflow.core.vm.InstructionListProtoOrBuilder getInstructionListOrBuilder();
 
   /**
    * <code>optional .oneflow.vm.EagerSymbolList eager_symbol_list = 2;</code>

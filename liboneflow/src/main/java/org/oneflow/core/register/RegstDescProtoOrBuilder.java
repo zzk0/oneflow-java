@@ -72,11 +72,11 @@ public interface RegstDescProtoOrBuilder extends
   /**
    * <code>required .oneflow.MemoryCase mem_case = 7;</code>
    */
-  oneflow.MemoryCaseOuterClass.MemoryCase getMemCase();
+  org.oneflow.core.memory.MemoryCase getMemCase();
   /**
    * <code>required .oneflow.MemoryCase mem_case = 7;</code>
    */
-  oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder();
+  org.oneflow.core.memory.MemoryCaseOrBuilder getMemCaseOrBuilder();
 
   /**
    * <code>required .oneflow.RegstDescTypeProto regst_desc_type = 8;</code>

@@ -54,25 +54,25 @@ public interface JobHelperConfOrBuilder extends
    * Use {@link #getTag2OpNameRelationsMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations>
+  java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations>
   getTag2OpNameRelations();
   /**
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
-  java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations>
+  java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations>
   getTag2OpNameRelationsMap();
   /**
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
 
-  oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+  org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrDefault(
       java.lang.String key,
-      oneflow.OpConf.OpNameRelations defaultValue);
+      org.oneflow.core.operator.OpNameRelations defaultValue);
   /**
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
 
-  oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+  org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrThrow(
       java.lang.String key);
 
   /**
@@ -150,11 +150,11 @@ public interface JobHelperConfOrBuilder extends
   /**
    * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
    */
-  oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo();
+  org.oneflow.core.job.LbiDiffWatcherInfo getLbiDiffWatcherInfo();
   /**
    * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
    */
-  oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder();
+  org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder();
 
   /**
    * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>

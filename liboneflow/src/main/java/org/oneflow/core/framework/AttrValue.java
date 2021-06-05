@@ -77,14 +77,14 @@ public  final class AttrValue extends
             break;
           }
           case 58: {
-            oneflow.Shape.ShapeProto.Builder subBuilder = null;
+            org.oneflow.core.common.ShapeProto.Builder subBuilder = null;
             if (valueCase_ == 7) {
-              subBuilder = ((oneflow.Shape.ShapeProto) value_).toBuilder();
+              subBuilder = ((org.oneflow.core.common.ShapeProto) value_).toBuilder();
             }
             value_ =
-                input.readMessage(oneflow.Shape.ShapeProto.PARSER, extensionRegistry);
+                input.readMessage(org.oneflow.core.common.ShapeProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((oneflow.Shape.ShapeProto) value_);
+              subBuilder.mergeFrom((org.oneflow.core.common.ShapeProto) value_);
               value_ = subBuilder.buildPartial();
             }
             valueCase_ = 7;
@@ -92,7 +92,7 @@ public  final class AttrValue extends
           }
           case 64: {
             int rawValue = input.readEnum();
-            oneflow.DataTypeOuterClass.DataType value = oneflow.DataTypeOuterClass.DataType.valueOf(rawValue);
+            org.oneflow.core.common.DataType value = org.oneflow.core.common.DataType.valueOf(rawValue);
             if (value == null) {
               unknownFields.mergeVarintField(8, rawValue);
             } else {
@@ -1824,7 +1824,7 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
      */
-    java.util.List<oneflow.DataTypeOuterClass.DataType> getValList();
+    java.util.List<org.oneflow.core.common.DataType> getValList();
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
      */
@@ -1832,7 +1832,7 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
      */
-    oneflow.DataTypeOuterClass.DataType getVal(int index);
+    org.oneflow.core.common.DataType getVal(int index);
   }
   /**
    * Protobuf type {@code oneflow.AttrValue.ListDataType}
@@ -1879,7 +1879,7 @@ public  final class AttrValue extends
             }
             case 8: {
               int rawValue = input.readEnum();
-              oneflow.DataTypeOuterClass.DataType value = oneflow.DataTypeOuterClass.DataType.valueOf(rawValue);
+              org.oneflow.core.common.DataType value = org.oneflow.core.common.DataType.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
@@ -1896,7 +1896,7 @@ public  final class AttrValue extends
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                oneflow.DataTypeOuterClass.DataType value = oneflow.DataTypeOuterClass.DataType.valueOf(rawValue);
+                org.oneflow.core.common.DataType value = org.oneflow.core.common.DataType.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
@@ -1940,20 +1940,20 @@ public  final class AttrValue extends
     public static final int VAL_FIELD_NUMBER = 1;
     private java.util.List<java.lang.Integer> val_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, oneflow.DataTypeOuterClass.DataType> val_converter_ =
+        java.lang.Integer, org.oneflow.core.common.DataType> val_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
-                java.lang.Integer, oneflow.DataTypeOuterClass.DataType>() {
-              public oneflow.DataTypeOuterClass.DataType convert(java.lang.Integer from) {
-                oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(from);
-                return result == null ? oneflow.DataTypeOuterClass.DataType.kInvalidDataType : result;
+                java.lang.Integer, org.oneflow.core.common.DataType>() {
+              public org.oneflow.core.common.DataType convert(java.lang.Integer from) {
+                org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(from);
+                return result == null ? org.oneflow.core.common.DataType.kInvalidDataType : result;
               }
             };
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
      */
-    public java.util.List<oneflow.DataTypeOuterClass.DataType> getValList() {
+    public java.util.List<org.oneflow.core.common.DataType> getValList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, oneflow.DataTypeOuterClass.DataType>(val_, val_converter_);
+          java.lang.Integer, org.oneflow.core.common.DataType>(val_, val_converter_);
     }
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
@@ -1964,7 +1964,7 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.DataType val = 1;</code>
      */
-    public oneflow.DataTypeOuterClass.DataType getVal(int index) {
+    public org.oneflow.core.common.DataType getVal(int index) {
       return val_converter_.convert(val_.get(index));
     }
 
@@ -2271,9 +2271,9 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.DataType val = 1;</code>
        */
-      public java.util.List<oneflow.DataTypeOuterClass.DataType> getValList() {
+      public java.util.List<org.oneflow.core.common.DataType> getValList() {
         return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, oneflow.DataTypeOuterClass.DataType>(val_, val_converter_);
+            java.lang.Integer, org.oneflow.core.common.DataType>(val_, val_converter_);
       }
       /**
        * <code>repeated .oneflow.DataType val = 1;</code>
@@ -2284,14 +2284,14 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.DataType val = 1;</code>
        */
-      public oneflow.DataTypeOuterClass.DataType getVal(int index) {
+      public org.oneflow.core.common.DataType getVal(int index) {
         return val_converter_.convert(val_.get(index));
       }
       /**
        * <code>repeated .oneflow.DataType val = 1;</code>
        */
       public Builder setVal(
-          int index, oneflow.DataTypeOuterClass.DataType value) {
+          int index, org.oneflow.core.common.DataType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2303,7 +2303,7 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.DataType val = 1;</code>
        */
-      public Builder addVal(oneflow.DataTypeOuterClass.DataType value) {
+      public Builder addVal(org.oneflow.core.common.DataType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2316,9 +2316,9 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.DataType val = 1;</code>
        */
       public Builder addAllVal(
-          java.lang.Iterable<? extends oneflow.DataTypeOuterClass.DataType> values) {
+          java.lang.Iterable<? extends org.oneflow.core.common.DataType> values) {
         ensureValIsMutable();
-        for (oneflow.DataTypeOuterClass.DataType value : values) {
+        for (org.oneflow.core.common.DataType value : values) {
           val_.add(value.getNumber());
         }
         onChanged();
@@ -2389,12 +2389,12 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    java.util.List<oneflow.Shape.ShapeProto> 
+    java.util.List<org.oneflow.core.common.ShapeProto> 
         getValList();
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    oneflow.Shape.ShapeProto getVal(int index);
+    org.oneflow.core.common.ShapeProto getVal(int index);
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
@@ -2402,12 +2402,12 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    java.util.List<? extends oneflow.Shape.ShapeProtoOrBuilder> 
+    java.util.List<? extends org.oneflow.core.common.ShapeProtoOrBuilder> 
         getValOrBuilderList();
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    oneflow.Shape.ShapeProtoOrBuilder getValOrBuilder(
+    org.oneflow.core.common.ShapeProtoOrBuilder getValOrBuilder(
         int index);
   }
   /**
@@ -2455,11 +2455,11 @@ public  final class AttrValue extends
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                val_ = new java.util.ArrayList<oneflow.Shape.ShapeProto>();
+                val_ = new java.util.ArrayList<org.oneflow.core.common.ShapeProto>();
                 mutable_bitField0_ |= 0x00000001;
               }
               val_.add(
-                  input.readMessage(oneflow.Shape.ShapeProto.PARSER, extensionRegistry));
+                  input.readMessage(org.oneflow.core.common.ShapeProto.PARSER, extensionRegistry));
               break;
             }
           }
@@ -2490,17 +2490,17 @@ public  final class AttrValue extends
     }
 
     public static final int VAL_FIELD_NUMBER = 1;
-    private java.util.List<oneflow.Shape.ShapeProto> val_;
+    private java.util.List<org.oneflow.core.common.ShapeProto> val_;
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    public java.util.List<oneflow.Shape.ShapeProto> getValList() {
+    public java.util.List<org.oneflow.core.common.ShapeProto> getValList() {
       return val_;
     }
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    public java.util.List<? extends oneflow.Shape.ShapeProtoOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.common.ShapeProtoOrBuilder> 
         getValOrBuilderList() {
       return val_;
     }
@@ -2513,13 +2513,13 @@ public  final class AttrValue extends
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    public oneflow.Shape.ShapeProto getVal(int index) {
+    public org.oneflow.core.common.ShapeProto getVal(int index) {
       return val_.get(index);
     }
     /**
      * <code>repeated .oneflow.ShapeProto val = 1;</code>
      */
-    public oneflow.Shape.ShapeProtoOrBuilder getValOrBuilder(
+    public org.oneflow.core.common.ShapeProtoOrBuilder getValOrBuilder(
         int index) {
       return val_.get(index);
     }
@@ -2837,22 +2837,22 @@ public  final class AttrValue extends
       }
       private int bitField0_;
 
-      private java.util.List<oneflow.Shape.ShapeProto> val_ =
+      private java.util.List<org.oneflow.core.common.ShapeProto> val_ =
         java.util.Collections.emptyList();
       private void ensureValIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          val_ = new java.util.ArrayList<oneflow.Shape.ShapeProto>(val_);
+          val_ = new java.util.ArrayList<org.oneflow.core.common.ShapeProto>(val_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> valBuilder_;
+          org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> valBuilder_;
 
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public java.util.List<oneflow.Shape.ShapeProto> getValList() {
+      public java.util.List<org.oneflow.core.common.ShapeProto> getValList() {
         if (valBuilder_ == null) {
           return java.util.Collections.unmodifiableList(val_);
         } else {
@@ -2872,7 +2872,7 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public oneflow.Shape.ShapeProto getVal(int index) {
+      public org.oneflow.core.common.ShapeProto getVal(int index) {
         if (valBuilder_ == null) {
           return val_.get(index);
         } else {
@@ -2883,7 +2883,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder setVal(
-          int index, oneflow.Shape.ShapeProto value) {
+          int index, org.oneflow.core.common.ShapeProto value) {
         if (valBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2900,7 +2900,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder setVal(
-          int index, oneflow.Shape.ShapeProto.Builder builderForValue) {
+          int index, org.oneflow.core.common.ShapeProto.Builder builderForValue) {
         if (valBuilder_ == null) {
           ensureValIsMutable();
           val_.set(index, builderForValue.build());
@@ -2913,7 +2913,7 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public Builder addVal(oneflow.Shape.ShapeProto value) {
+      public Builder addVal(org.oneflow.core.common.ShapeProto value) {
         if (valBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2930,7 +2930,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder addVal(
-          int index, oneflow.Shape.ShapeProto value) {
+          int index, org.oneflow.core.common.ShapeProto value) {
         if (valBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2947,7 +2947,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder addVal(
-          oneflow.Shape.ShapeProto.Builder builderForValue) {
+          org.oneflow.core.common.ShapeProto.Builder builderForValue) {
         if (valBuilder_ == null) {
           ensureValIsMutable();
           val_.add(builderForValue.build());
@@ -2961,7 +2961,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder addVal(
-          int index, oneflow.Shape.ShapeProto.Builder builderForValue) {
+          int index, org.oneflow.core.common.ShapeProto.Builder builderForValue) {
         if (valBuilder_ == null) {
           ensureValIsMutable();
           val_.add(index, builderForValue.build());
@@ -2975,7 +2975,7 @@ public  final class AttrValue extends
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
       public Builder addAllVal(
-          java.lang.Iterable<? extends oneflow.Shape.ShapeProto> values) {
+          java.lang.Iterable<? extends org.oneflow.core.common.ShapeProto> values) {
         if (valBuilder_ == null) {
           ensureValIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3015,14 +3015,14 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public oneflow.Shape.ShapeProto.Builder getValBuilder(
+      public org.oneflow.core.common.ShapeProto.Builder getValBuilder(
           int index) {
         return getValFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public oneflow.Shape.ShapeProtoOrBuilder getValOrBuilder(
+      public org.oneflow.core.common.ShapeProtoOrBuilder getValOrBuilder(
           int index) {
         if (valBuilder_ == null) {
           return val_.get(index);  } else {
@@ -3032,7 +3032,7 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public java.util.List<? extends oneflow.Shape.ShapeProtoOrBuilder> 
+      public java.util.List<? extends org.oneflow.core.common.ShapeProtoOrBuilder> 
            getValOrBuilderList() {
         if (valBuilder_ != null) {
           return valBuilder_.getMessageOrBuilderList();
@@ -3043,31 +3043,31 @@ public  final class AttrValue extends
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public oneflow.Shape.ShapeProto.Builder addValBuilder() {
+      public org.oneflow.core.common.ShapeProto.Builder addValBuilder() {
         return getValFieldBuilder().addBuilder(
-            oneflow.Shape.ShapeProto.getDefaultInstance());
+            org.oneflow.core.common.ShapeProto.getDefaultInstance());
       }
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public oneflow.Shape.ShapeProto.Builder addValBuilder(
+      public org.oneflow.core.common.ShapeProto.Builder addValBuilder(
           int index) {
         return getValFieldBuilder().addBuilder(
-            index, oneflow.Shape.ShapeProto.getDefaultInstance());
+            index, org.oneflow.core.common.ShapeProto.getDefaultInstance());
       }
       /**
        * <code>repeated .oneflow.ShapeProto val = 1;</code>
        */
-      public java.util.List<oneflow.Shape.ShapeProto.Builder> 
+      public java.util.List<org.oneflow.core.common.ShapeProto.Builder> 
            getValBuilderList() {
         return getValFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> 
+          org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> 
           getValFieldBuilder() {
         if (valBuilder_ == null) {
           valBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder>(
+              org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder>(
                   val_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -3904,20 +3904,20 @@ public  final class AttrValue extends
   /**
    * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
    */
-  public oneflow.Shape.ShapeProto getAtShape() {
+  public org.oneflow.core.common.ShapeProto getAtShape() {
     if (valueCase_ == 7) {
-       return (oneflow.Shape.ShapeProto) value_;
+       return (org.oneflow.core.common.ShapeProto) value_;
     }
-    return oneflow.Shape.ShapeProto.getDefaultInstance();
+    return org.oneflow.core.common.ShapeProto.getDefaultInstance();
   }
   /**
    * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
    */
-  public oneflow.Shape.ShapeProtoOrBuilder getAtShapeOrBuilder() {
+  public org.oneflow.core.common.ShapeProtoOrBuilder getAtShapeOrBuilder() {
     if (valueCase_ == 7) {
-       return (oneflow.Shape.ShapeProto) value_;
+       return (org.oneflow.core.common.ShapeProto) value_;
     }
-    return oneflow.Shape.ShapeProto.getDefaultInstance();
+    return org.oneflow.core.common.ShapeProto.getDefaultInstance();
   }
 
   public static final int AT_DATA_TYPE_FIELD_NUMBER = 8;
@@ -3930,13 +3930,13 @@ public  final class AttrValue extends
   /**
    * <code>optional .oneflow.DataType at_data_type = 8;</code>
    */
-  public oneflow.DataTypeOuterClass.DataType getAtDataType() {
+  public org.oneflow.core.common.DataType getAtDataType() {
     if (valueCase_ == 8) {
-      oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(
+      org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(
           (java.lang.Integer) value_);
-      return result == null ? oneflow.DataTypeOuterClass.DataType.kInvalidDataType : result;
+      return result == null ? org.oneflow.core.common.DataType.kInvalidDataType : result;
     }
-    return oneflow.DataTypeOuterClass.DataType.kInvalidDataType;
+    return org.oneflow.core.common.DataType.kInvalidDataType;
   }
 
   public static final int AT_LIST_INT32_FIELD_NUMBER = 9;
@@ -4131,7 +4131,7 @@ public  final class AttrValue extends
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, value_);
     }
     if (valueCase_ == 7) {
-      output.writeMessage(7, (oneflow.Shape.ShapeProto) value_);
+      output.writeMessage(7, (org.oneflow.core.common.ShapeProto) value_);
     }
     if (valueCase_ == 8) {
       output.writeEnum(8, ((java.lang.Integer) value_));
@@ -4192,7 +4192,7 @@ public  final class AttrValue extends
     }
     if (valueCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, (oneflow.Shape.ShapeProto) value_);
+        .computeMessageSize(7, (org.oneflow.core.common.ShapeProto) value_);
     }
     if (valueCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
@@ -5012,7 +5012,7 @@ public  final class AttrValue extends
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> atShapeBuilder_;
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> atShapeBuilder_;
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
@@ -5022,23 +5022,23 @@ public  final class AttrValue extends
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
-    public oneflow.Shape.ShapeProto getAtShape() {
+    public org.oneflow.core.common.ShapeProto getAtShape() {
       if (atShapeBuilder_ == null) {
         if (valueCase_ == 7) {
-          return (oneflow.Shape.ShapeProto) value_;
+          return (org.oneflow.core.common.ShapeProto) value_;
         }
-        return oneflow.Shape.ShapeProto.getDefaultInstance();
+        return org.oneflow.core.common.ShapeProto.getDefaultInstance();
       } else {
         if (valueCase_ == 7) {
           return atShapeBuilder_.getMessage();
         }
-        return oneflow.Shape.ShapeProto.getDefaultInstance();
+        return org.oneflow.core.common.ShapeProto.getDefaultInstance();
       }
     }
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
-    public Builder setAtShape(oneflow.Shape.ShapeProto value) {
+    public Builder setAtShape(org.oneflow.core.common.ShapeProto value) {
       if (atShapeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5055,7 +5055,7 @@ public  final class AttrValue extends
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
     public Builder setAtShape(
-        oneflow.Shape.ShapeProto.Builder builderForValue) {
+        org.oneflow.core.common.ShapeProto.Builder builderForValue) {
       if (atShapeBuilder_ == null) {
         value_ = builderForValue.build();
         onChanged();
@@ -5068,11 +5068,11 @@ public  final class AttrValue extends
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
-    public Builder mergeAtShape(oneflow.Shape.ShapeProto value) {
+    public Builder mergeAtShape(org.oneflow.core.common.ShapeProto value) {
       if (atShapeBuilder_ == null) {
         if (valueCase_ == 7 &&
-            value_ != oneflow.Shape.ShapeProto.getDefaultInstance()) {
-          value_ = oneflow.Shape.ShapeProto.newBuilder((oneflow.Shape.ShapeProto) value_)
+            value_ != org.oneflow.core.common.ShapeProto.getDefaultInstance()) {
+          value_ = org.oneflow.core.common.ShapeProto.newBuilder((org.oneflow.core.common.ShapeProto) value_)
               .mergeFrom(value).buildPartial();
         } else {
           value_ = value;
@@ -5109,35 +5109,35 @@ public  final class AttrValue extends
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
-    public oneflow.Shape.ShapeProto.Builder getAtShapeBuilder() {
+    public org.oneflow.core.common.ShapeProto.Builder getAtShapeBuilder() {
       return getAtShapeFieldBuilder().getBuilder();
     }
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
-    public oneflow.Shape.ShapeProtoOrBuilder getAtShapeOrBuilder() {
+    public org.oneflow.core.common.ShapeProtoOrBuilder getAtShapeOrBuilder() {
       if ((valueCase_ == 7) && (atShapeBuilder_ != null)) {
         return atShapeBuilder_.getMessageOrBuilder();
       } else {
         if (valueCase_ == 7) {
-          return (oneflow.Shape.ShapeProto) value_;
+          return (org.oneflow.core.common.ShapeProto) value_;
         }
-        return oneflow.Shape.ShapeProto.getDefaultInstance();
+        return org.oneflow.core.common.ShapeProto.getDefaultInstance();
       }
     }
     /**
      * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> 
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> 
         getAtShapeFieldBuilder() {
       if (atShapeBuilder_ == null) {
         if (!(valueCase_ == 7)) {
-          value_ = oneflow.Shape.ShapeProto.getDefaultInstance();
+          value_ = org.oneflow.core.common.ShapeProto.getDefaultInstance();
         }
         atShapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder>(
-                (oneflow.Shape.ShapeProto) value_,
+            org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder>(
+                (org.oneflow.core.common.ShapeProto) value_,
                 getParentForChildren(),
                 isClean());
         value_ = null;
@@ -5156,18 +5156,18 @@ public  final class AttrValue extends
     /**
      * <code>optional .oneflow.DataType at_data_type = 8;</code>
      */
-    public oneflow.DataTypeOuterClass.DataType getAtDataType() {
+    public org.oneflow.core.common.DataType getAtDataType() {
       if (valueCase_ == 8) {
-        oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(
+        org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(
             (java.lang.Integer) value_);
-        return result == null ? oneflow.DataTypeOuterClass.DataType.kInvalidDataType : result;
+        return result == null ? org.oneflow.core.common.DataType.kInvalidDataType : result;
       }
-      return oneflow.DataTypeOuterClass.DataType.kInvalidDataType;
+      return org.oneflow.core.common.DataType.kInvalidDataType;
     }
     /**
      * <code>optional .oneflow.DataType at_data_type = 8;</code>
      */
-    public Builder setAtDataType(oneflow.DataTypeOuterClass.DataType value) {
+    public Builder setAtDataType(org.oneflow.core.common.DataType value) {
       if (value == null) {
         throw new NullPointerException();
       }

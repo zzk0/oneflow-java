@@ -160,9 +160,9 @@ public final class PlanOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.oneflow.core.job.Task.getDescriptor(),
           org.oneflow.core.job.JobConf.getDescriptor(),
-          oneflow.MemoryBlock.getDescriptor(),
-          oneflow.boxing.collective.CollectiveBoxing.getDescriptor(),
-          oneflow.OpAttributeOuterClass.getDescriptor(),
+          org.oneflow.core.memory.MemoryBlock.getDescriptor(),
+          org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor(),
+          org.oneflow.core.operator.OpAttributeOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_MachineIds_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -256,9 +256,9 @@ public final class PlanOuterClass {
         new java.lang.String[] { "Key", "Value", });
     org.oneflow.core.job.Task.getDescriptor();
     org.oneflow.core.job.JobConf.getDescriptor();
-    oneflow.MemoryBlock.getDescriptor();
-    oneflow.boxing.collective.CollectiveBoxing.getDescriptor();
-    oneflow.OpAttributeOuterClass.getDescriptor();
+    org.oneflow.core.memory.MemoryBlock.getDescriptor();
+    org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor();
+    org.oneflow.core.operator.OpAttributeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -38,12 +38,12 @@ public interface WaitAndSendIdsOpConfOrBuilder extends
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  java.util.List<oneflow.Record.Int64List> 
+  java.util.List<org.oneflow.core.record.Int64List> 
       getIdListList();
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  oneflow.Record.Int64List getIdList(int index);
+  org.oneflow.core.record.Int64List getIdList(int index);
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
@@ -51,12 +51,12 @@ public interface WaitAndSendIdsOpConfOrBuilder extends
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+  java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
       getIdListOrBuilderList();
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  oneflow.Record.Int64ListOrBuilder getIdListOrBuilder(
+  org.oneflow.core.record.Int64ListOrBuilder getIdListOrBuilder(
       int index);
 
   /**

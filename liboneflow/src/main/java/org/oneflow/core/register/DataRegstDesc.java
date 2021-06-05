@@ -56,11 +56,11 @@ public  final class DataRegstDesc extends
             break;
           }
           case 26: {
-            oneflow.Shape.ShapeProto.Builder subBuilder = null;
+            org.oneflow.core.common.ShapeProto.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = timeShape_.toBuilder();
             }
-            timeShape_ = input.readMessage(oneflow.Shape.ShapeProto.PARSER, extensionRegistry);
+            timeShape_ = input.readMessage(org.oneflow.core.common.ShapeProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(timeShape_);
               timeShape_ = subBuilder.buildPartial();
@@ -132,7 +132,7 @@ public  final class DataRegstDesc extends
   }
 
   public static final int TIME_SHAPE_FIELD_NUMBER = 3;
-  private oneflow.Shape.ShapeProto timeShape_;
+  private org.oneflow.core.common.ShapeProto timeShape_;
   /**
    * <code>required .oneflow.ShapeProto time_shape = 3;</code>
    */
@@ -142,14 +142,14 @@ public  final class DataRegstDesc extends
   /**
    * <code>required .oneflow.ShapeProto time_shape = 3;</code>
    */
-  public oneflow.Shape.ShapeProto getTimeShape() {
-    return timeShape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : timeShape_;
+  public org.oneflow.core.common.ShapeProto getTimeShape() {
+    return timeShape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : timeShape_;
   }
   /**
    * <code>required .oneflow.ShapeProto time_shape = 3;</code>
    */
-  public oneflow.Shape.ShapeProtoOrBuilder getTimeShapeOrBuilder() {
-    return timeShape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : timeShape_;
+  public org.oneflow.core.common.ShapeProtoOrBuilder getTimeShapeOrBuilder() {
+    return timeShape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : timeShape_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -759,9 +759,9 @@ public  final class DataRegstDesc extends
       return lbi2BlobDescBuilder_;
     }
 
-    private oneflow.Shape.ShapeProto timeShape_ = null;
+    private org.oneflow.core.common.ShapeProto timeShape_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> timeShapeBuilder_;
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> timeShapeBuilder_;
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
@@ -771,9 +771,9 @@ public  final class DataRegstDesc extends
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
-    public oneflow.Shape.ShapeProto getTimeShape() {
+    public org.oneflow.core.common.ShapeProto getTimeShape() {
       if (timeShapeBuilder_ == null) {
-        return timeShape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : timeShape_;
+        return timeShape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : timeShape_;
       } else {
         return timeShapeBuilder_.getMessage();
       }
@@ -781,7 +781,7 @@ public  final class DataRegstDesc extends
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
-    public Builder setTimeShape(oneflow.Shape.ShapeProto value) {
+    public Builder setTimeShape(org.oneflow.core.common.ShapeProto value) {
       if (timeShapeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -798,7 +798,7 @@ public  final class DataRegstDesc extends
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
     public Builder setTimeShape(
-        oneflow.Shape.ShapeProto.Builder builderForValue) {
+        org.oneflow.core.common.ShapeProto.Builder builderForValue) {
       if (timeShapeBuilder_ == null) {
         timeShape_ = builderForValue.build();
         onChanged();
@@ -811,13 +811,13 @@ public  final class DataRegstDesc extends
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
-    public Builder mergeTimeShape(oneflow.Shape.ShapeProto value) {
+    public Builder mergeTimeShape(org.oneflow.core.common.ShapeProto value) {
       if (timeShapeBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             timeShape_ != null &&
-            timeShape_ != oneflow.Shape.ShapeProto.getDefaultInstance()) {
+            timeShape_ != org.oneflow.core.common.ShapeProto.getDefaultInstance()) {
           timeShape_ =
-            oneflow.Shape.ShapeProto.newBuilder(timeShape_).mergeFrom(value).buildPartial();
+            org.oneflow.core.common.ShapeProto.newBuilder(timeShape_).mergeFrom(value).buildPartial();
         } else {
           timeShape_ = value;
         }
@@ -844,7 +844,7 @@ public  final class DataRegstDesc extends
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
-    public oneflow.Shape.ShapeProto.Builder getTimeShapeBuilder() {
+    public org.oneflow.core.common.ShapeProto.Builder getTimeShapeBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getTimeShapeFieldBuilder().getBuilder();
@@ -852,23 +852,23 @@ public  final class DataRegstDesc extends
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
-    public oneflow.Shape.ShapeProtoOrBuilder getTimeShapeOrBuilder() {
+    public org.oneflow.core.common.ShapeProtoOrBuilder getTimeShapeOrBuilder() {
       if (timeShapeBuilder_ != null) {
         return timeShapeBuilder_.getMessageOrBuilder();
       } else {
         return timeShape_ == null ?
-            oneflow.Shape.ShapeProto.getDefaultInstance() : timeShape_;
+            org.oneflow.core.common.ShapeProto.getDefaultInstance() : timeShape_;
       }
     }
     /**
      * <code>required .oneflow.ShapeProto time_shape = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> 
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> 
         getTimeShapeFieldBuilder() {
       if (timeShapeBuilder_ == null) {
         timeShapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder>(
+            org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder>(
                 getTimeShape(),
                 getParentForChildren(),
                 isClean());

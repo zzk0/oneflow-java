@@ -14,11 +14,11 @@ public interface ParallelConfSignatureOrBuilder extends
   /**
    * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
    */
-  oneflow.PlacementOuterClass.ParallelConf getOpParallelConf();
+  org.oneflow.core.job.ParallelConf getOpParallelConf();
   /**
    * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
    */
-  oneflow.PlacementOuterClass.ParallelConfOrBuilder getOpParallelConfOrBuilder();
+  org.oneflow.core.job.ParallelConfOrBuilder getOpParallelConfOrBuilder();
 
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
@@ -33,24 +33,24 @@ public interface ParallelConfSignatureOrBuilder extends
    * Use {@link #getBnInOp2ParallelConfMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+  java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf>
   getBnInOp2ParallelConf();
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
-  java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+  java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf>
   getBnInOp2ParallelConfMap();
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
 
-  oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrDefault(
+  org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrDefault(
       java.lang.String key,
-      oneflow.PlacementOuterClass.ParallelConf defaultValue);
+      org.oneflow.core.job.ParallelConf defaultValue);
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
 
-  oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrThrow(
+  org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrThrow(
       java.lang.String key);
 }

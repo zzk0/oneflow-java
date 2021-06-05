@@ -72,11 +72,11 @@ public  final class ParallelBlobConf extends
             break;
           }
           case 26: {
-            oneflow.SbpParallelOuterClass.ParallelDistribution.Builder subBuilder = null;
+            org.oneflow.core.job.ParallelDistribution.Builder subBuilder = null;
             if (((bitField0_ & 0x00000004) == 0x00000004)) {
               subBuilder = parallelDistribution_.toBuilder();
             }
-            parallelDistribution_ = input.readMessage(oneflow.SbpParallelOuterClass.ParallelDistribution.PARSER, extensionRegistry);
+            parallelDistribution_ = input.readMessage(org.oneflow.core.job.ParallelDistribution.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(parallelDistribution_);
               parallelDistribution_ = subBuilder.buildPartial();
@@ -152,7 +152,7 @@ public  final class ParallelBlobConf extends
   }
 
   public static final int PARALLEL_DISTRIBUTION_FIELD_NUMBER = 3;
-  private oneflow.SbpParallelOuterClass.ParallelDistribution parallelDistribution_;
+  private org.oneflow.core.job.ParallelDistribution parallelDistribution_;
   /**
    * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
    */
@@ -162,14 +162,14 @@ public  final class ParallelBlobConf extends
   /**
    * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
    */
-  public oneflow.SbpParallelOuterClass.ParallelDistribution getParallelDistribution() {
-    return parallelDistribution_ == null ? oneflow.SbpParallelOuterClass.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
+  public org.oneflow.core.job.ParallelDistribution getParallelDistribution() {
+    return parallelDistribution_ == null ? org.oneflow.core.job.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
   }
   /**
    * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
    */
-  public oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder getParallelDistributionOrBuilder() {
-    return parallelDistribution_ == null ? oneflow.SbpParallelOuterClass.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
+  public org.oneflow.core.job.ParallelDistributionOrBuilder getParallelDistributionOrBuilder() {
+    return parallelDistribution_ == null ? org.oneflow.core.job.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -812,9 +812,9 @@ public  final class ParallelBlobConf extends
       return parallelConfBuilder_;
     }
 
-    private oneflow.SbpParallelOuterClass.ParallelDistribution parallelDistribution_ = null;
+    private org.oneflow.core.job.ParallelDistribution parallelDistribution_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.SbpParallelOuterClass.ParallelDistribution, oneflow.SbpParallelOuterClass.ParallelDistribution.Builder, oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder> parallelDistributionBuilder_;
+        org.oneflow.core.job.ParallelDistribution, org.oneflow.core.job.ParallelDistribution.Builder, org.oneflow.core.job.ParallelDistributionOrBuilder> parallelDistributionBuilder_;
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
@@ -824,9 +824,9 @@ public  final class ParallelBlobConf extends
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
-    public oneflow.SbpParallelOuterClass.ParallelDistribution getParallelDistribution() {
+    public org.oneflow.core.job.ParallelDistribution getParallelDistribution() {
       if (parallelDistributionBuilder_ == null) {
-        return parallelDistribution_ == null ? oneflow.SbpParallelOuterClass.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
+        return parallelDistribution_ == null ? org.oneflow.core.job.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
       } else {
         return parallelDistributionBuilder_.getMessage();
       }
@@ -834,7 +834,7 @@ public  final class ParallelBlobConf extends
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
-    public Builder setParallelDistribution(oneflow.SbpParallelOuterClass.ParallelDistribution value) {
+    public Builder setParallelDistribution(org.oneflow.core.job.ParallelDistribution value) {
       if (parallelDistributionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -851,7 +851,7 @@ public  final class ParallelBlobConf extends
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
     public Builder setParallelDistribution(
-        oneflow.SbpParallelOuterClass.ParallelDistribution.Builder builderForValue) {
+        org.oneflow.core.job.ParallelDistribution.Builder builderForValue) {
       if (parallelDistributionBuilder_ == null) {
         parallelDistribution_ = builderForValue.build();
         onChanged();
@@ -864,13 +864,13 @@ public  final class ParallelBlobConf extends
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
-    public Builder mergeParallelDistribution(oneflow.SbpParallelOuterClass.ParallelDistribution value) {
+    public Builder mergeParallelDistribution(org.oneflow.core.job.ParallelDistribution value) {
       if (parallelDistributionBuilder_ == null) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
             parallelDistribution_ != null &&
-            parallelDistribution_ != oneflow.SbpParallelOuterClass.ParallelDistribution.getDefaultInstance()) {
+            parallelDistribution_ != org.oneflow.core.job.ParallelDistribution.getDefaultInstance()) {
           parallelDistribution_ =
-            oneflow.SbpParallelOuterClass.ParallelDistribution.newBuilder(parallelDistribution_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.ParallelDistribution.newBuilder(parallelDistribution_).mergeFrom(value).buildPartial();
         } else {
           parallelDistribution_ = value;
         }
@@ -897,7 +897,7 @@ public  final class ParallelBlobConf extends
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
-    public oneflow.SbpParallelOuterClass.ParallelDistribution.Builder getParallelDistributionBuilder() {
+    public org.oneflow.core.job.ParallelDistribution.Builder getParallelDistributionBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getParallelDistributionFieldBuilder().getBuilder();
@@ -905,23 +905,23 @@ public  final class ParallelBlobConf extends
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
-    public oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder getParallelDistributionOrBuilder() {
+    public org.oneflow.core.job.ParallelDistributionOrBuilder getParallelDistributionOrBuilder() {
       if (parallelDistributionBuilder_ != null) {
         return parallelDistributionBuilder_.getMessageOrBuilder();
       } else {
         return parallelDistribution_ == null ?
-            oneflow.SbpParallelOuterClass.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
+            org.oneflow.core.job.ParallelDistribution.getDefaultInstance() : parallelDistribution_;
       }
     }
     /**
      * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.SbpParallelOuterClass.ParallelDistribution, oneflow.SbpParallelOuterClass.ParallelDistribution.Builder, oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder> 
+        org.oneflow.core.job.ParallelDistribution, org.oneflow.core.job.ParallelDistribution.Builder, org.oneflow.core.job.ParallelDistributionOrBuilder> 
         getParallelDistributionFieldBuilder() {
       if (parallelDistributionBuilder_ == null) {
         parallelDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.SbpParallelOuterClass.ParallelDistribution, oneflow.SbpParallelOuterClass.ParallelDistribution.Builder, oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder>(
+            org.oneflow.core.job.ParallelDistribution, org.oneflow.core.job.ParallelDistribution.Builder, org.oneflow.core.job.ParallelDistributionOrBuilder>(
                 getParallelDistribution(),
                 getParentForChildren(),
                 isClean());

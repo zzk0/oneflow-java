@@ -46,11 +46,11 @@ public  final class ParallelConfSignature extends
             break;
           }
           case 10: {
-            oneflow.PlacementOuterClass.ParallelConf.Builder subBuilder = null;
+            org.oneflow.core.job.ParallelConf.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = opParallelConf_.toBuilder();
             }
-            opParallelConf_ = input.readMessage(oneflow.PlacementOuterClass.ParallelConf.PARSER, extensionRegistry);
+            opParallelConf_ = input.readMessage(org.oneflow.core.job.ParallelConf.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(opParallelConf_);
               opParallelConf_ = subBuilder.buildPartial();
@@ -64,7 +64,7 @@ public  final class ParallelConfSignature extends
                   BnInOp2ParallelConfDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000002;
             }
-            com.google.protobuf.MapEntry<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+            com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelConf>
             bnInOp2ParallelConf = input.readMessage(
                 BnInOp2ParallelConfDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             bnInOp2ParallelConf_.getMutableMap().put(bnInOp2ParallelConf.getKey(), bnInOp2ParallelConf.getValue());
@@ -107,7 +107,7 @@ public  final class ParallelConfSignature extends
 
   private int bitField0_;
   public static final int OP_PARALLEL_CONF_FIELD_NUMBER = 1;
-  private oneflow.PlacementOuterClass.ParallelConf opParallelConf_;
+  private org.oneflow.core.job.ParallelConf opParallelConf_;
   /**
    * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
    */
@@ -117,31 +117,31 @@ public  final class ParallelConfSignature extends
   /**
    * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
    */
-  public oneflow.PlacementOuterClass.ParallelConf getOpParallelConf() {
-    return opParallelConf_ == null ? oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance() : opParallelConf_;
+  public org.oneflow.core.job.ParallelConf getOpParallelConf() {
+    return opParallelConf_ == null ? org.oneflow.core.job.ParallelConf.getDefaultInstance() : opParallelConf_;
   }
   /**
    * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
    */
-  public oneflow.PlacementOuterClass.ParallelConfOrBuilder getOpParallelConfOrBuilder() {
-    return opParallelConf_ == null ? oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance() : opParallelConf_;
+  public org.oneflow.core.job.ParallelConfOrBuilder getOpParallelConfOrBuilder() {
+    return opParallelConf_ == null ? org.oneflow.core.job.ParallelConf.getDefaultInstance() : opParallelConf_;
   }
 
   public static final int BN_IN_OP2PARALLEL_CONF_FIELD_NUMBER = 2;
   private static final class BnInOp2ParallelConfDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, oneflow.PlacementOuterClass.ParallelConf> defaultEntry =
+        java.lang.String, org.oneflow.core.job.ParallelConf> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>newDefaultInstance(
+            .<java.lang.String, org.oneflow.core.job.ParallelConf>newDefaultInstance(
                 org.oneflow.core.job.ParallelConfSignatureOuterClass.internal_static_oneflow_ParallelConfSignature_BnInOp2parallelConfEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance());
+                org.oneflow.core.job.ParallelConf.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, oneflow.PlacementOuterClass.ParallelConf> bnInOp2ParallelConf_;
-  private com.google.protobuf.MapField<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+      java.lang.String, org.oneflow.core.job.ParallelConf> bnInOp2ParallelConf_;
+  private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelConf>
   internalGetBnInOp2ParallelConf() {
     if (bnInOp2ParallelConf_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -166,25 +166,25 @@ public  final class ParallelConfSignature extends
    * Use {@link #getBnInOp2ParallelConfMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> getBnInOp2ParallelConf() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> getBnInOp2ParallelConf() {
     return getBnInOp2ParallelConfMap();
   }
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
 
-  public java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> getBnInOp2ParallelConfMap() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> getBnInOp2ParallelConfMap() {
     return internalGetBnInOp2ParallelConf().getMap();
   }
   /**
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
 
-  public oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrDefault(
+  public org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrDefault(
       java.lang.String key,
-      oneflow.PlacementOuterClass.ParallelConf defaultValue) {
+      org.oneflow.core.job.ParallelConf defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> map =
         internalGetBnInOp2ParallelConf().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -192,10 +192,10 @@ public  final class ParallelConfSignature extends
    * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
    */
 
-  public oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrThrow(
+  public org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> map =
         internalGetBnInOp2ParallelConf().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -215,7 +215,7 @@ public  final class ParallelConfSignature extends
         return false;
       }
     }
-    for (oneflow.PlacementOuterClass.ParallelConf item : getBnInOp2ParallelConf().values()) {
+    for (org.oneflow.core.job.ParallelConf item : getBnInOp2ParallelConf().values()) {
       if (!item.isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
@@ -230,9 +230,9 @@ public  final class ParallelConfSignature extends
     if (((bitField0_ & 0x00000001) == 0x00000001)) {
       output.writeMessage(1, getOpParallelConf());
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.ParallelConf> entry
          : internalGetBnInOp2ParallelConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelConf>
       bnInOp2ParallelConf = BnInOp2ParallelConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -251,9 +251,9 @@ public  final class ParallelConfSignature extends
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOpParallelConf());
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.ParallelConf> entry
          : internalGetBnInOp2ParallelConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelConf>
       bnInOp2ParallelConf = BnInOp2ParallelConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -544,7 +544,7 @@ public  final class ParallelConfSignature extends
           return false;
         }
       }
-      for (oneflow.PlacementOuterClass.ParallelConf item : getBnInOp2ParallelConf().values()) {
+      for (org.oneflow.core.job.ParallelConf item : getBnInOp2ParallelConf().values()) {
         if (!item.isInitialized()) {
           return false;
         }
@@ -571,9 +571,9 @@ public  final class ParallelConfSignature extends
     }
     private int bitField0_;
 
-    private oneflow.PlacementOuterClass.ParallelConf opParallelConf_ = null;
+    private org.oneflow.core.job.ParallelConf opParallelConf_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.ParallelConf, oneflow.PlacementOuterClass.ParallelConf.Builder, oneflow.PlacementOuterClass.ParallelConfOrBuilder> opParallelConfBuilder_;
+        org.oneflow.core.job.ParallelConf, org.oneflow.core.job.ParallelConf.Builder, org.oneflow.core.job.ParallelConfOrBuilder> opParallelConfBuilder_;
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
@@ -583,9 +583,9 @@ public  final class ParallelConfSignature extends
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelConf getOpParallelConf() {
+    public org.oneflow.core.job.ParallelConf getOpParallelConf() {
       if (opParallelConfBuilder_ == null) {
-        return opParallelConf_ == null ? oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance() : opParallelConf_;
+        return opParallelConf_ == null ? org.oneflow.core.job.ParallelConf.getDefaultInstance() : opParallelConf_;
       } else {
         return opParallelConfBuilder_.getMessage();
       }
@@ -593,7 +593,7 @@ public  final class ParallelConfSignature extends
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
-    public Builder setOpParallelConf(oneflow.PlacementOuterClass.ParallelConf value) {
+    public Builder setOpParallelConf(org.oneflow.core.job.ParallelConf value) {
       if (opParallelConfBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -610,7 +610,7 @@ public  final class ParallelConfSignature extends
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
     public Builder setOpParallelConf(
-        oneflow.PlacementOuterClass.ParallelConf.Builder builderForValue) {
+        org.oneflow.core.job.ParallelConf.Builder builderForValue) {
       if (opParallelConfBuilder_ == null) {
         opParallelConf_ = builderForValue.build();
         onChanged();
@@ -623,13 +623,13 @@ public  final class ParallelConfSignature extends
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
-    public Builder mergeOpParallelConf(oneflow.PlacementOuterClass.ParallelConf value) {
+    public Builder mergeOpParallelConf(org.oneflow.core.job.ParallelConf value) {
       if (opParallelConfBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
             opParallelConf_ != null &&
-            opParallelConf_ != oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance()) {
+            opParallelConf_ != org.oneflow.core.job.ParallelConf.getDefaultInstance()) {
           opParallelConf_ =
-            oneflow.PlacementOuterClass.ParallelConf.newBuilder(opParallelConf_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.ParallelConf.newBuilder(opParallelConf_).mergeFrom(value).buildPartial();
         } else {
           opParallelConf_ = value;
         }
@@ -656,7 +656,7 @@ public  final class ParallelConfSignature extends
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelConf.Builder getOpParallelConfBuilder() {
+    public org.oneflow.core.job.ParallelConf.Builder getOpParallelConfBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getOpParallelConfFieldBuilder().getBuilder();
@@ -664,23 +664,23 @@ public  final class ParallelConfSignature extends
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelConfOrBuilder getOpParallelConfOrBuilder() {
+    public org.oneflow.core.job.ParallelConfOrBuilder getOpParallelConfOrBuilder() {
       if (opParallelConfBuilder_ != null) {
         return opParallelConfBuilder_.getMessageOrBuilder();
       } else {
         return opParallelConf_ == null ?
-            oneflow.PlacementOuterClass.ParallelConf.getDefaultInstance() : opParallelConf_;
+            org.oneflow.core.job.ParallelConf.getDefaultInstance() : opParallelConf_;
       }
     }
     /**
      * <code>optional .oneflow.ParallelConf op_parallel_conf = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.ParallelConf, oneflow.PlacementOuterClass.ParallelConf.Builder, oneflow.PlacementOuterClass.ParallelConfOrBuilder> 
+        org.oneflow.core.job.ParallelConf, org.oneflow.core.job.ParallelConf.Builder, org.oneflow.core.job.ParallelConfOrBuilder> 
         getOpParallelConfFieldBuilder() {
       if (opParallelConfBuilder_ == null) {
         opParallelConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.PlacementOuterClass.ParallelConf, oneflow.PlacementOuterClass.ParallelConf.Builder, oneflow.PlacementOuterClass.ParallelConfOrBuilder>(
+            org.oneflow.core.job.ParallelConf, org.oneflow.core.job.ParallelConf.Builder, org.oneflow.core.job.ParallelConfOrBuilder>(
                 getOpParallelConf(),
                 getParentForChildren(),
                 isClean());
@@ -690,8 +690,8 @@ public  final class ParallelConfSignature extends
     }
 
     private com.google.protobuf.MapField<
-        java.lang.String, oneflow.PlacementOuterClass.ParallelConf> bnInOp2ParallelConf_;
-    private com.google.protobuf.MapField<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+        java.lang.String, org.oneflow.core.job.ParallelConf> bnInOp2ParallelConf_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelConf>
     internalGetBnInOp2ParallelConf() {
       if (bnInOp2ParallelConf_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -699,7 +699,7 @@ public  final class ParallelConfSignature extends
       }
       return bnInOp2ParallelConf_;
     }
-    private com.google.protobuf.MapField<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelConf>
     internalGetMutableBnInOp2ParallelConf() {
       onChanged();;
       if (bnInOp2ParallelConf_ == null) {
@@ -728,25 +728,25 @@ public  final class ParallelConfSignature extends
      * Use {@link #getBnInOp2ParallelConfMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> getBnInOp2ParallelConf() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> getBnInOp2ParallelConf() {
       return getBnInOp2ParallelConfMap();
     }
     /**
      * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
      */
 
-    public java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> getBnInOp2ParallelConfMap() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> getBnInOp2ParallelConfMap() {
       return internalGetBnInOp2ParallelConf().getMap();
     }
     /**
      * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
      */
 
-    public oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrDefault(
+    public org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrDefault(
         java.lang.String key,
-        oneflow.PlacementOuterClass.ParallelConf defaultValue) {
+        org.oneflow.core.job.ParallelConf defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> map =
           internalGetBnInOp2ParallelConf().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -754,10 +754,10 @@ public  final class ParallelConfSignature extends
      * <code>map&lt;string, .oneflow.ParallelConf&gt; bn_in_op2parallel_conf = 2;</code>
      */
 
-    public oneflow.PlacementOuterClass.ParallelConf getBnInOp2ParallelConfOrThrow(
+    public org.oneflow.core.job.ParallelConf getBnInOp2ParallelConfOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> map =
           internalGetBnInOp2ParallelConf().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -783,7 +783,7 @@ public  final class ParallelConfSignature extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf>
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf>
     getMutableBnInOp2ParallelConf() {
       return internalGetMutableBnInOp2ParallelConf().getMutableMap();
     }
@@ -792,7 +792,7 @@ public  final class ParallelConfSignature extends
      */
     public Builder putBnInOp2ParallelConf(
         java.lang.String key,
-        oneflow.PlacementOuterClass.ParallelConf value) {
+        org.oneflow.core.job.ParallelConf value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableBnInOp2ParallelConf().put(key, value);
@@ -803,7 +803,7 @@ public  final class ParallelConfSignature extends
      */
 
     public Builder putAllBnInOp2ParallelConf(
-        java.util.Map<java.lang.String, oneflow.PlacementOuterClass.ParallelConf> values) {
+        java.util.Map<java.lang.String, org.oneflow.core.job.ParallelConf> values) {
       getMutableBnInOp2ParallelConf().putAll(values);
       return this;
     }

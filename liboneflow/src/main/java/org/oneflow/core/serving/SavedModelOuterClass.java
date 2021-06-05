@@ -70,7 +70,7 @@ public final class SavedModelOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.OpConf.getDescriptor(),
+          org.oneflow.core.operator.OpConf.getDescriptor(),
           org.oneflow.core.job.JobConf.getDescriptor(),
         }, assigner);
     internal_static_oneflow_SavedModel_descriptor =
@@ -97,7 +97,7 @@ public final class SavedModelOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_GraphDef_SignaturesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.OpConf.getDescriptor();
+    org.oneflow.core.operator.OpConf.getDescriptor();
     org.oneflow.core.job.JobConf.getDescriptor();
   }
 

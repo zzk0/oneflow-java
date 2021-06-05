@@ -37,11 +37,11 @@ public interface EagerSymbolOrBuilder extends
   /**
    * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
    */
-  oneflow.Scope.ScopeProto getScopeSymbol();
+  org.oneflow.core.job.ScopeProto getScopeSymbol();
   /**
    * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
    */
-  oneflow.Scope.ScopeProtoOrBuilder getScopeSymbolOrBuilder();
+  org.oneflow.core.job.ScopeProtoOrBuilder getScopeSymbolOrBuilder();
 
   /**
    * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
@@ -50,11 +50,11 @@ public interface EagerSymbolOrBuilder extends
   /**
    * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
    */
-  oneflow.JobConf.JobConfigProto getJobConfSymbol();
+  org.oneflow.core.job.JobConfigProto getJobConfSymbol();
   /**
    * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
    */
-  oneflow.JobConf.JobConfigProtoOrBuilder getJobConfSymbolOrBuilder();
+  org.oneflow.core.job.JobConfigProtoOrBuilder getJobConfSymbolOrBuilder();
 
   /**
    * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
@@ -63,11 +63,11 @@ public interface EagerSymbolOrBuilder extends
   /**
    * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
    */
-  oneflow.PlacementOuterClass.ParallelConf getParallelConfSymbol();
+  org.oneflow.core.job.ParallelConf getParallelConfSymbol();
   /**
    * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
    */
-  oneflow.PlacementOuterClass.ParallelConfOrBuilder getParallelConfSymbolOrBuilder();
+  org.oneflow.core.job.ParallelConfOrBuilder getParallelConfSymbolOrBuilder();
 
   /**
    * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
@@ -76,11 +76,11 @@ public interface EagerSymbolOrBuilder extends
   /**
    * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
    */
-  oneflow.OpConf.OperatorConf getOpConfSymbol();
+  org.oneflow.core.operator.OperatorConf getOpConfSymbol();
   /**
    * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
    */
-  oneflow.OpConf.OperatorConfOrBuilder getOpConfSymbolOrBuilder();
+  org.oneflow.core.operator.OperatorConfOrBuilder getOpConfSymbolOrBuilder();
 
   /**
    * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
@@ -89,11 +89,11 @@ public interface EagerSymbolOrBuilder extends
   /**
    * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
    */
-  oneflow.OpNodeSignatureOuterClass.OpNodeSignature getOpNodeSignatureSymbol();
+  org.oneflow.core.operator.OpNodeSignature getOpNodeSignatureSymbol();
   /**
    * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
    */
-  oneflow.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder getOpNodeSignatureSymbolOrBuilder();
+  org.oneflow.core.operator.OpNodeSignatureOrBuilder getOpNodeSignatureSymbolOrBuilder();
 
   public org.oneflow.core.eager.EagerSymbol.EagerSymbolTypeCase getEagerSymbolTypeCase();
 }

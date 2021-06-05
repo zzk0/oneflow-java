@@ -63,7 +63,7 @@ public  final class JobHelperConf extends
                   Tag2OpNameRelationsDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000002;
             }
-            com.google.protobuf.MapEntry<java.lang.String, oneflow.OpConf.OpNameRelations>
+            com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpNameRelations>
             tag2OpNameRelations = input.readMessage(
                 Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             tag2OpNameRelations_.getMutableMap().put(tag2OpNameRelations.getKey(), tag2OpNameRelations.getValue());
@@ -94,11 +94,11 @@ public  final class JobHelperConf extends
             break;
           }
           case 66: {
-            oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder subBuilder = null;
+            org.oneflow.core.job.LbiDiffWatcherInfo.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = lbiDiffWatcherInfo_.toBuilder();
             }
-            lbiDiffWatcherInfo_ = input.readMessage(oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.PARSER, extensionRegistry);
+            lbiDiffWatcherInfo_ = input.readMessage(org.oneflow.core.job.LbiDiffWatcherInfo.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(lbiDiffWatcherInfo_);
               lbiDiffWatcherInfo_ = subBuilder.buildPartial();
@@ -241,18 +241,18 @@ public  final class JobHelperConf extends
   public static final int TAG2OP_NAME_RELATIONS_FIELD_NUMBER = 2;
   private static final class Tag2OpNameRelationsDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, oneflow.OpConf.OpNameRelations> defaultEntry =
+        java.lang.String, org.oneflow.core.operator.OpNameRelations> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, oneflow.OpConf.OpNameRelations>newDefaultInstance(
+            .<java.lang.String, org.oneflow.core.operator.OpNameRelations>newDefaultInstance(
                 org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_Tag2opNameRelationsEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.OpConf.OpNameRelations.getDefaultInstance());
+                org.oneflow.core.operator.OpNameRelations.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, oneflow.OpConf.OpNameRelations> tag2OpNameRelations_;
-  private com.google.protobuf.MapField<java.lang.String, oneflow.OpConf.OpNameRelations>
+      java.lang.String, org.oneflow.core.operator.OpNameRelations> tag2OpNameRelations_;
+  private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpNameRelations>
   internalGetTag2OpNameRelations() {
     if (tag2OpNameRelations_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -277,25 +277,25 @@ public  final class JobHelperConf extends
    * Use {@link #getTag2OpNameRelationsMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> getTag2OpNameRelations() {
+  public java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> getTag2OpNameRelations() {
     return getTag2OpNameRelationsMap();
   }
   /**
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
 
-  public java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> getTag2OpNameRelationsMap() {
+  public java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> getTag2OpNameRelationsMap() {
     return internalGetTag2OpNameRelations().getMap();
   }
   /**
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
 
-  public oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+  public org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrDefault(
       java.lang.String key,
-      oneflow.OpConf.OpNameRelations defaultValue) {
+      org.oneflow.core.operator.OpNameRelations defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> map =
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> map =
         internalGetTag2OpNameRelations().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -303,10 +303,10 @@ public  final class JobHelperConf extends
    * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
    */
 
-  public oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+  public org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> map =
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> map =
         internalGetTag2OpNameRelations().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -467,7 +467,7 @@ public  final class JobHelperConf extends
   }
 
   public static final int LBI_DIFF_WATCHER_INFO_FIELD_NUMBER = 8;
-  private oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo lbiDiffWatcherInfo_;
+  private org.oneflow.core.job.LbiDiffWatcherInfo lbiDiffWatcherInfo_;
   /**
    * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
    */
@@ -477,14 +477,14 @@ public  final class JobHelperConf extends
   /**
    * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
    */
-  public oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
-    return lbiDiffWatcherInfo_ == null ? oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+  public org.oneflow.core.job.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
+    return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
   }
   /**
    * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
    */
-  public oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
-    return lbiDiffWatcherInfo_ == null ? oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+  public org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
+    return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
   }
 
   public static final int OP_NAME2ARG_SIGNATURE_FIELD_NUMBER = 9;
@@ -602,9 +602,9 @@ public  final class JobHelperConf extends
           .build();
       output.writeMessage(1, tag2LbiRelations);
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.OpConf.OpNameRelations> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpNameRelations> entry
          : internalGetTag2OpNameRelations().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.OpConf.OpNameRelations>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpNameRelations>
       tag2OpNameRelations = Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -659,9 +659,9 @@ public  final class JobHelperConf extends
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, tag2LbiRelations);
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.OpConf.OpNameRelations> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpNameRelations> entry
          : internalGetTag2OpNameRelations().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.OpConf.OpNameRelations>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpNameRelations>
       tag2OpNameRelations = Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -1198,8 +1198,8 @@ public  final class JobHelperConf extends
     }
 
     private com.google.protobuf.MapField<
-        java.lang.String, oneflow.OpConf.OpNameRelations> tag2OpNameRelations_;
-    private com.google.protobuf.MapField<java.lang.String, oneflow.OpConf.OpNameRelations>
+        java.lang.String, org.oneflow.core.operator.OpNameRelations> tag2OpNameRelations_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpNameRelations>
     internalGetTag2OpNameRelations() {
       if (tag2OpNameRelations_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -1207,7 +1207,7 @@ public  final class JobHelperConf extends
       }
       return tag2OpNameRelations_;
     }
-    private com.google.protobuf.MapField<java.lang.String, oneflow.OpConf.OpNameRelations>
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpNameRelations>
     internalGetMutableTag2OpNameRelations() {
       onChanged();;
       if (tag2OpNameRelations_ == null) {
@@ -1236,25 +1236,25 @@ public  final class JobHelperConf extends
      * Use {@link #getTag2OpNameRelationsMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> getTag2OpNameRelations() {
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> getTag2OpNameRelations() {
       return getTag2OpNameRelationsMap();
     }
     /**
      * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
      */
 
-    public java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> getTag2OpNameRelationsMap() {
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> getTag2OpNameRelationsMap() {
       return internalGetTag2OpNameRelations().getMap();
     }
     /**
      * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
      */
 
-    public oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+    public org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrDefault(
         java.lang.String key,
-        oneflow.OpConf.OpNameRelations defaultValue) {
+        org.oneflow.core.operator.OpNameRelations defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> map =
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> map =
           internalGetTag2OpNameRelations().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -1262,10 +1262,10 @@ public  final class JobHelperConf extends
      * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
      */
 
-    public oneflow.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+    public org.oneflow.core.operator.OpNameRelations getTag2OpNameRelationsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> map =
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> map =
           internalGetTag2OpNameRelations().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -1291,7 +1291,7 @@ public  final class JobHelperConf extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations>
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations>
     getMutableTag2OpNameRelations() {
       return internalGetMutableTag2OpNameRelations().getMutableMap();
     }
@@ -1300,7 +1300,7 @@ public  final class JobHelperConf extends
      */
     public Builder putTag2OpNameRelations(
         java.lang.String key,
-        oneflow.OpConf.OpNameRelations value) {
+        org.oneflow.core.operator.OpNameRelations value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableTag2OpNameRelations().put(key, value);
@@ -1311,7 +1311,7 @@ public  final class JobHelperConf extends
      */
 
     public Builder putAllTag2OpNameRelations(
-        java.util.Map<java.lang.String, oneflow.OpConf.OpNameRelations> values) {
+        java.util.Map<java.lang.String, org.oneflow.core.operator.OpNameRelations> values) {
       getMutableTag2OpNameRelations().putAll(values);
       return this;
     }
@@ -1554,9 +1554,9 @@ public  final class JobHelperConf extends
       return this;
     }
 
-    private oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo lbiDiffWatcherInfo_ = null;
+    private org.oneflow.core.job.LbiDiffWatcherInfo lbiDiffWatcherInfo_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder> lbiDiffWatcherInfoBuilder_;
+        org.oneflow.core.job.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder> lbiDiffWatcherInfoBuilder_;
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
@@ -1566,9 +1566,9 @@ public  final class JobHelperConf extends
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
-    public oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
+    public org.oneflow.core.job.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
       if (lbiDiffWatcherInfoBuilder_ == null) {
-        return lbiDiffWatcherInfo_ == null ? oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+        return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
       } else {
         return lbiDiffWatcherInfoBuilder_.getMessage();
       }
@@ -1576,7 +1576,7 @@ public  final class JobHelperConf extends
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
-    public Builder setLbiDiffWatcherInfo(oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo value) {
+    public Builder setLbiDiffWatcherInfo(org.oneflow.core.job.LbiDiffWatcherInfo value) {
       if (lbiDiffWatcherInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1593,7 +1593,7 @@ public  final class JobHelperConf extends
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
     public Builder setLbiDiffWatcherInfo(
-        oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder builderForValue) {
+        org.oneflow.core.job.LbiDiffWatcherInfo.Builder builderForValue) {
       if (lbiDiffWatcherInfoBuilder_ == null) {
         lbiDiffWatcherInfo_ = builderForValue.build();
         onChanged();
@@ -1606,13 +1606,13 @@ public  final class JobHelperConf extends
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
-    public Builder mergeLbiDiffWatcherInfo(oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo value) {
+    public Builder mergeLbiDiffWatcherInfo(org.oneflow.core.job.LbiDiffWatcherInfo value) {
       if (lbiDiffWatcherInfoBuilder_ == null) {
         if (((bitField0_ & 0x00000010) == 0x00000010) &&
             lbiDiffWatcherInfo_ != null &&
-            lbiDiffWatcherInfo_ != oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance()) {
+            lbiDiffWatcherInfo_ != org.oneflow.core.job.LbiDiffWatcherInfo.getDefaultInstance()) {
           lbiDiffWatcherInfo_ =
-            oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.newBuilder(lbiDiffWatcherInfo_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.LbiDiffWatcherInfo.newBuilder(lbiDiffWatcherInfo_).mergeFrom(value).buildPartial();
         } else {
           lbiDiffWatcherInfo_ = value;
         }
@@ -1639,7 +1639,7 @@ public  final class JobHelperConf extends
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
-    public oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder getLbiDiffWatcherInfoBuilder() {
+    public org.oneflow.core.job.LbiDiffWatcherInfo.Builder getLbiDiffWatcherInfoBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getLbiDiffWatcherInfoFieldBuilder().getBuilder();
@@ -1647,23 +1647,23 @@ public  final class JobHelperConf extends
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
-    public oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
+    public org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
       if (lbiDiffWatcherInfoBuilder_ != null) {
         return lbiDiffWatcherInfoBuilder_.getMessageOrBuilder();
       } else {
         return lbiDiffWatcherInfo_ == null ?
-            oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+            org.oneflow.core.job.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
       }
     }
     /**
      * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder> 
+        org.oneflow.core.job.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder> 
         getLbiDiffWatcherInfoFieldBuilder() {
       if (lbiDiffWatcherInfoBuilder_ == null) {
         lbiDiffWatcherInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, oneflow.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder>(
+            org.oneflow.core.job.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOrBuilder>(
                 getLbiDiffWatcherInfo(),
                 getParentForChildren(),
                 isClean());

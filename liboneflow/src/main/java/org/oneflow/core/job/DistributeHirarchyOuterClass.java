@@ -55,7 +55,7 @@ public final class DistributeHirarchyOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.SbpParallelOuterClass.getDescriptor(),
+          org.oneflow.core.job.SbpParallelOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_DistributeDim_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,7 +69,7 @@ public final class DistributeHirarchyOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DistributeHirarchy_descriptor,
         new java.lang.String[] { "Dim", });
-    oneflow.SbpParallelOuterClass.getDescriptor();
+    org.oneflow.core.job.SbpParallelOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -23,11 +23,11 @@ public interface DistributeDimOrBuilder extends
   /**
    * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
    */
-  oneflow.SbpParallelOuterClass.SbpParallel getSbpParallel();
+  org.oneflow.core.job.SbpParallel getSbpParallel();
   /**
    * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
    */
-  oneflow.SbpParallelOuterClass.SbpParallelOrBuilder getSbpParallelOrBuilder();
+  org.oneflow.core.job.SbpParallelOrBuilder getSbpParallelOrBuilder();
 
   /**
    * <code>required int64 distribute_num = 3;</code>

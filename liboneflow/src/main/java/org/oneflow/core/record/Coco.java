@@ -44,7 +44,7 @@ public final class Coco {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.Record.getDescriptor(),
+          org.oneflow.core.record.Record.getDescriptor(),
         }, assigner);
     internal_static_oneflow_PolygonList_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +52,7 @@ public final class Coco {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_PolygonList_descriptor,
         new java.lang.String[] { "Polygons", });
-    oneflow.Record.getDescriptor();
+    org.oneflow.core.record.Record.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

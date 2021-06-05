@@ -63,11 +63,11 @@ public  final class ParallelConf extends
             break;
           }
           case 26: {
-            oneflow.Shape.ShapeProto.Builder subBuilder = null;
+            org.oneflow.core.common.ShapeProto.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = hierarchy_.toBuilder();
             }
-            hierarchy_ = input.readMessage(oneflow.Shape.ShapeProto.PARSER, extensionRegistry);
+            hierarchy_ = input.readMessage(org.oneflow.core.common.ShapeProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(hierarchy_);
               hierarchy_ = subBuilder.buildPartial();
@@ -175,7 +175,7 @@ public  final class ParallelConf extends
   }
 
   public static final int HIERARCHY_FIELD_NUMBER = 3;
-  private oneflow.Shape.ShapeProto hierarchy_;
+  private org.oneflow.core.common.ShapeProto hierarchy_;
   /**
    * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
    */
@@ -185,14 +185,14 @@ public  final class ParallelConf extends
   /**
    * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
    */
-  public oneflow.Shape.ShapeProto getHierarchy() {
-    return hierarchy_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : hierarchy_;
+  public org.oneflow.core.common.ShapeProto getHierarchy() {
+    return hierarchy_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : hierarchy_;
   }
   /**
    * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
    */
-  public oneflow.Shape.ShapeProtoOrBuilder getHierarchyOrBuilder() {
-    return hierarchy_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : hierarchy_;
+  public org.oneflow.core.common.ShapeProtoOrBuilder getHierarchyOrBuilder() {
+    return hierarchy_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : hierarchy_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -725,9 +725,9 @@ public  final class ParallelConf extends
       return this;
     }
 
-    private oneflow.Shape.ShapeProto hierarchy_ = null;
+    private org.oneflow.core.common.ShapeProto hierarchy_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> hierarchyBuilder_;
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> hierarchyBuilder_;
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
@@ -737,9 +737,9 @@ public  final class ParallelConf extends
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
-    public oneflow.Shape.ShapeProto getHierarchy() {
+    public org.oneflow.core.common.ShapeProto getHierarchy() {
       if (hierarchyBuilder_ == null) {
-        return hierarchy_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : hierarchy_;
+        return hierarchy_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : hierarchy_;
       } else {
         return hierarchyBuilder_.getMessage();
       }
@@ -747,7 +747,7 @@ public  final class ParallelConf extends
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
-    public Builder setHierarchy(oneflow.Shape.ShapeProto value) {
+    public Builder setHierarchy(org.oneflow.core.common.ShapeProto value) {
       if (hierarchyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -764,7 +764,7 @@ public  final class ParallelConf extends
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
     public Builder setHierarchy(
-        oneflow.Shape.ShapeProto.Builder builderForValue) {
+        org.oneflow.core.common.ShapeProto.Builder builderForValue) {
       if (hierarchyBuilder_ == null) {
         hierarchy_ = builderForValue.build();
         onChanged();
@@ -777,13 +777,13 @@ public  final class ParallelConf extends
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
-    public Builder mergeHierarchy(oneflow.Shape.ShapeProto value) {
+    public Builder mergeHierarchy(org.oneflow.core.common.ShapeProto value) {
       if (hierarchyBuilder_ == null) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
             hierarchy_ != null &&
-            hierarchy_ != oneflow.Shape.ShapeProto.getDefaultInstance()) {
+            hierarchy_ != org.oneflow.core.common.ShapeProto.getDefaultInstance()) {
           hierarchy_ =
-            oneflow.Shape.ShapeProto.newBuilder(hierarchy_).mergeFrom(value).buildPartial();
+            org.oneflow.core.common.ShapeProto.newBuilder(hierarchy_).mergeFrom(value).buildPartial();
         } else {
           hierarchy_ = value;
         }
@@ -810,7 +810,7 @@ public  final class ParallelConf extends
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
-    public oneflow.Shape.ShapeProto.Builder getHierarchyBuilder() {
+    public org.oneflow.core.common.ShapeProto.Builder getHierarchyBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getHierarchyFieldBuilder().getBuilder();
@@ -818,23 +818,23 @@ public  final class ParallelConf extends
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
-    public oneflow.Shape.ShapeProtoOrBuilder getHierarchyOrBuilder() {
+    public org.oneflow.core.common.ShapeProtoOrBuilder getHierarchyOrBuilder() {
       if (hierarchyBuilder_ != null) {
         return hierarchyBuilder_.getMessageOrBuilder();
       } else {
         return hierarchy_ == null ?
-            oneflow.Shape.ShapeProto.getDefaultInstance() : hierarchy_;
+            org.oneflow.core.common.ShapeProto.getDefaultInstance() : hierarchy_;
       }
     }
     /**
      * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> 
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> 
         getHierarchyFieldBuilder() {
       if (hierarchyBuilder_ == null) {
         hierarchyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder>(
+            org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder>(
                 getHierarchy(),
                 getParentForChildren(),
                 isClean());

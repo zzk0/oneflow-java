@@ -47,11 +47,11 @@ public  final class TensorPodProto extends
             break;
           }
           case 10: {
-            oneflow.Shape.ShapeProto.Builder subBuilder = null;
+            org.oneflow.core.common.ShapeProto.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = shape_.toBuilder();
             }
-            shape_ = input.readMessage(oneflow.Shape.ShapeProto.PARSER, extensionRegistry);
+            shape_ = input.readMessage(org.oneflow.core.common.ShapeProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(shape_);
               shape_ = subBuilder.buildPartial();
@@ -61,7 +61,7 @@ public  final class TensorPodProto extends
           }
           case 16: {
             int rawValue = input.readEnum();
-            oneflow.DataTypeOuterClass.DataType value = oneflow.DataTypeOuterClass.DataType.valueOf(rawValue);
+            org.oneflow.core.common.DataType value = org.oneflow.core.common.DataType.valueOf(rawValue);
             if (value == null) {
               unknownFields.mergeVarintField(2, rawValue);
             } else {
@@ -96,7 +96,7 @@ public  final class TensorPodProto extends
 
   private int bitField0_;
   public static final int SHAPE_FIELD_NUMBER = 1;
-  private oneflow.Shape.ShapeProto shape_;
+  private org.oneflow.core.common.ShapeProto shape_;
   /**
    * <code>required .oneflow.ShapeProto shape = 1;</code>
    */
@@ -106,14 +106,14 @@ public  final class TensorPodProto extends
   /**
    * <code>required .oneflow.ShapeProto shape = 1;</code>
    */
-  public oneflow.Shape.ShapeProto getShape() {
-    return shape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : shape_;
+  public org.oneflow.core.common.ShapeProto getShape() {
+    return shape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : shape_;
   }
   /**
    * <code>required .oneflow.ShapeProto shape = 1;</code>
    */
-  public oneflow.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
-    return shape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : shape_;
+  public org.oneflow.core.common.ShapeProtoOrBuilder getShapeOrBuilder() {
+    return shape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : shape_;
   }
 
   public static final int DATA_TYPE_FIELD_NUMBER = 2;
@@ -127,9 +127,9 @@ public  final class TensorPodProto extends
   /**
    * <code>required .oneflow.DataType data_type = 2;</code>
    */
-  public oneflow.DataTypeOuterClass.DataType getDataType() {
-    oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(dataType_);
-    return result == null ? oneflow.DataTypeOuterClass.DataType.kInvalidDataType : result;
+  public org.oneflow.core.common.DataType getDataType() {
+    org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(dataType_);
+    return result == null ? org.oneflow.core.common.DataType.kInvalidDataType : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -464,9 +464,9 @@ public  final class TensorPodProto extends
     }
     private int bitField0_;
 
-    private oneflow.Shape.ShapeProto shape_ = null;
+    private org.oneflow.core.common.ShapeProto shape_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> shapeBuilder_;
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> shapeBuilder_;
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
@@ -476,9 +476,9 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
-    public oneflow.Shape.ShapeProto getShape() {
+    public org.oneflow.core.common.ShapeProto getShape() {
       if (shapeBuilder_ == null) {
-        return shape_ == null ? oneflow.Shape.ShapeProto.getDefaultInstance() : shape_;
+        return shape_ == null ? org.oneflow.core.common.ShapeProto.getDefaultInstance() : shape_;
       } else {
         return shapeBuilder_.getMessage();
       }
@@ -486,7 +486,7 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
-    public Builder setShape(oneflow.Shape.ShapeProto value) {
+    public Builder setShape(org.oneflow.core.common.ShapeProto value) {
       if (shapeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -503,7 +503,7 @@ public  final class TensorPodProto extends
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
     public Builder setShape(
-        oneflow.Shape.ShapeProto.Builder builderForValue) {
+        org.oneflow.core.common.ShapeProto.Builder builderForValue) {
       if (shapeBuilder_ == null) {
         shape_ = builderForValue.build();
         onChanged();
@@ -516,13 +516,13 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
-    public Builder mergeShape(oneflow.Shape.ShapeProto value) {
+    public Builder mergeShape(org.oneflow.core.common.ShapeProto value) {
       if (shapeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
             shape_ != null &&
-            shape_ != oneflow.Shape.ShapeProto.getDefaultInstance()) {
+            shape_ != org.oneflow.core.common.ShapeProto.getDefaultInstance()) {
           shape_ =
-            oneflow.Shape.ShapeProto.newBuilder(shape_).mergeFrom(value).buildPartial();
+            org.oneflow.core.common.ShapeProto.newBuilder(shape_).mergeFrom(value).buildPartial();
         } else {
           shape_ = value;
         }
@@ -549,7 +549,7 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
-    public oneflow.Shape.ShapeProto.Builder getShapeBuilder() {
+    public org.oneflow.core.common.ShapeProto.Builder getShapeBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getShapeFieldBuilder().getBuilder();
@@ -557,23 +557,23 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
-    public oneflow.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
+    public org.oneflow.core.common.ShapeProtoOrBuilder getShapeOrBuilder() {
       if (shapeBuilder_ != null) {
         return shapeBuilder_.getMessageOrBuilder();
       } else {
         return shape_ == null ?
-            oneflow.Shape.ShapeProto.getDefaultInstance() : shape_;
+            org.oneflow.core.common.ShapeProto.getDefaultInstance() : shape_;
       }
     }
     /**
      * <code>required .oneflow.ShapeProto shape = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder> 
+        org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder> 
         getShapeFieldBuilder() {
       if (shapeBuilder_ == null) {
         shapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.Shape.ShapeProto, oneflow.Shape.ShapeProto.Builder, oneflow.Shape.ShapeProtoOrBuilder>(
+            org.oneflow.core.common.ShapeProto, org.oneflow.core.common.ShapeProto.Builder, org.oneflow.core.common.ShapeProtoOrBuilder>(
                 getShape(),
                 getParentForChildren(),
                 isClean());
@@ -592,14 +592,14 @@ public  final class TensorPodProto extends
     /**
      * <code>required .oneflow.DataType data_type = 2;</code>
      */
-    public oneflow.DataTypeOuterClass.DataType getDataType() {
-      oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(dataType_);
-      return result == null ? oneflow.DataTypeOuterClass.DataType.kInvalidDataType : result;
+    public org.oneflow.core.common.DataType getDataType() {
+      org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(dataType_);
+      return result == null ? org.oneflow.core.common.DataType.kInvalidDataType : result;
     }
     /**
      * <code>required .oneflow.DataType data_type = 2;</code>
      */
-    public Builder setDataType(oneflow.DataTypeOuterClass.DataType value) {
+    public Builder setDataType(org.oneflow.core.common.DataType value) {
       if (value == null) {
         throw new NullPointerException();
       }

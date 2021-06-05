@@ -95,11 +95,11 @@ public  final class TaskProto extends
             break;
           }
           case 58: {
-            oneflow.ExecSequenceOuterClass.ExecSequence.Builder subBuilder = null;
+            org.oneflow.core.graph.ExecSequence.Builder subBuilder = null;
             if (((bitField0_ & 0x00000040) == 0x00000040)) {
               subBuilder = execSequence_.toBuilder();
             }
-            execSequence_ = input.readMessage(oneflow.ExecSequenceOuterClass.ExecSequence.PARSER, extensionRegistry);
+            execSequence_ = input.readMessage(org.oneflow.core.graph.ExecSequence.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(execSequence_);
               execSequence_ = subBuilder.buildPartial();
@@ -132,11 +132,11 @@ public  final class TaskProto extends
             break;
           }
           case 8002: {
-            oneflow.PlacementOuterClass.ParallelContext.Builder subBuilder = null;
+            org.oneflow.core.job.ParallelContext.Builder subBuilder = null;
             if (((bitField0_ & 0x00000080) == 0x00000080)) {
               subBuilder = parallelCtx_.toBuilder();
             }
-            parallelCtx_ = input.readMessage(oneflow.PlacementOuterClass.ParallelContext.PARSER, extensionRegistry);
+            parallelCtx_ = input.readMessage(org.oneflow.core.job.ParallelContext.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(parallelCtx_);
               parallelCtx_ = subBuilder.buildPartial();
@@ -288,7 +288,7 @@ public  final class TaskProto extends
   }
 
   public static final int EXEC_SEQUENCE_FIELD_NUMBER = 7;
-  private oneflow.ExecSequenceOuterClass.ExecSequence execSequence_;
+  private org.oneflow.core.graph.ExecSequence execSequence_;
   /**
    * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
    */
@@ -298,14 +298,14 @@ public  final class TaskProto extends
   /**
    * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
    */
-  public oneflow.ExecSequenceOuterClass.ExecSequence getExecSequence() {
-    return execSequence_ == null ? oneflow.ExecSequenceOuterClass.ExecSequence.getDefaultInstance() : execSequence_;
+  public org.oneflow.core.graph.ExecSequence getExecSequence() {
+    return execSequence_ == null ? org.oneflow.core.graph.ExecSequence.getDefaultInstance() : execSequence_;
   }
   /**
    * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
    */
-  public oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder getExecSequenceOrBuilder() {
-    return execSequence_ == null ? oneflow.ExecSequenceOuterClass.ExecSequence.getDefaultInstance() : execSequence_;
+  public org.oneflow.core.graph.ExecSequenceOrBuilder getExecSequenceOrBuilder() {
+    return execSequence_ == null ? org.oneflow.core.graph.ExecSequence.getDefaultInstance() : execSequence_;
   }
 
   public static final int PRODUCED_REGST_DESC_FIELD_NUMBER = 8;
@@ -461,7 +461,7 @@ public  final class TaskProto extends
   }
 
   public static final int PARALLEL_CTX_FIELD_NUMBER = 1000;
-  private oneflow.PlacementOuterClass.ParallelContext parallelCtx_;
+  private org.oneflow.core.job.ParallelContext parallelCtx_;
   /**
    * <pre>
    * compute task
@@ -479,8 +479,8 @@ public  final class TaskProto extends
    *
    * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
    */
-  public oneflow.PlacementOuterClass.ParallelContext getParallelCtx() {
-    return parallelCtx_ == null ? oneflow.PlacementOuterClass.ParallelContext.getDefaultInstance() : parallelCtx_;
+  public org.oneflow.core.job.ParallelContext getParallelCtx() {
+    return parallelCtx_ == null ? org.oneflow.core.job.ParallelContext.getDefaultInstance() : parallelCtx_;
   }
   /**
    * <pre>
@@ -489,8 +489,8 @@ public  final class TaskProto extends
    *
    * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
    */
-  public oneflow.PlacementOuterClass.ParallelContextOrBuilder getParallelCtxOrBuilder() {
-    return parallelCtx_ == null ? oneflow.PlacementOuterClass.ParallelContext.getDefaultInstance() : parallelCtx_;
+  public org.oneflow.core.job.ParallelContextOrBuilder getParallelCtxOrBuilder() {
+    return parallelCtx_ == null ? org.oneflow.core.job.ParallelContext.getDefaultInstance() : parallelCtx_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1452,9 +1452,9 @@ public  final class TaskProto extends
       return taskSetInfoBuilder_;
     }
 
-    private oneflow.ExecSequenceOuterClass.ExecSequence execSequence_ = null;
+    private org.oneflow.core.graph.ExecSequence execSequence_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.ExecSequenceOuterClass.ExecSequence, oneflow.ExecSequenceOuterClass.ExecSequence.Builder, oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder> execSequenceBuilder_;
+        org.oneflow.core.graph.ExecSequence, org.oneflow.core.graph.ExecSequence.Builder, org.oneflow.core.graph.ExecSequenceOrBuilder> execSequenceBuilder_;
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
@@ -1464,9 +1464,9 @@ public  final class TaskProto extends
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
-    public oneflow.ExecSequenceOuterClass.ExecSequence getExecSequence() {
+    public org.oneflow.core.graph.ExecSequence getExecSequence() {
       if (execSequenceBuilder_ == null) {
-        return execSequence_ == null ? oneflow.ExecSequenceOuterClass.ExecSequence.getDefaultInstance() : execSequence_;
+        return execSequence_ == null ? org.oneflow.core.graph.ExecSequence.getDefaultInstance() : execSequence_;
       } else {
         return execSequenceBuilder_.getMessage();
       }
@@ -1474,7 +1474,7 @@ public  final class TaskProto extends
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
-    public Builder setExecSequence(oneflow.ExecSequenceOuterClass.ExecSequence value) {
+    public Builder setExecSequence(org.oneflow.core.graph.ExecSequence value) {
       if (execSequenceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1491,7 +1491,7 @@ public  final class TaskProto extends
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
     public Builder setExecSequence(
-        oneflow.ExecSequenceOuterClass.ExecSequence.Builder builderForValue) {
+        org.oneflow.core.graph.ExecSequence.Builder builderForValue) {
       if (execSequenceBuilder_ == null) {
         execSequence_ = builderForValue.build();
         onChanged();
@@ -1504,13 +1504,13 @@ public  final class TaskProto extends
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
-    public Builder mergeExecSequence(oneflow.ExecSequenceOuterClass.ExecSequence value) {
+    public Builder mergeExecSequence(org.oneflow.core.graph.ExecSequence value) {
       if (execSequenceBuilder_ == null) {
         if (((bitField0_ & 0x00000040) == 0x00000040) &&
             execSequence_ != null &&
-            execSequence_ != oneflow.ExecSequenceOuterClass.ExecSequence.getDefaultInstance()) {
+            execSequence_ != org.oneflow.core.graph.ExecSequence.getDefaultInstance()) {
           execSequence_ =
-            oneflow.ExecSequenceOuterClass.ExecSequence.newBuilder(execSequence_).mergeFrom(value).buildPartial();
+            org.oneflow.core.graph.ExecSequence.newBuilder(execSequence_).mergeFrom(value).buildPartial();
         } else {
           execSequence_ = value;
         }
@@ -1537,7 +1537,7 @@ public  final class TaskProto extends
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
-    public oneflow.ExecSequenceOuterClass.ExecSequence.Builder getExecSequenceBuilder() {
+    public org.oneflow.core.graph.ExecSequence.Builder getExecSequenceBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getExecSequenceFieldBuilder().getBuilder();
@@ -1545,23 +1545,23 @@ public  final class TaskProto extends
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
-    public oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder getExecSequenceOrBuilder() {
+    public org.oneflow.core.graph.ExecSequenceOrBuilder getExecSequenceOrBuilder() {
       if (execSequenceBuilder_ != null) {
         return execSequenceBuilder_.getMessageOrBuilder();
       } else {
         return execSequence_ == null ?
-            oneflow.ExecSequenceOuterClass.ExecSequence.getDefaultInstance() : execSequence_;
+            org.oneflow.core.graph.ExecSequence.getDefaultInstance() : execSequence_;
       }
     }
     /**
      * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.ExecSequenceOuterClass.ExecSequence, oneflow.ExecSequenceOuterClass.ExecSequence.Builder, oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder> 
+        org.oneflow.core.graph.ExecSequence, org.oneflow.core.graph.ExecSequence.Builder, org.oneflow.core.graph.ExecSequenceOrBuilder> 
         getExecSequenceFieldBuilder() {
       if (execSequenceBuilder_ == null) {
         execSequenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.ExecSequenceOuterClass.ExecSequence, oneflow.ExecSequenceOuterClass.ExecSequence.Builder, oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder>(
+            org.oneflow.core.graph.ExecSequence, org.oneflow.core.graph.ExecSequence.Builder, org.oneflow.core.graph.ExecSequenceOrBuilder>(
                 getExecSequence(),
                 getParentForChildren(),
                 isClean());
@@ -1808,9 +1808,9 @@ public  final class TaskProto extends
       return this;
     }
 
-    private oneflow.PlacementOuterClass.ParallelContext parallelCtx_ = null;
+    private org.oneflow.core.job.ParallelContext parallelCtx_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.ParallelContext, oneflow.PlacementOuterClass.ParallelContext.Builder, oneflow.PlacementOuterClass.ParallelContextOrBuilder> parallelCtxBuilder_;
+        org.oneflow.core.job.ParallelContext, org.oneflow.core.job.ParallelContext.Builder, org.oneflow.core.job.ParallelContextOrBuilder> parallelCtxBuilder_;
     /**
      * <pre>
      * compute task
@@ -1828,9 +1828,9 @@ public  final class TaskProto extends
      *
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelContext getParallelCtx() {
+    public org.oneflow.core.job.ParallelContext getParallelCtx() {
       if (parallelCtxBuilder_ == null) {
-        return parallelCtx_ == null ? oneflow.PlacementOuterClass.ParallelContext.getDefaultInstance() : parallelCtx_;
+        return parallelCtx_ == null ? org.oneflow.core.job.ParallelContext.getDefaultInstance() : parallelCtx_;
       } else {
         return parallelCtxBuilder_.getMessage();
       }
@@ -1842,7 +1842,7 @@ public  final class TaskProto extends
      *
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
-    public Builder setParallelCtx(oneflow.PlacementOuterClass.ParallelContext value) {
+    public Builder setParallelCtx(org.oneflow.core.job.ParallelContext value) {
       if (parallelCtxBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1863,7 +1863,7 @@ public  final class TaskProto extends
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
     public Builder setParallelCtx(
-        oneflow.PlacementOuterClass.ParallelContext.Builder builderForValue) {
+        org.oneflow.core.job.ParallelContext.Builder builderForValue) {
       if (parallelCtxBuilder_ == null) {
         parallelCtx_ = builderForValue.build();
         onChanged();
@@ -1880,13 +1880,13 @@ public  final class TaskProto extends
      *
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
-    public Builder mergeParallelCtx(oneflow.PlacementOuterClass.ParallelContext value) {
+    public Builder mergeParallelCtx(org.oneflow.core.job.ParallelContext value) {
       if (parallelCtxBuilder_ == null) {
         if (((bitField0_ & 0x00000200) == 0x00000200) &&
             parallelCtx_ != null &&
-            parallelCtx_ != oneflow.PlacementOuterClass.ParallelContext.getDefaultInstance()) {
+            parallelCtx_ != org.oneflow.core.job.ParallelContext.getDefaultInstance()) {
           parallelCtx_ =
-            oneflow.PlacementOuterClass.ParallelContext.newBuilder(parallelCtx_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.ParallelContext.newBuilder(parallelCtx_).mergeFrom(value).buildPartial();
         } else {
           parallelCtx_ = value;
         }
@@ -1921,7 +1921,7 @@ public  final class TaskProto extends
      *
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelContext.Builder getParallelCtxBuilder() {
+    public org.oneflow.core.job.ParallelContext.Builder getParallelCtxBuilder() {
       bitField0_ |= 0x00000200;
       onChanged();
       return getParallelCtxFieldBuilder().getBuilder();
@@ -1933,12 +1933,12 @@ public  final class TaskProto extends
      *
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
-    public oneflow.PlacementOuterClass.ParallelContextOrBuilder getParallelCtxOrBuilder() {
+    public org.oneflow.core.job.ParallelContextOrBuilder getParallelCtxOrBuilder() {
       if (parallelCtxBuilder_ != null) {
         return parallelCtxBuilder_.getMessageOrBuilder();
       } else {
         return parallelCtx_ == null ?
-            oneflow.PlacementOuterClass.ParallelContext.getDefaultInstance() : parallelCtx_;
+            org.oneflow.core.job.ParallelContext.getDefaultInstance() : parallelCtx_;
       }
     }
     /**
@@ -1949,11 +1949,11 @@ public  final class TaskProto extends
      * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.ParallelContext, oneflow.PlacementOuterClass.ParallelContext.Builder, oneflow.PlacementOuterClass.ParallelContextOrBuilder> 
+        org.oneflow.core.job.ParallelContext, org.oneflow.core.job.ParallelContext.Builder, org.oneflow.core.job.ParallelContextOrBuilder> 
         getParallelCtxFieldBuilder() {
       if (parallelCtxBuilder_ == null) {
         parallelCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.PlacementOuterClass.ParallelContext, oneflow.PlacementOuterClass.ParallelContext.Builder, oneflow.PlacementOuterClass.ParallelContextOrBuilder>(
+            org.oneflow.core.job.ParallelContext, org.oneflow.core.job.ParallelContext.Builder, org.oneflow.core.job.ParallelContextOrBuilder>(
                 getParallelCtx(),
                 getParentForChildren(),
                 isClean());

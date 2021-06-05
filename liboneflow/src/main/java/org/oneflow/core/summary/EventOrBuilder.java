@@ -55,11 +55,11 @@ public interface EventOrBuilder extends
   /**
    * <code>optional .oneflow.summary.Summary summary = 5;</code>
    */
-  oneflow.summary.SummaryOuterClass.Summary getSummary();
+  org.oneflow.core.summary.Summary getSummary();
   /**
    * <code>optional .oneflow.summary.Summary summary = 5;</code>
    */
-  oneflow.summary.SummaryOuterClass.SummaryOrBuilder getSummaryOrBuilder();
+  org.oneflow.core.summary.SummaryOrBuilder getSummaryOrBuilder();
 
   /**
    * <code>optional bytes meta_graph_def = 9;</code>

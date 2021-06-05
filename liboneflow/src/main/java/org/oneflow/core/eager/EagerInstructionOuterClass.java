@@ -48,7 +48,7 @@ public final class EagerInstructionOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.vm.Instruction.getDescriptor(),
+          org.oneflow.core.vm.Instruction.getDescriptor(),
           org.oneflow.core.eager.EagerSymbolOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_vm_EagerInstruction_descriptor =
@@ -57,7 +57,7 @@ public final class EagerInstructionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_vm_EagerInstruction_descriptor,
         new java.lang.String[] { "InstructionList", "EagerSymbolList", });
-    oneflow.vm.Instruction.getDescriptor();
+    org.oneflow.core.vm.Instruction.getDescriptor();
     org.oneflow.core.eager.EagerSymbolOuterClass.getDescriptor();
   }
 

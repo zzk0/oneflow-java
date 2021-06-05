@@ -62,7 +62,7 @@ public interface JobConfigProtoOrBuilder extends
    *
    * <code>optional .oneflow.DataType default_data_type = 8 [default = kFloat];</code>
    */
-  oneflow.DataTypeOuterClass.DataType getDefaultDataType();
+  org.oneflow.core.common.DataType getDefaultDataType();
 
   /**
    * <code>optional .oneflow.InitializerConf default_initializer_conf = 10;</code>

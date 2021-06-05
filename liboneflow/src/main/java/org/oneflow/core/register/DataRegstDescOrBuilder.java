@@ -38,9 +38,9 @@ public interface DataRegstDescOrBuilder extends
   /**
    * <code>required .oneflow.ShapeProto time_shape = 3;</code>
    */
-  oneflow.Shape.ShapeProto getTimeShape();
+  org.oneflow.core.common.ShapeProto getTimeShape();
   /**
    * <code>required .oneflow.ShapeProto time_shape = 3;</code>
    */
-  oneflow.Shape.ShapeProtoOrBuilder getTimeShapeOrBuilder();
+  org.oneflow.core.common.ShapeProtoOrBuilder getTimeShapeOrBuilder();
 }

@@ -20,24 +20,24 @@ public interface CollectiveBoxingPlanOrBuilder extends
    * Use {@link #getJobId2RequestSetMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+  java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
   getJobId2RequestSet();
   /**
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
-  java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+  java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
   getJobId2RequestSetMap();
   /**
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
 
-  oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrDefault(
+  org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrDefault(
       long key,
-      oneflow.boxing.collective.CollectiveBoxing.RequestSet defaultValue);
+      org.oneflow.core.graph.boxing.RequestSet defaultValue);
   /**
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
 
-  oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrThrow(
+  org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrThrow(
       long key);
 }

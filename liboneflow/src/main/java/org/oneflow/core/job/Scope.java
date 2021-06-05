@@ -62,7 +62,7 @@ public final class Scope {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.MirroredParallelOuterClass.getDescriptor(),
+          org.oneflow.core.job.MirroredParallelOuterClass.getDescriptor(),
           org.oneflow.core.framework.UserOpAttr.getDescriptor(),
         }, assigner);
     internal_static_oneflow_ScopeProto_descriptor =
@@ -77,7 +77,7 @@ public final class Scope {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ScopeProto_AttrName2attrValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.MirroredParallelOuterClass.getDescriptor();
+    org.oneflow.core.job.MirroredParallelOuterClass.getDescriptor();
     org.oneflow.core.framework.UserOpAttr.getDescriptor();
   }
 

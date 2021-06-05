@@ -40,9 +40,9 @@ public interface ParallelBlobConfOrBuilder extends
   /**
    * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
    */
-  oneflow.SbpParallelOuterClass.ParallelDistribution getParallelDistribution();
+  org.oneflow.core.job.ParallelDistribution getParallelDistribution();
   /**
    * <code>required .oneflow.ParallelDistribution parallel_distribution = 3;</code>
    */
-  oneflow.SbpParallelOuterClass.ParallelDistributionOrBuilder getParallelDistributionOrBuilder();
+  org.oneflow.core.job.ParallelDistributionOrBuilder getParallelDistributionOrBuilder();
 }

@@ -69,11 +69,11 @@ public  final class ReentrantLockOpConf extends
           }
           case 34: {
             if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-              lockId2IntersectingLockIds_ = new java.util.ArrayList<oneflow.Record.Int64List>();
+              lockId2IntersectingLockIds_ = new java.util.ArrayList<org.oneflow.core.record.Int64List>();
               mutable_bitField0_ |= 0x00000008;
             }
             lockId2IntersectingLockIds_.add(
-                input.readMessage(oneflow.Record.Int64List.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.record.Int64List.PARSER, extensionRegistry));
             break;
           }
         }
@@ -231,17 +231,17 @@ public  final class ReentrantLockOpConf extends
   }
 
   public static final int LOCK_ID2INTERSECTING_LOCK_IDS_FIELD_NUMBER = 4;
-  private java.util.List<oneflow.Record.Int64List> lockId2IntersectingLockIds_;
+  private java.util.List<org.oneflow.core.record.Int64List> lockId2IntersectingLockIds_;
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  public java.util.List<oneflow.Record.Int64List> getLockId2IntersectingLockIdsList() {
+  public java.util.List<org.oneflow.core.record.Int64List> getLockId2IntersectingLockIdsList() {
     return lockId2IntersectingLockIds_;
   }
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  public java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
       getLockId2IntersectingLockIdsOrBuilderList() {
     return lockId2IntersectingLockIds_;
   }
@@ -254,13 +254,13 @@ public  final class ReentrantLockOpConf extends
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  public oneflow.Record.Int64List getLockId2IntersectingLockIds(int index) {
+  public org.oneflow.core.record.Int64List getLockId2IntersectingLockIds(int index) {
     return lockId2IntersectingLockIds_.get(index);
   }
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  public oneflow.Record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
+  public org.oneflow.core.record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
       int index) {
     return lockId2IntersectingLockIds_.get(index);
   }
@@ -900,22 +900,22 @@ public  final class ReentrantLockOpConf extends
       return this;
     }
 
-    private java.util.List<oneflow.Record.Int64List> lockId2IntersectingLockIds_ =
+    private java.util.List<org.oneflow.core.record.Int64List> lockId2IntersectingLockIds_ =
       java.util.Collections.emptyList();
     private void ensureLockId2IntersectingLockIdsIsMutable() {
       if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-        lockId2IntersectingLockIds_ = new java.util.ArrayList<oneflow.Record.Int64List>(lockId2IntersectingLockIds_);
+        lockId2IntersectingLockIds_ = new java.util.ArrayList<org.oneflow.core.record.Int64List>(lockId2IntersectingLockIds_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder> lockId2IntersectingLockIdsBuilder_;
+        org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder> lockId2IntersectingLockIdsBuilder_;
 
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public java.util.List<oneflow.Record.Int64List> getLockId2IntersectingLockIdsList() {
+    public java.util.List<org.oneflow.core.record.Int64List> getLockId2IntersectingLockIdsList() {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(lockId2IntersectingLockIds_);
       } else {
@@ -935,7 +935,7 @@ public  final class ReentrantLockOpConf extends
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public oneflow.Record.Int64List getLockId2IntersectingLockIds(int index) {
+    public org.oneflow.core.record.Int64List getLockId2IntersectingLockIds(int index) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         return lockId2IntersectingLockIds_.get(index);
       } else {
@@ -946,7 +946,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder setLockId2IntersectingLockIds(
-        int index, oneflow.Record.Int64List value) {
+        int index, org.oneflow.core.record.Int64List value) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -963,7 +963,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder setLockId2IntersectingLockIds(
-        int index, oneflow.Record.Int64List.Builder builderForValue) {
+        int index, org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         ensureLockId2IntersectingLockIdsIsMutable();
         lockId2IntersectingLockIds_.set(index, builderForValue.build());
@@ -976,7 +976,7 @@ public  final class ReentrantLockOpConf extends
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public Builder addLockId2IntersectingLockIds(oneflow.Record.Int64List value) {
+    public Builder addLockId2IntersectingLockIds(org.oneflow.core.record.Int64List value) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -993,7 +993,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder addLockId2IntersectingLockIds(
-        int index, oneflow.Record.Int64List value) {
+        int index, org.oneflow.core.record.Int64List value) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1010,7 +1010,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder addLockId2IntersectingLockIds(
-        oneflow.Record.Int64List.Builder builderForValue) {
+        org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         ensureLockId2IntersectingLockIdsIsMutable();
         lockId2IntersectingLockIds_.add(builderForValue.build());
@@ -1024,7 +1024,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder addLockId2IntersectingLockIds(
-        int index, oneflow.Record.Int64List.Builder builderForValue) {
+        int index, org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         ensureLockId2IntersectingLockIdsIsMutable();
         lockId2IntersectingLockIds_.add(index, builderForValue.build());
@@ -1038,7 +1038,7 @@ public  final class ReentrantLockOpConf extends
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
     public Builder addAllLockId2IntersectingLockIds(
-        java.lang.Iterable<? extends oneflow.Record.Int64List> values) {
+        java.lang.Iterable<? extends org.oneflow.core.record.Int64List> values) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         ensureLockId2IntersectingLockIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1078,14 +1078,14 @@ public  final class ReentrantLockOpConf extends
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public oneflow.Record.Int64List.Builder getLockId2IntersectingLockIdsBuilder(
+    public org.oneflow.core.record.Int64List.Builder getLockId2IntersectingLockIdsBuilder(
         int index) {
       return getLockId2IntersectingLockIdsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public oneflow.Record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
+    public org.oneflow.core.record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
         int index) {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         return lockId2IntersectingLockIds_.get(index);  } else {
@@ -1095,7 +1095,7 @@ public  final class ReentrantLockOpConf extends
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
          getLockId2IntersectingLockIdsOrBuilderList() {
       if (lockId2IntersectingLockIdsBuilder_ != null) {
         return lockId2IntersectingLockIdsBuilder_.getMessageOrBuilderList();
@@ -1106,31 +1106,31 @@ public  final class ReentrantLockOpConf extends
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public oneflow.Record.Int64List.Builder addLockId2IntersectingLockIdsBuilder() {
+    public org.oneflow.core.record.Int64List.Builder addLockId2IntersectingLockIdsBuilder() {
       return getLockId2IntersectingLockIdsFieldBuilder().addBuilder(
-          oneflow.Record.Int64List.getDefaultInstance());
+          org.oneflow.core.record.Int64List.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public oneflow.Record.Int64List.Builder addLockId2IntersectingLockIdsBuilder(
+    public org.oneflow.core.record.Int64List.Builder addLockId2IntersectingLockIdsBuilder(
         int index) {
       return getLockId2IntersectingLockIdsFieldBuilder().addBuilder(
-          index, oneflow.Record.Int64List.getDefaultInstance());
+          index, org.oneflow.core.record.Int64List.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
      */
-    public java.util.List<oneflow.Record.Int64List.Builder> 
+    public java.util.List<org.oneflow.core.record.Int64List.Builder> 
          getLockId2IntersectingLockIdsBuilderList() {
       return getLockId2IntersectingLockIdsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder> 
+        org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder> 
         getLockId2IntersectingLockIdsFieldBuilder() {
       if (lockId2IntersectingLockIdsBuilder_ == null) {
         lockId2IntersectingLockIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder>(
+            org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder>(
                 lockId2IntersectingLockIds_,
                 ((bitField0_ & 0x00000008) == 0x00000008),
                 getParentForChildren(),

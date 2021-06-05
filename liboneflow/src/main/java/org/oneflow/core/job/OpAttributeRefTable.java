@@ -51,7 +51,7 @@ public  final class OpAttributeRefTable extends
                   OpName2OpAttributeDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000001;
             }
-            com.google.protobuf.MapEntry<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+            com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpAttribute>
             opName2OpAttribute = input.readMessage(
                 OpName2OpAttributeDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             opName2OpAttribute_.getMutableMap().put(opName2OpAttribute.getKey(), opName2OpAttribute.getValue());
@@ -95,18 +95,18 @@ public  final class OpAttributeRefTable extends
   public static final int OP_NAME2OP_ATTRIBUTE_FIELD_NUMBER = 1;
   private static final class OpName2OpAttributeDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> defaultEntry =
+        java.lang.String, org.oneflow.core.operator.OpAttribute> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>newDefaultInstance(
+            .<java.lang.String, org.oneflow.core.operator.OpAttribute>newDefaultInstance(
                 org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_OpAttributeRefTable_OpName2opAttributeEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.OpAttributeOuterClass.OpAttribute.getDefaultInstance());
+                org.oneflow.core.operator.OpAttribute.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> opName2OpAttribute_;
-  private com.google.protobuf.MapField<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+      java.lang.String, org.oneflow.core.operator.OpAttribute> opName2OpAttribute_;
+  private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpAttribute>
   internalGetOpName2OpAttribute() {
     if (opName2OpAttribute_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -131,25 +131,25 @@ public  final class OpAttributeRefTable extends
    * Use {@link #getOpName2OpAttributeMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> getOpName2OpAttribute() {
+  public java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> getOpName2OpAttribute() {
     return getOpName2OpAttributeMap();
   }
   /**
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
 
-  public java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> getOpName2OpAttributeMap() {
+  public java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> getOpName2OpAttributeMap() {
     return internalGetOpName2OpAttribute().getMap();
   }
   /**
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
 
-  public oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrDefault(
+  public org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrDefault(
       java.lang.String key,
-      oneflow.OpAttributeOuterClass.OpAttribute defaultValue) {
+      org.oneflow.core.operator.OpAttribute defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> map =
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> map =
         internalGetOpName2OpAttribute().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -157,10 +157,10 @@ public  final class OpAttributeRefTable extends
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
 
-  public oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrThrow(
+  public org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> map =
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> map =
         internalGetOpName2OpAttribute().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -174,7 +174,7 @@ public  final class OpAttributeRefTable extends
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
-    for (oneflow.OpAttributeOuterClass.OpAttribute item : getOpName2OpAttribute().values()) {
+    for (org.oneflow.core.operator.OpAttribute item : getOpName2OpAttribute().values()) {
       if (!item.isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
@@ -186,9 +186,9 @@ public  final class OpAttributeRefTable extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (java.util.Map.Entry<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpAttribute> entry
          : internalGetOpName2OpAttribute().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpAttribute>
       opName2OpAttribute = OpName2OpAttributeDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -203,9 +203,9 @@ public  final class OpAttributeRefTable extends
     if (size != -1) return size;
 
     size = 0;
-    for (java.util.Map.Entry<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpAttribute> entry
          : internalGetOpName2OpAttribute().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpAttribute>
       opName2OpAttribute = OpName2OpAttributeDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -462,7 +462,7 @@ public  final class OpAttributeRefTable extends
     }
 
     public final boolean isInitialized() {
-      for (oneflow.OpAttributeOuterClass.OpAttribute item : getOpName2OpAttribute().values()) {
+      for (org.oneflow.core.operator.OpAttribute item : getOpName2OpAttribute().values()) {
         if (!item.isInitialized()) {
           return false;
         }
@@ -490,8 +490,8 @@ public  final class OpAttributeRefTable extends
     private int bitField0_;
 
     private com.google.protobuf.MapField<
-        java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> opName2OpAttribute_;
-    private com.google.protobuf.MapField<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+        java.lang.String, org.oneflow.core.operator.OpAttribute> opName2OpAttribute_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpAttribute>
     internalGetOpName2OpAttribute() {
       if (opName2OpAttribute_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -499,7 +499,7 @@ public  final class OpAttributeRefTable extends
       }
       return opName2OpAttribute_;
     }
-    private com.google.protobuf.MapField<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpAttribute>
     internalGetMutableOpName2OpAttribute() {
       onChanged();;
       if (opName2OpAttribute_ == null) {
@@ -528,25 +528,25 @@ public  final class OpAttributeRefTable extends
      * Use {@link #getOpName2OpAttributeMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> getOpName2OpAttribute() {
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> getOpName2OpAttribute() {
       return getOpName2OpAttributeMap();
     }
     /**
      * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
      */
 
-    public java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> getOpName2OpAttributeMap() {
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> getOpName2OpAttributeMap() {
       return internalGetOpName2OpAttribute().getMap();
     }
     /**
      * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
      */
 
-    public oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrDefault(
+    public org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrDefault(
         java.lang.String key,
-        oneflow.OpAttributeOuterClass.OpAttribute defaultValue) {
+        org.oneflow.core.operator.OpAttribute defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> map =
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> map =
           internalGetOpName2OpAttribute().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -554,10 +554,10 @@ public  final class OpAttributeRefTable extends
      * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
      */
 
-    public oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrThrow(
+    public org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> map =
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> map =
           internalGetOpName2OpAttribute().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -583,7 +583,7 @@ public  final class OpAttributeRefTable extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute>
     getMutableOpName2OpAttribute() {
       return internalGetMutableOpName2OpAttribute().getMutableMap();
     }
@@ -592,7 +592,7 @@ public  final class OpAttributeRefTable extends
      */
     public Builder putOpName2OpAttribute(
         java.lang.String key,
-        oneflow.OpAttributeOuterClass.OpAttribute value) {
+        org.oneflow.core.operator.OpAttribute value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableOpName2OpAttribute().put(key, value);
@@ -603,7 +603,7 @@ public  final class OpAttributeRefTable extends
      */
 
     public Builder putAllOpName2OpAttribute(
-        java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute> values) {
+        java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute> values) {
       getMutableOpName2OpAttribute().putAll(values);
       return this;
     }

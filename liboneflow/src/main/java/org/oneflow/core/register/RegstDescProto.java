@@ -103,11 +103,11 @@ public  final class RegstDescProto extends
             break;
           }
           case 58: {
-            oneflow.MemoryCaseOuterClass.MemoryCase.Builder subBuilder = null;
+            org.oneflow.core.memory.MemoryCase.Builder subBuilder = null;
             if (((bitField0_ & 0x00000020) == 0x00000020)) {
               subBuilder = memCase_.toBuilder();
             }
-            memCase_ = input.readMessage(oneflow.MemoryCaseOuterClass.MemoryCase.PARSER, extensionRegistry);
+            memCase_ = input.readMessage(org.oneflow.core.memory.MemoryCase.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(memCase_);
               memCase_ = subBuilder.buildPartial();
@@ -327,7 +327,7 @@ public  final class RegstDescProto extends
   }
 
   public static final int MEM_CASE_FIELD_NUMBER = 7;
-  private oneflow.MemoryCaseOuterClass.MemoryCase memCase_;
+  private org.oneflow.core.memory.MemoryCase memCase_;
   /**
    * <code>required .oneflow.MemoryCase mem_case = 7;</code>
    */
@@ -337,14 +337,14 @@ public  final class RegstDescProto extends
   /**
    * <code>required .oneflow.MemoryCase mem_case = 7;</code>
    */
-  public oneflow.MemoryCaseOuterClass.MemoryCase getMemCase() {
-    return memCase_ == null ? oneflow.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+  public org.oneflow.core.memory.MemoryCase getMemCase() {
+    return memCase_ == null ? org.oneflow.core.memory.MemoryCase.getDefaultInstance() : memCase_;
   }
   /**
    * <code>required .oneflow.MemoryCase mem_case = 7;</code>
    */
-  public oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
-    return memCase_ == null ? oneflow.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+  public org.oneflow.core.memory.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+    return memCase_ == null ? org.oneflow.core.memory.MemoryCase.getDefaultInstance() : memCase_;
   }
 
   public static final int REGST_DESC_TYPE_FIELD_NUMBER = 8;
@@ -1491,9 +1491,9 @@ public  final class RegstDescProto extends
       return this;
     }
 
-    private oneflow.MemoryCaseOuterClass.MemoryCase memCase_ = null;
+    private org.oneflow.core.memory.MemoryCase memCase_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MemoryCaseOuterClass.MemoryCase, oneflow.MemoryCaseOuterClass.MemoryCase.Builder, oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder> memCaseBuilder_;
+        org.oneflow.core.memory.MemoryCase, org.oneflow.core.memory.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOrBuilder> memCaseBuilder_;
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
@@ -1503,9 +1503,9 @@ public  final class RegstDescProto extends
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
-    public oneflow.MemoryCaseOuterClass.MemoryCase getMemCase() {
+    public org.oneflow.core.memory.MemoryCase getMemCase() {
       if (memCaseBuilder_ == null) {
-        return memCase_ == null ? oneflow.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+        return memCase_ == null ? org.oneflow.core.memory.MemoryCase.getDefaultInstance() : memCase_;
       } else {
         return memCaseBuilder_.getMessage();
       }
@@ -1513,7 +1513,7 @@ public  final class RegstDescProto extends
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
-    public Builder setMemCase(oneflow.MemoryCaseOuterClass.MemoryCase value) {
+    public Builder setMemCase(org.oneflow.core.memory.MemoryCase value) {
       if (memCaseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1530,7 +1530,7 @@ public  final class RegstDescProto extends
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
     public Builder setMemCase(
-        oneflow.MemoryCaseOuterClass.MemoryCase.Builder builderForValue) {
+        org.oneflow.core.memory.MemoryCase.Builder builderForValue) {
       if (memCaseBuilder_ == null) {
         memCase_ = builderForValue.build();
         onChanged();
@@ -1543,13 +1543,13 @@ public  final class RegstDescProto extends
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
-    public Builder mergeMemCase(oneflow.MemoryCaseOuterClass.MemoryCase value) {
+    public Builder mergeMemCase(org.oneflow.core.memory.MemoryCase value) {
       if (memCaseBuilder_ == null) {
         if (((bitField0_ & 0x00000040) == 0x00000040) &&
             memCase_ != null &&
-            memCase_ != oneflow.MemoryCaseOuterClass.MemoryCase.getDefaultInstance()) {
+            memCase_ != org.oneflow.core.memory.MemoryCase.getDefaultInstance()) {
           memCase_ =
-            oneflow.MemoryCaseOuterClass.MemoryCase.newBuilder(memCase_).mergeFrom(value).buildPartial();
+            org.oneflow.core.memory.MemoryCase.newBuilder(memCase_).mergeFrom(value).buildPartial();
         } else {
           memCase_ = value;
         }
@@ -1576,7 +1576,7 @@ public  final class RegstDescProto extends
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
-    public oneflow.MemoryCaseOuterClass.MemoryCase.Builder getMemCaseBuilder() {
+    public org.oneflow.core.memory.MemoryCase.Builder getMemCaseBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getMemCaseFieldBuilder().getBuilder();
@@ -1584,23 +1584,23 @@ public  final class RegstDescProto extends
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
-    public oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+    public org.oneflow.core.memory.MemoryCaseOrBuilder getMemCaseOrBuilder() {
       if (memCaseBuilder_ != null) {
         return memCaseBuilder_.getMessageOrBuilder();
       } else {
         return memCase_ == null ?
-            oneflow.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+            org.oneflow.core.memory.MemoryCase.getDefaultInstance() : memCase_;
       }
     }
     /**
      * <code>required .oneflow.MemoryCase mem_case = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MemoryCaseOuterClass.MemoryCase, oneflow.MemoryCaseOuterClass.MemoryCase.Builder, oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder> 
+        org.oneflow.core.memory.MemoryCase, org.oneflow.core.memory.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOrBuilder> 
         getMemCaseFieldBuilder() {
       if (memCaseBuilder_ == null) {
         memCaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.MemoryCaseOuterClass.MemoryCase, oneflow.MemoryCaseOuterClass.MemoryCase.Builder, oneflow.MemoryCaseOuterClass.MemoryCaseOrBuilder>(
+            org.oneflow.core.memory.MemoryCase, org.oneflow.core.memory.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOrBuilder>(
                 getMemCase(),
                 getParentForChildren(),
                 isClean());

@@ -14,11 +14,11 @@ public interface VariableMetaInfoOrBuilder extends
   /**
    * <code>required .oneflow.ShapeProto shape = 2;</code>
    */
-  oneflow.Shape.ShapeProto getShape();
+  org.oneflow.core.common.ShapeProto getShape();
   /**
    * <code>required .oneflow.ShapeProto shape = 2;</code>
    */
-  oneflow.Shape.ShapeProtoOrBuilder getShapeOrBuilder();
+  org.oneflow.core.common.ShapeProtoOrBuilder getShapeOrBuilder();
 
   /**
    * <code>required .oneflow.DataType data_type = 3;</code>
@@ -27,5 +27,5 @@ public interface VariableMetaInfoOrBuilder extends
   /**
    * <code>required .oneflow.DataType data_type = 3;</code>
    */
-  oneflow.DataTypeOuterClass.DataType getDataType();
+  org.oneflow.core.common.DataType getDataType();
 }

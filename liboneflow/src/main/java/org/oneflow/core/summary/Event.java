@@ -69,14 +69,14 @@ public  final class Event extends
             break;
           }
           case 42: {
-            oneflow.summary.SummaryOuterClass.Summary.Builder subBuilder = null;
+            org.oneflow.core.summary.Summary.Builder subBuilder = null;
             if (whatCase_ == 5) {
-              subBuilder = ((oneflow.summary.SummaryOuterClass.Summary) what_).toBuilder();
+              subBuilder = ((org.oneflow.core.summary.Summary) what_).toBuilder();
             }
             what_ =
-                input.readMessage(oneflow.summary.SummaryOuterClass.Summary.PARSER, extensionRegistry);
+                input.readMessage(org.oneflow.core.summary.Summary.PARSER, extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((oneflow.summary.SummaryOuterClass.Summary) what_);
+              subBuilder.mergeFrom((org.oneflow.core.summary.Summary) what_);
               what_ = subBuilder.buildPartial();
             }
             whatCase_ = 5;
@@ -260,20 +260,20 @@ public  final class Event extends
   /**
    * <code>optional .oneflow.summary.Summary summary = 5;</code>
    */
-  public oneflow.summary.SummaryOuterClass.Summary getSummary() {
+  public org.oneflow.core.summary.Summary getSummary() {
     if (whatCase_ == 5) {
-       return (oneflow.summary.SummaryOuterClass.Summary) what_;
+       return (org.oneflow.core.summary.Summary) what_;
     }
-    return oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+    return org.oneflow.core.summary.Summary.getDefaultInstance();
   }
   /**
    * <code>optional .oneflow.summary.Summary summary = 5;</code>
    */
-  public oneflow.summary.SummaryOuterClass.SummaryOrBuilder getSummaryOrBuilder() {
+  public org.oneflow.core.summary.SummaryOrBuilder getSummaryOrBuilder() {
     if (whatCase_ == 5) {
-       return (oneflow.summary.SummaryOuterClass.Summary) what_;
+       return (org.oneflow.core.summary.Summary) what_;
     }
-    return oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+    return org.oneflow.core.summary.Summary.getDefaultInstance();
   }
 
   public static final int META_GRAPH_DEF_FIELD_NUMBER = 9;
@@ -329,7 +329,7 @@ public  final class Event extends
           4, (com.google.protobuf.ByteString)((com.google.protobuf.ByteString) what_));
     }
     if (whatCase_ == 5) {
-      output.writeMessage(5, (oneflow.summary.SummaryOuterClass.Summary) what_);
+      output.writeMessage(5, (org.oneflow.core.summary.Summary) what_);
     }
     if (whatCase_ == 9) {
       output.writeBytes(
@@ -361,7 +361,7 @@ public  final class Event extends
     }
     if (whatCase_ == 5) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, (oneflow.summary.SummaryOuterClass.Summary) what_);
+        .computeMessageSize(5, (org.oneflow.core.summary.Summary) what_);
     }
     if (whatCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
@@ -947,7 +947,7 @@ public  final class Event extends
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.summary.SummaryOuterClass.Summary, oneflow.summary.SummaryOuterClass.Summary.Builder, oneflow.summary.SummaryOuterClass.SummaryOrBuilder> summaryBuilder_;
+        org.oneflow.core.summary.Summary, org.oneflow.core.summary.Summary.Builder, org.oneflow.core.summary.SummaryOrBuilder> summaryBuilder_;
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
@@ -957,23 +957,23 @@ public  final class Event extends
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
-    public oneflow.summary.SummaryOuterClass.Summary getSummary() {
+    public org.oneflow.core.summary.Summary getSummary() {
       if (summaryBuilder_ == null) {
         if (whatCase_ == 5) {
-          return (oneflow.summary.SummaryOuterClass.Summary) what_;
+          return (org.oneflow.core.summary.Summary) what_;
         }
-        return oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+        return org.oneflow.core.summary.Summary.getDefaultInstance();
       } else {
         if (whatCase_ == 5) {
           return summaryBuilder_.getMessage();
         }
-        return oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+        return org.oneflow.core.summary.Summary.getDefaultInstance();
       }
     }
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
-    public Builder setSummary(oneflow.summary.SummaryOuterClass.Summary value) {
+    public Builder setSummary(org.oneflow.core.summary.Summary value) {
       if (summaryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -990,7 +990,7 @@ public  final class Event extends
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
     public Builder setSummary(
-        oneflow.summary.SummaryOuterClass.Summary.Builder builderForValue) {
+        org.oneflow.core.summary.Summary.Builder builderForValue) {
       if (summaryBuilder_ == null) {
         what_ = builderForValue.build();
         onChanged();
@@ -1003,11 +1003,11 @@ public  final class Event extends
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
-    public Builder mergeSummary(oneflow.summary.SummaryOuterClass.Summary value) {
+    public Builder mergeSummary(org.oneflow.core.summary.Summary value) {
       if (summaryBuilder_ == null) {
         if (whatCase_ == 5 &&
-            what_ != oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance()) {
-          what_ = oneflow.summary.SummaryOuterClass.Summary.newBuilder((oneflow.summary.SummaryOuterClass.Summary) what_)
+            what_ != org.oneflow.core.summary.Summary.getDefaultInstance()) {
+          what_ = org.oneflow.core.summary.Summary.newBuilder((org.oneflow.core.summary.Summary) what_)
               .mergeFrom(value).buildPartial();
         } else {
           what_ = value;
@@ -1044,35 +1044,35 @@ public  final class Event extends
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
-    public oneflow.summary.SummaryOuterClass.Summary.Builder getSummaryBuilder() {
+    public org.oneflow.core.summary.Summary.Builder getSummaryBuilder() {
       return getSummaryFieldBuilder().getBuilder();
     }
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
-    public oneflow.summary.SummaryOuterClass.SummaryOrBuilder getSummaryOrBuilder() {
+    public org.oneflow.core.summary.SummaryOrBuilder getSummaryOrBuilder() {
       if ((whatCase_ == 5) && (summaryBuilder_ != null)) {
         return summaryBuilder_.getMessageOrBuilder();
       } else {
         if (whatCase_ == 5) {
-          return (oneflow.summary.SummaryOuterClass.Summary) what_;
+          return (org.oneflow.core.summary.Summary) what_;
         }
-        return oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+        return org.oneflow.core.summary.Summary.getDefaultInstance();
       }
     }
     /**
      * <code>optional .oneflow.summary.Summary summary = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.summary.SummaryOuterClass.Summary, oneflow.summary.SummaryOuterClass.Summary.Builder, oneflow.summary.SummaryOuterClass.SummaryOrBuilder> 
+        org.oneflow.core.summary.Summary, org.oneflow.core.summary.Summary.Builder, org.oneflow.core.summary.SummaryOrBuilder> 
         getSummaryFieldBuilder() {
       if (summaryBuilder_ == null) {
         if (!(whatCase_ == 5)) {
-          what_ = oneflow.summary.SummaryOuterClass.Summary.getDefaultInstance();
+          what_ = org.oneflow.core.summary.Summary.getDefaultInstance();
         }
         summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.summary.SummaryOuterClass.Summary, oneflow.summary.SummaryOuterClass.Summary.Builder, oneflow.summary.SummaryOuterClass.SummaryOrBuilder>(
-                (oneflow.summary.SummaryOuterClass.Summary) what_,
+            org.oneflow.core.summary.Summary, org.oneflow.core.summary.Summary.Builder, org.oneflow.core.summary.SummaryOrBuilder>(
+                (org.oneflow.core.summary.Summary) what_,
                 getParentForChildren(),
                 isClean());
         what_ = null;

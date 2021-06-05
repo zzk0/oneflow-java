@@ -64,7 +64,7 @@ public final class Env {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.CtrlBootstrap.getDescriptor(),
+          org.oneflow.core.control.CtrlBootstrap.getDescriptor(),
         }, assigner);
     internal_static_oneflow_Machine_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -84,7 +84,7 @@ public final class Env {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_EnvProto_descriptor,
         new java.lang.String[] { "Machine", "CtrlPort", "DataPort", "CppLoggingConf", "CtrlBootstrapConf", "IsDefaultPhysicalEnv", });
-    oneflow.CtrlBootstrap.getDescriptor();
+    org.oneflow.core.control.CtrlBootstrap.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

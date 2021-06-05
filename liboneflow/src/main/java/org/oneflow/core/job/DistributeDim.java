@@ -59,11 +59,11 @@ public  final class DistributeDim extends
             break;
           }
           case 18: {
-            oneflow.SbpParallelOuterClass.SbpParallel.Builder subBuilder = null;
+            org.oneflow.core.job.SbpParallel.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = sbpParallel_.toBuilder();
             }
-            sbpParallel_ = input.readMessage(oneflow.SbpParallelOuterClass.SbpParallel.PARSER, extensionRegistry);
+            sbpParallel_ = input.readMessage(org.oneflow.core.job.SbpParallel.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(sbpParallel_);
               sbpParallel_ = subBuilder.buildPartial();
@@ -118,7 +118,7 @@ public  final class DistributeDim extends
   }
 
   public static final int SBP_PARALLEL_FIELD_NUMBER = 2;
-  private oneflow.SbpParallelOuterClass.SbpParallel sbpParallel_;
+  private org.oneflow.core.job.SbpParallel sbpParallel_;
   /**
    * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
    */
@@ -128,14 +128,14 @@ public  final class DistributeDim extends
   /**
    * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
    */
-  public oneflow.SbpParallelOuterClass.SbpParallel getSbpParallel() {
-    return sbpParallel_ == null ? oneflow.SbpParallelOuterClass.SbpParallel.getDefaultInstance() : sbpParallel_;
+  public org.oneflow.core.job.SbpParallel getSbpParallel() {
+    return sbpParallel_ == null ? org.oneflow.core.job.SbpParallel.getDefaultInstance() : sbpParallel_;
   }
   /**
    * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
    */
-  public oneflow.SbpParallelOuterClass.SbpParallelOrBuilder getSbpParallelOrBuilder() {
-    return sbpParallel_ == null ? oneflow.SbpParallelOuterClass.SbpParallel.getDefaultInstance() : sbpParallel_;
+  public org.oneflow.core.job.SbpParallelOrBuilder getSbpParallelOrBuilder() {
+    return sbpParallel_ == null ? org.oneflow.core.job.SbpParallel.getDefaultInstance() : sbpParallel_;
   }
 
   public static final int DISTRIBUTE_NUM_FIELD_NUMBER = 3;
@@ -561,9 +561,9 @@ public  final class DistributeDim extends
       return this;
     }
 
-    private oneflow.SbpParallelOuterClass.SbpParallel sbpParallel_ = null;
+    private org.oneflow.core.job.SbpParallel sbpParallel_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.SbpParallelOuterClass.SbpParallel, oneflow.SbpParallelOuterClass.SbpParallel.Builder, oneflow.SbpParallelOuterClass.SbpParallelOrBuilder> sbpParallelBuilder_;
+        org.oneflow.core.job.SbpParallel, org.oneflow.core.job.SbpParallel.Builder, org.oneflow.core.job.SbpParallelOrBuilder> sbpParallelBuilder_;
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
@@ -573,9 +573,9 @@ public  final class DistributeDim extends
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
-    public oneflow.SbpParallelOuterClass.SbpParallel getSbpParallel() {
+    public org.oneflow.core.job.SbpParallel getSbpParallel() {
       if (sbpParallelBuilder_ == null) {
-        return sbpParallel_ == null ? oneflow.SbpParallelOuterClass.SbpParallel.getDefaultInstance() : sbpParallel_;
+        return sbpParallel_ == null ? org.oneflow.core.job.SbpParallel.getDefaultInstance() : sbpParallel_;
       } else {
         return sbpParallelBuilder_.getMessage();
       }
@@ -583,7 +583,7 @@ public  final class DistributeDim extends
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
-    public Builder setSbpParallel(oneflow.SbpParallelOuterClass.SbpParallel value) {
+    public Builder setSbpParallel(org.oneflow.core.job.SbpParallel value) {
       if (sbpParallelBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -600,7 +600,7 @@ public  final class DistributeDim extends
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
     public Builder setSbpParallel(
-        oneflow.SbpParallelOuterClass.SbpParallel.Builder builderForValue) {
+        org.oneflow.core.job.SbpParallel.Builder builderForValue) {
       if (sbpParallelBuilder_ == null) {
         sbpParallel_ = builderForValue.build();
         onChanged();
@@ -613,13 +613,13 @@ public  final class DistributeDim extends
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
-    public Builder mergeSbpParallel(oneflow.SbpParallelOuterClass.SbpParallel value) {
+    public Builder mergeSbpParallel(org.oneflow.core.job.SbpParallel value) {
       if (sbpParallelBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             sbpParallel_ != null &&
-            sbpParallel_ != oneflow.SbpParallelOuterClass.SbpParallel.getDefaultInstance()) {
+            sbpParallel_ != org.oneflow.core.job.SbpParallel.getDefaultInstance()) {
           sbpParallel_ =
-            oneflow.SbpParallelOuterClass.SbpParallel.newBuilder(sbpParallel_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.SbpParallel.newBuilder(sbpParallel_).mergeFrom(value).buildPartial();
         } else {
           sbpParallel_ = value;
         }
@@ -646,7 +646,7 @@ public  final class DistributeDim extends
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
-    public oneflow.SbpParallelOuterClass.SbpParallel.Builder getSbpParallelBuilder() {
+    public org.oneflow.core.job.SbpParallel.Builder getSbpParallelBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getSbpParallelFieldBuilder().getBuilder();
@@ -654,23 +654,23 @@ public  final class DistributeDim extends
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
-    public oneflow.SbpParallelOuterClass.SbpParallelOrBuilder getSbpParallelOrBuilder() {
+    public org.oneflow.core.job.SbpParallelOrBuilder getSbpParallelOrBuilder() {
       if (sbpParallelBuilder_ != null) {
         return sbpParallelBuilder_.getMessageOrBuilder();
       } else {
         return sbpParallel_ == null ?
-            oneflow.SbpParallelOuterClass.SbpParallel.getDefaultInstance() : sbpParallel_;
+            org.oneflow.core.job.SbpParallel.getDefaultInstance() : sbpParallel_;
       }
     }
     /**
      * <code>required .oneflow.SbpParallel sbp_parallel = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.SbpParallelOuterClass.SbpParallel, oneflow.SbpParallelOuterClass.SbpParallel.Builder, oneflow.SbpParallelOuterClass.SbpParallelOrBuilder> 
+        org.oneflow.core.job.SbpParallel, org.oneflow.core.job.SbpParallel.Builder, org.oneflow.core.job.SbpParallelOrBuilder> 
         getSbpParallelFieldBuilder() {
       if (sbpParallelBuilder_ == null) {
         sbpParallelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.SbpParallelOuterClass.SbpParallel, oneflow.SbpParallelOuterClass.SbpParallel.Builder, oneflow.SbpParallelOuterClass.SbpParallelOrBuilder>(
+            org.oneflow.core.job.SbpParallel, org.oneflow.core.job.SbpParallel.Builder, org.oneflow.core.job.SbpParallelOrBuilder>(
                 getSbpParallel(),
                 getParentForChildren(),
                 isClean());

@@ -14,9 +14,9 @@ public interface PushActEventRequestOrBuilder extends
   /**
    * <code>required .oneflow.ActEvent act_event = 1;</code>
    */
-  oneflow.ActEventOuterClass.ActEvent getActEvent();
+  org.oneflow.core.actor.ActEvent getActEvent();
   /**
    * <code>required .oneflow.ActEvent act_event = 1;</code>
    */
-  oneflow.ActEventOuterClass.ActEventOrBuilder getActEventOrBuilder();
+  org.oneflow.core.actor.ActEventOrBuilder getActEventOrBuilder();
 }

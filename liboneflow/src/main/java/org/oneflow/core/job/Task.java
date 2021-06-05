@@ -97,9 +97,9 @@ public final class Task {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.ExecSequenceOuterClass.getDescriptor(),
+          org.oneflow.core.graph.ExecSequenceOuterClass.getDescriptor(),
           org.oneflow.core.register.RegisterDesc.getDescriptor(),
-          oneflow.PlacementOuterClass.getDescriptor(),
+          org.oneflow.core.job.PlacementOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_RegstDescIdSet_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -131,9 +131,9 @@ public final class Task {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_TaskProto_ConsumedRegstDescIdEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.ExecSequenceOuterClass.getDescriptor();
+    org.oneflow.core.graph.ExecSequenceOuterClass.getDescriptor();
     org.oneflow.core.register.RegisterDesc.getDescriptor();
-    oneflow.PlacementOuterClass.getDescriptor();
+    org.oneflow.core.job.PlacementOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -14,11 +14,11 @@ public interface JobOrBuilder extends
   /**
    * <code>required .oneflow.DLNetConf net = 1;</code>
    */
-  oneflow.DlnetConf.DLNetConf getNet();
+  org.oneflow.core.job.DLNetConf getNet();
   /**
    * <code>required .oneflow.DLNetConf net = 1;</code>
    */
-  oneflow.DlnetConf.DLNetConfOrBuilder getNetOrBuilder();
+  org.oneflow.core.job.DLNetConfOrBuilder getNetOrBuilder();
 
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
@@ -27,11 +27,11 @@ public interface JobOrBuilder extends
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
    */
-  oneflow.PlacementOuterClass.Placement getPlacement();
+  org.oneflow.core.job.Placement getPlacement();
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
    */
-  oneflow.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder();
+  org.oneflow.core.job.PlacementOrBuilder getPlacementOrBuilder();
 
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
@@ -40,11 +40,11 @@ public interface JobOrBuilder extends
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
    */
-  oneflow.JobConf.JobConfigProto getJobConf();
+  org.oneflow.core.job.JobConfigProto getJobConf();
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
    */
-  oneflow.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder();
+  org.oneflow.core.job.JobConfigProtoOrBuilder getJobConfOrBuilder();
 
   /**
    * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>

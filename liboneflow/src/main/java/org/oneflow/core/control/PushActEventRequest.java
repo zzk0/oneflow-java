@@ -46,11 +46,11 @@ public  final class PushActEventRequest extends
             break;
           }
           case 10: {
-            oneflow.ActEventOuterClass.ActEvent.Builder subBuilder = null;
+            org.oneflow.core.actor.ActEvent.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = actEvent_.toBuilder();
             }
-            actEvent_ = input.readMessage(oneflow.ActEventOuterClass.ActEvent.PARSER, extensionRegistry);
+            actEvent_ = input.readMessage(org.oneflow.core.actor.ActEvent.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(actEvent_);
               actEvent_ = subBuilder.buildPartial();
@@ -84,7 +84,7 @@ public  final class PushActEventRequest extends
 
   private int bitField0_;
   public static final int ACT_EVENT_FIELD_NUMBER = 1;
-  private oneflow.ActEventOuterClass.ActEvent actEvent_;
+  private org.oneflow.core.actor.ActEvent actEvent_;
   /**
    * <code>required .oneflow.ActEvent act_event = 1;</code>
    */
@@ -94,14 +94,14 @@ public  final class PushActEventRequest extends
   /**
    * <code>required .oneflow.ActEvent act_event = 1;</code>
    */
-  public oneflow.ActEventOuterClass.ActEvent getActEvent() {
-    return actEvent_ == null ? oneflow.ActEventOuterClass.ActEvent.getDefaultInstance() : actEvent_;
+  public org.oneflow.core.actor.ActEvent getActEvent() {
+    return actEvent_ == null ? org.oneflow.core.actor.ActEvent.getDefaultInstance() : actEvent_;
   }
   /**
    * <code>required .oneflow.ActEvent act_event = 1;</code>
    */
-  public oneflow.ActEventOuterClass.ActEventOrBuilder getActEventOrBuilder() {
-    return actEvent_ == null ? oneflow.ActEventOuterClass.ActEvent.getDefaultInstance() : actEvent_;
+  public org.oneflow.core.actor.ActEventOrBuilder getActEventOrBuilder() {
+    return actEvent_ == null ? org.oneflow.core.actor.ActEvent.getDefaultInstance() : actEvent_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -412,9 +412,9 @@ public  final class PushActEventRequest extends
     }
     private int bitField0_;
 
-    private oneflow.ActEventOuterClass.ActEvent actEvent_ = null;
+    private org.oneflow.core.actor.ActEvent actEvent_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.ActEventOuterClass.ActEvent, oneflow.ActEventOuterClass.ActEvent.Builder, oneflow.ActEventOuterClass.ActEventOrBuilder> actEventBuilder_;
+        org.oneflow.core.actor.ActEvent, org.oneflow.core.actor.ActEvent.Builder, org.oneflow.core.actor.ActEventOrBuilder> actEventBuilder_;
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
@@ -424,9 +424,9 @@ public  final class PushActEventRequest extends
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
-    public oneflow.ActEventOuterClass.ActEvent getActEvent() {
+    public org.oneflow.core.actor.ActEvent getActEvent() {
       if (actEventBuilder_ == null) {
-        return actEvent_ == null ? oneflow.ActEventOuterClass.ActEvent.getDefaultInstance() : actEvent_;
+        return actEvent_ == null ? org.oneflow.core.actor.ActEvent.getDefaultInstance() : actEvent_;
       } else {
         return actEventBuilder_.getMessage();
       }
@@ -434,7 +434,7 @@ public  final class PushActEventRequest extends
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
-    public Builder setActEvent(oneflow.ActEventOuterClass.ActEvent value) {
+    public Builder setActEvent(org.oneflow.core.actor.ActEvent value) {
       if (actEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -451,7 +451,7 @@ public  final class PushActEventRequest extends
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
     public Builder setActEvent(
-        oneflow.ActEventOuterClass.ActEvent.Builder builderForValue) {
+        org.oneflow.core.actor.ActEvent.Builder builderForValue) {
       if (actEventBuilder_ == null) {
         actEvent_ = builderForValue.build();
         onChanged();
@@ -464,13 +464,13 @@ public  final class PushActEventRequest extends
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
-    public Builder mergeActEvent(oneflow.ActEventOuterClass.ActEvent value) {
+    public Builder mergeActEvent(org.oneflow.core.actor.ActEvent value) {
       if (actEventBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
             actEvent_ != null &&
-            actEvent_ != oneflow.ActEventOuterClass.ActEvent.getDefaultInstance()) {
+            actEvent_ != org.oneflow.core.actor.ActEvent.getDefaultInstance()) {
           actEvent_ =
-            oneflow.ActEventOuterClass.ActEvent.newBuilder(actEvent_).mergeFrom(value).buildPartial();
+            org.oneflow.core.actor.ActEvent.newBuilder(actEvent_).mergeFrom(value).buildPartial();
         } else {
           actEvent_ = value;
         }
@@ -497,7 +497,7 @@ public  final class PushActEventRequest extends
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
-    public oneflow.ActEventOuterClass.ActEvent.Builder getActEventBuilder() {
+    public org.oneflow.core.actor.ActEvent.Builder getActEventBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getActEventFieldBuilder().getBuilder();
@@ -505,23 +505,23 @@ public  final class PushActEventRequest extends
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
-    public oneflow.ActEventOuterClass.ActEventOrBuilder getActEventOrBuilder() {
+    public org.oneflow.core.actor.ActEventOrBuilder getActEventOrBuilder() {
       if (actEventBuilder_ != null) {
         return actEventBuilder_.getMessageOrBuilder();
       } else {
         return actEvent_ == null ?
-            oneflow.ActEventOuterClass.ActEvent.getDefaultInstance() : actEvent_;
+            org.oneflow.core.actor.ActEvent.getDefaultInstance() : actEvent_;
       }
     }
     /**
      * <code>required .oneflow.ActEvent act_event = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.ActEventOuterClass.ActEvent, oneflow.ActEventOuterClass.ActEvent.Builder, oneflow.ActEventOuterClass.ActEventOrBuilder> 
+        org.oneflow.core.actor.ActEvent, org.oneflow.core.actor.ActEvent.Builder, org.oneflow.core.actor.ActEventOrBuilder> 
         getActEventFieldBuilder() {
       if (actEventBuilder_ == null) {
         actEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.ActEventOuterClass.ActEvent, oneflow.ActEventOuterClass.ActEvent.Builder, oneflow.ActEventOuterClass.ActEventOrBuilder>(
+            org.oneflow.core.actor.ActEvent, org.oneflow.core.actor.ActEvent.Builder, org.oneflow.core.actor.ActEventOrBuilder>(
                 getActEvent(),
                 getParentForChildren(),
                 isClean());

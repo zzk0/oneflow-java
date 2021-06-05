@@ -51,7 +51,7 @@ public  final class CollectiveBoxingPlan extends
                   JobId2RequestSetDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000001;
             }
-            com.google.protobuf.MapEntry<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+            com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
             jobId2RequestSet = input.readMessage(
                 JobId2RequestSetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             jobId2RequestSet_.getMutableMap().put(jobId2RequestSet.getKey(), jobId2RequestSet.getValue());
@@ -95,18 +95,18 @@ public  final class CollectiveBoxingPlan extends
   public static final int JOB_ID2REQUEST_SET_FIELD_NUMBER = 1;
   private static final class JobId2RequestSetDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> defaultEntry =
+        java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>newDefaultInstance(
+            .<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>newDefaultInstance(
                 org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_CollectiveBoxingPlan_JobId2requestSetEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L,
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.boxing.collective.CollectiveBoxing.RequestSet.getDefaultInstance());
+                org.oneflow.core.graph.boxing.RequestSet.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> jobId2RequestSet_;
-  private com.google.protobuf.MapField<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+      java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> jobId2RequestSet_;
+  private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
   internalGetJobId2RequestSet() {
     if (jobId2RequestSet_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -131,25 +131,25 @@ public  final class CollectiveBoxingPlan extends
    * Use {@link #getJobId2RequestSetMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> getJobId2RequestSet() {
+  public java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> getJobId2RequestSet() {
     return getJobId2RequestSetMap();
   }
   /**
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
 
-  public java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> getJobId2RequestSetMap() {
+  public java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> getJobId2RequestSetMap() {
     return internalGetJobId2RequestSet().getMap();
   }
   /**
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
 
-  public oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrDefault(
+  public org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrDefault(
       long key,
-      oneflow.boxing.collective.CollectiveBoxing.RequestSet defaultValue) {
+      org.oneflow.core.graph.boxing.RequestSet defaultValue) {
     
-    java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> map =
+    java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> map =
         internalGetJobId2RequestSet().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -157,10 +157,10 @@ public  final class CollectiveBoxingPlan extends
    * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
    */
 
-  public oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrThrow(
+  public org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrThrow(
       long key) {
     
-    java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> map =
+    java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> map =
         internalGetJobId2RequestSet().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -174,7 +174,7 @@ public  final class CollectiveBoxingPlan extends
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
-    for (oneflow.boxing.collective.CollectiveBoxing.RequestSet item : getJobId2RequestSet().values()) {
+    for (org.oneflow.core.graph.boxing.RequestSet item : getJobId2RequestSet().values()) {
       if (!item.isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
@@ -186,9 +186,9 @@ public  final class CollectiveBoxingPlan extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (java.util.Map.Entry<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> entry
+    for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> entry
          : internalGetJobId2RequestSet().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+      com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
       jobId2RequestSet = JobId2RequestSetDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -203,9 +203,9 @@ public  final class CollectiveBoxingPlan extends
     if (size != -1) return size;
 
     size = 0;
-    for (java.util.Map.Entry<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> entry
+    for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> entry
          : internalGetJobId2RequestSet().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+      com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
       jobId2RequestSet = JobId2RequestSetDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -462,7 +462,7 @@ public  final class CollectiveBoxingPlan extends
     }
 
     public final boolean isInitialized() {
-      for (oneflow.boxing.collective.CollectiveBoxing.RequestSet item : getJobId2RequestSet().values()) {
+      for (org.oneflow.core.graph.boxing.RequestSet item : getJobId2RequestSet().values()) {
         if (!item.isInitialized()) {
           return false;
         }
@@ -490,8 +490,8 @@ public  final class CollectiveBoxingPlan extends
     private int bitField0_;
 
     private com.google.protobuf.MapField<
-        java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> jobId2RequestSet_;
-    private com.google.protobuf.MapField<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+        java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> jobId2RequestSet_;
+    private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
     internalGetJobId2RequestSet() {
       if (jobId2RequestSet_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -499,7 +499,7 @@ public  final class CollectiveBoxingPlan extends
       }
       return jobId2RequestSet_;
     }
-    private com.google.protobuf.MapField<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+    private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
     internalGetMutableJobId2RequestSet() {
       onChanged();;
       if (jobId2RequestSet_ == null) {
@@ -528,25 +528,25 @@ public  final class CollectiveBoxingPlan extends
      * Use {@link #getJobId2RequestSetMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> getJobId2RequestSet() {
+    public java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> getJobId2RequestSet() {
       return getJobId2RequestSetMap();
     }
     /**
      * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
      */
 
-    public java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> getJobId2RequestSetMap() {
+    public java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> getJobId2RequestSetMap() {
       return internalGetJobId2RequestSet().getMap();
     }
     /**
      * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
      */
 
-    public oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrDefault(
+    public org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrDefault(
         long key,
-        oneflow.boxing.collective.CollectiveBoxing.RequestSet defaultValue) {
+        org.oneflow.core.graph.boxing.RequestSet defaultValue) {
       
-      java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> map =
+      java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> map =
           internalGetJobId2RequestSet().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -554,10 +554,10 @@ public  final class CollectiveBoxingPlan extends
      * <code>map&lt;int64, .oneflow.boxing.collective.RequestSet&gt; job_id2request_set = 1;</code>
      */
 
-    public oneflow.boxing.collective.CollectiveBoxing.RequestSet getJobId2RequestSetOrThrow(
+    public org.oneflow.core.graph.boxing.RequestSet getJobId2RequestSetOrThrow(
         long key) {
       
-      java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> map =
+      java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> map =
           internalGetJobId2RequestSet().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -583,7 +583,7 @@ public  final class CollectiveBoxingPlan extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet>
+    public java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet>
     getMutableJobId2RequestSet() {
       return internalGetMutableJobId2RequestSet().getMutableMap();
     }
@@ -592,7 +592,7 @@ public  final class CollectiveBoxingPlan extends
      */
     public Builder putJobId2RequestSet(
         long key,
-        oneflow.boxing.collective.CollectiveBoxing.RequestSet value) {
+        org.oneflow.core.graph.boxing.RequestSet value) {
       
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableJobId2RequestSet().put(key, value);
@@ -603,7 +603,7 @@ public  final class CollectiveBoxingPlan extends
      */
 
     public Builder putAllJobId2RequestSet(
-        java.util.Map<java.lang.Long, oneflow.boxing.collective.CollectiveBoxing.RequestSet> values) {
+        java.util.Map<java.lang.Long, org.oneflow.core.graph.boxing.RequestSet> values) {
       getMutableJobId2RequestSet().putAll(values);
       return this;
     }

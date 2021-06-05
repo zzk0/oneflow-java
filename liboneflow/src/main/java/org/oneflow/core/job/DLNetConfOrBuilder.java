@@ -10,12 +10,12 @@ public interface DLNetConfOrBuilder extends
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  java.util.List<oneflow.OpConf.OperatorConf> 
+  java.util.List<org.oneflow.core.operator.OperatorConf> 
       getOpList();
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  oneflow.OpConf.OperatorConf getOp(int index);
+  org.oneflow.core.operator.OperatorConf getOp(int index);
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface DLNetConfOrBuilder extends
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+  java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
       getOpOrBuilderList();
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  oneflow.OpConf.OperatorConfOrBuilder getOpOrBuilder(
+  org.oneflow.core.operator.OperatorConfOrBuilder getOpOrBuilder(
       int index);
 }

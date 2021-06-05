@@ -10,12 +10,12 @@ public interface GraphDefOrBuilder extends
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  java.util.List<oneflow.OpConf.OperatorConf> 
+  java.util.List<org.oneflow.core.operator.OperatorConf> 
       getOpListList();
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  oneflow.OpConf.OperatorConf getOpList(int index);
+  org.oneflow.core.operator.OperatorConf getOpList(int index);
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
@@ -23,12 +23,12 @@ public interface GraphDefOrBuilder extends
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+  java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
       getOpListOrBuilderList();
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  oneflow.OpConf.OperatorConfOrBuilder getOpListOrBuilder(
+  org.oneflow.core.operator.OperatorConfOrBuilder getOpListOrBuilder(
       int index);
 
   /**

@@ -55,7 +55,7 @@ public final class ParallelConfSignatureOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.PlacementOuterClass.getDescriptor(),
+          org.oneflow.core.job.PlacementOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_ParallelConfSignature_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,7 +69,7 @@ public final class ParallelConfSignatureOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ParallelConfSignature_BnInOp2parallelConfEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.PlacementOuterClass.getDescriptor();
+    org.oneflow.core.job.PlacementOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

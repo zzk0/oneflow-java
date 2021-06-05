@@ -46,11 +46,11 @@ public  final class Job extends
             break;
           }
           case 10: {
-            oneflow.DlnetConf.DLNetConf.Builder subBuilder = null;
+            org.oneflow.core.job.DLNetConf.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = net_.toBuilder();
             }
-            net_ = input.readMessage(oneflow.DlnetConf.DLNetConf.PARSER, extensionRegistry);
+            net_ = input.readMessage(org.oneflow.core.job.DLNetConf.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(net_);
               net_ = subBuilder.buildPartial();
@@ -59,11 +59,11 @@ public  final class Job extends
             break;
           }
           case 18: {
-            oneflow.PlacementOuterClass.Placement.Builder subBuilder = null;
+            org.oneflow.core.job.Placement.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = placement_.toBuilder();
             }
-            placement_ = input.readMessage(oneflow.PlacementOuterClass.Placement.PARSER, extensionRegistry);
+            placement_ = input.readMessage(org.oneflow.core.job.Placement.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(placement_);
               placement_ = subBuilder.buildPartial();
@@ -72,11 +72,11 @@ public  final class Job extends
             break;
           }
           case 26: {
-            oneflow.JobConf.JobConfigProto.Builder subBuilder = null;
+            org.oneflow.core.job.JobConfigProto.Builder subBuilder = null;
             if (((bitField0_ & 0x00000004) == 0x00000004)) {
               subBuilder = jobConf_.toBuilder();
             }
-            jobConf_ = input.readMessage(oneflow.JobConf.JobConfigProto.PARSER, extensionRegistry);
+            jobConf_ = input.readMessage(org.oneflow.core.job.JobConfigProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(jobConf_);
               jobConf_ = subBuilder.buildPartial();
@@ -136,7 +136,7 @@ public  final class Job extends
 
   private int bitField0_;
   public static final int NET_FIELD_NUMBER = 1;
-  private oneflow.DlnetConf.DLNetConf net_;
+  private org.oneflow.core.job.DLNetConf net_;
   /**
    * <code>required .oneflow.DLNetConf net = 1;</code>
    */
@@ -146,18 +146,18 @@ public  final class Job extends
   /**
    * <code>required .oneflow.DLNetConf net = 1;</code>
    */
-  public oneflow.DlnetConf.DLNetConf getNet() {
-    return net_ == null ? oneflow.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+  public org.oneflow.core.job.DLNetConf getNet() {
+    return net_ == null ? org.oneflow.core.job.DLNetConf.getDefaultInstance() : net_;
   }
   /**
    * <code>required .oneflow.DLNetConf net = 1;</code>
    */
-  public oneflow.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
-    return net_ == null ? oneflow.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+  public org.oneflow.core.job.DLNetConfOrBuilder getNetOrBuilder() {
+    return net_ == null ? org.oneflow.core.job.DLNetConf.getDefaultInstance() : net_;
   }
 
   public static final int PLACEMENT_FIELD_NUMBER = 2;
-  private oneflow.PlacementOuterClass.Placement placement_;
+  private org.oneflow.core.job.Placement placement_;
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
    */
@@ -167,18 +167,18 @@ public  final class Job extends
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
    */
-  public oneflow.PlacementOuterClass.Placement getPlacement() {
-    return placement_ == null ? oneflow.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+  public org.oneflow.core.job.Placement getPlacement() {
+    return placement_ == null ? org.oneflow.core.job.Placement.getDefaultInstance() : placement_;
   }
   /**
    * <code>required .oneflow.Placement placement = 2;</code>
    */
-  public oneflow.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
-    return placement_ == null ? oneflow.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+  public org.oneflow.core.job.PlacementOrBuilder getPlacementOrBuilder() {
+    return placement_ == null ? org.oneflow.core.job.Placement.getDefaultInstance() : placement_;
   }
 
   public static final int JOB_CONF_FIELD_NUMBER = 3;
-  private oneflow.JobConf.JobConfigProto jobConf_;
+  private org.oneflow.core.job.JobConfigProto jobConf_;
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
    */
@@ -188,14 +188,14 @@ public  final class Job extends
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
    */
-  public oneflow.JobConf.JobConfigProto getJobConf() {
-    return jobConf_ == null ? oneflow.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+  public org.oneflow.core.job.JobConfigProto getJobConf() {
+    return jobConf_ == null ? org.oneflow.core.job.JobConfigProto.getDefaultInstance() : jobConf_;
   }
   /**
    * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
    */
-  public oneflow.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder() {
-    return jobConf_ == null ? oneflow.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+  public org.oneflow.core.job.JobConfigProtoOrBuilder getJobConfOrBuilder() {
+    return jobConf_ == null ? org.oneflow.core.job.JobConfigProto.getDefaultInstance() : jobConf_;
   }
 
   public static final int JOB_PARALLEL_VIEW_CONF_FIELD_NUMBER = 4;
@@ -734,9 +734,9 @@ public  final class Job extends
     }
     private int bitField0_;
 
-    private oneflow.DlnetConf.DLNetConf net_ = null;
+    private org.oneflow.core.job.DLNetConf net_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.DlnetConf.DLNetConf, oneflow.DlnetConf.DLNetConf.Builder, oneflow.DlnetConf.DLNetConfOrBuilder> netBuilder_;
+        org.oneflow.core.job.DLNetConf, org.oneflow.core.job.DLNetConf.Builder, org.oneflow.core.job.DLNetConfOrBuilder> netBuilder_;
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
@@ -746,9 +746,9 @@ public  final class Job extends
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
-    public oneflow.DlnetConf.DLNetConf getNet() {
+    public org.oneflow.core.job.DLNetConf getNet() {
       if (netBuilder_ == null) {
-        return net_ == null ? oneflow.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+        return net_ == null ? org.oneflow.core.job.DLNetConf.getDefaultInstance() : net_;
       } else {
         return netBuilder_.getMessage();
       }
@@ -756,7 +756,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
-    public Builder setNet(oneflow.DlnetConf.DLNetConf value) {
+    public Builder setNet(org.oneflow.core.job.DLNetConf value) {
       if (netBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -773,7 +773,7 @@ public  final class Job extends
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
     public Builder setNet(
-        oneflow.DlnetConf.DLNetConf.Builder builderForValue) {
+        org.oneflow.core.job.DLNetConf.Builder builderForValue) {
       if (netBuilder_ == null) {
         net_ = builderForValue.build();
         onChanged();
@@ -786,13 +786,13 @@ public  final class Job extends
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
-    public Builder mergeNet(oneflow.DlnetConf.DLNetConf value) {
+    public Builder mergeNet(org.oneflow.core.job.DLNetConf value) {
       if (netBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
             net_ != null &&
-            net_ != oneflow.DlnetConf.DLNetConf.getDefaultInstance()) {
+            net_ != org.oneflow.core.job.DLNetConf.getDefaultInstance()) {
           net_ =
-            oneflow.DlnetConf.DLNetConf.newBuilder(net_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.DLNetConf.newBuilder(net_).mergeFrom(value).buildPartial();
         } else {
           net_ = value;
         }
@@ -819,7 +819,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
-    public oneflow.DlnetConf.DLNetConf.Builder getNetBuilder() {
+    public org.oneflow.core.job.DLNetConf.Builder getNetBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getNetFieldBuilder().getBuilder();
@@ -827,23 +827,23 @@ public  final class Job extends
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
-    public oneflow.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
+    public org.oneflow.core.job.DLNetConfOrBuilder getNetOrBuilder() {
       if (netBuilder_ != null) {
         return netBuilder_.getMessageOrBuilder();
       } else {
         return net_ == null ?
-            oneflow.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+            org.oneflow.core.job.DLNetConf.getDefaultInstance() : net_;
       }
     }
     /**
      * <code>required .oneflow.DLNetConf net = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.DlnetConf.DLNetConf, oneflow.DlnetConf.DLNetConf.Builder, oneflow.DlnetConf.DLNetConfOrBuilder> 
+        org.oneflow.core.job.DLNetConf, org.oneflow.core.job.DLNetConf.Builder, org.oneflow.core.job.DLNetConfOrBuilder> 
         getNetFieldBuilder() {
       if (netBuilder_ == null) {
         netBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.DlnetConf.DLNetConf, oneflow.DlnetConf.DLNetConf.Builder, oneflow.DlnetConf.DLNetConfOrBuilder>(
+            org.oneflow.core.job.DLNetConf, org.oneflow.core.job.DLNetConf.Builder, org.oneflow.core.job.DLNetConfOrBuilder>(
                 getNet(),
                 getParentForChildren(),
                 isClean());
@@ -852,9 +852,9 @@ public  final class Job extends
       return netBuilder_;
     }
 
-    private oneflow.PlacementOuterClass.Placement placement_ = null;
+    private org.oneflow.core.job.Placement placement_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.Placement, oneflow.PlacementOuterClass.Placement.Builder, oneflow.PlacementOuterClass.PlacementOrBuilder> placementBuilder_;
+        org.oneflow.core.job.Placement, org.oneflow.core.job.Placement.Builder, org.oneflow.core.job.PlacementOrBuilder> placementBuilder_;
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
@@ -864,9 +864,9 @@ public  final class Job extends
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
-    public oneflow.PlacementOuterClass.Placement getPlacement() {
+    public org.oneflow.core.job.Placement getPlacement() {
       if (placementBuilder_ == null) {
-        return placement_ == null ? oneflow.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+        return placement_ == null ? org.oneflow.core.job.Placement.getDefaultInstance() : placement_;
       } else {
         return placementBuilder_.getMessage();
       }
@@ -874,7 +874,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
-    public Builder setPlacement(oneflow.PlacementOuterClass.Placement value) {
+    public Builder setPlacement(org.oneflow.core.job.Placement value) {
       if (placementBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -891,7 +891,7 @@ public  final class Job extends
      * <code>required .oneflow.Placement placement = 2;</code>
      */
     public Builder setPlacement(
-        oneflow.PlacementOuterClass.Placement.Builder builderForValue) {
+        org.oneflow.core.job.Placement.Builder builderForValue) {
       if (placementBuilder_ == null) {
         placement_ = builderForValue.build();
         onChanged();
@@ -904,13 +904,13 @@ public  final class Job extends
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
-    public Builder mergePlacement(oneflow.PlacementOuterClass.Placement value) {
+    public Builder mergePlacement(org.oneflow.core.job.Placement value) {
       if (placementBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             placement_ != null &&
-            placement_ != oneflow.PlacementOuterClass.Placement.getDefaultInstance()) {
+            placement_ != org.oneflow.core.job.Placement.getDefaultInstance()) {
           placement_ =
-            oneflow.PlacementOuterClass.Placement.newBuilder(placement_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.Placement.newBuilder(placement_).mergeFrom(value).buildPartial();
         } else {
           placement_ = value;
         }
@@ -937,7 +937,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
-    public oneflow.PlacementOuterClass.Placement.Builder getPlacementBuilder() {
+    public org.oneflow.core.job.Placement.Builder getPlacementBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getPlacementFieldBuilder().getBuilder();
@@ -945,23 +945,23 @@ public  final class Job extends
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
-    public oneflow.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
+    public org.oneflow.core.job.PlacementOrBuilder getPlacementOrBuilder() {
       if (placementBuilder_ != null) {
         return placementBuilder_.getMessageOrBuilder();
       } else {
         return placement_ == null ?
-            oneflow.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+            org.oneflow.core.job.Placement.getDefaultInstance() : placement_;
       }
     }
     /**
      * <code>required .oneflow.Placement placement = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.PlacementOuterClass.Placement, oneflow.PlacementOuterClass.Placement.Builder, oneflow.PlacementOuterClass.PlacementOrBuilder> 
+        org.oneflow.core.job.Placement, org.oneflow.core.job.Placement.Builder, org.oneflow.core.job.PlacementOrBuilder> 
         getPlacementFieldBuilder() {
       if (placementBuilder_ == null) {
         placementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.PlacementOuterClass.Placement, oneflow.PlacementOuterClass.Placement.Builder, oneflow.PlacementOuterClass.PlacementOrBuilder>(
+            org.oneflow.core.job.Placement, org.oneflow.core.job.Placement.Builder, org.oneflow.core.job.PlacementOrBuilder>(
                 getPlacement(),
                 getParentForChildren(),
                 isClean());
@@ -970,9 +970,9 @@ public  final class Job extends
       return placementBuilder_;
     }
 
-    private oneflow.JobConf.JobConfigProto jobConf_ = null;
+    private org.oneflow.core.job.JobConfigProto jobConf_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.JobConf.JobConfigProto, oneflow.JobConf.JobConfigProto.Builder, oneflow.JobConf.JobConfigProtoOrBuilder> jobConfBuilder_;
+        org.oneflow.core.job.JobConfigProto, org.oneflow.core.job.JobConfigProto.Builder, org.oneflow.core.job.JobConfigProtoOrBuilder> jobConfBuilder_;
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
@@ -982,9 +982,9 @@ public  final class Job extends
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
-    public oneflow.JobConf.JobConfigProto getJobConf() {
+    public org.oneflow.core.job.JobConfigProto getJobConf() {
       if (jobConfBuilder_ == null) {
-        return jobConf_ == null ? oneflow.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+        return jobConf_ == null ? org.oneflow.core.job.JobConfigProto.getDefaultInstance() : jobConf_;
       } else {
         return jobConfBuilder_.getMessage();
       }
@@ -992,7 +992,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
-    public Builder setJobConf(oneflow.JobConf.JobConfigProto value) {
+    public Builder setJobConf(org.oneflow.core.job.JobConfigProto value) {
       if (jobConfBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1009,7 +1009,7 @@ public  final class Job extends
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
     public Builder setJobConf(
-        oneflow.JobConf.JobConfigProto.Builder builderForValue) {
+        org.oneflow.core.job.JobConfigProto.Builder builderForValue) {
       if (jobConfBuilder_ == null) {
         jobConf_ = builderForValue.build();
         onChanged();
@@ -1022,13 +1022,13 @@ public  final class Job extends
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
-    public Builder mergeJobConf(oneflow.JobConf.JobConfigProto value) {
+    public Builder mergeJobConf(org.oneflow.core.job.JobConfigProto value) {
       if (jobConfBuilder_ == null) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
             jobConf_ != null &&
-            jobConf_ != oneflow.JobConf.JobConfigProto.getDefaultInstance()) {
+            jobConf_ != org.oneflow.core.job.JobConfigProto.getDefaultInstance()) {
           jobConf_ =
-            oneflow.JobConf.JobConfigProto.newBuilder(jobConf_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.JobConfigProto.newBuilder(jobConf_).mergeFrom(value).buildPartial();
         } else {
           jobConf_ = value;
         }
@@ -1055,7 +1055,7 @@ public  final class Job extends
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
-    public oneflow.JobConf.JobConfigProto.Builder getJobConfBuilder() {
+    public org.oneflow.core.job.JobConfigProto.Builder getJobConfBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getJobConfFieldBuilder().getBuilder();
@@ -1063,23 +1063,23 @@ public  final class Job extends
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
-    public oneflow.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder() {
+    public org.oneflow.core.job.JobConfigProtoOrBuilder getJobConfOrBuilder() {
       if (jobConfBuilder_ != null) {
         return jobConfBuilder_.getMessageOrBuilder();
       } else {
         return jobConf_ == null ?
-            oneflow.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+            org.oneflow.core.job.JobConfigProto.getDefaultInstance() : jobConf_;
       }
     }
     /**
      * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.JobConf.JobConfigProto, oneflow.JobConf.JobConfigProto.Builder, oneflow.JobConf.JobConfigProtoOrBuilder> 
+        org.oneflow.core.job.JobConfigProto, org.oneflow.core.job.JobConfigProto.Builder, org.oneflow.core.job.JobConfigProtoOrBuilder> 
         getJobConfFieldBuilder() {
       if (jobConfBuilder_ == null) {
         jobConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.JobConf.JobConfigProto, oneflow.JobConf.JobConfigProto.Builder, oneflow.JobConf.JobConfigProtoOrBuilder>(
+            org.oneflow.core.job.JobConfigProto, org.oneflow.core.job.JobConfigProto.Builder, org.oneflow.core.job.JobConfigProtoOrBuilder>(
                 getJobConf(),
                 getParentForChildren(),
                 isClean());

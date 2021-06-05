@@ -49,11 +49,11 @@ public  final class GraphDef extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              opList_ = new java.util.ArrayList<oneflow.OpConf.OperatorConf>();
+              opList_ = new java.util.ArrayList<org.oneflow.core.operator.OperatorConf>();
               mutable_bitField0_ |= 0x00000001;
             }
             opList_.add(
-                input.readMessage(oneflow.OpConf.OperatorConf.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.operator.OperatorConf.PARSER, extensionRegistry));
             break;
           }
           case 18: {
@@ -114,17 +114,17 @@ public  final class GraphDef extends
 
   private int bitField0_;
   public static final int OP_LIST_FIELD_NUMBER = 1;
-  private java.util.List<oneflow.OpConf.OperatorConf> opList_;
+  private java.util.List<org.oneflow.core.operator.OperatorConf> opList_;
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  public java.util.List<oneflow.OpConf.OperatorConf> getOpListList() {
+  public java.util.List<org.oneflow.core.operator.OperatorConf> getOpListList() {
     return opList_;
   }
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  public java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
       getOpListOrBuilderList() {
     return opList_;
   }
@@ -137,13 +137,13 @@ public  final class GraphDef extends
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  public oneflow.OpConf.OperatorConf getOpList(int index) {
+  public org.oneflow.core.operator.OperatorConf getOpList(int index) {
     return opList_.get(index);
   }
   /**
    * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
    */
-  public oneflow.OpConf.OperatorConfOrBuilder getOpListOrBuilder(
+  public org.oneflow.core.operator.OperatorConfOrBuilder getOpListOrBuilder(
       int index) {
     return opList_.get(index);
   }
@@ -681,22 +681,22 @@ public  final class GraphDef extends
     }
     private int bitField0_;
 
-    private java.util.List<oneflow.OpConf.OperatorConf> opList_ =
+    private java.util.List<org.oneflow.core.operator.OperatorConf> opList_ =
       java.util.Collections.emptyList();
     private void ensureOpListIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        opList_ = new java.util.ArrayList<oneflow.OpConf.OperatorConf>(opList_);
+        opList_ = new java.util.ArrayList<org.oneflow.core.operator.OperatorConf>(opList_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder> opListBuilder_;
+        org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder> opListBuilder_;
 
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public java.util.List<oneflow.OpConf.OperatorConf> getOpListList() {
+    public java.util.List<org.oneflow.core.operator.OperatorConf> getOpListList() {
       if (opListBuilder_ == null) {
         return java.util.Collections.unmodifiableList(opList_);
       } else {
@@ -716,7 +716,7 @@ public  final class GraphDef extends
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf getOpList(int index) {
+    public org.oneflow.core.operator.OperatorConf getOpList(int index) {
       if (opListBuilder_ == null) {
         return opList_.get(index);
       } else {
@@ -727,7 +727,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder setOpList(
-        int index, oneflow.OpConf.OperatorConf value) {
+        int index, org.oneflow.core.operator.OperatorConf value) {
       if (opListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -744,7 +744,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder setOpList(
-        int index, oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        int index, org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opListBuilder_ == null) {
         ensureOpListIsMutable();
         opList_.set(index, builderForValue.build());
@@ -757,7 +757,7 @@ public  final class GraphDef extends
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public Builder addOpList(oneflow.OpConf.OperatorConf value) {
+    public Builder addOpList(org.oneflow.core.operator.OperatorConf value) {
       if (opListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -774,7 +774,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder addOpList(
-        int index, oneflow.OpConf.OperatorConf value) {
+        int index, org.oneflow.core.operator.OperatorConf value) {
       if (opListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -791,7 +791,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder addOpList(
-        oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opListBuilder_ == null) {
         ensureOpListIsMutable();
         opList_.add(builderForValue.build());
@@ -805,7 +805,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder addOpList(
-        int index, oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        int index, org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opListBuilder_ == null) {
         ensureOpListIsMutable();
         opList_.add(index, builderForValue.build());
@@ -819,7 +819,7 @@ public  final class GraphDef extends
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
     public Builder addAllOpList(
-        java.lang.Iterable<? extends oneflow.OpConf.OperatorConf> values) {
+        java.lang.Iterable<? extends org.oneflow.core.operator.OperatorConf> values) {
       if (opListBuilder_ == null) {
         ensureOpListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -859,14 +859,14 @@ public  final class GraphDef extends
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder getOpListBuilder(
+    public org.oneflow.core.operator.OperatorConf.Builder getOpListBuilder(
         int index) {
       return getOpListFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public oneflow.OpConf.OperatorConfOrBuilder getOpListOrBuilder(
+    public org.oneflow.core.operator.OperatorConfOrBuilder getOpListOrBuilder(
         int index) {
       if (opListBuilder_ == null) {
         return opList_.get(index);  } else {
@@ -876,7 +876,7 @@ public  final class GraphDef extends
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
          getOpListOrBuilderList() {
       if (opListBuilder_ != null) {
         return opListBuilder_.getMessageOrBuilderList();
@@ -887,31 +887,31 @@ public  final class GraphDef extends
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder addOpListBuilder() {
+    public org.oneflow.core.operator.OperatorConf.Builder addOpListBuilder() {
       return getOpListFieldBuilder().addBuilder(
-          oneflow.OpConf.OperatorConf.getDefaultInstance());
+          org.oneflow.core.operator.OperatorConf.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder addOpListBuilder(
+    public org.oneflow.core.operator.OperatorConf.Builder addOpListBuilder(
         int index) {
       return getOpListFieldBuilder().addBuilder(
-          index, oneflow.OpConf.OperatorConf.getDefaultInstance());
+          index, org.oneflow.core.operator.OperatorConf.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.OperatorConf op_list = 1;</code>
      */
-    public java.util.List<oneflow.OpConf.OperatorConf.Builder> 
+    public java.util.List<org.oneflow.core.operator.OperatorConf.Builder> 
          getOpListBuilderList() {
       return getOpListFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder> 
+        org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder> 
         getOpListFieldBuilder() {
       if (opListBuilder_ == null) {
         opListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder>(
+            org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder>(
                 opList_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

@@ -48,11 +48,11 @@ public  final class PolygonList extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              polygons_ = new java.util.ArrayList<oneflow.Record.FloatList>();
+              polygons_ = new java.util.ArrayList<org.oneflow.core.record.FloatList>();
               mutable_bitField0_ |= 0x00000001;
             }
             polygons_.add(
-                input.readMessage(oneflow.Record.FloatList.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.record.FloatList.PARSER, extensionRegistry));
             break;
           }
         }
@@ -83,17 +83,17 @@ public  final class PolygonList extends
   }
 
   public static final int POLYGONS_FIELD_NUMBER = 1;
-  private java.util.List<oneflow.Record.FloatList> polygons_;
+  private java.util.List<org.oneflow.core.record.FloatList> polygons_;
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  public java.util.List<oneflow.Record.FloatList> getPolygonsList() {
+  public java.util.List<org.oneflow.core.record.FloatList> getPolygonsList() {
     return polygons_;
   }
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  public java.util.List<? extends oneflow.Record.FloatListOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.record.FloatListOrBuilder> 
       getPolygonsOrBuilderList() {
     return polygons_;
   }
@@ -106,13 +106,13 @@ public  final class PolygonList extends
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  public oneflow.Record.FloatList getPolygons(int index) {
+  public org.oneflow.core.record.FloatList getPolygons(int index) {
     return polygons_.get(index);
   }
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  public oneflow.Record.FloatListOrBuilder getPolygonsOrBuilder(
+  public org.oneflow.core.record.FloatListOrBuilder getPolygonsOrBuilder(
       int index) {
     return polygons_.get(index);
   }
@@ -430,22 +430,22 @@ public  final class PolygonList extends
     }
     private int bitField0_;
 
-    private java.util.List<oneflow.Record.FloatList> polygons_ =
+    private java.util.List<org.oneflow.core.record.FloatList> polygons_ =
       java.util.Collections.emptyList();
     private void ensurePolygonsIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        polygons_ = new java.util.ArrayList<oneflow.Record.FloatList>(polygons_);
+        polygons_ = new java.util.ArrayList<org.oneflow.core.record.FloatList>(polygons_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.FloatList, oneflow.Record.FloatList.Builder, oneflow.Record.FloatListOrBuilder> polygonsBuilder_;
+        org.oneflow.core.record.FloatList, org.oneflow.core.record.FloatList.Builder, org.oneflow.core.record.FloatListOrBuilder> polygonsBuilder_;
 
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public java.util.List<oneflow.Record.FloatList> getPolygonsList() {
+    public java.util.List<org.oneflow.core.record.FloatList> getPolygonsList() {
       if (polygonsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(polygons_);
       } else {
@@ -465,7 +465,7 @@ public  final class PolygonList extends
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public oneflow.Record.FloatList getPolygons(int index) {
+    public org.oneflow.core.record.FloatList getPolygons(int index) {
       if (polygonsBuilder_ == null) {
         return polygons_.get(index);
       } else {
@@ -476,7 +476,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder setPolygons(
-        int index, oneflow.Record.FloatList value) {
+        int index, org.oneflow.core.record.FloatList value) {
       if (polygonsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -493,7 +493,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder setPolygons(
-        int index, oneflow.Record.FloatList.Builder builderForValue) {
+        int index, org.oneflow.core.record.FloatList.Builder builderForValue) {
       if (polygonsBuilder_ == null) {
         ensurePolygonsIsMutable();
         polygons_.set(index, builderForValue.build());
@@ -506,7 +506,7 @@ public  final class PolygonList extends
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public Builder addPolygons(oneflow.Record.FloatList value) {
+    public Builder addPolygons(org.oneflow.core.record.FloatList value) {
       if (polygonsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -523,7 +523,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder addPolygons(
-        int index, oneflow.Record.FloatList value) {
+        int index, org.oneflow.core.record.FloatList value) {
       if (polygonsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -540,7 +540,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder addPolygons(
-        oneflow.Record.FloatList.Builder builderForValue) {
+        org.oneflow.core.record.FloatList.Builder builderForValue) {
       if (polygonsBuilder_ == null) {
         ensurePolygonsIsMutable();
         polygons_.add(builderForValue.build());
@@ -554,7 +554,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder addPolygons(
-        int index, oneflow.Record.FloatList.Builder builderForValue) {
+        int index, org.oneflow.core.record.FloatList.Builder builderForValue) {
       if (polygonsBuilder_ == null) {
         ensurePolygonsIsMutable();
         polygons_.add(index, builderForValue.build());
@@ -568,7 +568,7 @@ public  final class PolygonList extends
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
     public Builder addAllPolygons(
-        java.lang.Iterable<? extends oneflow.Record.FloatList> values) {
+        java.lang.Iterable<? extends org.oneflow.core.record.FloatList> values) {
       if (polygonsBuilder_ == null) {
         ensurePolygonsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -608,14 +608,14 @@ public  final class PolygonList extends
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public oneflow.Record.FloatList.Builder getPolygonsBuilder(
+    public org.oneflow.core.record.FloatList.Builder getPolygonsBuilder(
         int index) {
       return getPolygonsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public oneflow.Record.FloatListOrBuilder getPolygonsOrBuilder(
+    public org.oneflow.core.record.FloatListOrBuilder getPolygonsOrBuilder(
         int index) {
       if (polygonsBuilder_ == null) {
         return polygons_.get(index);  } else {
@@ -625,7 +625,7 @@ public  final class PolygonList extends
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public java.util.List<? extends oneflow.Record.FloatListOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.record.FloatListOrBuilder> 
          getPolygonsOrBuilderList() {
       if (polygonsBuilder_ != null) {
         return polygonsBuilder_.getMessageOrBuilderList();
@@ -636,31 +636,31 @@ public  final class PolygonList extends
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public oneflow.Record.FloatList.Builder addPolygonsBuilder() {
+    public org.oneflow.core.record.FloatList.Builder addPolygonsBuilder() {
       return getPolygonsFieldBuilder().addBuilder(
-          oneflow.Record.FloatList.getDefaultInstance());
+          org.oneflow.core.record.FloatList.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public oneflow.Record.FloatList.Builder addPolygonsBuilder(
+    public org.oneflow.core.record.FloatList.Builder addPolygonsBuilder(
         int index) {
       return getPolygonsFieldBuilder().addBuilder(
-          index, oneflow.Record.FloatList.getDefaultInstance());
+          index, org.oneflow.core.record.FloatList.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.FloatList polygons = 1;</code>
      */
-    public java.util.List<oneflow.Record.FloatList.Builder> 
+    public java.util.List<org.oneflow.core.record.FloatList.Builder> 
          getPolygonsBuilderList() {
       return getPolygonsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.FloatList, oneflow.Record.FloatList.Builder, oneflow.Record.FloatListOrBuilder> 
+        org.oneflow.core.record.FloatList, org.oneflow.core.record.FloatList.Builder, org.oneflow.core.record.FloatListOrBuilder> 
         getPolygonsFieldBuilder() {
       if (polygonsBuilder_ == null) {
         polygonsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.Record.FloatList, oneflow.Record.FloatList.Builder, oneflow.Record.FloatListOrBuilder>(
+            org.oneflow.core.record.FloatList, org.oneflow.core.record.FloatList.Builder, org.oneflow.core.record.FloatListOrBuilder>(
                 polygons_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

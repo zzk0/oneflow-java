@@ -69,11 +69,11 @@ public interface EnvProtoOrBuilder extends
   /**
    * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
    */
-  oneflow.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf();
+  org.oneflow.core.control.BootstrapConf getCtrlBootstrapConf();
   /**
    * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
    */
-  oneflow.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder();
+  org.oneflow.core.control.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder();
 
   /**
    * <code>optional bool is_default_physical_env = 6 [default = false];</code>

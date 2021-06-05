@@ -59,11 +59,11 @@ public  final class JobInputDef extends
             break;
           }
           case 18: {
-            oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder subBuilder = null;
+            org.oneflow.core.operator.InterfaceBlobConf.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = blobConf_.toBuilder();
             }
-            blobConf_ = input.readMessage(oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.PARSER, extensionRegistry);
+            blobConf_ = input.readMessage(org.oneflow.core.operator.InterfaceBlobConf.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(blobConf_);
               blobConf_ = subBuilder.buildPartial();
@@ -118,7 +118,7 @@ public  final class JobInputDef extends
   }
 
   public static final int BLOB_CONF_FIELD_NUMBER = 2;
-  private oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf blobConf_;
+  private org.oneflow.core.operator.InterfaceBlobConf blobConf_;
   /**
    * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
    */
@@ -128,14 +128,14 @@ public  final class JobInputDef extends
   /**
    * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
    */
-  public oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf getBlobConf() {
-    return blobConf_ == null ? oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.getDefaultInstance() : blobConf_;
+  public org.oneflow.core.operator.InterfaceBlobConf getBlobConf() {
+    return blobConf_ == null ? org.oneflow.core.operator.InterfaceBlobConf.getDefaultInstance() : blobConf_;
   }
   /**
    * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
    */
-  public oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder getBlobConfOrBuilder() {
-    return blobConf_ == null ? oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.getDefaultInstance() : blobConf_;
+  public org.oneflow.core.operator.InterfaceBlobConfOrBuilder getBlobConfOrBuilder() {
+    return blobConf_ == null ? org.oneflow.core.operator.InterfaceBlobConf.getDefaultInstance() : blobConf_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -605,9 +605,9 @@ public  final class JobInputDef extends
       return lbiBuilder_;
     }
 
-    private oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf blobConf_ = null;
+    private org.oneflow.core.operator.InterfaceBlobConf blobConf_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder> blobConfBuilder_;
+        org.oneflow.core.operator.InterfaceBlobConf, org.oneflow.core.operator.InterfaceBlobConf.Builder, org.oneflow.core.operator.InterfaceBlobConfOrBuilder> blobConfBuilder_;
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
@@ -617,9 +617,9 @@ public  final class JobInputDef extends
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
-    public oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf getBlobConf() {
+    public org.oneflow.core.operator.InterfaceBlobConf getBlobConf() {
       if (blobConfBuilder_ == null) {
-        return blobConf_ == null ? oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.getDefaultInstance() : blobConf_;
+        return blobConf_ == null ? org.oneflow.core.operator.InterfaceBlobConf.getDefaultInstance() : blobConf_;
       } else {
         return blobConfBuilder_.getMessage();
       }
@@ -627,7 +627,7 @@ public  final class JobInputDef extends
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
-    public Builder setBlobConf(oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf value) {
+    public Builder setBlobConf(org.oneflow.core.operator.InterfaceBlobConf value) {
       if (blobConfBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -644,7 +644,7 @@ public  final class JobInputDef extends
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
     public Builder setBlobConf(
-        oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder builderForValue) {
+        org.oneflow.core.operator.InterfaceBlobConf.Builder builderForValue) {
       if (blobConfBuilder_ == null) {
         blobConf_ = builderForValue.build();
         onChanged();
@@ -657,13 +657,13 @@ public  final class JobInputDef extends
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
-    public Builder mergeBlobConf(oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf value) {
+    public Builder mergeBlobConf(org.oneflow.core.operator.InterfaceBlobConf value) {
       if (blobConfBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             blobConf_ != null &&
-            blobConf_ != oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.getDefaultInstance()) {
+            blobConf_ != org.oneflow.core.operator.InterfaceBlobConf.getDefaultInstance()) {
           blobConf_ =
-            oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.newBuilder(blobConf_).mergeFrom(value).buildPartial();
+            org.oneflow.core.operator.InterfaceBlobConf.newBuilder(blobConf_).mergeFrom(value).buildPartial();
         } else {
           blobConf_ = value;
         }
@@ -690,7 +690,7 @@ public  final class JobInputDef extends
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
-    public oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder getBlobConfBuilder() {
+    public org.oneflow.core.operator.InterfaceBlobConf.Builder getBlobConfBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getBlobConfFieldBuilder().getBuilder();
@@ -698,23 +698,23 @@ public  final class JobInputDef extends
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
-    public oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder getBlobConfOrBuilder() {
+    public org.oneflow.core.operator.InterfaceBlobConfOrBuilder getBlobConfOrBuilder() {
       if (blobConfBuilder_ != null) {
         return blobConfBuilder_.getMessageOrBuilder();
       } else {
         return blobConf_ == null ?
-            oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.getDefaultInstance() : blobConf_;
+            org.oneflow.core.operator.InterfaceBlobConf.getDefaultInstance() : blobConf_;
       }
     }
     /**
      * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder> 
+        org.oneflow.core.operator.InterfaceBlobConf, org.oneflow.core.operator.InterfaceBlobConf.Builder, org.oneflow.core.operator.InterfaceBlobConfOrBuilder> 
         getBlobConfFieldBuilder() {
       if (blobConfBuilder_ == null) {
         blobConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf.Builder, oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder>(
+            org.oneflow.core.operator.InterfaceBlobConf, org.oneflow.core.operator.InterfaceBlobConf.Builder, org.oneflow.core.operator.InterfaceBlobConfOrBuilder>(
                 getBlobConf(),
                 getParentForChildren(),
                 isClean());

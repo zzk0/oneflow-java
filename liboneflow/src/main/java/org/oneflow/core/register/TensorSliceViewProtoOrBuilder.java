@@ -10,12 +10,12 @@ public interface TensorSliceViewProtoOrBuilder extends
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  java.util.List<oneflow.Range.RangeProto> 
+  java.util.List<org.oneflow.core.common.RangeProto> 
       getDimList();
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  oneflow.Range.RangeProto getDim(int index);
+  org.oneflow.core.common.RangeProto getDim(int index);
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface TensorSliceViewProtoOrBuilder extends
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  java.util.List<? extends oneflow.Range.RangeProtoOrBuilder> 
+  java.util.List<? extends org.oneflow.core.common.RangeProtoOrBuilder> 
       getDimOrBuilderList();
   /**
    * <code>repeated .oneflow.RangeProto dim = 1;</code>
    */
-  oneflow.Range.RangeProtoOrBuilder getDimOrBuilder(
+  org.oneflow.core.common.RangeProtoOrBuilder getDimOrBuilder(
       int index);
 }

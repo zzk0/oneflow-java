@@ -46,11 +46,11 @@ public  final class EagerInstruction extends
             break;
           }
           case 10: {
-            oneflow.vm.Instruction.InstructionListProto.Builder subBuilder = null;
+            org.oneflow.core.vm.InstructionListProto.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = instructionList_.toBuilder();
             }
-            instructionList_ = input.readMessage(oneflow.vm.Instruction.InstructionListProto.PARSER, extensionRegistry);
+            instructionList_ = input.readMessage(org.oneflow.core.vm.InstructionListProto.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(instructionList_);
               instructionList_ = subBuilder.buildPartial();
@@ -97,7 +97,7 @@ public  final class EagerInstruction extends
 
   private int bitField0_;
   public static final int INSTRUCTION_LIST_FIELD_NUMBER = 1;
-  private oneflow.vm.Instruction.InstructionListProto instructionList_;
+  private org.oneflow.core.vm.InstructionListProto instructionList_;
   /**
    * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
    */
@@ -107,14 +107,14 @@ public  final class EagerInstruction extends
   /**
    * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
    */
-  public oneflow.vm.Instruction.InstructionListProto getInstructionList() {
-    return instructionList_ == null ? oneflow.vm.Instruction.InstructionListProto.getDefaultInstance() : instructionList_;
+  public org.oneflow.core.vm.InstructionListProto getInstructionList() {
+    return instructionList_ == null ? org.oneflow.core.vm.InstructionListProto.getDefaultInstance() : instructionList_;
   }
   /**
    * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
    */
-  public oneflow.vm.Instruction.InstructionListProtoOrBuilder getInstructionListOrBuilder() {
-    return instructionList_ == null ? oneflow.vm.Instruction.InstructionListProto.getDefaultInstance() : instructionList_;
+  public org.oneflow.core.vm.InstructionListProtoOrBuilder getInstructionListOrBuilder() {
+    return instructionList_ == null ? org.oneflow.core.vm.InstructionListProto.getDefaultInstance() : instructionList_;
   }
 
   public static final int EAGER_SYMBOL_LIST_FIELD_NUMBER = 2;
@@ -488,9 +488,9 @@ public  final class EagerInstruction extends
     }
     private int bitField0_;
 
-    private oneflow.vm.Instruction.InstructionListProto instructionList_ = null;
+    private org.oneflow.core.vm.InstructionListProto instructionList_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.vm.Instruction.InstructionListProto, oneflow.vm.Instruction.InstructionListProto.Builder, oneflow.vm.Instruction.InstructionListProtoOrBuilder> instructionListBuilder_;
+        org.oneflow.core.vm.InstructionListProto, org.oneflow.core.vm.InstructionListProto.Builder, org.oneflow.core.vm.InstructionListProtoOrBuilder> instructionListBuilder_;
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
@@ -500,9 +500,9 @@ public  final class EagerInstruction extends
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
-    public oneflow.vm.Instruction.InstructionListProto getInstructionList() {
+    public org.oneflow.core.vm.InstructionListProto getInstructionList() {
       if (instructionListBuilder_ == null) {
-        return instructionList_ == null ? oneflow.vm.Instruction.InstructionListProto.getDefaultInstance() : instructionList_;
+        return instructionList_ == null ? org.oneflow.core.vm.InstructionListProto.getDefaultInstance() : instructionList_;
       } else {
         return instructionListBuilder_.getMessage();
       }
@@ -510,7 +510,7 @@ public  final class EagerInstruction extends
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
-    public Builder setInstructionList(oneflow.vm.Instruction.InstructionListProto value) {
+    public Builder setInstructionList(org.oneflow.core.vm.InstructionListProto value) {
       if (instructionListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -527,7 +527,7 @@ public  final class EagerInstruction extends
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
     public Builder setInstructionList(
-        oneflow.vm.Instruction.InstructionListProto.Builder builderForValue) {
+        org.oneflow.core.vm.InstructionListProto.Builder builderForValue) {
       if (instructionListBuilder_ == null) {
         instructionList_ = builderForValue.build();
         onChanged();
@@ -540,13 +540,13 @@ public  final class EagerInstruction extends
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
-    public Builder mergeInstructionList(oneflow.vm.Instruction.InstructionListProto value) {
+    public Builder mergeInstructionList(org.oneflow.core.vm.InstructionListProto value) {
       if (instructionListBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
             instructionList_ != null &&
-            instructionList_ != oneflow.vm.Instruction.InstructionListProto.getDefaultInstance()) {
+            instructionList_ != org.oneflow.core.vm.InstructionListProto.getDefaultInstance()) {
           instructionList_ =
-            oneflow.vm.Instruction.InstructionListProto.newBuilder(instructionList_).mergeFrom(value).buildPartial();
+            org.oneflow.core.vm.InstructionListProto.newBuilder(instructionList_).mergeFrom(value).buildPartial();
         } else {
           instructionList_ = value;
         }
@@ -573,7 +573,7 @@ public  final class EagerInstruction extends
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
-    public oneflow.vm.Instruction.InstructionListProto.Builder getInstructionListBuilder() {
+    public org.oneflow.core.vm.InstructionListProto.Builder getInstructionListBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getInstructionListFieldBuilder().getBuilder();
@@ -581,23 +581,23 @@ public  final class EagerInstruction extends
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
-    public oneflow.vm.Instruction.InstructionListProtoOrBuilder getInstructionListOrBuilder() {
+    public org.oneflow.core.vm.InstructionListProtoOrBuilder getInstructionListOrBuilder() {
       if (instructionListBuilder_ != null) {
         return instructionListBuilder_.getMessageOrBuilder();
       } else {
         return instructionList_ == null ?
-            oneflow.vm.Instruction.InstructionListProto.getDefaultInstance() : instructionList_;
+            org.oneflow.core.vm.InstructionListProto.getDefaultInstance() : instructionList_;
       }
     }
     /**
      * <code>optional .oneflow.vm.InstructionListProto instruction_list = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.vm.Instruction.InstructionListProto, oneflow.vm.Instruction.InstructionListProto.Builder, oneflow.vm.Instruction.InstructionListProtoOrBuilder> 
+        org.oneflow.core.vm.InstructionListProto, org.oneflow.core.vm.InstructionListProto.Builder, org.oneflow.core.vm.InstructionListProtoOrBuilder> 
         getInstructionListFieldBuilder() {
       if (instructionListBuilder_ == null) {
         instructionListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.vm.Instruction.InstructionListProto, oneflow.vm.Instruction.InstructionListProto.Builder, oneflow.vm.Instruction.InstructionListProtoOrBuilder>(
+            org.oneflow.core.vm.InstructionListProto, org.oneflow.core.vm.InstructionListProto.Builder, org.oneflow.core.vm.InstructionListProtoOrBuilder>(
                 getInstructionList(),
                 getParentForChildren(),
                 isClean());

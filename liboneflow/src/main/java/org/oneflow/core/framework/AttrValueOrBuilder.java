@@ -73,11 +73,11 @@ public interface AttrValueOrBuilder extends
   /**
    * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
    */
-  oneflow.Shape.ShapeProto getAtShape();
+  org.oneflow.core.common.ShapeProto getAtShape();
   /**
    * <code>optional .oneflow.ShapeProto at_shape = 7;</code>
    */
-  oneflow.Shape.ShapeProtoOrBuilder getAtShapeOrBuilder();
+  org.oneflow.core.common.ShapeProtoOrBuilder getAtShapeOrBuilder();
 
   /**
    * <code>optional .oneflow.DataType at_data_type = 8;</code>
@@ -86,7 +86,7 @@ public interface AttrValueOrBuilder extends
   /**
    * <code>optional .oneflow.DataType at_data_type = 8;</code>
    */
-  oneflow.DataTypeOuterClass.DataType getAtDataType();
+  org.oneflow.core.common.DataType getAtDataType();
 
   /**
    * <code>optional .oneflow.AttrValue.ListInt32 at_list_int32 = 9;</code>

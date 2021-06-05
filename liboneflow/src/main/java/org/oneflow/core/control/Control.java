@@ -179,7 +179,7 @@ public final class Control {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.ActEventOuterClass.getDescriptor(),
+          org.oneflow.core.actor.ActEventOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_LoadServerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -325,7 +325,7 @@ public final class Control {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_EraseCountResponse_descriptor,
         new java.lang.String[] { });
-    oneflow.ActEventOuterClass.getDescriptor();
+    org.oneflow.core.actor.ActEventOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

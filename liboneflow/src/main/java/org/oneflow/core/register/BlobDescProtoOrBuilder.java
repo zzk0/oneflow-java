@@ -14,11 +14,11 @@ public interface BlobDescProtoOrBuilder extends
   /**
    * <code>required .oneflow.ShapeProto shape = 1;</code>
    */
-  oneflow.Shape.ShapeProto getShape();
+  org.oneflow.core.common.ShapeProto getShape();
   /**
    * <code>required .oneflow.ShapeProto shape = 1;</code>
    */
-  oneflow.Shape.ShapeProtoOrBuilder getShapeOrBuilder();
+  org.oneflow.core.common.ShapeProtoOrBuilder getShapeOrBuilder();
 
   /**
    * <code>required .oneflow.DataType data_type = 2;</code>
@@ -27,7 +27,7 @@ public interface BlobDescProtoOrBuilder extends
   /**
    * <code>required .oneflow.DataType data_type = 2;</code>
    */
-  oneflow.DataTypeOuterClass.DataType getDataType();
+  org.oneflow.core.common.DataType getDataType();
 
   /**
    * <code>required bool is_dynamic = 3;</code>

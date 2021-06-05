@@ -79,8 +79,8 @@ public final class Pod {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.Shape.getDescriptor(),
-          oneflow.DataTypeOuterClass.getDescriptor(),
+          org.oneflow.core.common.Shape.getDescriptor(),
+          org.oneflow.core.common.DataTypeOuterClass.getDescriptor(),
           org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_TensorPodProto_descriptor =
@@ -113,8 +113,8 @@ public final class Pod {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_PodProto_descriptor,
         new java.lang.String[] { "TensorPod", "StructPod", "PodType", });
-    oneflow.Shape.getDescriptor();
-    oneflow.DataTypeOuterClass.getDescriptor();
+    org.oneflow.core.common.Shape.getDescriptor();
+    org.oneflow.core.common.DataTypeOuterClass.getDescriptor();
     org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor();
   }
 

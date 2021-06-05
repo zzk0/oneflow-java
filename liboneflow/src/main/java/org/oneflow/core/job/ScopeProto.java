@@ -74,11 +74,11 @@ public  final class ScopeProto extends
             break;
           }
           case 402: {
-            oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder subBuilder = null;
+            org.oneflow.core.job.OptMirroredParallel.Builder subBuilder = null;
             if (((bitField0_ & 0x00000010) == 0x00000010)) {
               subBuilder = optMirroredParallelConf_.toBuilder();
             }
-            optMirroredParallelConf_ = input.readMessage(oneflow.MirroredParallelOuterClass.OptMirroredParallel.PARSER, extensionRegistry);
+            optMirroredParallelConf_ = input.readMessage(org.oneflow.core.job.OptMirroredParallel.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(optMirroredParallelConf_);
               optMirroredParallelConf_ = subBuilder.buildPartial();
@@ -223,7 +223,7 @@ public  final class ScopeProto extends
   }
 
   public static final int OPT_MIRRORED_PARALLEL_CONF_FIELD_NUMBER = 50;
-  private oneflow.MirroredParallelOuterClass.OptMirroredParallel optMirroredParallelConf_;
+  private org.oneflow.core.job.OptMirroredParallel optMirroredParallelConf_;
   /**
    * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
    */
@@ -233,14 +233,14 @@ public  final class ScopeProto extends
   /**
    * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
    */
-  public oneflow.MirroredParallelOuterClass.OptMirroredParallel getOptMirroredParallelConf() {
-    return optMirroredParallelConf_ == null ? oneflow.MirroredParallelOuterClass.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
+  public org.oneflow.core.job.OptMirroredParallel getOptMirroredParallelConf() {
+    return optMirroredParallelConf_ == null ? org.oneflow.core.job.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
   }
   /**
    * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
    */
-  public oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder() {
-    return optMirroredParallelConf_ == null ? oneflow.MirroredParallelOuterClass.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
+  public org.oneflow.core.job.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder() {
+    return optMirroredParallelConf_ == null ? org.oneflow.core.job.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
   }
 
   public static final int SCOPE_OP_NAME_PREFIXES_FIELD_NUMBER = 60;
@@ -1145,9 +1145,9 @@ public  final class ScopeProto extends
       return this;
     }
 
-    private oneflow.MirroredParallelOuterClass.OptMirroredParallel optMirroredParallelConf_ = null;
+    private org.oneflow.core.job.OptMirroredParallel optMirroredParallelConf_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MirroredParallelOuterClass.OptMirroredParallel, oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder, oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder> optMirroredParallelConfBuilder_;
+        org.oneflow.core.job.OptMirroredParallel, org.oneflow.core.job.OptMirroredParallel.Builder, org.oneflow.core.job.OptMirroredParallelOrBuilder> optMirroredParallelConfBuilder_;
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
@@ -1157,9 +1157,9 @@ public  final class ScopeProto extends
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
-    public oneflow.MirroredParallelOuterClass.OptMirroredParallel getOptMirroredParallelConf() {
+    public org.oneflow.core.job.OptMirroredParallel getOptMirroredParallelConf() {
       if (optMirroredParallelConfBuilder_ == null) {
-        return optMirroredParallelConf_ == null ? oneflow.MirroredParallelOuterClass.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
+        return optMirroredParallelConf_ == null ? org.oneflow.core.job.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
       } else {
         return optMirroredParallelConfBuilder_.getMessage();
       }
@@ -1167,7 +1167,7 @@ public  final class ScopeProto extends
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
-    public Builder setOptMirroredParallelConf(oneflow.MirroredParallelOuterClass.OptMirroredParallel value) {
+    public Builder setOptMirroredParallelConf(org.oneflow.core.job.OptMirroredParallel value) {
       if (optMirroredParallelConfBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1184,7 +1184,7 @@ public  final class ScopeProto extends
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
     public Builder setOptMirroredParallelConf(
-        oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder builderForValue) {
+        org.oneflow.core.job.OptMirroredParallel.Builder builderForValue) {
       if (optMirroredParallelConfBuilder_ == null) {
         optMirroredParallelConf_ = builderForValue.build();
         onChanged();
@@ -1197,13 +1197,13 @@ public  final class ScopeProto extends
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
-    public Builder mergeOptMirroredParallelConf(oneflow.MirroredParallelOuterClass.OptMirroredParallel value) {
+    public Builder mergeOptMirroredParallelConf(org.oneflow.core.job.OptMirroredParallel value) {
       if (optMirroredParallelConfBuilder_ == null) {
         if (((bitField0_ & 0x00000010) == 0x00000010) &&
             optMirroredParallelConf_ != null &&
-            optMirroredParallelConf_ != oneflow.MirroredParallelOuterClass.OptMirroredParallel.getDefaultInstance()) {
+            optMirroredParallelConf_ != org.oneflow.core.job.OptMirroredParallel.getDefaultInstance()) {
           optMirroredParallelConf_ =
-            oneflow.MirroredParallelOuterClass.OptMirroredParallel.newBuilder(optMirroredParallelConf_).mergeFrom(value).buildPartial();
+            org.oneflow.core.job.OptMirroredParallel.newBuilder(optMirroredParallelConf_).mergeFrom(value).buildPartial();
         } else {
           optMirroredParallelConf_ = value;
         }
@@ -1230,7 +1230,7 @@ public  final class ScopeProto extends
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
-    public oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder getOptMirroredParallelConfBuilder() {
+    public org.oneflow.core.job.OptMirroredParallel.Builder getOptMirroredParallelConfBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getOptMirroredParallelConfFieldBuilder().getBuilder();
@@ -1238,23 +1238,23 @@ public  final class ScopeProto extends
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
-    public oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder() {
+    public org.oneflow.core.job.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder() {
       if (optMirroredParallelConfBuilder_ != null) {
         return optMirroredParallelConfBuilder_.getMessageOrBuilder();
       } else {
         return optMirroredParallelConf_ == null ?
-            oneflow.MirroredParallelOuterClass.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
+            org.oneflow.core.job.OptMirroredParallel.getDefaultInstance() : optMirroredParallelConf_;
       }
     }
     /**
      * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MirroredParallelOuterClass.OptMirroredParallel, oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder, oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder> 
+        org.oneflow.core.job.OptMirroredParallel, org.oneflow.core.job.OptMirroredParallel.Builder, org.oneflow.core.job.OptMirroredParallelOrBuilder> 
         getOptMirroredParallelConfFieldBuilder() {
       if (optMirroredParallelConfBuilder_ == null) {
         optMirroredParallelConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.MirroredParallelOuterClass.OptMirroredParallel, oneflow.MirroredParallelOuterClass.OptMirroredParallel.Builder, oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder>(
+            org.oneflow.core.job.OptMirroredParallel, org.oneflow.core.job.OptMirroredParallel.Builder, org.oneflow.core.job.OptMirroredParallelOrBuilder>(
                 getOptMirroredParallelConf(),
                 getParentForChildren(),
                 isClean());

@@ -62,11 +62,11 @@ public final class EagerSymbolOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.JobConf.getDescriptor(),
-          oneflow.PlacementOuterClass.getDescriptor(),
-          oneflow.Scope.getDescriptor(),
-          oneflow.OpConf.getDescriptor(),
-          oneflow.OpNodeSignatureOuterClass.getDescriptor(),
+          org.oneflow.core.job.JobConf.getDescriptor(),
+          org.oneflow.core.job.PlacementOuterClass.getDescriptor(),
+          org.oneflow.core.job.Scope.getDescriptor(),
+          org.oneflow.core.operator.OpConf.getDescriptor(),
+          org.oneflow.core.operator.OpNodeSignatureOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_vm_EagerSymbol_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,11 +80,11 @@ public final class EagerSymbolOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_vm_EagerSymbolList_descriptor,
         new java.lang.String[] { "EagerSymbol", });
-    oneflow.JobConf.getDescriptor();
-    oneflow.PlacementOuterClass.getDescriptor();
-    oneflow.Scope.getDescriptor();
-    oneflow.OpConf.getDescriptor();
-    oneflow.OpNodeSignatureOuterClass.getDescriptor();
+    org.oneflow.core.job.JobConf.getDescriptor();
+    org.oneflow.core.job.PlacementOuterClass.getDescriptor();
+    org.oneflow.core.job.Scope.getDescriptor();
+    org.oneflow.core.operator.OpConf.getDescriptor();
+    org.oneflow.core.operator.OpNodeSignatureOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

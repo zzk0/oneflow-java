@@ -349,15 +349,15 @@ public final class JobConf {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.DataTypeOuterClass.getDescriptor(),
+          org.oneflow.core.common.DataTypeOuterClass.getDescriptor(),
           org.oneflow.core.job.PlacementOuterClass.getDescriptor(),
           org.oneflow.core.register.BlobDesc.getDescriptor(),
-          oneflow.SbpParallelOuterClass.getDescriptor(),
+          org.oneflow.core.job.SbpParallelOuterClass.getDescriptor(),
           org.oneflow.core.framework.UserOpAttr.getDescriptor(),
           org.oneflow.core.job.InitializerConfOuterClass.getDescriptor(),
           org.oneflow.core.job.LearningRateScheduleConf.getDescriptor(),
           org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor(),
-          oneflow.InterfaceBlobConfOuterClass.getDescriptor(),
+          org.oneflow.core.operator.InterfaceBlobConfOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_NaiveModelUpdateConf_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -539,15 +539,15 @@ public final class JobConf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_JobConfigProto_FlagName2flagValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.DataTypeOuterClass.getDescriptor();
+    org.oneflow.core.common.DataTypeOuterClass.getDescriptor();
     org.oneflow.core.job.PlacementOuterClass.getDescriptor();
     org.oneflow.core.register.BlobDesc.getDescriptor();
-    oneflow.SbpParallelOuterClass.getDescriptor();
+    org.oneflow.core.job.SbpParallelOuterClass.getDescriptor();
     org.oneflow.core.framework.UserOpAttr.getDescriptor();
     org.oneflow.core.job.InitializerConfOuterClass.getDescriptor();
     org.oneflow.core.job.LearningRateScheduleConf.getDescriptor();
     org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor();
-    oneflow.InterfaceBlobConfOuterClass.getDescriptor();
+    org.oneflow.core.operator.InterfaceBlobConfOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

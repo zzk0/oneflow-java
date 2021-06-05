@@ -47,9 +47,9 @@ public interface ParallelConfOrBuilder extends
   /**
    * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
    */
-  oneflow.Shape.ShapeProto getHierarchy();
+  org.oneflow.core.common.ShapeProto getHierarchy();
   /**
    * <code>optional .oneflow.ShapeProto hierarchy = 3;</code>
    */
-  oneflow.Shape.ShapeProtoOrBuilder getHierarchyOrBuilder();
+  org.oneflow.core.common.ShapeProtoOrBuilder getHierarchyOrBuilder();
 }

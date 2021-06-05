@@ -56,11 +56,11 @@ public  final class Plan extends
             break;
           }
           case 18: {
-            oneflow.MemoryBlock.MemBlockAndChunkList.Builder subBuilder = null;
+            org.oneflow.core.memory.MemBlockAndChunkList.Builder subBuilder = null;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               subBuilder = blockChunkList_.toBuilder();
             }
-            blockChunkList_ = input.readMessage(oneflow.MemoryBlock.MemBlockAndChunkList.PARSER, extensionRegistry);
+            blockChunkList_ = input.readMessage(org.oneflow.core.memory.MemBlockAndChunkList.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(blockChunkList_);
               blockChunkList_ = subBuilder.buildPartial();
@@ -207,7 +207,7 @@ public  final class Plan extends
   }
 
   public static final int BLOCK_CHUNK_LIST_FIELD_NUMBER = 2;
-  private oneflow.MemoryBlock.MemBlockAndChunkList blockChunkList_;
+  private org.oneflow.core.memory.MemBlockAndChunkList blockChunkList_;
   /**
    * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
    */
@@ -217,14 +217,14 @@ public  final class Plan extends
   /**
    * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
    */
-  public oneflow.MemoryBlock.MemBlockAndChunkList getBlockChunkList() {
-    return blockChunkList_ == null ? oneflow.MemoryBlock.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
+  public org.oneflow.core.memory.MemBlockAndChunkList getBlockChunkList() {
+    return blockChunkList_ == null ? org.oneflow.core.memory.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
   }
   /**
    * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
    */
-  public oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder() {
-    return blockChunkList_ == null ? oneflow.MemoryBlock.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
+  public org.oneflow.core.memory.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder() {
+    return blockChunkList_ == null ? org.oneflow.core.memory.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
   }
 
   public static final int NET_TOPO_FIELD_NUMBER = 3;
@@ -1242,9 +1242,9 @@ public  final class Plan extends
       return taskBuilder_;
     }
 
-    private oneflow.MemoryBlock.MemBlockAndChunkList blockChunkList_ = null;
+    private org.oneflow.core.memory.MemBlockAndChunkList blockChunkList_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MemoryBlock.MemBlockAndChunkList, oneflow.MemoryBlock.MemBlockAndChunkList.Builder, oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder> blockChunkListBuilder_;
+        org.oneflow.core.memory.MemBlockAndChunkList, org.oneflow.core.memory.MemBlockAndChunkList.Builder, org.oneflow.core.memory.MemBlockAndChunkListOrBuilder> blockChunkListBuilder_;
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
@@ -1254,9 +1254,9 @@ public  final class Plan extends
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
-    public oneflow.MemoryBlock.MemBlockAndChunkList getBlockChunkList() {
+    public org.oneflow.core.memory.MemBlockAndChunkList getBlockChunkList() {
       if (blockChunkListBuilder_ == null) {
-        return blockChunkList_ == null ? oneflow.MemoryBlock.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
+        return blockChunkList_ == null ? org.oneflow.core.memory.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
       } else {
         return blockChunkListBuilder_.getMessage();
       }
@@ -1264,7 +1264,7 @@ public  final class Plan extends
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
-    public Builder setBlockChunkList(oneflow.MemoryBlock.MemBlockAndChunkList value) {
+    public Builder setBlockChunkList(org.oneflow.core.memory.MemBlockAndChunkList value) {
       if (blockChunkListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1281,7 +1281,7 @@ public  final class Plan extends
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
     public Builder setBlockChunkList(
-        oneflow.MemoryBlock.MemBlockAndChunkList.Builder builderForValue) {
+        org.oneflow.core.memory.MemBlockAndChunkList.Builder builderForValue) {
       if (blockChunkListBuilder_ == null) {
         blockChunkList_ = builderForValue.build();
         onChanged();
@@ -1294,13 +1294,13 @@ public  final class Plan extends
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
-    public Builder mergeBlockChunkList(oneflow.MemoryBlock.MemBlockAndChunkList value) {
+    public Builder mergeBlockChunkList(org.oneflow.core.memory.MemBlockAndChunkList value) {
       if (blockChunkListBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             blockChunkList_ != null &&
-            blockChunkList_ != oneflow.MemoryBlock.MemBlockAndChunkList.getDefaultInstance()) {
+            blockChunkList_ != org.oneflow.core.memory.MemBlockAndChunkList.getDefaultInstance()) {
           blockChunkList_ =
-            oneflow.MemoryBlock.MemBlockAndChunkList.newBuilder(blockChunkList_).mergeFrom(value).buildPartial();
+            org.oneflow.core.memory.MemBlockAndChunkList.newBuilder(blockChunkList_).mergeFrom(value).buildPartial();
         } else {
           blockChunkList_ = value;
         }
@@ -1327,7 +1327,7 @@ public  final class Plan extends
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
-    public oneflow.MemoryBlock.MemBlockAndChunkList.Builder getBlockChunkListBuilder() {
+    public org.oneflow.core.memory.MemBlockAndChunkList.Builder getBlockChunkListBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getBlockChunkListFieldBuilder().getBuilder();
@@ -1335,23 +1335,23 @@ public  final class Plan extends
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
-    public oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder() {
+    public org.oneflow.core.memory.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder() {
       if (blockChunkListBuilder_ != null) {
         return blockChunkListBuilder_.getMessageOrBuilder();
       } else {
         return blockChunkList_ == null ?
-            oneflow.MemoryBlock.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
+            org.oneflow.core.memory.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
       }
     }
     /**
      * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.MemoryBlock.MemBlockAndChunkList, oneflow.MemoryBlock.MemBlockAndChunkList.Builder, oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder> 
+        org.oneflow.core.memory.MemBlockAndChunkList, org.oneflow.core.memory.MemBlockAndChunkList.Builder, org.oneflow.core.memory.MemBlockAndChunkListOrBuilder> 
         getBlockChunkListFieldBuilder() {
       if (blockChunkListBuilder_ == null) {
         blockChunkListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.MemoryBlock.MemBlockAndChunkList, oneflow.MemoryBlock.MemBlockAndChunkList.Builder, oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder>(
+            org.oneflow.core.memory.MemBlockAndChunkList, org.oneflow.core.memory.MemBlockAndChunkList.Builder, org.oneflow.core.memory.MemBlockAndChunkListOrBuilder>(
                 getBlockChunkList(),
                 getParentForChildren(),
                 isClean());

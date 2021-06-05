@@ -50,11 +50,11 @@ public interface ScopeProtoOrBuilder extends
   /**
    * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
    */
-  oneflow.MirroredParallelOuterClass.OptMirroredParallel getOptMirroredParallelConf();
+  org.oneflow.core.job.OptMirroredParallel getOptMirroredParallelConf();
   /**
    * <code>required .oneflow.OptMirroredParallel opt_mirrored_parallel_conf = 50;</code>
    */
-  oneflow.MirroredParallelOuterClass.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder();
+  org.oneflow.core.job.OptMirroredParallelOrBuilder getOptMirroredParallelConfOrBuilder();
 
   /**
    * <code>repeated string scope_op_name_prefixes = 60;</code>

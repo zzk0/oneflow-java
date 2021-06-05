@@ -38,11 +38,11 @@ public interface PlanOrBuilder extends
   /**
    * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
    */
-  oneflow.MemoryBlock.MemBlockAndChunkList getBlockChunkList();
+  org.oneflow.core.memory.MemBlockAndChunkList getBlockChunkList();
   /**
    * <code>required .oneflow.MemBlockAndChunkList block_chunk_list = 2;</code>
    */
-  oneflow.MemoryBlock.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder();
+  org.oneflow.core.memory.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder();
 
   /**
    * <code>required .oneflow.NetTopo net_topo = 3;</code>

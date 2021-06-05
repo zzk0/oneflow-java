@@ -20,24 +20,24 @@ public interface OpAttributeRefTableOrBuilder extends
    * Use {@link #getOpName2OpAttributeMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+  java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute>
   getOpName2OpAttribute();
   /**
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
-  java.util.Map<java.lang.String, oneflow.OpAttributeOuterClass.OpAttribute>
+  java.util.Map<java.lang.String, org.oneflow.core.operator.OpAttribute>
   getOpName2OpAttributeMap();
   /**
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
 
-  oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrDefault(
+  org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrDefault(
       java.lang.String key,
-      oneflow.OpAttributeOuterClass.OpAttribute defaultValue);
+      org.oneflow.core.operator.OpAttribute defaultValue);
   /**
    * <code>map&lt;string, .oneflow.OpAttribute&gt; op_name2op_attribute = 1;</code>
    */
 
-  oneflow.OpAttributeOuterClass.OpAttribute getOpName2OpAttributeOrThrow(
+  org.oneflow.core.operator.OpAttribute getOpName2OpAttributeOrThrow(
       java.lang.String key);
 }

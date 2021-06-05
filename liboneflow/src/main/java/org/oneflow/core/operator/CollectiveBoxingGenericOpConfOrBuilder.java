@@ -27,9 +27,9 @@ public interface CollectiveBoxingGenericOpConfOrBuilder extends
   /**
    * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
    */
-  oneflow.boxing.collective.CollectiveBoxing.RankDesc getRankDesc();
+  org.oneflow.core.graph.boxing.RankDesc getRankDesc();
   /**
    * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
    */
-  oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder getRankDescOrBuilder();
+  org.oneflow.core.graph.boxing.RankDescOrBuilder getRankDescOrBuilder();
 }

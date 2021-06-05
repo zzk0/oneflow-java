@@ -45,7 +45,7 @@ public final class TensorSliceView {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.Range.getDescriptor(),
+          org.oneflow.core.common.Range.getDescriptor(),
         }, assigner);
     internal_static_oneflow_TensorSliceViewProto_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +53,7 @@ public final class TensorSliceView {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_TensorSliceViewProto_descriptor,
         new java.lang.String[] { "Dim", });
-    oneflow.Range.getDescriptor();
+    org.oneflow.core.common.Range.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

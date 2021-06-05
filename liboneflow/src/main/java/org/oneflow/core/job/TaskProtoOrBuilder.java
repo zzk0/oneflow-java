@@ -80,11 +80,11 @@ public interface TaskProtoOrBuilder extends
   /**
    * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
    */
-  oneflow.ExecSequenceOuterClass.ExecSequence getExecSequence();
+  org.oneflow.core.graph.ExecSequence getExecSequence();
   /**
    * <code>required .oneflow.ExecSequence exec_sequence = 7;</code>
    */
-  oneflow.ExecSequenceOuterClass.ExecSequenceOrBuilder getExecSequenceOrBuilder();
+  org.oneflow.core.graph.ExecSequenceOrBuilder getExecSequenceOrBuilder();
 
   /**
    * <code>map&lt;string, .oneflow.RegstDescProto&gt; produced_regst_desc = 8;</code>
@@ -169,7 +169,7 @@ public interface TaskProtoOrBuilder extends
    *
    * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
    */
-  oneflow.PlacementOuterClass.ParallelContext getParallelCtx();
+  org.oneflow.core.job.ParallelContext getParallelCtx();
   /**
    * <pre>
    * compute task
@@ -177,5 +177,5 @@ public interface TaskProtoOrBuilder extends
    *
    * <code>optional .oneflow.ParallelContext parallel_ctx = 1000;</code>
    */
-  oneflow.PlacementOuterClass.ParallelContextOrBuilder getParallelCtxOrBuilder();
+  org.oneflow.core.job.ParallelContextOrBuilder getParallelCtxOrBuilder();
 }

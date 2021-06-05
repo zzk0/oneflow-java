@@ -61,8 +61,8 @@ public final class BlobDesc {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.Shape.getDescriptor(),
-          oneflow.DataTypeOuterClass.getDescriptor(),
+          org.oneflow.core.common.Shape.getDescriptor(),
+          org.oneflow.core.common.DataTypeOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_BlobDescProto_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -82,8 +82,8 @@ public final class BlobDesc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_BlobDescSignature_BnInOp2blobDescEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    oneflow.Shape.getDescriptor();
-    oneflow.DataTypeOuterClass.getDescriptor();
+    org.oneflow.core.common.Shape.getDescriptor();
+    org.oneflow.core.common.DataTypeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

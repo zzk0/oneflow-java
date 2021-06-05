@@ -48,7 +48,7 @@ public final class EventOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.summary.SummaryOuterClass.getDescriptor(),
+          org.oneflow.core.summary.SummaryOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_summary_Event_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +56,7 @@ public final class EventOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_summary_Event_descriptor,
         new java.lang.String[] { "WallTime", "Step", "FileVersion", "GraphDef", "Summary", "MetaGraphDef", "What", });
-    oneflow.summary.SummaryOuterClass.getDescriptor();
+    org.oneflow.core.summary.SummaryOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

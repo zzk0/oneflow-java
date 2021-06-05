@@ -111,7 +111,7 @@ public  final class JobConfigProto extends
           }
           case 64: {
             int rawValue = input.readEnum();
-            oneflow.DataTypeOuterClass.DataType value = oneflow.DataTypeOuterClass.DataType.valueOf(rawValue);
+            org.oneflow.core.common.DataType value = org.oneflow.core.common.DataType.valueOf(rawValue);
             if (value == null) {
               unknownFields.mergeVarintField(8, rawValue);
             } else {
@@ -579,9 +579,9 @@ public  final class JobConfigProto extends
    *
    * <code>optional .oneflow.DataType default_data_type = 8 [default = kFloat];</code>
    */
-  public oneflow.DataTypeOuterClass.DataType getDefaultDataType() {
-    oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(defaultDataType_);
-    return result == null ? oneflow.DataTypeOuterClass.DataType.kFloat : result;
+  public org.oneflow.core.common.DataType getDefaultDataType() {
+    org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(defaultDataType_);
+    return result == null ? org.oneflow.core.common.DataType.kFloat : result;
   }
 
   public static final int DEFAULT_INITIALIZER_CONF_FIELD_NUMBER = 10;
@@ -3101,9 +3101,9 @@ public  final class JobConfigProto extends
      *
      * <code>optional .oneflow.DataType default_data_type = 8 [default = kFloat];</code>
      */
-    public oneflow.DataTypeOuterClass.DataType getDefaultDataType() {
-      oneflow.DataTypeOuterClass.DataType result = oneflow.DataTypeOuterClass.DataType.valueOf(defaultDataType_);
-      return result == null ? oneflow.DataTypeOuterClass.DataType.kFloat : result;
+    public org.oneflow.core.common.DataType getDefaultDataType() {
+      org.oneflow.core.common.DataType result = org.oneflow.core.common.DataType.valueOf(defaultDataType_);
+      return result == null ? org.oneflow.core.common.DataType.kFloat : result;
     }
     /**
      * <pre>
@@ -3112,7 +3112,7 @@ public  final class JobConfigProto extends
      *
      * <code>optional .oneflow.DataType default_data_type = 8 [default = kFloat];</code>
      */
-    public Builder setDefaultDataType(oneflow.DataTypeOuterClass.DataType value) {
+    public Builder setDefaultDataType(org.oneflow.core.common.DataType value) {
       if (value == null) {
         throw new NullPointerException();
       }

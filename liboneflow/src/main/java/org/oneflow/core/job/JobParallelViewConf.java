@@ -51,7 +51,7 @@ public  final class JobParallelViewConf extends
                   OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000001;
             }
-            com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+            com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpSignature>
             opName2SbpSignatureConf = input.readMessage(
                 OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             opName2SbpSignatureConf_.getMutableMap().put(opName2SbpSignatureConf.getKey(), opName2SbpSignatureConf.getValue());
@@ -75,7 +75,7 @@ public  final class JobParallelViewConf extends
                   OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000004;
             }
-            com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+            com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
             opName2ParallelDistributionSignatureConf = input.readMessage(
                 OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             opName2ParallelDistributionSignatureConf_.getMutableMap().put(opName2ParallelDistributionSignatureConf.getKey(), opName2ParallelDistributionSignatureConf.getValue());
@@ -123,18 +123,18 @@ public  final class JobParallelViewConf extends
   public static final int OP_NAME2SBP_SIGNATURE_CONF_FIELD_NUMBER = 1;
   private static final class OpName2SbpSignatureConfDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> defaultEntry =
+        java.lang.String, org.oneflow.core.job.SbpSignature> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>newDefaultInstance(
+            .<java.lang.String, org.oneflow.core.job.SbpSignature>newDefaultInstance(
                 org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_OpName2sbpSignatureConfEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.SbpParallelOuterClass.SbpSignature.getDefaultInstance());
+                org.oneflow.core.job.SbpSignature.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> opName2SbpSignatureConf_;
-  private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+      java.lang.String, org.oneflow.core.job.SbpSignature> opName2SbpSignatureConf_;
+  private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpSignature>
   internalGetOpName2SbpSignatureConf() {
     if (opName2SbpSignatureConf_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -159,25 +159,25 @@ public  final class JobParallelViewConf extends
    * Use {@link #getOpName2SbpSignatureConfMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConf() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> getOpName2SbpSignatureConf() {
     return getOpName2SbpSignatureConfMap();
   }
   /**
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
 
-  public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConfMap() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> getOpName2SbpSignatureConfMap() {
     return internalGetOpName2SbpSignatureConf().getMap();
   }
   /**
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
 
-  public oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+  public org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrDefault(
       java.lang.String key,
-      oneflow.SbpParallelOuterClass.SbpSignature defaultValue) {
+      org.oneflow.core.job.SbpSignature defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> map =
         internalGetOpName2SbpSignatureConf().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -185,10 +185,10 @@ public  final class JobParallelViewConf extends
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
 
-  public oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+  public org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> map =
         internalGetOpName2SbpSignatureConf().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -275,18 +275,18 @@ public  final class JobParallelViewConf extends
   public static final int OP_NAME2PARALLEL_DISTRIBUTION_SIGNATURE_CONF_FIELD_NUMBER = 3;
   private static final class OpName2ParallelDistributionSignatureConfDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> defaultEntry =
+        java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>newDefaultInstance(
+            .<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>newDefaultInstance(
                 org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_OpName2parallelDistributionSignatureConfEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                oneflow.SbpParallelOuterClass.ParallelDistributionSignature.getDefaultInstance());
+                org.oneflow.core.job.ParallelDistributionSignature.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
-  private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+      java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
+  private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
   internalGetOpName2ParallelDistributionSignatureConf() {
     if (opName2ParallelDistributionSignatureConf_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -311,25 +311,25 @@ public  final class JobParallelViewConf extends
    * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
     return getOpName2ParallelDistributionSignatureConfMap();
   }
   /**
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
 
-  public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
+  public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
     return internalGetOpName2ParallelDistributionSignatureConf().getMap();
   }
   /**
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
 
-  public oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+  public org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
       java.lang.String key,
-      oneflow.SbpParallelOuterClass.ParallelDistributionSignature defaultValue) {
+      org.oneflow.core.job.ParallelDistributionSignature defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> map =
         internalGetOpName2ParallelDistributionSignatureConf().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -337,10 +337,10 @@ public  final class JobParallelViewConf extends
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
 
-  public oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+  public org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> map =
+    java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> map =
         internalGetOpName2ParallelDistributionSignatureConf().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -354,13 +354,13 @@ public  final class JobParallelViewConf extends
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
-    for (oneflow.SbpParallelOuterClass.SbpSignature item : getOpName2SbpSignatureConf().values()) {
+    for (org.oneflow.core.job.SbpSignature item : getOpName2SbpSignatureConf().values()) {
       if (!item.isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
     }
-    for (oneflow.SbpParallelOuterClass.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
+    for (org.oneflow.core.job.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
       if (!item.isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
@@ -372,9 +372,9 @@ public  final class JobParallelViewConf extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (java.util.Map.Entry<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpSignature> entry
          : internalGetOpName2SbpSignatureConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpSignature>
       opName2SbpSignatureConf = OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -390,9 +390,9 @@ public  final class JobParallelViewConf extends
           .build();
       output.writeMessage(2, opName2IsMirroredParallelView);
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> entry
          : internalGetOpName2ParallelDistributionSignatureConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
       opName2ParallelDistributionSignatureConf = OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -407,9 +407,9 @@ public  final class JobParallelViewConf extends
     if (size != -1) return size;
 
     size = 0;
-    for (java.util.Map.Entry<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpSignature> entry
          : internalGetOpName2SbpSignatureConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpSignature>
       opName2SbpSignatureConf = OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -427,9 +427,9 @@ public  final class JobParallelViewConf extends
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, opName2IsMirroredParallelView);
     }
-    for (java.util.Map.Entry<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> entry
+    for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> entry
          : internalGetOpName2ParallelDistributionSignatureConf().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+      com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
       opName2ParallelDistributionSignatureConf = OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -716,12 +716,12 @@ public  final class JobParallelViewConf extends
     }
 
     public final boolean isInitialized() {
-      for (oneflow.SbpParallelOuterClass.SbpSignature item : getOpName2SbpSignatureConf().values()) {
+      for (org.oneflow.core.job.SbpSignature item : getOpName2SbpSignatureConf().values()) {
         if (!item.isInitialized()) {
           return false;
         }
       }
-      for (oneflow.SbpParallelOuterClass.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
+      for (org.oneflow.core.job.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
         if (!item.isInitialized()) {
           return false;
         }
@@ -749,8 +749,8 @@ public  final class JobParallelViewConf extends
     private int bitField0_;
 
     private com.google.protobuf.MapField<
-        java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> opName2SbpSignatureConf_;
-    private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+        java.lang.String, org.oneflow.core.job.SbpSignature> opName2SbpSignatureConf_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpSignature>
     internalGetOpName2SbpSignatureConf() {
       if (opName2SbpSignatureConf_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -758,7 +758,7 @@ public  final class JobParallelViewConf extends
       }
       return opName2SbpSignatureConf_;
     }
-    private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpSignature>
     internalGetMutableOpName2SbpSignatureConf() {
       onChanged();;
       if (opName2SbpSignatureConf_ == null) {
@@ -787,25 +787,25 @@ public  final class JobParallelViewConf extends
      * Use {@link #getOpName2SbpSignatureConfMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConf() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> getOpName2SbpSignatureConf() {
       return getOpName2SbpSignatureConfMap();
     }
     /**
      * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
      */
 
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConfMap() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> getOpName2SbpSignatureConfMap() {
       return internalGetOpName2SbpSignatureConf().getMap();
     }
     /**
      * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
      */
 
-    public oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+    public org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrDefault(
         java.lang.String key,
-        oneflow.SbpParallelOuterClass.SbpSignature defaultValue) {
+        org.oneflow.core.job.SbpSignature defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> map =
           internalGetOpName2SbpSignatureConf().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -813,10 +813,10 @@ public  final class JobParallelViewConf extends
      * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
      */
 
-    public oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+    public org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> map =
           internalGetOpName2SbpSignatureConf().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -842,7 +842,7 @@ public  final class JobParallelViewConf extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature>
     getMutableOpName2SbpSignatureConf() {
       return internalGetMutableOpName2SbpSignatureConf().getMutableMap();
     }
@@ -851,7 +851,7 @@ public  final class JobParallelViewConf extends
      */
     public Builder putOpName2SbpSignatureConf(
         java.lang.String key,
-        oneflow.SbpParallelOuterClass.SbpSignature value) {
+        org.oneflow.core.job.SbpSignature value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableOpName2SbpSignatureConf().put(key, value);
@@ -862,7 +862,7 @@ public  final class JobParallelViewConf extends
      */
 
     public Builder putAllOpName2SbpSignatureConf(
-        java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature> values) {
+        java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature> values) {
       getMutableOpName2SbpSignatureConf().putAll(values);
       return this;
     }
@@ -987,8 +987,8 @@ public  final class JobParallelViewConf extends
     }
 
     private com.google.protobuf.MapField<
-        java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
-    private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+        java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
     internalGetOpName2ParallelDistributionSignatureConf() {
       if (opName2ParallelDistributionSignatureConf_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -996,7 +996,7 @@ public  final class JobParallelViewConf extends
       }
       return opName2ParallelDistributionSignatureConf_;
     }
-    private com.google.protobuf.MapField<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
     internalGetMutableOpName2ParallelDistributionSignatureConf() {
       onChanged();;
       if (opName2ParallelDistributionSignatureConf_ == null) {
@@ -1025,25 +1025,25 @@ public  final class JobParallelViewConf extends
      * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
       return getOpName2ParallelDistributionSignatureConfMap();
     }
     /**
      * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
      */
 
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
       return internalGetOpName2ParallelDistributionSignatureConf().getMap();
     }
     /**
      * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
      */
 
-    public oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+    public org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
         java.lang.String key,
-        oneflow.SbpParallelOuterClass.ParallelDistributionSignature defaultValue) {
+        org.oneflow.core.job.ParallelDistributionSignature defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> map =
           internalGetOpName2ParallelDistributionSignatureConf().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -1051,10 +1051,10 @@ public  final class JobParallelViewConf extends
      * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
      */
 
-    public oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+    public org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> map =
+      java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> map =
           internalGetOpName2ParallelDistributionSignatureConf().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -1080,7 +1080,7 @@ public  final class JobParallelViewConf extends
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+    public java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
     getMutableOpName2ParallelDistributionSignatureConf() {
       return internalGetMutableOpName2ParallelDistributionSignatureConf().getMutableMap();
     }
@@ -1089,7 +1089,7 @@ public  final class JobParallelViewConf extends
      */
     public Builder putOpName2ParallelDistributionSignatureConf(
         java.lang.String key,
-        oneflow.SbpParallelOuterClass.ParallelDistributionSignature value) {
+        org.oneflow.core.job.ParallelDistributionSignature value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       getMutableOpName2ParallelDistributionSignatureConf().put(key, value);
@@ -1100,7 +1100,7 @@ public  final class JobParallelViewConf extends
      */
 
     public Builder putAllOpName2ParallelDistributionSignatureConf(
-        java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature> values) {
+        java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature> values) {
       getMutableOpName2ParallelDistributionSignatureConf().putAll(values);
       return this;
     }

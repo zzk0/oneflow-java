@@ -44,7 +44,7 @@ public final class DlnetConf {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.OpConf.getDescriptor(),
+          org.oneflow.core.operator.OpConf.getDescriptor(),
         }, assigner);
     internal_static_oneflow_DLNetConf_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +52,7 @@ public final class DlnetConf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DLNetConf_descriptor,
         new java.lang.String[] { "Op", });
-    oneflow.OpConf.getDescriptor();
+    org.oneflow.core.operator.OpConf.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

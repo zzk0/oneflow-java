@@ -52,12 +52,12 @@ public interface ReentrantLockOpConfOrBuilder extends
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  java.util.List<oneflow.Record.Int64List> 
+  java.util.List<org.oneflow.core.record.Int64List> 
       getLockId2IntersectingLockIdsList();
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  oneflow.Record.Int64List getLockId2IntersectingLockIds(int index);
+  org.oneflow.core.record.Int64List getLockId2IntersectingLockIds(int index);
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
@@ -65,11 +65,11 @@ public interface ReentrantLockOpConfOrBuilder extends
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+  java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
       getLockId2IntersectingLockIdsOrBuilderList();
   /**
    * <code>repeated .oneflow.Int64List lock_id2intersecting_lock_ids = 4;</code>
    */
-  oneflow.Record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
+  org.oneflow.core.record.Int64ListOrBuilder getLockId2IntersectingLockIdsOrBuilder(
       int index);
 }

@@ -59,11 +59,11 @@ public  final class CollectiveBoxingGenericOpConf extends
             break;
           }
           case 18: {
-            oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder subBuilder = null;
+            org.oneflow.core.graph.boxing.RankDesc.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = rankDesc_.toBuilder();
             }
-            rankDesc_ = input.readMessage(oneflow.boxing.collective.CollectiveBoxing.RankDesc.PARSER, extensionRegistry);
+            rankDesc_ = input.readMessage(org.oneflow.core.graph.boxing.RankDesc.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(rankDesc_);
               rankDesc_ = subBuilder.buildPartial();
@@ -118,7 +118,7 @@ public  final class CollectiveBoxingGenericOpConf extends
   }
 
   public static final int RANK_DESC_FIELD_NUMBER = 2;
-  private oneflow.boxing.collective.CollectiveBoxing.RankDesc rankDesc_;
+  private org.oneflow.core.graph.boxing.RankDesc rankDesc_;
   /**
    * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
    */
@@ -128,14 +128,14 @@ public  final class CollectiveBoxingGenericOpConf extends
   /**
    * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
    */
-  public oneflow.boxing.collective.CollectiveBoxing.RankDesc getRankDesc() {
-    return rankDesc_ == null ? oneflow.boxing.collective.CollectiveBoxing.RankDesc.getDefaultInstance() : rankDesc_;
+  public org.oneflow.core.graph.boxing.RankDesc getRankDesc() {
+    return rankDesc_ == null ? org.oneflow.core.graph.boxing.RankDesc.getDefaultInstance() : rankDesc_;
   }
   /**
    * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
    */
-  public oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder getRankDescOrBuilder() {
-    return rankDesc_ == null ? oneflow.boxing.collective.CollectiveBoxing.RankDesc.getDefaultInstance() : rankDesc_;
+  public org.oneflow.core.graph.boxing.RankDescOrBuilder getRankDescOrBuilder() {
+    return rankDesc_ == null ? org.oneflow.core.graph.boxing.RankDesc.getDefaultInstance() : rankDesc_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -605,9 +605,9 @@ public  final class CollectiveBoxingGenericOpConf extends
       return lbiBuilder_;
     }
 
-    private oneflow.boxing.collective.CollectiveBoxing.RankDesc rankDesc_ = null;
+    private org.oneflow.core.graph.boxing.RankDesc rankDesc_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.boxing.collective.CollectiveBoxing.RankDesc, oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder, oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder> rankDescBuilder_;
+        org.oneflow.core.graph.boxing.RankDesc, org.oneflow.core.graph.boxing.RankDesc.Builder, org.oneflow.core.graph.boxing.RankDescOrBuilder> rankDescBuilder_;
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
@@ -617,9 +617,9 @@ public  final class CollectiveBoxingGenericOpConf extends
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
-    public oneflow.boxing.collective.CollectiveBoxing.RankDesc getRankDesc() {
+    public org.oneflow.core.graph.boxing.RankDesc getRankDesc() {
       if (rankDescBuilder_ == null) {
-        return rankDesc_ == null ? oneflow.boxing.collective.CollectiveBoxing.RankDesc.getDefaultInstance() : rankDesc_;
+        return rankDesc_ == null ? org.oneflow.core.graph.boxing.RankDesc.getDefaultInstance() : rankDesc_;
       } else {
         return rankDescBuilder_.getMessage();
       }
@@ -627,7 +627,7 @@ public  final class CollectiveBoxingGenericOpConf extends
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
-    public Builder setRankDesc(oneflow.boxing.collective.CollectiveBoxing.RankDesc value) {
+    public Builder setRankDesc(org.oneflow.core.graph.boxing.RankDesc value) {
       if (rankDescBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -644,7 +644,7 @@ public  final class CollectiveBoxingGenericOpConf extends
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
     public Builder setRankDesc(
-        oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder builderForValue) {
+        org.oneflow.core.graph.boxing.RankDesc.Builder builderForValue) {
       if (rankDescBuilder_ == null) {
         rankDesc_ = builderForValue.build();
         onChanged();
@@ -657,13 +657,13 @@ public  final class CollectiveBoxingGenericOpConf extends
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
-    public Builder mergeRankDesc(oneflow.boxing.collective.CollectiveBoxing.RankDesc value) {
+    public Builder mergeRankDesc(org.oneflow.core.graph.boxing.RankDesc value) {
       if (rankDescBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
             rankDesc_ != null &&
-            rankDesc_ != oneflow.boxing.collective.CollectiveBoxing.RankDesc.getDefaultInstance()) {
+            rankDesc_ != org.oneflow.core.graph.boxing.RankDesc.getDefaultInstance()) {
           rankDesc_ =
-            oneflow.boxing.collective.CollectiveBoxing.RankDesc.newBuilder(rankDesc_).mergeFrom(value).buildPartial();
+            org.oneflow.core.graph.boxing.RankDesc.newBuilder(rankDesc_).mergeFrom(value).buildPartial();
         } else {
           rankDesc_ = value;
         }
@@ -690,7 +690,7 @@ public  final class CollectiveBoxingGenericOpConf extends
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
-    public oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder getRankDescBuilder() {
+    public org.oneflow.core.graph.boxing.RankDesc.Builder getRankDescBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getRankDescFieldBuilder().getBuilder();
@@ -698,23 +698,23 @@ public  final class CollectiveBoxingGenericOpConf extends
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
-    public oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder getRankDescOrBuilder() {
+    public org.oneflow.core.graph.boxing.RankDescOrBuilder getRankDescOrBuilder() {
       if (rankDescBuilder_ != null) {
         return rankDescBuilder_.getMessageOrBuilder();
       } else {
         return rankDesc_ == null ?
-            oneflow.boxing.collective.CollectiveBoxing.RankDesc.getDefaultInstance() : rankDesc_;
+            org.oneflow.core.graph.boxing.RankDesc.getDefaultInstance() : rankDesc_;
       }
     }
     /**
      * <code>required .oneflow.boxing.collective.RankDesc rank_desc = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        oneflow.boxing.collective.CollectiveBoxing.RankDesc, oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder, oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder> 
+        org.oneflow.core.graph.boxing.RankDesc, org.oneflow.core.graph.boxing.RankDesc.Builder, org.oneflow.core.graph.boxing.RankDescOrBuilder> 
         getRankDescFieldBuilder() {
       if (rankDescBuilder_ == null) {
         rankDescBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            oneflow.boxing.collective.CollectiveBoxing.RankDesc, oneflow.boxing.collective.CollectiveBoxing.RankDesc.Builder, oneflow.boxing.collective.CollectiveBoxing.RankDescOrBuilder>(
+            org.oneflow.core.graph.boxing.RankDesc, org.oneflow.core.graph.boxing.RankDesc.Builder, org.oneflow.core.graph.boxing.RankDescOrBuilder>(
                 getRankDesc(),
                 getParentForChildren(),
                 isClean());

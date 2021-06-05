@@ -48,11 +48,11 @@ public  final class DLNetConf extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              op_ = new java.util.ArrayList<oneflow.OpConf.OperatorConf>();
+              op_ = new java.util.ArrayList<org.oneflow.core.operator.OperatorConf>();
               mutable_bitField0_ |= 0x00000001;
             }
             op_.add(
-                input.readMessage(oneflow.OpConf.OperatorConf.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.operator.OperatorConf.PARSER, extensionRegistry));
             break;
           }
         }
@@ -83,17 +83,17 @@ public  final class DLNetConf extends
   }
 
   public static final int OP_FIELD_NUMBER = 1;
-  private java.util.List<oneflow.OpConf.OperatorConf> op_;
+  private java.util.List<org.oneflow.core.operator.OperatorConf> op_;
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  public java.util.List<oneflow.OpConf.OperatorConf> getOpList() {
+  public java.util.List<org.oneflow.core.operator.OperatorConf> getOpList() {
     return op_;
   }
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  public java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
       getOpOrBuilderList() {
     return op_;
   }
@@ -106,13 +106,13 @@ public  final class DLNetConf extends
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  public oneflow.OpConf.OperatorConf getOp(int index) {
+  public org.oneflow.core.operator.OperatorConf getOp(int index) {
     return op_.get(index);
   }
   /**
    * <code>repeated .oneflow.OperatorConf op = 1;</code>
    */
-  public oneflow.OpConf.OperatorConfOrBuilder getOpOrBuilder(
+  public org.oneflow.core.operator.OperatorConfOrBuilder getOpOrBuilder(
       int index) {
     return op_.get(index);
   }
@@ -441,22 +441,22 @@ public  final class DLNetConf extends
     }
     private int bitField0_;
 
-    private java.util.List<oneflow.OpConf.OperatorConf> op_ =
+    private java.util.List<org.oneflow.core.operator.OperatorConf> op_ =
       java.util.Collections.emptyList();
     private void ensureOpIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        op_ = new java.util.ArrayList<oneflow.OpConf.OperatorConf>(op_);
+        op_ = new java.util.ArrayList<org.oneflow.core.operator.OperatorConf>(op_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder> opBuilder_;
+        org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder> opBuilder_;
 
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public java.util.List<oneflow.OpConf.OperatorConf> getOpList() {
+    public java.util.List<org.oneflow.core.operator.OperatorConf> getOpList() {
       if (opBuilder_ == null) {
         return java.util.Collections.unmodifiableList(op_);
       } else {
@@ -476,7 +476,7 @@ public  final class DLNetConf extends
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf getOp(int index) {
+    public org.oneflow.core.operator.OperatorConf getOp(int index) {
       if (opBuilder_ == null) {
         return op_.get(index);
       } else {
@@ -487,7 +487,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder setOp(
-        int index, oneflow.OpConf.OperatorConf value) {
+        int index, org.oneflow.core.operator.OperatorConf value) {
       if (opBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -504,7 +504,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder setOp(
-        int index, oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        int index, org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opBuilder_ == null) {
         ensureOpIsMutable();
         op_.set(index, builderForValue.build());
@@ -517,7 +517,7 @@ public  final class DLNetConf extends
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public Builder addOp(oneflow.OpConf.OperatorConf value) {
+    public Builder addOp(org.oneflow.core.operator.OperatorConf value) {
       if (opBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -534,7 +534,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder addOp(
-        int index, oneflow.OpConf.OperatorConf value) {
+        int index, org.oneflow.core.operator.OperatorConf value) {
       if (opBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -551,7 +551,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder addOp(
-        oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opBuilder_ == null) {
         ensureOpIsMutable();
         op_.add(builderForValue.build());
@@ -565,7 +565,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder addOp(
-        int index, oneflow.OpConf.OperatorConf.Builder builderForValue) {
+        int index, org.oneflow.core.operator.OperatorConf.Builder builderForValue) {
       if (opBuilder_ == null) {
         ensureOpIsMutable();
         op_.add(index, builderForValue.build());
@@ -579,7 +579,7 @@ public  final class DLNetConf extends
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
     public Builder addAllOp(
-        java.lang.Iterable<? extends oneflow.OpConf.OperatorConf> values) {
+        java.lang.Iterable<? extends org.oneflow.core.operator.OperatorConf> values) {
       if (opBuilder_ == null) {
         ensureOpIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -619,14 +619,14 @@ public  final class DLNetConf extends
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder getOpBuilder(
+    public org.oneflow.core.operator.OperatorConf.Builder getOpBuilder(
         int index) {
       return getOpFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public oneflow.OpConf.OperatorConfOrBuilder getOpOrBuilder(
+    public org.oneflow.core.operator.OperatorConfOrBuilder getOpOrBuilder(
         int index) {
       if (opBuilder_ == null) {
         return op_.get(index);  } else {
@@ -636,7 +636,7 @@ public  final class DLNetConf extends
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public java.util.List<? extends oneflow.OpConf.OperatorConfOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.operator.OperatorConfOrBuilder> 
          getOpOrBuilderList() {
       if (opBuilder_ != null) {
         return opBuilder_.getMessageOrBuilderList();
@@ -647,31 +647,31 @@ public  final class DLNetConf extends
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder addOpBuilder() {
+    public org.oneflow.core.operator.OperatorConf.Builder addOpBuilder() {
       return getOpFieldBuilder().addBuilder(
-          oneflow.OpConf.OperatorConf.getDefaultInstance());
+          org.oneflow.core.operator.OperatorConf.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public oneflow.OpConf.OperatorConf.Builder addOpBuilder(
+    public org.oneflow.core.operator.OperatorConf.Builder addOpBuilder(
         int index) {
       return getOpFieldBuilder().addBuilder(
-          index, oneflow.OpConf.OperatorConf.getDefaultInstance());
+          index, org.oneflow.core.operator.OperatorConf.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.OperatorConf op = 1;</code>
      */
-    public java.util.List<oneflow.OpConf.OperatorConf.Builder> 
+    public java.util.List<org.oneflow.core.operator.OperatorConf.Builder> 
          getOpBuilderList() {
       return getOpFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder> 
+        org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder> 
         getOpFieldBuilder() {
       if (opBuilder_ == null) {
         opBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.OpConf.OperatorConf, oneflow.OpConf.OperatorConf.Builder, oneflow.OpConf.OperatorConfOrBuilder>(
+            org.oneflow.core.operator.OperatorConf, org.oneflow.core.operator.OperatorConf.Builder, org.oneflow.core.operator.OperatorConfOrBuilder>(
                 op_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

@@ -91,8 +91,8 @@ public final class RegisterDesc {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.oneflow.core.register.BlobDesc.getDescriptor(),
           org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor(),
-          oneflow.MemoryCaseOuterClass.getDescriptor(),
-          oneflow.Shape.getDescriptor(),
+          org.oneflow.core.memory.MemoryCaseOuterClass.getDescriptor(),
+          org.oneflow.core.common.Shape.getDescriptor(),
         }, assigner);
     internal_static_oneflow_LbiBlobDescPair_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -126,8 +126,8 @@ public final class RegisterDesc {
         new java.lang.String[] { "RegstDescId", "ProducerTaskId", "ConsumerTaskId", "MinRegisterNum", "MaxRegisterNum", "RegisterNum", "MemCase", "RegstDescType", "EnableReuseMem", "MemBlockId", "MemBlockOffset", "SeparatedHeaderMemBlockId", "InplaceConsumedRegstDescId", "HintInplaceConsumedRegstDescId", "ForceInplaceConsumedRegstDescId", "InplaceInfoType", });
     org.oneflow.core.register.BlobDesc.getDescriptor();
     org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor();
-    oneflow.MemoryCaseOuterClass.getDescriptor();
-    oneflow.Shape.getDescriptor();
+    org.oneflow.core.memory.MemoryCaseOuterClass.getDescriptor();
+    org.oneflow.core.common.Shape.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

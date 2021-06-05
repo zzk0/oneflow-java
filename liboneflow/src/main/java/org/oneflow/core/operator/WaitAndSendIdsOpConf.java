@@ -63,11 +63,11 @@ public  final class WaitAndSendIdsOpConf extends
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              idList_ = new java.util.ArrayList<oneflow.Record.Int64List>();
+              idList_ = new java.util.ArrayList<org.oneflow.core.record.Int64List>();
               mutable_bitField0_ |= 0x00000004;
             }
             idList_.add(
-                input.readMessage(oneflow.Record.Int64List.PARSER, extensionRegistry));
+                input.readMessage(org.oneflow.core.record.Int64List.PARSER, extensionRegistry));
             break;
           }
           case 32: {
@@ -194,17 +194,17 @@ public  final class WaitAndSendIdsOpConf extends
   }
 
   public static final int ID_LIST_FIELD_NUMBER = 3;
-  private java.util.List<oneflow.Record.Int64List> idList_;
+  private java.util.List<org.oneflow.core.record.Int64List> idList_;
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  public java.util.List<oneflow.Record.Int64List> getIdListList() {
+  public java.util.List<org.oneflow.core.record.Int64List> getIdListList() {
     return idList_;
   }
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  public java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+  public java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
       getIdListOrBuilderList() {
     return idList_;
   }
@@ -217,13 +217,13 @@ public  final class WaitAndSendIdsOpConf extends
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  public oneflow.Record.Int64List getIdList(int index) {
+  public org.oneflow.core.record.Int64List getIdList(int index) {
     return idList_.get(index);
   }
   /**
    * <code>repeated .oneflow.Int64List id_list = 3;</code>
    */
-  public oneflow.Record.Int64ListOrBuilder getIdListOrBuilder(
+  public org.oneflow.core.record.Int64ListOrBuilder getIdListOrBuilder(
       int index) {
     return idList_.get(index);
   }
@@ -808,22 +808,22 @@ public  final class WaitAndSendIdsOpConf extends
       return this;
     }
 
-    private java.util.List<oneflow.Record.Int64List> idList_ =
+    private java.util.List<org.oneflow.core.record.Int64List> idList_ =
       java.util.Collections.emptyList();
     private void ensureIdListIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        idList_ = new java.util.ArrayList<oneflow.Record.Int64List>(idList_);
+        idList_ = new java.util.ArrayList<org.oneflow.core.record.Int64List>(idList_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder> idListBuilder_;
+        org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder> idListBuilder_;
 
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public java.util.List<oneflow.Record.Int64List> getIdListList() {
+    public java.util.List<org.oneflow.core.record.Int64List> getIdListList() {
       if (idListBuilder_ == null) {
         return java.util.Collections.unmodifiableList(idList_);
       } else {
@@ -843,7 +843,7 @@ public  final class WaitAndSendIdsOpConf extends
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public oneflow.Record.Int64List getIdList(int index) {
+    public org.oneflow.core.record.Int64List getIdList(int index) {
       if (idListBuilder_ == null) {
         return idList_.get(index);
       } else {
@@ -854,7 +854,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder setIdList(
-        int index, oneflow.Record.Int64List value) {
+        int index, org.oneflow.core.record.Int64List value) {
       if (idListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -871,7 +871,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder setIdList(
-        int index, oneflow.Record.Int64List.Builder builderForValue) {
+        int index, org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (idListBuilder_ == null) {
         ensureIdListIsMutable();
         idList_.set(index, builderForValue.build());
@@ -884,7 +884,7 @@ public  final class WaitAndSendIdsOpConf extends
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public Builder addIdList(oneflow.Record.Int64List value) {
+    public Builder addIdList(org.oneflow.core.record.Int64List value) {
       if (idListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -901,7 +901,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder addIdList(
-        int index, oneflow.Record.Int64List value) {
+        int index, org.oneflow.core.record.Int64List value) {
       if (idListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -918,7 +918,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder addIdList(
-        oneflow.Record.Int64List.Builder builderForValue) {
+        org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (idListBuilder_ == null) {
         ensureIdListIsMutable();
         idList_.add(builderForValue.build());
@@ -932,7 +932,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder addIdList(
-        int index, oneflow.Record.Int64List.Builder builderForValue) {
+        int index, org.oneflow.core.record.Int64List.Builder builderForValue) {
       if (idListBuilder_ == null) {
         ensureIdListIsMutable();
         idList_.add(index, builderForValue.build());
@@ -946,7 +946,7 @@ public  final class WaitAndSendIdsOpConf extends
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
     public Builder addAllIdList(
-        java.lang.Iterable<? extends oneflow.Record.Int64List> values) {
+        java.lang.Iterable<? extends org.oneflow.core.record.Int64List> values) {
       if (idListBuilder_ == null) {
         ensureIdListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -986,14 +986,14 @@ public  final class WaitAndSendIdsOpConf extends
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public oneflow.Record.Int64List.Builder getIdListBuilder(
+    public org.oneflow.core.record.Int64List.Builder getIdListBuilder(
         int index) {
       return getIdListFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public oneflow.Record.Int64ListOrBuilder getIdListOrBuilder(
+    public org.oneflow.core.record.Int64ListOrBuilder getIdListOrBuilder(
         int index) {
       if (idListBuilder_ == null) {
         return idList_.get(index);  } else {
@@ -1003,7 +1003,7 @@ public  final class WaitAndSendIdsOpConf extends
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public java.util.List<? extends oneflow.Record.Int64ListOrBuilder> 
+    public java.util.List<? extends org.oneflow.core.record.Int64ListOrBuilder> 
          getIdListOrBuilderList() {
       if (idListBuilder_ != null) {
         return idListBuilder_.getMessageOrBuilderList();
@@ -1014,31 +1014,31 @@ public  final class WaitAndSendIdsOpConf extends
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public oneflow.Record.Int64List.Builder addIdListBuilder() {
+    public org.oneflow.core.record.Int64List.Builder addIdListBuilder() {
       return getIdListFieldBuilder().addBuilder(
-          oneflow.Record.Int64List.getDefaultInstance());
+          org.oneflow.core.record.Int64List.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public oneflow.Record.Int64List.Builder addIdListBuilder(
+    public org.oneflow.core.record.Int64List.Builder addIdListBuilder(
         int index) {
       return getIdListFieldBuilder().addBuilder(
-          index, oneflow.Record.Int64List.getDefaultInstance());
+          index, org.oneflow.core.record.Int64List.getDefaultInstance());
     }
     /**
      * <code>repeated .oneflow.Int64List id_list = 3;</code>
      */
-    public java.util.List<oneflow.Record.Int64List.Builder> 
+    public java.util.List<org.oneflow.core.record.Int64List.Builder> 
          getIdListBuilderList() {
       return getIdListFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder> 
+        org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder> 
         getIdListFieldBuilder() {
       if (idListBuilder_ == null) {
         idListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            oneflow.Record.Int64List, oneflow.Record.Int64List.Builder, oneflow.Record.Int64ListOrBuilder>(
+            org.oneflow.core.record.Int64List, org.oneflow.core.record.Int64List.Builder, org.oneflow.core.record.Int64ListOrBuilder>(
                 idList_,
                 ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),

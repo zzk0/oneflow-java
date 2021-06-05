@@ -20,25 +20,25 @@ public interface JobParallelViewConfOrBuilder extends
    * Use {@link #getOpName2SbpSignatureConfMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+  java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature>
   getOpName2SbpSignatureConf();
   /**
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
-  java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.SbpSignature>
+  java.util.Map<java.lang.String, org.oneflow.core.job.SbpSignature>
   getOpName2SbpSignatureConfMap();
   /**
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
 
-  oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+  org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrDefault(
       java.lang.String key,
-      oneflow.SbpParallelOuterClass.SbpSignature defaultValue);
+      org.oneflow.core.job.SbpSignature defaultValue);
   /**
    * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
    */
 
-  oneflow.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+  org.oneflow.core.job.SbpSignature getOpName2SbpSignatureConfOrThrow(
       java.lang.String key);
 
   /**
@@ -88,24 +88,24 @@ public interface JobParallelViewConfOrBuilder extends
    * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+  java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
   getOpName2ParallelDistributionSignatureConf();
   /**
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
-  java.util.Map<java.lang.String, oneflow.SbpParallelOuterClass.ParallelDistributionSignature>
+  java.util.Map<java.lang.String, org.oneflow.core.job.ParallelDistributionSignature>
   getOpName2ParallelDistributionSignatureConfMap();
   /**
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
 
-  oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+  org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
       java.lang.String key,
-      oneflow.SbpParallelOuterClass.ParallelDistributionSignature defaultValue);
+      org.oneflow.core.job.ParallelDistributionSignature defaultValue);
   /**
    * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
    */
 
-  oneflow.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+  org.oneflow.core.job.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
       java.lang.String key);
 }

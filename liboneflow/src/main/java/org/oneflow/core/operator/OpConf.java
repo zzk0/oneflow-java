@@ -701,13 +701,13 @@ public final class OpConf {
           org.oneflow.core.common.Shape.getDescriptor(),
           org.oneflow.core.common.DataTypeOuterClass.getDescriptor(),
           org.oneflow.core.common.DeviceTypeOuterClass.getDescriptor(),
-          oneflow.Record.getDescriptor(),
+          org.oneflow.core.record.Record.getDescriptor(),
           org.oneflow.core.job.ResourceOuterClass.getDescriptor(),
           org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor(),
           org.oneflow.core.register.TensorSliceView.getDescriptor(),
           org.oneflow.core.framework.UserOpConfOuterClass.getDescriptor(),
           org.oneflow.core.job.SbpParallelOuterClass.getDescriptor(),
-          oneflow.boxing.collective.CollectiveBoxing.getDescriptor(),
+          org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor(),
           org.oneflow.core.job.InitializerConfOuterClass.getDescriptor(),
           org.oneflow.core.job.RegularizerConfOuterClass.getDescriptor(),
           org.oneflow.core.job.LearningRateScheduleConf.getDescriptor(),
@@ -1155,13 +1155,13 @@ public final class OpConf {
     org.oneflow.core.common.Shape.getDescriptor();
     org.oneflow.core.common.DataTypeOuterClass.getDescriptor();
     org.oneflow.core.common.DeviceTypeOuterClass.getDescriptor();
-    oneflow.Record.getDescriptor();
+    org.oneflow.core.record.Record.getDescriptor();
     org.oneflow.core.job.ResourceOuterClass.getDescriptor();
     org.oneflow.core.register.LogicalBlobIdOuterClass.getDescriptor();
     org.oneflow.core.register.TensorSliceView.getDescriptor();
     org.oneflow.core.framework.UserOpConfOuterClass.getDescriptor();
     org.oneflow.core.job.SbpParallelOuterClass.getDescriptor();
-    oneflow.boxing.collective.CollectiveBoxing.getDescriptor();
+    org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor();
     org.oneflow.core.job.InitializerConfOuterClass.getDescriptor();
     org.oneflow.core.job.RegularizerConfOuterClass.getDescriptor();
     org.oneflow.core.job.LearningRateScheduleConf.getDescriptor();

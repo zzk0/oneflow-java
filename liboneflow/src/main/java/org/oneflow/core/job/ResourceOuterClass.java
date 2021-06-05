@@ -98,7 +98,7 @@ public final class ResourceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oneflow.DeviceTypeOuterClass.getDescriptor(),
+          org.oneflow.core.common.DeviceTypeOuterClass.getDescriptor(),
         }, assigner);
     internal_static_oneflow_CollectiveBoxingConf_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -118,7 +118,7 @@ public final class ResourceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_Resource_descriptor,
         new java.lang.String[] { "MachineNum", "GpuDeviceNum", "CpuDeviceNum", "CommNetWorkerNum", "MaxMdsaveWorkerNum", "UseRdma", "RdmaMemBlockMbyte", "RdmaRecvMsgBufMbyte", "ReservedHostMemMbyte", "ReservedDeviceMemMbyte", "EnableNumaAwareCudaMallocHost", "ComputeThreadPoolSize", "ThreadEnableLocalMessageQueue", "EnableThreadLocalCache", "ThreadLocalCacheMaxSize", "EnableDebugMode", "CollectiveBoxingConf", "EnableTensorFloat32Compute", "EnableMemChainMerge", "NcclUseComputeStream", "DisableGroupBoxingByDstParallel", "CudnnConf", });
-    oneflow.DeviceTypeOuterClass.getDescriptor();
+    org.oneflow.core.common.DeviceTypeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -27,9 +27,9 @@ public interface JobInputDefOrBuilder extends
   /**
    * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
    */
-  oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConf getBlobConf();
+  org.oneflow.core.operator.InterfaceBlobConf getBlobConf();
   /**
    * <code>required .oneflow.InterfaceBlobConf blob_conf = 2;</code>
    */
-  oneflow.InterfaceBlobConfOuterClass.InterfaceBlobConfOrBuilder getBlobConfOrBuilder();
+  org.oneflow.core.operator.InterfaceBlobConfOrBuilder getBlobConfOrBuilder();
 }

@@ -10,12 +10,12 @@ public interface PolygonListOrBuilder extends
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  java.util.List<oneflow.Record.FloatList> 
+  java.util.List<org.oneflow.core.record.FloatList> 
       getPolygonsList();
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  oneflow.Record.FloatList getPolygons(int index);
+  org.oneflow.core.record.FloatList getPolygons(int index);
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface PolygonListOrBuilder extends
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  java.util.List<? extends oneflow.Record.FloatListOrBuilder> 
+  java.util.List<? extends org.oneflow.core.record.FloatListOrBuilder> 
       getPolygonsOrBuilderList();
   /**
    * <code>repeated .oneflow.FloatList polygons = 1;</code>
    */
-  oneflow.Record.FloatListOrBuilder getPolygonsOrBuilder(
+  org.oneflow.core.record.FloatListOrBuilder getPolygonsOrBuilder(
       int index);
 }
