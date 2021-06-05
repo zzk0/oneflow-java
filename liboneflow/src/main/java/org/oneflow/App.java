@@ -17,7 +17,16 @@ public class App
             System.out.println("env inited");
         }
         else {
-            System.out.println("not init yet");
+            System.out.println("try init");
+            Env.initEnv(envProto.toString());
+        }
+
+        // check it
+        if (Env.isEnvInited()) {
+            System.out.println("ok");
+        }
+        else {
+            System.out.println("no");
         }
     }
 }
