@@ -15,7 +15,7 @@ copytree(SRC_DIR_ROOT, COPY_TO, ignore=ignore_patterns('*.h', '*.cpp', '*.hpp', 
 os.makedirs(PROTO_JAVA_DIR)
 
 # add extra lines to .proto file and compile
-def print_tree(path, package):
+def append_compile(path, package):
     for item in os.listdir(path):
         if os.path.isfile(path + os.sep + item):
             suffix = item.split('.')[-1]
@@ -30,7 +30,7 @@ def print_tree(path, package):
                 )
                 os.system(command)
         if os.path.isdir(path + os.sep + item):
-            print_tree(path + os.sep + item, package + '.' + item)
+            append_compile(path + os.sep + item, package + '.' + item)
 
 
-print_tree(COPY_TO, 'org.oneflow.core')
+append_compile(COPY_TO, 'org.oneflow.core')
