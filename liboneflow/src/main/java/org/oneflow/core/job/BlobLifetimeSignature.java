@@ -14,24 +14,1384 @@ public final class BlobLifetimeSignature {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BlobLastUsedSignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.BlobLastUsedSignature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+    int getBnInOp2BlobLastUsedCount();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+    boolean containsBnInOp2BlobLastUsed(
+        java.lang.String key);
+    /**
+     * Use {@link #getBnInOp2BlobLastUsedMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getBnInOp2BlobLastUsed();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getBnInOp2BlobLastUsedMap();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    boolean getBnInOp2BlobLastUsedOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    boolean getBnInOp2BlobLastUsedOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code oneflow.BlobLastUsedSignature}
+   */
+  public  static final class BlobLastUsedSignature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.BlobLastUsedSignature)
+      BlobLastUsedSignatureOrBuilder {
+    // Use BlobLastUsedSignature.newBuilder() to construct.
+    private BlobLastUsedSignature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlobLastUsedSignature() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BlobLastUsedSignature(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                bnInOp2BlobLastUsed_ = com.google.protobuf.MapField.newMapField(
+                    BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              bnInOp2BlobLastUsed = input.readMessage(
+                  BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              bnInOp2BlobLastUsed_.getMutableMap().put(bnInOp2BlobLastUsed.getKey(), bnInOp2BlobLastUsed.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetBnInOp2BlobLastUsed();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.class, org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.Builder.class);
+    }
+
+    public static final int BN_IN_OP2BLOB_LAST_USED_FIELD_NUMBER = 1;
+    private static final class BnInOp2BlobLastUsedDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_BnInOp2blobLastUsedEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> bnInOp2BlobLastUsed_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetBnInOp2BlobLastUsed() {
+      if (bnInOp2BlobLastUsed_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry);
+      }
+      return bnInOp2BlobLastUsed_;
+    }
+
+    public int getBnInOp2BlobLastUsedCount() {
+      return internalGetBnInOp2BlobLastUsed().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    public boolean containsBnInOp2BlobLastUsed(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetBnInOp2BlobLastUsed().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getBnInOp2BlobLastUsedMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobLastUsed() {
+      return getBnInOp2BlobLastUsedMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobLastUsedMap() {
+      return internalGetBnInOp2BlobLastUsed().getMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    public boolean getBnInOp2BlobLastUsedOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetBnInOp2BlobLastUsed().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+     */
+
+    public boolean getBnInOp2BlobLastUsedOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetBnInOp2BlobLastUsed().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetBnInOp2BlobLastUsed().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        bnInOp2BlobLastUsed = BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, bnInOp2BlobLastUsed);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetBnInOp2BlobLastUsed().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        bnInOp2BlobLastUsed = BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, bnInOp2BlobLastUsed);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature other = (org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature) obj;
+
+      boolean result = true;
+      result = result && internalGetBnInOp2BlobLastUsed().equals(
+          other.internalGetBnInOp2BlobLastUsed());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetBnInOp2BlobLastUsed().getMap().isEmpty()) {
+        hash = (37 * hash) + BN_IN_OP2BLOB_LAST_USED_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetBnInOp2BlobLastUsed().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.BlobLastUsedSignature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.BlobLastUsedSignature)
+        org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetBnInOp2BlobLastUsed();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableBnInOp2BlobLastUsed();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.class, org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableBnInOp2BlobLastUsed().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobLastUsedSignature_descriptor;
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature getDefaultInstanceForType() {
+        return org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature build() {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature buildPartial() {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature result = new org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature(this);
+        int from_bitField0_ = bitField0_;
+        result.bnInOp2BlobLastUsed_ = internalGetBnInOp2BlobLastUsed();
+        result.bnInOp2BlobLastUsed_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature) {
+          return mergeFrom((org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature other) {
+        if (other == org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature.getDefaultInstance()) return this;
+        internalGetMutableBnInOp2BlobLastUsed().mergeFrom(
+            other.internalGetBnInOp2BlobLastUsed());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> bnInOp2BlobLastUsed_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetBnInOp2BlobLastUsed() {
+        if (bnInOp2BlobLastUsed_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry);
+        }
+        return bnInOp2BlobLastUsed_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableBnInOp2BlobLastUsed() {
+        onChanged();;
+        if (bnInOp2BlobLastUsed_ == null) {
+          bnInOp2BlobLastUsed_ = com.google.protobuf.MapField.newMapField(
+              BnInOp2BlobLastUsedDefaultEntryHolder.defaultEntry);
+        }
+        if (!bnInOp2BlobLastUsed_.isMutable()) {
+          bnInOp2BlobLastUsed_ = bnInOp2BlobLastUsed_.copy();
+        }
+        return bnInOp2BlobLastUsed_;
+      }
+
+      public int getBnInOp2BlobLastUsedCount() {
+        return internalGetBnInOp2BlobLastUsed().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public boolean containsBnInOp2BlobLastUsed(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetBnInOp2BlobLastUsed().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getBnInOp2BlobLastUsedMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobLastUsed() {
+        return getBnInOp2BlobLastUsedMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobLastUsedMap() {
+        return internalGetBnInOp2BlobLastUsed().getMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public boolean getBnInOp2BlobLastUsedOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetBnInOp2BlobLastUsed().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public boolean getBnInOp2BlobLastUsedOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetBnInOp2BlobLastUsed().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearBnInOp2BlobLastUsed() {
+        getMutableBnInOp2BlobLastUsed().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public Builder removeBnInOp2BlobLastUsed(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableBnInOp2BlobLastUsed().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableBnInOp2BlobLastUsed() {
+        return internalGetMutableBnInOp2BlobLastUsed().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+      public Builder putBnInOp2BlobLastUsed(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        
+        getMutableBnInOp2BlobLastUsed().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_last_used = 1;</code>
+       */
+
+      public Builder putAllBnInOp2BlobLastUsed(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        getMutableBnInOp2BlobLastUsed().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.BlobLastUsedSignature)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.BlobLastUsedSignature)
+    private static final org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature();
+    }
+
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BlobLastUsedSignature>
+        PARSER = new com.google.protobuf.AbstractParser<BlobLastUsedSignature>() {
+      public BlobLastUsedSignature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BlobLastUsedSignature(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlobLastUsedSignature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlobLastUsedSignature> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.BlobLifetimeSignature.BlobLastUsedSignature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlobBackwardUsedSignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.BlobBackwardUsedSignature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+    int getBnInOp2BlobBackwardUsedCount();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+    boolean containsBnInOp2BlobBackwardUsed(
+        java.lang.String key);
+    /**
+     * Use {@link #getBnInOp2BlobBackwardUsedMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getBnInOp2BlobBackwardUsed();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getBnInOp2BlobBackwardUsedMap();
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    boolean getBnInOp2BlobBackwardUsedOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    boolean getBnInOp2BlobBackwardUsedOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code oneflow.BlobBackwardUsedSignature}
+   */
+  public  static final class BlobBackwardUsedSignature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.BlobBackwardUsedSignature)
+      BlobBackwardUsedSignatureOrBuilder {
+    // Use BlobBackwardUsedSignature.newBuilder() to construct.
+    private BlobBackwardUsedSignature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlobBackwardUsedSignature() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BlobBackwardUsedSignature(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                bnInOp2BlobBackwardUsed_ = com.google.protobuf.MapField.newMapField(
+                    BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              bnInOp2BlobBackwardUsed = input.readMessage(
+                  BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              bnInOp2BlobBackwardUsed_.getMutableMap().put(bnInOp2BlobBackwardUsed.getKey(), bnInOp2BlobBackwardUsed.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetBnInOp2BlobBackwardUsed();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.class, org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.Builder.class);
+    }
+
+    public static final int BN_IN_OP2BLOB_BACKWARD_USED_FIELD_NUMBER = 1;
+    private static final class BnInOp2BlobBackwardUsedDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_BnInOp2blobBackwardUsedEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> bnInOp2BlobBackwardUsed_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetBnInOp2BlobBackwardUsed() {
+      if (bnInOp2BlobBackwardUsed_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry);
+      }
+      return bnInOp2BlobBackwardUsed_;
+    }
+
+    public int getBnInOp2BlobBackwardUsedCount() {
+      return internalGetBnInOp2BlobBackwardUsed().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    public boolean containsBnInOp2BlobBackwardUsed(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetBnInOp2BlobBackwardUsed().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getBnInOp2BlobBackwardUsedMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobBackwardUsed() {
+      return getBnInOp2BlobBackwardUsedMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobBackwardUsedMap() {
+      return internalGetBnInOp2BlobBackwardUsed().getMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    public boolean getBnInOp2BlobBackwardUsedOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetBnInOp2BlobBackwardUsed().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+     */
+
+    public boolean getBnInOp2BlobBackwardUsedOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetBnInOp2BlobBackwardUsed().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetBnInOp2BlobBackwardUsed().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        bnInOp2BlobBackwardUsed = BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, bnInOp2BlobBackwardUsed);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetBnInOp2BlobBackwardUsed().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        bnInOp2BlobBackwardUsed = BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, bnInOp2BlobBackwardUsed);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature other = (org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature) obj;
+
+      boolean result = true;
+      result = result && internalGetBnInOp2BlobBackwardUsed().equals(
+          other.internalGetBnInOp2BlobBackwardUsed());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetBnInOp2BlobBackwardUsed().getMap().isEmpty()) {
+        hash = (37 * hash) + BN_IN_OP2BLOB_BACKWARD_USED_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetBnInOp2BlobBackwardUsed().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.BlobBackwardUsedSignature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.BlobBackwardUsedSignature)
+        org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetBnInOp2BlobBackwardUsed();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableBnInOp2BlobBackwardUsed();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.class, org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableBnInOp2BlobBackwardUsed().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.BlobLifetimeSignature.internal_static_oneflow_BlobBackwardUsedSignature_descriptor;
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature getDefaultInstanceForType() {
+        return org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature build() {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature buildPartial() {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature result = new org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature(this);
+        int from_bitField0_ = bitField0_;
+        result.bnInOp2BlobBackwardUsed_ = internalGetBnInOp2BlobBackwardUsed();
+        result.bnInOp2BlobBackwardUsed_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature) {
+          return mergeFrom((org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature other) {
+        if (other == org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature.getDefaultInstance()) return this;
+        internalGetMutableBnInOp2BlobBackwardUsed().mergeFrom(
+            other.internalGetBnInOp2BlobBackwardUsed());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> bnInOp2BlobBackwardUsed_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetBnInOp2BlobBackwardUsed() {
+        if (bnInOp2BlobBackwardUsed_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry);
+        }
+        return bnInOp2BlobBackwardUsed_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableBnInOp2BlobBackwardUsed() {
+        onChanged();;
+        if (bnInOp2BlobBackwardUsed_ == null) {
+          bnInOp2BlobBackwardUsed_ = com.google.protobuf.MapField.newMapField(
+              BnInOp2BlobBackwardUsedDefaultEntryHolder.defaultEntry);
+        }
+        if (!bnInOp2BlobBackwardUsed_.isMutable()) {
+          bnInOp2BlobBackwardUsed_ = bnInOp2BlobBackwardUsed_.copy();
+        }
+        return bnInOp2BlobBackwardUsed_;
+      }
+
+      public int getBnInOp2BlobBackwardUsedCount() {
+        return internalGetBnInOp2BlobBackwardUsed().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public boolean containsBnInOp2BlobBackwardUsed(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetBnInOp2BlobBackwardUsed().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getBnInOp2BlobBackwardUsedMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobBackwardUsed() {
+        return getBnInOp2BlobBackwardUsedMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getBnInOp2BlobBackwardUsedMap() {
+        return internalGetBnInOp2BlobBackwardUsed().getMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public boolean getBnInOp2BlobBackwardUsedOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetBnInOp2BlobBackwardUsed().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public boolean getBnInOp2BlobBackwardUsedOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetBnInOp2BlobBackwardUsed().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearBnInOp2BlobBackwardUsed() {
+        getMutableBnInOp2BlobBackwardUsed().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public Builder removeBnInOp2BlobBackwardUsed(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableBnInOp2BlobBackwardUsed().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableBnInOp2BlobBackwardUsed() {
+        return internalGetMutableBnInOp2BlobBackwardUsed().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+      public Builder putBnInOp2BlobBackwardUsed(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        
+        getMutableBnInOp2BlobBackwardUsed().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; bn_in_op2blob_backward_used = 1;</code>
+       */
+
+      public Builder putAllBnInOp2BlobBackwardUsed(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        getMutableBnInOp2BlobBackwardUsed().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.BlobBackwardUsedSignature)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.BlobBackwardUsedSignature)
+    private static final org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature();
+    }
+
+    public static org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BlobBackwardUsedSignature>
+        PARSER = new com.google.protobuf.AbstractParser<BlobBackwardUsedSignature>() {
+      public BlobBackwardUsedSignature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BlobBackwardUsedSignature(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlobBackwardUsedSignature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlobBackwardUsedSignature> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.BlobLifetimeSignature.BlobBackwardUsedSignature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_BlobLastUsedSignature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_BlobLastUsedSignature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_BlobLastUsedSignature_BnInOp2blobLastUsedEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_BlobLastUsedSignature_BnInOp2blobLastUsedEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_BlobBackwardUsedSignature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_BlobBackwardUsedSignature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_BlobBackwardUsedSignature_BnInOp2blobBackwardUsedEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_BlobBackwardUsedSignature_BnInOp2blobBackwardUsedEntry_fieldAccessorTable;
 
@@ -53,8 +1413,8 @@ public final class BlobLifetimeSignature {
       "_backward_used\030\001 \003(\0132?.oneflow.BlobBackw" +
       "ardUsedSignature.BnInOp2blobBackwardUsed" +
       "Entry\032>\n\034BnInOp2blobBackwardUsedEntry\022\013\n",
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001B\030\n\024org.one" +
-      "flow.core.jobP\001"
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001B\026\n\024org.one" +
+      "flow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

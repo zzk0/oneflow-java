@@ -14,34 +14,5561 @@ public final class CollectiveBoxing {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code oneflow.boxing.collective.OpType}
+   */
+  public enum OpType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>kOpTypeInvalid = 0;</code>
+     */
+    kOpTypeInvalid(0),
+    /**
+     * <code>kOpTypeAllReduce = 1;</code>
+     */
+    kOpTypeAllReduce(1),
+    /**
+     * <code>kOpTypeReduceScatter = 2;</code>
+     */
+    kOpTypeReduceScatter(2),
+    /**
+     * <code>kOpTypeAllGather = 3;</code>
+     */
+    kOpTypeAllGather(3),
+    /**
+     * <code>kOpTypeReduce = 4;</code>
+     */
+    kOpTypeReduce(4),
+    /**
+     * <code>kOpTypeBroadcast = 5;</code>
+     */
+    kOpTypeBroadcast(5),
+    /**
+     * <code>kOpTypeAll2All = 6;</code>
+     */
+    kOpTypeAll2All(6),
+    ;
+
+    /**
+     * <code>kOpTypeInvalid = 0;</code>
+     */
+    public static final int kOpTypeInvalid_VALUE = 0;
+    /**
+     * <code>kOpTypeAllReduce = 1;</code>
+     */
+    public static final int kOpTypeAllReduce_VALUE = 1;
+    /**
+     * <code>kOpTypeReduceScatter = 2;</code>
+     */
+    public static final int kOpTypeReduceScatter_VALUE = 2;
+    /**
+     * <code>kOpTypeAllGather = 3;</code>
+     */
+    public static final int kOpTypeAllGather_VALUE = 3;
+    /**
+     * <code>kOpTypeReduce = 4;</code>
+     */
+    public static final int kOpTypeReduce_VALUE = 4;
+    /**
+     * <code>kOpTypeBroadcast = 5;</code>
+     */
+    public static final int kOpTypeBroadcast_VALUE = 5;
+    /**
+     * <code>kOpTypeAll2All = 6;</code>
+     */
+    public static final int kOpTypeAll2All_VALUE = 6;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OpType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static OpType forNumber(int value) {
+      switch (value) {
+        case 0: return kOpTypeInvalid;
+        case 1: return kOpTypeAllReduce;
+        case 2: return kOpTypeReduceScatter;
+        case 3: return kOpTypeAllGather;
+        case 4: return kOpTypeReduce;
+        case 5: return kOpTypeBroadcast;
+        case 6: return kOpTypeAll2All;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<OpType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        OpType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<OpType>() {
+            public OpType findValueByNumber(int number) {
+              return OpType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final OpType[] VALUES = values();
+
+    public static OpType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private OpType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:oneflow.boxing.collective.OpType)
+  }
+
+  /**
+   * Protobuf enum {@code oneflow.boxing.collective.ReduceMethod}
+   */
+  public enum ReduceMethod
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>kReduceMethodInvalid = 0;</code>
+     */
+    kReduceMethodInvalid(0),
+    /**
+     * <code>kReduceMethodSum = 1;</code>
+     */
+    kReduceMethodSum(1),
+    ;
+
+    /**
+     * <code>kReduceMethodInvalid = 0;</code>
+     */
+    public static final int kReduceMethodInvalid_VALUE = 0;
+    /**
+     * <code>kReduceMethodSum = 1;</code>
+     */
+    public static final int kReduceMethodSum_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ReduceMethod valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ReduceMethod forNumber(int value) {
+      switch (value) {
+        case 0: return kReduceMethodInvalid;
+        case 1: return kReduceMethodSum;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ReduceMethod>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ReduceMethod> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ReduceMethod>() {
+            public ReduceMethod findValueByNumber(int number) {
+              return ReduceMethod.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ReduceMethod[] VALUES = values();
+
+    public static ReduceMethod valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ReduceMethod(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:oneflow.boxing.collective.ReduceMethod)
+  }
+
+  /**
+   * Protobuf enum {@code oneflow.boxing.collective.Backend}
+   */
+  public enum Backend
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>kBackendInvalid = 0;</code>
+     */
+    kBackendInvalid(0),
+    /**
+     * <code>kBackendNCCL = 1;</code>
+     */
+    kBackendNCCL(1),
+    ;
+
+    /**
+     * <code>kBackendInvalid = 0;</code>
+     */
+    public static final int kBackendInvalid_VALUE = 0;
+    /**
+     * <code>kBackendNCCL = 1;</code>
+     */
+    public static final int kBackendNCCL_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Backend valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static Backend forNumber(int value) {
+      switch (value) {
+        case 0: return kBackendInvalid;
+        case 1: return kBackendNCCL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Backend>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Backend> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Backend>() {
+            public Backend findValueByNumber(int number) {
+              return Backend.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final Backend[] VALUES = values();
+
+    public static Backend valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Backend(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:oneflow.boxing.collective.Backend)
+  }
+
+  public interface DeviceDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.DeviceDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 machine_id = 1;</code>
+     */
+    boolean hasMachineId();
+    /**
+     * <code>required int64 machine_id = 1;</code>
+     */
+    long getMachineId();
+
+    /**
+     * <code>required .oneflow.DeviceType device_type = 2;</code>
+     */
+    boolean hasDeviceType();
+    /**
+     * <code>required .oneflow.DeviceType device_type = 2;</code>
+     */
+    org.oneflow.core.common.DeviceTypeOuterClass.DeviceType getDeviceType();
+
+    /**
+     * <code>required int64 device_id = 3;</code>
+     */
+    boolean hasDeviceId();
+    /**
+     * <code>required int64 device_id = 3;</code>
+     */
+    long getDeviceId();
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.DeviceDesc}
+   */
+  public  static final class DeviceDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.DeviceDesc)
+      DeviceDescOrBuilder {
+    // Use DeviceDesc.newBuilder() to construct.
+    private DeviceDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeviceDesc() {
+      machineId_ = 0L;
+      deviceType_ = 0;
+      deviceId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeviceDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              machineId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.common.DeviceTypeOuterClass.DeviceType value = org.oneflow.core.common.DeviceTypeOuterClass.DeviceType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                deviceType_ = rawValue;
+              }
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              deviceId_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceDesc_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MACHINE_ID_FIELD_NUMBER = 1;
+    private long machineId_;
+    /**
+     * <code>required int64 machine_id = 1;</code>
+     */
+    public boolean hasMachineId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 machine_id = 1;</code>
+     */
+    public long getMachineId() {
+      return machineId_;
+    }
+
+    public static final int DEVICE_TYPE_FIELD_NUMBER = 2;
+    private int deviceType_;
+    /**
+     * <code>required .oneflow.DeviceType device_type = 2;</code>
+     */
+    public boolean hasDeviceType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.DeviceType device_type = 2;</code>
+     */
+    public org.oneflow.core.common.DeviceTypeOuterClass.DeviceType getDeviceType() {
+      org.oneflow.core.common.DeviceTypeOuterClass.DeviceType result = org.oneflow.core.common.DeviceTypeOuterClass.DeviceType.valueOf(deviceType_);
+      return result == null ? org.oneflow.core.common.DeviceTypeOuterClass.DeviceType.kInvalidDevice : result;
+    }
+
+    public static final int DEVICE_ID_FIELD_NUMBER = 3;
+    private long deviceId_;
+    /**
+     * <code>required int64 device_id = 3;</code>
+     */
+    public boolean hasDeviceId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int64 device_id = 3;</code>
+     */
+    public long getDeviceId() {
+      return deviceId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasMachineId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDeviceType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDeviceId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, machineId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, deviceType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, deviceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, machineId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, deviceType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, deviceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc other = (org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc) obj;
+
+      boolean result = true;
+      result = result && (hasMachineId() == other.hasMachineId());
+      if (hasMachineId()) {
+        result = result && (getMachineId()
+            == other.getMachineId());
+      }
+      result = result && (hasDeviceType() == other.hasDeviceType());
+      if (hasDeviceType()) {
+        result = result && deviceType_ == other.deviceType_;
+      }
+      result = result && (hasDeviceId() == other.hasDeviceId());
+      if (hasDeviceId()) {
+        result = result && (getDeviceId()
+            == other.getDeviceId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMachineId()) {
+        hash = (37 * hash) + MACHINE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMachineId());
+      }
+      if (hasDeviceType()) {
+        hash = (37 * hash) + DEVICE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + deviceType_;
+      }
+      if (hasDeviceId()) {
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDeviceId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.DeviceDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.DeviceDesc)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceDesc_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        machineId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        deviceType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        deviceId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceDesc_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc result = new org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.machineId_ = machineId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.deviceType_ = deviceType_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.deviceId_ = deviceId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.getDefaultInstance()) return this;
+        if (other.hasMachineId()) {
+          setMachineId(other.getMachineId());
+        }
+        if (other.hasDeviceType()) {
+          setDeviceType(other.getDeviceType());
+        }
+        if (other.hasDeviceId()) {
+          setDeviceId(other.getDeviceId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMachineId()) {
+          return false;
+        }
+        if (!hasDeviceType()) {
+          return false;
+        }
+        if (!hasDeviceId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long machineId_ ;
+      /**
+       * <code>required int64 machine_id = 1;</code>
+       */
+      public boolean hasMachineId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 machine_id = 1;</code>
+       */
+      public long getMachineId() {
+        return machineId_;
+      }
+      /**
+       * <code>required int64 machine_id = 1;</code>
+       */
+      public Builder setMachineId(long value) {
+        bitField0_ |= 0x00000001;
+        machineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 machine_id = 1;</code>
+       */
+      public Builder clearMachineId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        machineId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int deviceType_ = 0;
+      /**
+       * <code>required .oneflow.DeviceType device_type = 2;</code>
+       */
+      public boolean hasDeviceType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.DeviceType device_type = 2;</code>
+       */
+      public org.oneflow.core.common.DeviceTypeOuterClass.DeviceType getDeviceType() {
+        org.oneflow.core.common.DeviceTypeOuterClass.DeviceType result = org.oneflow.core.common.DeviceTypeOuterClass.DeviceType.valueOf(deviceType_);
+        return result == null ? org.oneflow.core.common.DeviceTypeOuterClass.DeviceType.kInvalidDevice : result;
+      }
+      /**
+       * <code>required .oneflow.DeviceType device_type = 2;</code>
+       */
+      public Builder setDeviceType(org.oneflow.core.common.DeviceTypeOuterClass.DeviceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        deviceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DeviceType device_type = 2;</code>
+       */
+      public Builder clearDeviceType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        deviceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long deviceId_ ;
+      /**
+       * <code>required int64 device_id = 3;</code>
+       */
+      public boolean hasDeviceId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 device_id = 3;</code>
+       */
+      public long getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <code>required int64 device_id = 3;</code>
+       */
+      public Builder setDeviceId(long value) {
+        bitField0_ |= 0x00000004;
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 device_id = 3;</code>
+       */
+      public Builder clearDeviceId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        deviceId_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.DeviceDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.DeviceDesc)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeviceDesc>
+        PARSER = new com.google.protobuf.AbstractParser<DeviceDesc>() {
+      public DeviceDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeviceDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeviceDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeviceDesc> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeviceSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.DeviceSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> 
+        getDeviceList();
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDevice(int index);
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    int getDeviceCount();
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder> 
+        getDeviceOrBuilderList();
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder getDeviceOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.DeviceSet}
+   */
+  public  static final class DeviceSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.DeviceSet)
+      DeviceSetOrBuilder {
+    // Use DeviceSet.newBuilder() to construct.
+    private DeviceSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeviceSet() {
+      device_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeviceSet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                device_ = new java.util.ArrayList<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              device_.add(
+                  input.readMessage(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          device_ = java.util.Collections.unmodifiableList(device_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceSet_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.class, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder.class);
+    }
+
+    public static final int DEVICE_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> device_;
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> getDeviceList() {
+      return device_;
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder> 
+        getDeviceOrBuilderList() {
+      return device_;
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    public int getDeviceCount() {
+      return device_.size();
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDevice(int index) {
+      return device_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder getDeviceOrBuilder(
+        int index) {
+      return device_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getDeviceCount(); i++) {
+        if (!getDevice(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < device_.size(); i++) {
+        output.writeMessage(1, device_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < device_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, device_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet other = (org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet) obj;
+
+      boolean result = true;
+      result = result && getDeviceList()
+          .equals(other.getDeviceList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getDeviceCount() > 0) {
+        hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getDeviceList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.DeviceSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.DeviceSet)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceSet_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.class, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDeviceFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (deviceBuilder_ == null) {
+          device_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          deviceBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_DeviceSet_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet result = new org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet(this);
+        int from_bitField0_ = bitField0_;
+        if (deviceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            device_ = java.util.Collections.unmodifiableList(device_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.device_ = device_;
+        } else {
+          result.device_ = deviceBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance()) return this;
+        if (deviceBuilder_ == null) {
+          if (!other.device_.isEmpty()) {
+            if (device_.isEmpty()) {
+              device_ = other.device_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDeviceIsMutable();
+              device_.addAll(other.device_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.device_.isEmpty()) {
+            if (deviceBuilder_.isEmpty()) {
+              deviceBuilder_.dispose();
+              deviceBuilder_ = null;
+              device_ = other.device_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              deviceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeviceFieldBuilder() : null;
+            } else {
+              deviceBuilder_.addAllMessages(other.device_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getDeviceCount(); i++) {
+          if (!getDevice(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> device_ =
+        java.util.Collections.emptyList();
+      private void ensureDeviceIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          device_ = new java.util.ArrayList<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc>(device_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder> deviceBuilder_;
+
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> getDeviceList() {
+        if (deviceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(device_);
+        } else {
+          return deviceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public int getDeviceCount() {
+        if (deviceBuilder_ == null) {
+          return device_.size();
+        } else {
+          return deviceBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc getDevice(int index) {
+        if (deviceBuilder_ == null) {
+          return device_.get(index);
+        } else {
+          return deviceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder setDevice(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.set(index, value);
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder setDevice(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder addDevice(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.add(value);
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder addDevice(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.add(index, value);
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder addDevice(
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder addDevice(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder addAllDevice(
+          java.lang.Iterable<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc> values) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, device_);
+          onChanged();
+        } else {
+          deviceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder clearDevice() {
+        if (deviceBuilder_ == null) {
+          device_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          deviceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public Builder removeDevice(int index) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.remove(index);
+          onChanged();
+        } else {
+          deviceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder getDeviceBuilder(
+          int index) {
+        return getDeviceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder getDeviceOrBuilder(
+          int index) {
+        if (deviceBuilder_ == null) {
+          return device_.get(index);  } else {
+          return deviceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder> 
+           getDeviceOrBuilderList() {
+        if (deviceBuilder_ != null) {
+          return deviceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(device_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder addDeviceBuilder() {
+        return getDeviceFieldBuilder().addBuilder(
+            org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder addDeviceBuilder(
+          int index) {
+        return getDeviceFieldBuilder().addBuilder(
+            index, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.DeviceDesc device = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder> 
+           getDeviceBuilderList() {
+        return getDeviceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder> 
+          getDeviceFieldBuilder() {
+        if (deviceBuilder_ == null) {
+          deviceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceDescOrBuilder>(
+                  device_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          device_ = null;
+        }
+        return deviceBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.DeviceSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.DeviceSet)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeviceSet>
+        PARSER = new com.google.protobuf.AbstractParser<DeviceSet>() {
+      public DeviceSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeviceSet(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeviceSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeviceSet> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OpDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.OpDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+     */
+    boolean hasOpType();
+    /**
+     * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.OpType getOpType();
+
+    /**
+     * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+     */
+    boolean hasReduceMethod();
+    /**
+     * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod getReduceMethod();
+
+    /**
+     * <code>optional int64 root = 4;</code>
+     */
+    boolean hasRoot();
+    /**
+     * <code>optional int64 root = 4;</code>
+     */
+    long getRoot();
+
+    /**
+     * <code>required .oneflow.DataType data_type = 5;</code>
+     */
+    boolean hasDataType();
+    /**
+     * <code>required .oneflow.DataType data_type = 5;</code>
+     */
+    org.oneflow.core.common.DataTypeOuterClass.DataType getDataType();
+
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    boolean hasShape();
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeProto getShape();
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder();
+
+    /**
+     * <code>required int64 num_ranks = 7;</code>
+     */
+    boolean hasNumRanks();
+    /**
+     * <code>required int64 num_ranks = 7;</code>
+     */
+    long getNumRanks();
+
+    /**
+     * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+     */
+    boolean hasBackend();
+    /**
+     * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.Backend getBackend();
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.OpDesc}
+   */
+  public  static final class OpDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.OpDesc)
+      OpDescOrBuilder {
+    // Use OpDesc.newBuilder() to construct.
+    private OpDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OpDesc() {
+      name_ = "";
+      opType_ = 0;
+      reduceMethod_ = 0;
+      root_ = 0L;
+      dataType_ = 0;
+      numRanks_ = 0L;
+      backend_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OpDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpType value = org.oneflow.core.graph.boxing.CollectiveBoxing.OpType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                opType_ = rawValue;
+              }
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod value = org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                reduceMethod_ = rawValue;
+              }
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              root_ = input.readInt64();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.common.DataTypeOuterClass.DataType value = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                dataType_ = rawValue;
+              }
+              break;
+            }
+            case 50: {
+              org.oneflow.core.common.Shape.ShapeProto.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = shape_.toBuilder();
+              }
+              shape_ = input.readMessage(org.oneflow.core.common.Shape.ShapeProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shape_);
+                shape_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              numRanks_ = input.readInt64();
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.graph.boxing.CollectiveBoxing.Backend value = org.oneflow.core.graph.boxing.CollectiveBoxing.Backend.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                backend_ = rawValue;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_OpDesc_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_OpDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OP_TYPE_FIELD_NUMBER = 2;
+    private int opType_;
+    /**
+     * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+     */
+    public boolean hasOpType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpType getOpType() {
+      org.oneflow.core.graph.boxing.CollectiveBoxing.OpType result = org.oneflow.core.graph.boxing.CollectiveBoxing.OpType.valueOf(opType_);
+      return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpType.kOpTypeInvalid : result;
+    }
+
+    public static final int REDUCE_METHOD_FIELD_NUMBER = 3;
+    private int reduceMethod_;
+    /**
+     * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+     */
+    public boolean hasReduceMethod() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod getReduceMethod() {
+      org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod result = org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod.valueOf(reduceMethod_);
+      return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod.kReduceMethodInvalid : result;
+    }
+
+    public static final int ROOT_FIELD_NUMBER = 4;
+    private long root_;
+    /**
+     * <code>optional int64 root = 4;</code>
+     */
+    public boolean hasRoot() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int64 root = 4;</code>
+     */
+    public long getRoot() {
+      return root_;
+    }
+
+    public static final int DATA_TYPE_FIELD_NUMBER = 5;
+    private int dataType_;
+    /**
+     * <code>required .oneflow.DataType data_type = 5;</code>
+     */
+    public boolean hasDataType() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required .oneflow.DataType data_type = 5;</code>
+     */
+    public org.oneflow.core.common.DataTypeOuterClass.DataType getDataType() {
+      org.oneflow.core.common.DataTypeOuterClass.DataType result = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(dataType_);
+      return result == null ? org.oneflow.core.common.DataTypeOuterClass.DataType.kInvalidDataType : result;
+    }
+
+    public static final int SHAPE_FIELD_NUMBER = 6;
+    private org.oneflow.core.common.Shape.ShapeProto shape_;
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    public boolean hasShape() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeProto getShape() {
+      return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+    }
+    /**
+     * <code>required .oneflow.ShapeProto shape = 6;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
+      return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+    }
+
+    public static final int NUM_RANKS_FIELD_NUMBER = 7;
+    private long numRanks_;
+    /**
+     * <code>required int64 num_ranks = 7;</code>
+     */
+    public boolean hasNumRanks() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required int64 num_ranks = 7;</code>
+     */
+    public long getNumRanks() {
+      return numRanks_;
+    }
+
+    public static final int BACKEND_FIELD_NUMBER = 8;
+    private int backend_;
+    /**
+     * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+     */
+    public boolean hasBackend() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.Backend getBackend() {
+      org.oneflow.core.graph.boxing.CollectiveBoxing.Backend result = org.oneflow.core.graph.boxing.CollectiveBoxing.Backend.valueOf(backend_);
+      return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.Backend.kBackendInvalid : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOpType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDataType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasShape()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNumRanks()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasBackend()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, opType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, reduceMethod_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(4, root_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeEnum(5, dataType_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(6, getShape());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt64(7, numRanks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeEnum(8, backend_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, opType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, reduceMethod_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, root_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, dataType_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getShape());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, numRanks_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, backend_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc other = (org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasOpType() == other.hasOpType());
+      if (hasOpType()) {
+        result = result && opType_ == other.opType_;
+      }
+      result = result && (hasReduceMethod() == other.hasReduceMethod());
+      if (hasReduceMethod()) {
+        result = result && reduceMethod_ == other.reduceMethod_;
+      }
+      result = result && (hasRoot() == other.hasRoot());
+      if (hasRoot()) {
+        result = result && (getRoot()
+            == other.getRoot());
+      }
+      result = result && (hasDataType() == other.hasDataType());
+      if (hasDataType()) {
+        result = result && dataType_ == other.dataType_;
+      }
+      result = result && (hasShape() == other.hasShape());
+      if (hasShape()) {
+        result = result && getShape()
+            .equals(other.getShape());
+      }
+      result = result && (hasNumRanks() == other.hasNumRanks());
+      if (hasNumRanks()) {
+        result = result && (getNumRanks()
+            == other.getNumRanks());
+      }
+      result = result && (hasBackend() == other.hasBackend());
+      if (hasBackend()) {
+        result = result && backend_ == other.backend_;
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasOpType()) {
+        hash = (37 * hash) + OP_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + opType_;
+      }
+      if (hasReduceMethod()) {
+        hash = (37 * hash) + REDUCE_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + reduceMethod_;
+      }
+      if (hasRoot()) {
+        hash = (37 * hash) + ROOT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRoot());
+      }
+      if (hasDataType()) {
+        hash = (37 * hash) + DATA_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + dataType_;
+      }
+      if (hasShape()) {
+        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
+        hash = (53 * hash) + getShape().hashCode();
+      }
+      if (hasNumRanks()) {
+        hash = (37 * hash) + NUM_RANKS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumRanks());
+      }
+      if (hasBackend()) {
+        hash = (37 * hash) + BACKEND_FIELD_NUMBER;
+        hash = (53 * hash) + backend_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.OpDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.OpDesc)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_OpDesc_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_OpDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getShapeFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        opType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        reduceMethod_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        root_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dataType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        numRanks_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        backend_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_OpDesc_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc result = new org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.opType_ = opType_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.reduceMethod_ = reduceMethod_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.root_ = root_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.dataType_ = dataType_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (shapeBuilder_ == null) {
+          result.shape_ = shape_;
+        } else {
+          result.shape_ = shapeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.numRanks_ = numRanks_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.backend_ = backend_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasOpType()) {
+          setOpType(other.getOpType());
+        }
+        if (other.hasReduceMethod()) {
+          setReduceMethod(other.getReduceMethod());
+        }
+        if (other.hasRoot()) {
+          setRoot(other.getRoot());
+        }
+        if (other.hasDataType()) {
+          setDataType(other.getDataType());
+        }
+        if (other.hasShape()) {
+          mergeShape(other.getShape());
+        }
+        if (other.hasNumRanks()) {
+          setNumRanks(other.getNumRanks());
+        }
+        if (other.hasBackend()) {
+          setBackend(other.getBackend());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          return false;
+        }
+        if (!hasOpType()) {
+          return false;
+        }
+        if (!hasDataType()) {
+          return false;
+        }
+        if (!hasShape()) {
+          return false;
+        }
+        if (!hasNumRanks()) {
+          return false;
+        }
+        if (!hasBackend()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int opType_ = 0;
+      /**
+       * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+       */
+      public boolean hasOpType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpType getOpType() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.OpType result = org.oneflow.core.graph.boxing.CollectiveBoxing.OpType.valueOf(opType_);
+        return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpType.kOpTypeInvalid : result;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+       */
+      public Builder setOpType(org.oneflow.core.graph.boxing.CollectiveBoxing.OpType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        opType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpType op_type = 2;</code>
+       */
+      public Builder clearOpType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        opType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int reduceMethod_ = 0;
+      /**
+       * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+       */
+      public boolean hasReduceMethod() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod getReduceMethod() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod result = org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod.valueOf(reduceMethod_);
+        return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod.kReduceMethodInvalid : result;
+      }
+      /**
+       * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+       */
+      public Builder setReduceMethod(org.oneflow.core.graph.boxing.CollectiveBoxing.ReduceMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        reduceMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.boxing.collective.ReduceMethod reduce_method = 3;</code>
+       */
+      public Builder clearReduceMethod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        reduceMethod_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long root_ ;
+      /**
+       * <code>optional int64 root = 4;</code>
+       */
+      public boolean hasRoot() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int64 root = 4;</code>
+       */
+      public long getRoot() {
+        return root_;
+      }
+      /**
+       * <code>optional int64 root = 4;</code>
+       */
+      public Builder setRoot(long value) {
+        bitField0_ |= 0x00000008;
+        root_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 root = 4;</code>
+       */
+      public Builder clearRoot() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        root_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int dataType_ = 0;
+      /**
+       * <code>required .oneflow.DataType data_type = 5;</code>
+       */
+      public boolean hasDataType() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 5;</code>
+       */
+      public org.oneflow.core.common.DataTypeOuterClass.DataType getDataType() {
+        org.oneflow.core.common.DataTypeOuterClass.DataType result = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(dataType_);
+        return result == null ? org.oneflow.core.common.DataTypeOuterClass.DataType.kInvalidDataType : result;
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 5;</code>
+       */
+      public Builder setDataType(org.oneflow.core.common.DataTypeOuterClass.DataType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        dataType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 5;</code>
+       */
+      public Builder clearDataType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dataType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.common.Shape.ShapeProto shape_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder> shapeBuilder_;
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public boolean hasShape() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProto getShape() {
+        if (shapeBuilder_ == null) {
+          return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+        } else {
+          return shapeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public Builder setShape(org.oneflow.core.common.Shape.ShapeProto value) {
+        if (shapeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shape_ = value;
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public Builder setShape(
+          org.oneflow.core.common.Shape.ShapeProto.Builder builderForValue) {
+        if (shapeBuilder_ == null) {
+          shape_ = builderForValue.build();
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public Builder mergeShape(org.oneflow.core.common.Shape.ShapeProto value) {
+        if (shapeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              shape_ != null &&
+              shape_ != org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance()) {
+            shape_ =
+              org.oneflow.core.common.Shape.ShapeProto.newBuilder(shape_).mergeFrom(value).buildPartial();
+          } else {
+            shape_ = value;
+          }
+          onChanged();
+        } else {
+          shapeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public Builder clearShape() {
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+          onChanged();
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProto.Builder getShapeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getShapeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
+        if (shapeBuilder_ != null) {
+          return shapeBuilder_.getMessageOrBuilder();
+        } else {
+          return shape_ == null ?
+              org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+        }
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder> 
+          getShapeFieldBuilder() {
+        if (shapeBuilder_ == null) {
+          shapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder>(
+                  getShape(),
+                  getParentForChildren(),
+                  isClean());
+          shape_ = null;
+        }
+        return shapeBuilder_;
+      }
+
+      private long numRanks_ ;
+      /**
+       * <code>required int64 num_ranks = 7;</code>
+       */
+      public boolean hasNumRanks() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required int64 num_ranks = 7;</code>
+       */
+      public long getNumRanks() {
+        return numRanks_;
+      }
+      /**
+       * <code>required int64 num_ranks = 7;</code>
+       */
+      public Builder setNumRanks(long value) {
+        bitField0_ |= 0x00000040;
+        numRanks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 num_ranks = 7;</code>
+       */
+      public Builder clearNumRanks() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        numRanks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int backend_ = 0;
+      /**
+       * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+       */
+      public boolean hasBackend() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.Backend getBackend() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.Backend result = org.oneflow.core.graph.boxing.CollectiveBoxing.Backend.valueOf(backend_);
+        return result == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.Backend.kBackendInvalid : result;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+       */
+      public Builder setBackend(org.oneflow.core.graph.boxing.CollectiveBoxing.Backend value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        backend_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.Backend backend = 8;</code>
+       */
+      public Builder clearBackend() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        backend_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.OpDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.OpDesc)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OpDesc>
+        PARSER = new com.google.protobuf.AbstractParser<OpDesc>() {
+      public OpDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OpDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OpDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OpDesc> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequestDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.RequestDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    boolean hasOpDesc();
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc();
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder();
+
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    boolean hasDeviceSet();
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDeviceSet();
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder getDeviceSetOrBuilder();
+
+    /**
+     * <code>required int64 order = 3;</code>
+     */
+    boolean hasOrder();
+    /**
+     * <code>required int64 order = 3;</code>
+     */
+    long getOrder();
+
+    /**
+     * <code>required int64 dependency_depth = 4;</code>
+     */
+    boolean hasDependencyDepth();
+    /**
+     * <code>required int64 dependency_depth = 4;</code>
+     */
+    long getDependencyDepth();
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.RequestDesc}
+   */
+  public  static final class RequestDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.RequestDesc)
+      RequestDescOrBuilder {
+    // Use RequestDesc.newBuilder() to construct.
+    private RequestDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequestDesc() {
+      order_ = 0L;
+      dependencyDepth_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RequestDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = opDesc_.toBuilder();
+              }
+              opDesc_ = input.readMessage(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(opDesc_);
+                opDesc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = deviceSet_.toBuilder();
+              }
+              deviceSet_ = input.readMessage(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deviceSet_);
+                deviceSet_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              order_ = input.readInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              dependencyDepth_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestDesc_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int OP_DESC_FIELD_NUMBER = 1;
+    private org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc opDesc_;
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public boolean hasOpDesc() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc() {
+      return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder() {
+      return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+    }
+
+    public static final int DEVICE_SET_FIELD_NUMBER = 2;
+    private org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet deviceSet_;
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    public boolean hasDeviceSet() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDeviceSet() {
+      return deviceSet_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance() : deviceSet_;
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder getDeviceSetOrBuilder() {
+      return deviceSet_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance() : deviceSet_;
+    }
+
+    public static final int ORDER_FIELD_NUMBER = 3;
+    private long order_;
+    /**
+     * <code>required int64 order = 3;</code>
+     */
+    public boolean hasOrder() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int64 order = 3;</code>
+     */
+    public long getOrder() {
+      return order_;
+    }
+
+    public static final int DEPENDENCY_DEPTH_FIELD_NUMBER = 4;
+    private long dependencyDepth_;
+    /**
+     * <code>required int64 dependency_depth = 4;</code>
+     */
+    public boolean hasDependencyDepth() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int64 dependency_depth = 4;</code>
+     */
+    public long getDependencyDepth() {
+      return dependencyDepth_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasOpDesc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDeviceSet()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOrder()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDependencyDepth()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getOpDesc().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getDeviceSet().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getOpDesc());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getDeviceSet());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, order_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(4, dependencyDepth_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOpDesc());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeviceSet());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, order_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, dependencyDepth_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc other = (org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc) obj;
+
+      boolean result = true;
+      result = result && (hasOpDesc() == other.hasOpDesc());
+      if (hasOpDesc()) {
+        result = result && getOpDesc()
+            .equals(other.getOpDesc());
+      }
+      result = result && (hasDeviceSet() == other.hasDeviceSet());
+      if (hasDeviceSet()) {
+        result = result && getDeviceSet()
+            .equals(other.getDeviceSet());
+      }
+      result = result && (hasOrder() == other.hasOrder());
+      if (hasOrder()) {
+        result = result && (getOrder()
+            == other.getOrder());
+      }
+      result = result && (hasDependencyDepth() == other.hasDependencyDepth());
+      if (hasDependencyDepth()) {
+        result = result && (getDependencyDepth()
+            == other.getDependencyDepth());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasOpDesc()) {
+        hash = (37 * hash) + OP_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + getOpDesc().hashCode();
+      }
+      if (hasDeviceSet()) {
+        hash = (37 * hash) + DEVICE_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getDeviceSet().hashCode();
+      }
+      if (hasOrder()) {
+        hash = (37 * hash) + ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getOrder());
+      }
+      if (hasDependencyDepth()) {
+        hash = (37 * hash) + DEPENDENCY_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDependencyDepth());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.RequestDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.RequestDesc)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestDesc_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOpDescFieldBuilder();
+          getDeviceSetFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (opDescBuilder_ == null) {
+          opDesc_ = null;
+        } else {
+          opDescBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (deviceSetBuilder_ == null) {
+          deviceSet_ = null;
+        } else {
+          deviceSetBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        order_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dependencyDepth_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestDesc_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc result = new org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (opDescBuilder_ == null) {
+          result.opDesc_ = opDesc_;
+        } else {
+          result.opDesc_ = opDescBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (deviceSetBuilder_ == null) {
+          result.deviceSet_ = deviceSet_;
+        } else {
+          result.deviceSet_ = deviceSetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.order_ = order_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.dependencyDepth_ = dependencyDepth_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.getDefaultInstance()) return this;
+        if (other.hasOpDesc()) {
+          mergeOpDesc(other.getOpDesc());
+        }
+        if (other.hasDeviceSet()) {
+          mergeDeviceSet(other.getDeviceSet());
+        }
+        if (other.hasOrder()) {
+          setOrder(other.getOrder());
+        }
+        if (other.hasDependencyDepth()) {
+          setDependencyDepth(other.getDependencyDepth());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasOpDesc()) {
+          return false;
+        }
+        if (!hasDeviceSet()) {
+          return false;
+        }
+        if (!hasOrder()) {
+          return false;
+        }
+        if (!hasDependencyDepth()) {
+          return false;
+        }
+        if (!getOpDesc().isInitialized()) {
+          return false;
+        }
+        if (!getDeviceSet().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc opDesc_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder> opDescBuilder_;
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public boolean hasOpDesc() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc() {
+        if (opDescBuilder_ == null) {
+          return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+        } else {
+          return opDescBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder setOpDesc(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc value) {
+        if (opDescBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opDesc_ = value;
+          onChanged();
+        } else {
+          opDescBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder setOpDesc(
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder builderForValue) {
+        if (opDescBuilder_ == null) {
+          opDesc_ = builderForValue.build();
+          onChanged();
+        } else {
+          opDescBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder mergeOpDesc(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc value) {
+        if (opDescBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              opDesc_ != null &&
+              opDesc_ != org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance()) {
+            opDesc_ =
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.newBuilder(opDesc_).mergeFrom(value).buildPartial();
+          } else {
+            opDesc_ = value;
+          }
+          onChanged();
+        } else {
+          opDescBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder clearOpDesc() {
+        if (opDescBuilder_ == null) {
+          opDesc_ = null;
+          onChanged();
+        } else {
+          opDescBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder getOpDescBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOpDescFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder() {
+        if (opDescBuilder_ != null) {
+          return opDescBuilder_.getMessageOrBuilder();
+        } else {
+          return opDesc_ == null ?
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder> 
+          getOpDescFieldBuilder() {
+        if (opDescBuilder_ == null) {
+          opDescBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder>(
+                  getOpDesc(),
+                  getParentForChildren(),
+                  isClean());
+          opDesc_ = null;
+        }
+        return opDescBuilder_;
+      }
+
+      private org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet deviceSet_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder> deviceSetBuilder_;
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public boolean hasDeviceSet() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet getDeviceSet() {
+        if (deviceSetBuilder_ == null) {
+          return deviceSet_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance() : deviceSet_;
+        } else {
+          return deviceSetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public Builder setDeviceSet(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet value) {
+        if (deviceSetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deviceSet_ = value;
+          onChanged();
+        } else {
+          deviceSetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public Builder setDeviceSet(
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder builderForValue) {
+        if (deviceSetBuilder_ == null) {
+          deviceSet_ = builderForValue.build();
+          onChanged();
+        } else {
+          deviceSetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public Builder mergeDeviceSet(org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet value) {
+        if (deviceSetBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              deviceSet_ != null &&
+              deviceSet_ != org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance()) {
+            deviceSet_ =
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.newBuilder(deviceSet_).mergeFrom(value).buildPartial();
+          } else {
+            deviceSet_ = value;
+          }
+          onChanged();
+        } else {
+          deviceSetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public Builder clearDeviceSet() {
+        if (deviceSetBuilder_ == null) {
+          deviceSet_ = null;
+          onChanged();
+        } else {
+          deviceSetBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder getDeviceSetBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDeviceSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder getDeviceSetOrBuilder() {
+        if (deviceSetBuilder_ != null) {
+          return deviceSetBuilder_.getMessageOrBuilder();
+        } else {
+          return deviceSet_ == null ?
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.getDefaultInstance() : deviceSet_;
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.DeviceSet device_set = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder> 
+          getDeviceSetFieldBuilder() {
+        if (deviceSetBuilder_ == null) {
+          deviceSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSet.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.DeviceSetOrBuilder>(
+                  getDeviceSet(),
+                  getParentForChildren(),
+                  isClean());
+          deviceSet_ = null;
+        }
+        return deviceSetBuilder_;
+      }
+
+      private long order_ ;
+      /**
+       * <code>required int64 order = 3;</code>
+       */
+      public boolean hasOrder() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 order = 3;</code>
+       */
+      public long getOrder() {
+        return order_;
+      }
+      /**
+       * <code>required int64 order = 3;</code>
+       */
+      public Builder setOrder(long value) {
+        bitField0_ |= 0x00000004;
+        order_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 order = 3;</code>
+       */
+      public Builder clearOrder() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        order_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dependencyDepth_ ;
+      /**
+       * <code>required int64 dependency_depth = 4;</code>
+       */
+      public boolean hasDependencyDepth() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int64 dependency_depth = 4;</code>
+       */
+      public long getDependencyDepth() {
+        return dependencyDepth_;
+      }
+      /**
+       * <code>required int64 dependency_depth = 4;</code>
+       */
+      public Builder setDependencyDepth(long value) {
+        bitField0_ |= 0x00000008;
+        dependencyDepth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 dependency_depth = 4;</code>
+       */
+      public Builder clearDependencyDepth() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dependencyDepth_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.RequestDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.RequestDesc)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RequestDesc>
+        PARSER = new com.google.protobuf.AbstractParser<RequestDesc>() {
+      public RequestDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RequestDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequestDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequestDesc> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequestSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.RequestSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> 
+        getRequestList();
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getRequest(int index);
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    int getRequestCount();
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder> 
+        getRequestOrBuilderList();
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder getRequestOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.RequestSet}
+   */
+  public  static final class RequestSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.RequestSet)
+      RequestSetOrBuilder {
+    // Use RequestSet.newBuilder() to construct.
+    private RequestSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequestSet() {
+      request_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RequestSet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                request_ = new java.util.ArrayList<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              request_.add(
+                  input.readMessage(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          request_ = java.util.Collections.unmodifiableList(request_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestSet_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.Builder.class);
+    }
+
+    public static final int REQUEST_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> request_;
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> getRequestList() {
+      return request_;
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder> 
+        getRequestOrBuilderList() {
+      return request_;
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    public int getRequestCount() {
+      return request_.size();
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getRequest(int index) {
+      return request_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder getRequestOrBuilder(
+        int index) {
+      return request_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getRequestCount(); i++) {
+        if (!getRequest(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < request_.size(); i++) {
+        output.writeMessage(1, request_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < request_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, request_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet other = (org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet) obj;
+
+      boolean result = true;
+      result = result && getRequestList()
+          .equals(other.getRequestList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getRequestCount() > 0) {
+        hash = (37 * hash) + REQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.RequestSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.RequestSet)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestSet_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (requestBuilder_ == null) {
+          request_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          requestBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RequestSet_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet result = new org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet(this);
+        int from_bitField0_ = bitField0_;
+        if (requestBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            request_ = java.util.Collections.unmodifiableList(request_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.request_ = request_;
+        } else {
+          result.request_ = requestBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet.getDefaultInstance()) return this;
+        if (requestBuilder_ == null) {
+          if (!other.request_.isEmpty()) {
+            if (request_.isEmpty()) {
+              request_ = other.request_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequestIsMutable();
+              request_.addAll(other.request_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.request_.isEmpty()) {
+            if (requestBuilder_.isEmpty()) {
+              requestBuilder_.dispose();
+              requestBuilder_ = null;
+              request_ = other.request_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requestBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestFieldBuilder() : null;
+            } else {
+              requestBuilder_.addAllMessages(other.request_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getRequestCount(); i++) {
+          if (!getRequest(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> request_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          request_ = new java.util.ArrayList<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc>(request_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder> requestBuilder_;
+
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> getRequestList() {
+        if (requestBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(request_);
+        } else {
+          return requestBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public int getRequestCount() {
+        if (requestBuilder_ == null) {
+          return request_.size();
+        } else {
+          return requestBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc getRequest(int index) {
+        if (requestBuilder_ == null) {
+          return request_.get(index);
+        } else {
+          return requestBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder setRequest(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestIsMutable();
+          request_.set(index, value);
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder setRequest(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          ensureRequestIsMutable();
+          request_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder addRequest(org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestIsMutable();
+          request_.add(value);
+          onChanged();
+        } else {
+          requestBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder addRequest(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestIsMutable();
+          request_.add(index, value);
+          onChanged();
+        } else {
+          requestBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder addRequest(
+          org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          ensureRequestIsMutable();
+          request_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder addRequest(
+          int index, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          ensureRequestIsMutable();
+          request_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder addAllRequest(
+          java.lang.Iterable<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc> values) {
+        if (requestBuilder_ == null) {
+          ensureRequestIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, request_);
+          onChanged();
+        } else {
+          requestBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder clearRequest() {
+        if (requestBuilder_ == null) {
+          request_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public Builder removeRequest(int index) {
+        if (requestBuilder_ == null) {
+          ensureRequestIsMutable();
+          request_.remove(index);
+          onChanged();
+        } else {
+          requestBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder getRequestBuilder(
+          int index) {
+        return getRequestFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder getRequestOrBuilder(
+          int index) {
+        if (requestBuilder_ == null) {
+          return request_.get(index);  } else {
+          return requestBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder> 
+           getRequestOrBuilderList() {
+        if (requestBuilder_ != null) {
+          return requestBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(request_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder addRequestBuilder() {
+        return getRequestFieldBuilder().addBuilder(
+            org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder addRequestBuilder(
+          int index) {
+        return getRequestFieldBuilder().addBuilder(
+            index, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.boxing.collective.RequestDesc request = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder> 
+           getRequestBuilderList() {
+        return getRequestFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder> 
+          getRequestFieldBuilder() {
+        if (requestBuilder_ == null) {
+          requestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.RequestDescOrBuilder>(
+                  request_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          request_ = null;
+        }
+        return requestBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.RequestSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.RequestSet)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RequestSet>
+        PARSER = new com.google.protobuf.AbstractParser<RequestSet>() {
+      public RequestSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RequestSet(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequestSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequestSet> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.RequestSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RankDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.boxing.collective.RankDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    boolean hasOpDesc();
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc();
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder();
+
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    boolean hasRank();
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    long getRank();
+  }
+  /**
+   * Protobuf type {@code oneflow.boxing.collective.RankDesc}
+   */
+  public  static final class RankDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.boxing.collective.RankDesc)
+      RankDescOrBuilder {
+    // Use RankDesc.newBuilder() to construct.
+    private RankDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RankDesc() {
+      rank_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RankDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = opDesc_.toBuilder();
+              }
+              opDesc_ = input.readMessage(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(opDesc_);
+                opDesc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              rank_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RankDesc_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RankDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int OP_DESC_FIELD_NUMBER = 1;
+    private org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc opDesc_;
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public boolean hasOpDesc() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc() {
+      return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+    }
+    /**
+     * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+     */
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder() {
+      return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+    }
+
+    public static final int RANK_FIELD_NUMBER = 2;
+    private long rank_;
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public boolean hasRank() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public long getRank() {
+      return rank_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasOpDesc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRank()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getOpDesc().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getOpDesc());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, rank_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOpDesc());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rank_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc other = (org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc) obj;
+
+      boolean result = true;
+      result = result && (hasOpDesc() == other.hasOpDesc());
+      if (hasOpDesc()) {
+        result = result && getOpDesc()
+            .equals(other.getOpDesc());
+      }
+      result = result && (hasRank() == other.hasRank());
+      if (hasRank()) {
+        result = result && (getRank()
+            == other.getRank());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasOpDesc()) {
+        hash = (37 * hash) + OP_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + getOpDesc().hashCode();
+      }
+      if (hasRank()) {
+        hash = (37 * hash) + RANK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRank());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.boxing.collective.RankDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.boxing.collective.RankDesc)
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RankDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RankDesc_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RankDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.class, org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOpDescFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (opDescBuilder_ == null) {
+          opDesc_ = null;
+        } else {
+          opDescBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rank_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.internal_static_oneflow_boxing_collective_RankDesc_descriptor;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc getDefaultInstanceForType() {
+        return org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.getDefaultInstance();
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc build() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc buildPartial() {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc result = new org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (opDescBuilder_ == null) {
+          result.opDesc_ = opDesc_;
+        } else {
+          result.opDesc_ = opDescBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.rank_ = rank_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc) {
+          return mergeFrom((org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc other) {
+        if (other == org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc.getDefaultInstance()) return this;
+        if (other.hasOpDesc()) {
+          mergeOpDesc(other.getOpDesc());
+        }
+        if (other.hasRank()) {
+          setRank(other.getRank());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasOpDesc()) {
+          return false;
+        }
+        if (!hasRank()) {
+          return false;
+        }
+        if (!getOpDesc().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc opDesc_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder> opDescBuilder_;
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public boolean hasOpDesc() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc getOpDesc() {
+        if (opDescBuilder_ == null) {
+          return opDesc_ == null ? org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+        } else {
+          return opDescBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder setOpDesc(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc value) {
+        if (opDescBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opDesc_ = value;
+          onChanged();
+        } else {
+          opDescBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder setOpDesc(
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder builderForValue) {
+        if (opDescBuilder_ == null) {
+          opDesc_ = builderForValue.build();
+          onChanged();
+        } else {
+          opDescBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder mergeOpDesc(org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc value) {
+        if (opDescBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              opDesc_ != null &&
+              opDesc_ != org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance()) {
+            opDesc_ =
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.newBuilder(opDesc_).mergeFrom(value).buildPartial();
+          } else {
+            opDesc_ = value;
+          }
+          onChanged();
+        } else {
+          opDescBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public Builder clearOpDesc() {
+        if (opDescBuilder_ == null) {
+          opDesc_ = null;
+          onChanged();
+        } else {
+          opDescBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder getOpDescBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOpDescFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      public org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder getOpDescOrBuilder() {
+        if (opDescBuilder_ != null) {
+          return opDescBuilder_.getMessageOrBuilder();
+        } else {
+          return opDesc_ == null ?
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.getDefaultInstance() : opDesc_;
+        }
+      }
+      /**
+       * <code>required .oneflow.boxing.collective.OpDesc op_desc = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder> 
+          getOpDescFieldBuilder() {
+        if (opDescBuilder_ == null) {
+          opDescBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDesc.Builder, org.oneflow.core.graph.boxing.CollectiveBoxing.OpDescOrBuilder>(
+                  getOpDesc(),
+                  getParentForChildren(),
+                  isClean());
+          opDesc_ = null;
+        }
+        return opDescBuilder_;
+      }
+
+      private long rank_ ;
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public boolean hasRank() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public long getRank() {
+        return rank_;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder setRank(long value) {
+        bitField0_ |= 0x00000002;
+        rank_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder clearRank() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rank_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.boxing.collective.RankDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.boxing.collective.RankDesc)
+    private static final org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc();
+    }
+
+    public static org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RankDesc>
+        PARSER = new com.google.protobuf.AbstractParser<RankDesc>() {
+      public RankDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RankDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RankDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RankDesc> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.graph.boxing.CollectiveBoxing.RankDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_DeviceDesc_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_DeviceDesc_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_DeviceSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_DeviceSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_OpDesc_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_OpDesc_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_RequestDesc_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_RequestDesc_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_RequestSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_RequestSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_boxing_collective_RankDesc_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_boxing_collective_RankDesc_fieldAccessorTable;
 
@@ -84,7 +5611,7 @@ public final class CollectiveBoxing {
       "All2All\020\006*>\n\014ReduceMethod\022\030\n\024kReduceMeth" +
       "odInvalid\020\000\022\024\n\020kReduceMethodSum\020\001*0\n\007Bac",
       "kend\022\023\n\017kBackendInvalid\020\000\022\020\n\014kBackendNCC" +
-      "L\020\001B!\n\035org.oneflow.core.graph.boxingP\001"
+      "L\020\001B\037\n\035org.oneflow.core.graph.boxing"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

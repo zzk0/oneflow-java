@@ -14,14 +14,1294 @@ public final class AvailableMemoryDesc {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AvailableMemDescOfMachineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.AvailableMemDescOfMachine)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    java.util.List<java.lang.Long> getZoneSizeList();
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    int getZoneSizeCount();
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    long getZoneSize(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.AvailableMemDescOfMachine}
+   */
+  public  static final class AvailableMemDescOfMachine extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.AvailableMemDescOfMachine)
+      AvailableMemDescOfMachineOrBuilder {
+    // Use AvailableMemDescOfMachine.newBuilder() to construct.
+    private AvailableMemDescOfMachine(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AvailableMemDescOfMachine() {
+      zoneSize_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AvailableMemDescOfMachine(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                zoneSize_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneSize_.add(input.readUInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                zoneSize_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                zoneSize_.add(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          zoneSize_ = java.util.Collections.unmodifiableList(zoneSize_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDescOfMachine_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDescOfMachine_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.class, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder.class);
+    }
+
+    public static final int ZONE_SIZE_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> zoneSize_;
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getZoneSizeList() {
+      return zoneSize_;
+    }
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    public int getZoneSizeCount() {
+      return zoneSize_.size();
+    }
+    /**
+     * <code>repeated uint64 zone_size = 1;</code>
+     */
+    public long getZoneSize(int index) {
+      return zoneSize_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < zoneSize_.size(); i++) {
+        output.writeUInt64(1, zoneSize_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneSize_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(zoneSize_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneSizeList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine other = (org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine) obj;
+
+      boolean result = true;
+      result = result && getZoneSizeList()
+          .equals(other.getZoneSizeList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getZoneSizeCount() > 0) {
+        hash = (37 * hash) + ZONE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneSizeList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.AvailableMemDescOfMachine}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.AvailableMemDescOfMachine)
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDescOfMachine_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDescOfMachine_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.class, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        zoneSize_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDescOfMachine_descriptor;
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getDefaultInstanceForType() {
+        return org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine build() {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine buildPartial() {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine result = new org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          zoneSize_ = java.util.Collections.unmodifiableList(zoneSize_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneSize_ = zoneSize_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine) {
+          return mergeFrom((org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine other) {
+        if (other == org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.getDefaultInstance()) return this;
+        if (!other.zoneSize_.isEmpty()) {
+          if (zoneSize_.isEmpty()) {
+            zoneSize_ = other.zoneSize_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneSizeIsMutable();
+            zoneSize_.addAll(other.zoneSize_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> zoneSize_ = java.util.Collections.emptyList();
+      private void ensureZoneSizeIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          zoneSize_ = new java.util.ArrayList<java.lang.Long>(zoneSize_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getZoneSizeList() {
+        return java.util.Collections.unmodifiableList(zoneSize_);
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public int getZoneSizeCount() {
+        return zoneSize_.size();
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public long getZoneSize(int index) {
+        return zoneSize_.get(index);
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public Builder setZoneSize(
+          int index, long value) {
+        ensureZoneSizeIsMutable();
+        zoneSize_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public Builder addZoneSize(long value) {
+        ensureZoneSizeIsMutable();
+        zoneSize_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public Builder addAllZoneSize(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureZoneSizeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneSize_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 zone_size = 1;</code>
+       */
+      public Builder clearZoneSize() {
+        zoneSize_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.AvailableMemDescOfMachine)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.AvailableMemDescOfMachine)
+    private static final org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine();
+    }
+
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AvailableMemDescOfMachine>
+        PARSER = new com.google.protobuf.AbstractParser<AvailableMemDescOfMachine>() {
+      public AvailableMemDescOfMachine parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AvailableMemDescOfMachine(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AvailableMemDescOfMachine> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AvailableMemDescOfMachine> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AvailableMemDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.AvailableMemDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> 
+        getMachineAmdList();
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getMachineAmd(int index);
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    int getMachineAmdCount();
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder> 
+        getMachineAmdOrBuilderList();
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder getMachineAmdOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.AvailableMemDesc}
+   */
+  public  static final class AvailableMemDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.AvailableMemDesc)
+      AvailableMemDescOrBuilder {
+    // Use AvailableMemDesc.newBuilder() to construct.
+    private AvailableMemDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AvailableMemDesc() {
+      machineAmd_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AvailableMemDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                machineAmd_ = new java.util.ArrayList<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              machineAmd_.add(
+                  input.readMessage(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          machineAmd_ = java.util.Collections.unmodifiableList(machineAmd_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDesc_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.class, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.Builder.class);
+    }
+
+    public static final int MACHINE_AMD_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> machineAmd_;
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> getMachineAmdList() {
+      return machineAmd_;
+    }
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder> 
+        getMachineAmdOrBuilderList() {
+      return machineAmd_;
+    }
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    public int getMachineAmdCount() {
+      return machineAmd_.size();
+    }
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getMachineAmd(int index) {
+      return machineAmd_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+     */
+    public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder getMachineAmdOrBuilder(
+        int index) {
+      return machineAmd_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < machineAmd_.size(); i++) {
+        output.writeMessage(1, machineAmd_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < machineAmd_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, machineAmd_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc other = (org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc) obj;
+
+      boolean result = true;
+      result = result && getMachineAmdList()
+          .equals(other.getMachineAmdList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getMachineAmdCount() > 0) {
+        hash = (37 * hash) + MACHINE_AMD_FIELD_NUMBER;
+        hash = (53 * hash) + getMachineAmdList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.AvailableMemDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.AvailableMemDesc)
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDesc_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.class, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMachineAmdFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (machineAmdBuilder_ == null) {
+          machineAmd_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          machineAmdBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.AvailableMemoryDesc.internal_static_oneflow_AvailableMemDesc_descriptor;
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc getDefaultInstanceForType() {
+        return org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc build() {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc buildPartial() {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc result = new org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc(this);
+        int from_bitField0_ = bitField0_;
+        if (machineAmdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            machineAmd_ = java.util.Collections.unmodifiableList(machineAmd_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.machineAmd_ = machineAmd_;
+        } else {
+          result.machineAmd_ = machineAmdBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc) {
+          return mergeFrom((org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc other) {
+        if (other == org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc.getDefaultInstance()) return this;
+        if (machineAmdBuilder_ == null) {
+          if (!other.machineAmd_.isEmpty()) {
+            if (machineAmd_.isEmpty()) {
+              machineAmd_ = other.machineAmd_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMachineAmdIsMutable();
+              machineAmd_.addAll(other.machineAmd_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.machineAmd_.isEmpty()) {
+            if (machineAmdBuilder_.isEmpty()) {
+              machineAmdBuilder_.dispose();
+              machineAmdBuilder_ = null;
+              machineAmd_ = other.machineAmd_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              machineAmdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMachineAmdFieldBuilder() : null;
+            } else {
+              machineAmdBuilder_.addAllMessages(other.machineAmd_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> machineAmd_ =
+        java.util.Collections.emptyList();
+      private void ensureMachineAmdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          machineAmd_ = new java.util.ArrayList<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine>(machineAmd_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder> machineAmdBuilder_;
+
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> getMachineAmdList() {
+        if (machineAmdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(machineAmd_);
+        } else {
+          return machineAmdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public int getMachineAmdCount() {
+        if (machineAmdBuilder_ == null) {
+          return machineAmd_.size();
+        } else {
+          return machineAmdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine getMachineAmd(int index) {
+        if (machineAmdBuilder_ == null) {
+          return machineAmd_.get(index);
+        } else {
+          return machineAmdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder setMachineAmd(
+          int index, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine value) {
+        if (machineAmdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineAmdIsMutable();
+          machineAmd_.set(index, value);
+          onChanged();
+        } else {
+          machineAmdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder setMachineAmd(
+          int index, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder builderForValue) {
+        if (machineAmdBuilder_ == null) {
+          ensureMachineAmdIsMutable();
+          machineAmd_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineAmdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder addMachineAmd(org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine value) {
+        if (machineAmdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineAmdIsMutable();
+          machineAmd_.add(value);
+          onChanged();
+        } else {
+          machineAmdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder addMachineAmd(
+          int index, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine value) {
+        if (machineAmdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineAmdIsMutable();
+          machineAmd_.add(index, value);
+          onChanged();
+        } else {
+          machineAmdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder addMachineAmd(
+          org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder builderForValue) {
+        if (machineAmdBuilder_ == null) {
+          ensureMachineAmdIsMutable();
+          machineAmd_.add(builderForValue.build());
+          onChanged();
+        } else {
+          machineAmdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder addMachineAmd(
+          int index, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder builderForValue) {
+        if (machineAmdBuilder_ == null) {
+          ensureMachineAmdIsMutable();
+          machineAmd_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineAmdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder addAllMachineAmd(
+          java.lang.Iterable<? extends org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine> values) {
+        if (machineAmdBuilder_ == null) {
+          ensureMachineAmdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, machineAmd_);
+          onChanged();
+        } else {
+          machineAmdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder clearMachineAmd() {
+        if (machineAmdBuilder_ == null) {
+          machineAmd_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          machineAmdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public Builder removeMachineAmd(int index) {
+        if (machineAmdBuilder_ == null) {
+          ensureMachineAmdIsMutable();
+          machineAmd_.remove(index);
+          onChanged();
+        } else {
+          machineAmdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder getMachineAmdBuilder(
+          int index) {
+        return getMachineAmdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder getMachineAmdOrBuilder(
+          int index) {
+        if (machineAmdBuilder_ == null) {
+          return machineAmd_.get(index);  } else {
+          return machineAmdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder> 
+           getMachineAmdOrBuilderList() {
+        if (machineAmdBuilder_ != null) {
+          return machineAmdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(machineAmd_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder addMachineAmdBuilder() {
+        return getMachineAmdFieldBuilder().addBuilder(
+            org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder addMachineAmdBuilder(
+          int index) {
+        return getMachineAmdFieldBuilder().addBuilder(
+            index, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.AvailableMemDescOfMachine machine_amd = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder> 
+           getMachineAmdBuilderList() {
+        return getMachineAmdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder> 
+          getMachineAmdFieldBuilder() {
+        if (machineAmdBuilder_ == null) {
+          machineAmdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachine.Builder, org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDescOfMachineOrBuilder>(
+                  machineAmd_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          machineAmd_ = null;
+        }
+        return machineAmdBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.AvailableMemDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.AvailableMemDesc)
+    private static final org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc();
+    }
+
+    public static org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AvailableMemDesc>
+        PARSER = new com.google.protobuf.AbstractParser<AvailableMemDesc>() {
+      public AvailableMemDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AvailableMemDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AvailableMemDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AvailableMemDesc> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.AvailableMemoryDesc.AvailableMemDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_AvailableMemDescOfMachine_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_AvailableMemDescOfMachine_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_AvailableMemDesc_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_AvailableMemDesc_fieldAccessorTable;
 
@@ -37,8 +1317,8 @@ public final class AvailableMemoryDesc {
       ".proto\022\007oneflow\".\n\031AvailableMemDescOfMac" +
       "hine\022\021\n\tzone_size\030\001 \003(\004\"K\n\020AvailableMemD" +
       "esc\0227\n\013machine_amd\030\001 \003(\0132\".oneflow.Avail" +
-      "ableMemDescOfMachineB\030\n\024org.oneflow.core" +
-      ".jobP\001"
+      "ableMemDescOfMachineB\026\n\024org.oneflow.core" +
+      ".job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

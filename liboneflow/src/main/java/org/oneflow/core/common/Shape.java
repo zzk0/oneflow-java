@@ -14,24 +14,2152 @@ public final class Shape {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ShapeProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ShapeProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    java.util.List<java.lang.Long> getDimList();
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    int getDimCount();
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    long getDim(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.ShapeProto}
+   */
+  public  static final class ShapeProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ShapeProto)
+      ShapeProtoOrBuilder {
+    // Use ShapeProto.newBuilder() to construct.
+    private ShapeProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShapeProto() {
+      dim_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShapeProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                dim_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dim_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                dim_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                dim_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          dim_ = java.util.Collections.unmodifiableList(dim_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.common.Shape.ShapeProto.class, org.oneflow.core.common.Shape.ShapeProto.Builder.class);
+    }
+
+    public static final int DIM_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> dim_;
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getDimList() {
+      return dim_;
+    }
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    public int getDimCount() {
+      return dim_.size();
+    }
+    /**
+     * <code>repeated int64 dim = 1;</code>
+     */
+    public long getDim(int index) {
+      return dim_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < dim_.size(); i++) {
+        output.writeInt64(1, dim_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dim_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(dim_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getDimList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.common.Shape.ShapeProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.common.Shape.ShapeProto other = (org.oneflow.core.common.Shape.ShapeProto) obj;
+
+      boolean result = true;
+      result = result && getDimList()
+          .equals(other.getDimList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getDimCount() > 0) {
+        hash = (37 * hash) + DIM_FIELD_NUMBER;
+        hash = (53 * hash) + getDimList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.common.Shape.ShapeProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ShapeProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ShapeProto)
+        org.oneflow.core.common.Shape.ShapeProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.common.Shape.ShapeProto.class, org.oneflow.core.common.Shape.ShapeProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.common.Shape.ShapeProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        dim_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeProto_descriptor;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeProto getDefaultInstanceForType() {
+        return org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.common.Shape.ShapeProto build() {
+        org.oneflow.core.common.Shape.ShapeProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeProto buildPartial() {
+        org.oneflow.core.common.Shape.ShapeProto result = new org.oneflow.core.common.Shape.ShapeProto(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          dim_ = java.util.Collections.unmodifiableList(dim_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.dim_ = dim_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.common.Shape.ShapeProto) {
+          return mergeFrom((org.oneflow.core.common.Shape.ShapeProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.common.Shape.ShapeProto other) {
+        if (other == org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance()) return this;
+        if (!other.dim_.isEmpty()) {
+          if (dim_.isEmpty()) {
+            dim_ = other.dim_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDimIsMutable();
+            dim_.addAll(other.dim_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.common.Shape.ShapeProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.common.Shape.ShapeProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> dim_ = java.util.Collections.emptyList();
+      private void ensureDimIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          dim_ = new java.util.ArrayList<java.lang.Long>(dim_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getDimList() {
+        return java.util.Collections.unmodifiableList(dim_);
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public int getDimCount() {
+        return dim_.size();
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public long getDim(int index) {
+        return dim_.get(index);
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public Builder setDim(
+          int index, long value) {
+        ensureDimIsMutable();
+        dim_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public Builder addDim(long value) {
+        ensureDimIsMutable();
+        dim_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public Builder addAllDim(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureDimIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dim_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 dim = 1;</code>
+       */
+      public Builder clearDim() {
+        dim_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ShapeProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ShapeProto)
+    private static final org.oneflow.core.common.Shape.ShapeProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.common.Shape.ShapeProto();
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ShapeProto>
+        PARSER = new com.google.protobuf.AbstractParser<ShapeProto>() {
+      public ShapeProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ShapeProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShapeProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShapeProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.common.Shape.ShapeProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShapeSignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ShapeSignature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+    int getField2ShapeProtoCount();
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+    boolean containsField2ShapeProto(
+        java.lang.String key);
+    /**
+     * Use {@link #getField2ShapeProtoMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+    getField2ShapeProto();
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+    getField2ShapeProtoMap();
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrDefault(
+        java.lang.String key,
+        org.oneflow.core.common.Shape.ShapeProto defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code oneflow.ShapeSignature}
+   */
+  public  static final class ShapeSignature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ShapeSignature)
+      ShapeSignatureOrBuilder {
+    // Use ShapeSignature.newBuilder() to construct.
+    private ShapeSignature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShapeSignature() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShapeSignature(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                field2ShapeProto_ = com.google.protobuf.MapField.newMapField(
+                    Field2ShapeProtoDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+              field2ShapeProto = input.readMessage(
+                  Field2ShapeProtoDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              field2ShapeProto_.getMutableMap().put(field2ShapeProto.getKey(), field2ShapeProto.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetField2ShapeProto();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.common.Shape.ShapeSignature.class, org.oneflow.core.common.Shape.ShapeSignature.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIELD2SHAPE_PROTO_FIELD_NUMBER = 2;
+    private static final class Field2ShapeProtoDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.common.Shape.ShapeProto> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>newDefaultInstance(
+                  org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_Field2shapeProtoEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.common.Shape.ShapeProto> field2ShapeProto_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+    internalGetField2ShapeProto() {
+      if (field2ShapeProto_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Field2ShapeProtoDefaultEntryHolder.defaultEntry);
+      }
+      return field2ShapeProto_;
+    }
+
+    public int getField2ShapeProtoCount() {
+      return internalGetField2ShapeProto().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    public boolean containsField2ShapeProto(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetField2ShapeProto().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getField2ShapeProtoMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> getField2ShapeProto() {
+      return getField2ShapeProtoMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> getField2ShapeProtoMap() {
+      return internalGetField2ShapeProto().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    public org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrDefault(
+        java.lang.String key,
+        org.oneflow.core.common.Shape.ShapeProto defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> map =
+          internalGetField2ShapeProto().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+     */
+
+    public org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> map =
+          internalGetField2ShapeProto().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> entry
+           : internalGetField2ShapeProto().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+        field2ShapeProto = Field2ShapeProtoDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(2, field2ShapeProto);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> entry
+           : internalGetField2ShapeProto().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+        field2ShapeProto = Field2ShapeProtoDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, field2ShapeProto);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.common.Shape.ShapeSignature)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.common.Shape.ShapeSignature other = (org.oneflow.core.common.Shape.ShapeSignature) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && internalGetField2ShapeProto().equals(
+          other.internalGetField2ShapeProto());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (!internalGetField2ShapeProto().getMap().isEmpty()) {
+        hash = (37 * hash) + FIELD2SHAPE_PROTO_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetField2ShapeProto().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.common.Shape.ShapeSignature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ShapeSignature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ShapeSignature)
+        org.oneflow.core.common.Shape.ShapeSignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetField2ShapeProto();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableField2ShapeProto();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.common.Shape.ShapeSignature.class, org.oneflow.core.common.Shape.ShapeSignature.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.common.Shape.ShapeSignature.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableField2ShapeProto().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignature_descriptor;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignature getDefaultInstanceForType() {
+        return org.oneflow.core.common.Shape.ShapeSignature.getDefaultInstance();
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignature build() {
+        org.oneflow.core.common.Shape.ShapeSignature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignature buildPartial() {
+        org.oneflow.core.common.Shape.ShapeSignature result = new org.oneflow.core.common.Shape.ShapeSignature(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        result.field2ShapeProto_ = internalGetField2ShapeProto();
+        result.field2ShapeProto_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.common.Shape.ShapeSignature) {
+          return mergeFrom((org.oneflow.core.common.Shape.ShapeSignature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.common.Shape.ShapeSignature other) {
+        if (other == org.oneflow.core.common.Shape.ShapeSignature.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        internalGetMutableField2ShapeProto().mergeFrom(
+            other.internalGetField2ShapeProto());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.common.Shape.ShapeSignature parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.common.Shape.ShapeSignature) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.common.Shape.ShapeProto> field2ShapeProto_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+      internalGetField2ShapeProto() {
+        if (field2ShapeProto_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Field2ShapeProtoDefaultEntryHolder.defaultEntry);
+        }
+        return field2ShapeProto_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+      internalGetMutableField2ShapeProto() {
+        onChanged();;
+        if (field2ShapeProto_ == null) {
+          field2ShapeProto_ = com.google.protobuf.MapField.newMapField(
+              Field2ShapeProtoDefaultEntryHolder.defaultEntry);
+        }
+        if (!field2ShapeProto_.isMutable()) {
+          field2ShapeProto_ = field2ShapeProto_.copy();
+        }
+        return field2ShapeProto_;
+      }
+
+      public int getField2ShapeProtoCount() {
+        return internalGetField2ShapeProto().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public boolean containsField2ShapeProto(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetField2ShapeProto().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getField2ShapeProtoMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> getField2ShapeProto() {
+        return getField2ShapeProtoMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> getField2ShapeProtoMap() {
+        return internalGetField2ShapeProto().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrDefault(
+          java.lang.String key,
+          org.oneflow.core.common.Shape.ShapeProto defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> map =
+            internalGetField2ShapeProto().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public org.oneflow.core.common.Shape.ShapeProto getField2ShapeProtoOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> map =
+            internalGetField2ShapeProto().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearField2ShapeProto() {
+        getMutableField2ShapeProto().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public Builder removeField2ShapeProto(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableField2ShapeProto().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto>
+      getMutableField2ShapeProto() {
+        return internalGetMutableField2ShapeProto().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+      public Builder putField2ShapeProto(
+          java.lang.String key,
+          org.oneflow.core.common.Shape.ShapeProto value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableField2ShapeProto().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ShapeProto&gt; field2shape_proto = 2;</code>
+       */
+
+      public Builder putAllField2ShapeProto(
+          java.util.Map<java.lang.String, org.oneflow.core.common.Shape.ShapeProto> values) {
+        getMutableField2ShapeProto().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ShapeSignature)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ShapeSignature)
+    private static final org.oneflow.core.common.Shape.ShapeSignature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.common.Shape.ShapeSignature();
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeSignature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ShapeSignature>
+        PARSER = new com.google.protobuf.AbstractParser<ShapeSignature>() {
+      public ShapeSignature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ShapeSignature(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShapeSignature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShapeSignature> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.common.Shape.ShapeSignature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShapeSignatureListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ShapeSignatureList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    java.util.List<org.oneflow.core.common.Shape.ShapeSignature> 
+        getShapeSignatureList();
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeSignature getShapeSignature(int index);
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    int getShapeSignatureCount();
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.common.Shape.ShapeSignatureOrBuilder> 
+        getShapeSignatureOrBuilderList();
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeSignatureOrBuilder getShapeSignatureOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.ShapeSignatureList}
+   */
+  public  static final class ShapeSignatureList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ShapeSignatureList)
+      ShapeSignatureListOrBuilder {
+    // Use ShapeSignatureList.newBuilder() to construct.
+    private ShapeSignatureList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShapeSignatureList() {
+      shapeSignature_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShapeSignatureList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                shapeSignature_ = new java.util.ArrayList<org.oneflow.core.common.Shape.ShapeSignature>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              shapeSignature_.add(
+                  input.readMessage(org.oneflow.core.common.Shape.ShapeSignature.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          shapeSignature_ = java.util.Collections.unmodifiableList(shapeSignature_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignatureList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignatureList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.common.Shape.ShapeSignatureList.class, org.oneflow.core.common.Shape.ShapeSignatureList.Builder.class);
+    }
+
+    public static final int SHAPE_SIGNATURE_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.common.Shape.ShapeSignature> shapeSignature_;
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.common.Shape.ShapeSignature> getShapeSignatureList() {
+      return shapeSignature_;
+    }
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.common.Shape.ShapeSignatureOrBuilder> 
+        getShapeSignatureOrBuilderList() {
+      return shapeSignature_;
+    }
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    public int getShapeSignatureCount() {
+      return shapeSignature_.size();
+    }
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeSignature getShapeSignature(int index) {
+      return shapeSignature_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeSignatureOrBuilder getShapeSignatureOrBuilder(
+        int index) {
+      return shapeSignature_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < shapeSignature_.size(); i++) {
+        output.writeMessage(1, shapeSignature_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < shapeSignature_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, shapeSignature_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.common.Shape.ShapeSignatureList)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.common.Shape.ShapeSignatureList other = (org.oneflow.core.common.Shape.ShapeSignatureList) obj;
+
+      boolean result = true;
+      result = result && getShapeSignatureList()
+          .equals(other.getShapeSignatureList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getShapeSignatureCount() > 0) {
+        hash = (37 * hash) + SHAPE_SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getShapeSignatureList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Shape.ShapeSignatureList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.common.Shape.ShapeSignatureList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ShapeSignatureList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ShapeSignatureList)
+        org.oneflow.core.common.Shape.ShapeSignatureListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignatureList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignatureList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.common.Shape.ShapeSignatureList.class, org.oneflow.core.common.Shape.ShapeSignatureList.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.common.Shape.ShapeSignatureList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getShapeSignatureFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (shapeSignatureBuilder_ == null) {
+          shapeSignature_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          shapeSignatureBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.common.Shape.internal_static_oneflow_ShapeSignatureList_descriptor;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignatureList getDefaultInstanceForType() {
+        return org.oneflow.core.common.Shape.ShapeSignatureList.getDefaultInstance();
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignatureList build() {
+        org.oneflow.core.common.Shape.ShapeSignatureList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.common.Shape.ShapeSignatureList buildPartial() {
+        org.oneflow.core.common.Shape.ShapeSignatureList result = new org.oneflow.core.common.Shape.ShapeSignatureList(this);
+        int from_bitField0_ = bitField0_;
+        if (shapeSignatureBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            shapeSignature_ = java.util.Collections.unmodifiableList(shapeSignature_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.shapeSignature_ = shapeSignature_;
+        } else {
+          result.shapeSignature_ = shapeSignatureBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.common.Shape.ShapeSignatureList) {
+          return mergeFrom((org.oneflow.core.common.Shape.ShapeSignatureList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.common.Shape.ShapeSignatureList other) {
+        if (other == org.oneflow.core.common.Shape.ShapeSignatureList.getDefaultInstance()) return this;
+        if (shapeSignatureBuilder_ == null) {
+          if (!other.shapeSignature_.isEmpty()) {
+            if (shapeSignature_.isEmpty()) {
+              shapeSignature_ = other.shapeSignature_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureShapeSignatureIsMutable();
+              shapeSignature_.addAll(other.shapeSignature_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.shapeSignature_.isEmpty()) {
+            if (shapeSignatureBuilder_.isEmpty()) {
+              shapeSignatureBuilder_.dispose();
+              shapeSignatureBuilder_ = null;
+              shapeSignature_ = other.shapeSignature_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              shapeSignatureBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getShapeSignatureFieldBuilder() : null;
+            } else {
+              shapeSignatureBuilder_.addAllMessages(other.shapeSignature_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.common.Shape.ShapeSignatureList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.common.Shape.ShapeSignatureList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.common.Shape.ShapeSignature> shapeSignature_ =
+        java.util.Collections.emptyList();
+      private void ensureShapeSignatureIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          shapeSignature_ = new java.util.ArrayList<org.oneflow.core.common.Shape.ShapeSignature>(shapeSignature_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeSignature, org.oneflow.core.common.Shape.ShapeSignature.Builder, org.oneflow.core.common.Shape.ShapeSignatureOrBuilder> shapeSignatureBuilder_;
+
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.common.Shape.ShapeSignature> getShapeSignatureList() {
+        if (shapeSignatureBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(shapeSignature_);
+        } else {
+          return shapeSignatureBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public int getShapeSignatureCount() {
+        if (shapeSignatureBuilder_ == null) {
+          return shapeSignature_.size();
+        } else {
+          return shapeSignatureBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeSignature getShapeSignature(int index) {
+        if (shapeSignatureBuilder_ == null) {
+          return shapeSignature_.get(index);
+        } else {
+          return shapeSignatureBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder setShapeSignature(
+          int index, org.oneflow.core.common.Shape.ShapeSignature value) {
+        if (shapeSignatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.set(index, value);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder setShapeSignature(
+          int index, org.oneflow.core.common.Shape.ShapeSignature.Builder builderForValue) {
+        if (shapeSignatureBuilder_ == null) {
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder addShapeSignature(org.oneflow.core.common.Shape.ShapeSignature value) {
+        if (shapeSignatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.add(value);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder addShapeSignature(
+          int index, org.oneflow.core.common.Shape.ShapeSignature value) {
+        if (shapeSignatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.add(index, value);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder addShapeSignature(
+          org.oneflow.core.common.Shape.ShapeSignature.Builder builderForValue) {
+        if (shapeSignatureBuilder_ == null) {
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.add(builderForValue.build());
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder addShapeSignature(
+          int index, org.oneflow.core.common.Shape.ShapeSignature.Builder builderForValue) {
+        if (shapeSignatureBuilder_ == null) {
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder addAllShapeSignature(
+          java.lang.Iterable<? extends org.oneflow.core.common.Shape.ShapeSignature> values) {
+        if (shapeSignatureBuilder_ == null) {
+          ensureShapeSignatureIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shapeSignature_);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder clearShapeSignature() {
+        if (shapeSignatureBuilder_ == null) {
+          shapeSignature_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public Builder removeShapeSignature(int index) {
+        if (shapeSignatureBuilder_ == null) {
+          ensureShapeSignatureIsMutable();
+          shapeSignature_.remove(index);
+          onChanged();
+        } else {
+          shapeSignatureBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeSignature.Builder getShapeSignatureBuilder(
+          int index) {
+        return getShapeSignatureFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeSignatureOrBuilder getShapeSignatureOrBuilder(
+          int index) {
+        if (shapeSignatureBuilder_ == null) {
+          return shapeSignature_.get(index);  } else {
+          return shapeSignatureBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.common.Shape.ShapeSignatureOrBuilder> 
+           getShapeSignatureOrBuilderList() {
+        if (shapeSignatureBuilder_ != null) {
+          return shapeSignatureBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(shapeSignature_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeSignature.Builder addShapeSignatureBuilder() {
+        return getShapeSignatureFieldBuilder().addBuilder(
+            org.oneflow.core.common.Shape.ShapeSignature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeSignature.Builder addShapeSignatureBuilder(
+          int index) {
+        return getShapeSignatureFieldBuilder().addBuilder(
+            index, org.oneflow.core.common.Shape.ShapeSignature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ShapeSignature shape_signature = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.common.Shape.ShapeSignature.Builder> 
+           getShapeSignatureBuilderList() {
+        return getShapeSignatureFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeSignature, org.oneflow.core.common.Shape.ShapeSignature.Builder, org.oneflow.core.common.Shape.ShapeSignatureOrBuilder> 
+          getShapeSignatureFieldBuilder() {
+        if (shapeSignatureBuilder_ == null) {
+          shapeSignatureBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.common.Shape.ShapeSignature, org.oneflow.core.common.Shape.ShapeSignature.Builder, org.oneflow.core.common.Shape.ShapeSignatureOrBuilder>(
+                  shapeSignature_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          shapeSignature_ = null;
+        }
+        return shapeSignatureBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ShapeSignatureList)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ShapeSignatureList)
+    private static final org.oneflow.core.common.Shape.ShapeSignatureList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.common.Shape.ShapeSignatureList();
+    }
+
+    public static org.oneflow.core.common.Shape.ShapeSignatureList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ShapeSignatureList>
+        PARSER = new com.google.protobuf.AbstractParser<ShapeSignatureList>() {
+      public ShapeSignatureList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ShapeSignatureList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShapeSignatureList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShapeSignatureList> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.common.Shape.ShapeSignatureList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ShapeProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ShapeProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ShapeSignature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ShapeSignature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ShapeSignature_Field2shapeProtoEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ShapeSignature_Field2shapeProtoEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ShapeSignatureList_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ShapeSignatureList_fieldAccessorTable;
 
@@ -51,7 +2179,7 @@ public final class Shape {
       "y\022\013\n\003key\030\001 \001(\t\022\"\n\005value\030\002 \001(\0132\023.oneflow." +
       "ShapeProto:\0028\001\"F\n\022ShapeSignatureList\0220\n\017" +
       "shape_signature\030\001 \003(\0132\027.oneflow.ShapeSig" +
-      "natureB\033\n\027org.oneflow.core.commonP\001"
+      "natureB\031\n\027org.oneflow.core.common"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

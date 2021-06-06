@@ -14,19 +14,3040 @@ public final class Env {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MachineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.Machine)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>required int64 id = 1;</code>
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    boolean hasAddr();
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    java.lang.String getAddr();
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddrBytes();
+
+    /**
+     * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+     */
+    boolean hasCtrlPortAgent();
+    /**
+     * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+     */
+    int getCtrlPortAgent();
+
+    /**
+     * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+     */
+    boolean hasDataPortAgent();
+    /**
+     * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+     */
+    int getDataPortAgent();
+  }
+  /**
+   * Protobuf type {@code oneflow.Machine}
+   */
+  public  static final class Machine extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.Machine)
+      MachineOrBuilder {
+    // Use Machine.newBuilder() to construct.
+    private Machine(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Machine() {
+      id_ = 0L;
+      addr_ = "";
+      ctrlPortAgent_ = -1;
+      dataPortAgent_ = -1;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Machine(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              addr_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              ctrlPortAgent_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              dataPortAgent_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_Machine_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_Machine_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.Env.Machine.class, org.oneflow.core.job.Env.Machine.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>required int64 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 id = 1;</code>
+     */
+    public long getId() {
+      return id_;
+    }
+
+    public static final int ADDR_FIELD_NUMBER = 2;
+    private volatile java.lang.Object addr_;
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    public boolean hasAddr() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    public java.lang.String getAddr() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addr_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * domain name or ip
+     * </pre>
+     *
+     * <code>required string addr = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddrBytes() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CTRL_PORT_AGENT_FIELD_NUMBER = 3;
+    private int ctrlPortAgent_;
+    /**
+     * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+     */
+    public boolean hasCtrlPortAgent() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+     */
+    public int getCtrlPortAgent() {
+      return ctrlPortAgent_;
+    }
+
+    public static final int DATA_PORT_AGENT_FIELD_NUMBER = 4;
+    private int dataPortAgent_;
+    /**
+     * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+     */
+    public boolean hasDataPortAgent() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+     */
+    public int getDataPortAgent() {
+      return dataPortAgent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAddr()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addr_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, ctrlPortAgent_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, dataPortAgent_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, addr_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, ctrlPortAgent_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, dataPortAgent_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.Env.Machine)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.Env.Machine other = (org.oneflow.core.job.Env.Machine) obj;
+
+      boolean result = true;
+      result = result && (hasId() == other.hasId());
+      if (hasId()) {
+        result = result && (getId()
+            == other.getId());
+      }
+      result = result && (hasAddr() == other.hasAddr());
+      if (hasAddr()) {
+        result = result && getAddr()
+            .equals(other.getAddr());
+      }
+      result = result && (hasCtrlPortAgent() == other.hasCtrlPortAgent());
+      if (hasCtrlPortAgent()) {
+        result = result && (getCtrlPortAgent()
+            == other.getCtrlPortAgent());
+      }
+      result = result && (hasDataPortAgent() == other.hasDataPortAgent());
+      if (hasDataPortAgent()) {
+        result = result && (getDataPortAgent()
+            == other.getDataPortAgent());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
+      }
+      if (hasAddr()) {
+        hash = (37 * hash) + ADDR_FIELD_NUMBER;
+        hash = (53 * hash) + getAddr().hashCode();
+      }
+      if (hasCtrlPortAgent()) {
+        hash = (37 * hash) + CTRL_PORT_AGENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCtrlPortAgent();
+      }
+      if (hasDataPortAgent()) {
+        hash = (37 * hash) + DATA_PORT_AGENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPortAgent();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.Machine parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.Machine parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.Machine parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.Env.Machine prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.Machine}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.Machine)
+        org.oneflow.core.job.Env.MachineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_Machine_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_Machine_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.Env.Machine.class, org.oneflow.core.job.Env.Machine.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.Env.Machine.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        addr_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ctrlPortAgent_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataPortAgent_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_Machine_descriptor;
+      }
+
+      public org.oneflow.core.job.Env.Machine getDefaultInstanceForType() {
+        return org.oneflow.core.job.Env.Machine.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.Env.Machine build() {
+        org.oneflow.core.job.Env.Machine result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.Env.Machine buildPartial() {
+        org.oneflow.core.job.Env.Machine result = new org.oneflow.core.job.Env.Machine(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.addr_ = addr_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.ctrlPortAgent_ = ctrlPortAgent_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.dataPortAgent_ = dataPortAgent_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.Env.Machine) {
+          return mergeFrom((org.oneflow.core.job.Env.Machine)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.Env.Machine other) {
+        if (other == org.oneflow.core.job.Env.Machine.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasAddr()) {
+          bitField0_ |= 0x00000002;
+          addr_ = other.addr_;
+          onChanged();
+        }
+        if (other.hasCtrlPortAgent()) {
+          setCtrlPortAgent(other.getCtrlPortAgent());
+        }
+        if (other.hasDataPortAgent()) {
+          setDataPortAgent(other.getDataPortAgent());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          return false;
+        }
+        if (!hasAddr()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.Env.Machine parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.Env.Machine) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>required int64 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 id = 1;</code>
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>required int64 id = 1;</code>
+       */
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addr_ = "";
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public boolean hasAddr() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public java.lang.String getAddr() {
+        java.lang.Object ref = addr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addr_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddrBytes() {
+        java.lang.Object ref = addr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public Builder setAddr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        addr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public Builder clearAddr() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        addr_ = getDefaultInstance().getAddr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * domain name or ip
+       * </pre>
+       *
+       * <code>required string addr = 2;</code>
+       */
+      public Builder setAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        addr_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int ctrlPortAgent_ = -1;
+      /**
+       * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+       */
+      public boolean hasCtrlPortAgent() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+       */
+      public int getCtrlPortAgent() {
+        return ctrlPortAgent_;
+      }
+      /**
+       * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+       */
+      public Builder setCtrlPortAgent(int value) {
+        bitField0_ |= 0x00000004;
+        ctrlPortAgent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ctrl_port_agent = 3 [default = -1];</code>
+       */
+      public Builder clearCtrlPortAgent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ctrlPortAgent_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int dataPortAgent_ = -1;
+      /**
+       * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+       */
+      public boolean hasDataPortAgent() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+       */
+      public int getDataPortAgent() {
+        return dataPortAgent_;
+      }
+      /**
+       * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+       */
+      public Builder setDataPortAgent(int value) {
+        bitField0_ |= 0x00000008;
+        dataPortAgent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 data_port_agent = 4 [default = -1];</code>
+       */
+      public Builder clearDataPortAgent() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dataPortAgent_ = -1;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.Machine)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.Machine)
+    private static final org.oneflow.core.job.Env.Machine DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.Env.Machine();
+    }
+
+    public static org.oneflow.core.job.Env.Machine getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Machine>
+        PARSER = new com.google.protobuf.AbstractParser<Machine>() {
+      public Machine parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Machine(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Machine> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Machine> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.Env.Machine getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CppLoggingConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CppLoggingConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    boolean hasLogDir();
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    java.lang.String getLogDir();
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    com.google.protobuf.ByteString
+        getLogDirBytes();
+
+    /**
+     * <code>optional int32 logtostderr = 2 [default = 0];</code>
+     */
+    boolean hasLogtostderr();
+    /**
+     * <code>optional int32 logtostderr = 2 [default = 0];</code>
+     */
+    int getLogtostderr();
+
+    /**
+     * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+     */
+    boolean hasLogbuflevel();
+    /**
+     * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+     */
+    int getLogbuflevel();
+  }
+  /**
+   * Protobuf type {@code oneflow.CppLoggingConf}
+   */
+  public  static final class CppLoggingConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CppLoggingConf)
+      CppLoggingConfOrBuilder {
+    // Use CppLoggingConf.newBuilder() to construct.
+    private CppLoggingConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CppLoggingConf() {
+      logDir_ = "./log";
+      logtostderr_ = 0;
+      logbuflevel_ = -1;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CppLoggingConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              logDir_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              logtostderr_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              logbuflevel_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_CppLoggingConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_CppLoggingConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.Env.CppLoggingConf.class, org.oneflow.core.job.Env.CppLoggingConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LOG_DIR_FIELD_NUMBER = 1;
+    private volatile java.lang.Object logDir_;
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    public boolean hasLogDir() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    public java.lang.String getLogDir() {
+      java.lang.Object ref = logDir_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          logDir_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string log_dir = 1 [default = "./log"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getLogDirBytes() {
+      java.lang.Object ref = logDir_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logDir_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOGTOSTDERR_FIELD_NUMBER = 2;
+    private int logtostderr_;
+    /**
+     * <code>optional int32 logtostderr = 2 [default = 0];</code>
+     */
+    public boolean hasLogtostderr() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 logtostderr = 2 [default = 0];</code>
+     */
+    public int getLogtostderr() {
+      return logtostderr_;
+    }
+
+    public static final int LOGBUFLEVEL_FIELD_NUMBER = 3;
+    private int logbuflevel_;
+    /**
+     * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+     */
+    public boolean hasLogbuflevel() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+     */
+    public int getLogbuflevel() {
+      return logbuflevel_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logDir_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, logtostderr_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, logbuflevel_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logDir_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, logtostderr_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, logbuflevel_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.Env.CppLoggingConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.Env.CppLoggingConf other = (org.oneflow.core.job.Env.CppLoggingConf) obj;
+
+      boolean result = true;
+      result = result && (hasLogDir() == other.hasLogDir());
+      if (hasLogDir()) {
+        result = result && getLogDir()
+            .equals(other.getLogDir());
+      }
+      result = result && (hasLogtostderr() == other.hasLogtostderr());
+      if (hasLogtostderr()) {
+        result = result && (getLogtostderr()
+            == other.getLogtostderr());
+      }
+      result = result && (hasLogbuflevel() == other.hasLogbuflevel());
+      if (hasLogbuflevel()) {
+        result = result && (getLogbuflevel()
+            == other.getLogbuflevel());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasLogDir()) {
+        hash = (37 * hash) + LOG_DIR_FIELD_NUMBER;
+        hash = (53 * hash) + getLogDir().hashCode();
+      }
+      if (hasLogtostderr()) {
+        hash = (37 * hash) + LOGTOSTDERR_FIELD_NUMBER;
+        hash = (53 * hash) + getLogtostderr();
+      }
+      if (hasLogbuflevel()) {
+        hash = (37 * hash) + LOGBUFLEVEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLogbuflevel();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.CppLoggingConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.Env.CppLoggingConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CppLoggingConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CppLoggingConf)
+        org.oneflow.core.job.Env.CppLoggingConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_CppLoggingConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_CppLoggingConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.Env.CppLoggingConf.class, org.oneflow.core.job.Env.CppLoggingConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.Env.CppLoggingConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        logDir_ = "./log";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        logtostderr_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        logbuflevel_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_CppLoggingConf_descriptor;
+      }
+
+      public org.oneflow.core.job.Env.CppLoggingConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.Env.CppLoggingConf build() {
+        org.oneflow.core.job.Env.CppLoggingConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.Env.CppLoggingConf buildPartial() {
+        org.oneflow.core.job.Env.CppLoggingConf result = new org.oneflow.core.job.Env.CppLoggingConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.logDir_ = logDir_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.logtostderr_ = logtostderr_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.logbuflevel_ = logbuflevel_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.Env.CppLoggingConf) {
+          return mergeFrom((org.oneflow.core.job.Env.CppLoggingConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.Env.CppLoggingConf other) {
+        if (other == org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance()) return this;
+        if (other.hasLogDir()) {
+          bitField0_ |= 0x00000001;
+          logDir_ = other.logDir_;
+          onChanged();
+        }
+        if (other.hasLogtostderr()) {
+          setLogtostderr(other.getLogtostderr());
+        }
+        if (other.hasLogbuflevel()) {
+          setLogbuflevel(other.getLogbuflevel());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.Env.CppLoggingConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.Env.CppLoggingConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object logDir_ = "./log";
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public boolean hasLogDir() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public java.lang.String getLogDir() {
+        java.lang.Object ref = logDir_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            logDir_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getLogDirBytes() {
+        java.lang.Object ref = logDir_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logDir_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public Builder setLogDir(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        logDir_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public Builder clearLogDir() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        logDir_ = getDefaultInstance().getLogDir();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string log_dir = 1 [default = "./log"];</code>
+       */
+      public Builder setLogDirBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        logDir_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int logtostderr_ ;
+      /**
+       * <code>optional int32 logtostderr = 2 [default = 0];</code>
+       */
+      public boolean hasLogtostderr() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 logtostderr = 2 [default = 0];</code>
+       */
+      public int getLogtostderr() {
+        return logtostderr_;
+      }
+      /**
+       * <code>optional int32 logtostderr = 2 [default = 0];</code>
+       */
+      public Builder setLogtostderr(int value) {
+        bitField0_ |= 0x00000002;
+        logtostderr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 logtostderr = 2 [default = 0];</code>
+       */
+      public Builder clearLogtostderr() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        logtostderr_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int logbuflevel_ = -1;
+      /**
+       * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+       */
+      public boolean hasLogbuflevel() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+       */
+      public int getLogbuflevel() {
+        return logbuflevel_;
+      }
+      /**
+       * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+       */
+      public Builder setLogbuflevel(int value) {
+        bitField0_ |= 0x00000004;
+        logbuflevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 logbuflevel = 3 [default = -1];</code>
+       */
+      public Builder clearLogbuflevel() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        logbuflevel_ = -1;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CppLoggingConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CppLoggingConf)
+    private static final org.oneflow.core.job.Env.CppLoggingConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.Env.CppLoggingConf();
+    }
+
+    public static org.oneflow.core.job.Env.CppLoggingConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CppLoggingConf>
+        PARSER = new com.google.protobuf.AbstractParser<CppLoggingConf>() {
+      public CppLoggingConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CppLoggingConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CppLoggingConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CppLoggingConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.Env.CppLoggingConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnvProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.EnvProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    java.util.List<org.oneflow.core.job.Env.Machine> 
+        getMachineList();
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    org.oneflow.core.job.Env.Machine getMachine(int index);
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    int getMachineCount();
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.job.Env.MachineOrBuilder> 
+        getMachineOrBuilderList();
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    org.oneflow.core.job.Env.MachineOrBuilder getMachineOrBuilder(
+        int index);
+
+    /**
+     * <code>required int32 ctrl_port = 2;</code>
+     */
+    boolean hasCtrlPort();
+    /**
+     * <code>required int32 ctrl_port = 2;</code>
+     */
+    int getCtrlPort();
+
+    /**
+     * <code>optional int32 data_port = 3 [default = -1];</code>
+     */
+    boolean hasDataPort();
+    /**
+     * <code>optional int32 data_port = 3 [default = -1];</code>
+     */
+    int getDataPort();
+
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    boolean hasCppLoggingConf();
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    org.oneflow.core.job.Env.CppLoggingConf getCppLoggingConf();
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    org.oneflow.core.job.Env.CppLoggingConfOrBuilder getCppLoggingConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    boolean hasCtrlBootstrapConf();
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf();
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder();
+
+    /**
+     * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+     */
+    boolean hasIsDefaultPhysicalEnv();
+    /**
+     * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+     */
+    boolean getIsDefaultPhysicalEnv();
+  }
+  /**
+   * Protobuf type {@code oneflow.EnvProto}
+   */
+  public  static final class EnvProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.EnvProto)
+      EnvProtoOrBuilder {
+    // Use EnvProto.newBuilder() to construct.
+    private EnvProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnvProto() {
+      machine_ = java.util.Collections.emptyList();
+      ctrlPort_ = 0;
+      dataPort_ = -1;
+      isDefaultPhysicalEnv_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnvProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                machine_ = new java.util.ArrayList<org.oneflow.core.job.Env.Machine>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              machine_.add(
+                  input.readMessage(org.oneflow.core.job.Env.Machine.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              ctrlPort_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              dataPort_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              org.oneflow.core.job.Env.CppLoggingConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = cppLoggingConf_.toBuilder();
+              }
+              cppLoggingConf_ = input.readMessage(org.oneflow.core.job.Env.CppLoggingConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cppLoggingConf_);
+                cppLoggingConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 42: {
+              org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = ctrlBootstrapConf_.toBuilder();
+              }
+              ctrlBootstrapConf_ = input.readMessage(org.oneflow.core.control.CtrlBootstrap.BootstrapConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ctrlBootstrapConf_);
+                ctrlBootstrapConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              isDefaultPhysicalEnv_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          machine_ = java.util.Collections.unmodifiableList(machine_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_EnvProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.Env.internal_static_oneflow_EnvProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.Env.EnvProto.class, org.oneflow.core.job.Env.EnvProto.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MACHINE_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.job.Env.Machine> machine_;
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.job.Env.Machine> getMachineList() {
+      return machine_;
+    }
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.job.Env.MachineOrBuilder> 
+        getMachineOrBuilderList() {
+      return machine_;
+    }
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    public int getMachineCount() {
+      return machine_.size();
+    }
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    public org.oneflow.core.job.Env.Machine getMachine(int index) {
+      return machine_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.Machine machine = 1;</code>
+     */
+    public org.oneflow.core.job.Env.MachineOrBuilder getMachineOrBuilder(
+        int index) {
+      return machine_.get(index);
+    }
+
+    public static final int CTRL_PORT_FIELD_NUMBER = 2;
+    private int ctrlPort_;
+    /**
+     * <code>required int32 ctrl_port = 2;</code>
+     */
+    public boolean hasCtrlPort() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 ctrl_port = 2;</code>
+     */
+    public int getCtrlPort() {
+      return ctrlPort_;
+    }
+
+    public static final int DATA_PORT_FIELD_NUMBER = 3;
+    private int dataPort_;
+    /**
+     * <code>optional int32 data_port = 3 [default = -1];</code>
+     */
+    public boolean hasDataPort() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 data_port = 3 [default = -1];</code>
+     */
+    public int getDataPort() {
+      return dataPort_;
+    }
+
+    public static final int CPP_LOGGING_CONF_FIELD_NUMBER = 4;
+    private org.oneflow.core.job.Env.CppLoggingConf cppLoggingConf_;
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    public boolean hasCppLoggingConf() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    public org.oneflow.core.job.Env.CppLoggingConf getCppLoggingConf() {
+      return cppLoggingConf_ == null ? org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance() : cppLoggingConf_;
+    }
+    /**
+     * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+     */
+    public org.oneflow.core.job.Env.CppLoggingConfOrBuilder getCppLoggingConfOrBuilder() {
+      return cppLoggingConf_ == null ? org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance() : cppLoggingConf_;
+    }
+
+    public static final int CTRL_BOOTSTRAP_CONF_FIELD_NUMBER = 5;
+    private org.oneflow.core.control.CtrlBootstrap.BootstrapConf ctrlBootstrapConf_;
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    public boolean hasCtrlBootstrapConf() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf() {
+      return ctrlBootstrapConf_ == null ? org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+    }
+    /**
+     * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
+      return ctrlBootstrapConf_ == null ? org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+    }
+
+    public static final int IS_DEFAULT_PHYSICAL_ENV_FIELD_NUMBER = 6;
+    private boolean isDefaultPhysicalEnv_;
+    /**
+     * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+     */
+    public boolean hasIsDefaultPhysicalEnv() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+     */
+    public boolean getIsDefaultPhysicalEnv() {
+      return isDefaultPhysicalEnv_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasCtrlPort()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getMachineCount(); i++) {
+        if (!getMachine(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasCtrlBootstrapConf()) {
+        if (!getCtrlBootstrapConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < machine_.size(); i++) {
+        output.writeMessage(1, machine_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(2, ctrlPort_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(3, dataPort_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(4, getCppLoggingConf());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(5, getCtrlBootstrapConf());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(6, isDefaultPhysicalEnv_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < machine_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, machine_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, ctrlPort_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, dataPort_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCppLoggingConf());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCtrlBootstrapConf());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, isDefaultPhysicalEnv_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.Env.EnvProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.Env.EnvProto other = (org.oneflow.core.job.Env.EnvProto) obj;
+
+      boolean result = true;
+      result = result && getMachineList()
+          .equals(other.getMachineList());
+      result = result && (hasCtrlPort() == other.hasCtrlPort());
+      if (hasCtrlPort()) {
+        result = result && (getCtrlPort()
+            == other.getCtrlPort());
+      }
+      result = result && (hasDataPort() == other.hasDataPort());
+      if (hasDataPort()) {
+        result = result && (getDataPort()
+            == other.getDataPort());
+      }
+      result = result && (hasCppLoggingConf() == other.hasCppLoggingConf());
+      if (hasCppLoggingConf()) {
+        result = result && getCppLoggingConf()
+            .equals(other.getCppLoggingConf());
+      }
+      result = result && (hasCtrlBootstrapConf() == other.hasCtrlBootstrapConf());
+      if (hasCtrlBootstrapConf()) {
+        result = result && getCtrlBootstrapConf()
+            .equals(other.getCtrlBootstrapConf());
+      }
+      result = result && (hasIsDefaultPhysicalEnv() == other.hasIsDefaultPhysicalEnv());
+      if (hasIsDefaultPhysicalEnv()) {
+        result = result && (getIsDefaultPhysicalEnv()
+            == other.getIsDefaultPhysicalEnv());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getMachineCount() > 0) {
+        hash = (37 * hash) + MACHINE_FIELD_NUMBER;
+        hash = (53 * hash) + getMachineList().hashCode();
+      }
+      if (hasCtrlPort()) {
+        hash = (37 * hash) + CTRL_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getCtrlPort();
+      }
+      if (hasDataPort()) {
+        hash = (37 * hash) + DATA_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPort();
+      }
+      if (hasCppLoggingConf()) {
+        hash = (37 * hash) + CPP_LOGGING_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getCppLoggingConf().hashCode();
+      }
+      if (hasCtrlBootstrapConf()) {
+        hash = (37 * hash) + CTRL_BOOTSTRAP_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getCtrlBootstrapConf().hashCode();
+      }
+      if (hasIsDefaultPhysicalEnv()) {
+        hash = (37 * hash) + IS_DEFAULT_PHYSICAL_ENV_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsDefaultPhysicalEnv());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.Env.EnvProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.Env.EnvProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.EnvProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.EnvProto)
+        org.oneflow.core.job.Env.EnvProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_EnvProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_EnvProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.Env.EnvProto.class, org.oneflow.core.job.Env.EnvProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.Env.EnvProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMachineFieldBuilder();
+          getCppLoggingConfFieldBuilder();
+          getCtrlBootstrapConfFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (machineBuilder_ == null) {
+          machine_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          machineBuilder_.clear();
+        }
+        ctrlPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dataPort_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (cppLoggingConfBuilder_ == null) {
+          cppLoggingConf_ = null;
+        } else {
+          cppLoggingConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (ctrlBootstrapConfBuilder_ == null) {
+          ctrlBootstrapConf_ = null;
+        } else {
+          ctrlBootstrapConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isDefaultPhysicalEnv_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.Env.internal_static_oneflow_EnvProto_descriptor;
+      }
+
+      public org.oneflow.core.job.Env.EnvProto getDefaultInstanceForType() {
+        return org.oneflow.core.job.Env.EnvProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.Env.EnvProto build() {
+        org.oneflow.core.job.Env.EnvProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.Env.EnvProto buildPartial() {
+        org.oneflow.core.job.Env.EnvProto result = new org.oneflow.core.job.Env.EnvProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (machineBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            machine_ = java.util.Collections.unmodifiableList(machine_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.machine_ = machine_;
+        } else {
+          result.machine_ = machineBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.ctrlPort_ = ctrlPort_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.dataPort_ = dataPort_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (cppLoggingConfBuilder_ == null) {
+          result.cppLoggingConf_ = cppLoggingConf_;
+        } else {
+          result.cppLoggingConf_ = cppLoggingConfBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (ctrlBootstrapConfBuilder_ == null) {
+          result.ctrlBootstrapConf_ = ctrlBootstrapConf_;
+        } else {
+          result.ctrlBootstrapConf_ = ctrlBootstrapConfBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.isDefaultPhysicalEnv_ = isDefaultPhysicalEnv_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.Env.EnvProto) {
+          return mergeFrom((org.oneflow.core.job.Env.EnvProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.Env.EnvProto other) {
+        if (other == org.oneflow.core.job.Env.EnvProto.getDefaultInstance()) return this;
+        if (machineBuilder_ == null) {
+          if (!other.machine_.isEmpty()) {
+            if (machine_.isEmpty()) {
+              machine_ = other.machine_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMachineIsMutable();
+              machine_.addAll(other.machine_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.machine_.isEmpty()) {
+            if (machineBuilder_.isEmpty()) {
+              machineBuilder_.dispose();
+              machineBuilder_ = null;
+              machine_ = other.machine_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              machineBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMachineFieldBuilder() : null;
+            } else {
+              machineBuilder_.addAllMessages(other.machine_);
+            }
+          }
+        }
+        if (other.hasCtrlPort()) {
+          setCtrlPort(other.getCtrlPort());
+        }
+        if (other.hasDataPort()) {
+          setDataPort(other.getDataPort());
+        }
+        if (other.hasCppLoggingConf()) {
+          mergeCppLoggingConf(other.getCppLoggingConf());
+        }
+        if (other.hasCtrlBootstrapConf()) {
+          mergeCtrlBootstrapConf(other.getCtrlBootstrapConf());
+        }
+        if (other.hasIsDefaultPhysicalEnv()) {
+          setIsDefaultPhysicalEnv(other.getIsDefaultPhysicalEnv());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCtrlPort()) {
+          return false;
+        }
+        for (int i = 0; i < getMachineCount(); i++) {
+          if (!getMachine(i).isInitialized()) {
+            return false;
+          }
+        }
+        if (hasCtrlBootstrapConf()) {
+          if (!getCtrlBootstrapConf().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.Env.EnvProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.Env.EnvProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.job.Env.Machine> machine_ =
+        java.util.Collections.emptyList();
+      private void ensureMachineIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          machine_ = new java.util.ArrayList<org.oneflow.core.job.Env.Machine>(machine_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.Env.Machine, org.oneflow.core.job.Env.Machine.Builder, org.oneflow.core.job.Env.MachineOrBuilder> machineBuilder_;
+
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.Env.Machine> getMachineList() {
+        if (machineBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(machine_);
+        } else {
+          return machineBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public int getMachineCount() {
+        if (machineBuilder_ == null) {
+          return machine_.size();
+        } else {
+          return machineBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public org.oneflow.core.job.Env.Machine getMachine(int index) {
+        if (machineBuilder_ == null) {
+          return machine_.get(index);
+        } else {
+          return machineBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder setMachine(
+          int index, org.oneflow.core.job.Env.Machine value) {
+        if (machineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineIsMutable();
+          machine_.set(index, value);
+          onChanged();
+        } else {
+          machineBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder setMachine(
+          int index, org.oneflow.core.job.Env.Machine.Builder builderForValue) {
+        if (machineBuilder_ == null) {
+          ensureMachineIsMutable();
+          machine_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder addMachine(org.oneflow.core.job.Env.Machine value) {
+        if (machineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineIsMutable();
+          machine_.add(value);
+          onChanged();
+        } else {
+          machineBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder addMachine(
+          int index, org.oneflow.core.job.Env.Machine value) {
+        if (machineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMachineIsMutable();
+          machine_.add(index, value);
+          onChanged();
+        } else {
+          machineBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder addMachine(
+          org.oneflow.core.job.Env.Machine.Builder builderForValue) {
+        if (machineBuilder_ == null) {
+          ensureMachineIsMutable();
+          machine_.add(builderForValue.build());
+          onChanged();
+        } else {
+          machineBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder addMachine(
+          int index, org.oneflow.core.job.Env.Machine.Builder builderForValue) {
+        if (machineBuilder_ == null) {
+          ensureMachineIsMutable();
+          machine_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          machineBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder addAllMachine(
+          java.lang.Iterable<? extends org.oneflow.core.job.Env.Machine> values) {
+        if (machineBuilder_ == null) {
+          ensureMachineIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, machine_);
+          onChanged();
+        } else {
+          machineBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder clearMachine() {
+        if (machineBuilder_ == null) {
+          machine_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          machineBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public Builder removeMachine(int index) {
+        if (machineBuilder_ == null) {
+          ensureMachineIsMutable();
+          machine_.remove(index);
+          onChanged();
+        } else {
+          machineBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public org.oneflow.core.job.Env.Machine.Builder getMachineBuilder(
+          int index) {
+        return getMachineFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public org.oneflow.core.job.Env.MachineOrBuilder getMachineOrBuilder(
+          int index) {
+        if (machineBuilder_ == null) {
+          return machine_.get(index);  } else {
+          return machineBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.job.Env.MachineOrBuilder> 
+           getMachineOrBuilderList() {
+        if (machineBuilder_ != null) {
+          return machineBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(machine_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public org.oneflow.core.job.Env.Machine.Builder addMachineBuilder() {
+        return getMachineFieldBuilder().addBuilder(
+            org.oneflow.core.job.Env.Machine.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public org.oneflow.core.job.Env.Machine.Builder addMachineBuilder(
+          int index) {
+        return getMachineFieldBuilder().addBuilder(
+            index, org.oneflow.core.job.Env.Machine.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.Machine machine = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.Env.Machine.Builder> 
+           getMachineBuilderList() {
+        return getMachineFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.Env.Machine, org.oneflow.core.job.Env.Machine.Builder, org.oneflow.core.job.Env.MachineOrBuilder> 
+          getMachineFieldBuilder() {
+        if (machineBuilder_ == null) {
+          machineBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.job.Env.Machine, org.oneflow.core.job.Env.Machine.Builder, org.oneflow.core.job.Env.MachineOrBuilder>(
+                  machine_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          machine_ = null;
+        }
+        return machineBuilder_;
+      }
+
+      private int ctrlPort_ ;
+      /**
+       * <code>required int32 ctrl_port = 2;</code>
+       */
+      public boolean hasCtrlPort() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 ctrl_port = 2;</code>
+       */
+      public int getCtrlPort() {
+        return ctrlPort_;
+      }
+      /**
+       * <code>required int32 ctrl_port = 2;</code>
+       */
+      public Builder setCtrlPort(int value) {
+        bitField0_ |= 0x00000002;
+        ctrlPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 ctrl_port = 2;</code>
+       */
+      public Builder clearCtrlPort() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ctrlPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dataPort_ = -1;
+      /**
+       * <code>optional int32 data_port = 3 [default = -1];</code>
+       */
+      public boolean hasDataPort() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 data_port = 3 [default = -1];</code>
+       */
+      public int getDataPort() {
+        return dataPort_;
+      }
+      /**
+       * <code>optional int32 data_port = 3 [default = -1];</code>
+       */
+      public Builder setDataPort(int value) {
+        bitField0_ |= 0x00000004;
+        dataPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 data_port = 3 [default = -1];</code>
+       */
+      public Builder clearDataPort() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataPort_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.job.Env.CppLoggingConf cppLoggingConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.Env.CppLoggingConf, org.oneflow.core.job.Env.CppLoggingConf.Builder, org.oneflow.core.job.Env.CppLoggingConfOrBuilder> cppLoggingConfBuilder_;
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public boolean hasCppLoggingConf() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public org.oneflow.core.job.Env.CppLoggingConf getCppLoggingConf() {
+        if (cppLoggingConfBuilder_ == null) {
+          return cppLoggingConf_ == null ? org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance() : cppLoggingConf_;
+        } else {
+          return cppLoggingConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public Builder setCppLoggingConf(org.oneflow.core.job.Env.CppLoggingConf value) {
+        if (cppLoggingConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cppLoggingConf_ = value;
+          onChanged();
+        } else {
+          cppLoggingConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public Builder setCppLoggingConf(
+          org.oneflow.core.job.Env.CppLoggingConf.Builder builderForValue) {
+        if (cppLoggingConfBuilder_ == null) {
+          cppLoggingConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          cppLoggingConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public Builder mergeCppLoggingConf(org.oneflow.core.job.Env.CppLoggingConf value) {
+        if (cppLoggingConfBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              cppLoggingConf_ != null &&
+              cppLoggingConf_ != org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance()) {
+            cppLoggingConf_ =
+              org.oneflow.core.job.Env.CppLoggingConf.newBuilder(cppLoggingConf_).mergeFrom(value).buildPartial();
+          } else {
+            cppLoggingConf_ = value;
+          }
+          onChanged();
+        } else {
+          cppLoggingConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public Builder clearCppLoggingConf() {
+        if (cppLoggingConfBuilder_ == null) {
+          cppLoggingConf_ = null;
+          onChanged();
+        } else {
+          cppLoggingConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public org.oneflow.core.job.Env.CppLoggingConf.Builder getCppLoggingConfBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCppLoggingConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      public org.oneflow.core.job.Env.CppLoggingConfOrBuilder getCppLoggingConfOrBuilder() {
+        if (cppLoggingConfBuilder_ != null) {
+          return cppLoggingConfBuilder_.getMessageOrBuilder();
+        } else {
+          return cppLoggingConf_ == null ?
+              org.oneflow.core.job.Env.CppLoggingConf.getDefaultInstance() : cppLoggingConf_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.CppLoggingConf cpp_logging_conf = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.Env.CppLoggingConf, org.oneflow.core.job.Env.CppLoggingConf.Builder, org.oneflow.core.job.Env.CppLoggingConfOrBuilder> 
+          getCppLoggingConfFieldBuilder() {
+        if (cppLoggingConfBuilder_ == null) {
+          cppLoggingConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.Env.CppLoggingConf, org.oneflow.core.job.Env.CppLoggingConf.Builder, org.oneflow.core.job.Env.CppLoggingConfOrBuilder>(
+                  getCppLoggingConf(),
+                  getParentForChildren(),
+                  isClean());
+          cppLoggingConf_ = null;
+        }
+        return cppLoggingConfBuilder_;
+      }
+
+      private org.oneflow.core.control.CtrlBootstrap.BootstrapConf ctrlBootstrapConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.BootstrapConf, org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder, org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder> ctrlBootstrapConfBuilder_;
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public boolean hasCtrlBootstrapConf() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConf getCtrlBootstrapConf() {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          return ctrlBootstrapConf_ == null ? org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+        } else {
+          return ctrlBootstrapConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public Builder setCtrlBootstrapConf(org.oneflow.core.control.CtrlBootstrap.BootstrapConf value) {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ctrlBootstrapConf_ = value;
+          onChanged();
+        } else {
+          ctrlBootstrapConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public Builder setCtrlBootstrapConf(
+          org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder builderForValue) {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          ctrlBootstrapConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          ctrlBootstrapConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public Builder mergeCtrlBootstrapConf(org.oneflow.core.control.CtrlBootstrap.BootstrapConf value) {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              ctrlBootstrapConf_ != null &&
+              ctrlBootstrapConf_ != org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance()) {
+            ctrlBootstrapConf_ =
+              org.oneflow.core.control.CtrlBootstrap.BootstrapConf.newBuilder(ctrlBootstrapConf_).mergeFrom(value).buildPartial();
+          } else {
+            ctrlBootstrapConf_ = value;
+          }
+          onChanged();
+        } else {
+          ctrlBootstrapConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public Builder clearCtrlBootstrapConf() {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          ctrlBootstrapConf_ = null;
+          onChanged();
+        } else {
+          ctrlBootstrapConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder getCtrlBootstrapConfBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getCtrlBootstrapConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder getCtrlBootstrapConfOrBuilder() {
+        if (ctrlBootstrapConfBuilder_ != null) {
+          return ctrlBootstrapConfBuilder_.getMessageOrBuilder();
+        } else {
+          return ctrlBootstrapConf_ == null ?
+              org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance() : ctrlBootstrapConf_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.BootstrapConf ctrl_bootstrap_conf = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.BootstrapConf, org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder, org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder> 
+          getCtrlBootstrapConfFieldBuilder() {
+        if (ctrlBootstrapConfBuilder_ == null) {
+          ctrlBootstrapConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.control.CtrlBootstrap.BootstrapConf, org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder, org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder>(
+                  getCtrlBootstrapConf(),
+                  getParentForChildren(),
+                  isClean());
+          ctrlBootstrapConf_ = null;
+        }
+        return ctrlBootstrapConfBuilder_;
+      }
+
+      private boolean isDefaultPhysicalEnv_ ;
+      /**
+       * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+       */
+      public boolean hasIsDefaultPhysicalEnv() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+       */
+      public boolean getIsDefaultPhysicalEnv() {
+        return isDefaultPhysicalEnv_;
+      }
+      /**
+       * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+       */
+      public Builder setIsDefaultPhysicalEnv(boolean value) {
+        bitField0_ |= 0x00000020;
+        isDefaultPhysicalEnv_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_default_physical_env = 6 [default = false];</code>
+       */
+      public Builder clearIsDefaultPhysicalEnv() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isDefaultPhysicalEnv_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.EnvProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.EnvProto)
+    private static final org.oneflow.core.job.Env.EnvProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.Env.EnvProto();
+    }
+
+    public static org.oneflow.core.job.Env.EnvProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EnvProto>
+        PARSER = new com.google.protobuf.AbstractParser<EnvProto>() {
+      public EnvProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EnvProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnvProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnvProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.Env.EnvProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_Machine_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_Machine_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CppLoggingConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CppLoggingConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_EnvProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_EnvProto_fieldAccessorTable;
 
@@ -50,8 +3071,8 @@ public final class Env {
       "cpp_logging_conf\030\004 \001(\0132\027.oneflow.CppLogg",
       "ingConf\0223\n\023ctrl_bootstrap_conf\030\005 \001(\0132\026.o" +
       "neflow.BootstrapConf\022&\n\027is_default_physi" +
-      "cal_env\030\006 \001(\010:\005falseB\030\n\024org.oneflow.core" +
-      ".jobP\001"
+      "cal_env\030\006 \001(\010:\005falseB\026\n\024org.oneflow.core" +
+      ".job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -14,19 +14,5401 @@ public final class ResourceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CollectiveBoxingConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CollectiveBoxingConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * global
+     * </pre>
+     *
+     * <code>optional bool enable_fusion = 1 [default = true];</code>
+     */
+    boolean hasEnableFusion();
+    /**
+     * <pre>
+     * global
+     * </pre>
+     *
+     * <code>optional bool enable_fusion = 1 [default = true];</code>
+     */
+    boolean getEnableFusion();
+
+    /**
+     * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+     */
+    boolean hasNumCallbackThreads();
+    /**
+     * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+     */
+    long getNumCallbackThreads();
+
+    /**
+     * <pre>
+     * nccl
+     * </pre>
+     *
+     * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+     */
+    boolean hasNcclNumStreams();
+    /**
+     * <pre>
+     * nccl
+     * </pre>
+     *
+     * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+     */
+    long getNcclNumStreams();
+
+    /**
+     * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+     */
+    boolean hasNcclFusionThresholdMb();
+    /**
+     * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+     */
+    long getNcclFusionThresholdMb();
+
+    /**
+     * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+     */
+    boolean hasNcclFusionAllReduce();
+    /**
+     * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+     */
+    boolean getNcclFusionAllReduce();
+
+    /**
+     * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+     */
+    boolean hasNcclFusionReduceScatter();
+    /**
+     * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+     */
+    boolean getNcclFusionReduceScatter();
+
+    /**
+     * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+     */
+    boolean hasNcclFusionAllGather();
+    /**
+     * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+     */
+    boolean getNcclFusionAllGather();
+
+    /**
+     * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+     */
+    boolean hasNcclFusionReduce();
+    /**
+     * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+     */
+    boolean getNcclFusionReduce();
+
+    /**
+     * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+     */
+    boolean hasNcclFusionBroadcast();
+    /**
+     * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+     */
+    boolean getNcclFusionBroadcast();
+
+    /**
+     * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+     */
+    boolean hasNcclFusionAllReduceUseBuffer();
+    /**
+     * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+     */
+    boolean getNcclFusionAllReduceUseBuffer();
+
+    /**
+     * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+     */
+    boolean hasNcclFusionMaxOps();
+    /**
+     * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+     */
+    long getNcclFusionMaxOps();
+
+    /**
+     * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+     */
+    boolean hasNcclEnableAllToAll();
+    /**
+     * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+     */
+    boolean getNcclEnableAllToAll();
+
+    /**
+     * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+     */
+    boolean hasNcclEnableMixedFusion();
+    /**
+     * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+     */
+    boolean getNcclEnableMixedFusion();
+  }
+  /**
+   * Protobuf type {@code oneflow.CollectiveBoxingConf}
+   */
+  public  static final class CollectiveBoxingConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CollectiveBoxingConf)
+      CollectiveBoxingConfOrBuilder {
+    // Use CollectiveBoxingConf.newBuilder() to construct.
+    private CollectiveBoxingConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CollectiveBoxingConf() {
+      enableFusion_ = true;
+      numCallbackThreads_ = 4L;
+      ncclNumStreams_ = 1L;
+      ncclFusionThresholdMb_ = 16L;
+      ncclFusionAllReduce_ = true;
+      ncclFusionReduceScatter_ = false;
+      ncclFusionAllGather_ = false;
+      ncclFusionReduce_ = true;
+      ncclFusionBroadcast_ = true;
+      ncclFusionAllReduceUseBuffer_ = false;
+      ncclFusionMaxOps_ = 64L;
+      ncclEnableAllToAll_ = false;
+      ncclEnableMixedFusion_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CollectiveBoxingConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              enableFusion_ = input.readBool();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              numCallbackThreads_ = input.readInt64();
+              break;
+            }
+            case 808: {
+              bitField0_ |= 0x00000004;
+              ncclNumStreams_ = input.readInt64();
+              break;
+            }
+            case 816: {
+              bitField0_ |= 0x00000008;
+              ncclFusionThresholdMb_ = input.readInt64();
+              break;
+            }
+            case 824: {
+              bitField0_ |= 0x00000010;
+              ncclFusionAllReduce_ = input.readBool();
+              break;
+            }
+            case 832: {
+              bitField0_ |= 0x00000020;
+              ncclFusionReduceScatter_ = input.readBool();
+              break;
+            }
+            case 840: {
+              bitField0_ |= 0x00000040;
+              ncclFusionAllGather_ = input.readBool();
+              break;
+            }
+            case 848: {
+              bitField0_ |= 0x00000080;
+              ncclFusionReduce_ = input.readBool();
+              break;
+            }
+            case 856: {
+              bitField0_ |= 0x00000100;
+              ncclFusionBroadcast_ = input.readBool();
+              break;
+            }
+            case 864: {
+              bitField0_ |= 0x00000200;
+              ncclFusionAllReduceUseBuffer_ = input.readBool();
+              break;
+            }
+            case 872: {
+              bitField0_ |= 0x00000400;
+              ncclFusionMaxOps_ = input.readInt64();
+              break;
+            }
+            case 880: {
+              bitField0_ |= 0x00000800;
+              ncclEnableAllToAll_ = input.readBool();
+              break;
+            }
+            case 888: {
+              bitField0_ |= 0x00001000;
+              ncclEnableMixedFusion_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CollectiveBoxingConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CollectiveBoxingConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.class, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ENABLE_FUSION_FIELD_NUMBER = 1;
+    private boolean enableFusion_;
+    /**
+     * <pre>
+     * global
+     * </pre>
+     *
+     * <code>optional bool enable_fusion = 1 [default = true];</code>
+     */
+    public boolean hasEnableFusion() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <pre>
+     * global
+     * </pre>
+     *
+     * <code>optional bool enable_fusion = 1 [default = true];</code>
+     */
+    public boolean getEnableFusion() {
+      return enableFusion_;
+    }
+
+    public static final int NUM_CALLBACK_THREADS_FIELD_NUMBER = 2;
+    private long numCallbackThreads_;
+    /**
+     * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+     */
+    public boolean hasNumCallbackThreads() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+     */
+    public long getNumCallbackThreads() {
+      return numCallbackThreads_;
+    }
+
+    public static final int NCCL_NUM_STREAMS_FIELD_NUMBER = 101;
+    private long ncclNumStreams_;
+    /**
+     * <pre>
+     * nccl
+     * </pre>
+     *
+     * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+     */
+    public boolean hasNcclNumStreams() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <pre>
+     * nccl
+     * </pre>
+     *
+     * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+     */
+    public long getNcclNumStreams() {
+      return ncclNumStreams_;
+    }
+
+    public static final int NCCL_FUSION_THRESHOLD_MB_FIELD_NUMBER = 102;
+    private long ncclFusionThresholdMb_;
+    /**
+     * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+     */
+    public boolean hasNcclFusionThresholdMb() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+     */
+    public long getNcclFusionThresholdMb() {
+      return ncclFusionThresholdMb_;
+    }
+
+    public static final int NCCL_FUSION_ALL_REDUCE_FIELD_NUMBER = 103;
+    private boolean ncclFusionAllReduce_;
+    /**
+     * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+     */
+    public boolean hasNcclFusionAllReduce() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+     */
+    public boolean getNcclFusionAllReduce() {
+      return ncclFusionAllReduce_;
+    }
+
+    public static final int NCCL_FUSION_REDUCE_SCATTER_FIELD_NUMBER = 104;
+    private boolean ncclFusionReduceScatter_;
+    /**
+     * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+     */
+    public boolean hasNcclFusionReduceScatter() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+     */
+    public boolean getNcclFusionReduceScatter() {
+      return ncclFusionReduceScatter_;
+    }
+
+    public static final int NCCL_FUSION_ALL_GATHER_FIELD_NUMBER = 105;
+    private boolean ncclFusionAllGather_;
+    /**
+     * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+     */
+    public boolean hasNcclFusionAllGather() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+     */
+    public boolean getNcclFusionAllGather() {
+      return ncclFusionAllGather_;
+    }
+
+    public static final int NCCL_FUSION_REDUCE_FIELD_NUMBER = 106;
+    private boolean ncclFusionReduce_;
+    /**
+     * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+     */
+    public boolean hasNcclFusionReduce() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+     */
+    public boolean getNcclFusionReduce() {
+      return ncclFusionReduce_;
+    }
+
+    public static final int NCCL_FUSION_BROADCAST_FIELD_NUMBER = 107;
+    private boolean ncclFusionBroadcast_;
+    /**
+     * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+     */
+    public boolean hasNcclFusionBroadcast() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+     */
+    public boolean getNcclFusionBroadcast() {
+      return ncclFusionBroadcast_;
+    }
+
+    public static final int NCCL_FUSION_ALL_REDUCE_USE_BUFFER_FIELD_NUMBER = 108;
+    private boolean ncclFusionAllReduceUseBuffer_;
+    /**
+     * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+     */
+    public boolean hasNcclFusionAllReduceUseBuffer() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+     */
+    public boolean getNcclFusionAllReduceUseBuffer() {
+      return ncclFusionAllReduceUseBuffer_;
+    }
+
+    public static final int NCCL_FUSION_MAX_OPS_FIELD_NUMBER = 109;
+    private long ncclFusionMaxOps_;
+    /**
+     * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+     */
+    public boolean hasNcclFusionMaxOps() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+     */
+    public long getNcclFusionMaxOps() {
+      return ncclFusionMaxOps_;
+    }
+
+    public static final int NCCL_ENABLE_ALL_TO_ALL_FIELD_NUMBER = 110;
+    private boolean ncclEnableAllToAll_;
+    /**
+     * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+     */
+    public boolean hasNcclEnableAllToAll() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+     */
+    public boolean getNcclEnableAllToAll() {
+      return ncclEnableAllToAll_;
+    }
+
+    public static final int NCCL_ENABLE_MIXED_FUSION_FIELD_NUMBER = 111;
+    private boolean ncclEnableMixedFusion_;
+    /**
+     * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+     */
+    public boolean hasNcclEnableMixedFusion() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+     */
+    public boolean getNcclEnableMixedFusion() {
+      return ncclEnableMixedFusion_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, enableFusion_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, numCallbackThreads_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(101, ncclNumStreams_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(102, ncclFusionThresholdMb_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(103, ncclFusionAllReduce_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(104, ncclFusionReduceScatter_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBool(105, ncclFusionAllGather_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBool(106, ncclFusionReduce_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(107, ncclFusionBroadcast_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBool(108, ncclFusionAllReduceUseBuffer_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeInt64(109, ncclFusionMaxOps_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBool(110, ncclEnableAllToAll_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBool(111, ncclEnableMixedFusion_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableFusion_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, numCallbackThreads_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(101, ncclNumStreams_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(102, ncclFusionThresholdMb_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(103, ncclFusionAllReduce_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(104, ncclFusionReduceScatter_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(105, ncclFusionAllGather_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(106, ncclFusionReduce_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(107, ncclFusionBroadcast_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(108, ncclFusionAllReduceUseBuffer_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(109, ncclFusionMaxOps_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(110, ncclEnableAllToAll_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(111, ncclEnableMixedFusion_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf other = (org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf) obj;
+
+      boolean result = true;
+      result = result && (hasEnableFusion() == other.hasEnableFusion());
+      if (hasEnableFusion()) {
+        result = result && (getEnableFusion()
+            == other.getEnableFusion());
+      }
+      result = result && (hasNumCallbackThreads() == other.hasNumCallbackThreads());
+      if (hasNumCallbackThreads()) {
+        result = result && (getNumCallbackThreads()
+            == other.getNumCallbackThreads());
+      }
+      result = result && (hasNcclNumStreams() == other.hasNcclNumStreams());
+      if (hasNcclNumStreams()) {
+        result = result && (getNcclNumStreams()
+            == other.getNcclNumStreams());
+      }
+      result = result && (hasNcclFusionThresholdMb() == other.hasNcclFusionThresholdMb());
+      if (hasNcclFusionThresholdMb()) {
+        result = result && (getNcclFusionThresholdMb()
+            == other.getNcclFusionThresholdMb());
+      }
+      result = result && (hasNcclFusionAllReduce() == other.hasNcclFusionAllReduce());
+      if (hasNcclFusionAllReduce()) {
+        result = result && (getNcclFusionAllReduce()
+            == other.getNcclFusionAllReduce());
+      }
+      result = result && (hasNcclFusionReduceScatter() == other.hasNcclFusionReduceScatter());
+      if (hasNcclFusionReduceScatter()) {
+        result = result && (getNcclFusionReduceScatter()
+            == other.getNcclFusionReduceScatter());
+      }
+      result = result && (hasNcclFusionAllGather() == other.hasNcclFusionAllGather());
+      if (hasNcclFusionAllGather()) {
+        result = result && (getNcclFusionAllGather()
+            == other.getNcclFusionAllGather());
+      }
+      result = result && (hasNcclFusionReduce() == other.hasNcclFusionReduce());
+      if (hasNcclFusionReduce()) {
+        result = result && (getNcclFusionReduce()
+            == other.getNcclFusionReduce());
+      }
+      result = result && (hasNcclFusionBroadcast() == other.hasNcclFusionBroadcast());
+      if (hasNcclFusionBroadcast()) {
+        result = result && (getNcclFusionBroadcast()
+            == other.getNcclFusionBroadcast());
+      }
+      result = result && (hasNcclFusionAllReduceUseBuffer() == other.hasNcclFusionAllReduceUseBuffer());
+      if (hasNcclFusionAllReduceUseBuffer()) {
+        result = result && (getNcclFusionAllReduceUseBuffer()
+            == other.getNcclFusionAllReduceUseBuffer());
+      }
+      result = result && (hasNcclFusionMaxOps() == other.hasNcclFusionMaxOps());
+      if (hasNcclFusionMaxOps()) {
+        result = result && (getNcclFusionMaxOps()
+            == other.getNcclFusionMaxOps());
+      }
+      result = result && (hasNcclEnableAllToAll() == other.hasNcclEnableAllToAll());
+      if (hasNcclEnableAllToAll()) {
+        result = result && (getNcclEnableAllToAll()
+            == other.getNcclEnableAllToAll());
+      }
+      result = result && (hasNcclEnableMixedFusion() == other.hasNcclEnableMixedFusion());
+      if (hasNcclEnableMixedFusion()) {
+        result = result && (getNcclEnableMixedFusion()
+            == other.getNcclEnableMixedFusion());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEnableFusion()) {
+        hash = (37 * hash) + ENABLE_FUSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableFusion());
+      }
+      if (hasNumCallbackThreads()) {
+        hash = (37 * hash) + NUM_CALLBACK_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumCallbackThreads());
+      }
+      if (hasNcclNumStreams()) {
+        hash = (37 * hash) + NCCL_NUM_STREAMS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNcclNumStreams());
+      }
+      if (hasNcclFusionThresholdMb()) {
+        hash = (37 * hash) + NCCL_FUSION_THRESHOLD_MB_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNcclFusionThresholdMb());
+      }
+      if (hasNcclFusionAllReduce()) {
+        hash = (37 * hash) + NCCL_FUSION_ALL_REDUCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionAllReduce());
+      }
+      if (hasNcclFusionReduceScatter()) {
+        hash = (37 * hash) + NCCL_FUSION_REDUCE_SCATTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionReduceScatter());
+      }
+      if (hasNcclFusionAllGather()) {
+        hash = (37 * hash) + NCCL_FUSION_ALL_GATHER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionAllGather());
+      }
+      if (hasNcclFusionReduce()) {
+        hash = (37 * hash) + NCCL_FUSION_REDUCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionReduce());
+      }
+      if (hasNcclFusionBroadcast()) {
+        hash = (37 * hash) + NCCL_FUSION_BROADCAST_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionBroadcast());
+      }
+      if (hasNcclFusionAllReduceUseBuffer()) {
+        hash = (37 * hash) + NCCL_FUSION_ALL_REDUCE_USE_BUFFER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclFusionAllReduceUseBuffer());
+      }
+      if (hasNcclFusionMaxOps()) {
+        hash = (37 * hash) + NCCL_FUSION_MAX_OPS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNcclFusionMaxOps());
+      }
+      if (hasNcclEnableAllToAll()) {
+        hash = (37 * hash) + NCCL_ENABLE_ALL_TO_ALL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclEnableAllToAll());
+      }
+      if (hasNcclEnableMixedFusion()) {
+        hash = (37 * hash) + NCCL_ENABLE_MIXED_FUSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclEnableMixedFusion());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CollectiveBoxingConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CollectiveBoxingConf)
+        org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CollectiveBoxingConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CollectiveBoxingConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.class, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enableFusion_ = true;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numCallbackThreads_ = 4L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ncclNumStreams_ = 1L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ncclFusionThresholdMb_ = 16L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ncclFusionAllReduce_ = true;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        ncclFusionReduceScatter_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        ncclFusionAllGather_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        ncclFusionReduce_ = true;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        ncclFusionBroadcast_ = true;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        ncclFusionAllReduceUseBuffer_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        ncclFusionMaxOps_ = 64L;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        ncclEnableAllToAll_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        ncclEnableMixedFusion_ = false;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CollectiveBoxingConf_descriptor;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf build() {
+        org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf buildPartial() {
+        org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf result = new org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.enableFusion_ = enableFusion_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.numCallbackThreads_ = numCallbackThreads_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.ncclNumStreams_ = ncclNumStreams_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.ncclFusionThresholdMb_ = ncclFusionThresholdMb_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.ncclFusionAllReduce_ = ncclFusionAllReduce_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.ncclFusionReduceScatter_ = ncclFusionReduceScatter_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.ncclFusionAllGather_ = ncclFusionAllGather_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.ncclFusionReduce_ = ncclFusionReduce_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.ncclFusionBroadcast_ = ncclFusionBroadcast_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.ncclFusionAllReduceUseBuffer_ = ncclFusionAllReduceUseBuffer_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.ncclFusionMaxOps_ = ncclFusionMaxOps_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.ncclEnableAllToAll_ = ncclEnableAllToAll_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.ncclEnableMixedFusion_ = ncclEnableMixedFusion_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf) {
+          return mergeFrom((org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf other) {
+        if (other == org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance()) return this;
+        if (other.hasEnableFusion()) {
+          setEnableFusion(other.getEnableFusion());
+        }
+        if (other.hasNumCallbackThreads()) {
+          setNumCallbackThreads(other.getNumCallbackThreads());
+        }
+        if (other.hasNcclNumStreams()) {
+          setNcclNumStreams(other.getNcclNumStreams());
+        }
+        if (other.hasNcclFusionThresholdMb()) {
+          setNcclFusionThresholdMb(other.getNcclFusionThresholdMb());
+        }
+        if (other.hasNcclFusionAllReduce()) {
+          setNcclFusionAllReduce(other.getNcclFusionAllReduce());
+        }
+        if (other.hasNcclFusionReduceScatter()) {
+          setNcclFusionReduceScatter(other.getNcclFusionReduceScatter());
+        }
+        if (other.hasNcclFusionAllGather()) {
+          setNcclFusionAllGather(other.getNcclFusionAllGather());
+        }
+        if (other.hasNcclFusionReduce()) {
+          setNcclFusionReduce(other.getNcclFusionReduce());
+        }
+        if (other.hasNcclFusionBroadcast()) {
+          setNcclFusionBroadcast(other.getNcclFusionBroadcast());
+        }
+        if (other.hasNcclFusionAllReduceUseBuffer()) {
+          setNcclFusionAllReduceUseBuffer(other.getNcclFusionAllReduceUseBuffer());
+        }
+        if (other.hasNcclFusionMaxOps()) {
+          setNcclFusionMaxOps(other.getNcclFusionMaxOps());
+        }
+        if (other.hasNcclEnableAllToAll()) {
+          setNcclEnableAllToAll(other.getNcclEnableAllToAll());
+        }
+        if (other.hasNcclEnableMixedFusion()) {
+          setNcclEnableMixedFusion(other.getNcclEnableMixedFusion());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableFusion_ = true;
+      /**
+       * <pre>
+       * global
+       * </pre>
+       *
+       * <code>optional bool enable_fusion = 1 [default = true];</code>
+       */
+      public boolean hasEnableFusion() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <pre>
+       * global
+       * </pre>
+       *
+       * <code>optional bool enable_fusion = 1 [default = true];</code>
+       */
+      public boolean getEnableFusion() {
+        return enableFusion_;
+      }
+      /**
+       * <pre>
+       * global
+       * </pre>
+       *
+       * <code>optional bool enable_fusion = 1 [default = true];</code>
+       */
+      public Builder setEnableFusion(boolean value) {
+        bitField0_ |= 0x00000001;
+        enableFusion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * global
+       * </pre>
+       *
+       * <code>optional bool enable_fusion = 1 [default = true];</code>
+       */
+      public Builder clearEnableFusion() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableFusion_ = true;
+        onChanged();
+        return this;
+      }
+
+      private long numCallbackThreads_ = 4L;
+      /**
+       * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+       */
+      public boolean hasNumCallbackThreads() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+       */
+      public long getNumCallbackThreads() {
+        return numCallbackThreads_;
+      }
+      /**
+       * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+       */
+      public Builder setNumCallbackThreads(long value) {
+        bitField0_ |= 0x00000002;
+        numCallbackThreads_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 num_callback_threads = 2 [default = 4];</code>
+       */
+      public Builder clearNumCallbackThreads() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numCallbackThreads_ = 4L;
+        onChanged();
+        return this;
+      }
+
+      private long ncclNumStreams_ = 1L;
+      /**
+       * <pre>
+       * nccl
+       * </pre>
+       *
+       * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+       */
+      public boolean hasNcclNumStreams() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <pre>
+       * nccl
+       * </pre>
+       *
+       * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+       */
+      public long getNcclNumStreams() {
+        return ncclNumStreams_;
+      }
+      /**
+       * <pre>
+       * nccl
+       * </pre>
+       *
+       * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+       */
+      public Builder setNcclNumStreams(long value) {
+        bitField0_ |= 0x00000004;
+        ncclNumStreams_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * nccl
+       * </pre>
+       *
+       * <code>optional int64 nccl_num_streams = 101 [default = 1];</code>
+       */
+      public Builder clearNcclNumStreams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ncclNumStreams_ = 1L;
+        onChanged();
+        return this;
+      }
+
+      private long ncclFusionThresholdMb_ = 16L;
+      /**
+       * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+       */
+      public boolean hasNcclFusionThresholdMb() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+       */
+      public long getNcclFusionThresholdMb() {
+        return ncclFusionThresholdMb_;
+      }
+      /**
+       * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+       */
+      public Builder setNcclFusionThresholdMb(long value) {
+        bitField0_ |= 0x00000008;
+        ncclFusionThresholdMb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 nccl_fusion_threshold_mb = 102 [default = 16];</code>
+       */
+      public Builder clearNcclFusionThresholdMb() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ncclFusionThresholdMb_ = 16L;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionAllReduce_ = true;
+      /**
+       * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+       */
+      public boolean hasNcclFusionAllReduce() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+       */
+      public boolean getNcclFusionAllReduce() {
+        return ncclFusionAllReduce_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+       */
+      public Builder setNcclFusionAllReduce(boolean value) {
+        bitField0_ |= 0x00000010;
+        ncclFusionAllReduce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce = 103 [default = true];</code>
+       */
+      public Builder clearNcclFusionAllReduce() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        ncclFusionAllReduce_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionReduceScatter_ ;
+      /**
+       * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+       */
+      public boolean hasNcclFusionReduceScatter() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+       */
+      public boolean getNcclFusionReduceScatter() {
+        return ncclFusionReduceScatter_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+       */
+      public Builder setNcclFusionReduceScatter(boolean value) {
+        bitField0_ |= 0x00000020;
+        ncclFusionReduceScatter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce_scatter = 104 [default = false];</code>
+       */
+      public Builder clearNcclFusionReduceScatter() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        ncclFusionReduceScatter_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionAllGather_ ;
+      /**
+       * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+       */
+      public boolean hasNcclFusionAllGather() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+       */
+      public boolean getNcclFusionAllGather() {
+        return ncclFusionAllGather_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+       */
+      public Builder setNcclFusionAllGather(boolean value) {
+        bitField0_ |= 0x00000040;
+        ncclFusionAllGather_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_gather = 105 [default = false];</code>
+       */
+      public Builder clearNcclFusionAllGather() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        ncclFusionAllGather_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionReduce_ = true;
+      /**
+       * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+       */
+      public boolean hasNcclFusionReduce() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+       */
+      public boolean getNcclFusionReduce() {
+        return ncclFusionReduce_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+       */
+      public Builder setNcclFusionReduce(boolean value) {
+        bitField0_ |= 0x00000080;
+        ncclFusionReduce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_reduce = 106 [default = true];</code>
+       */
+      public Builder clearNcclFusionReduce() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        ncclFusionReduce_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionBroadcast_ = true;
+      /**
+       * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+       */
+      public boolean hasNcclFusionBroadcast() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+       */
+      public boolean getNcclFusionBroadcast() {
+        return ncclFusionBroadcast_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+       */
+      public Builder setNcclFusionBroadcast(boolean value) {
+        bitField0_ |= 0x00000100;
+        ncclFusionBroadcast_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_broadcast = 107 [default = true];</code>
+       */
+      public Builder clearNcclFusionBroadcast() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        ncclFusionBroadcast_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclFusionAllReduceUseBuffer_ ;
+      /**
+       * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+       */
+      public boolean hasNcclFusionAllReduceUseBuffer() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+       */
+      public boolean getNcclFusionAllReduceUseBuffer() {
+        return ncclFusionAllReduceUseBuffer_;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+       */
+      public Builder setNcclFusionAllReduceUseBuffer(boolean value) {
+        bitField0_ |= 0x00000200;
+        ncclFusionAllReduceUseBuffer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_fusion_all_reduce_use_buffer = 108 [default = false];</code>
+       */
+      public Builder clearNcclFusionAllReduceUseBuffer() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        ncclFusionAllReduceUseBuffer_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long ncclFusionMaxOps_ = 64L;
+      /**
+       * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+       */
+      public boolean hasNcclFusionMaxOps() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+       */
+      public long getNcclFusionMaxOps() {
+        return ncclFusionMaxOps_;
+      }
+      /**
+       * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+       */
+      public Builder setNcclFusionMaxOps(long value) {
+        bitField0_ |= 0x00000400;
+        ncclFusionMaxOps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 nccl_fusion_max_ops = 109 [default = 64];</code>
+       */
+      public Builder clearNcclFusionMaxOps() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        ncclFusionMaxOps_ = 64L;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclEnableAllToAll_ ;
+      /**
+       * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+       */
+      public boolean hasNcclEnableAllToAll() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+       */
+      public boolean getNcclEnableAllToAll() {
+        return ncclEnableAllToAll_;
+      }
+      /**
+       * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+       */
+      public Builder setNcclEnableAllToAll(boolean value) {
+        bitField0_ |= 0x00000800;
+        ncclEnableAllToAll_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_enable_all_to_all = 110 [default = false];</code>
+       */
+      public Builder clearNcclEnableAllToAll() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        ncclEnableAllToAll_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclEnableMixedFusion_ ;
+      /**
+       * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+       */
+      public boolean hasNcclEnableMixedFusion() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+       */
+      public boolean getNcclEnableMixedFusion() {
+        return ncclEnableMixedFusion_;
+      }
+      /**
+       * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+       */
+      public Builder setNcclEnableMixedFusion(boolean value) {
+        bitField0_ |= 0x00001000;
+        ncclEnableMixedFusion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool nccl_enable_mixed_fusion = 111 [default = false];</code>
+       */
+      public Builder clearNcclEnableMixedFusion() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        ncclEnableMixedFusion_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CollectiveBoxingConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CollectiveBoxingConf)
+    private static final org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf();
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CollectiveBoxingConf>
+        PARSER = new com.google.protobuf.AbstractParser<CollectiveBoxingConf>() {
+      public CollectiveBoxingConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CollectiveBoxingConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CollectiveBoxingConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CollectiveBoxingConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CudnnConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CudnnConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool enable_cudnn = 1 [default = true];</code>
+     */
+    boolean hasEnableCudnn();
+    /**
+     * <code>optional bool enable_cudnn = 1 [default = true];</code>
+     */
+    boolean getEnableCudnn();
+
+    /**
+     * <pre>
+     * 1GByte
+     * </pre>
+     *
+     * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+     */
+    boolean hasCudnnBufLimitMbyte();
+    /**
+     * <pre>
+     * 1GByte
+     * </pre>
+     *
+     * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+     */
+    long getCudnnBufLimitMbyte();
+
+    /**
+     * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+     */
+    boolean hasCudnnConvForceFwdAlgo();
+    /**
+     * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+     */
+    int getCudnnConvForceFwdAlgo();
+
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+     */
+    boolean hasCudnnConvForceBwdDataAlgo();
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+     */
+    int getCudnnConvForceBwdDataAlgo();
+
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+     */
+    boolean hasCudnnConvForceBwdFilterAlgo();
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+     */
+    int getCudnnConvForceBwdFilterAlgo();
+
+    /**
+     * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+     */
+    boolean hasCudnnConvHeuristicSearchAlgo();
+    /**
+     * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+     */
+    boolean getCudnnConvHeuristicSearchAlgo();
+
+    /**
+     * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+     */
+    boolean hasCudnnConvUseDeterministicAlgoOnly();
+    /**
+     * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+     */
+    boolean getCudnnConvUseDeterministicAlgoOnly();
+
+    /**
+     * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+     */
+    boolean hasEnableCudnnFusedNormalizationAddRelu();
+    /**
+     * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+     */
+    boolean getEnableCudnnFusedNormalizationAddRelu();
+
+    /**
+     * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+     */
+    boolean hasCudnnConvEnablePseudoHalf();
+    /**
+     * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+     */
+    boolean getCudnnConvEnablePseudoHalf();
+  }
+  /**
+   * Protobuf type {@code oneflow.CudnnConfig}
+   */
+  public  static final class CudnnConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CudnnConfig)
+      CudnnConfigOrBuilder {
+    // Use CudnnConfig.newBuilder() to construct.
+    private CudnnConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CudnnConfig() {
+      enableCudnn_ = true;
+      cudnnBufLimitMbyte_ = 1024L;
+      cudnnConvForceFwdAlgo_ = 0;
+      cudnnConvForceBwdDataAlgo_ = 0;
+      cudnnConvForceBwdFilterAlgo_ = 0;
+      cudnnConvHeuristicSearchAlgo_ = true;
+      cudnnConvUseDeterministicAlgoOnly_ = false;
+      enableCudnnFusedNormalizationAddRelu_ = false;
+      cudnnConvEnablePseudoHalf_ = true;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CudnnConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              enableCudnn_ = input.readBool();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              cudnnBufLimitMbyte_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              cudnnConvForceFwdAlgo_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              cudnnConvForceBwdDataAlgo_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              cudnnConvForceBwdFilterAlgo_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              cudnnConvHeuristicSearchAlgo_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              cudnnConvUseDeterministicAlgoOnly_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              enableCudnnFusedNormalizationAddRelu_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              cudnnConvEnablePseudoHalf_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CudnnConfig_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CudnnConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ResourceOuterClass.CudnnConfig.class, org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ENABLE_CUDNN_FIELD_NUMBER = 1;
+    private boolean enableCudnn_;
+    /**
+     * <code>optional bool enable_cudnn = 1 [default = true];</code>
+     */
+    public boolean hasEnableCudnn() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional bool enable_cudnn = 1 [default = true];</code>
+     */
+    public boolean getEnableCudnn() {
+      return enableCudnn_;
+    }
+
+    public static final int CUDNN_BUF_LIMIT_MBYTE_FIELD_NUMBER = 2;
+    private long cudnnBufLimitMbyte_;
+    /**
+     * <pre>
+     * 1GByte
+     * </pre>
+     *
+     * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+     */
+    public boolean hasCudnnBufLimitMbyte() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <pre>
+     * 1GByte
+     * </pre>
+     *
+     * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+     */
+    public long getCudnnBufLimitMbyte() {
+      return cudnnBufLimitMbyte_;
+    }
+
+    public static final int CUDNN_CONV_FORCE_FWD_ALGO_FIELD_NUMBER = 3;
+    private int cudnnConvForceFwdAlgo_;
+    /**
+     * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+     */
+    public boolean hasCudnnConvForceFwdAlgo() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+     */
+    public int getCudnnConvForceFwdAlgo() {
+      return cudnnConvForceFwdAlgo_;
+    }
+
+    public static final int CUDNN_CONV_FORCE_BWD_DATA_ALGO_FIELD_NUMBER = 4;
+    private int cudnnConvForceBwdDataAlgo_;
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+     */
+    public boolean hasCudnnConvForceBwdDataAlgo() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+     */
+    public int getCudnnConvForceBwdDataAlgo() {
+      return cudnnConvForceBwdDataAlgo_;
+    }
+
+    public static final int CUDNN_CONV_FORCE_BWD_FILTER_ALGO_FIELD_NUMBER = 5;
+    private int cudnnConvForceBwdFilterAlgo_;
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+     */
+    public boolean hasCudnnConvForceBwdFilterAlgo() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+     */
+    public int getCudnnConvForceBwdFilterAlgo() {
+      return cudnnConvForceBwdFilterAlgo_;
+    }
+
+    public static final int CUDNN_CONV_HEURISTIC_SEARCH_ALGO_FIELD_NUMBER = 6;
+    private boolean cudnnConvHeuristicSearchAlgo_;
+    /**
+     * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+     */
+    public boolean hasCudnnConvHeuristicSearchAlgo() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+     */
+    public boolean getCudnnConvHeuristicSearchAlgo() {
+      return cudnnConvHeuristicSearchAlgo_;
+    }
+
+    public static final int CUDNN_CONV_USE_DETERMINISTIC_ALGO_ONLY_FIELD_NUMBER = 7;
+    private boolean cudnnConvUseDeterministicAlgoOnly_;
+    /**
+     * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+     */
+    public boolean hasCudnnConvUseDeterministicAlgoOnly() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+     */
+    public boolean getCudnnConvUseDeterministicAlgoOnly() {
+      return cudnnConvUseDeterministicAlgoOnly_;
+    }
+
+    public static final int ENABLE_CUDNN_FUSED_NORMALIZATION_ADD_RELU_FIELD_NUMBER = 8;
+    private boolean enableCudnnFusedNormalizationAddRelu_;
+    /**
+     * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+     */
+    public boolean hasEnableCudnnFusedNormalizationAddRelu() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+     */
+    public boolean getEnableCudnnFusedNormalizationAddRelu() {
+      return enableCudnnFusedNormalizationAddRelu_;
+    }
+
+    public static final int CUDNN_CONV_ENABLE_PSEUDO_HALF_FIELD_NUMBER = 9;
+    private boolean cudnnConvEnablePseudoHalf_;
+    /**
+     * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+     */
+    public boolean hasCudnnConvEnablePseudoHalf() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+     */
+    public boolean getCudnnConvEnablePseudoHalf() {
+      return cudnnConvEnablePseudoHalf_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, enableCudnn_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, cudnnBufLimitMbyte_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, cudnnConvForceFwdAlgo_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, cudnnConvForceBwdDataAlgo_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, cudnnConvForceBwdFilterAlgo_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(6, cudnnConvHeuristicSearchAlgo_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBool(7, cudnnConvUseDeterministicAlgoOnly_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBool(8, enableCudnnFusedNormalizationAddRelu_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(9, cudnnConvEnablePseudoHalf_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableCudnn_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, cudnnBufLimitMbyte_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, cudnnConvForceFwdAlgo_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, cudnnConvForceBwdDataAlgo_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, cudnnConvForceBwdFilterAlgo_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, cudnnConvHeuristicSearchAlgo_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, cudnnConvUseDeterministicAlgoOnly_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, enableCudnnFusedNormalizationAddRelu_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, cudnnConvEnablePseudoHalf_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ResourceOuterClass.CudnnConfig)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ResourceOuterClass.CudnnConfig other = (org.oneflow.core.job.ResourceOuterClass.CudnnConfig) obj;
+
+      boolean result = true;
+      result = result && (hasEnableCudnn() == other.hasEnableCudnn());
+      if (hasEnableCudnn()) {
+        result = result && (getEnableCudnn()
+            == other.getEnableCudnn());
+      }
+      result = result && (hasCudnnBufLimitMbyte() == other.hasCudnnBufLimitMbyte());
+      if (hasCudnnBufLimitMbyte()) {
+        result = result && (getCudnnBufLimitMbyte()
+            == other.getCudnnBufLimitMbyte());
+      }
+      result = result && (hasCudnnConvForceFwdAlgo() == other.hasCudnnConvForceFwdAlgo());
+      if (hasCudnnConvForceFwdAlgo()) {
+        result = result && (getCudnnConvForceFwdAlgo()
+            == other.getCudnnConvForceFwdAlgo());
+      }
+      result = result && (hasCudnnConvForceBwdDataAlgo() == other.hasCudnnConvForceBwdDataAlgo());
+      if (hasCudnnConvForceBwdDataAlgo()) {
+        result = result && (getCudnnConvForceBwdDataAlgo()
+            == other.getCudnnConvForceBwdDataAlgo());
+      }
+      result = result && (hasCudnnConvForceBwdFilterAlgo() == other.hasCudnnConvForceBwdFilterAlgo());
+      if (hasCudnnConvForceBwdFilterAlgo()) {
+        result = result && (getCudnnConvForceBwdFilterAlgo()
+            == other.getCudnnConvForceBwdFilterAlgo());
+      }
+      result = result && (hasCudnnConvHeuristicSearchAlgo() == other.hasCudnnConvHeuristicSearchAlgo());
+      if (hasCudnnConvHeuristicSearchAlgo()) {
+        result = result && (getCudnnConvHeuristicSearchAlgo()
+            == other.getCudnnConvHeuristicSearchAlgo());
+      }
+      result = result && (hasCudnnConvUseDeterministicAlgoOnly() == other.hasCudnnConvUseDeterministicAlgoOnly());
+      if (hasCudnnConvUseDeterministicAlgoOnly()) {
+        result = result && (getCudnnConvUseDeterministicAlgoOnly()
+            == other.getCudnnConvUseDeterministicAlgoOnly());
+      }
+      result = result && (hasEnableCudnnFusedNormalizationAddRelu() == other.hasEnableCudnnFusedNormalizationAddRelu());
+      if (hasEnableCudnnFusedNormalizationAddRelu()) {
+        result = result && (getEnableCudnnFusedNormalizationAddRelu()
+            == other.getEnableCudnnFusedNormalizationAddRelu());
+      }
+      result = result && (hasCudnnConvEnablePseudoHalf() == other.hasCudnnConvEnablePseudoHalf());
+      if (hasCudnnConvEnablePseudoHalf()) {
+        result = result && (getCudnnConvEnablePseudoHalf()
+            == other.getCudnnConvEnablePseudoHalf());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEnableCudnn()) {
+        hash = (37 * hash) + ENABLE_CUDNN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableCudnn());
+      }
+      if (hasCudnnBufLimitMbyte()) {
+        hash = (37 * hash) + CUDNN_BUF_LIMIT_MBYTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCudnnBufLimitMbyte());
+      }
+      if (hasCudnnConvForceFwdAlgo()) {
+        hash = (37 * hash) + CUDNN_CONV_FORCE_FWD_ALGO_FIELD_NUMBER;
+        hash = (53 * hash) + getCudnnConvForceFwdAlgo();
+      }
+      if (hasCudnnConvForceBwdDataAlgo()) {
+        hash = (37 * hash) + CUDNN_CONV_FORCE_BWD_DATA_ALGO_FIELD_NUMBER;
+        hash = (53 * hash) + getCudnnConvForceBwdDataAlgo();
+      }
+      if (hasCudnnConvForceBwdFilterAlgo()) {
+        hash = (37 * hash) + CUDNN_CONV_FORCE_BWD_FILTER_ALGO_FIELD_NUMBER;
+        hash = (53 * hash) + getCudnnConvForceBwdFilterAlgo();
+      }
+      if (hasCudnnConvHeuristicSearchAlgo()) {
+        hash = (37 * hash) + CUDNN_CONV_HEURISTIC_SEARCH_ALGO_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCudnnConvHeuristicSearchAlgo());
+      }
+      if (hasCudnnConvUseDeterministicAlgoOnly()) {
+        hash = (37 * hash) + CUDNN_CONV_USE_DETERMINISTIC_ALGO_ONLY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCudnnConvUseDeterministicAlgoOnly());
+      }
+      if (hasEnableCudnnFusedNormalizationAddRelu()) {
+        hash = (37 * hash) + ENABLE_CUDNN_FUSED_NORMALIZATION_ADD_RELU_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableCudnnFusedNormalizationAddRelu());
+      }
+      if (hasCudnnConvEnablePseudoHalf()) {
+        hash = (37 * hash) + CUDNN_CONV_ENABLE_PSEUDO_HALF_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCudnnConvEnablePseudoHalf());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ResourceOuterClass.CudnnConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CudnnConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CudnnConfig)
+        org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CudnnConfig_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CudnnConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ResourceOuterClass.CudnnConfig.class, org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ResourceOuterClass.CudnnConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enableCudnn_ = true;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cudnnBufLimitMbyte_ = 1024L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cudnnConvForceFwdAlgo_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cudnnConvForceBwdDataAlgo_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        cudnnConvForceBwdFilterAlgo_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        cudnnConvHeuristicSearchAlgo_ = true;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        cudnnConvUseDeterministicAlgoOnly_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        enableCudnnFusedNormalizationAddRelu_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        cudnnConvEnablePseudoHalf_ = true;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_CudnnConfig_descriptor;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfig getDefaultInstanceForType() {
+        return org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfig build() {
+        org.oneflow.core.job.ResourceOuterClass.CudnnConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfig buildPartial() {
+        org.oneflow.core.job.ResourceOuterClass.CudnnConfig result = new org.oneflow.core.job.ResourceOuterClass.CudnnConfig(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.enableCudnn_ = enableCudnn_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.cudnnBufLimitMbyte_ = cudnnBufLimitMbyte_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.cudnnConvForceFwdAlgo_ = cudnnConvForceFwdAlgo_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.cudnnConvForceBwdDataAlgo_ = cudnnConvForceBwdDataAlgo_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.cudnnConvForceBwdFilterAlgo_ = cudnnConvForceBwdFilterAlgo_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.cudnnConvHeuristicSearchAlgo_ = cudnnConvHeuristicSearchAlgo_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.cudnnConvUseDeterministicAlgoOnly_ = cudnnConvUseDeterministicAlgoOnly_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.enableCudnnFusedNormalizationAddRelu_ = enableCudnnFusedNormalizationAddRelu_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.cudnnConvEnablePseudoHalf_ = cudnnConvEnablePseudoHalf_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ResourceOuterClass.CudnnConfig) {
+          return mergeFrom((org.oneflow.core.job.ResourceOuterClass.CudnnConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ResourceOuterClass.CudnnConfig other) {
+        if (other == org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance()) return this;
+        if (other.hasEnableCudnn()) {
+          setEnableCudnn(other.getEnableCudnn());
+        }
+        if (other.hasCudnnBufLimitMbyte()) {
+          setCudnnBufLimitMbyte(other.getCudnnBufLimitMbyte());
+        }
+        if (other.hasCudnnConvForceFwdAlgo()) {
+          setCudnnConvForceFwdAlgo(other.getCudnnConvForceFwdAlgo());
+        }
+        if (other.hasCudnnConvForceBwdDataAlgo()) {
+          setCudnnConvForceBwdDataAlgo(other.getCudnnConvForceBwdDataAlgo());
+        }
+        if (other.hasCudnnConvForceBwdFilterAlgo()) {
+          setCudnnConvForceBwdFilterAlgo(other.getCudnnConvForceBwdFilterAlgo());
+        }
+        if (other.hasCudnnConvHeuristicSearchAlgo()) {
+          setCudnnConvHeuristicSearchAlgo(other.getCudnnConvHeuristicSearchAlgo());
+        }
+        if (other.hasCudnnConvUseDeterministicAlgoOnly()) {
+          setCudnnConvUseDeterministicAlgoOnly(other.getCudnnConvUseDeterministicAlgoOnly());
+        }
+        if (other.hasEnableCudnnFusedNormalizationAddRelu()) {
+          setEnableCudnnFusedNormalizationAddRelu(other.getEnableCudnnFusedNormalizationAddRelu());
+        }
+        if (other.hasCudnnConvEnablePseudoHalf()) {
+          setCudnnConvEnablePseudoHalf(other.getCudnnConvEnablePseudoHalf());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ResourceOuterClass.CudnnConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ResourceOuterClass.CudnnConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableCudnn_ = true;
+      /**
+       * <code>optional bool enable_cudnn = 1 [default = true];</code>
+       */
+      public boolean hasEnableCudnn() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool enable_cudnn = 1 [default = true];</code>
+       */
+      public boolean getEnableCudnn() {
+        return enableCudnn_;
+      }
+      /**
+       * <code>optional bool enable_cudnn = 1 [default = true];</code>
+       */
+      public Builder setEnableCudnn(boolean value) {
+        bitField0_ |= 0x00000001;
+        enableCudnn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_cudnn = 1 [default = true];</code>
+       */
+      public Builder clearEnableCudnn() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableCudnn_ = true;
+        onChanged();
+        return this;
+      }
+
+      private long cudnnBufLimitMbyte_ = 1024L;
+      /**
+       * <pre>
+       * 1GByte
+       * </pre>
+       *
+       * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+       */
+      public boolean hasCudnnBufLimitMbyte() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <pre>
+       * 1GByte
+       * </pre>
+       *
+       * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+       */
+      public long getCudnnBufLimitMbyte() {
+        return cudnnBufLimitMbyte_;
+      }
+      /**
+       * <pre>
+       * 1GByte
+       * </pre>
+       *
+       * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+       */
+      public Builder setCudnnBufLimitMbyte(long value) {
+        bitField0_ |= 0x00000002;
+        cudnnBufLimitMbyte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 1GByte
+       * </pre>
+       *
+       * <code>optional int64 cudnn_buf_limit_mbyte = 2 [default = 1024];</code>
+       */
+      public Builder clearCudnnBufLimitMbyte() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cudnnBufLimitMbyte_ = 1024L;
+        onChanged();
+        return this;
+      }
+
+      private int cudnnConvForceFwdAlgo_ ;
+      /**
+       * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+       */
+      public boolean hasCudnnConvForceFwdAlgo() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+       */
+      public int getCudnnConvForceFwdAlgo() {
+        return cudnnConvForceFwdAlgo_;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+       */
+      public Builder setCudnnConvForceFwdAlgo(int value) {
+        bitField0_ |= 0x00000004;
+        cudnnConvForceFwdAlgo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_fwd_algo = 3;</code>
+       */
+      public Builder clearCudnnConvForceFwdAlgo() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cudnnConvForceFwdAlgo_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int cudnnConvForceBwdDataAlgo_ ;
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+       */
+      public boolean hasCudnnConvForceBwdDataAlgo() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+       */
+      public int getCudnnConvForceBwdDataAlgo() {
+        return cudnnConvForceBwdDataAlgo_;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+       */
+      public Builder setCudnnConvForceBwdDataAlgo(int value) {
+        bitField0_ |= 0x00000008;
+        cudnnConvForceBwdDataAlgo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_data_algo = 4;</code>
+       */
+      public Builder clearCudnnConvForceBwdDataAlgo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        cudnnConvForceBwdDataAlgo_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int cudnnConvForceBwdFilterAlgo_ ;
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+       */
+      public boolean hasCudnnConvForceBwdFilterAlgo() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+       */
+      public int getCudnnConvForceBwdFilterAlgo() {
+        return cudnnConvForceBwdFilterAlgo_;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+       */
+      public Builder setCudnnConvForceBwdFilterAlgo(int value) {
+        bitField0_ |= 0x00000010;
+        cudnnConvForceBwdFilterAlgo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cudnn_conv_force_bwd_filter_algo = 5;</code>
+       */
+      public Builder clearCudnnConvForceBwdFilterAlgo() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        cudnnConvForceBwdFilterAlgo_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean cudnnConvHeuristicSearchAlgo_ = true;
+      /**
+       * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+       */
+      public boolean hasCudnnConvHeuristicSearchAlgo() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+       */
+      public boolean getCudnnConvHeuristicSearchAlgo() {
+        return cudnnConvHeuristicSearchAlgo_;
+      }
+      /**
+       * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+       */
+      public Builder setCudnnConvHeuristicSearchAlgo(boolean value) {
+        bitField0_ |= 0x00000020;
+        cudnnConvHeuristicSearchAlgo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool cudnn_conv_heuristic_search_algo = 6 [default = true];</code>
+       */
+      public Builder clearCudnnConvHeuristicSearchAlgo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        cudnnConvHeuristicSearchAlgo_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean cudnnConvUseDeterministicAlgoOnly_ ;
+      /**
+       * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+       */
+      public boolean hasCudnnConvUseDeterministicAlgoOnly() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+       */
+      public boolean getCudnnConvUseDeterministicAlgoOnly() {
+        return cudnnConvUseDeterministicAlgoOnly_;
+      }
+      /**
+       * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+       */
+      public Builder setCudnnConvUseDeterministicAlgoOnly(boolean value) {
+        bitField0_ |= 0x00000040;
+        cudnnConvUseDeterministicAlgoOnly_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool cudnn_conv_use_deterministic_algo_only = 7 [default = false];</code>
+       */
+      public Builder clearCudnnConvUseDeterministicAlgoOnly() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        cudnnConvUseDeterministicAlgoOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableCudnnFusedNormalizationAddRelu_ ;
+      /**
+       * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+       */
+      public boolean hasEnableCudnnFusedNormalizationAddRelu() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+       */
+      public boolean getEnableCudnnFusedNormalizationAddRelu() {
+        return enableCudnnFusedNormalizationAddRelu_;
+      }
+      /**
+       * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+       */
+      public Builder setEnableCudnnFusedNormalizationAddRelu(boolean value) {
+        bitField0_ |= 0x00000080;
+        enableCudnnFusedNormalizationAddRelu_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_cudnn_fused_normalization_add_relu = 8;</code>
+       */
+      public Builder clearEnableCudnnFusedNormalizationAddRelu() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        enableCudnnFusedNormalizationAddRelu_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean cudnnConvEnablePseudoHalf_ = true;
+      /**
+       * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+       */
+      public boolean hasCudnnConvEnablePseudoHalf() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+       */
+      public boolean getCudnnConvEnablePseudoHalf() {
+        return cudnnConvEnablePseudoHalf_;
+      }
+      /**
+       * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+       */
+      public Builder setCudnnConvEnablePseudoHalf(boolean value) {
+        bitField0_ |= 0x00000100;
+        cudnnConvEnablePseudoHalf_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool cudnn_conv_enable_pseudo_half = 9 [default = true];</code>
+       */
+      public Builder clearCudnnConvEnablePseudoHalf() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        cudnnConvEnablePseudoHalf_ = true;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CudnnConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CudnnConfig)
+    private static final org.oneflow.core.job.ResourceOuterClass.CudnnConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ResourceOuterClass.CudnnConfig();
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.CudnnConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CudnnConfig>
+        PARSER = new com.google.protobuf.AbstractParser<CudnnConfig>() {
+      public CudnnConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CudnnConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CudnnConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CudnnConfig> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ResourceOuterClass.CudnnConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.Resource)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 machine_num = 1 [default = 0];</code>
+     */
+    boolean hasMachineNum();
+    /**
+     * <code>optional int32 machine_num = 1 [default = 0];</code>
+     */
+    int getMachineNum();
+
+    /**
+     * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+     */
+    boolean hasGpuDeviceNum();
+    /**
+     * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+     */
+    int getGpuDeviceNum();
+
+    /**
+     * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+     */
+    boolean hasCpuDeviceNum();
+    /**
+     * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+     */
+    int getCpuDeviceNum();
+
+    /**
+     * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+     */
+    boolean hasCommNetWorkerNum();
+    /**
+     * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+     */
+    int getCommNetWorkerNum();
+
+    /**
+     * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+     */
+    boolean hasMaxMdsaveWorkerNum();
+    /**
+     * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+     */
+    int getMaxMdsaveWorkerNum();
+
+    /**
+     * <code>optional bool use_rdma = 8 [default = false];</code>
+     */
+    boolean hasUseRdma();
+    /**
+     * <code>optional bool use_rdma = 8 [default = false];</code>
+     */
+    boolean getUseRdma();
+
+    /**
+     * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+     */
+    boolean hasRdmaMemBlockMbyte();
+    /**
+     * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+     */
+    long getRdmaMemBlockMbyte();
+
+    /**
+     * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+     */
+    boolean hasRdmaRecvMsgBufMbyte();
+    /**
+     * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+     */
+    long getRdmaRecvMsgBufMbyte();
+
+    /**
+     * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+     */
+    boolean hasReservedHostMemMbyte();
+    /**
+     * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+     */
+    long getReservedHostMemMbyte();
+
+    /**
+     * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+     */
+    boolean hasReservedDeviceMemMbyte();
+    /**
+     * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+     */
+    long getReservedDeviceMemMbyte();
+
+    /**
+     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+     */
+    boolean hasEnableNumaAwareCudaMallocHost();
+    /**
+     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+     */
+    boolean getEnableNumaAwareCudaMallocHost();
+
+    /**
+     * <code>optional int32 compute_thread_pool_size = 15;</code>
+     */
+    boolean hasComputeThreadPoolSize();
+    /**
+     * <code>optional int32 compute_thread_pool_size = 15;</code>
+     */
+    int getComputeThreadPoolSize();
+
+    /**
+     * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+     */
+    boolean hasThreadEnableLocalMessageQueue();
+    /**
+     * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+     */
+    boolean getThreadEnableLocalMessageQueue();
+
+    /**
+     * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+     */
+    boolean hasEnableThreadLocalCache();
+    /**
+     * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+     */
+    boolean getEnableThreadLocalCache();
+
+    /**
+     * <pre>
+     * 64M
+     * </pre>
+     *
+     * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+     */
+    boolean hasThreadLocalCacheMaxSize();
+    /**
+     * <pre>
+     * 64M
+     * </pre>
+     *
+     * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+     */
+    long getThreadLocalCacheMaxSize();
+
+    /**
+     * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+     */
+    boolean hasEnableDebugMode();
+    /**
+     * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+     */
+    boolean getEnableDebugMode();
+
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    boolean hasCollectiveBoxingConf();
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf();
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder();
+
+    /**
+     * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+     */
+    boolean hasEnableTensorFloat32Compute();
+    /**
+     * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+     */
+    boolean getEnableTensorFloat32Compute();
+
+    /**
+     * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+     */
+    boolean hasEnableMemChainMerge();
+    /**
+     * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+     */
+    boolean getEnableMemChainMerge();
+
+    /**
+     * <pre>
+     * NOTE(chengcheng) to reuse nccl memory and speed up
+     * </pre>
+     *
+     * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+     */
+    boolean hasNcclUseComputeStream();
+    /**
+     * <pre>
+     * NOTE(chengcheng) to reuse nccl memory and speed up
+     * </pre>
+     *
+     * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+     */
+    boolean getNcclUseComputeStream();
+
+    /**
+     * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+     */
+    boolean hasDisableGroupBoxingByDstParallel();
+    /**
+     * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+     */
+    boolean getDisableGroupBoxingByDstParallel();
+
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    boolean hasCudnnConf();
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CudnnConfig getCudnnConf();
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder getCudnnConfOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.Resource}
+   */
+  public  static final class Resource extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.Resource)
+      ResourceOrBuilder {
+    // Use Resource.newBuilder() to construct.
+    private Resource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Resource() {
+      machineNum_ = 0;
+      gpuDeviceNum_ = 0;
+      cpuDeviceNum_ = 0;
+      commNetWorkerNum_ = 4;
+      maxMdsaveWorkerNum_ = 64;
+      useRdma_ = false;
+      rdmaMemBlockMbyte_ = 8L;
+      rdmaRecvMsgBufMbyte_ = 6L;
+      reservedHostMemMbyte_ = 500L;
+      reservedDeviceMemMbyte_ = 500L;
+      enableNumaAwareCudaMallocHost_ = false;
+      computeThreadPoolSize_ = 0;
+      threadEnableLocalMessageQueue_ = false;
+      enableThreadLocalCache_ = true;
+      threadLocalCacheMaxSize_ = 67108864L;
+      enableDebugMode_ = false;
+      enableTensorFloat32Compute_ = true;
+      enableMemChainMerge_ = true;
+      ncclUseComputeStream_ = false;
+      disableGroupBoxingByDstParallel_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Resource(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              machineNum_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000002;
+              gpuDeviceNum_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000004;
+              cpuDeviceNum_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000008;
+              commNetWorkerNum_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000010;
+              maxMdsaveWorkerNum_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000020;
+              useRdma_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000040;
+              rdmaMemBlockMbyte_ = input.readUInt64();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000080;
+              rdmaRecvMsgBufMbyte_ = input.readUInt64();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000100;
+              reservedHostMemMbyte_ = input.readUInt64();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000200;
+              reservedDeviceMemMbyte_ = input.readUInt64();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000400;
+              enableNumaAwareCudaMallocHost_ = input.readBool();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00000800;
+              computeThreadPoolSize_ = input.readInt32();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00002000;
+              enableThreadLocalCache_ = input.readBool();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00004000;
+              threadLocalCacheMaxSize_ = input.readInt64();
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00008000;
+              enableDebugMode_ = input.readBool();
+              break;
+            }
+            case 154: {
+              org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00010000) == 0x00010000)) {
+                subBuilder = collectiveBoxingConf_.toBuilder();
+              }
+              collectiveBoxingConf_ = input.readMessage(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(collectiveBoxingConf_);
+                collectiveBoxingConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00010000;
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00020000;
+              enableTensorFloat32Compute_ = input.readBool();
+              break;
+            }
+            case 168: {
+              bitField0_ |= 0x00040000;
+              enableMemChainMerge_ = input.readBool();
+              break;
+            }
+            case 240: {
+              bitField0_ |= 0x00080000;
+              ncclUseComputeStream_ = input.readBool();
+              break;
+            }
+            case 248: {
+              bitField0_ |= 0x00100000;
+              disableGroupBoxingByDstParallel_ = input.readBool();
+              break;
+            }
+            case 258: {
+              org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder subBuilder = null;
+              if (((bitField0_ & 0x00200000) == 0x00200000)) {
+                subBuilder = cudnnConf_.toBuilder();
+              }
+              cudnnConf_ = input.readMessage(org.oneflow.core.job.ResourceOuterClass.CudnnConfig.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cudnnConf_);
+                cudnnConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00200000;
+              break;
+            }
+            case 824: {
+              bitField0_ |= 0x00001000;
+              threadEnableLocalMessageQueue_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_Resource_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_Resource_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ResourceOuterClass.Resource.class, org.oneflow.core.job.ResourceOuterClass.Resource.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MACHINE_NUM_FIELD_NUMBER = 1;
+    private int machineNum_;
+    /**
+     * <code>optional int32 machine_num = 1 [default = 0];</code>
+     */
+    public boolean hasMachineNum() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 machine_num = 1 [default = 0];</code>
+     */
+    public int getMachineNum() {
+      return machineNum_;
+    }
+
+    public static final int GPU_DEVICE_NUM_FIELD_NUMBER = 4;
+    private int gpuDeviceNum_;
+    /**
+     * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+     */
+    public boolean hasGpuDeviceNum() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+     */
+    public int getGpuDeviceNum() {
+      return gpuDeviceNum_;
+    }
+
+    public static final int CPU_DEVICE_NUM_FIELD_NUMBER = 5;
+    private int cpuDeviceNum_;
+    /**
+     * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+     */
+    public boolean hasCpuDeviceNum() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+     */
+    public int getCpuDeviceNum() {
+      return cpuDeviceNum_;
+    }
+
+    public static final int COMM_NET_WORKER_NUM_FIELD_NUMBER = 6;
+    private int commNetWorkerNum_;
+    /**
+     * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+     */
+    public boolean hasCommNetWorkerNum() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+     */
+    public int getCommNetWorkerNum() {
+      return commNetWorkerNum_;
+    }
+
+    public static final int MAX_MDSAVE_WORKER_NUM_FIELD_NUMBER = 7;
+    private int maxMdsaveWorkerNum_;
+    /**
+     * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+     */
+    public boolean hasMaxMdsaveWorkerNum() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+     */
+    public int getMaxMdsaveWorkerNum() {
+      return maxMdsaveWorkerNum_;
+    }
+
+    public static final int USE_RDMA_FIELD_NUMBER = 8;
+    private boolean useRdma_;
+    /**
+     * <code>optional bool use_rdma = 8 [default = false];</code>
+     */
+    public boolean hasUseRdma() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bool use_rdma = 8 [default = false];</code>
+     */
+    public boolean getUseRdma() {
+      return useRdma_;
+    }
+
+    public static final int RDMA_MEM_BLOCK_MBYTE_FIELD_NUMBER = 9;
+    private long rdmaMemBlockMbyte_;
+    /**
+     * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+     */
+    public boolean hasRdmaMemBlockMbyte() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+     */
+    public long getRdmaMemBlockMbyte() {
+      return rdmaMemBlockMbyte_;
+    }
+
+    public static final int RDMA_RECV_MSG_BUF_MBYTE_FIELD_NUMBER = 10;
+    private long rdmaRecvMsgBufMbyte_;
+    /**
+     * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+     */
+    public boolean hasRdmaRecvMsgBufMbyte() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+     */
+    public long getRdmaRecvMsgBufMbyte() {
+      return rdmaRecvMsgBufMbyte_;
+    }
+
+    public static final int RESERVED_HOST_MEM_MBYTE_FIELD_NUMBER = 12;
+    private long reservedHostMemMbyte_;
+    /**
+     * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+     */
+    public boolean hasReservedHostMemMbyte() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+     */
+    public long getReservedHostMemMbyte() {
+      return reservedHostMemMbyte_;
+    }
+
+    public static final int RESERVED_DEVICE_MEM_MBYTE_FIELD_NUMBER = 13;
+    private long reservedDeviceMemMbyte_;
+    /**
+     * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+     */
+    public boolean hasReservedDeviceMemMbyte() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+     */
+    public long getReservedDeviceMemMbyte() {
+      return reservedDeviceMemMbyte_;
+    }
+
+    public static final int ENABLE_NUMA_AWARE_CUDA_MALLOC_HOST_FIELD_NUMBER = 14;
+    private boolean enableNumaAwareCudaMallocHost_;
+    /**
+     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+     */
+    public boolean hasEnableNumaAwareCudaMallocHost() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+     */
+    public boolean getEnableNumaAwareCudaMallocHost() {
+      return enableNumaAwareCudaMallocHost_;
+    }
+
+    public static final int COMPUTE_THREAD_POOL_SIZE_FIELD_NUMBER = 15;
+    private int computeThreadPoolSize_;
+    /**
+     * <code>optional int32 compute_thread_pool_size = 15;</code>
+     */
+    public boolean hasComputeThreadPoolSize() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional int32 compute_thread_pool_size = 15;</code>
+     */
+    public int getComputeThreadPoolSize() {
+      return computeThreadPoolSize_;
+    }
+
+    public static final int THREAD_ENABLE_LOCAL_MESSAGE_QUEUE_FIELD_NUMBER = 103;
+    private boolean threadEnableLocalMessageQueue_;
+    /**
+     * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+     */
+    public boolean hasThreadEnableLocalMessageQueue() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+     */
+    public boolean getThreadEnableLocalMessageQueue() {
+      return threadEnableLocalMessageQueue_;
+    }
+
+    public static final int ENABLE_THREAD_LOCAL_CACHE_FIELD_NUMBER = 16;
+    private boolean enableThreadLocalCache_;
+    /**
+     * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+     */
+    public boolean hasEnableThreadLocalCache() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+     */
+    public boolean getEnableThreadLocalCache() {
+      return enableThreadLocalCache_;
+    }
+
+    public static final int THREAD_LOCAL_CACHE_MAX_SIZE_FIELD_NUMBER = 17;
+    private long threadLocalCacheMaxSize_;
+    /**
+     * <pre>
+     * 64M
+     * </pre>
+     *
+     * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+     */
+    public boolean hasThreadLocalCacheMaxSize() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <pre>
+     * 64M
+     * </pre>
+     *
+     * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+     */
+    public long getThreadLocalCacheMaxSize() {
+      return threadLocalCacheMaxSize_;
+    }
+
+    public static final int ENABLE_DEBUG_MODE_FIELD_NUMBER = 18;
+    private boolean enableDebugMode_;
+    /**
+     * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+     */
+    public boolean hasEnableDebugMode() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+     */
+    public boolean getEnableDebugMode() {
+      return enableDebugMode_;
+    }
+
+    public static final int COLLECTIVE_BOXING_CONF_FIELD_NUMBER = 19;
+    private org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf collectiveBoxingConf_;
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public boolean hasCollectiveBoxingConf() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf() {
+      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
+    }
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder() {
+      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
+    }
+
+    public static final int ENABLE_TENSOR_FLOAT_32_COMPUTE_FIELD_NUMBER = 20;
+    private boolean enableTensorFloat32Compute_;
+    /**
+     * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+     */
+    public boolean hasEnableTensorFloat32Compute() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+     */
+    public boolean getEnableTensorFloat32Compute() {
+      return enableTensorFloat32Compute_;
+    }
+
+    public static final int ENABLE_MEM_CHAIN_MERGE_FIELD_NUMBER = 21;
+    private boolean enableMemChainMerge_;
+    /**
+     * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+     */
+    public boolean hasEnableMemChainMerge() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+     */
+    public boolean getEnableMemChainMerge() {
+      return enableMemChainMerge_;
+    }
+
+    public static final int NCCL_USE_COMPUTE_STREAM_FIELD_NUMBER = 30;
+    private boolean ncclUseComputeStream_;
+    /**
+     * <pre>
+     * NOTE(chengcheng) to reuse nccl memory and speed up
+     * </pre>
+     *
+     * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+     */
+    public boolean hasNcclUseComputeStream() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng) to reuse nccl memory and speed up
+     * </pre>
+     *
+     * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+     */
+    public boolean getNcclUseComputeStream() {
+      return ncclUseComputeStream_;
+    }
+
+    public static final int DISABLE_GROUP_BOXING_BY_DST_PARALLEL_FIELD_NUMBER = 31;
+    private boolean disableGroupBoxingByDstParallel_;
+    /**
+     * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+     */
+    public boolean hasDisableGroupBoxingByDstParallel() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+     */
+    public boolean getDisableGroupBoxingByDstParallel() {
+      return disableGroupBoxingByDstParallel_;
+    }
+
+    public static final int CUDNN_CONF_FIELD_NUMBER = 32;
+    private org.oneflow.core.job.ResourceOuterClass.CudnnConfig cudnnConf_;
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    public boolean hasCudnnConf() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CudnnConfig getCudnnConf() {
+      return cudnnConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance() : cudnnConf_;
+    }
+    /**
+     * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder getCudnnConfOrBuilder() {
+      return cudnnConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance() : cudnnConf_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, machineNum_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(4, gpuDeviceNum_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(5, cpuDeviceNum_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(6, commNetWorkerNum_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(7, maxMdsaveWorkerNum_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(8, useRdma_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt64(9, rdmaMemBlockMbyte_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeUInt64(10, rdmaRecvMsgBufMbyte_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeUInt64(12, reservedHostMemMbyte_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeUInt64(13, reservedDeviceMemMbyte_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBool(14, enableNumaAwareCudaMallocHost_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeInt32(15, computeThreadPoolSize_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBool(16, enableThreadLocalCache_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeInt64(17, threadLocalCacheMaxSize_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeBool(18, enableDebugMode_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeMessage(19, getCollectiveBoxingConf());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBool(20, enableTensorFloat32Compute_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeBool(21, enableMemChainMerge_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeBool(30, ncclUseComputeStream_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeBool(31, disableGroupBoxingByDstParallel_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeMessage(32, getCudnnConf());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBool(103, threadEnableLocalMessageQueue_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, machineNum_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, gpuDeviceNum_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, cpuDeviceNum_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, commNetWorkerNum_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, maxMdsaveWorkerNum_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, useRdma_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, rdmaMemBlockMbyte_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, rdmaRecvMsgBufMbyte_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, reservedHostMemMbyte_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, reservedDeviceMemMbyte_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, enableNumaAwareCudaMallocHost_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, computeThreadPoolSize_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, enableThreadLocalCache_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(17, threadLocalCacheMaxSize_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, enableDebugMode_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getCollectiveBoxingConf());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, enableTensorFloat32Compute_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(21, enableMemChainMerge_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(30, ncclUseComputeStream_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(31, disableGroupBoxingByDstParallel_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, getCudnnConf());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(103, threadEnableLocalMessageQueue_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ResourceOuterClass.Resource)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ResourceOuterClass.Resource other = (org.oneflow.core.job.ResourceOuterClass.Resource) obj;
+
+      boolean result = true;
+      result = result && (hasMachineNum() == other.hasMachineNum());
+      if (hasMachineNum()) {
+        result = result && (getMachineNum()
+            == other.getMachineNum());
+      }
+      result = result && (hasGpuDeviceNum() == other.hasGpuDeviceNum());
+      if (hasGpuDeviceNum()) {
+        result = result && (getGpuDeviceNum()
+            == other.getGpuDeviceNum());
+      }
+      result = result && (hasCpuDeviceNum() == other.hasCpuDeviceNum());
+      if (hasCpuDeviceNum()) {
+        result = result && (getCpuDeviceNum()
+            == other.getCpuDeviceNum());
+      }
+      result = result && (hasCommNetWorkerNum() == other.hasCommNetWorkerNum());
+      if (hasCommNetWorkerNum()) {
+        result = result && (getCommNetWorkerNum()
+            == other.getCommNetWorkerNum());
+      }
+      result = result && (hasMaxMdsaveWorkerNum() == other.hasMaxMdsaveWorkerNum());
+      if (hasMaxMdsaveWorkerNum()) {
+        result = result && (getMaxMdsaveWorkerNum()
+            == other.getMaxMdsaveWorkerNum());
+      }
+      result = result && (hasUseRdma() == other.hasUseRdma());
+      if (hasUseRdma()) {
+        result = result && (getUseRdma()
+            == other.getUseRdma());
+      }
+      result = result && (hasRdmaMemBlockMbyte() == other.hasRdmaMemBlockMbyte());
+      if (hasRdmaMemBlockMbyte()) {
+        result = result && (getRdmaMemBlockMbyte()
+            == other.getRdmaMemBlockMbyte());
+      }
+      result = result && (hasRdmaRecvMsgBufMbyte() == other.hasRdmaRecvMsgBufMbyte());
+      if (hasRdmaRecvMsgBufMbyte()) {
+        result = result && (getRdmaRecvMsgBufMbyte()
+            == other.getRdmaRecvMsgBufMbyte());
+      }
+      result = result && (hasReservedHostMemMbyte() == other.hasReservedHostMemMbyte());
+      if (hasReservedHostMemMbyte()) {
+        result = result && (getReservedHostMemMbyte()
+            == other.getReservedHostMemMbyte());
+      }
+      result = result && (hasReservedDeviceMemMbyte() == other.hasReservedDeviceMemMbyte());
+      if (hasReservedDeviceMemMbyte()) {
+        result = result && (getReservedDeviceMemMbyte()
+            == other.getReservedDeviceMemMbyte());
+      }
+      result = result && (hasEnableNumaAwareCudaMallocHost() == other.hasEnableNumaAwareCudaMallocHost());
+      if (hasEnableNumaAwareCudaMallocHost()) {
+        result = result && (getEnableNumaAwareCudaMallocHost()
+            == other.getEnableNumaAwareCudaMallocHost());
+      }
+      result = result && (hasComputeThreadPoolSize() == other.hasComputeThreadPoolSize());
+      if (hasComputeThreadPoolSize()) {
+        result = result && (getComputeThreadPoolSize()
+            == other.getComputeThreadPoolSize());
+      }
+      result = result && (hasThreadEnableLocalMessageQueue() == other.hasThreadEnableLocalMessageQueue());
+      if (hasThreadEnableLocalMessageQueue()) {
+        result = result && (getThreadEnableLocalMessageQueue()
+            == other.getThreadEnableLocalMessageQueue());
+      }
+      result = result && (hasEnableThreadLocalCache() == other.hasEnableThreadLocalCache());
+      if (hasEnableThreadLocalCache()) {
+        result = result && (getEnableThreadLocalCache()
+            == other.getEnableThreadLocalCache());
+      }
+      result = result && (hasThreadLocalCacheMaxSize() == other.hasThreadLocalCacheMaxSize());
+      if (hasThreadLocalCacheMaxSize()) {
+        result = result && (getThreadLocalCacheMaxSize()
+            == other.getThreadLocalCacheMaxSize());
+      }
+      result = result && (hasEnableDebugMode() == other.hasEnableDebugMode());
+      if (hasEnableDebugMode()) {
+        result = result && (getEnableDebugMode()
+            == other.getEnableDebugMode());
+      }
+      result = result && (hasCollectiveBoxingConf() == other.hasCollectiveBoxingConf());
+      if (hasCollectiveBoxingConf()) {
+        result = result && getCollectiveBoxingConf()
+            .equals(other.getCollectiveBoxingConf());
+      }
+      result = result && (hasEnableTensorFloat32Compute() == other.hasEnableTensorFloat32Compute());
+      if (hasEnableTensorFloat32Compute()) {
+        result = result && (getEnableTensorFloat32Compute()
+            == other.getEnableTensorFloat32Compute());
+      }
+      result = result && (hasEnableMemChainMerge() == other.hasEnableMemChainMerge());
+      if (hasEnableMemChainMerge()) {
+        result = result && (getEnableMemChainMerge()
+            == other.getEnableMemChainMerge());
+      }
+      result = result && (hasNcclUseComputeStream() == other.hasNcclUseComputeStream());
+      if (hasNcclUseComputeStream()) {
+        result = result && (getNcclUseComputeStream()
+            == other.getNcclUseComputeStream());
+      }
+      result = result && (hasDisableGroupBoxingByDstParallel() == other.hasDisableGroupBoxingByDstParallel());
+      if (hasDisableGroupBoxingByDstParallel()) {
+        result = result && (getDisableGroupBoxingByDstParallel()
+            == other.getDisableGroupBoxingByDstParallel());
+      }
+      result = result && (hasCudnnConf() == other.hasCudnnConf());
+      if (hasCudnnConf()) {
+        result = result && getCudnnConf()
+            .equals(other.getCudnnConf());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMachineNum()) {
+        hash = (37 * hash) + MACHINE_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getMachineNum();
+      }
+      if (hasGpuDeviceNum()) {
+        hash = (37 * hash) + GPU_DEVICE_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getGpuDeviceNum();
+      }
+      if (hasCpuDeviceNum()) {
+        hash = (37 * hash) + CPU_DEVICE_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getCpuDeviceNum();
+      }
+      if (hasCommNetWorkerNum()) {
+        hash = (37 * hash) + COMM_NET_WORKER_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getCommNetWorkerNum();
+      }
+      if (hasMaxMdsaveWorkerNum()) {
+        hash = (37 * hash) + MAX_MDSAVE_WORKER_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxMdsaveWorkerNum();
+      }
+      if (hasUseRdma()) {
+        hash = (37 * hash) + USE_RDMA_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUseRdma());
+      }
+      if (hasRdmaMemBlockMbyte()) {
+        hash = (37 * hash) + RDMA_MEM_BLOCK_MBYTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRdmaMemBlockMbyte());
+      }
+      if (hasRdmaRecvMsgBufMbyte()) {
+        hash = (37 * hash) + RDMA_RECV_MSG_BUF_MBYTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRdmaRecvMsgBufMbyte());
+      }
+      if (hasReservedHostMemMbyte()) {
+        hash = (37 * hash) + RESERVED_HOST_MEM_MBYTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getReservedHostMemMbyte());
+      }
+      if (hasReservedDeviceMemMbyte()) {
+        hash = (37 * hash) + RESERVED_DEVICE_MEM_MBYTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getReservedDeviceMemMbyte());
+      }
+      if (hasEnableNumaAwareCudaMallocHost()) {
+        hash = (37 * hash) + ENABLE_NUMA_AWARE_CUDA_MALLOC_HOST_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableNumaAwareCudaMallocHost());
+      }
+      if (hasComputeThreadPoolSize()) {
+        hash = (37 * hash) + COMPUTE_THREAD_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getComputeThreadPoolSize();
+      }
+      if (hasThreadEnableLocalMessageQueue()) {
+        hash = (37 * hash) + THREAD_ENABLE_LOCAL_MESSAGE_QUEUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getThreadEnableLocalMessageQueue());
+      }
+      if (hasEnableThreadLocalCache()) {
+        hash = (37 * hash) + ENABLE_THREAD_LOCAL_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableThreadLocalCache());
+      }
+      if (hasThreadLocalCacheMaxSize()) {
+        hash = (37 * hash) + THREAD_LOCAL_CACHE_MAX_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getThreadLocalCacheMaxSize());
+      }
+      if (hasEnableDebugMode()) {
+        hash = (37 * hash) + ENABLE_DEBUG_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableDebugMode());
+      }
+      if (hasCollectiveBoxingConf()) {
+        hash = (37 * hash) + COLLECTIVE_BOXING_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getCollectiveBoxingConf().hashCode();
+      }
+      if (hasEnableTensorFloat32Compute()) {
+        hash = (37 * hash) + ENABLE_TENSOR_FLOAT_32_COMPUTE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableTensorFloat32Compute());
+      }
+      if (hasEnableMemChainMerge()) {
+        hash = (37 * hash) + ENABLE_MEM_CHAIN_MERGE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableMemChainMerge());
+      }
+      if (hasNcclUseComputeStream()) {
+        hash = (37 * hash) + NCCL_USE_COMPUTE_STREAM_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNcclUseComputeStream());
+      }
+      if (hasDisableGroupBoxingByDstParallel()) {
+        hash = (37 * hash) + DISABLE_GROUP_BOXING_BY_DST_PARALLEL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDisableGroupBoxingByDstParallel());
+      }
+      if (hasCudnnConf()) {
+        hash = (37 * hash) + CUDNN_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getCudnnConf().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ResourceOuterClass.Resource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ResourceOuterClass.Resource prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.Resource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.Resource)
+        org.oneflow.core.job.ResourceOuterClass.ResourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_Resource_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_Resource_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ResourceOuterClass.Resource.class, org.oneflow.core.job.ResourceOuterClass.Resource.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ResourceOuterClass.Resource.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectiveBoxingConfFieldBuilder();
+          getCudnnConfFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        machineNum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gpuDeviceNum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cpuDeviceNum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        commNetWorkerNum_ = 4;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        maxMdsaveWorkerNum_ = 64;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        useRdma_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        rdmaMemBlockMbyte_ = 8L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        rdmaRecvMsgBufMbyte_ = 6L;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        reservedHostMemMbyte_ = 500L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        reservedDeviceMemMbyte_ = 500L;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        enableNumaAwareCudaMallocHost_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        computeThreadPoolSize_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        threadEnableLocalMessageQueue_ = false;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        enableThreadLocalCache_ = true;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        threadLocalCacheMaxSize_ = 67108864L;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        enableDebugMode_ = false;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        if (collectiveBoxingConfBuilder_ == null) {
+          collectiveBoxingConf_ = null;
+        } else {
+          collectiveBoxingConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00010000);
+        enableTensorFloat32Compute_ = true;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        enableMemChainMerge_ = true;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        ncclUseComputeStream_ = false;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        disableGroupBoxingByDstParallel_ = false;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        if (cudnnConfBuilder_ == null) {
+          cudnnConf_ = null;
+        } else {
+          cudnnConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00200000);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ResourceOuterClass.internal_static_oneflow_Resource_descriptor;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.Resource getDefaultInstanceForType() {
+        return org.oneflow.core.job.ResourceOuterClass.Resource.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.Resource build() {
+        org.oneflow.core.job.ResourceOuterClass.Resource result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ResourceOuterClass.Resource buildPartial() {
+        org.oneflow.core.job.ResourceOuterClass.Resource result = new org.oneflow.core.job.ResourceOuterClass.Resource(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.machineNum_ = machineNum_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.gpuDeviceNum_ = gpuDeviceNum_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.cpuDeviceNum_ = cpuDeviceNum_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.commNetWorkerNum_ = commNetWorkerNum_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.maxMdsaveWorkerNum_ = maxMdsaveWorkerNum_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.useRdma_ = useRdma_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.rdmaMemBlockMbyte_ = rdmaMemBlockMbyte_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.rdmaRecvMsgBufMbyte_ = rdmaRecvMsgBufMbyte_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.reservedHostMemMbyte_ = reservedHostMemMbyte_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.reservedDeviceMemMbyte_ = reservedDeviceMemMbyte_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.enableNumaAwareCudaMallocHost_ = enableNumaAwareCudaMallocHost_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.computeThreadPoolSize_ = computeThreadPoolSize_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.threadEnableLocalMessageQueue_ = threadEnableLocalMessageQueue_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.enableThreadLocalCache_ = enableThreadLocalCache_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.threadLocalCacheMaxSize_ = threadLocalCacheMaxSize_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.enableDebugMode_ = enableDebugMode_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        if (collectiveBoxingConfBuilder_ == null) {
+          result.collectiveBoxingConf_ = collectiveBoxingConf_;
+        } else {
+          result.collectiveBoxingConf_ = collectiveBoxingConfBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.enableTensorFloat32Compute_ = enableTensorFloat32Compute_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.enableMemChainMerge_ = enableMemChainMerge_;
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.ncclUseComputeStream_ = ncclUseComputeStream_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.disableGroupBoxingByDstParallel_ = disableGroupBoxingByDstParallel_;
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        if (cudnnConfBuilder_ == null) {
+          result.cudnnConf_ = cudnnConf_;
+        } else {
+          result.cudnnConf_ = cudnnConfBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ResourceOuterClass.Resource) {
+          return mergeFrom((org.oneflow.core.job.ResourceOuterClass.Resource)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ResourceOuterClass.Resource other) {
+        if (other == org.oneflow.core.job.ResourceOuterClass.Resource.getDefaultInstance()) return this;
+        if (other.hasMachineNum()) {
+          setMachineNum(other.getMachineNum());
+        }
+        if (other.hasGpuDeviceNum()) {
+          setGpuDeviceNum(other.getGpuDeviceNum());
+        }
+        if (other.hasCpuDeviceNum()) {
+          setCpuDeviceNum(other.getCpuDeviceNum());
+        }
+        if (other.hasCommNetWorkerNum()) {
+          setCommNetWorkerNum(other.getCommNetWorkerNum());
+        }
+        if (other.hasMaxMdsaveWorkerNum()) {
+          setMaxMdsaveWorkerNum(other.getMaxMdsaveWorkerNum());
+        }
+        if (other.hasUseRdma()) {
+          setUseRdma(other.getUseRdma());
+        }
+        if (other.hasRdmaMemBlockMbyte()) {
+          setRdmaMemBlockMbyte(other.getRdmaMemBlockMbyte());
+        }
+        if (other.hasRdmaRecvMsgBufMbyte()) {
+          setRdmaRecvMsgBufMbyte(other.getRdmaRecvMsgBufMbyte());
+        }
+        if (other.hasReservedHostMemMbyte()) {
+          setReservedHostMemMbyte(other.getReservedHostMemMbyte());
+        }
+        if (other.hasReservedDeviceMemMbyte()) {
+          setReservedDeviceMemMbyte(other.getReservedDeviceMemMbyte());
+        }
+        if (other.hasEnableNumaAwareCudaMallocHost()) {
+          setEnableNumaAwareCudaMallocHost(other.getEnableNumaAwareCudaMallocHost());
+        }
+        if (other.hasComputeThreadPoolSize()) {
+          setComputeThreadPoolSize(other.getComputeThreadPoolSize());
+        }
+        if (other.hasThreadEnableLocalMessageQueue()) {
+          setThreadEnableLocalMessageQueue(other.getThreadEnableLocalMessageQueue());
+        }
+        if (other.hasEnableThreadLocalCache()) {
+          setEnableThreadLocalCache(other.getEnableThreadLocalCache());
+        }
+        if (other.hasThreadLocalCacheMaxSize()) {
+          setThreadLocalCacheMaxSize(other.getThreadLocalCacheMaxSize());
+        }
+        if (other.hasEnableDebugMode()) {
+          setEnableDebugMode(other.getEnableDebugMode());
+        }
+        if (other.hasCollectiveBoxingConf()) {
+          mergeCollectiveBoxingConf(other.getCollectiveBoxingConf());
+        }
+        if (other.hasEnableTensorFloat32Compute()) {
+          setEnableTensorFloat32Compute(other.getEnableTensorFloat32Compute());
+        }
+        if (other.hasEnableMemChainMerge()) {
+          setEnableMemChainMerge(other.getEnableMemChainMerge());
+        }
+        if (other.hasNcclUseComputeStream()) {
+          setNcclUseComputeStream(other.getNcclUseComputeStream());
+        }
+        if (other.hasDisableGroupBoxingByDstParallel()) {
+          setDisableGroupBoxingByDstParallel(other.getDisableGroupBoxingByDstParallel());
+        }
+        if (other.hasCudnnConf()) {
+          mergeCudnnConf(other.getCudnnConf());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ResourceOuterClass.Resource parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ResourceOuterClass.Resource) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int machineNum_ ;
+      /**
+       * <code>optional int32 machine_num = 1 [default = 0];</code>
+       */
+      public boolean hasMachineNum() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 machine_num = 1 [default = 0];</code>
+       */
+      public int getMachineNum() {
+        return machineNum_;
+      }
+      /**
+       * <code>optional int32 machine_num = 1 [default = 0];</code>
+       */
+      public Builder setMachineNum(int value) {
+        bitField0_ |= 0x00000001;
+        machineNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 machine_num = 1 [default = 0];</code>
+       */
+      public Builder clearMachineNum() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        machineNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int gpuDeviceNum_ ;
+      /**
+       * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+       */
+      public boolean hasGpuDeviceNum() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+       */
+      public int getGpuDeviceNum() {
+        return gpuDeviceNum_;
+      }
+      /**
+       * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+       */
+      public Builder setGpuDeviceNum(int value) {
+        bitField0_ |= 0x00000002;
+        gpuDeviceNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 gpu_device_num = 4 [default = 0];</code>
+       */
+      public Builder clearGpuDeviceNum() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gpuDeviceNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int cpuDeviceNum_ ;
+      /**
+       * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+       */
+      public boolean hasCpuDeviceNum() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+       */
+      public int getCpuDeviceNum() {
+        return cpuDeviceNum_;
+      }
+      /**
+       * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+       */
+      public Builder setCpuDeviceNum(int value) {
+        bitField0_ |= 0x00000004;
+        cpuDeviceNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cpu_device_num = 5 [default = 0];</code>
+       */
+      public Builder clearCpuDeviceNum() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cpuDeviceNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int commNetWorkerNum_ = 4;
+      /**
+       * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+       */
+      public boolean hasCommNetWorkerNum() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+       */
+      public int getCommNetWorkerNum() {
+        return commNetWorkerNum_;
+      }
+      /**
+       * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+       */
+      public Builder setCommNetWorkerNum(int value) {
+        bitField0_ |= 0x00000008;
+        commNetWorkerNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 comm_net_worker_num = 6 [default = 4];</code>
+       */
+      public Builder clearCommNetWorkerNum() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        commNetWorkerNum_ = 4;
+        onChanged();
+        return this;
+      }
+
+      private int maxMdsaveWorkerNum_ = 64;
+      /**
+       * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+       */
+      public boolean hasMaxMdsaveWorkerNum() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+       */
+      public int getMaxMdsaveWorkerNum() {
+        return maxMdsaveWorkerNum_;
+      }
+      /**
+       * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+       */
+      public Builder setMaxMdsaveWorkerNum(int value) {
+        bitField0_ |= 0x00000010;
+        maxMdsaveWorkerNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 max_mdsave_worker_num = 7 [default = 64];</code>
+       */
+      public Builder clearMaxMdsaveWorkerNum() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        maxMdsaveWorkerNum_ = 64;
+        onChanged();
+        return this;
+      }
+
+      private boolean useRdma_ ;
+      /**
+       * <code>optional bool use_rdma = 8 [default = false];</code>
+       */
+      public boolean hasUseRdma() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool use_rdma = 8 [default = false];</code>
+       */
+      public boolean getUseRdma() {
+        return useRdma_;
+      }
+      /**
+       * <code>optional bool use_rdma = 8 [default = false];</code>
+       */
+      public Builder setUseRdma(boolean value) {
+        bitField0_ |= 0x00000020;
+        useRdma_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool use_rdma = 8 [default = false];</code>
+       */
+      public Builder clearUseRdma() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        useRdma_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long rdmaMemBlockMbyte_ = 8L;
+      /**
+       * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+       */
+      public boolean hasRdmaMemBlockMbyte() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+       */
+      public long getRdmaMemBlockMbyte() {
+        return rdmaMemBlockMbyte_;
+      }
+      /**
+       * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+       */
+      public Builder setRdmaMemBlockMbyte(long value) {
+        bitField0_ |= 0x00000040;
+        rdmaMemBlockMbyte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 rdma_mem_block_mbyte = 9 [default = 8];</code>
+       */
+      public Builder clearRdmaMemBlockMbyte() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        rdmaMemBlockMbyte_ = 8L;
+        onChanged();
+        return this;
+      }
+
+      private long rdmaRecvMsgBufMbyte_ = 6L;
+      /**
+       * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+       */
+      public boolean hasRdmaRecvMsgBufMbyte() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+       */
+      public long getRdmaRecvMsgBufMbyte() {
+        return rdmaRecvMsgBufMbyte_;
+      }
+      /**
+       * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+       */
+      public Builder setRdmaRecvMsgBufMbyte(long value) {
+        bitField0_ |= 0x00000080;
+        rdmaRecvMsgBufMbyte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 rdma_recv_msg_buf_mbyte = 10 [default = 6];</code>
+       */
+      public Builder clearRdmaRecvMsgBufMbyte() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        rdmaRecvMsgBufMbyte_ = 6L;
+        onChanged();
+        return this;
+      }
+
+      private long reservedHostMemMbyte_ = 500L;
+      /**
+       * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+       */
+      public boolean hasReservedHostMemMbyte() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+       */
+      public long getReservedHostMemMbyte() {
+        return reservedHostMemMbyte_;
+      }
+      /**
+       * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+       */
+      public Builder setReservedHostMemMbyte(long value) {
+        bitField0_ |= 0x00000100;
+        reservedHostMemMbyte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 reserved_host_mem_mbyte = 12 [default = 500];</code>
+       */
+      public Builder clearReservedHostMemMbyte() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        reservedHostMemMbyte_ = 500L;
+        onChanged();
+        return this;
+      }
+
+      private long reservedDeviceMemMbyte_ = 500L;
+      /**
+       * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+       */
+      public boolean hasReservedDeviceMemMbyte() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+       */
+      public long getReservedDeviceMemMbyte() {
+        return reservedDeviceMemMbyte_;
+      }
+      /**
+       * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+       */
+      public Builder setReservedDeviceMemMbyte(long value) {
+        bitField0_ |= 0x00000200;
+        reservedDeviceMemMbyte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 reserved_device_mem_mbyte = 13 [default = 500];</code>
+       */
+      public Builder clearReservedDeviceMemMbyte() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        reservedDeviceMemMbyte_ = 500L;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableNumaAwareCudaMallocHost_ ;
+      /**
+       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+       */
+      public boolean hasEnableNumaAwareCudaMallocHost() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+       */
+      public boolean getEnableNumaAwareCudaMallocHost() {
+        return enableNumaAwareCudaMallocHost_;
+      }
+      /**
+       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+       */
+      public Builder setEnableNumaAwareCudaMallocHost(boolean value) {
+        bitField0_ |= 0x00000400;
+        enableNumaAwareCudaMallocHost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
+       */
+      public Builder clearEnableNumaAwareCudaMallocHost() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        enableNumaAwareCudaMallocHost_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int computeThreadPoolSize_ ;
+      /**
+       * <code>optional int32 compute_thread_pool_size = 15;</code>
+       */
+      public boolean hasComputeThreadPoolSize() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional int32 compute_thread_pool_size = 15;</code>
+       */
+      public int getComputeThreadPoolSize() {
+        return computeThreadPoolSize_;
+      }
+      /**
+       * <code>optional int32 compute_thread_pool_size = 15;</code>
+       */
+      public Builder setComputeThreadPoolSize(int value) {
+        bitField0_ |= 0x00000800;
+        computeThreadPoolSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 compute_thread_pool_size = 15;</code>
+       */
+      public Builder clearComputeThreadPoolSize() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        computeThreadPoolSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean threadEnableLocalMessageQueue_ ;
+      /**
+       * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+       */
+      public boolean hasThreadEnableLocalMessageQueue() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+       */
+      public boolean getThreadEnableLocalMessageQueue() {
+        return threadEnableLocalMessageQueue_;
+      }
+      /**
+       * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+       */
+      public Builder setThreadEnableLocalMessageQueue(boolean value) {
+        bitField0_ |= 0x00001000;
+        threadEnableLocalMessageQueue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
+       */
+      public Builder clearThreadEnableLocalMessageQueue() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        threadEnableLocalMessageQueue_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableThreadLocalCache_ = true;
+      /**
+       * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+       */
+      public boolean hasEnableThreadLocalCache() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+       */
+      public boolean getEnableThreadLocalCache() {
+        return enableThreadLocalCache_;
+      }
+      /**
+       * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+       */
+      public Builder setEnableThreadLocalCache(boolean value) {
+        bitField0_ |= 0x00002000;
+        enableThreadLocalCache_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
+       */
+      public Builder clearEnableThreadLocalCache() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        enableThreadLocalCache_ = true;
+        onChanged();
+        return this;
+      }
+
+      private long threadLocalCacheMaxSize_ = 67108864L;
+      /**
+       * <pre>
+       * 64M
+       * </pre>
+       *
+       * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+       */
+      public boolean hasThreadLocalCacheMaxSize() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <pre>
+       * 64M
+       * </pre>
+       *
+       * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+       */
+      public long getThreadLocalCacheMaxSize() {
+        return threadLocalCacheMaxSize_;
+      }
+      /**
+       * <pre>
+       * 64M
+       * </pre>
+       *
+       * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+       */
+      public Builder setThreadLocalCacheMaxSize(long value) {
+        bitField0_ |= 0x00004000;
+        threadLocalCacheMaxSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 64M
+       * </pre>
+       *
+       * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
+       */
+      public Builder clearThreadLocalCacheMaxSize() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        threadLocalCacheMaxSize_ = 67108864L;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableDebugMode_ ;
+      /**
+       * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+       */
+      public boolean hasEnableDebugMode() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+       */
+      public boolean getEnableDebugMode() {
+        return enableDebugMode_;
+      }
+      /**
+       * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+       */
+      public Builder setEnableDebugMode(boolean value) {
+        bitField0_ |= 0x00008000;
+        enableDebugMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_debug_mode = 18 [default = false];</code>
+       */
+      public Builder clearEnableDebugMode() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        enableDebugMode_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf collectiveBoxingConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder> collectiveBoxingConfBuilder_;
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public boolean hasCollectiveBoxingConf() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf() {
+        if (collectiveBoxingConfBuilder_ == null) {
+          return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
+        } else {
+          return collectiveBoxingConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public Builder setCollectiveBoxingConf(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf value) {
+        if (collectiveBoxingConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collectiveBoxingConf_ = value;
+          onChanged();
+        } else {
+          collectiveBoxingConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00010000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public Builder setCollectiveBoxingConf(
+          org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder builderForValue) {
+        if (collectiveBoxingConfBuilder_ == null) {
+          collectiveBoxingConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          collectiveBoxingConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00010000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public Builder mergeCollectiveBoxingConf(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf value) {
+        if (collectiveBoxingConfBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) == 0x00010000) &&
+              collectiveBoxingConf_ != null &&
+              collectiveBoxingConf_ != org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance()) {
+            collectiveBoxingConf_ =
+              org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.newBuilder(collectiveBoxingConf_).mergeFrom(value).buildPartial();
+          } else {
+            collectiveBoxingConf_ = value;
+          }
+          onChanged();
+        } else {
+          collectiveBoxingConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00010000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public Builder clearCollectiveBoxingConf() {
+        if (collectiveBoxingConfBuilder_ == null) {
+          collectiveBoxingConf_ = null;
+          onChanged();
+        } else {
+          collectiveBoxingConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00010000);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder getCollectiveBoxingConfBuilder() {
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return getCollectiveBoxingConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder() {
+        if (collectiveBoxingConfBuilder_ != null) {
+          return collectiveBoxingConfBuilder_.getMessageOrBuilder();
+        } else {
+          return collectiveBoxingConf_ == null ?
+              org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder> 
+          getCollectiveBoxingConfFieldBuilder() {
+        if (collectiveBoxingConfBuilder_ == null) {
+          collectiveBoxingConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder, org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder>(
+                  getCollectiveBoxingConf(),
+                  getParentForChildren(),
+                  isClean());
+          collectiveBoxingConf_ = null;
+        }
+        return collectiveBoxingConfBuilder_;
+      }
+
+      private boolean enableTensorFloat32Compute_ = true;
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public boolean hasEnableTensorFloat32Compute() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public boolean getEnableTensorFloat32Compute() {
+        return enableTensorFloat32Compute_;
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public Builder setEnableTensorFloat32Compute(boolean value) {
+        bitField0_ |= 0x00020000;
+        enableTensorFloat32Compute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public Builder clearEnableTensorFloat32Compute() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        enableTensorFloat32Compute_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableMemChainMerge_ = true;
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public boolean hasEnableMemChainMerge() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public boolean getEnableMemChainMerge() {
+        return enableMemChainMerge_;
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public Builder setEnableMemChainMerge(boolean value) {
+        bitField0_ |= 0x00040000;
+        enableMemChainMerge_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public Builder clearEnableMemChainMerge() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        enableMemChainMerge_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean ncclUseComputeStream_ ;
+      /**
+       * <pre>
+       * NOTE(chengcheng) to reuse nccl memory and speed up
+       * </pre>
+       *
+       * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+       */
+      public boolean hasNcclUseComputeStream() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng) to reuse nccl memory and speed up
+       * </pre>
+       *
+       * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+       */
+      public boolean getNcclUseComputeStream() {
+        return ncclUseComputeStream_;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng) to reuse nccl memory and speed up
+       * </pre>
+       *
+       * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+       */
+      public Builder setNcclUseComputeStream(boolean value) {
+        bitField0_ |= 0x00080000;
+        ncclUseComputeStream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng) to reuse nccl memory and speed up
+       * </pre>
+       *
+       * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
+       */
+      public Builder clearNcclUseComputeStream() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        ncclUseComputeStream_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean disableGroupBoxingByDstParallel_ ;
+      /**
+       * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+       */
+      public boolean hasDisableGroupBoxingByDstParallel() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+       */
+      public boolean getDisableGroupBoxingByDstParallel() {
+        return disableGroupBoxingByDstParallel_;
+      }
+      /**
+       * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+       */
+      public Builder setDisableGroupBoxingByDstParallel(boolean value) {
+        bitField0_ |= 0x00100000;
+        disableGroupBoxingByDstParallel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
+       */
+      public Builder clearDisableGroupBoxingByDstParallel() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        disableGroupBoxingByDstParallel_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.job.ResourceOuterClass.CudnnConfig cudnnConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ResourceOuterClass.CudnnConfig, org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder, org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder> cudnnConfBuilder_;
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public boolean hasCudnnConf() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfig getCudnnConf() {
+        if (cudnnConfBuilder_ == null) {
+          return cudnnConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance() : cudnnConf_;
+        } else {
+          return cudnnConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public Builder setCudnnConf(org.oneflow.core.job.ResourceOuterClass.CudnnConfig value) {
+        if (cudnnConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cudnnConf_ = value;
+          onChanged();
+        } else {
+          cudnnConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public Builder setCudnnConf(
+          org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder builderForValue) {
+        if (cudnnConfBuilder_ == null) {
+          cudnnConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          cudnnConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public Builder mergeCudnnConf(org.oneflow.core.job.ResourceOuterClass.CudnnConfig value) {
+        if (cudnnConfBuilder_ == null) {
+          if (((bitField0_ & 0x00200000) == 0x00200000) &&
+              cudnnConf_ != null &&
+              cudnnConf_ != org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance()) {
+            cudnnConf_ =
+              org.oneflow.core.job.ResourceOuterClass.CudnnConfig.newBuilder(cudnnConf_).mergeFrom(value).buildPartial();
+          } else {
+            cudnnConf_ = value;
+          }
+          onChanged();
+        } else {
+          cudnnConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public Builder clearCudnnConf() {
+        if (cudnnConfBuilder_ == null) {
+          cudnnConf_ = null;
+          onChanged();
+        } else {
+          cudnnConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00200000);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder getCudnnConfBuilder() {
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return getCudnnConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      public org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder getCudnnConfOrBuilder() {
+        if (cudnnConfBuilder_ != null) {
+          return cudnnConfBuilder_.getMessageOrBuilder();
+        } else {
+          return cudnnConf_ == null ?
+              org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance() : cudnnConf_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ResourceOuterClass.CudnnConfig, org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder, org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder> 
+          getCudnnConfFieldBuilder() {
+        if (cudnnConfBuilder_ == null) {
+          cudnnConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.ResourceOuterClass.CudnnConfig, org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder, org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder>(
+                  getCudnnConf(),
+                  getParentForChildren(),
+                  isClean());
+          cudnnConf_ = null;
+        }
+        return cudnnConfBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.Resource)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.Resource)
+    private static final org.oneflow.core.job.ResourceOuterClass.Resource DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ResourceOuterClass.Resource();
+    }
+
+    public static org.oneflow.core.job.ResourceOuterClass.Resource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Resource>
+        PARSER = new com.google.protobuf.AbstractParser<Resource>() {
+      public Resource parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Resource(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Resource> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Resource> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ResourceOuterClass.Resource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CollectiveBoxingConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CollectiveBoxingConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CudnnConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CudnnConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_Resource_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_Resource_fieldAccessorTable;
 
@@ -84,8 +5466,8 @@ public final class ResourceOuterClass {
       "\022&\n\027nccl_use_compute_stream\030\036 \001(\010:\005false" +
       "\0223\n$disable_group_boxing_by_dst_parallel" +
       "\030\037 \001(\010:\005false\022(\n\ncudnn_conf\030  \001(\0132\024.onef" +
-      "low.CudnnConfigB\030\n\024org.oneflow.core.jobP" +
-      "\001P\000"
+      "low.CudnnConfigB\026\n\024org.oneflow.core.jobP" +
+      "\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

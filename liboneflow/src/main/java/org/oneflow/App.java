@@ -1,7 +1,8 @@
 package org.oneflow;
 
+import org.oneflow.core.job.Env.EnvProto;
+import org.oneflow.core.job.Env.Machine;
 import org.oneflow.env.Env;
-import org.oneflow.core.job.*;
 
 public class App 
 {

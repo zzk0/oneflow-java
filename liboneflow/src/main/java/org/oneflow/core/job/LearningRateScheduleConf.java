@@ -14,64 +14,9779 @@ public final class LearningRateScheduleConf {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ExponentialDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ExponentialDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    boolean hasDecayRate();
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    double getDecayRate();
+
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean hasStaircase();
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean getStaircase();
+  }
+  /**
+   * Protobuf type {@code oneflow.ExponentialDecayConf}
+   */
+  public  static final class ExponentialDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ExponentialDecayConf)
+      ExponentialDecayConfOrBuilder {
+    // Use ExponentialDecayConf.newBuilder() to construct.
+    private ExponentialDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExponentialDecayConf() {
+      decayBatches_ = 0L;
+      decayRate_ = 0D;
+      staircase_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ExponentialDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              decayRate_ = input.readDouble();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              staircase_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ExponentialDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ExponentialDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int DECAY_RATE_FIELD_NUMBER = 2;
+    private double decayRate_;
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public boolean hasDecayRate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public double getDecayRate() {
+      return decayRate_;
+    }
+
+    public static final int STAIRCASE_FIELD_NUMBER = 3;
+    private boolean staircase_;
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean hasStaircase() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean getStaircase() {
+      return staircase_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDecayRate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, staircase_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, staircase_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasDecayRate() == other.hasDecayRate());
+      if (hasDecayRate()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getDecayRate())
+            == java.lang.Double.doubleToLongBits(
+                other.getDecayRate()));
+      }
+      result = result && (hasStaircase() == other.hasStaircase());
+      if (hasStaircase()) {
+        result = result && (getStaircase()
+            == other.getStaircase());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasDecayRate()) {
+        hash = (37 * hash) + DECAY_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getDecayRate()));
+      }
+      if (hasStaircase()) {
+        hash = (37 * hash) + STAIRCASE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStaircase());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ExponentialDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ExponentialDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ExponentialDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ExponentialDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayRate_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        staircase_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ExponentialDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.decayRate_ = decayRate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.staircase_ = staircase_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasDecayRate()) {
+          setDecayRate(other.getDecayRate());
+        }
+        if (other.hasStaircase()) {
+          setStaircase(other.getStaircase());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        if (!hasDecayRate()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double decayRate_ ;
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public boolean hasDecayRate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public double getDecayRate() {
+        return decayRate_;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder setDecayRate(double value) {
+        bitField0_ |= 0x00000002;
+        decayRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder clearDecayRate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        decayRate_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private boolean staircase_ ;
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean hasStaircase() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean getStaircase() {
+        return staircase_;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder setStaircase(boolean value) {
+        bitField0_ |= 0x00000004;
+        staircase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder clearStaircase() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        staircase_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ExponentialDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ExponentialDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ExponentialDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<ExponentialDecayConf>() {
+      public ExponentialDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ExponentialDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExponentialDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExponentialDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InverseTimeDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.InverseTimeDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    boolean hasDecayRate();
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    double getDecayRate();
+
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean hasStaircase();
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean getStaircase();
+  }
+  /**
+   * Protobuf type {@code oneflow.InverseTimeDecayConf}
+   */
+  public  static final class InverseTimeDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.InverseTimeDecayConf)
+      InverseTimeDecayConfOrBuilder {
+    // Use InverseTimeDecayConf.newBuilder() to construct.
+    private InverseTimeDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InverseTimeDecayConf() {
+      decayBatches_ = 0L;
+      decayRate_ = 0D;
+      staircase_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InverseTimeDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              decayRate_ = input.readDouble();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              staircase_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_InverseTimeDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_InverseTimeDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int DECAY_RATE_FIELD_NUMBER = 2;
+    private double decayRate_;
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public boolean hasDecayRate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public double getDecayRate() {
+      return decayRate_;
+    }
+
+    public static final int STAIRCASE_FIELD_NUMBER = 3;
+    private boolean staircase_;
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean hasStaircase() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean getStaircase() {
+      return staircase_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDecayRate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, staircase_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, staircase_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasDecayRate() == other.hasDecayRate());
+      if (hasDecayRate()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getDecayRate())
+            == java.lang.Double.doubleToLongBits(
+                other.getDecayRate()));
+      }
+      result = result && (hasStaircase() == other.hasStaircase());
+      if (hasStaircase()) {
+        result = result && (getStaircase()
+            == other.getStaircase());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasDecayRate()) {
+        hash = (37 * hash) + DECAY_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getDecayRate()));
+      }
+      if (hasStaircase()) {
+        hash = (37 * hash) + STAIRCASE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStaircase());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.InverseTimeDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.InverseTimeDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_InverseTimeDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_InverseTimeDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayRate_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        staircase_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_InverseTimeDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.decayRate_ = decayRate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.staircase_ = staircase_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasDecayRate()) {
+          setDecayRate(other.getDecayRate());
+        }
+        if (other.hasStaircase()) {
+          setStaircase(other.getStaircase());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        if (!hasDecayRate()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double decayRate_ ;
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public boolean hasDecayRate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public double getDecayRate() {
+        return decayRate_;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder setDecayRate(double value) {
+        bitField0_ |= 0x00000002;
+        decayRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder clearDecayRate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        decayRate_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private boolean staircase_ ;
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean hasStaircase() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean getStaircase() {
+        return staircase_;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder setStaircase(boolean value) {
+        bitField0_ |= 0x00000004;
+        staircase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder clearStaircase() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        staircase_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.InverseTimeDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.InverseTimeDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<InverseTimeDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<InverseTimeDecayConf>() {
+      public InverseTimeDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InverseTimeDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InverseTimeDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InverseTimeDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NaturalExpDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.NaturalExpDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    boolean hasDecayRate();
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    double getDecayRate();
+
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean hasStaircase();
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    boolean getStaircase();
+  }
+  /**
+   * Protobuf type {@code oneflow.NaturalExpDecayConf}
+   */
+  public  static final class NaturalExpDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.NaturalExpDecayConf)
+      NaturalExpDecayConfOrBuilder {
+    // Use NaturalExpDecayConf.newBuilder() to construct.
+    private NaturalExpDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NaturalExpDecayConf() {
+      decayBatches_ = 0L;
+      decayRate_ = 0D;
+      staircase_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NaturalExpDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              decayRate_ = input.readDouble();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              staircase_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_NaturalExpDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_NaturalExpDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int DECAY_RATE_FIELD_NUMBER = 2;
+    private double decayRate_;
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public boolean hasDecayRate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required double decay_rate = 2;</code>
+     */
+    public double getDecayRate() {
+      return decayRate_;
+    }
+
+    public static final int STAIRCASE_FIELD_NUMBER = 3;
+    private boolean staircase_;
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean hasStaircase() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool staircase = 3 [default = false];</code>
+     */
+    public boolean getStaircase() {
+      return staircase_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDecayRate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, staircase_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, decayRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, staircase_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasDecayRate() == other.hasDecayRate());
+      if (hasDecayRate()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getDecayRate())
+            == java.lang.Double.doubleToLongBits(
+                other.getDecayRate()));
+      }
+      result = result && (hasStaircase() == other.hasStaircase());
+      if (hasStaircase()) {
+        result = result && (getStaircase()
+            == other.getStaircase());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasDecayRate()) {
+        hash = (37 * hash) + DECAY_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getDecayRate()));
+      }
+      if (hasStaircase()) {
+        hash = (37 * hash) + STAIRCASE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStaircase());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.NaturalExpDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.NaturalExpDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_NaturalExpDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_NaturalExpDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayRate_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        staircase_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_NaturalExpDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.decayRate_ = decayRate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.staircase_ = staircase_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasDecayRate()) {
+          setDecayRate(other.getDecayRate());
+        }
+        if (other.hasStaircase()) {
+          setStaircase(other.getStaircase());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        if (!hasDecayRate()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double decayRate_ ;
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public boolean hasDecayRate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public double getDecayRate() {
+        return decayRate_;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder setDecayRate(double value) {
+        bitField0_ |= 0x00000002;
+        decayRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double decay_rate = 2;</code>
+       */
+      public Builder clearDecayRate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        decayRate_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private boolean staircase_ ;
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean hasStaircase() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public boolean getStaircase() {
+        return staircase_;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder setStaircase(boolean value) {
+        bitField0_ |= 0x00000004;
+        staircase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool staircase = 3 [default = false];</code>
+       */
+      public Builder clearStaircase() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        staircase_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.NaturalExpDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.NaturalExpDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<NaturalExpDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<NaturalExpDecayConf>() {
+      public NaturalExpDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NaturalExpDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NaturalExpDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NaturalExpDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PiecewiseConstantConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.PiecewiseConstantConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    java.util.List<java.lang.Long> getBoundariesList();
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    int getBoundariesCount();
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    long getBoundaries(int index);
+
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    java.util.List<java.lang.Double> getValuesList();
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    double getValues(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.PiecewiseConstantConf}
+   */
+  public  static final class PiecewiseConstantConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.PiecewiseConstantConf)
+      PiecewiseConstantConfOrBuilder {
+    // Use PiecewiseConstantConf.newBuilder() to construct.
+    private PiecewiseConstantConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PiecewiseConstantConf() {
+      boundaries_ = java.util.Collections.emptyList();
+      values_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PiecewiseConstantConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                boundaries_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              boundaries_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                boundaries_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                boundaries_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 17: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                values_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              values_.add(input.readDouble());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                values_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                values_.add(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = java.util.Collections.unmodifiableList(boundaries_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          values_ = java.util.Collections.unmodifiableList(values_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseConstantConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseConstantConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.class, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder.class);
+    }
+
+    public static final int BOUNDARIES_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> boundaries_;
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getBoundariesList() {
+      return boundaries_;
+    }
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public int getBoundariesCount() {
+      return boundaries_.size();
+    }
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public long getBoundaries(int index) {
+      return boundaries_.get(index);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Double> values_;
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated double values = 2;</code>
+     */
+    public double getValues(int index) {
+      return values_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < boundaries_.size(); i++) {
+        output.writeInt64(1, boundaries_.get(i));
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeDouble(2, values_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < boundaries_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(boundaries_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getBoundariesList().size();
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getValuesList().size();
+        size += dataSize;
+        size += 1 * getValuesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf other = (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) obj;
+
+      boolean result = true;
+      result = result && getBoundariesList()
+          .equals(other.getBoundariesList());
+      result = result && getValuesList()
+          .equals(other.getValuesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getBoundariesCount() > 0) {
+        hash = (37 * hash) + BOUNDARIES_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundariesList().hashCode();
+      }
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.PiecewiseConstantConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.PiecewiseConstantConf)
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseConstantConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseConstantConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.class, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        boundaries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        values_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseConstantConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf result = new org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = java.util.Collections.unmodifiableList(boundaries_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.boundaries_ = boundaries_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          values_ = java.util.Collections.unmodifiableList(values_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.values_ = values_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance()) return this;
+        if (!other.boundaries_.isEmpty()) {
+          if (boundaries_.isEmpty()) {
+            boundaries_ = other.boundaries_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureBoundariesIsMutable();
+            boundaries_.addAll(other.boundaries_);
+          }
+          onChanged();
+        }
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> boundaries_ = java.util.Collections.emptyList();
+      private void ensureBoundariesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = new java.util.ArrayList<java.lang.Long>(boundaries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getBoundariesList() {
+        return java.util.Collections.unmodifiableList(boundaries_);
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public int getBoundariesCount() {
+        return boundaries_.size();
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public long getBoundaries(int index) {
+        return boundaries_.get(index);
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder setBoundaries(
+          int index, long value) {
+        ensureBoundariesIsMutable();
+        boundaries_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder addBoundaries(long value) {
+        ensureBoundariesIsMutable();
+        boundaries_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder addAllBoundaries(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureBoundariesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, boundaries_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder clearBoundaries() {
+        boundaries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Double> values_ = java.util.Collections.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          values_ = new java.util.ArrayList<java.lang.Double>(values_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getValuesList() {
+        return java.util.Collections.unmodifiableList(values_);
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public double getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public Builder setValues(
+          int index, double value) {
+        ensureValuesIsMutable();
+        values_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public Builder addValues(double value) {
+        ensureValuesIsMutable();
+        values_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double values = 2;</code>
+       */
+      public Builder clearValues() {
+        values_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.PiecewiseConstantConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.PiecewiseConstantConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PiecewiseConstantConf>
+        PARSER = new com.google.protobuf.AbstractParser<PiecewiseConstantConf>() {
+      public PiecewiseConstantConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PiecewiseConstantConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PiecewiseConstantConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PiecewiseConstantConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PolynomialDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.PolynomialDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+     */
+    boolean hasEndLearningRate();
+    /**
+     * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+     */
+    double getEndLearningRate();
+
+    /**
+     * <code>optional double power = 3 [default = 1];</code>
+     */
+    boolean hasPower();
+    /**
+     * <code>optional double power = 3 [default = 1];</code>
+     */
+    double getPower();
+
+    /**
+     * <code>optional bool cycle = 4 [default = false];</code>
+     */
+    boolean hasCycle();
+    /**
+     * <code>optional bool cycle = 4 [default = false];</code>
+     */
+    boolean getCycle();
+  }
+  /**
+   * Protobuf type {@code oneflow.PolynomialDecayConf}
+   */
+  public  static final class PolynomialDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.PolynomialDecayConf)
+      PolynomialDecayConfOrBuilder {
+    // Use PolynomialDecayConf.newBuilder() to construct.
+    private PolynomialDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PolynomialDecayConf() {
+      decayBatches_ = 0L;
+      endLearningRate_ = 0.0001D;
+      power_ = 1D;
+      cycle_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PolynomialDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              endLearningRate_ = input.readDouble();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              power_ = input.readDouble();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              cycle_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PolynomialDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PolynomialDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int END_LEARNING_RATE_FIELD_NUMBER = 2;
+    private double endLearningRate_;
+    /**
+     * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+     */
+    public boolean hasEndLearningRate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+     */
+    public double getEndLearningRate() {
+      return endLearningRate_;
+    }
+
+    public static final int POWER_FIELD_NUMBER = 3;
+    private double power_;
+    /**
+     * <code>optional double power = 3 [default = 1];</code>
+     */
+    public boolean hasPower() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional double power = 3 [default = 1];</code>
+     */
+    public double getPower() {
+      return power_;
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 4;
+    private boolean cycle_;
+    /**
+     * <code>optional bool cycle = 4 [default = false];</code>
+     */
+    public boolean hasCycle() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool cycle = 4 [default = false];</code>
+     */
+    public boolean getCycle() {
+      return cycle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, endLearningRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeDouble(3, power_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(4, cycle_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, endLearningRate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, power_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, cycle_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasEndLearningRate() == other.hasEndLearningRate());
+      if (hasEndLearningRate()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getEndLearningRate())
+            == java.lang.Double.doubleToLongBits(
+                other.getEndLearningRate()));
+      }
+      result = result && (hasPower() == other.hasPower());
+      if (hasPower()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getPower())
+            == java.lang.Double.doubleToLongBits(
+                other.getPower()));
+      }
+      result = result && (hasCycle() == other.hasCycle());
+      if (hasCycle()) {
+        result = result && (getCycle()
+            == other.getCycle());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasEndLearningRate()) {
+        hash = (37 * hash) + END_LEARNING_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getEndLearningRate()));
+      }
+      if (hasPower()) {
+        hash = (37 * hash) + POWER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getPower()));
+      }
+      if (hasCycle()) {
+        hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCycle());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.PolynomialDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.PolynomialDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PolynomialDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PolynomialDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        endLearningRate_ = 0.0001D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        power_ = 1D;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cycle_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PolynomialDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.endLearningRate_ = endLearningRate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.power_ = power_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.cycle_ = cycle_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasEndLearningRate()) {
+          setEndLearningRate(other.getEndLearningRate());
+        }
+        if (other.hasPower()) {
+          setPower(other.getPower());
+        }
+        if (other.hasCycle()) {
+          setCycle(other.getCycle());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double endLearningRate_ = 0.0001D;
+      /**
+       * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+       */
+      public boolean hasEndLearningRate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+       */
+      public double getEndLearningRate() {
+        return endLearningRate_;
+      }
+      /**
+       * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+       */
+      public Builder setEndLearningRate(double value) {
+        bitField0_ |= 0x00000002;
+        endLearningRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double end_learning_rate = 2 [default = 0.0001];</code>
+       */
+      public Builder clearEndLearningRate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        endLearningRate_ = 0.0001D;
+        onChanged();
+        return this;
+      }
+
+      private double power_ = 1D;
+      /**
+       * <code>optional double power = 3 [default = 1];</code>
+       */
+      public boolean hasPower() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional double power = 3 [default = 1];</code>
+       */
+      public double getPower() {
+        return power_;
+      }
+      /**
+       * <code>optional double power = 3 [default = 1];</code>
+       */
+      public Builder setPower(double value) {
+        bitField0_ |= 0x00000004;
+        power_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double power = 3 [default = 1];</code>
+       */
+      public Builder clearPower() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        power_ = 1D;
+        onChanged();
+        return this;
+      }
+
+      private boolean cycle_ ;
+      /**
+       * <code>optional bool cycle = 4 [default = false];</code>
+       */
+      public boolean hasCycle() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool cycle = 4 [default = false];</code>
+       */
+      public boolean getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>optional bool cycle = 4 [default = false];</code>
+       */
+      public Builder setCycle(boolean value) {
+        bitField0_ |= 0x00000008;
+        cycle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool cycle = 4 [default = false];</code>
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        cycle_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.PolynomialDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.PolynomialDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PolynomialDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<PolynomialDecayConf>() {
+      public PolynomialDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PolynomialDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PolynomialDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PolynomialDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CosineDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CosineDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>optional double alpha = 2 [default = 0];</code>
+     */
+    boolean hasAlpha();
+    /**
+     * <code>optional double alpha = 2 [default = 0];</code>
+     */
+    double getAlpha();
+  }
+  /**
+   * Protobuf type {@code oneflow.CosineDecayConf}
+   */
+  public  static final class CosineDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CosineDecayConf)
+      CosineDecayConfOrBuilder {
+    // Use CosineDecayConf.newBuilder() to construct.
+    private CosineDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CosineDecayConf() {
+      decayBatches_ = 0L;
+      alpha_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CosineDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              alpha_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_CosineDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_CosineDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int ALPHA_FIELD_NUMBER = 2;
+    private double alpha_;
+    /**
+     * <code>optional double alpha = 2 [default = 0];</code>
+     */
+    public boolean hasAlpha() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional double alpha = 2 [default = 0];</code>
+     */
+    public double getAlpha() {
+      return alpha_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, alpha_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, alpha_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasAlpha() == other.hasAlpha());
+      if (hasAlpha()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getAlpha())
+            == java.lang.Double.doubleToLongBits(
+                other.getAlpha()));
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasAlpha()) {
+        hash = (37 * hash) + ALPHA_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getAlpha()));
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CosineDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CosineDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_CosineDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_CosineDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        alpha_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_CosineDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.alpha_ = alpha_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasAlpha()) {
+          setAlpha(other.getAlpha());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double alpha_ ;
+      /**
+       * <code>optional double alpha = 2 [default = 0];</code>
+       */
+      public boolean hasAlpha() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional double alpha = 2 [default = 0];</code>
+       */
+      public double getAlpha() {
+        return alpha_;
+      }
+      /**
+       * <code>optional double alpha = 2 [default = 0];</code>
+       */
+      public Builder setAlpha(double value) {
+        bitField0_ |= 0x00000002;
+        alpha_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double alpha = 2 [default = 0];</code>
+       */
+      public Builder clearAlpha() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        alpha_ = 0D;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CosineDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CosineDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CosineDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<CosineDecayConf>() {
+      public CosineDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CosineDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CosineDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CosineDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinearCosineDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.LinearCosineDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    boolean hasDecayBatches();
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    long getDecayBatches();
+
+    /**
+     * <code>optional double num_periods = 2 [default = 0.5];</code>
+     */
+    boolean hasNumPeriods();
+    /**
+     * <code>optional double num_periods = 2 [default = 0.5];</code>
+     */
+    double getNumPeriods();
+
+    /**
+     * <code>optional double alpha = 3 [default = 0];</code>
+     */
+    boolean hasAlpha();
+    /**
+     * <code>optional double alpha = 3 [default = 0];</code>
+     */
+    double getAlpha();
+
+    /**
+     * <code>optional double beta = 4 [default = 0.001];</code>
+     */
+    boolean hasBeta();
+    /**
+     * <code>optional double beta = 4 [default = 0.001];</code>
+     */
+    double getBeta();
+  }
+  /**
+   * Protobuf type {@code oneflow.LinearCosineDecayConf}
+   */
+  public  static final class LinearCosineDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.LinearCosineDecayConf)
+      LinearCosineDecayConfOrBuilder {
+    // Use LinearCosineDecayConf.newBuilder() to construct.
+    private LinearCosineDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinearCosineDecayConf() {
+      decayBatches_ = 0L;
+      numPeriods_ = 0.5D;
+      alpha_ = 0D;
+      beta_ = 0.001D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LinearCosineDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              decayBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              numPeriods_ = input.readDouble();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              alpha_ = input.readDouble();
+              break;
+            }
+            case 33: {
+              bitField0_ |= 0x00000008;
+              beta_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearCosineDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearCosineDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DECAY_BATCHES_FIELD_NUMBER = 1;
+    private long decayBatches_;
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public boolean hasDecayBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 decay_batches = 1;</code>
+     */
+    public long getDecayBatches() {
+      return decayBatches_;
+    }
+
+    public static final int NUM_PERIODS_FIELD_NUMBER = 2;
+    private double numPeriods_;
+    /**
+     * <code>optional double num_periods = 2 [default = 0.5];</code>
+     */
+    public boolean hasNumPeriods() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional double num_periods = 2 [default = 0.5];</code>
+     */
+    public double getNumPeriods() {
+      return numPeriods_;
+    }
+
+    public static final int ALPHA_FIELD_NUMBER = 3;
+    private double alpha_;
+    /**
+     * <code>optional double alpha = 3 [default = 0];</code>
+     */
+    public boolean hasAlpha() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional double alpha = 3 [default = 0];</code>
+     */
+    public double getAlpha() {
+      return alpha_;
+    }
+
+    public static final int BETA_FIELD_NUMBER = 4;
+    private double beta_;
+    /**
+     * <code>optional double beta = 4 [default = 0.001];</code>
+     */
+    public boolean hasBeta() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional double beta = 4 [default = 0.001];</code>
+     */
+    public double getBeta() {
+      return beta_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDecayBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, numPeriods_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeDouble(3, alpha_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeDouble(4, beta_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decayBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, numPeriods_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, alpha_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(4, beta_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) obj;
+
+      boolean result = true;
+      result = result && (hasDecayBatches() == other.hasDecayBatches());
+      if (hasDecayBatches()) {
+        result = result && (getDecayBatches()
+            == other.getDecayBatches());
+      }
+      result = result && (hasNumPeriods() == other.hasNumPeriods());
+      if (hasNumPeriods()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getNumPeriods())
+            == java.lang.Double.doubleToLongBits(
+                other.getNumPeriods()));
+      }
+      result = result && (hasAlpha() == other.hasAlpha());
+      if (hasAlpha()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getAlpha())
+            == java.lang.Double.doubleToLongBits(
+                other.getAlpha()));
+      }
+      result = result && (hasBeta() == other.hasBeta());
+      if (hasBeta()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getBeta())
+            == java.lang.Double.doubleToLongBits(
+                other.getBeta()));
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDecayBatches()) {
+        hash = (37 * hash) + DECAY_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDecayBatches());
+      }
+      if (hasNumPeriods()) {
+        hash = (37 * hash) + NUM_PERIODS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getNumPeriods()));
+      }
+      if (hasAlpha()) {
+        hash = (37 * hash) + ALPHA_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getAlpha()));
+      }
+      if (hasBeta()) {
+        hash = (37 * hash) + BETA_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getBeta()));
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.LinearCosineDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.LinearCosineDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearCosineDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearCosineDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        decayBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numPeriods_ = 0.5D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        alpha_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        beta_ = 0.001D;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearCosineDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.decayBatches_ = decayBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.numPeriods_ = numPeriods_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.alpha_ = alpha_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.beta_ = beta_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance()) return this;
+        if (other.hasDecayBatches()) {
+          setDecayBatches(other.getDecayBatches());
+        }
+        if (other.hasNumPeriods()) {
+          setNumPeriods(other.getNumPeriods());
+        }
+        if (other.hasAlpha()) {
+          setAlpha(other.getAlpha());
+        }
+        if (other.hasBeta()) {
+          setBeta(other.getBeta());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDecayBatches()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decayBatches_ ;
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public boolean hasDecayBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public long getDecayBatches() {
+        return decayBatches_;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder setDecayBatches(long value) {
+        bitField0_ |= 0x00000001;
+        decayBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 decay_batches = 1;</code>
+       */
+      public Builder clearDecayBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decayBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double numPeriods_ = 0.5D;
+      /**
+       * <code>optional double num_periods = 2 [default = 0.5];</code>
+       */
+      public boolean hasNumPeriods() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional double num_periods = 2 [default = 0.5];</code>
+       */
+      public double getNumPeriods() {
+        return numPeriods_;
+      }
+      /**
+       * <code>optional double num_periods = 2 [default = 0.5];</code>
+       */
+      public Builder setNumPeriods(double value) {
+        bitField0_ |= 0x00000002;
+        numPeriods_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double num_periods = 2 [default = 0.5];</code>
+       */
+      public Builder clearNumPeriods() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numPeriods_ = 0.5D;
+        onChanged();
+        return this;
+      }
+
+      private double alpha_ ;
+      /**
+       * <code>optional double alpha = 3 [default = 0];</code>
+       */
+      public boolean hasAlpha() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional double alpha = 3 [default = 0];</code>
+       */
+      public double getAlpha() {
+        return alpha_;
+      }
+      /**
+       * <code>optional double alpha = 3 [default = 0];</code>
+       */
+      public Builder setAlpha(double value) {
+        bitField0_ |= 0x00000004;
+        alpha_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double alpha = 3 [default = 0];</code>
+       */
+      public Builder clearAlpha() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        alpha_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double beta_ = 0.001D;
+      /**
+       * <code>optional double beta = 4 [default = 0.001];</code>
+       */
+      public boolean hasBeta() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional double beta = 4 [default = 0.001];</code>
+       */
+      public double getBeta() {
+        return beta_;
+      }
+      /**
+       * <code>optional double beta = 4 [default = 0.001];</code>
+       */
+      public Builder setBeta(double value) {
+        bitField0_ |= 0x00000008;
+        beta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double beta = 4 [default = 0.001];</code>
+       */
+      public Builder clearBeta() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        beta_ = 0.001D;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.LinearCosineDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.LinearCosineDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LinearCosineDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<LinearCosineDecayConf>() {
+      public LinearCosineDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LinearCosineDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinearCosineDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinearCosineDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PiecewiseScalingConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.PiecewiseScalingConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    java.util.List<java.lang.Long> getBoundariesList();
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    int getBoundariesCount();
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    long getBoundaries(int index);
+
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    java.util.List<java.lang.Double> getScalesList();
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    int getScalesCount();
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    double getScales(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.PiecewiseScalingConf}
+   */
+  public  static final class PiecewiseScalingConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.PiecewiseScalingConf)
+      PiecewiseScalingConfOrBuilder {
+    // Use PiecewiseScalingConf.newBuilder() to construct.
+    private PiecewiseScalingConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PiecewiseScalingConf() {
+      boundaries_ = java.util.Collections.emptyList();
+      scales_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PiecewiseScalingConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                boundaries_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              boundaries_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                boundaries_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                boundaries_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 17: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                scales_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              scales_.add(input.readDouble());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                scales_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                scales_.add(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = java.util.Collections.unmodifiableList(boundaries_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          scales_ = java.util.Collections.unmodifiableList(scales_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseScalingConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseScalingConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.class, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder.class);
+    }
+
+    public static final int BOUNDARIES_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> boundaries_;
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getBoundariesList() {
+      return boundaries_;
+    }
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public int getBoundariesCount() {
+      return boundaries_.size();
+    }
+    /**
+     * <code>repeated int64 boundaries = 1;</code>
+     */
+    public long getBoundaries(int index) {
+      return boundaries_.get(index);
+    }
+
+    public static final int SCALES_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Double> scales_;
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getScalesList() {
+      return scales_;
+    }
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    public int getScalesCount() {
+      return scales_.size();
+    }
+    /**
+     * <code>repeated double scales = 2;</code>
+     */
+    public double getScales(int index) {
+      return scales_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < boundaries_.size(); i++) {
+        output.writeInt64(1, boundaries_.get(i));
+      }
+      for (int i = 0; i < scales_.size(); i++) {
+        output.writeDouble(2, scales_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < boundaries_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(boundaries_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getBoundariesList().size();
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getScalesList().size();
+        size += dataSize;
+        size += 1 * getScalesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf other = (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) obj;
+
+      boolean result = true;
+      result = result && getBoundariesList()
+          .equals(other.getBoundariesList());
+      result = result && getScalesList()
+          .equals(other.getScalesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getBoundariesCount() > 0) {
+        hash = (37 * hash) + BOUNDARIES_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundariesList().hashCode();
+      }
+      if (getScalesCount() > 0) {
+        hash = (37 * hash) + SCALES_FIELD_NUMBER;
+        hash = (53 * hash) + getScalesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.PiecewiseScalingConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.PiecewiseScalingConf)
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseScalingConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseScalingConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.class, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        boundaries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scales_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_PiecewiseScalingConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf result = new org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = java.util.Collections.unmodifiableList(boundaries_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.boundaries_ = boundaries_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          scales_ = java.util.Collections.unmodifiableList(scales_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.scales_ = scales_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance()) return this;
+        if (!other.boundaries_.isEmpty()) {
+          if (boundaries_.isEmpty()) {
+            boundaries_ = other.boundaries_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureBoundariesIsMutable();
+            boundaries_.addAll(other.boundaries_);
+          }
+          onChanged();
+        }
+        if (!other.scales_.isEmpty()) {
+          if (scales_.isEmpty()) {
+            scales_ = other.scales_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureScalesIsMutable();
+            scales_.addAll(other.scales_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> boundaries_ = java.util.Collections.emptyList();
+      private void ensureBoundariesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          boundaries_ = new java.util.ArrayList<java.lang.Long>(boundaries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getBoundariesList() {
+        return java.util.Collections.unmodifiableList(boundaries_);
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public int getBoundariesCount() {
+        return boundaries_.size();
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public long getBoundaries(int index) {
+        return boundaries_.get(index);
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder setBoundaries(
+          int index, long value) {
+        ensureBoundariesIsMutable();
+        boundaries_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder addBoundaries(long value) {
+        ensureBoundariesIsMutable();
+        boundaries_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder addAllBoundaries(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureBoundariesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, boundaries_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 boundaries = 1;</code>
+       */
+      public Builder clearBoundaries() {
+        boundaries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Double> scales_ = java.util.Collections.emptyList();
+      private void ensureScalesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          scales_ = new java.util.ArrayList<java.lang.Double>(scales_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getScalesList() {
+        return java.util.Collections.unmodifiableList(scales_);
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public int getScalesCount() {
+        return scales_.size();
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public double getScales(int index) {
+        return scales_.get(index);
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public Builder setScales(
+          int index, double value) {
+        ensureScalesIsMutable();
+        scales_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public Builder addScales(double value) {
+        ensureScalesIsMutable();
+        scales_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public Builder addAllScales(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureScalesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scales_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double scales = 2;</code>
+       */
+      public Builder clearScales() {
+        scales_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.PiecewiseScalingConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.PiecewiseScalingConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PiecewiseScalingConf>
+        PARSER = new com.google.protobuf.AbstractParser<PiecewiseScalingConf>() {
+      public PiecewiseScalingConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PiecewiseScalingConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PiecewiseScalingConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PiecewiseScalingConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LearningRateDecayConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.LearningRateDecayConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    boolean hasExponentialConf();
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getExponentialConf();
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder getExponentialConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    boolean hasInverseTimeConf();
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getInverseTimeConf();
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder getInverseTimeConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    boolean hasNaturalExpConf();
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getNaturalExpConf();
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder getNaturalExpConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    boolean hasPiecewiseConstantConf();
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getPiecewiseConstantConf();
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder getPiecewiseConstantConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    boolean hasPolynomialConf();
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getPolynomialConf();
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder getPolynomialConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    boolean hasCosineConf();
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getCosineConf();
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder getCosineConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    boolean hasLinearCosineConf();
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getLinearCosineConf();
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder getLinearCosineConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    boolean hasPiecewiseScalingConf();
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getPiecewiseScalingConf();
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder getPiecewiseScalingConfOrBuilder();
+
+    public org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.LearningRateDecayConf}
+   */
+  public  static final class LearningRateDecayConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.LearningRateDecayConf)
+      LearningRateDecayConfOrBuilder {
+    // Use LearningRateDecayConf.newBuilder() to construct.
+    private LearningRateDecayConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LearningRateDecayConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LearningRateDecayConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 16002: {
+              org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2000) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2000;
+              break;
+            }
+            case 16010: {
+              org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2001) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2001;
+              break;
+            }
+            case 16018: {
+              org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2002) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2002;
+              break;
+            }
+            case 16026: {
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder subBuilder = null;
+              if (typeCase_ == 2003) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2003;
+              break;
+            }
+            case 16034: {
+              org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2004) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2004;
+              break;
+            }
+            case 16042: {
+              org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2005) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2005;
+              break;
+            }
+            case 16050: {
+              org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder subBuilder = null;
+              if (typeCase_ == 2006) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2006;
+              break;
+            }
+            case 16058: {
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder subBuilder = null;
+              if (typeCase_ == 2007) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2007;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LearningRateDecayConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LearningRateDecayConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.Builder.class);
+    }
+
+    private int bitField0_;
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      EXPONENTIAL_CONF(2000),
+      INVERSE_TIME_CONF(2001),
+      NATURAL_EXP_CONF(2002),
+      PIECEWISE_CONSTANT_CONF(2003),
+      POLYNOMIAL_CONF(2004),
+      COSINE_CONF(2005),
+      LINEAR_COSINE_CONF(2006),
+      PIECEWISE_SCALING_CONF(2007),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 2000: return EXPONENTIAL_CONF;
+          case 2001: return INVERSE_TIME_CONF;
+          case 2002: return NATURAL_EXP_CONF;
+          case 2003: return PIECEWISE_CONSTANT_CONF;
+          case 2004: return POLYNOMIAL_CONF;
+          case 2005: return COSINE_CONF;
+          case 2006: return LINEAR_COSINE_CONF;
+          case 2007: return PIECEWISE_SCALING_CONF;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int EXPONENTIAL_CONF_FIELD_NUMBER = 2000;
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    public boolean hasExponentialConf() {
+      return typeCase_ == 2000;
+    }
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getExponentialConf() {
+      if (typeCase_ == 2000) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder getExponentialConfOrBuilder() {
+      if (typeCase_ == 2000) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+    }
+
+    public static final int INVERSE_TIME_CONF_FIELD_NUMBER = 2001;
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    public boolean hasInverseTimeConf() {
+      return typeCase_ == 2001;
+    }
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getInverseTimeConf() {
+      if (typeCase_ == 2001) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder getInverseTimeConfOrBuilder() {
+      if (typeCase_ == 2001) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+    }
+
+    public static final int NATURAL_EXP_CONF_FIELD_NUMBER = 2002;
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    public boolean hasNaturalExpConf() {
+      return typeCase_ == 2002;
+    }
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getNaturalExpConf() {
+      if (typeCase_ == 2002) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder getNaturalExpConfOrBuilder() {
+      if (typeCase_ == 2002) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+    }
+
+    public static final int PIECEWISE_CONSTANT_CONF_FIELD_NUMBER = 2003;
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    public boolean hasPiecewiseConstantConf() {
+      return typeCase_ == 2003;
+    }
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getPiecewiseConstantConf() {
+      if (typeCase_ == 2003) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder getPiecewiseConstantConfOrBuilder() {
+      if (typeCase_ == 2003) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+    }
+
+    public static final int POLYNOMIAL_CONF_FIELD_NUMBER = 2004;
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    public boolean hasPolynomialConf() {
+      return typeCase_ == 2004;
+    }
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getPolynomialConf() {
+      if (typeCase_ == 2004) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder getPolynomialConfOrBuilder() {
+      if (typeCase_ == 2004) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+    }
+
+    public static final int COSINE_CONF_FIELD_NUMBER = 2005;
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    public boolean hasCosineConf() {
+      return typeCase_ == 2005;
+    }
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getCosineConf() {
+      if (typeCase_ == 2005) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder getCosineConfOrBuilder() {
+      if (typeCase_ == 2005) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+    }
+
+    public static final int LINEAR_COSINE_CONF_FIELD_NUMBER = 2006;
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    public boolean hasLinearCosineConf() {
+      return typeCase_ == 2006;
+    }
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getLinearCosineConf() {
+      if (typeCase_ == 2006) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder getLinearCosineConfOrBuilder() {
+      if (typeCase_ == 2006) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+    }
+
+    public static final int PIECEWISE_SCALING_CONF_FIELD_NUMBER = 2007;
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    public boolean hasPiecewiseScalingConf() {
+      return typeCase_ == 2007;
+    }
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getPiecewiseScalingConf() {
+      if (typeCase_ == 2007) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder getPiecewiseScalingConfOrBuilder() {
+      if (typeCase_ == 2007) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasExponentialConf()) {
+        if (!getExponentialConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasInverseTimeConf()) {
+        if (!getInverseTimeConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasNaturalExpConf()) {
+        if (!getNaturalExpConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasPolynomialConf()) {
+        if (!getPolynomialConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasCosineConf()) {
+        if (!getCosineConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasLinearCosineConf()) {
+        if (!getLinearCosineConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 2000) {
+        output.writeMessage(2000, (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_);
+      }
+      if (typeCase_ == 2001) {
+        output.writeMessage(2001, (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_);
+      }
+      if (typeCase_ == 2002) {
+        output.writeMessage(2002, (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_);
+      }
+      if (typeCase_ == 2003) {
+        output.writeMessage(2003, (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_);
+      }
+      if (typeCase_ == 2004) {
+        output.writeMessage(2004, (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_);
+      }
+      if (typeCase_ == 2005) {
+        output.writeMessage(2005, (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_);
+      }
+      if (typeCase_ == 2006) {
+        output.writeMessage(2006, (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_);
+      }
+      if (typeCase_ == 2007) {
+        output.writeMessage(2007, (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 2000) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2000, (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_);
+      }
+      if (typeCase_ == 2001) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2001, (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_);
+      }
+      if (typeCase_ == 2002) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2002, (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_);
+      }
+      if (typeCase_ == 2003) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2003, (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_);
+      }
+      if (typeCase_ == 2004) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2004, (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_);
+      }
+      if (typeCase_ == 2005) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2005, (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_);
+      }
+      if (typeCase_ == 2006) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2006, (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_);
+      }
+      if (typeCase_ == 2007) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2007, (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf other = (org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf) obj;
+
+      boolean result = true;
+      result = result && getTypeCase().equals(
+          other.getTypeCase());
+      if (!result) return false;
+      switch (typeCase_) {
+        case 2000:
+          result = result && getExponentialConf()
+              .equals(other.getExponentialConf());
+          break;
+        case 2001:
+          result = result && getInverseTimeConf()
+              .equals(other.getInverseTimeConf());
+          break;
+        case 2002:
+          result = result && getNaturalExpConf()
+              .equals(other.getNaturalExpConf());
+          break;
+        case 2003:
+          result = result && getPiecewiseConstantConf()
+              .equals(other.getPiecewiseConstantConf());
+          break;
+        case 2004:
+          result = result && getPolynomialConf()
+              .equals(other.getPolynomialConf());
+          break;
+        case 2005:
+          result = result && getCosineConf()
+              .equals(other.getCosineConf());
+          break;
+        case 2006:
+          result = result && getLinearCosineConf()
+              .equals(other.getLinearCosineConf());
+          break;
+        case 2007:
+          result = result && getPiecewiseScalingConf()
+              .equals(other.getPiecewiseScalingConf());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (typeCase_) {
+        case 2000:
+          hash = (37 * hash) + EXPONENTIAL_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getExponentialConf().hashCode();
+          break;
+        case 2001:
+          hash = (37 * hash) + INVERSE_TIME_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getInverseTimeConf().hashCode();
+          break;
+        case 2002:
+          hash = (37 * hash) + NATURAL_EXP_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getNaturalExpConf().hashCode();
+          break;
+        case 2003:
+          hash = (37 * hash) + PIECEWISE_CONSTANT_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getPiecewiseConstantConf().hashCode();
+          break;
+        case 2004:
+          hash = (37 * hash) + POLYNOMIAL_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getPolynomialConf().hashCode();
+          break;
+        case 2005:
+          hash = (37 * hash) + COSINE_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getCosineConf().hashCode();
+          break;
+        case 2006:
+          hash = (37 * hash) + LINEAR_COSINE_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getLinearCosineConf().hashCode();
+          break;
+        case 2007:
+          hash = (37 * hash) + PIECEWISE_SCALING_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getPiecewiseScalingConf().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.LearningRateDecayConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.LearningRateDecayConf)
+        org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LearningRateDecayConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LearningRateDecayConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.class, org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LearningRateDecayConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf result = new org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (typeCase_ == 2000) {
+          if (exponentialConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = exponentialConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2001) {
+          if (inverseTimeConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = inverseTimeConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2002) {
+          if (naturalExpConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = naturalExpConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2003) {
+          if (piecewiseConstantConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = piecewiseConstantConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2004) {
+          if (polynomialConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = polynomialConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2005) {
+          if (cosineConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = cosineConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2006) {
+          if (linearCosineConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = linearCosineConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2007) {
+          if (piecewiseScalingConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = piecewiseScalingConfBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case EXPONENTIAL_CONF: {
+            mergeExponentialConf(other.getExponentialConf());
+            break;
+          }
+          case INVERSE_TIME_CONF: {
+            mergeInverseTimeConf(other.getInverseTimeConf());
+            break;
+          }
+          case NATURAL_EXP_CONF: {
+            mergeNaturalExpConf(other.getNaturalExpConf());
+            break;
+          }
+          case PIECEWISE_CONSTANT_CONF: {
+            mergePiecewiseConstantConf(other.getPiecewiseConstantConf());
+            break;
+          }
+          case POLYNOMIAL_CONF: {
+            mergePolynomialConf(other.getPolynomialConf());
+            break;
+          }
+          case COSINE_CONF: {
+            mergeCosineConf(other.getCosineConf());
+            break;
+          }
+          case LINEAR_COSINE_CONF: {
+            mergeLinearCosineConf(other.getLinearCosineConf());
+            break;
+          }
+          case PIECEWISE_SCALING_CONF: {
+            mergePiecewiseScalingConf(other.getPiecewiseScalingConf());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasExponentialConf()) {
+          if (!getExponentialConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasInverseTimeConf()) {
+          if (!getInverseTimeConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasNaturalExpConf()) {
+          if (!getNaturalExpConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasPolynomialConf()) {
+          if (!getPolynomialConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasCosineConf()) {
+          if (!getCosineConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasLinearCosineConf()) {
+          if (!getLinearCosineConf().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder> exponentialConfBuilder_;
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public boolean hasExponentialConf() {
+        return typeCase_ == 2000;
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf getExponentialConf() {
+        if (exponentialConfBuilder_ == null) {
+          if (typeCase_ == 2000) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2000) {
+            return exponentialConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public Builder setExponentialConf(org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf value) {
+        if (exponentialConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          exponentialConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public Builder setExponentialConf(
+          org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder builderForValue) {
+        if (exponentialConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          exponentialConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public Builder mergeExponentialConf(org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf value) {
+        if (exponentialConfBuilder_ == null) {
+          if (typeCase_ == 2000 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2000) {
+            exponentialConfBuilder_.mergeFrom(value);
+          }
+          exponentialConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public Builder clearExponentialConf() {
+        if (exponentialConfBuilder_ == null) {
+          if (typeCase_ == 2000) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2000) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          exponentialConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder getExponentialConfBuilder() {
+        return getExponentialConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder getExponentialConfOrBuilder() {
+        if ((typeCase_ == 2000) && (exponentialConfBuilder_ != null)) {
+          return exponentialConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2000) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ExponentialDecayConf exponential_conf = 2000;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder> 
+          getExponentialConfFieldBuilder() {
+        if (exponentialConfBuilder_ == null) {
+          if (!(typeCase_ == 2000)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.getDefaultInstance();
+          }
+          exponentialConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.ExponentialDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2000;
+        onChanged();;
+        return exponentialConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder> inverseTimeConfBuilder_;
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public boolean hasInverseTimeConf() {
+        return typeCase_ == 2001;
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf getInverseTimeConf() {
+        if (inverseTimeConfBuilder_ == null) {
+          if (typeCase_ == 2001) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2001) {
+            return inverseTimeConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public Builder setInverseTimeConf(org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf value) {
+        if (inverseTimeConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          inverseTimeConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public Builder setInverseTimeConf(
+          org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder builderForValue) {
+        if (inverseTimeConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          inverseTimeConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public Builder mergeInverseTimeConf(org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf value) {
+        if (inverseTimeConfBuilder_ == null) {
+          if (typeCase_ == 2001 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2001) {
+            inverseTimeConfBuilder_.mergeFrom(value);
+          }
+          inverseTimeConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public Builder clearInverseTimeConf() {
+        if (inverseTimeConfBuilder_ == null) {
+          if (typeCase_ == 2001) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2001) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          inverseTimeConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder getInverseTimeConfBuilder() {
+        return getInverseTimeConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder getInverseTimeConfOrBuilder() {
+        if ((typeCase_ == 2001) && (inverseTimeConfBuilder_ != null)) {
+          return inverseTimeConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2001) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.InverseTimeDecayConf inverse_time_conf = 2001;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder> 
+          getInverseTimeConfFieldBuilder() {
+        if (inverseTimeConfBuilder_ == null) {
+          if (!(typeCase_ == 2001)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.getDefaultInstance();
+          }
+          inverseTimeConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.InverseTimeDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2001;
+        onChanged();;
+        return inverseTimeConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder> naturalExpConfBuilder_;
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public boolean hasNaturalExpConf() {
+        return typeCase_ == 2002;
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf getNaturalExpConf() {
+        if (naturalExpConfBuilder_ == null) {
+          if (typeCase_ == 2002) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2002) {
+            return naturalExpConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public Builder setNaturalExpConf(org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf value) {
+        if (naturalExpConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          naturalExpConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public Builder setNaturalExpConf(
+          org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder builderForValue) {
+        if (naturalExpConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          naturalExpConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public Builder mergeNaturalExpConf(org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf value) {
+        if (naturalExpConfBuilder_ == null) {
+          if (typeCase_ == 2002 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2002) {
+            naturalExpConfBuilder_.mergeFrom(value);
+          }
+          naturalExpConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public Builder clearNaturalExpConf() {
+        if (naturalExpConfBuilder_ == null) {
+          if (typeCase_ == 2002) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2002) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          naturalExpConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder getNaturalExpConfBuilder() {
+        return getNaturalExpConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder getNaturalExpConfOrBuilder() {
+        if ((typeCase_ == 2002) && (naturalExpConfBuilder_ != null)) {
+          return naturalExpConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2002) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.NaturalExpDecayConf natural_exp_conf = 2002;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder> 
+          getNaturalExpConfFieldBuilder() {
+        if (naturalExpConfBuilder_ == null) {
+          if (!(typeCase_ == 2002)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.getDefaultInstance();
+          }
+          naturalExpConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.NaturalExpDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2002;
+        onChanged();;
+        return naturalExpConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder> piecewiseConstantConfBuilder_;
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public boolean hasPiecewiseConstantConf() {
+        return typeCase_ == 2003;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf getPiecewiseConstantConf() {
+        if (piecewiseConstantConfBuilder_ == null) {
+          if (typeCase_ == 2003) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2003) {
+            return piecewiseConstantConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public Builder setPiecewiseConstantConf(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf value) {
+        if (piecewiseConstantConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          piecewiseConstantConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2003;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public Builder setPiecewiseConstantConf(
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder builderForValue) {
+        if (piecewiseConstantConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          piecewiseConstantConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2003;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public Builder mergePiecewiseConstantConf(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf value) {
+        if (piecewiseConstantConfBuilder_ == null) {
+          if (typeCase_ == 2003 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2003) {
+            piecewiseConstantConfBuilder_.mergeFrom(value);
+          }
+          piecewiseConstantConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2003;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public Builder clearPiecewiseConstantConf() {
+        if (piecewiseConstantConfBuilder_ == null) {
+          if (typeCase_ == 2003) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2003) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          piecewiseConstantConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder getPiecewiseConstantConfBuilder() {
+        return getPiecewiseConstantConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder getPiecewiseConstantConfOrBuilder() {
+        if ((typeCase_ == 2003) && (piecewiseConstantConfBuilder_ != null)) {
+          return piecewiseConstantConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2003) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseConstantConf piecewise_constant_conf = 2003;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder> 
+          getPiecewiseConstantConfFieldBuilder() {
+        if (piecewiseConstantConfBuilder_ == null) {
+          if (!(typeCase_ == 2003)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.getDefaultInstance();
+          }
+          piecewiseConstantConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseConstantConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2003;
+        onChanged();;
+        return piecewiseConstantConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder> polynomialConfBuilder_;
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public boolean hasPolynomialConf() {
+        return typeCase_ == 2004;
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf getPolynomialConf() {
+        if (polynomialConfBuilder_ == null) {
+          if (typeCase_ == 2004) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2004) {
+            return polynomialConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public Builder setPolynomialConf(org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf value) {
+        if (polynomialConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          polynomialConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2004;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public Builder setPolynomialConf(
+          org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder builderForValue) {
+        if (polynomialConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          polynomialConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2004;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public Builder mergePolynomialConf(org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf value) {
+        if (polynomialConfBuilder_ == null) {
+          if (typeCase_ == 2004 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2004) {
+            polynomialConfBuilder_.mergeFrom(value);
+          }
+          polynomialConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2004;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public Builder clearPolynomialConf() {
+        if (polynomialConfBuilder_ == null) {
+          if (typeCase_ == 2004) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2004) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          polynomialConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder getPolynomialConfBuilder() {
+        return getPolynomialConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder getPolynomialConfOrBuilder() {
+        if ((typeCase_ == 2004) && (polynomialConfBuilder_ != null)) {
+          return polynomialConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2004) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PolynomialDecayConf polynomial_conf = 2004;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder> 
+          getPolynomialConfFieldBuilder() {
+        if (polynomialConfBuilder_ == null) {
+          if (!(typeCase_ == 2004)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.getDefaultInstance();
+          }
+          polynomialConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.PolynomialDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2004;
+        onChanged();;
+        return polynomialConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder> cosineConfBuilder_;
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public boolean hasCosineConf() {
+        return typeCase_ == 2005;
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf getCosineConf() {
+        if (cosineConfBuilder_ == null) {
+          if (typeCase_ == 2005) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2005) {
+            return cosineConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public Builder setCosineConf(org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf value) {
+        if (cosineConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          cosineConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2005;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public Builder setCosineConf(
+          org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder builderForValue) {
+        if (cosineConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          cosineConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2005;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public Builder mergeCosineConf(org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf value) {
+        if (cosineConfBuilder_ == null) {
+          if (typeCase_ == 2005 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2005) {
+            cosineConfBuilder_.mergeFrom(value);
+          }
+          cosineConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2005;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public Builder clearCosineConf() {
+        if (cosineConfBuilder_ == null) {
+          if (typeCase_ == 2005) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2005) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          cosineConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder getCosineConfBuilder() {
+        return getCosineConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder getCosineConfOrBuilder() {
+        if ((typeCase_ == 2005) && (cosineConfBuilder_ != null)) {
+          return cosineConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2005) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CosineDecayConf cosine_conf = 2005;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder> 
+          getCosineConfFieldBuilder() {
+        if (cosineConfBuilder_ == null) {
+          if (!(typeCase_ == 2005)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.getDefaultInstance();
+          }
+          cosineConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.CosineDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2005;
+        onChanged();;
+        return cosineConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder> linearCosineConfBuilder_;
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public boolean hasLinearCosineConf() {
+        return typeCase_ == 2006;
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf getLinearCosineConf() {
+        if (linearCosineConfBuilder_ == null) {
+          if (typeCase_ == 2006) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2006) {
+            return linearCosineConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public Builder setLinearCosineConf(org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf value) {
+        if (linearCosineConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          linearCosineConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2006;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public Builder setLinearCosineConf(
+          org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder builderForValue) {
+        if (linearCosineConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          linearCosineConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2006;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public Builder mergeLinearCosineConf(org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf value) {
+        if (linearCosineConfBuilder_ == null) {
+          if (typeCase_ == 2006 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2006) {
+            linearCosineConfBuilder_.mergeFrom(value);
+          }
+          linearCosineConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2006;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public Builder clearLinearCosineConf() {
+        if (linearCosineConfBuilder_ == null) {
+          if (typeCase_ == 2006) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2006) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          linearCosineConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder getLinearCosineConfBuilder() {
+        return getLinearCosineConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder getLinearCosineConfOrBuilder() {
+        if ((typeCase_ == 2006) && (linearCosineConfBuilder_ != null)) {
+          return linearCosineConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2006) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LinearCosineDecayConf linear_cosine_conf = 2006;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder> 
+          getLinearCosineConfFieldBuilder() {
+        if (linearCosineConfBuilder_ == null) {
+          if (!(typeCase_ == 2006)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.getDefaultInstance();
+          }
+          linearCosineConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.LinearCosineDecayConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2006;
+        onChanged();;
+        return linearCosineConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder> piecewiseScalingConfBuilder_;
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public boolean hasPiecewiseScalingConf() {
+        return typeCase_ == 2007;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf getPiecewiseScalingConf() {
+        if (piecewiseScalingConfBuilder_ == null) {
+          if (typeCase_ == 2007) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2007) {
+            return piecewiseScalingConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public Builder setPiecewiseScalingConf(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf value) {
+        if (piecewiseScalingConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          piecewiseScalingConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2007;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public Builder setPiecewiseScalingConf(
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder builderForValue) {
+        if (piecewiseScalingConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          piecewiseScalingConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2007;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public Builder mergePiecewiseScalingConf(org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf value) {
+        if (piecewiseScalingConfBuilder_ == null) {
+          if (typeCase_ == 2007 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2007) {
+            piecewiseScalingConfBuilder_.mergeFrom(value);
+          }
+          piecewiseScalingConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 2007;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public Builder clearPiecewiseScalingConf() {
+        if (piecewiseScalingConfBuilder_ == null) {
+          if (typeCase_ == 2007) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2007) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          piecewiseScalingConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder getPiecewiseScalingConfBuilder() {
+        return getPiecewiseScalingConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder getPiecewiseScalingConfOrBuilder() {
+        if ((typeCase_ == 2007) && (piecewiseScalingConfBuilder_ != null)) {
+          return piecewiseScalingConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2007) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.PiecewiseScalingConf piecewise_scaling_conf = 2007;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder> 
+          getPiecewiseScalingConfFieldBuilder() {
+        if (piecewiseScalingConfBuilder_ == null) {
+          if (!(typeCase_ == 2007)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.getDefaultInstance();
+          }
+          piecewiseScalingConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.PiecewiseScalingConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2007;
+        onChanged();;
+        return piecewiseScalingConfBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.LearningRateDecayConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.LearningRateDecayConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LearningRateDecayConf>
+        PARSER = new com.google.protobuf.AbstractParser<LearningRateDecayConf>() {
+      public LearningRateDecayConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LearningRateDecayConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LearningRateDecayConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LearningRateDecayConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.LearningRateDecayConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConstantWarmupConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ConstantWarmupConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    boolean hasWarmupBatches();
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    long getWarmupBatches();
+
+    /**
+     * <code>required double multiplier = 2;</code>
+     */
+    boolean hasMultiplier();
+    /**
+     * <code>required double multiplier = 2;</code>
+     */
+    double getMultiplier();
+  }
+  /**
+   * Protobuf type {@code oneflow.ConstantWarmupConf}
+   */
+  public  static final class ConstantWarmupConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ConstantWarmupConf)
+      ConstantWarmupConfOrBuilder {
+    // Use ConstantWarmupConf.newBuilder() to construct.
+    private ConstantWarmupConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConstantWarmupConf() {
+      warmupBatches_ = 0L;
+      multiplier_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConstantWarmupConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              warmupBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              multiplier_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ConstantWarmupConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ConstantWarmupConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int WARMUP_BATCHES_FIELD_NUMBER = 1;
+    private long warmupBatches_;
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    public boolean hasWarmupBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    public long getWarmupBatches() {
+      return warmupBatches_;
+    }
+
+    public static final int MULTIPLIER_FIELD_NUMBER = 2;
+    private double multiplier_;
+    /**
+     * <code>required double multiplier = 2;</code>
+     */
+    public boolean hasMultiplier() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required double multiplier = 2;</code>
+     */
+    public double getMultiplier() {
+      return multiplier_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasWarmupBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMultiplier()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, warmupBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, multiplier_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, warmupBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, multiplier_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf other = (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) obj;
+
+      boolean result = true;
+      result = result && (hasWarmupBatches() == other.hasWarmupBatches());
+      if (hasWarmupBatches()) {
+        result = result && (getWarmupBatches()
+            == other.getWarmupBatches());
+      }
+      result = result && (hasMultiplier() == other.hasMultiplier());
+      if (hasMultiplier()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getMultiplier())
+            == java.lang.Double.doubleToLongBits(
+                other.getMultiplier()));
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasWarmupBatches()) {
+        hash = (37 * hash) + WARMUP_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWarmupBatches());
+      }
+      if (hasMultiplier()) {
+        hash = (37 * hash) + MULTIPLIER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMultiplier()));
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ConstantWarmupConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ConstantWarmupConf)
+        org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ConstantWarmupConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ConstantWarmupConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        warmupBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        multiplier_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_ConstantWarmupConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf result = new org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.warmupBatches_ = warmupBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.multiplier_ = multiplier_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance()) return this;
+        if (other.hasWarmupBatches()) {
+          setWarmupBatches(other.getWarmupBatches());
+        }
+        if (other.hasMultiplier()) {
+          setMultiplier(other.getMultiplier());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasWarmupBatches()) {
+          return false;
+        }
+        if (!hasMultiplier()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long warmupBatches_ ;
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public boolean hasWarmupBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public long getWarmupBatches() {
+        return warmupBatches_;
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public Builder setWarmupBatches(long value) {
+        bitField0_ |= 0x00000001;
+        warmupBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public Builder clearWarmupBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        warmupBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double multiplier_ ;
+      /**
+       * <code>required double multiplier = 2;</code>
+       */
+      public boolean hasMultiplier() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required double multiplier = 2;</code>
+       */
+      public double getMultiplier() {
+        return multiplier_;
+      }
+      /**
+       * <code>required double multiplier = 2;</code>
+       */
+      public Builder setMultiplier(double value) {
+        bitField0_ |= 0x00000002;
+        multiplier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double multiplier = 2;</code>
+       */
+      public Builder clearMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        multiplier_ = 0D;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ConstantWarmupConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ConstantWarmupConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ConstantWarmupConf>
+        PARSER = new com.google.protobuf.AbstractParser<ConstantWarmupConf>() {
+      public ConstantWarmupConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ConstantWarmupConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConstantWarmupConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConstantWarmupConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinearWarmupConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.LinearWarmupConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    boolean hasWarmupBatches();
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    long getWarmupBatches();
+
+    /**
+     * <code>required double start_multiplier = 2;</code>
+     */
+    boolean hasStartMultiplier();
+    /**
+     * <code>required double start_multiplier = 2;</code>
+     */
+    double getStartMultiplier();
+  }
+  /**
+   * Protobuf type {@code oneflow.LinearWarmupConf}
+   */
+  public  static final class LinearWarmupConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.LinearWarmupConf)
+      LinearWarmupConfOrBuilder {
+    // Use LinearWarmupConf.newBuilder() to construct.
+    private LinearWarmupConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinearWarmupConf() {
+      warmupBatches_ = 0L;
+      startMultiplier_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LinearWarmupConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              warmupBatches_ = input.readInt64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              startMultiplier_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearWarmupConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearWarmupConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int WARMUP_BATCHES_FIELD_NUMBER = 1;
+    private long warmupBatches_;
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    public boolean hasWarmupBatches() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 warmup_batches = 1;</code>
+     */
+    public long getWarmupBatches() {
+      return warmupBatches_;
+    }
+
+    public static final int START_MULTIPLIER_FIELD_NUMBER = 2;
+    private double startMultiplier_;
+    /**
+     * <code>required double start_multiplier = 2;</code>
+     */
+    public boolean hasStartMultiplier() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required double start_multiplier = 2;</code>
+     */
+    public double getStartMultiplier() {
+      return startMultiplier_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasWarmupBatches()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasStartMultiplier()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, warmupBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeDouble(2, startMultiplier_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, warmupBatches_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, startMultiplier_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf other = (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) obj;
+
+      boolean result = true;
+      result = result && (hasWarmupBatches() == other.hasWarmupBatches());
+      if (hasWarmupBatches()) {
+        result = result && (getWarmupBatches()
+            == other.getWarmupBatches());
+      }
+      result = result && (hasStartMultiplier() == other.hasStartMultiplier());
+      if (hasStartMultiplier()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getStartMultiplier())
+            == java.lang.Double.doubleToLongBits(
+                other.getStartMultiplier()));
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasWarmupBatches()) {
+        hash = (37 * hash) + WARMUP_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWarmupBatches());
+      }
+      if (hasStartMultiplier()) {
+        hash = (37 * hash) + START_MULTIPLIER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getStartMultiplier()));
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.LinearWarmupConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.LinearWarmupConf)
+        org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearWarmupConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearWarmupConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        warmupBatches_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startMultiplier_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_LinearWarmupConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf result = new org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.warmupBatches_ = warmupBatches_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.startMultiplier_ = startMultiplier_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance()) return this;
+        if (other.hasWarmupBatches()) {
+          setWarmupBatches(other.getWarmupBatches());
+        }
+        if (other.hasStartMultiplier()) {
+          setStartMultiplier(other.getStartMultiplier());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasWarmupBatches()) {
+          return false;
+        }
+        if (!hasStartMultiplier()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long warmupBatches_ ;
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public boolean hasWarmupBatches() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public long getWarmupBatches() {
+        return warmupBatches_;
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public Builder setWarmupBatches(long value) {
+        bitField0_ |= 0x00000001;
+        warmupBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 warmup_batches = 1;</code>
+       */
+      public Builder clearWarmupBatches() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        warmupBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double startMultiplier_ ;
+      /**
+       * <code>required double start_multiplier = 2;</code>
+       */
+      public boolean hasStartMultiplier() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required double start_multiplier = 2;</code>
+       */
+      public double getStartMultiplier() {
+        return startMultiplier_;
+      }
+      /**
+       * <code>required double start_multiplier = 2;</code>
+       */
+      public Builder setStartMultiplier(double value) {
+        bitField0_ |= 0x00000002;
+        startMultiplier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double start_multiplier = 2;</code>
+       */
+      public Builder clearStartMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startMultiplier_ = 0D;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.LinearWarmupConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.LinearWarmupConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LinearWarmupConf>
+        PARSER = new com.google.protobuf.AbstractParser<LinearWarmupConf>() {
+      public LinearWarmupConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LinearWarmupConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinearWarmupConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinearWarmupConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WarmupConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.WarmupConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    boolean hasConstantConf();
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getConstantConf();
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder getConstantConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    boolean hasLinearConf();
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getLinearConf();
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder getLinearConfOrBuilder();
+
+    public org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.WarmupConf}
+   */
+  public  static final class WarmupConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.WarmupConf)
+      WarmupConfOrBuilder {
+    // Use WarmupConf.newBuilder() to construct.
+    private WarmupConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WarmupConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WarmupConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 24002: {
+              org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder subBuilder = null;
+              if (typeCase_ == 3000) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 3000;
+              break;
+            }
+            case 24010: {
+              org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder subBuilder = null;
+              if (typeCase_ == 3001) {
+                subBuilder = ((org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 3001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_WarmupConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_WarmupConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.Builder.class);
+    }
+
+    private int bitField0_;
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CONSTANT_CONF(3000),
+      LINEAR_CONF(3001),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 3000: return CONSTANT_CONF;
+          case 3001: return LINEAR_CONF;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int CONSTANT_CONF_FIELD_NUMBER = 3000;
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    public boolean hasConstantConf() {
+      return typeCase_ == 3000;
+    }
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getConstantConf() {
+      if (typeCase_ == 3000) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder getConstantConfOrBuilder() {
+      if (typeCase_ == 3000) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+    }
+
+    public static final int LINEAR_CONF_FIELD_NUMBER = 3001;
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    public boolean hasLinearConf() {
+      return typeCase_ == 3001;
+    }
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getLinearConf() {
+      if (typeCase_ == 3001) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+     */
+    public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder getLinearConfOrBuilder() {
+      if (typeCase_ == 3001) {
+         return (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_;
+      }
+      return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasConstantConf()) {
+        if (!getConstantConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasLinearConf()) {
+        if (!getLinearConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 3000) {
+        output.writeMessage(3000, (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_);
+      }
+      if (typeCase_ == 3001) {
+        output.writeMessage(3001, (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 3000) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3000, (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_);
+      }
+      if (typeCase_ == 3001) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3001, (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.LearningRateScheduleConf.WarmupConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.LearningRateScheduleConf.WarmupConf other = (org.oneflow.core.job.LearningRateScheduleConf.WarmupConf) obj;
+
+      boolean result = true;
+      result = result && getTypeCase().equals(
+          other.getTypeCase());
+      if (!result) return false;
+      switch (typeCase_) {
+        case 3000:
+          result = result && getConstantConf()
+              .equals(other.getConstantConf());
+          break;
+        case 3001:
+          result = result && getLinearConf()
+              .equals(other.getLinearConf());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (typeCase_) {
+        case 3000:
+          hash = (37 * hash) + CONSTANT_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getConstantConf().hashCode();
+          break;
+        case 3001:
+          hash = (37 * hash) + LINEAR_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getLinearConf().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.LearningRateScheduleConf.WarmupConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.WarmupConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.WarmupConf)
+        org.oneflow.core.job.LearningRateScheduleConf.WarmupConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_WarmupConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_WarmupConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.class, org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.internal_static_oneflow_WarmupConf_descriptor;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.WarmupConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.WarmupConf build() {
+        org.oneflow.core.job.LearningRateScheduleConf.WarmupConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.LearningRateScheduleConf.WarmupConf buildPartial() {
+        org.oneflow.core.job.LearningRateScheduleConf.WarmupConf result = new org.oneflow.core.job.LearningRateScheduleConf.WarmupConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (typeCase_ == 3000) {
+          if (constantConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = constantConfBuilder_.build();
+          }
+        }
+        if (typeCase_ == 3001) {
+          if (linearConfBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = linearConfBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.LearningRateScheduleConf.WarmupConf) {
+          return mergeFrom((org.oneflow.core.job.LearningRateScheduleConf.WarmupConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.LearningRateScheduleConf.WarmupConf other) {
+        if (other == org.oneflow.core.job.LearningRateScheduleConf.WarmupConf.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case CONSTANT_CONF: {
+            mergeConstantConf(other.getConstantConf());
+            break;
+          }
+          case LINEAR_CONF: {
+            mergeLinearConf(other.getLinearConf());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasConstantConf()) {
+          if (!getConstantConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasLinearConf()) {
+          if (!getLinearConf().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.LearningRateScheduleConf.WarmupConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.LearningRateScheduleConf.WarmupConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder> constantConfBuilder_;
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public boolean hasConstantConf() {
+        return typeCase_ == 3000;
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf getConstantConf() {
+        if (constantConfBuilder_ == null) {
+          if (typeCase_ == 3000) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 3000) {
+            return constantConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public Builder setConstantConf(org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf value) {
+        if (constantConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          constantConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 3000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public Builder setConstantConf(
+          org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder builderForValue) {
+        if (constantConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          constantConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 3000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public Builder mergeConstantConf(org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf value) {
+        if (constantConfBuilder_ == null) {
+          if (typeCase_ == 3000 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 3000) {
+            constantConfBuilder_.mergeFrom(value);
+          }
+          constantConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 3000;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public Builder clearConstantConf() {
+        if (constantConfBuilder_ == null) {
+          if (typeCase_ == 3000) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 3000) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          constantConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder getConstantConfBuilder() {
+        return getConstantConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder getConstantConfOrBuilder() {
+        if ((typeCase_ == 3000) && (constantConfBuilder_ != null)) {
+          return constantConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 3000) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ConstantWarmupConf constant_conf = 3000;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder> 
+          getConstantConfFieldBuilder() {
+        if (constantConfBuilder_ == null) {
+          if (!(typeCase_ == 3000)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.getDefaultInstance();
+          }
+          constantConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.ConstantWarmupConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 3000;
+        onChanged();;
+        return constantConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder> linearConfBuilder_;
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public boolean hasLinearConf() {
+        return typeCase_ == 3001;
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf getLinearConf() {
+        if (linearConfBuilder_ == null) {
+          if (typeCase_ == 3001) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+        } else {
+          if (typeCase_ == 3001) {
+            return linearConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public Builder setLinearConf(org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf value) {
+        if (linearConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          linearConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 3001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public Builder setLinearConf(
+          org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder builderForValue) {
+        if (linearConfBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          linearConfBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 3001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public Builder mergeLinearConf(org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf value) {
+        if (linearConfBuilder_ == null) {
+          if (typeCase_ == 3001 &&
+              type_ != org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.newBuilder((org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 3001) {
+            linearConfBuilder_.mergeFrom(value);
+          }
+          linearConfBuilder_.setMessage(value);
+        }
+        typeCase_ = 3001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public Builder clearLinearConf() {
+        if (linearConfBuilder_ == null) {
+          if (typeCase_ == 3001) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 3001) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          linearConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder getLinearConfBuilder() {
+        return getLinearConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      public org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder getLinearConfOrBuilder() {
+        if ((typeCase_ == 3001) && (linearConfBuilder_ != null)) {
+          return linearConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 3001) {
+            return (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_;
+          }
+          return org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LinearWarmupConf linear_conf = 3001;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder> 
+          getLinearConfFieldBuilder() {
+        if (linearConfBuilder_ == null) {
+          if (!(typeCase_ == 3001)) {
+            type_ = org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.getDefaultInstance();
+          }
+          linearConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf.Builder, org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConfOrBuilder>(
+                  (org.oneflow.core.job.LearningRateScheduleConf.LinearWarmupConf) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 3001;
+        onChanged();;
+        return linearConfBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.WarmupConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.WarmupConf)
+    private static final org.oneflow.core.job.LearningRateScheduleConf.WarmupConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.LearningRateScheduleConf.WarmupConf();
+    }
+
+    public static org.oneflow.core.job.LearningRateScheduleConf.WarmupConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<WarmupConf>
+        PARSER = new com.google.protobuf.AbstractParser<WarmupConf>() {
+      public WarmupConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new WarmupConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WarmupConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WarmupConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.LearningRateScheduleConf.WarmupConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ExponentialDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ExponentialDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_InverseTimeDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_InverseTimeDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_NaturalExpDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_NaturalExpDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_PiecewiseConstantConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_PiecewiseConstantConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_PolynomialDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_PolynomialDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CosineDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CosineDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_LinearCosineDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_LinearCosineDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_PiecewiseScalingConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_PiecewiseScalingConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_LearningRateDecayConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_LearningRateDecayConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ConstantWarmupConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ConstantWarmupConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_LinearWarmupConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_LinearWarmupConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_WarmupConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_WarmupConf_fieldAccessorTable;
 
@@ -121,8 +9836,8 @@ public final class LearningRateScheduleConf {
       "ier\030\002 \002(\001\"~\n\nWarmupConf\0225\n\rconstant_conf" +
       "\030\270\027 \001(\0132\033.oneflow.ConstantWarmupConfH\000\0221" +
       "\n\013linear_conf\030\271\027 \001(\0132\031.oneflow.LinearWar" +
-      "mupConfH\000B\006\n\004typeB\030\n\024org.oneflow.core.jo" +
-      "bP\001"
+      "mupConfH\000B\006\n\004typeB\026\n\024org.oneflow.core.jo" +
+      "b"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

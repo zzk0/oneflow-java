@@ -14,24 +14,3422 @@ public final class CtrlBootstrap {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string host = 1;</code>
+     */
+    boolean hasHost();
+    /**
+     * <code>required string host = 1;</code>
+     */
+    java.lang.String getHost();
+    /**
+     * <code>required string host = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+
+    /**
+     * <code>required int32 port = 2;</code>
+     */
+    boolean hasPort();
+    /**
+     * <code>required int32 port = 2;</code>
+     */
+    int getPort();
+  }
+  /**
+   * Protobuf type {@code oneflow.Address}
+   */
+  public  static final class Address extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.Address)
+      AddressOrBuilder {
+    // Use Address.newBuilder() to construct.
+    private Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Address() {
+      host_ = "";
+      port_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              host_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              port_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_Address_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.control.CtrlBootstrap.Address.class, org.oneflow.core.control.CtrlBootstrap.Address.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HOST_FIELD_NUMBER = 1;
+    private volatile java.lang.Object host_;
+    /**
+     * <code>required string host = 1;</code>
+     */
+    public boolean hasHost() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string host = 1;</code>
+     */
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          host_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string host = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 2;
+    private int port_;
+    /**
+     * <code>required int32 port = 2;</code>
+     */
+    public boolean hasPort() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 port = 2;</code>
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasHost()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPort()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, host_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.control.CtrlBootstrap.Address)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.control.CtrlBootstrap.Address other = (org.oneflow.core.control.CtrlBootstrap.Address) obj;
+
+      boolean result = true;
+      result = result && (hasHost() == other.hasHost());
+      if (hasHost()) {
+        result = result && getHost()
+            .equals(other.getHost());
+      }
+      result = result && (hasPort() == other.hasPort());
+      if (hasPort()) {
+        result = result && (getPort()
+            == other.getPort());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasHost()) {
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+      }
+      if (hasPort()) {
+        hash = (37 * hash) + PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getPort();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.control.CtrlBootstrap.Address prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.Address)
+        org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_Address_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.control.CtrlBootstrap.Address.class, org.oneflow.core.control.CtrlBootstrap.Address.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.control.CtrlBootstrap.Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        host_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        port_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_Address_descriptor;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.Address getDefaultInstanceForType() {
+        return org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance();
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.Address build() {
+        org.oneflow.core.control.CtrlBootstrap.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.Address buildPartial() {
+        org.oneflow.core.control.CtrlBootstrap.Address result = new org.oneflow.core.control.CtrlBootstrap.Address(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.host_ = host_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.port_ = port_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.control.CtrlBootstrap.Address) {
+          return mergeFrom((org.oneflow.core.control.CtrlBootstrap.Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.control.CtrlBootstrap.Address other) {
+        if (other == org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance()) return this;
+        if (other.hasHost()) {
+          bitField0_ |= 0x00000001;
+          host_ = other.host_;
+          onChanged();
+        }
+        if (other.hasPort()) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasHost()) {
+          return false;
+        }
+        if (!hasPort()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.control.CtrlBootstrap.Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.control.CtrlBootstrap.Address) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object host_ = "";
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public boolean hasHost() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            host_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public Builder clearHost() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string host = 1;</code>
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        host_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_ ;
+      /**
+       * <code>required int32 port = 2;</code>
+       */
+      public boolean hasPort() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 port = 2;</code>
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>required int32 port = 2;</code>
+       */
+      public Builder setPort(int value) {
+        bitField0_ |= 0x00000002;
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 port = 2;</code>
+       */
+      public Builder clearPort() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.Address)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.Address)
+    private static final org.oneflow.core.control.CtrlBootstrap.Address DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.control.CtrlBootstrap.Address();
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.Address getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Address>
+        PARSER = new com.google.protobuf.AbstractParser<Address>() {
+      public Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Address(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Address> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Address> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.control.CtrlBootstrap.Address getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProcessCtxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ProcessCtx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    java.util.List<org.oneflow.core.control.CtrlBootstrap.Address> 
+        getCtrlAddrList();
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.Address getCtrlAddr(int index);
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    int getCtrlAddrCount();
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> 
+        getCtrlAddrOrBuilderList();
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getCtrlAddrOrBuilder(
+        int index);
+
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    boolean hasRank();
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    long getRank();
+
+    /**
+     * <code>required int64 node_size = 3;</code>
+     */
+    boolean hasNodeSize();
+    /**
+     * <code>required int64 node_size = 3;</code>
+     */
+    long getNodeSize();
+  }
+  /**
+   * Protobuf type {@code oneflow.ProcessCtx}
+   */
+  public  static final class ProcessCtx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ProcessCtx)
+      ProcessCtxOrBuilder {
+    // Use ProcessCtx.newBuilder() to construct.
+    private ProcessCtx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProcessCtx() {
+      ctrlAddr_ = java.util.Collections.emptyList();
+      rank_ = 0L;
+      nodeSize_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProcessCtx(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                ctrlAddr_ = new java.util.ArrayList<org.oneflow.core.control.CtrlBootstrap.Address>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ctrlAddr_.add(
+                  input.readMessage(org.oneflow.core.control.CtrlBootstrap.Address.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              rank_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              nodeSize_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          ctrlAddr_ = java.util.Collections.unmodifiableList(ctrlAddr_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_ProcessCtx_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_ProcessCtx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.control.CtrlBootstrap.ProcessCtx.class, org.oneflow.core.control.CtrlBootstrap.ProcessCtx.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CTRL_ADDR_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.control.CtrlBootstrap.Address> ctrlAddr_;
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.control.CtrlBootstrap.Address> getCtrlAddrList() {
+      return ctrlAddr_;
+    }
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> 
+        getCtrlAddrOrBuilderList() {
+      return ctrlAddr_;
+    }
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    public int getCtrlAddrCount() {
+      return ctrlAddr_.size();
+    }
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.Address getCtrlAddr(int index) {
+      return ctrlAddr_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getCtrlAddrOrBuilder(
+        int index) {
+      return ctrlAddr_.get(index);
+    }
+
+    public static final int RANK_FIELD_NUMBER = 2;
+    private long rank_;
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public boolean hasRank() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public long getRank() {
+      return rank_;
+    }
+
+    public static final int NODE_SIZE_FIELD_NUMBER = 3;
+    private long nodeSize_;
+    /**
+     * <code>required int64 node_size = 3;</code>
+     */
+    public boolean hasNodeSize() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 node_size = 3;</code>
+     */
+    public long getNodeSize() {
+      return nodeSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasRank()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNodeSize()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getCtrlAddrCount(); i++) {
+        if (!getCtrlAddr(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < ctrlAddr_.size(); i++) {
+        output.writeMessage(1, ctrlAddr_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(2, rank_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(3, nodeSize_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < ctrlAddr_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, ctrlAddr_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rank_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, nodeSize_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.control.CtrlBootstrap.ProcessCtx)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.control.CtrlBootstrap.ProcessCtx other = (org.oneflow.core.control.CtrlBootstrap.ProcessCtx) obj;
+
+      boolean result = true;
+      result = result && getCtrlAddrList()
+          .equals(other.getCtrlAddrList());
+      result = result && (hasRank() == other.hasRank());
+      if (hasRank()) {
+        result = result && (getRank()
+            == other.getRank());
+      }
+      result = result && (hasNodeSize() == other.hasNodeSize());
+      if (hasNodeSize()) {
+        result = result && (getNodeSize()
+            == other.getNodeSize());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getCtrlAddrCount() > 0) {
+        hash = (37 * hash) + CTRL_ADDR_FIELD_NUMBER;
+        hash = (53 * hash) + getCtrlAddrList().hashCode();
+      }
+      if (hasRank()) {
+        hash = (37 * hash) + RANK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRank());
+      }
+      if (hasNodeSize()) {
+        hash = (37 * hash) + NODE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNodeSize());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.control.CtrlBootstrap.ProcessCtx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ProcessCtx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ProcessCtx)
+        org.oneflow.core.control.CtrlBootstrap.ProcessCtxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_ProcessCtx_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_ProcessCtx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.control.CtrlBootstrap.ProcessCtx.class, org.oneflow.core.control.CtrlBootstrap.ProcessCtx.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.control.CtrlBootstrap.ProcessCtx.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCtrlAddrFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (ctrlAddrBuilder_ == null) {
+          ctrlAddr_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ctrlAddrBuilder_.clear();
+        }
+        rank_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nodeSize_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_ProcessCtx_descriptor;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.ProcessCtx getDefaultInstanceForType() {
+        return org.oneflow.core.control.CtrlBootstrap.ProcessCtx.getDefaultInstance();
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.ProcessCtx build() {
+        org.oneflow.core.control.CtrlBootstrap.ProcessCtx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.ProcessCtx buildPartial() {
+        org.oneflow.core.control.CtrlBootstrap.ProcessCtx result = new org.oneflow.core.control.CtrlBootstrap.ProcessCtx(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (ctrlAddrBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            ctrlAddr_ = java.util.Collections.unmodifiableList(ctrlAddr_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ctrlAddr_ = ctrlAddr_;
+        } else {
+          result.ctrlAddr_ = ctrlAddrBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.rank_ = rank_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.nodeSize_ = nodeSize_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.control.CtrlBootstrap.ProcessCtx) {
+          return mergeFrom((org.oneflow.core.control.CtrlBootstrap.ProcessCtx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.control.CtrlBootstrap.ProcessCtx other) {
+        if (other == org.oneflow.core.control.CtrlBootstrap.ProcessCtx.getDefaultInstance()) return this;
+        if (ctrlAddrBuilder_ == null) {
+          if (!other.ctrlAddr_.isEmpty()) {
+            if (ctrlAddr_.isEmpty()) {
+              ctrlAddr_ = other.ctrlAddr_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCtrlAddrIsMutable();
+              ctrlAddr_.addAll(other.ctrlAddr_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ctrlAddr_.isEmpty()) {
+            if (ctrlAddrBuilder_.isEmpty()) {
+              ctrlAddrBuilder_.dispose();
+              ctrlAddrBuilder_ = null;
+              ctrlAddr_ = other.ctrlAddr_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ctrlAddrBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCtrlAddrFieldBuilder() : null;
+            } else {
+              ctrlAddrBuilder_.addAllMessages(other.ctrlAddr_);
+            }
+          }
+        }
+        if (other.hasRank()) {
+          setRank(other.getRank());
+        }
+        if (other.hasNodeSize()) {
+          setNodeSize(other.getNodeSize());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasRank()) {
+          return false;
+        }
+        if (!hasNodeSize()) {
+          return false;
+        }
+        for (int i = 0; i < getCtrlAddrCount(); i++) {
+          if (!getCtrlAddr(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.control.CtrlBootstrap.ProcessCtx parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.control.CtrlBootstrap.ProcessCtx) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.control.CtrlBootstrap.Address> ctrlAddr_ =
+        java.util.Collections.emptyList();
+      private void ensureCtrlAddrIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          ctrlAddr_ = new java.util.ArrayList<org.oneflow.core.control.CtrlBootstrap.Address>(ctrlAddr_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> ctrlAddrBuilder_;
+
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.control.CtrlBootstrap.Address> getCtrlAddrList() {
+        if (ctrlAddrBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ctrlAddr_);
+        } else {
+          return ctrlAddrBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public int getCtrlAddrCount() {
+        if (ctrlAddrBuilder_ == null) {
+          return ctrlAddr_.size();
+        } else {
+          return ctrlAddrBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address getCtrlAddr(int index) {
+        if (ctrlAddrBuilder_ == null) {
+          return ctrlAddr_.get(index);
+        } else {
+          return ctrlAddrBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder setCtrlAddr(
+          int index, org.oneflow.core.control.CtrlBootstrap.Address value) {
+        if (ctrlAddrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.set(index, value);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder setCtrlAddr(
+          int index, org.oneflow.core.control.CtrlBootstrap.Address.Builder builderForValue) {
+        if (ctrlAddrBuilder_ == null) {
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder addCtrlAddr(org.oneflow.core.control.CtrlBootstrap.Address value) {
+        if (ctrlAddrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.add(value);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder addCtrlAddr(
+          int index, org.oneflow.core.control.CtrlBootstrap.Address value) {
+        if (ctrlAddrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.add(index, value);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder addCtrlAddr(
+          org.oneflow.core.control.CtrlBootstrap.Address.Builder builderForValue) {
+        if (ctrlAddrBuilder_ == null) {
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder addCtrlAddr(
+          int index, org.oneflow.core.control.CtrlBootstrap.Address.Builder builderForValue) {
+        if (ctrlAddrBuilder_ == null) {
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder addAllCtrlAddr(
+          java.lang.Iterable<? extends org.oneflow.core.control.CtrlBootstrap.Address> values) {
+        if (ctrlAddrBuilder_ == null) {
+          ensureCtrlAddrIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ctrlAddr_);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder clearCtrlAddr() {
+        if (ctrlAddrBuilder_ == null) {
+          ctrlAddr_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public Builder removeCtrlAddr(int index) {
+        if (ctrlAddrBuilder_ == null) {
+          ensureCtrlAddrIsMutable();
+          ctrlAddr_.remove(index);
+          onChanged();
+        } else {
+          ctrlAddrBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address.Builder getCtrlAddrBuilder(
+          int index) {
+        return getCtrlAddrFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getCtrlAddrOrBuilder(
+          int index) {
+        if (ctrlAddrBuilder_ == null) {
+          return ctrlAddr_.get(index);  } else {
+          return ctrlAddrBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> 
+           getCtrlAddrOrBuilderList() {
+        if (ctrlAddrBuilder_ != null) {
+          return ctrlAddrBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ctrlAddr_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address.Builder addCtrlAddrBuilder() {
+        return getCtrlAddrFieldBuilder().addBuilder(
+            org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address.Builder addCtrlAddrBuilder(
+          int index) {
+        return getCtrlAddrFieldBuilder().addBuilder(
+            index, org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.Address ctrl_addr = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.control.CtrlBootstrap.Address.Builder> 
+           getCtrlAddrBuilderList() {
+        return getCtrlAddrFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> 
+          getCtrlAddrFieldBuilder() {
+        if (ctrlAddrBuilder_ == null) {
+          ctrlAddrBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder>(
+                  ctrlAddr_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          ctrlAddr_ = null;
+        }
+        return ctrlAddrBuilder_;
+      }
+
+      private long rank_ ;
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public boolean hasRank() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public long getRank() {
+        return rank_;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder setRank(long value) {
+        bitField0_ |= 0x00000002;
+        rank_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder clearRank() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rank_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long nodeSize_ ;
+      /**
+       * <code>required int64 node_size = 3;</code>
+       */
+      public boolean hasNodeSize() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 node_size = 3;</code>
+       */
+      public long getNodeSize() {
+        return nodeSize_;
+      }
+      /**
+       * <code>required int64 node_size = 3;</code>
+       */
+      public Builder setNodeSize(long value) {
+        bitField0_ |= 0x00000004;
+        nodeSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 node_size = 3;</code>
+       */
+      public Builder clearNodeSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nodeSize_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ProcessCtx)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ProcessCtx)
+    private static final org.oneflow.core.control.CtrlBootstrap.ProcessCtx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.control.CtrlBootstrap.ProcessCtx();
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.ProcessCtx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ProcessCtx>
+        PARSER = new com.google.protobuf.AbstractParser<ProcessCtx>() {
+      public ProcessCtx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ProcessCtx(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProcessCtx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProcessCtx> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.control.CtrlBootstrap.ProcessCtx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BootstrapConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.BootstrapConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    boolean hasMasterAddr();
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.Address getMasterAddr();
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getMasterAddrOrBuilder();
+
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    boolean hasRank();
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    long getRank();
+
+    /**
+     * <code>required int64 world_size = 3;</code>
+     */
+    boolean hasWorldSize();
+    /**
+     * <code>required int64 world_size = 3;</code>
+     */
+    long getWorldSize();
+
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    boolean hasHost();
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    java.lang.String getHost();
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+
+    /**
+     * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+     */
+    boolean hasCtrlPort();
+    /**
+     * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+     */
+    int getCtrlPort();
+
+    /**
+     * <code>optional int64 node_size = 6 [default = -1];</code>
+     */
+    boolean hasNodeSize();
+    /**
+     * <code>optional int64 node_size = 6 [default = -1];</code>
+     */
+    long getNodeSize();
+
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    boolean hasNumProcessPerNode();
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode();
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.BootstrapConf}
+   */
+  public  static final class BootstrapConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.BootstrapConf)
+      BootstrapConfOrBuilder {
+    // Use BootstrapConf.newBuilder() to construct.
+    private BootstrapConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BootstrapConf() {
+      rank_ = 0L;
+      worldSize_ = 0L;
+      host_ = "";
+      ctrlPort_ = -1;
+      nodeSize_ = -1L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BootstrapConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.control.CtrlBootstrap.Address.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = masterAddr_.toBuilder();
+              }
+              masterAddr_ = input.readMessage(org.oneflow.core.control.CtrlBootstrap.Address.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(masterAddr_);
+                masterAddr_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              rank_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              worldSize_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              host_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              ctrlPort_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              nodeSize_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = numProcessPerNode_.toBuilder();
+              }
+              numProcessPerNode_ = input.readMessage(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(numProcessPerNode_);
+                numProcessPerNode_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_BootstrapConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_BootstrapConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.control.CtrlBootstrap.BootstrapConf.class, org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MASTER_ADDR_FIELD_NUMBER = 1;
+    private org.oneflow.core.control.CtrlBootstrap.Address masterAddr_;
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    public boolean hasMasterAddr() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.Address getMasterAddr() {
+      return masterAddr_ == null ? org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance() : masterAddr_;
+    }
+    /**
+     * <code>required .oneflow.Address master_addr = 1;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getMasterAddrOrBuilder() {
+      return masterAddr_ == null ? org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance() : masterAddr_;
+    }
+
+    public static final int RANK_FIELD_NUMBER = 2;
+    private long rank_;
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public boolean hasRank() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 rank = 2;</code>
+     */
+    public long getRank() {
+      return rank_;
+    }
+
+    public static final int WORLD_SIZE_FIELD_NUMBER = 3;
+    private long worldSize_;
+    /**
+     * <code>required int64 world_size = 3;</code>
+     */
+    public boolean hasWorldSize() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int64 world_size = 3;</code>
+     */
+    public long getWorldSize() {
+      return worldSize_;
+    }
+
+    public static final int HOST_FIELD_NUMBER = 4;
+    private volatile java.lang.Object host_;
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    public boolean hasHost() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          host_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string host = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CTRL_PORT_FIELD_NUMBER = 5;
+    private int ctrlPort_;
+    /**
+     * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+     */
+    public boolean hasCtrlPort() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+     */
+    public int getCtrlPort() {
+      return ctrlPort_;
+    }
+
+    public static final int NODE_SIZE_FIELD_NUMBER = 6;
+    private long nodeSize_;
+    /**
+     * <code>optional int64 node_size = 6 [default = -1];</code>
+     */
+    public boolean hasNodeSize() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int64 node_size = 6 [default = -1];</code>
+     */
+    public long getNodeSize() {
+      return nodeSize_;
+    }
+
+    public static final int NUM_PROCESS_PER_NODE_FIELD_NUMBER = 7;
+    private org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode numProcessPerNode_;
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    public boolean hasNumProcessPerNode() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode() {
+      return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
+    }
+    /**
+     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+     */
+    public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder() {
+      return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasMasterAddr()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRank()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasWorldSize()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getMasterAddr().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasNumProcessPerNode()) {
+        if (!getNumProcessPerNode().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getMasterAddr());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, rank_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, worldSize_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, host_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, ctrlPort_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt64(6, nodeSize_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, getNumProcessPerNode());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMasterAddr());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rank_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, worldSize_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, host_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, ctrlPort_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, nodeSize_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getNumProcessPerNode());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.control.CtrlBootstrap.BootstrapConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.control.CtrlBootstrap.BootstrapConf other = (org.oneflow.core.control.CtrlBootstrap.BootstrapConf) obj;
+
+      boolean result = true;
+      result = result && (hasMasterAddr() == other.hasMasterAddr());
+      if (hasMasterAddr()) {
+        result = result && getMasterAddr()
+            .equals(other.getMasterAddr());
+      }
+      result = result && (hasRank() == other.hasRank());
+      if (hasRank()) {
+        result = result && (getRank()
+            == other.getRank());
+      }
+      result = result && (hasWorldSize() == other.hasWorldSize());
+      if (hasWorldSize()) {
+        result = result && (getWorldSize()
+            == other.getWorldSize());
+      }
+      result = result && (hasHost() == other.hasHost());
+      if (hasHost()) {
+        result = result && getHost()
+            .equals(other.getHost());
+      }
+      result = result && (hasCtrlPort() == other.hasCtrlPort());
+      if (hasCtrlPort()) {
+        result = result && (getCtrlPort()
+            == other.getCtrlPort());
+      }
+      result = result && (hasNodeSize() == other.hasNodeSize());
+      if (hasNodeSize()) {
+        result = result && (getNodeSize()
+            == other.getNodeSize());
+      }
+      result = result && (hasNumProcessPerNode() == other.hasNumProcessPerNode());
+      if (hasNumProcessPerNode()) {
+        result = result && getNumProcessPerNode()
+            .equals(other.getNumProcessPerNode());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMasterAddr()) {
+        hash = (37 * hash) + MASTER_ADDR_FIELD_NUMBER;
+        hash = (53 * hash) + getMasterAddr().hashCode();
+      }
+      if (hasRank()) {
+        hash = (37 * hash) + RANK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRank());
+      }
+      if (hasWorldSize()) {
+        hash = (37 * hash) + WORLD_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWorldSize());
+      }
+      if (hasHost()) {
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+      }
+      if (hasCtrlPort()) {
+        hash = (37 * hash) + CTRL_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getCtrlPort();
+      }
+      if (hasNodeSize()) {
+        hash = (37 * hash) + NODE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNodeSize());
+      }
+      if (hasNumProcessPerNode()) {
+        hash = (37 * hash) + NUM_PROCESS_PER_NODE_FIELD_NUMBER;
+        hash = (53 * hash) + getNumProcessPerNode().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.control.CtrlBootstrap.BootstrapConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.BootstrapConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.BootstrapConf)
+        org.oneflow.core.control.CtrlBootstrap.BootstrapConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_BootstrapConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_BootstrapConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.control.CtrlBootstrap.BootstrapConf.class, org.oneflow.core.control.CtrlBootstrap.BootstrapConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.control.CtrlBootstrap.BootstrapConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMasterAddrFieldBuilder();
+          getNumProcessPerNodeFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (masterAddrBuilder_ == null) {
+          masterAddr_ = null;
+        } else {
+          masterAddrBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rank_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        worldSize_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        host_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ctrlPort_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        nodeSize_ = -1L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (numProcessPerNodeBuilder_ == null) {
+          numProcessPerNode_ = null;
+        } else {
+          numProcessPerNodeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_BootstrapConf_descriptor;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConf getDefaultInstanceForType() {
+        return org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConf build() {
+        org.oneflow.core.control.CtrlBootstrap.BootstrapConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.BootstrapConf buildPartial() {
+        org.oneflow.core.control.CtrlBootstrap.BootstrapConf result = new org.oneflow.core.control.CtrlBootstrap.BootstrapConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (masterAddrBuilder_ == null) {
+          result.masterAddr_ = masterAddr_;
+        } else {
+          result.masterAddr_ = masterAddrBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.rank_ = rank_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.worldSize_ = worldSize_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.host_ = host_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.ctrlPort_ = ctrlPort_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.nodeSize_ = nodeSize_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (numProcessPerNodeBuilder_ == null) {
+          result.numProcessPerNode_ = numProcessPerNode_;
+        } else {
+          result.numProcessPerNode_ = numProcessPerNodeBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.control.CtrlBootstrap.BootstrapConf) {
+          return mergeFrom((org.oneflow.core.control.CtrlBootstrap.BootstrapConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.control.CtrlBootstrap.BootstrapConf other) {
+        if (other == org.oneflow.core.control.CtrlBootstrap.BootstrapConf.getDefaultInstance()) return this;
+        if (other.hasMasterAddr()) {
+          mergeMasterAddr(other.getMasterAddr());
+        }
+        if (other.hasRank()) {
+          setRank(other.getRank());
+        }
+        if (other.hasWorldSize()) {
+          setWorldSize(other.getWorldSize());
+        }
+        if (other.hasHost()) {
+          bitField0_ |= 0x00000008;
+          host_ = other.host_;
+          onChanged();
+        }
+        if (other.hasCtrlPort()) {
+          setCtrlPort(other.getCtrlPort());
+        }
+        if (other.hasNodeSize()) {
+          setNodeSize(other.getNodeSize());
+        }
+        if (other.hasNumProcessPerNode()) {
+          mergeNumProcessPerNode(other.getNumProcessPerNode());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMasterAddr()) {
+          return false;
+        }
+        if (!hasRank()) {
+          return false;
+        }
+        if (!hasWorldSize()) {
+          return false;
+        }
+        if (!getMasterAddr().isInitialized()) {
+          return false;
+        }
+        if (hasNumProcessPerNode()) {
+          if (!getNumProcessPerNode().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.control.CtrlBootstrap.BootstrapConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.control.CtrlBootstrap.BootstrapConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.control.CtrlBootstrap.Address masterAddr_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> masterAddrBuilder_;
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public boolean hasMasterAddr() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address getMasterAddr() {
+        if (masterAddrBuilder_ == null) {
+          return masterAddr_ == null ? org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance() : masterAddr_;
+        } else {
+          return masterAddrBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public Builder setMasterAddr(org.oneflow.core.control.CtrlBootstrap.Address value) {
+        if (masterAddrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          masterAddr_ = value;
+          onChanged();
+        } else {
+          masterAddrBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public Builder setMasterAddr(
+          org.oneflow.core.control.CtrlBootstrap.Address.Builder builderForValue) {
+        if (masterAddrBuilder_ == null) {
+          masterAddr_ = builderForValue.build();
+          onChanged();
+        } else {
+          masterAddrBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public Builder mergeMasterAddr(org.oneflow.core.control.CtrlBootstrap.Address value) {
+        if (masterAddrBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              masterAddr_ != null &&
+              masterAddr_ != org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance()) {
+            masterAddr_ =
+              org.oneflow.core.control.CtrlBootstrap.Address.newBuilder(masterAddr_).mergeFrom(value).buildPartial();
+          } else {
+            masterAddr_ = value;
+          }
+          onChanged();
+        } else {
+          masterAddrBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public Builder clearMasterAddr() {
+        if (masterAddrBuilder_ == null) {
+          masterAddr_ = null;
+          onChanged();
+        } else {
+          masterAddrBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.Address.Builder getMasterAddrBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMasterAddrFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder getMasterAddrOrBuilder() {
+        if (masterAddrBuilder_ != null) {
+          return masterAddrBuilder_.getMessageOrBuilder();
+        } else {
+          return masterAddr_ == null ?
+              org.oneflow.core.control.CtrlBootstrap.Address.getDefaultInstance() : masterAddr_;
+        }
+      }
+      /**
+       * <code>required .oneflow.Address master_addr = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder> 
+          getMasterAddrFieldBuilder() {
+        if (masterAddrBuilder_ == null) {
+          masterAddrBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.control.CtrlBootstrap.Address, org.oneflow.core.control.CtrlBootstrap.Address.Builder, org.oneflow.core.control.CtrlBootstrap.AddressOrBuilder>(
+                  getMasterAddr(),
+                  getParentForChildren(),
+                  isClean());
+          masterAddr_ = null;
+        }
+        return masterAddrBuilder_;
+      }
+
+      private long rank_ ;
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public boolean hasRank() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public long getRank() {
+        return rank_;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder setRank(long value) {
+        bitField0_ |= 0x00000002;
+        rank_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 rank = 2;</code>
+       */
+      public Builder clearRank() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rank_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long worldSize_ ;
+      /**
+       * <code>required int64 world_size = 3;</code>
+       */
+      public boolean hasWorldSize() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 world_size = 3;</code>
+       */
+      public long getWorldSize() {
+        return worldSize_;
+      }
+      /**
+       * <code>required int64 world_size = 3;</code>
+       */
+      public Builder setWorldSize(long value) {
+        bitField0_ |= 0x00000004;
+        worldSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 world_size = 3;</code>
+       */
+      public Builder clearWorldSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        worldSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object host_ = "";
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public boolean hasHost() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            host_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public Builder clearHost() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string host = 4;</code>
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        host_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int ctrlPort_ = -1;
+      /**
+       * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+       */
+      public boolean hasCtrlPort() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+       */
+      public int getCtrlPort() {
+        return ctrlPort_;
+      }
+      /**
+       * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+       */
+      public Builder setCtrlPort(int value) {
+        bitField0_ |= 0x00000010;
+        ctrlPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ctrl_port = 5 [default = -1];</code>
+       */
+      public Builder clearCtrlPort() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        ctrlPort_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private long nodeSize_ = -1L;
+      /**
+       * <code>optional int64 node_size = 6 [default = -1];</code>
+       */
+      public boolean hasNodeSize() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int64 node_size = 6 [default = -1];</code>
+       */
+      public long getNodeSize() {
+        return nodeSize_;
+      }
+      /**
+       * <code>optional int64 node_size = 6 [default = -1];</code>
+       */
+      public Builder setNodeSize(long value) {
+        bitField0_ |= 0x00000020;
+        nodeSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 node_size = 6 [default = -1];</code>
+       */
+      public Builder clearNodeSize() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        nodeSize_ = -1L;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode numProcessPerNode_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder> numProcessPerNodeBuilder_;
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public boolean hasNumProcessPerNode() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode() {
+        if (numProcessPerNodeBuilder_ == null) {
+          return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
+        } else {
+          return numProcessPerNodeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public Builder setNumProcessPerNode(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode value) {
+        if (numProcessPerNodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          numProcessPerNode_ = value;
+          onChanged();
+        } else {
+          numProcessPerNodeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public Builder setNumProcessPerNode(
+          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder builderForValue) {
+        if (numProcessPerNodeBuilder_ == null) {
+          numProcessPerNode_ = builderForValue.build();
+          onChanged();
+        } else {
+          numProcessPerNodeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public Builder mergeNumProcessPerNode(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode value) {
+        if (numProcessPerNodeBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              numProcessPerNode_ != null &&
+              numProcessPerNode_ != org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance()) {
+            numProcessPerNode_ =
+              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.newBuilder(numProcessPerNode_).mergeFrom(value).buildPartial();
+          } else {
+            numProcessPerNode_ = value;
+          }
+          onChanged();
+        } else {
+          numProcessPerNodeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public Builder clearNumProcessPerNode() {
+        if (numProcessPerNodeBuilder_ == null) {
+          numProcessPerNode_ = null;
+          onChanged();
+        } else {
+          numProcessPerNodeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder getNumProcessPerNodeBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getNumProcessPerNodeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder() {
+        if (numProcessPerNodeBuilder_ != null) {
+          return numProcessPerNodeBuilder_.getMessageOrBuilder();
+        } else {
+          return numProcessPerNode_ == null ?
+              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder> 
+          getNumProcessPerNodeFieldBuilder() {
+        if (numProcessPerNodeBuilder_ == null) {
+          numProcessPerNodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder>(
+                  getNumProcessPerNode(),
+                  getParentForChildren(),
+                  isClean());
+          numProcessPerNode_ = null;
+        }
+        return numProcessPerNodeBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.BootstrapConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.BootstrapConf)
+    private static final org.oneflow.core.control.CtrlBootstrap.BootstrapConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.control.CtrlBootstrap.BootstrapConf();
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.BootstrapConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BootstrapConf>
+        PARSER = new com.google.protobuf.AbstractParser<BootstrapConf>() {
+      public BootstrapConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BootstrapConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BootstrapConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BootstrapConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.control.CtrlBootstrap.BootstrapConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NumProcessPerNodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.NumProcessPerNode)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 value = 1;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>required int64 value = 1;</code>
+     */
+    long getValue();
+  }
+  /**
+   * Protobuf type {@code oneflow.NumProcessPerNode}
+   */
+  public  static final class NumProcessPerNode extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.NumProcessPerNode)
+      NumProcessPerNodeOrBuilder {
+    // Use NumProcessPerNode.newBuilder() to construct.
+    private NumProcessPerNode(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NumProcessPerNode() {
+      value_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NumProcessPerNode(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              value_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_NumProcessPerNode_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_NumProcessPerNode_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.class, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private long value_;
+    /**
+     * <code>required int64 value = 1;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 value = 1;</code>
+     */
+    public long getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasValue()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode other = (org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode) obj;
+
+      boolean result = true;
+      result = result && (hasValue() == other.hasValue());
+      if (hasValue()) {
+        result = result && (getValue()
+            == other.getValue());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getValue());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.NumProcessPerNode}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.NumProcessPerNode)
+        org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_NumProcessPerNode_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_NumProcessPerNode_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.class, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        value_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.control.CtrlBootstrap.internal_static_oneflow_NumProcessPerNode_descriptor;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getDefaultInstanceForType() {
+        return org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance();
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode build() {
+        org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode buildPartial() {
+        org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode result = new org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode) {
+          return mergeFrom((org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode other) {
+        if (other == org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasValue()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long value_ ;
+      /**
+       * <code>required int64 value = 1;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 value = 1;</code>
+       */
+      public long getValue() {
+        return value_;
+      }
+      /**
+       * <code>required int64 value = 1;</code>
+       */
+      public Builder setValue(long value) {
+        bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 value = 1;</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.NumProcessPerNode)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.NumProcessPerNode)
+    private static final org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode();
+    }
+
+    public static org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<NumProcessPerNode>
+        PARSER = new com.google.protobuf.AbstractParser<NumProcessPerNode>() {
+      public NumProcessPerNode parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NumProcessPerNode(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NumProcessPerNode> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NumProcessPerNode> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_Address_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_Address_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ProcessCtx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ProcessCtx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_BootstrapConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_BootstrapConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_NumProcessPerNode_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_NumProcessPerNode_fieldAccessorTable;
 
@@ -53,8 +3451,8 @@ public final class CtrlBootstrap {
       "\022\025\n\tctrl_port\030\005 \001(\005:\002-1\022\025\n\tnode_size\030\006 \001" +
       "(\003:\002-1\0228\n\024num_process_per_node\030\007 \001(\0132\032.o" +
       "neflow.NumProcessPerNode\"\"\n\021NumProcessPe",
-      "rNode\022\r\n\005value\030\001 \002(\003B\034\n\030org.oneflow.core" +
-      ".controlP\001"
+      "rNode\022\r\n\005value\030\001 \002(\003B\032\n\030org.oneflow.core" +
+      ".control"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

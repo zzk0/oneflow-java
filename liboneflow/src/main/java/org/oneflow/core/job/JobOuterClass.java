@@ -14,59 +14,4776 @@ public final class JobOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface JobParallelViewConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.JobParallelViewConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+    int getOpName2SbpSignatureConfCount();
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+    boolean containsOpName2SbpSignatureConf(
+        java.lang.String key);
+    /**
+     * Use {@link #getOpName2SbpSignatureConfMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+    getOpName2SbpSignatureConf();
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+    getOpName2SbpSignatureConfMap();
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+        java.lang.String key,
+        org.oneflow.core.job.SbpParallelOuterClass.SbpSignature defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+    int getOpName2IsMirroredParallelViewCount();
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+    boolean containsOpName2IsMirroredParallelView(
+        java.lang.String key);
+    /**
+     * Use {@link #getOpName2IsMirroredParallelViewMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getOpName2IsMirroredParallelView();
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getOpName2IsMirroredParallelViewMap();
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    boolean getOpName2IsMirroredParallelViewOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    boolean getOpName2IsMirroredParallelViewOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+    int getOpName2ParallelDistributionSignatureConfCount();
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+    boolean containsOpName2ParallelDistributionSignatureConf(
+        java.lang.String key);
+    /**
+     * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+    getOpName2ParallelDistributionSignatureConf();
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+    getOpName2ParallelDistributionSignatureConfMap();
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+        java.lang.String key,
+        org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code oneflow.JobParallelViewConf}
+   */
+  public  static final class JobParallelViewConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.JobParallelViewConf)
+      JobParallelViewConfOrBuilder {
+    // Use JobParallelViewConf.newBuilder() to construct.
+    private JobParallelViewConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JobParallelViewConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JobParallelViewConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                opName2SbpSignatureConf_ = com.google.protobuf.MapField.newMapField(
+                    OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+              opName2SbpSignatureConf = input.readMessage(
+                  OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              opName2SbpSignatureConf_.getMutableMap().put(opName2SbpSignatureConf.getKey(), opName2SbpSignatureConf.getValue());
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                opName2IsMirroredParallelView_ = com.google.protobuf.MapField.newMapField(
+                    OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              opName2IsMirroredParallelView = input.readMessage(
+                  OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              opName2IsMirroredParallelView_.getMutableMap().put(opName2IsMirroredParallelView.getKey(), opName2IsMirroredParallelView.getValue());
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                opName2ParallelDistributionSignatureConf_ = com.google.protobuf.MapField.newMapField(
+                    OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+              opName2ParallelDistributionSignatureConf = input.readMessage(
+                  OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              opName2ParallelDistributionSignatureConf_.getMutableMap().put(opName2ParallelDistributionSignatureConf.getKey(), opName2ParallelDistributionSignatureConf.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetOpName2SbpSignatureConf();
+        case 2:
+          return internalGetOpName2IsMirroredParallelView();
+        case 3:
+          return internalGetOpName2ParallelDistributionSignatureConf();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.JobOuterClass.JobParallelViewConf.class, org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder.class);
+    }
+
+    public static final int OP_NAME2SBP_SIGNATURE_CONF_FIELD_NUMBER = 1;
+    private static final class OpName2SbpSignatureConfDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_OpName2sbpSignatureConfEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.job.SbpParallelOuterClass.SbpSignature.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> opName2SbpSignatureConf_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+    internalGetOpName2SbpSignatureConf() {
+      if (opName2SbpSignatureConf_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry);
+      }
+      return opName2SbpSignatureConf_;
+    }
+
+    public int getOpName2SbpSignatureConfCount() {
+      return internalGetOpName2SbpSignatureConf().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    public boolean containsOpName2SbpSignatureConf(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetOpName2SbpSignatureConf().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOpName2SbpSignatureConfMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConf() {
+      return getOpName2SbpSignatureConfMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConfMap() {
+      return internalGetOpName2SbpSignatureConf().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    public org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+        java.lang.String key,
+        org.oneflow.core.job.SbpParallelOuterClass.SbpSignature defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> map =
+          internalGetOpName2SbpSignatureConf().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+     */
+
+    public org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> map =
+          internalGetOpName2SbpSignatureConf().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int OP_NAME2IS_MIRRORED_PARALLEL_VIEW_FIELD_NUMBER = 2;
+    private static final class OpName2IsMirroredParallelViewDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_OpName2isMirroredParallelViewEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> opName2IsMirroredParallelView_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetOpName2IsMirroredParallelView() {
+      if (opName2IsMirroredParallelView_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry);
+      }
+      return opName2IsMirroredParallelView_;
+    }
+
+    public int getOpName2IsMirroredParallelViewCount() {
+      return internalGetOpName2IsMirroredParallelView().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    public boolean containsOpName2IsMirroredParallelView(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetOpName2IsMirroredParallelView().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOpName2IsMirroredParallelViewMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getOpName2IsMirroredParallelView() {
+      return getOpName2IsMirroredParallelViewMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getOpName2IsMirroredParallelViewMap() {
+      return internalGetOpName2IsMirroredParallelView().getMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    public boolean getOpName2IsMirroredParallelViewOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetOpName2IsMirroredParallelView().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+     */
+
+    public boolean getOpName2IsMirroredParallelViewOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetOpName2IsMirroredParallelView().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int OP_NAME2PARALLEL_DISTRIBUTION_SIGNATURE_CONF_FIELD_NUMBER = 3;
+    private static final class OpName2ParallelDistributionSignatureConfDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_OpName2parallelDistributionSignatureConfEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+    internalGetOpName2ParallelDistributionSignatureConf() {
+      if (opName2ParallelDistributionSignatureConf_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry);
+      }
+      return opName2ParallelDistributionSignatureConf_;
+    }
+
+    public int getOpName2ParallelDistributionSignatureConfCount() {
+      return internalGetOpName2ParallelDistributionSignatureConf().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    public boolean containsOpName2ParallelDistributionSignatureConf(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetOpName2ParallelDistributionSignatureConf().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
+      return getOpName2ParallelDistributionSignatureConfMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
+      return internalGetOpName2ParallelDistributionSignatureConf().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    public org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+        java.lang.String key,
+        org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> map =
+          internalGetOpName2ParallelDistributionSignatureConf().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+     */
+
+    public org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> map =
+          internalGetOpName2ParallelDistributionSignatureConf().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (org.oneflow.core.job.SbpParallelOuterClass.SbpSignature item : getOpName2SbpSignatureConf().values()) {
+        if (!item.isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
+        if (!item.isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> entry
+           : internalGetOpName2SbpSignatureConf().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+        opName2SbpSignatureConf = OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, opName2SbpSignatureConf);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetOpName2IsMirroredParallelView().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        opName2IsMirroredParallelView = OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(2, opName2IsMirroredParallelView);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> entry
+           : internalGetOpName2ParallelDistributionSignatureConf().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+        opName2ParallelDistributionSignatureConf = OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(3, opName2ParallelDistributionSignatureConf);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> entry
+           : internalGetOpName2SbpSignatureConf().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+        opName2SbpSignatureConf = OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, opName2SbpSignatureConf);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetOpName2IsMirroredParallelView().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        opName2IsMirroredParallelView = OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, opName2IsMirroredParallelView);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> entry
+           : internalGetOpName2ParallelDistributionSignatureConf().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+        opName2ParallelDistributionSignatureConf = OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, opName2ParallelDistributionSignatureConf);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.JobOuterClass.JobParallelViewConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.JobOuterClass.JobParallelViewConf other = (org.oneflow.core.job.JobOuterClass.JobParallelViewConf) obj;
+
+      boolean result = true;
+      result = result && internalGetOpName2SbpSignatureConf().equals(
+          other.internalGetOpName2SbpSignatureConf());
+      result = result && internalGetOpName2IsMirroredParallelView().equals(
+          other.internalGetOpName2IsMirroredParallelView());
+      result = result && internalGetOpName2ParallelDistributionSignatureConf().equals(
+          other.internalGetOpName2ParallelDistributionSignatureConf());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetOpName2SbpSignatureConf().getMap().isEmpty()) {
+        hash = (37 * hash) + OP_NAME2SBP_SIGNATURE_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetOpName2SbpSignatureConf().hashCode();
+      }
+      if (!internalGetOpName2IsMirroredParallelView().getMap().isEmpty()) {
+        hash = (37 * hash) + OP_NAME2IS_MIRRORED_PARALLEL_VIEW_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetOpName2IsMirroredParallelView().hashCode();
+      }
+      if (!internalGetOpName2ParallelDistributionSignatureConf().getMap().isEmpty()) {
+        hash = (37 * hash) + OP_NAME2PARALLEL_DISTRIBUTION_SIGNATURE_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetOpName2ParallelDistributionSignatureConf().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.JobOuterClass.JobParallelViewConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.JobParallelViewConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.JobParallelViewConf)
+        org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetOpName2SbpSignatureConf();
+          case 2:
+            return internalGetOpName2IsMirroredParallelView();
+          case 3:
+            return internalGetOpName2ParallelDistributionSignatureConf();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableOpName2SbpSignatureConf();
+          case 2:
+            return internalGetMutableOpName2IsMirroredParallelView();
+          case 3:
+            return internalGetMutableOpName2ParallelDistributionSignatureConf();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.JobOuterClass.JobParallelViewConf.class, org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.JobOuterClass.JobParallelViewConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableOpName2SbpSignatureConf().clear();
+        internalGetMutableOpName2IsMirroredParallelView().clear();
+        internalGetMutableOpName2ParallelDistributionSignatureConf().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobParallelViewConf_descriptor;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConf build() {
+        org.oneflow.core.job.JobOuterClass.JobParallelViewConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConf buildPartial() {
+        org.oneflow.core.job.JobOuterClass.JobParallelViewConf result = new org.oneflow.core.job.JobOuterClass.JobParallelViewConf(this);
+        int from_bitField0_ = bitField0_;
+        result.opName2SbpSignatureConf_ = internalGetOpName2SbpSignatureConf();
+        result.opName2SbpSignatureConf_.makeImmutable();
+        result.opName2IsMirroredParallelView_ = internalGetOpName2IsMirroredParallelView();
+        result.opName2IsMirroredParallelView_.makeImmutable();
+        result.opName2ParallelDistributionSignatureConf_ = internalGetOpName2ParallelDistributionSignatureConf();
+        result.opName2ParallelDistributionSignatureConf_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.JobOuterClass.JobParallelViewConf) {
+          return mergeFrom((org.oneflow.core.job.JobOuterClass.JobParallelViewConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.JobOuterClass.JobParallelViewConf other) {
+        if (other == org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance()) return this;
+        internalGetMutableOpName2SbpSignatureConf().mergeFrom(
+            other.internalGetOpName2SbpSignatureConf());
+        internalGetMutableOpName2IsMirroredParallelView().mergeFrom(
+            other.internalGetOpName2IsMirroredParallelView());
+        internalGetMutableOpName2ParallelDistributionSignatureConf().mergeFrom(
+            other.internalGetOpName2ParallelDistributionSignatureConf());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (org.oneflow.core.job.SbpParallelOuterClass.SbpSignature item : getOpName2SbpSignatureConf().values()) {
+          if (!item.isInitialized()) {
+            return false;
+          }
+        }
+        for (org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature item : getOpName2ParallelDistributionSignatureConf().values()) {
+          if (!item.isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.JobOuterClass.JobParallelViewConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.JobOuterClass.JobParallelViewConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> opName2SbpSignatureConf_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+      internalGetOpName2SbpSignatureConf() {
+        if (opName2SbpSignatureConf_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry);
+        }
+        return opName2SbpSignatureConf_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+      internalGetMutableOpName2SbpSignatureConf() {
+        onChanged();;
+        if (opName2SbpSignatureConf_ == null) {
+          opName2SbpSignatureConf_ = com.google.protobuf.MapField.newMapField(
+              OpName2SbpSignatureConfDefaultEntryHolder.defaultEntry);
+        }
+        if (!opName2SbpSignatureConf_.isMutable()) {
+          opName2SbpSignatureConf_ = opName2SbpSignatureConf_.copy();
+        }
+        return opName2SbpSignatureConf_;
+      }
+
+      public int getOpName2SbpSignatureConfCount() {
+        return internalGetOpName2SbpSignatureConf().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public boolean containsOpName2SbpSignatureConf(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetOpName2SbpSignatureConf().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getOpName2SbpSignatureConfMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConf() {
+        return getOpName2SbpSignatureConfMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> getOpName2SbpSignatureConfMap() {
+        return internalGetOpName2SbpSignatureConf().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrDefault(
+          java.lang.String key,
+          org.oneflow.core.job.SbpParallelOuterClass.SbpSignature defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> map =
+            internalGetOpName2SbpSignatureConf().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public org.oneflow.core.job.SbpParallelOuterClass.SbpSignature getOpName2SbpSignatureConfOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> map =
+            internalGetOpName2SbpSignatureConf().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearOpName2SbpSignatureConf() {
+        getMutableOpName2SbpSignatureConf().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public Builder removeOpName2SbpSignatureConf(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2SbpSignatureConf().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature>
+      getMutableOpName2SbpSignatureConf() {
+        return internalGetMutableOpName2SbpSignatureConf().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+      public Builder putOpName2SbpSignatureConf(
+          java.lang.String key,
+          org.oneflow.core.job.SbpParallelOuterClass.SbpSignature value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2SbpSignatureConf().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.SbpSignature&gt; op_name2sbp_signature_conf = 1;</code>
+       */
+
+      public Builder putAllOpName2SbpSignatureConf(
+          java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.SbpSignature> values) {
+        getMutableOpName2SbpSignatureConf().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> opName2IsMirroredParallelView_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetOpName2IsMirroredParallelView() {
+        if (opName2IsMirroredParallelView_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry);
+        }
+        return opName2IsMirroredParallelView_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableOpName2IsMirroredParallelView() {
+        onChanged();;
+        if (opName2IsMirroredParallelView_ == null) {
+          opName2IsMirroredParallelView_ = com.google.protobuf.MapField.newMapField(
+              OpName2IsMirroredParallelViewDefaultEntryHolder.defaultEntry);
+        }
+        if (!opName2IsMirroredParallelView_.isMutable()) {
+          opName2IsMirroredParallelView_ = opName2IsMirroredParallelView_.copy();
+        }
+        return opName2IsMirroredParallelView_;
+      }
+
+      public int getOpName2IsMirroredParallelViewCount() {
+        return internalGetOpName2IsMirroredParallelView().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public boolean containsOpName2IsMirroredParallelView(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetOpName2IsMirroredParallelView().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getOpName2IsMirroredParallelViewMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getOpName2IsMirroredParallelView() {
+        return getOpName2IsMirroredParallelViewMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getOpName2IsMirroredParallelViewMap() {
+        return internalGetOpName2IsMirroredParallelView().getMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public boolean getOpName2IsMirroredParallelViewOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetOpName2IsMirroredParallelView().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public boolean getOpName2IsMirroredParallelViewOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetOpName2IsMirroredParallelView().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearOpName2IsMirroredParallelView() {
+        getMutableOpName2IsMirroredParallelView().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public Builder removeOpName2IsMirroredParallelView(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2IsMirroredParallelView().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableOpName2IsMirroredParallelView() {
+        return internalGetMutableOpName2IsMirroredParallelView().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+      public Builder putOpName2IsMirroredParallelView(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        
+        getMutableOpName2IsMirroredParallelView().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; op_name2is_mirrored_parallel_view = 2;</code>
+       */
+
+      public Builder putAllOpName2IsMirroredParallelView(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        getMutableOpName2IsMirroredParallelView().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> opName2ParallelDistributionSignatureConf_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+      internalGetOpName2ParallelDistributionSignatureConf() {
+        if (opName2ParallelDistributionSignatureConf_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry);
+        }
+        return opName2ParallelDistributionSignatureConf_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+      internalGetMutableOpName2ParallelDistributionSignatureConf() {
+        onChanged();;
+        if (opName2ParallelDistributionSignatureConf_ == null) {
+          opName2ParallelDistributionSignatureConf_ = com.google.protobuf.MapField.newMapField(
+              OpName2ParallelDistributionSignatureConfDefaultEntryHolder.defaultEntry);
+        }
+        if (!opName2ParallelDistributionSignatureConf_.isMutable()) {
+          opName2ParallelDistributionSignatureConf_ = opName2ParallelDistributionSignatureConf_.copy();
+        }
+        return opName2ParallelDistributionSignatureConf_;
+      }
+
+      public int getOpName2ParallelDistributionSignatureConfCount() {
+        return internalGetOpName2ParallelDistributionSignatureConf().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public boolean containsOpName2ParallelDistributionSignatureConf(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetOpName2ParallelDistributionSignatureConf().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getOpName2ParallelDistributionSignatureConfMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConf() {
+        return getOpName2ParallelDistributionSignatureConfMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> getOpName2ParallelDistributionSignatureConfMap() {
+        return internalGetOpName2ParallelDistributionSignatureConf().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrDefault(
+          java.lang.String key,
+          org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> map =
+            internalGetOpName2ParallelDistributionSignatureConf().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature getOpName2ParallelDistributionSignatureConfOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> map =
+            internalGetOpName2ParallelDistributionSignatureConf().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearOpName2ParallelDistributionSignatureConf() {
+        getMutableOpName2ParallelDistributionSignatureConf().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public Builder removeOpName2ParallelDistributionSignatureConf(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2ParallelDistributionSignatureConf().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature>
+      getMutableOpName2ParallelDistributionSignatureConf() {
+        return internalGetMutableOpName2ParallelDistributionSignatureConf().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+      public Builder putOpName2ParallelDistributionSignatureConf(
+          java.lang.String key,
+          org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2ParallelDistributionSignatureConf().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ParallelDistributionSignature&gt; op_name2parallel_distribution_signature_conf = 3;</code>
+       */
+
+      public Builder putAllOpName2ParallelDistributionSignatureConf(
+          java.util.Map<java.lang.String, org.oneflow.core.job.SbpParallelOuterClass.ParallelDistributionSignature> values) {
+        getMutableOpName2ParallelDistributionSignatureConf().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.JobParallelViewConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.JobParallelViewConf)
+    private static final org.oneflow.core.job.JobOuterClass.JobParallelViewConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.JobOuterClass.JobParallelViewConf();
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.JobParallelViewConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<JobParallelViewConf>
+        PARSER = new com.google.protobuf.AbstractParser<JobParallelViewConf>() {
+      public JobParallelViewConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new JobParallelViewConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JobParallelViewConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JobParallelViewConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.JobOuterClass.JobParallelViewConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface JobHelperConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.JobHelperConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+    int getTag2LbiRelationsCount();
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+    boolean containsTag2LbiRelations(
+        java.lang.String key);
+    /**
+     * Use {@link #getTag2LbiRelationsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+    getTag2LbiRelations();
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+    getTag2LbiRelationsMap();
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+    int getTag2OpNameRelationsCount();
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+    boolean containsTag2OpNameRelations(
+        java.lang.String key);
+    /**
+     * Use {@link #getTag2OpNameRelationsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+    getTag2OpNameRelations();
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+    getTag2OpNameRelationsMap();
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+        java.lang.String key,
+        org.oneflow.core.operator.OpConf.OpNameRelations defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+    int getLbn2LogicalBlobDescCount();
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+    boolean containsLbn2LogicalBlobDesc(
+        java.lang.String key);
+    /**
+     * Use {@link #getLbn2LogicalBlobDescMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+    getLbn2LogicalBlobDesc();
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+    getLbn2LogicalBlobDescMap();
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.BlobDesc.BlobDescProto defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+    int getLbn2LogicalObjectIdCount();
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+    boolean containsLbn2LogicalObjectId(
+        java.lang.String key);
+    /**
+     * Use {@link #getLbn2LogicalObjectIdMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Long>
+    getLbn2LogicalObjectId();
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Long>
+    getLbn2LogicalObjectIdMap();
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    long getLbn2LogicalObjectIdOrDefault(
+        java.lang.String key,
+        long defaultValue);
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    long getLbn2LogicalObjectIdOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    boolean hasLbiDiffWatcherInfo();
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo();
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder();
+
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+    int getOpName2ArgSignatureCount();
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+    boolean containsOpName2ArgSignature(
+        java.lang.String key);
+    /**
+     * Use {@link #getOpName2ArgSignatureMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+    getOpName2ArgSignature();
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+    java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+    getOpName2ArgSignatureMap();
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature defaultValue);
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code oneflow.JobHelperConf}
+   */
+  public  static final class JobHelperConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.JobHelperConf)
+      JobHelperConfOrBuilder {
+    // Use JobHelperConf.newBuilder() to construct.
+    private JobHelperConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JobHelperConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JobHelperConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                tag2LbiRelations_ = com.google.protobuf.MapField.newMapField(
+                    Tag2LbiRelationsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+              tag2LbiRelations = input.readMessage(
+                  Tag2LbiRelationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              tag2LbiRelations_.getMutableMap().put(tag2LbiRelations.getKey(), tag2LbiRelations.getValue());
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                tag2OpNameRelations_ = com.google.protobuf.MapField.newMapField(
+                    Tag2OpNameRelationsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+              tag2OpNameRelations = input.readMessage(
+                  Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              tag2OpNameRelations_.getMutableMap().put(tag2OpNameRelations.getKey(), tag2OpNameRelations.getValue());
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                lbn2LogicalBlobDesc_ = com.google.protobuf.MapField.newMapField(
+                    Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+              lbn2LogicalBlobDesc = input.readMessage(
+                  Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              lbn2LogicalBlobDesc_.getMutableMap().put(lbn2LogicalBlobDesc.getKey(), lbn2LogicalBlobDesc.getValue());
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                lbn2LogicalObjectId_ = com.google.protobuf.MapField.newMapField(
+                    Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+              lbn2LogicalObjectId = input.readMessage(
+                  Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              lbn2LogicalObjectId_.getMutableMap().put(lbn2LogicalObjectId.getKey(), lbn2LogicalObjectId.getValue());
+              break;
+            }
+            case 66: {
+              org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = lbiDiffWatcherInfo_.toBuilder();
+              }
+              lbiDiffWatcherInfo_ = input.readMessage(org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lbiDiffWatcherInfo_);
+                lbiDiffWatcherInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                opName2ArgSignature_ = com.google.protobuf.MapField.newMapField(
+                    OpName2ArgSignatureDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000020;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+              opName2ArgSignature = input.readMessage(
+                  OpName2ArgSignatureDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              opName2ArgSignature_.getMutableMap().put(opName2ArgSignature.getKey(), opName2ArgSignature.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetTag2LbiRelations();
+        case 2:
+          return internalGetTag2OpNameRelations();
+        case 4:
+          return internalGetLbn2LogicalBlobDesc();
+        case 5:
+          return internalGetLbn2LogicalObjectId();
+        case 9:
+          return internalGetOpName2ArgSignature();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.JobOuterClass.JobHelperConf.class, org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TAG2LBI_RELATIONS_FIELD_NUMBER = 1;
+    private static final class Tag2LbiRelationsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_Tag2lbiRelationsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> tag2LbiRelations_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+    internalGetTag2LbiRelations() {
+      if (tag2LbiRelations_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Tag2LbiRelationsDefaultEntryHolder.defaultEntry);
+      }
+      return tag2LbiRelations_;
+    }
+
+    public int getTag2LbiRelationsCount() {
+      return internalGetTag2LbiRelations().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    public boolean containsTag2LbiRelations(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTag2LbiRelations().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTag2LbiRelationsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> getTag2LbiRelations() {
+      return getTag2LbiRelationsMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> getTag2LbiRelationsMap() {
+      return internalGetTag2LbiRelations().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> map =
+          internalGetTag2LbiRelations().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+     */
+
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> map =
+          internalGetTag2LbiRelations().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int TAG2OP_NAME_RELATIONS_FIELD_NUMBER = 2;
+    private static final class Tag2OpNameRelationsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_Tag2opNameRelationsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.operator.OpConf.OpNameRelations.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> tag2OpNameRelations_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+    internalGetTag2OpNameRelations() {
+      if (tag2OpNameRelations_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Tag2OpNameRelationsDefaultEntryHolder.defaultEntry);
+      }
+      return tag2OpNameRelations_;
+    }
+
+    public int getTag2OpNameRelationsCount() {
+      return internalGetTag2OpNameRelations().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    public boolean containsTag2OpNameRelations(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTag2OpNameRelations().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTag2OpNameRelationsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> getTag2OpNameRelations() {
+      return getTag2OpNameRelationsMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> getTag2OpNameRelationsMap() {
+      return internalGetTag2OpNameRelations().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    public org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+        java.lang.String key,
+        org.oneflow.core.operator.OpConf.OpNameRelations defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> map =
+          internalGetTag2OpNameRelations().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+     */
+
+    public org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> map =
+          internalGetTag2OpNameRelations().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int LBN2LOGICAL_BLOB_DESC_FIELD_NUMBER = 4;
+    private static final class Lbn2LogicalBlobDescDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_Lbn2logicalBlobDescEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.register.BlobDesc.BlobDescProto.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> lbn2LogicalBlobDesc_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+    internalGetLbn2LogicalBlobDesc() {
+      if (lbn2LogicalBlobDesc_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry);
+      }
+      return lbn2LogicalBlobDesc_;
+    }
+
+    public int getLbn2LogicalBlobDescCount() {
+      return internalGetLbn2LogicalBlobDesc().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    public boolean containsLbn2LogicalBlobDesc(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLbn2LogicalBlobDesc().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLbn2LogicalBlobDescMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> getLbn2LogicalBlobDesc() {
+      return getLbn2LogicalBlobDescMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> getLbn2LogicalBlobDescMap() {
+      return internalGetLbn2LogicalBlobDesc().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    public org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.BlobDesc.BlobDescProto defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> map =
+          internalGetLbn2LogicalBlobDesc().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+     */
+
+    public org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> map =
+          internalGetLbn2LogicalBlobDesc().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int LBN2LOGICAL_OBJECT_ID_FIELD_NUMBER = 5;
+    private static final class Lbn2LogicalObjectIdDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Long> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Long>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_Lbn2logicalObjectIdEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Long> lbn2LogicalObjectId_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+    internalGetLbn2LogicalObjectId() {
+      if (lbn2LogicalObjectId_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry);
+      }
+      return lbn2LogicalObjectId_;
+    }
+
+    public int getLbn2LogicalObjectIdCount() {
+      return internalGetLbn2LogicalObjectId().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    public boolean containsLbn2LogicalObjectId(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLbn2LogicalObjectId().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLbn2LogicalObjectIdMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long> getLbn2LogicalObjectId() {
+      return getLbn2LogicalObjectIdMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Long> getLbn2LogicalObjectIdMap() {
+      return internalGetLbn2LogicalObjectId().getMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    public long getLbn2LogicalObjectIdOrDefault(
+        java.lang.String key,
+        long defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetLbn2LogicalObjectId().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+     */
+
+    public long getLbn2LogicalObjectIdOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetLbn2LogicalObjectId().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int LBI_DIFF_WATCHER_INFO_FIELD_NUMBER = 8;
+    private org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo lbiDiffWatcherInfo_;
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    public boolean hasLbiDiffWatcherInfo() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    public org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
+      return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+    }
+    /**
+     * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+     */
+    public org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
+      return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+    }
+
+    public static final int OP_NAME2ARG_SIGNATURE_FIELD_NUMBER = 9;
+    private static final class OpName2ArgSignatureDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>newDefaultInstance(
+                  org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_OpName2argSignatureEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> opName2ArgSignature_;
+    private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+    internalGetOpName2ArgSignature() {
+      if (opName2ArgSignature_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OpName2ArgSignatureDefaultEntryHolder.defaultEntry);
+      }
+      return opName2ArgSignature_;
+    }
+
+    public int getOpName2ArgSignatureCount() {
+      return internalGetOpName2ArgSignature().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    public boolean containsOpName2ArgSignature(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetOpName2ArgSignature().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOpName2ArgSignatureMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> getOpName2ArgSignature() {
+      return getOpName2ArgSignatureMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> getOpName2ArgSignatureMap() {
+      return internalGetOpName2ArgSignature().getMap();
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrDefault(
+        java.lang.String key,
+        org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> map =
+          internalGetOpName2ArgSignature().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+     */
+
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> map =
+          internalGetOpName2ArgSignature().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs item : getTag2LbiRelations().values()) {
+        if (!item.isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (org.oneflow.core.register.BlobDesc.BlobDescProto item : getLbn2LogicalBlobDesc().values()) {
+        if (!item.isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasLbiDiffWatcherInfo()) {
+        if (!getLbiDiffWatcherInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> entry
+           : internalGetTag2LbiRelations().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+        tag2LbiRelations = Tag2LbiRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, tag2LbiRelations);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> entry
+           : internalGetTag2OpNameRelations().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+        tag2OpNameRelations = Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(2, tag2OpNameRelations);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> entry
+           : internalGetLbn2LogicalBlobDesc().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+        lbn2LogicalBlobDesc = Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(4, lbn2LogicalBlobDesc);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
+           : internalGetLbn2LogicalObjectId().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+        lbn2LogicalObjectId = Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(5, lbn2LogicalObjectId);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(8, getLbiDiffWatcherInfo());
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> entry
+           : internalGetOpName2ArgSignature().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+        opName2ArgSignature = OpName2ArgSignatureDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(9, opName2ArgSignature);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> entry
+           : internalGetTag2LbiRelations().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+        tag2LbiRelations = Tag2LbiRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, tag2LbiRelations);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> entry
+           : internalGetTag2OpNameRelations().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+        tag2OpNameRelations = Tag2OpNameRelationsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, tag2OpNameRelations);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> entry
+           : internalGetLbn2LogicalBlobDesc().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+        lbn2LogicalBlobDesc = Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, lbn2LogicalBlobDesc);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
+           : internalGetLbn2LogicalObjectId().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+        lbn2LogicalObjectId = Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, lbn2LogicalObjectId);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLbiDiffWatcherInfo());
+      }
+      for (java.util.Map.Entry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> entry
+           : internalGetOpName2ArgSignature().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+        opName2ArgSignature = OpName2ArgSignatureDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, opName2ArgSignature);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.JobOuterClass.JobHelperConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.JobOuterClass.JobHelperConf other = (org.oneflow.core.job.JobOuterClass.JobHelperConf) obj;
+
+      boolean result = true;
+      result = result && internalGetTag2LbiRelations().equals(
+          other.internalGetTag2LbiRelations());
+      result = result && internalGetTag2OpNameRelations().equals(
+          other.internalGetTag2OpNameRelations());
+      result = result && internalGetLbn2LogicalBlobDesc().equals(
+          other.internalGetLbn2LogicalBlobDesc());
+      result = result && internalGetLbn2LogicalObjectId().equals(
+          other.internalGetLbn2LogicalObjectId());
+      result = result && (hasLbiDiffWatcherInfo() == other.hasLbiDiffWatcherInfo());
+      if (hasLbiDiffWatcherInfo()) {
+        result = result && getLbiDiffWatcherInfo()
+            .equals(other.getLbiDiffWatcherInfo());
+      }
+      result = result && internalGetOpName2ArgSignature().equals(
+          other.internalGetOpName2ArgSignature());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetTag2LbiRelations().getMap().isEmpty()) {
+        hash = (37 * hash) + TAG2LBI_RELATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTag2LbiRelations().hashCode();
+      }
+      if (!internalGetTag2OpNameRelations().getMap().isEmpty()) {
+        hash = (37 * hash) + TAG2OP_NAME_RELATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTag2OpNameRelations().hashCode();
+      }
+      if (!internalGetLbn2LogicalBlobDesc().getMap().isEmpty()) {
+        hash = (37 * hash) + LBN2LOGICAL_BLOB_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLbn2LogicalBlobDesc().hashCode();
+      }
+      if (!internalGetLbn2LogicalObjectId().getMap().isEmpty()) {
+        hash = (37 * hash) + LBN2LOGICAL_OBJECT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLbn2LogicalObjectId().hashCode();
+      }
+      if (hasLbiDiffWatcherInfo()) {
+        hash = (37 * hash) + LBI_DIFF_WATCHER_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getLbiDiffWatcherInfo().hashCode();
+      }
+      if (!internalGetOpName2ArgSignature().getMap().isEmpty()) {
+        hash = (37 * hash) + OP_NAME2ARG_SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetOpName2ArgSignature().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.JobOuterClass.JobHelperConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.JobHelperConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.JobHelperConf)
+        org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetTag2LbiRelations();
+          case 2:
+            return internalGetTag2OpNameRelations();
+          case 4:
+            return internalGetLbn2LogicalBlobDesc();
+          case 5:
+            return internalGetLbn2LogicalObjectId();
+          case 9:
+            return internalGetOpName2ArgSignature();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableTag2LbiRelations();
+          case 2:
+            return internalGetMutableTag2OpNameRelations();
+          case 4:
+            return internalGetMutableLbn2LogicalBlobDesc();
+          case 5:
+            return internalGetMutableLbn2LogicalObjectId();
+          case 9:
+            return internalGetMutableOpName2ArgSignature();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.JobOuterClass.JobHelperConf.class, org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.JobOuterClass.JobHelperConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLbiDiffWatcherInfoFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableTag2LbiRelations().clear();
+        internalGetMutableTag2OpNameRelations().clear();
+        internalGetMutableLbn2LogicalBlobDesc().clear();
+        internalGetMutableLbn2LogicalObjectId().clear();
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          lbiDiffWatcherInfo_ = null;
+        } else {
+          lbiDiffWatcherInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        internalGetMutableOpName2ArgSignature().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_JobHelperConf_descriptor;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobHelperConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobHelperConf build() {
+        org.oneflow.core.job.JobOuterClass.JobHelperConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.JobHelperConf buildPartial() {
+        org.oneflow.core.job.JobOuterClass.JobHelperConf result = new org.oneflow.core.job.JobOuterClass.JobHelperConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.tag2LbiRelations_ = internalGetTag2LbiRelations();
+        result.tag2LbiRelations_.makeImmutable();
+        result.tag2OpNameRelations_ = internalGetTag2OpNameRelations();
+        result.tag2OpNameRelations_.makeImmutable();
+        result.lbn2LogicalBlobDesc_ = internalGetLbn2LogicalBlobDesc();
+        result.lbn2LogicalBlobDesc_.makeImmutable();
+        result.lbn2LogicalObjectId_ = internalGetLbn2LogicalObjectId();
+        result.lbn2LogicalObjectId_.makeImmutable();
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          result.lbiDiffWatcherInfo_ = lbiDiffWatcherInfo_;
+        } else {
+          result.lbiDiffWatcherInfo_ = lbiDiffWatcherInfoBuilder_.build();
+        }
+        result.opName2ArgSignature_ = internalGetOpName2ArgSignature();
+        result.opName2ArgSignature_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.JobOuterClass.JobHelperConf) {
+          return mergeFrom((org.oneflow.core.job.JobOuterClass.JobHelperConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.JobOuterClass.JobHelperConf other) {
+        if (other == org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance()) return this;
+        internalGetMutableTag2LbiRelations().mergeFrom(
+            other.internalGetTag2LbiRelations());
+        internalGetMutableTag2OpNameRelations().mergeFrom(
+            other.internalGetTag2OpNameRelations());
+        internalGetMutableLbn2LogicalBlobDesc().mergeFrom(
+            other.internalGetLbn2LogicalBlobDesc());
+        internalGetMutableLbn2LogicalObjectId().mergeFrom(
+            other.internalGetLbn2LogicalObjectId());
+        if (other.hasLbiDiffWatcherInfo()) {
+          mergeLbiDiffWatcherInfo(other.getLbiDiffWatcherInfo());
+        }
+        internalGetMutableOpName2ArgSignature().mergeFrom(
+            other.internalGetOpName2ArgSignature());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs item : getTag2LbiRelations().values()) {
+          if (!item.isInitialized()) {
+            return false;
+          }
+        }
+        for (org.oneflow.core.register.BlobDesc.BlobDescProto item : getLbn2LogicalBlobDesc().values()) {
+          if (!item.isInitialized()) {
+            return false;
+          }
+        }
+        if (hasLbiDiffWatcherInfo()) {
+          if (!getLbiDiffWatcherInfo().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.JobOuterClass.JobHelperConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.JobOuterClass.JobHelperConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> tag2LbiRelations_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+      internalGetTag2LbiRelations() {
+        if (tag2LbiRelations_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Tag2LbiRelationsDefaultEntryHolder.defaultEntry);
+        }
+        return tag2LbiRelations_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+      internalGetMutableTag2LbiRelations() {
+        onChanged();;
+        if (tag2LbiRelations_ == null) {
+          tag2LbiRelations_ = com.google.protobuf.MapField.newMapField(
+              Tag2LbiRelationsDefaultEntryHolder.defaultEntry);
+        }
+        if (!tag2LbiRelations_.isMutable()) {
+          tag2LbiRelations_ = tag2LbiRelations_.copy();
+        }
+        return tag2LbiRelations_;
+      }
+
+      public int getTag2LbiRelationsCount() {
+        return internalGetTag2LbiRelations().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public boolean containsTag2LbiRelations(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTag2LbiRelations().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTag2LbiRelationsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> getTag2LbiRelations() {
+        return getTag2LbiRelationsMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> getTag2LbiRelationsMap() {
+        return internalGetTag2LbiRelations().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrDefault(
+          java.lang.String key,
+          org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> map =
+            internalGetTag2LbiRelations().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs getTag2LbiRelationsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> map =
+            internalGetTag2LbiRelations().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearTag2LbiRelations() {
+        getMutableTag2LbiRelations().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public Builder removeTag2LbiRelations(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableTag2LbiRelations().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs>
+      getMutableTag2LbiRelations() {
+        return internalGetMutableTag2LbiRelations().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+      public Builder putTag2LbiRelations(
+          java.lang.String key,
+          org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableTag2LbiRelations().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.LogicalBlobIdPairs&gt; tag2lbi_relations = 1;</code>
+       */
+
+      public Builder putAllTag2LbiRelations(
+          java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdPairs> values) {
+        getMutableTag2LbiRelations().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> tag2OpNameRelations_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+      internalGetTag2OpNameRelations() {
+        if (tag2OpNameRelations_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Tag2OpNameRelationsDefaultEntryHolder.defaultEntry);
+        }
+        return tag2OpNameRelations_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+      internalGetMutableTag2OpNameRelations() {
+        onChanged();;
+        if (tag2OpNameRelations_ == null) {
+          tag2OpNameRelations_ = com.google.protobuf.MapField.newMapField(
+              Tag2OpNameRelationsDefaultEntryHolder.defaultEntry);
+        }
+        if (!tag2OpNameRelations_.isMutable()) {
+          tag2OpNameRelations_ = tag2OpNameRelations_.copy();
+        }
+        return tag2OpNameRelations_;
+      }
+
+      public int getTag2OpNameRelationsCount() {
+        return internalGetTag2OpNameRelations().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public boolean containsTag2OpNameRelations(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTag2OpNameRelations().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTag2OpNameRelationsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> getTag2OpNameRelations() {
+        return getTag2OpNameRelationsMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> getTag2OpNameRelationsMap() {
+        return internalGetTag2OpNameRelations().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrDefault(
+          java.lang.String key,
+          org.oneflow.core.operator.OpConf.OpNameRelations defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> map =
+            internalGetTag2OpNameRelations().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public org.oneflow.core.operator.OpConf.OpNameRelations getTag2OpNameRelationsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> map =
+            internalGetTag2OpNameRelations().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearTag2OpNameRelations() {
+        getMutableTag2OpNameRelations().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public Builder removeTag2OpNameRelations(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableTag2OpNameRelations().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations>
+      getMutableTag2OpNameRelations() {
+        return internalGetMutableTag2OpNameRelations().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+      public Builder putTag2OpNameRelations(
+          java.lang.String key,
+          org.oneflow.core.operator.OpConf.OpNameRelations value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableTag2OpNameRelations().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.OpNameRelations&gt; tag2op_name_relations = 2;</code>
+       */
+
+      public Builder putAllTag2OpNameRelations(
+          java.util.Map<java.lang.String, org.oneflow.core.operator.OpConf.OpNameRelations> values) {
+        getMutableTag2OpNameRelations().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> lbn2LogicalBlobDesc_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+      internalGetLbn2LogicalBlobDesc() {
+        if (lbn2LogicalBlobDesc_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry);
+        }
+        return lbn2LogicalBlobDesc_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+      internalGetMutableLbn2LogicalBlobDesc() {
+        onChanged();;
+        if (lbn2LogicalBlobDesc_ == null) {
+          lbn2LogicalBlobDesc_ = com.google.protobuf.MapField.newMapField(
+              Lbn2LogicalBlobDescDefaultEntryHolder.defaultEntry);
+        }
+        if (!lbn2LogicalBlobDesc_.isMutable()) {
+          lbn2LogicalBlobDesc_ = lbn2LogicalBlobDesc_.copy();
+        }
+        return lbn2LogicalBlobDesc_;
+      }
+
+      public int getLbn2LogicalBlobDescCount() {
+        return internalGetLbn2LogicalBlobDesc().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public boolean containsLbn2LogicalBlobDesc(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLbn2LogicalBlobDesc().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLbn2LogicalBlobDescMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> getLbn2LogicalBlobDesc() {
+        return getLbn2LogicalBlobDescMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> getLbn2LogicalBlobDescMap() {
+        return internalGetLbn2LogicalBlobDesc().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrDefault(
+          java.lang.String key,
+          org.oneflow.core.register.BlobDesc.BlobDescProto defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> map =
+            internalGetLbn2LogicalBlobDesc().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public org.oneflow.core.register.BlobDesc.BlobDescProto getLbn2LogicalBlobDescOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> map =
+            internalGetLbn2LogicalBlobDesc().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLbn2LogicalBlobDesc() {
+        getMutableLbn2LogicalBlobDesc().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public Builder removeLbn2LogicalBlobDesc(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableLbn2LogicalBlobDesc().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto>
+      getMutableLbn2LogicalBlobDesc() {
+        return internalGetMutableLbn2LogicalBlobDesc().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+      public Builder putLbn2LogicalBlobDesc(
+          java.lang.String key,
+          org.oneflow.core.register.BlobDesc.BlobDescProto value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableLbn2LogicalBlobDesc().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.BlobDescProto&gt; lbn2logical_blob_desc = 4;</code>
+       */
+
+      public Builder putAllLbn2LogicalBlobDesc(
+          java.util.Map<java.lang.String, org.oneflow.core.register.BlobDesc.BlobDescProto> values) {
+        getMutableLbn2LogicalBlobDesc().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Long> lbn2LogicalObjectId_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+      internalGetLbn2LogicalObjectId() {
+        if (lbn2LogicalObjectId_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry);
+        }
+        return lbn2LogicalObjectId_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+      internalGetMutableLbn2LogicalObjectId() {
+        onChanged();;
+        if (lbn2LogicalObjectId_ == null) {
+          lbn2LogicalObjectId_ = com.google.protobuf.MapField.newMapField(
+              Lbn2LogicalObjectIdDefaultEntryHolder.defaultEntry);
+        }
+        if (!lbn2LogicalObjectId_.isMutable()) {
+          lbn2LogicalObjectId_ = lbn2LogicalObjectId_.copy();
+        }
+        return lbn2LogicalObjectId_;
+      }
+
+      public int getLbn2LogicalObjectIdCount() {
+        return internalGetLbn2LogicalObjectId().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public boolean containsLbn2LogicalObjectId(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLbn2LogicalObjectId().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLbn2LogicalObjectIdMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Long> getLbn2LogicalObjectId() {
+        return getLbn2LogicalObjectIdMap();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Long> getLbn2LogicalObjectIdMap() {
+        return internalGetLbn2LogicalObjectId().getMap();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public long getLbn2LogicalObjectIdOrDefault(
+          java.lang.String key,
+          long defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Long> map =
+            internalGetLbn2LogicalObjectId().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public long getLbn2LogicalObjectIdOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Long> map =
+            internalGetLbn2LogicalObjectId().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLbn2LogicalObjectId() {
+        getMutableLbn2LogicalObjectId().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public Builder removeLbn2LogicalObjectId(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableLbn2LogicalObjectId().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Long>
+      getMutableLbn2LogicalObjectId() {
+        return internalGetMutableLbn2LogicalObjectId().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+      public Builder putLbn2LogicalObjectId(
+          java.lang.String key,
+          long value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        
+        getMutableLbn2LogicalObjectId().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; lbn2logical_object_id = 5;</code>
+       */
+
+      public Builder putAllLbn2LogicalObjectId(
+          java.util.Map<java.lang.String, java.lang.Long> values) {
+        getMutableLbn2LogicalObjectId().putAll(values);
+        return this;
+      }
+
+      private org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo lbiDiffWatcherInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder> lbiDiffWatcherInfoBuilder_;
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public boolean hasLbiDiffWatcherInfo() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo getLbiDiffWatcherInfo() {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          return lbiDiffWatcherInfo_ == null ? org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+        } else {
+          return lbiDiffWatcherInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public Builder setLbiDiffWatcherInfo(org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo value) {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lbiDiffWatcherInfo_ = value;
+          onChanged();
+        } else {
+          lbiDiffWatcherInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public Builder setLbiDiffWatcherInfo(
+          org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder builderForValue) {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          lbiDiffWatcherInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          lbiDiffWatcherInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public Builder mergeLbiDiffWatcherInfo(org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo value) {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              lbiDiffWatcherInfo_ != null &&
+              lbiDiffWatcherInfo_ != org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance()) {
+            lbiDiffWatcherInfo_ =
+              org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.newBuilder(lbiDiffWatcherInfo_).mergeFrom(value).buildPartial();
+          } else {
+            lbiDiffWatcherInfo_ = value;
+          }
+          onChanged();
+        } else {
+          lbiDiffWatcherInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public Builder clearLbiDiffWatcherInfo() {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          lbiDiffWatcherInfo_ = null;
+          onChanged();
+        } else {
+          lbiDiffWatcherInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder getLbiDiffWatcherInfoBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getLbiDiffWatcherInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      public org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder getLbiDiffWatcherInfoOrBuilder() {
+        if (lbiDiffWatcherInfoBuilder_ != null) {
+          return lbiDiffWatcherInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return lbiDiffWatcherInfo_ == null ?
+              org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.getDefaultInstance() : lbiDiffWatcherInfo_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.LbiDiffWatcherInfo lbi_diff_watcher_info = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder> 
+          getLbiDiffWatcherInfoFieldBuilder() {
+        if (lbiDiffWatcherInfoBuilder_ == null) {
+          lbiDiffWatcherInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfo.Builder, org.oneflow.core.job.LbiDiffWatcherInfoOuterClass.LbiDiffWatcherInfoOrBuilder>(
+                  getLbiDiffWatcherInfo(),
+                  getParentForChildren(),
+                  isClean());
+          lbiDiffWatcherInfo_ = null;
+        }
+        return lbiDiffWatcherInfoBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> opName2ArgSignature_;
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+      internalGetOpName2ArgSignature() {
+        if (opName2ArgSignature_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              OpName2ArgSignatureDefaultEntryHolder.defaultEntry);
+        }
+        return opName2ArgSignature_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+      internalGetMutableOpName2ArgSignature() {
+        onChanged();;
+        if (opName2ArgSignature_ == null) {
+          opName2ArgSignature_ = com.google.protobuf.MapField.newMapField(
+              OpName2ArgSignatureDefaultEntryHolder.defaultEntry);
+        }
+        if (!opName2ArgSignature_.isMutable()) {
+          opName2ArgSignature_ = opName2ArgSignature_.copy();
+        }
+        return opName2ArgSignature_;
+      }
+
+      public int getOpName2ArgSignatureCount() {
+        return internalGetOpName2ArgSignature().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public boolean containsOpName2ArgSignature(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetOpName2ArgSignature().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getOpName2ArgSignatureMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> getOpName2ArgSignature() {
+        return getOpName2ArgSignatureMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> getOpName2ArgSignatureMap() {
+        return internalGetOpName2ArgSignature().getMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrDefault(
+          java.lang.String key,
+          org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> map =
+            internalGetOpName2ArgSignature().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature getOpName2ArgSignatureOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> map =
+            internalGetOpName2ArgSignature().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearOpName2ArgSignature() {
+        getMutableOpName2ArgSignature().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public Builder removeOpName2ArgSignature(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2ArgSignature().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature>
+      getMutableOpName2ArgSignature() {
+        return internalGetMutableOpName2ArgSignature().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+      public Builder putOpName2ArgSignature(
+          java.lang.String key,
+          org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableOpName2ArgSignature().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .oneflow.ArgSignature&gt; op_name2arg_signature = 9;</code>
+       */
+
+      public Builder putAllOpName2ArgSignature(
+          java.util.Map<java.lang.String, org.oneflow.core.register.LogicalBlobIdOuterClass.ArgSignature> values) {
+        getMutableOpName2ArgSignature().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.JobHelperConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.JobHelperConf)
+    private static final org.oneflow.core.job.JobOuterClass.JobHelperConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.JobOuterClass.JobHelperConf();
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.JobHelperConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<JobHelperConf>
+        PARSER = new com.google.protobuf.AbstractParser<JobHelperConf>() {
+      public JobHelperConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new JobHelperConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JobHelperConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JobHelperConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.JobOuterClass.JobHelperConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface JobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.Job)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    boolean hasNet();
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    org.oneflow.core.job.DlnetConf.DLNetConf getNet();
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder();
+
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    boolean hasPlacement();
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    org.oneflow.core.job.PlacementOuterClass.Placement getPlacement();
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder();
+
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    boolean hasJobConf();
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    org.oneflow.core.job.JobConf.JobConfigProto getJobConf();
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    boolean hasJobParallelViewConf();
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    org.oneflow.core.job.JobOuterClass.JobParallelViewConf getJobParallelViewConf();
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder getJobParallelViewConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    boolean hasHelper();
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    org.oneflow.core.job.JobOuterClass.JobHelperConf getHelper();
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder getHelperOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.Job}
+   */
+  public  static final class Job extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.Job)
+      JobOrBuilder {
+    // Use Job.newBuilder() to construct.
+    private Job(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Job() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Job(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.job.DlnetConf.DLNetConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = net_.toBuilder();
+              }
+              net_ = input.readMessage(org.oneflow.core.job.DlnetConf.DLNetConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(net_);
+                net_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.job.PlacementOuterClass.Placement.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = placement_.toBuilder();
+              }
+              placement_ = input.readMessage(org.oneflow.core.job.PlacementOuterClass.Placement.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(placement_);
+                placement_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              org.oneflow.core.job.JobConf.JobConfigProto.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = jobConf_.toBuilder();
+              }
+              jobConf_ = input.readMessage(org.oneflow.core.job.JobConf.JobConfigProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jobConf_);
+                jobConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = jobParallelViewConf_.toBuilder();
+              }
+              jobParallelViewConf_ = input.readMessage(org.oneflow.core.job.JobOuterClass.JobParallelViewConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jobParallelViewConf_);
+                jobParallelViewConf_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = helper_.toBuilder();
+              }
+              helper_ = input.readMessage(org.oneflow.core.job.JobOuterClass.JobHelperConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(helper_);
+                helper_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_Job_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_Job_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.JobOuterClass.Job.class, org.oneflow.core.job.JobOuterClass.Job.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NET_FIELD_NUMBER = 1;
+    private org.oneflow.core.job.DlnetConf.DLNetConf net_;
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    public boolean hasNet() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    public org.oneflow.core.job.DlnetConf.DLNetConf getNet() {
+      return net_ == null ? org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+    }
+    /**
+     * <code>required .oneflow.DLNetConf net = 1;</code>
+     */
+    public org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
+      return net_ == null ? org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+    }
+
+    public static final int PLACEMENT_FIELD_NUMBER = 2;
+    private org.oneflow.core.job.PlacementOuterClass.Placement placement_;
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    public boolean hasPlacement() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    public org.oneflow.core.job.PlacementOuterClass.Placement getPlacement() {
+      return placement_ == null ? org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+    }
+    /**
+     * <code>required .oneflow.Placement placement = 2;</code>
+     */
+    public org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
+      return placement_ == null ? org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+    }
+
+    public static final int JOB_CONF_FIELD_NUMBER = 3;
+    private org.oneflow.core.job.JobConf.JobConfigProto jobConf_;
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    public boolean hasJobConf() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    public org.oneflow.core.job.JobConf.JobConfigProto getJobConf() {
+      return jobConf_ == null ? org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+    }
+    /**
+     * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+     */
+    public org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder() {
+      return jobConf_ == null ? org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+    }
+
+    public static final int JOB_PARALLEL_VIEW_CONF_FIELD_NUMBER = 4;
+    private org.oneflow.core.job.JobOuterClass.JobParallelViewConf jobParallelViewConf_;
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    public boolean hasJobParallelViewConf() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    public org.oneflow.core.job.JobOuterClass.JobParallelViewConf getJobParallelViewConf() {
+      return jobParallelViewConf_ == null ? org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance() : jobParallelViewConf_;
+    }
+    /**
+     * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+     */
+    public org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder getJobParallelViewConfOrBuilder() {
+      return jobParallelViewConf_ == null ? org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance() : jobParallelViewConf_;
+    }
+
+    public static final int HELPER_FIELD_NUMBER = 5;
+    private org.oneflow.core.job.JobOuterClass.JobHelperConf helper_;
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    public boolean hasHelper() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    public org.oneflow.core.job.JobOuterClass.JobHelperConf getHelper() {
+      return helper_ == null ? org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance() : helper_;
+    }
+    /**
+     * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+     */
+    public org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder getHelperOrBuilder() {
+      return helper_ == null ? org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance() : helper_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasNet()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPlacement()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasJobConf()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getNet().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getPlacement().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getJobConf().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasJobParallelViewConf()) {
+        if (!getJobParallelViewConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasHelper()) {
+        if (!getHelper().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getNet());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getPlacement());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, getJobConf());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, getJobParallelViewConf());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, getHelper());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNet());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlacement());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getJobConf());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getJobParallelViewConf());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getHelper());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.JobOuterClass.Job)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.JobOuterClass.Job other = (org.oneflow.core.job.JobOuterClass.Job) obj;
+
+      boolean result = true;
+      result = result && (hasNet() == other.hasNet());
+      if (hasNet()) {
+        result = result && getNet()
+            .equals(other.getNet());
+      }
+      result = result && (hasPlacement() == other.hasPlacement());
+      if (hasPlacement()) {
+        result = result && getPlacement()
+            .equals(other.getPlacement());
+      }
+      result = result && (hasJobConf() == other.hasJobConf());
+      if (hasJobConf()) {
+        result = result && getJobConf()
+            .equals(other.getJobConf());
+      }
+      result = result && (hasJobParallelViewConf() == other.hasJobParallelViewConf());
+      if (hasJobParallelViewConf()) {
+        result = result && getJobParallelViewConf()
+            .equals(other.getJobParallelViewConf());
+      }
+      result = result && (hasHelper() == other.hasHelper());
+      if (hasHelper()) {
+        result = result && getHelper()
+            .equals(other.getHelper());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasNet()) {
+        hash = (37 * hash) + NET_FIELD_NUMBER;
+        hash = (53 * hash) + getNet().hashCode();
+      }
+      if (hasPlacement()) {
+        hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlacement().hashCode();
+      }
+      if (hasJobConf()) {
+        hash = (37 * hash) + JOB_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getJobConf().hashCode();
+      }
+      if (hasJobParallelViewConf()) {
+        hash = (37 * hash) + JOB_PARALLEL_VIEW_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getJobParallelViewConf().hashCode();
+      }
+      if (hasHelper()) {
+        hash = (37 * hash) + HELPER_FIELD_NUMBER;
+        hash = (53 * hash) + getHelper().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.JobOuterClass.Job parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.JobOuterClass.Job prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.Job}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.Job)
+        org.oneflow.core.job.JobOuterClass.JobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_Job_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_Job_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.JobOuterClass.Job.class, org.oneflow.core.job.JobOuterClass.Job.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.JobOuterClass.Job.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNetFieldBuilder();
+          getPlacementFieldBuilder();
+          getJobConfFieldBuilder();
+          getJobParallelViewConfFieldBuilder();
+          getHelperFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (netBuilder_ == null) {
+          net_ = null;
+        } else {
+          netBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (placementBuilder_ == null) {
+          placement_ = null;
+        } else {
+          placementBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (jobConfBuilder_ == null) {
+          jobConf_ = null;
+        } else {
+          jobConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (jobParallelViewConfBuilder_ == null) {
+          jobParallelViewConf_ = null;
+        } else {
+          jobParallelViewConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (helperBuilder_ == null) {
+          helper_ = null;
+        } else {
+          helperBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.JobOuterClass.internal_static_oneflow_Job_descriptor;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.Job getDefaultInstanceForType() {
+        return org.oneflow.core.job.JobOuterClass.Job.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.JobOuterClass.Job build() {
+        org.oneflow.core.job.JobOuterClass.Job result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.JobOuterClass.Job buildPartial() {
+        org.oneflow.core.job.JobOuterClass.Job result = new org.oneflow.core.job.JobOuterClass.Job(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (netBuilder_ == null) {
+          result.net_ = net_;
+        } else {
+          result.net_ = netBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (placementBuilder_ == null) {
+          result.placement_ = placement_;
+        } else {
+          result.placement_ = placementBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (jobConfBuilder_ == null) {
+          result.jobConf_ = jobConf_;
+        } else {
+          result.jobConf_ = jobConfBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (jobParallelViewConfBuilder_ == null) {
+          result.jobParallelViewConf_ = jobParallelViewConf_;
+        } else {
+          result.jobParallelViewConf_ = jobParallelViewConfBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (helperBuilder_ == null) {
+          result.helper_ = helper_;
+        } else {
+          result.helper_ = helperBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.JobOuterClass.Job) {
+          return mergeFrom((org.oneflow.core.job.JobOuterClass.Job)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.JobOuterClass.Job other) {
+        if (other == org.oneflow.core.job.JobOuterClass.Job.getDefaultInstance()) return this;
+        if (other.hasNet()) {
+          mergeNet(other.getNet());
+        }
+        if (other.hasPlacement()) {
+          mergePlacement(other.getPlacement());
+        }
+        if (other.hasJobConf()) {
+          mergeJobConf(other.getJobConf());
+        }
+        if (other.hasJobParallelViewConf()) {
+          mergeJobParallelViewConf(other.getJobParallelViewConf());
+        }
+        if (other.hasHelper()) {
+          mergeHelper(other.getHelper());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasNet()) {
+          return false;
+        }
+        if (!hasPlacement()) {
+          return false;
+        }
+        if (!hasJobConf()) {
+          return false;
+        }
+        if (!getNet().isInitialized()) {
+          return false;
+        }
+        if (!getPlacement().isInitialized()) {
+          return false;
+        }
+        if (!getJobConf().isInitialized()) {
+          return false;
+        }
+        if (hasJobParallelViewConf()) {
+          if (!getJobParallelViewConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasHelper()) {
+          if (!getHelper().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.JobOuterClass.Job parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.JobOuterClass.Job) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.job.DlnetConf.DLNetConf net_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.DlnetConf.DLNetConf, org.oneflow.core.job.DlnetConf.DLNetConf.Builder, org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder> netBuilder_;
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public boolean hasNet() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public org.oneflow.core.job.DlnetConf.DLNetConf getNet() {
+        if (netBuilder_ == null) {
+          return net_ == null ? org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+        } else {
+          return netBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public Builder setNet(org.oneflow.core.job.DlnetConf.DLNetConf value) {
+        if (netBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          net_ = value;
+          onChanged();
+        } else {
+          netBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public Builder setNet(
+          org.oneflow.core.job.DlnetConf.DLNetConf.Builder builderForValue) {
+        if (netBuilder_ == null) {
+          net_ = builderForValue.build();
+          onChanged();
+        } else {
+          netBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public Builder mergeNet(org.oneflow.core.job.DlnetConf.DLNetConf value) {
+        if (netBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              net_ != null &&
+              net_ != org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance()) {
+            net_ =
+              org.oneflow.core.job.DlnetConf.DLNetConf.newBuilder(net_).mergeFrom(value).buildPartial();
+          } else {
+            net_ = value;
+          }
+          onChanged();
+        } else {
+          netBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public Builder clearNet() {
+        if (netBuilder_ == null) {
+          net_ = null;
+          onChanged();
+        } else {
+          netBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public org.oneflow.core.job.DlnetConf.DLNetConf.Builder getNetBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      public org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
+        if (netBuilder_ != null) {
+          return netBuilder_.getMessageOrBuilder();
+        } else {
+          return net_ == null ?
+              org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
+        }
+      }
+      /**
+       * <code>required .oneflow.DLNetConf net = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.DlnetConf.DLNetConf, org.oneflow.core.job.DlnetConf.DLNetConf.Builder, org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder> 
+          getNetFieldBuilder() {
+        if (netBuilder_ == null) {
+          netBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.DlnetConf.DLNetConf, org.oneflow.core.job.DlnetConf.DLNetConf.Builder, org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder>(
+                  getNet(),
+                  getParentForChildren(),
+                  isClean());
+          net_ = null;
+        }
+        return netBuilder_;
+      }
+
+      private org.oneflow.core.job.PlacementOuterClass.Placement placement_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.PlacementOuterClass.Placement, org.oneflow.core.job.PlacementOuterClass.Placement.Builder, org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder> placementBuilder_;
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public boolean hasPlacement() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.Placement getPlacement() {
+        if (placementBuilder_ == null) {
+          return placement_ == null ? org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+        } else {
+          return placementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public Builder setPlacement(org.oneflow.core.job.PlacementOuterClass.Placement value) {
+        if (placementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          placement_ = value;
+          onChanged();
+        } else {
+          placementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public Builder setPlacement(
+          org.oneflow.core.job.PlacementOuterClass.Placement.Builder builderForValue) {
+        if (placementBuilder_ == null) {
+          placement_ = builderForValue.build();
+          onChanged();
+        } else {
+          placementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public Builder mergePlacement(org.oneflow.core.job.PlacementOuterClass.Placement value) {
+        if (placementBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              placement_ != null &&
+              placement_ != org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance()) {
+            placement_ =
+              org.oneflow.core.job.PlacementOuterClass.Placement.newBuilder(placement_).mergeFrom(value).buildPartial();
+          } else {
+            placement_ = value;
+          }
+          onChanged();
+        } else {
+          placementBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public Builder clearPlacement() {
+        if (placementBuilder_ == null) {
+          placement_ = null;
+          onChanged();
+        } else {
+          placementBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.Placement.Builder getPlacementBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlacementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
+        if (placementBuilder_ != null) {
+          return placementBuilder_.getMessageOrBuilder();
+        } else {
+          return placement_ == null ?
+              org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
+        }
+      }
+      /**
+       * <code>required .oneflow.Placement placement = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.PlacementOuterClass.Placement, org.oneflow.core.job.PlacementOuterClass.Placement.Builder, org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder> 
+          getPlacementFieldBuilder() {
+        if (placementBuilder_ == null) {
+          placementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.PlacementOuterClass.Placement, org.oneflow.core.job.PlacementOuterClass.Placement.Builder, org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder>(
+                  getPlacement(),
+                  getParentForChildren(),
+                  isClean());
+          placement_ = null;
+        }
+        return placementBuilder_;
+      }
+
+      private org.oneflow.core.job.JobConf.JobConfigProto jobConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder> jobConfBuilder_;
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public boolean hasJobConf() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProto getJobConf() {
+        if (jobConfBuilder_ == null) {
+          return jobConf_ == null ? org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+        } else {
+          return jobConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public Builder setJobConf(org.oneflow.core.job.JobConf.JobConfigProto value) {
+        if (jobConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobConf_ = value;
+          onChanged();
+        } else {
+          jobConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public Builder setJobConf(
+          org.oneflow.core.job.JobConf.JobConfigProto.Builder builderForValue) {
+        if (jobConfBuilder_ == null) {
+          jobConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public Builder mergeJobConf(org.oneflow.core.job.JobConf.JobConfigProto value) {
+        if (jobConfBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              jobConf_ != null &&
+              jobConf_ != org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance()) {
+            jobConf_ =
+              org.oneflow.core.job.JobConf.JobConfigProto.newBuilder(jobConf_).mergeFrom(value).buildPartial();
+          } else {
+            jobConf_ = value;
+          }
+          onChanged();
+        } else {
+          jobConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public Builder clearJobConf() {
+        if (jobConfBuilder_ == null) {
+          jobConf_ = null;
+          onChanged();
+        } else {
+          jobConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProto.Builder getJobConfBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getJobConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfOrBuilder() {
+        if (jobConfBuilder_ != null) {
+          return jobConfBuilder_.getMessageOrBuilder();
+        } else {
+          return jobConf_ == null ?
+              org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance() : jobConf_;
+        }
+      }
+      /**
+       * <code>required .oneflow.JobConfigProto job_conf = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder> 
+          getJobConfFieldBuilder() {
+        if (jobConfBuilder_ == null) {
+          jobConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder>(
+                  getJobConf(),
+                  getParentForChildren(),
+                  isClean());
+          jobConf_ = null;
+        }
+        return jobConfBuilder_;
+      }
+
+      private org.oneflow.core.job.JobOuterClass.JobParallelViewConf jobParallelViewConf_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobOuterClass.JobParallelViewConf, org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder, org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder> jobParallelViewConfBuilder_;
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public boolean hasJobParallelViewConf() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConf getJobParallelViewConf() {
+        if (jobParallelViewConfBuilder_ == null) {
+          return jobParallelViewConf_ == null ? org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance() : jobParallelViewConf_;
+        } else {
+          return jobParallelViewConfBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public Builder setJobParallelViewConf(org.oneflow.core.job.JobOuterClass.JobParallelViewConf value) {
+        if (jobParallelViewConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobParallelViewConf_ = value;
+          onChanged();
+        } else {
+          jobParallelViewConfBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public Builder setJobParallelViewConf(
+          org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder builderForValue) {
+        if (jobParallelViewConfBuilder_ == null) {
+          jobParallelViewConf_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobParallelViewConfBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public Builder mergeJobParallelViewConf(org.oneflow.core.job.JobOuterClass.JobParallelViewConf value) {
+        if (jobParallelViewConfBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              jobParallelViewConf_ != null &&
+              jobParallelViewConf_ != org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance()) {
+            jobParallelViewConf_ =
+              org.oneflow.core.job.JobOuterClass.JobParallelViewConf.newBuilder(jobParallelViewConf_).mergeFrom(value).buildPartial();
+          } else {
+            jobParallelViewConf_ = value;
+          }
+          onChanged();
+        } else {
+          jobParallelViewConfBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public Builder clearJobParallelViewConf() {
+        if (jobParallelViewConfBuilder_ == null) {
+          jobParallelViewConf_ = null;
+          onChanged();
+        } else {
+          jobParallelViewConfBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder getJobParallelViewConfBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getJobParallelViewConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder getJobParallelViewConfOrBuilder() {
+        if (jobParallelViewConfBuilder_ != null) {
+          return jobParallelViewConfBuilder_.getMessageOrBuilder();
+        } else {
+          return jobParallelViewConf_ == null ?
+              org.oneflow.core.job.JobOuterClass.JobParallelViewConf.getDefaultInstance() : jobParallelViewConf_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobParallelViewConf job_parallel_view_conf = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobOuterClass.JobParallelViewConf, org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder, org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder> 
+          getJobParallelViewConfFieldBuilder() {
+        if (jobParallelViewConfBuilder_ == null) {
+          jobParallelViewConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.JobOuterClass.JobParallelViewConf, org.oneflow.core.job.JobOuterClass.JobParallelViewConf.Builder, org.oneflow.core.job.JobOuterClass.JobParallelViewConfOrBuilder>(
+                  getJobParallelViewConf(),
+                  getParentForChildren(),
+                  isClean());
+          jobParallelViewConf_ = null;
+        }
+        return jobParallelViewConfBuilder_;
+      }
+
+      private org.oneflow.core.job.JobOuterClass.JobHelperConf helper_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobOuterClass.JobHelperConf, org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder, org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder> helperBuilder_;
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public boolean hasHelper() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobHelperConf getHelper() {
+        if (helperBuilder_ == null) {
+          return helper_ == null ? org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance() : helper_;
+        } else {
+          return helperBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public Builder setHelper(org.oneflow.core.job.JobOuterClass.JobHelperConf value) {
+        if (helperBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          helper_ = value;
+          onChanged();
+        } else {
+          helperBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public Builder setHelper(
+          org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder builderForValue) {
+        if (helperBuilder_ == null) {
+          helper_ = builderForValue.build();
+          onChanged();
+        } else {
+          helperBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public Builder mergeHelper(org.oneflow.core.job.JobOuterClass.JobHelperConf value) {
+        if (helperBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              helper_ != null &&
+              helper_ != org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance()) {
+            helper_ =
+              org.oneflow.core.job.JobOuterClass.JobHelperConf.newBuilder(helper_).mergeFrom(value).buildPartial();
+          } else {
+            helper_ = value;
+          }
+          onChanged();
+        } else {
+          helperBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public Builder clearHelper() {
+        if (helperBuilder_ == null) {
+          helper_ = null;
+          onChanged();
+        } else {
+          helperBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder getHelperBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getHelperFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      public org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder getHelperOrBuilder() {
+        if (helperBuilder_ != null) {
+          return helperBuilder_.getMessageOrBuilder();
+        } else {
+          return helper_ == null ?
+              org.oneflow.core.job.JobOuterClass.JobHelperConf.getDefaultInstance() : helper_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobHelperConf helper = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobOuterClass.JobHelperConf, org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder, org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder> 
+          getHelperFieldBuilder() {
+        if (helperBuilder_ == null) {
+          helperBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.JobOuterClass.JobHelperConf, org.oneflow.core.job.JobOuterClass.JobHelperConf.Builder, org.oneflow.core.job.JobOuterClass.JobHelperConfOrBuilder>(
+                  getHelper(),
+                  getParentForChildren(),
+                  isClean());
+          helper_ = null;
+        }
+        return helperBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.Job)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.Job)
+    private static final org.oneflow.core.job.JobOuterClass.Job DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.JobOuterClass.Job();
+    }
+
+    public static org.oneflow.core.job.JobOuterClass.Job getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Job>
+        PARSER = new com.google.protobuf.AbstractParser<Job>() {
+      public Job parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Job(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Job> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Job> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.JobOuterClass.Job getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobParallelViewConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobParallelViewConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobParallelViewConf_OpName2sbpSignatureConfEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobParallelViewConf_OpName2sbpSignatureConfEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobParallelViewConf_OpName2isMirroredParallelViewEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobParallelViewConf_OpName2isMirroredParallelViewEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobParallelViewConf_OpName2parallelDistributionSignatureConfEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobParallelViewConf_OpName2parallelDistributionSignatureConfEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_Tag2lbiRelationsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_Tag2lbiRelationsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_Tag2opNameRelationsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_Tag2opNameRelationsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_Lbn2logicalBlobDescEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_Lbn2logicalBlobDescEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_Lbn2logicalObjectIdEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_Lbn2logicalObjectIdEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobHelperConf_OpName2argSignatureEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_JobHelperConf_OpName2argSignatureEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_Job_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_Job_fieldAccessorTable;
 
@@ -130,8 +4847,8 @@ public final class JobOuterClass {
       ".Placement\022)\n\010job_conf\030\003 \002(\0132\027.oneflow.J",
       "obConfigProto\022<\n\026job_parallel_view_conf\030" +
       "\004 \001(\0132\034.oneflow.JobParallelViewConf\022&\n\006h" +
-      "elper\030\005 \001(\0132\026.oneflow.JobHelperConfB\030\n\024o" +
-      "rg.oneflow.core.jobP\001"
+      "elper\030\005 \001(\0132\026.oneflow.JobHelperConfB\026\n\024o" +
+      "rg.oneflow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

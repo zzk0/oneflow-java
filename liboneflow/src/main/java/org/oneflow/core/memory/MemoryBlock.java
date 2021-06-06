@@ -14,19 +14,3618 @@ public final class MemoryBlock {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MemBlockProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.MemBlockProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 mem_block_id = 1;</code>
+     */
+    boolean hasMemBlockId();
+    /**
+     * <code>required int64 mem_block_id = 1;</code>
+     */
+    long getMemBlockId();
+
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    java.util.List<java.lang.Long> getJobIdList();
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    int getJobIdCount();
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    long getJobId(int index);
+
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    boolean hasMachineId();
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    long getMachineId();
+
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    boolean hasMemCase();
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase();
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder();
+
+    /**
+     * <code>required bool enable_reuse_mem = 5;</code>
+     */
+    boolean hasEnableReuseMem();
+    /**
+     * <code>required bool enable_reuse_mem = 5;</code>
+     */
+    boolean getEnableReuseMem();
+
+    /**
+     * <code>optional int64 chunk_id = 6 [default = -1];</code>
+     */
+    boolean hasChunkId();
+    /**
+     * <code>optional int64 chunk_id = 6 [default = -1];</code>
+     */
+    long getChunkId();
+
+    /**
+     * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+     */
+    boolean hasChunkOffset();
+    /**
+     * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+     */
+    long getChunkOffset();
+
+    /**
+     * <code>required int64 mem_size = 8;</code>
+     */
+    boolean hasMemSize();
+    /**
+     * <code>required int64 mem_size = 8;</code>
+     */
+    long getMemSize();
+
+    /**
+     * <pre>
+     * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+     * </pre>
+     *
+     * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+     */
+    boolean hasThrdIdHint();
+    /**
+     * <pre>
+     * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+     * </pre>
+     *
+     * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+     */
+    long getThrdIdHint();
+  }
+  /**
+   * Protobuf type {@code oneflow.MemBlockProto}
+   */
+  public  static final class MemBlockProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.MemBlockProto)
+      MemBlockProtoOrBuilder {
+    // Use MemBlockProto.newBuilder() to construct.
+    private MemBlockProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MemBlockProto() {
+      memBlockId_ = 0L;
+      jobId_ = java.util.Collections.emptyList();
+      machineId_ = 0L;
+      enableReuseMem_ = false;
+      chunkId_ = -1L;
+      chunkOffset_ = -1L;
+      memSize_ = 0L;
+      thrdIdHint_ = -1L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MemBlockProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              memBlockId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                jobId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              jobId_.add(input.readInt64());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                jobId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                jobId_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              machineId_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = memCase_.toBuilder();
+              }
+              memCase_ = input.readMessage(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memCase_);
+                memCase_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000008;
+              enableReuseMem_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              chunkId_ = input.readInt64();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
+              chunkOffset_ = input.readInt64();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              memSize_ = input.readInt64();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000080;
+              thrdIdHint_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = java.util.Collections.unmodifiableList(jobId_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryBlock.MemBlockProto.class, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MEM_BLOCK_ID_FIELD_NUMBER = 1;
+    private long memBlockId_;
+    /**
+     * <code>required int64 mem_block_id = 1;</code>
+     */
+    public boolean hasMemBlockId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 mem_block_id = 1;</code>
+     */
+    public long getMemBlockId() {
+      return memBlockId_;
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Long> jobId_;
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getJobIdList() {
+      return jobId_;
+    }
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public int getJobIdCount() {
+      return jobId_.size();
+    }
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public long getJobId(int index) {
+      return jobId_.get(index);
+    }
+
+    public static final int MACHINE_ID_FIELD_NUMBER = 3;
+    private long machineId_;
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    public boolean hasMachineId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    public long getMachineId() {
+      return machineId_;
+    }
+
+    public static final int MEM_CASE_FIELD_NUMBER = 4;
+    private org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase memCase_;
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public boolean hasMemCase() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase() {
+      return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+    }
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+      return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+    }
+
+    public static final int ENABLE_REUSE_MEM_FIELD_NUMBER = 5;
+    private boolean enableReuseMem_;
+    /**
+     * <code>required bool enable_reuse_mem = 5;</code>
+     */
+    public boolean hasEnableReuseMem() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required bool enable_reuse_mem = 5;</code>
+     */
+    public boolean getEnableReuseMem() {
+      return enableReuseMem_;
+    }
+
+    public static final int CHUNK_ID_FIELD_NUMBER = 6;
+    private long chunkId_;
+    /**
+     * <code>optional int64 chunk_id = 6 [default = -1];</code>
+     */
+    public boolean hasChunkId() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int64 chunk_id = 6 [default = -1];</code>
+     */
+    public long getChunkId() {
+      return chunkId_;
+    }
+
+    public static final int CHUNK_OFFSET_FIELD_NUMBER = 7;
+    private long chunkOffset_;
+    /**
+     * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+     */
+    public boolean hasChunkOffset() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+     */
+    public long getChunkOffset() {
+      return chunkOffset_;
+    }
+
+    public static final int MEM_SIZE_FIELD_NUMBER = 8;
+    private long memSize_;
+    /**
+     * <code>required int64 mem_size = 8;</code>
+     */
+    public boolean hasMemSize() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required int64 mem_size = 8;</code>
+     */
+    public long getMemSize() {
+      return memSize_;
+    }
+
+    public static final int THRD_ID_HINT_FIELD_NUMBER = 9;
+    private long thrdIdHint_;
+    /**
+     * <pre>
+     * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+     * </pre>
+     *
+     * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+     */
+    public boolean hasThrdIdHint() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+     * </pre>
+     *
+     * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+     */
+    public long getThrdIdHint() {
+      return thrdIdHint_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasMemBlockId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMachineId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMemCase()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasEnableReuseMem()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMemSize()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getMemCase().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, memBlockId_);
+      }
+      for (int i = 0; i < jobId_.size(); i++) {
+        output.writeInt64(2, jobId_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(3, machineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(4, getMemCase());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(5, enableReuseMem_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt64(6, chunkId_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt64(7, chunkOffset_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt64(8, memSize_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt64(9, thrdIdHint_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, memBlockId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < jobId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(jobId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getJobIdList().size();
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, machineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMemCase());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, enableReuseMem_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, chunkId_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, chunkOffset_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, memSize_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, thrdIdHint_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryBlock.MemBlockProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryBlock.MemBlockProto other = (org.oneflow.core.memory.MemoryBlock.MemBlockProto) obj;
+
+      boolean result = true;
+      result = result && (hasMemBlockId() == other.hasMemBlockId());
+      if (hasMemBlockId()) {
+        result = result && (getMemBlockId()
+            == other.getMemBlockId());
+      }
+      result = result && getJobIdList()
+          .equals(other.getJobIdList());
+      result = result && (hasMachineId() == other.hasMachineId());
+      if (hasMachineId()) {
+        result = result && (getMachineId()
+            == other.getMachineId());
+      }
+      result = result && (hasMemCase() == other.hasMemCase());
+      if (hasMemCase()) {
+        result = result && getMemCase()
+            .equals(other.getMemCase());
+      }
+      result = result && (hasEnableReuseMem() == other.hasEnableReuseMem());
+      if (hasEnableReuseMem()) {
+        result = result && (getEnableReuseMem()
+            == other.getEnableReuseMem());
+      }
+      result = result && (hasChunkId() == other.hasChunkId());
+      if (hasChunkId()) {
+        result = result && (getChunkId()
+            == other.getChunkId());
+      }
+      result = result && (hasChunkOffset() == other.hasChunkOffset());
+      if (hasChunkOffset()) {
+        result = result && (getChunkOffset()
+            == other.getChunkOffset());
+      }
+      result = result && (hasMemSize() == other.hasMemSize());
+      if (hasMemSize()) {
+        result = result && (getMemSize()
+            == other.getMemSize());
+      }
+      result = result && (hasThrdIdHint() == other.hasThrdIdHint());
+      if (hasThrdIdHint()) {
+        result = result && (getThrdIdHint()
+            == other.getThrdIdHint());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMemBlockId()) {
+        hash = (37 * hash) + MEM_BLOCK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMemBlockId());
+      }
+      if (getJobIdCount() > 0) {
+        hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getJobIdList().hashCode();
+      }
+      if (hasMachineId()) {
+        hash = (37 * hash) + MACHINE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMachineId());
+      }
+      if (hasMemCase()) {
+        hash = (37 * hash) + MEM_CASE_FIELD_NUMBER;
+        hash = (53 * hash) + getMemCase().hashCode();
+      }
+      if (hasEnableReuseMem()) {
+        hash = (37 * hash) + ENABLE_REUSE_MEM_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableReuseMem());
+      }
+      if (hasChunkId()) {
+        hash = (37 * hash) + CHUNK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getChunkId());
+      }
+      if (hasChunkOffset()) {
+        hash = (37 * hash) + CHUNK_OFFSET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getChunkOffset());
+      }
+      if (hasMemSize()) {
+        hash = (37 * hash) + MEM_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMemSize());
+      }
+      if (hasThrdIdHint()) {
+        hash = (37 * hash) + THRD_ID_HINT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getThrdIdHint());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryBlock.MemBlockProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.MemBlockProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.MemBlockProto)
+        org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryBlock.MemBlockProto.class, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryBlock.MemBlockProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMemCaseFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        memBlockId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        machineId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (memCaseBuilder_ == null) {
+          memCase_ = null;
+        } else {
+          memCaseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        enableReuseMem_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        chunkId_ = -1L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        chunkOffset_ = -1L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        memSize_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        thrdIdHint_ = -1L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockProto_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryBlock.MemBlockProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto build() {
+        org.oneflow.core.memory.MemoryBlock.MemBlockProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto buildPartial() {
+        org.oneflow.core.memory.MemoryBlock.MemBlockProto result = new org.oneflow.core.memory.MemoryBlock.MemBlockProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.memBlockId_ = memBlockId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = java.util.Collections.unmodifiableList(jobId_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.jobId_ = jobId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.machineId_ = machineId_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (memCaseBuilder_ == null) {
+          result.memCase_ = memCase_;
+        } else {
+          result.memCase_ = memCaseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.enableReuseMem_ = enableReuseMem_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.chunkId_ = chunkId_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.chunkOffset_ = chunkOffset_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.memSize_ = memSize_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.thrdIdHint_ = thrdIdHint_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryBlock.MemBlockProto) {
+          return mergeFrom((org.oneflow.core.memory.MemoryBlock.MemBlockProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryBlock.MemBlockProto other) {
+        if (other == org.oneflow.core.memory.MemoryBlock.MemBlockProto.getDefaultInstance()) return this;
+        if (other.hasMemBlockId()) {
+          setMemBlockId(other.getMemBlockId());
+        }
+        if (!other.jobId_.isEmpty()) {
+          if (jobId_.isEmpty()) {
+            jobId_ = other.jobId_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureJobIdIsMutable();
+            jobId_.addAll(other.jobId_);
+          }
+          onChanged();
+        }
+        if (other.hasMachineId()) {
+          setMachineId(other.getMachineId());
+        }
+        if (other.hasMemCase()) {
+          mergeMemCase(other.getMemCase());
+        }
+        if (other.hasEnableReuseMem()) {
+          setEnableReuseMem(other.getEnableReuseMem());
+        }
+        if (other.hasChunkId()) {
+          setChunkId(other.getChunkId());
+        }
+        if (other.hasChunkOffset()) {
+          setChunkOffset(other.getChunkOffset());
+        }
+        if (other.hasMemSize()) {
+          setMemSize(other.getMemSize());
+        }
+        if (other.hasThrdIdHint()) {
+          setThrdIdHint(other.getThrdIdHint());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMemBlockId()) {
+          return false;
+        }
+        if (!hasMachineId()) {
+          return false;
+        }
+        if (!hasMemCase()) {
+          return false;
+        }
+        if (!hasEnableReuseMem()) {
+          return false;
+        }
+        if (!hasMemSize()) {
+          return false;
+        }
+        if (!getMemCase().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryBlock.MemBlockProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryBlock.MemBlockProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long memBlockId_ ;
+      /**
+       * <code>required int64 mem_block_id = 1;</code>
+       */
+      public boolean hasMemBlockId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 mem_block_id = 1;</code>
+       */
+      public long getMemBlockId() {
+        return memBlockId_;
+      }
+      /**
+       * <code>required int64 mem_block_id = 1;</code>
+       */
+      public Builder setMemBlockId(long value) {
+        bitField0_ |= 0x00000001;
+        memBlockId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 mem_block_id = 1;</code>
+       */
+      public Builder clearMemBlockId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        memBlockId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Long> jobId_ = java.util.Collections.emptyList();
+      private void ensureJobIdIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = new java.util.ArrayList<java.lang.Long>(jobId_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getJobIdList() {
+        return java.util.Collections.unmodifiableList(jobId_);
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public int getJobIdCount() {
+        return jobId_.size();
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public long getJobId(int index) {
+        return jobId_.get(index);
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder setJobId(
+          int index, long value) {
+        ensureJobIdIsMutable();
+        jobId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder addJobId(long value) {
+        ensureJobIdIsMutable();
+        jobId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder addAllJobId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureJobIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jobId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder clearJobId() {
+        jobId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private long machineId_ ;
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public boolean hasMachineId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public long getMachineId() {
+        return machineId_;
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public Builder setMachineId(long value) {
+        bitField0_ |= 0x00000004;
+        machineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public Builder clearMachineId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        machineId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase memCase_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder> memCaseBuilder_;
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public boolean hasMemCase() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase() {
+        if (memCaseBuilder_ == null) {
+          return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+        } else {
+          return memCaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder setMemCase(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase value) {
+        if (memCaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memCase_ = value;
+          onChanged();
+        } else {
+          memCaseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder setMemCase(
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder builderForValue) {
+        if (memCaseBuilder_ == null) {
+          memCase_ = builderForValue.build();
+          onChanged();
+        } else {
+          memCaseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder mergeMemCase(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase value) {
+        if (memCaseBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              memCase_ != null &&
+              memCase_ != org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance()) {
+            memCase_ =
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.newBuilder(memCase_).mergeFrom(value).buildPartial();
+          } else {
+            memCase_ = value;
+          }
+          onChanged();
+        } else {
+          memCaseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder clearMemCase() {
+        if (memCaseBuilder_ == null) {
+          memCase_ = null;
+          onChanged();
+        } else {
+          memCaseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder getMemCaseBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMemCaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+        if (memCaseBuilder_ != null) {
+          return memCaseBuilder_.getMessageOrBuilder();
+        } else {
+          return memCase_ == null ?
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+        }
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder> 
+          getMemCaseFieldBuilder() {
+        if (memCaseBuilder_ == null) {
+          memCaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder>(
+                  getMemCase(),
+                  getParentForChildren(),
+                  isClean());
+          memCase_ = null;
+        }
+        return memCaseBuilder_;
+      }
+
+      private boolean enableReuseMem_ ;
+      /**
+       * <code>required bool enable_reuse_mem = 5;</code>
+       */
+      public boolean hasEnableReuseMem() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required bool enable_reuse_mem = 5;</code>
+       */
+      public boolean getEnableReuseMem() {
+        return enableReuseMem_;
+      }
+      /**
+       * <code>required bool enable_reuse_mem = 5;</code>
+       */
+      public Builder setEnableReuseMem(boolean value) {
+        bitField0_ |= 0x00000010;
+        enableReuseMem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool enable_reuse_mem = 5;</code>
+       */
+      public Builder clearEnableReuseMem() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        enableReuseMem_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long chunkId_ = -1L;
+      /**
+       * <code>optional int64 chunk_id = 6 [default = -1];</code>
+       */
+      public boolean hasChunkId() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int64 chunk_id = 6 [default = -1];</code>
+       */
+      public long getChunkId() {
+        return chunkId_;
+      }
+      /**
+       * <code>optional int64 chunk_id = 6 [default = -1];</code>
+       */
+      public Builder setChunkId(long value) {
+        bitField0_ |= 0x00000020;
+        chunkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 chunk_id = 6 [default = -1];</code>
+       */
+      public Builder clearChunkId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        chunkId_ = -1L;
+        onChanged();
+        return this;
+      }
+
+      private long chunkOffset_ = -1L;
+      /**
+       * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+       */
+      public boolean hasChunkOffset() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+       */
+      public long getChunkOffset() {
+        return chunkOffset_;
+      }
+      /**
+       * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+       */
+      public Builder setChunkOffset(long value) {
+        bitField0_ |= 0x00000040;
+        chunkOffset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 chunk_offset = 7 [default = -1];</code>
+       */
+      public Builder clearChunkOffset() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        chunkOffset_ = -1L;
+        onChanged();
+        return this;
+      }
+
+      private long memSize_ ;
+      /**
+       * <code>required int64 mem_size = 8;</code>
+       */
+      public boolean hasMemSize() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int64 mem_size = 8;</code>
+       */
+      public long getMemSize() {
+        return memSize_;
+      }
+      /**
+       * <code>required int64 mem_size = 8;</code>
+       */
+      public Builder setMemSize(long value) {
+        bitField0_ |= 0x00000080;
+        memSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 mem_size = 8;</code>
+       */
+      public Builder clearMemSize() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        memSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long thrdIdHint_ = -1L;
+      /**
+       * <pre>
+       * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+       * </pre>
+       *
+       * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+       */
+      public boolean hasThrdIdHint() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+       * </pre>
+       *
+       * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+       */
+      public long getThrdIdHint() {
+        return thrdIdHint_;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+       * </pre>
+       *
+       * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+       */
+      public Builder setThrdIdHint(long value) {
+        bitField0_ |= 0x00000100;
+        thrdIdHint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): thrd id hint is used by packed separated block group order.
+       * </pre>
+       *
+       * <code>optional int64 thrd_id_hint = 9 [default = -1];</code>
+       */
+      public Builder clearThrdIdHint() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        thrdIdHint_ = -1L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.MemBlockProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.MemBlockProto)
+    private static final org.oneflow.core.memory.MemoryBlock.MemBlockProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryBlock.MemBlockProto();
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<MemBlockProto>
+        PARSER = new com.google.protobuf.AbstractParser<MemBlockProto>() {
+      public MemBlockProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MemBlockProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MemBlockProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MemBlockProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryBlock.MemBlockProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChunkProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ChunkProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 chunk_id = 1;</code>
+     */
+    boolean hasChunkId();
+    /**
+     * <code>required int64 chunk_id = 1;</code>
+     */
+    long getChunkId();
+
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    java.util.List<java.lang.Long> getJobIdList();
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    int getJobIdCount();
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    long getJobId(int index);
+
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    boolean hasMachineId();
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    long getMachineId();
+
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    boolean hasMemCase();
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase();
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder();
+
+    /**
+     * <code>required int64 mem_size = 5;</code>
+     */
+    boolean hasMemSize();
+    /**
+     * <code>required int64 mem_size = 5;</code>
+     */
+    long getMemSize();
+  }
+  /**
+   * Protobuf type {@code oneflow.ChunkProto}
+   */
+  public  static final class ChunkProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ChunkProto)
+      ChunkProtoOrBuilder {
+    // Use ChunkProto.newBuilder() to construct.
+    private ChunkProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChunkProto() {
+      chunkId_ = 0L;
+      jobId_ = java.util.Collections.emptyList();
+      machineId_ = 0L;
+      memSize_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChunkProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              chunkId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                jobId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              jobId_.add(input.readInt64());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                jobId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                jobId_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              machineId_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = memCase_.toBuilder();
+              }
+              memCase_ = input.readMessage(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memCase_);
+                memCase_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000008;
+              memSize_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = java.util.Collections.unmodifiableList(jobId_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_ChunkProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_ChunkProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryBlock.ChunkProto.class, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CHUNK_ID_FIELD_NUMBER = 1;
+    private long chunkId_;
+    /**
+     * <code>required int64 chunk_id = 1;</code>
+     */
+    public boolean hasChunkId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 chunk_id = 1;</code>
+     */
+    public long getChunkId() {
+      return chunkId_;
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Long> jobId_;
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getJobIdList() {
+      return jobId_;
+    }
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public int getJobIdCount() {
+      return jobId_.size();
+    }
+    /**
+     * <code>repeated int64 job_id = 2;</code>
+     */
+    public long getJobId(int index) {
+      return jobId_.get(index);
+    }
+
+    public static final int MACHINE_ID_FIELD_NUMBER = 3;
+    private long machineId_;
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    public boolean hasMachineId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 machine_id = 3;</code>
+     */
+    public long getMachineId() {
+      return machineId_;
+    }
+
+    public static final int MEM_CASE_FIELD_NUMBER = 4;
+    private org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase memCase_;
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public boolean hasMemCase() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase() {
+      return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+    }
+    /**
+     * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+      return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+    }
+
+    public static final int MEM_SIZE_FIELD_NUMBER = 5;
+    private long memSize_;
+    /**
+     * <code>required int64 mem_size = 5;</code>
+     */
+    public boolean hasMemSize() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int64 mem_size = 5;</code>
+     */
+    public long getMemSize() {
+      return memSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasChunkId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMachineId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMemCase()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMemSize()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getMemCase().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, chunkId_);
+      }
+      for (int i = 0; i < jobId_.size(); i++) {
+        output.writeInt64(2, jobId_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(3, machineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(4, getMemCase());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(5, memSize_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, chunkId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < jobId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(jobId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getJobIdList().size();
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, machineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMemCase());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, memSize_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryBlock.ChunkProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryBlock.ChunkProto other = (org.oneflow.core.memory.MemoryBlock.ChunkProto) obj;
+
+      boolean result = true;
+      result = result && (hasChunkId() == other.hasChunkId());
+      if (hasChunkId()) {
+        result = result && (getChunkId()
+            == other.getChunkId());
+      }
+      result = result && getJobIdList()
+          .equals(other.getJobIdList());
+      result = result && (hasMachineId() == other.hasMachineId());
+      if (hasMachineId()) {
+        result = result && (getMachineId()
+            == other.getMachineId());
+      }
+      result = result && (hasMemCase() == other.hasMemCase());
+      if (hasMemCase()) {
+        result = result && getMemCase()
+            .equals(other.getMemCase());
+      }
+      result = result && (hasMemSize() == other.hasMemSize());
+      if (hasMemSize()) {
+        result = result && (getMemSize()
+            == other.getMemSize());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasChunkId()) {
+        hash = (37 * hash) + CHUNK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getChunkId());
+      }
+      if (getJobIdCount() > 0) {
+        hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getJobIdList().hashCode();
+      }
+      if (hasMachineId()) {
+        hash = (37 * hash) + MACHINE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMachineId());
+      }
+      if (hasMemCase()) {
+        hash = (37 * hash) + MEM_CASE_FIELD_NUMBER;
+        hash = (53 * hash) + getMemCase().hashCode();
+      }
+      if (hasMemSize()) {
+        hash = (37 * hash) + MEM_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMemSize());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryBlock.ChunkProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ChunkProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ChunkProto)
+        org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_ChunkProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_ChunkProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryBlock.ChunkProto.class, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryBlock.ChunkProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMemCaseFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        chunkId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        machineId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (memCaseBuilder_ == null) {
+          memCase_ = null;
+        } else {
+          memCaseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        memSize_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_ChunkProto_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryBlock.ChunkProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto build() {
+        org.oneflow.core.memory.MemoryBlock.ChunkProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto buildPartial() {
+        org.oneflow.core.memory.MemoryBlock.ChunkProto result = new org.oneflow.core.memory.MemoryBlock.ChunkProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.chunkId_ = chunkId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = java.util.Collections.unmodifiableList(jobId_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.jobId_ = jobId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.machineId_ = machineId_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (memCaseBuilder_ == null) {
+          result.memCase_ = memCase_;
+        } else {
+          result.memCase_ = memCaseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.memSize_ = memSize_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryBlock.ChunkProto) {
+          return mergeFrom((org.oneflow.core.memory.MemoryBlock.ChunkProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryBlock.ChunkProto other) {
+        if (other == org.oneflow.core.memory.MemoryBlock.ChunkProto.getDefaultInstance()) return this;
+        if (other.hasChunkId()) {
+          setChunkId(other.getChunkId());
+        }
+        if (!other.jobId_.isEmpty()) {
+          if (jobId_.isEmpty()) {
+            jobId_ = other.jobId_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureJobIdIsMutable();
+            jobId_.addAll(other.jobId_);
+          }
+          onChanged();
+        }
+        if (other.hasMachineId()) {
+          setMachineId(other.getMachineId());
+        }
+        if (other.hasMemCase()) {
+          mergeMemCase(other.getMemCase());
+        }
+        if (other.hasMemSize()) {
+          setMemSize(other.getMemSize());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasChunkId()) {
+          return false;
+        }
+        if (!hasMachineId()) {
+          return false;
+        }
+        if (!hasMemCase()) {
+          return false;
+        }
+        if (!hasMemSize()) {
+          return false;
+        }
+        if (!getMemCase().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryBlock.ChunkProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryBlock.ChunkProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long chunkId_ ;
+      /**
+       * <code>required int64 chunk_id = 1;</code>
+       */
+      public boolean hasChunkId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 chunk_id = 1;</code>
+       */
+      public long getChunkId() {
+        return chunkId_;
+      }
+      /**
+       * <code>required int64 chunk_id = 1;</code>
+       */
+      public Builder setChunkId(long value) {
+        bitField0_ |= 0x00000001;
+        chunkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 chunk_id = 1;</code>
+       */
+      public Builder clearChunkId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chunkId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Long> jobId_ = java.util.Collections.emptyList();
+      private void ensureJobIdIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          jobId_ = new java.util.ArrayList<java.lang.Long>(jobId_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getJobIdList() {
+        return java.util.Collections.unmodifiableList(jobId_);
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public int getJobIdCount() {
+        return jobId_.size();
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public long getJobId(int index) {
+        return jobId_.get(index);
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder setJobId(
+          int index, long value) {
+        ensureJobIdIsMutable();
+        jobId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder addJobId(long value) {
+        ensureJobIdIsMutable();
+        jobId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder addAllJobId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureJobIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jobId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 job_id = 2;</code>
+       */
+      public Builder clearJobId() {
+        jobId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private long machineId_ ;
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public boolean hasMachineId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public long getMachineId() {
+        return machineId_;
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public Builder setMachineId(long value) {
+        bitField0_ |= 0x00000004;
+        machineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 machine_id = 3;</code>
+       */
+      public Builder clearMachineId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        machineId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase memCase_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder> memCaseBuilder_;
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public boolean hasMemCase() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getMemCase() {
+        if (memCaseBuilder_ == null) {
+          return memCase_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+        } else {
+          return memCaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder setMemCase(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase value) {
+        if (memCaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memCase_ = value;
+          onChanged();
+        } else {
+          memCaseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder setMemCase(
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder builderForValue) {
+        if (memCaseBuilder_ == null) {
+          memCase_ = builderForValue.build();
+          onChanged();
+        } else {
+          memCaseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder mergeMemCase(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase value) {
+        if (memCaseBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              memCase_ != null &&
+              memCase_ != org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance()) {
+            memCase_ =
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.newBuilder(memCase_).mergeFrom(value).buildPartial();
+          } else {
+            memCase_ = value;
+          }
+          onChanged();
+        } else {
+          memCaseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public Builder clearMemCase() {
+        if (memCaseBuilder_ == null) {
+          memCase_ = null;
+          onChanged();
+        } else {
+          memCaseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder getMemCaseBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMemCaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder getMemCaseOrBuilder() {
+        if (memCaseBuilder_ != null) {
+          return memCaseBuilder_.getMessageOrBuilder();
+        } else {
+          return memCase_ == null ?
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance() : memCase_;
+        }
+      }
+      /**
+       * <code>required .oneflow.MemoryCase mem_case = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder> 
+          getMemCaseFieldBuilder() {
+        if (memCaseBuilder_ == null) {
+          memCaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder>(
+                  getMemCase(),
+                  getParentForChildren(),
+                  isClean());
+          memCase_ = null;
+        }
+        return memCaseBuilder_;
+      }
+
+      private long memSize_ ;
+      /**
+       * <code>required int64 mem_size = 5;</code>
+       */
+      public boolean hasMemSize() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required int64 mem_size = 5;</code>
+       */
+      public long getMemSize() {
+        return memSize_;
+      }
+      /**
+       * <code>required int64 mem_size = 5;</code>
+       */
+      public Builder setMemSize(long value) {
+        bitField0_ |= 0x00000010;
+        memSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 mem_size = 5;</code>
+       */
+      public Builder clearMemSize() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        memSize_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ChunkProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ChunkProto)
+    private static final org.oneflow.core.memory.MemoryBlock.ChunkProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryBlock.ChunkProto();
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.ChunkProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ChunkProto>
+        PARSER = new com.google.protobuf.AbstractParser<ChunkProto>() {
+      public ChunkProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ChunkProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChunkProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChunkProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryBlock.ChunkProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MemBlockAndChunkListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.MemBlockAndChunkList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto> 
+        getMemBlockList();
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryBlock.MemBlockProto getMemBlock(int index);
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    int getMemBlockCount();
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder> 
+        getMemBlockOrBuilderList();
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder getMemBlockOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto> 
+        getChunkList();
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    org.oneflow.core.memory.MemoryBlock.ChunkProto getChunk(int index);
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    int getChunkCount();
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    java.util.List<? extends org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder> 
+        getChunkOrBuilderList();
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder getChunkOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.MemBlockAndChunkList}
+   */
+  public  static final class MemBlockAndChunkList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.MemBlockAndChunkList)
+      MemBlockAndChunkListOrBuilder {
+    // Use MemBlockAndChunkList.newBuilder() to construct.
+    private MemBlockAndChunkList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MemBlockAndChunkList() {
+      memBlock_ = java.util.Collections.emptyList();
+      chunk_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MemBlockAndChunkList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                memBlock_ = new java.util.ArrayList<org.oneflow.core.memory.MemoryBlock.MemBlockProto>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              memBlock_.add(
+                  input.readMessage(org.oneflow.core.memory.MemoryBlock.MemBlockProto.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                chunk_ = new java.util.ArrayList<org.oneflow.core.memory.MemoryBlock.ChunkProto>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              chunk_.add(
+                  input.readMessage(org.oneflow.core.memory.MemoryBlock.ChunkProto.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          memBlock_ = java.util.Collections.unmodifiableList(memBlock_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          chunk_ = java.util.Collections.unmodifiableList(chunk_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockAndChunkList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockAndChunkList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.class, org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.Builder.class);
+    }
+
+    public static final int MEM_BLOCK_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto> memBlock_;
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto> getMemBlockList() {
+      return memBlock_;
+    }
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder> 
+        getMemBlockOrBuilderList() {
+      return memBlock_;
+    }
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    public int getMemBlockCount() {
+      return memBlock_.size();
+    }
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryBlock.MemBlockProto getMemBlock(int index) {
+      return memBlock_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder getMemBlockOrBuilder(
+        int index) {
+      return memBlock_.get(index);
+    }
+
+    public static final int CHUNK_FIELD_NUMBER = 2;
+    private java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto> chunk_;
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    public java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto> getChunkList() {
+      return chunk_;
+    }
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder> 
+        getChunkOrBuilderList() {
+      return chunk_;
+    }
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    public int getChunkCount() {
+      return chunk_.size();
+    }
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    public org.oneflow.core.memory.MemoryBlock.ChunkProto getChunk(int index) {
+      return chunk_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+     */
+    public org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder getChunkOrBuilder(
+        int index) {
+      return chunk_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getMemBlockCount(); i++) {
+        if (!getMemBlock(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getChunkCount(); i++) {
+        if (!getChunk(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < memBlock_.size(); i++) {
+        output.writeMessage(1, memBlock_.get(i));
+      }
+      for (int i = 0; i < chunk_.size(); i++) {
+        output.writeMessage(2, chunk_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < memBlock_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, memBlock_.get(i));
+      }
+      for (int i = 0; i < chunk_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, chunk_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList other = (org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList) obj;
+
+      boolean result = true;
+      result = result && getMemBlockList()
+          .equals(other.getMemBlockList());
+      result = result && getChunkList()
+          .equals(other.getChunkList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getMemBlockCount() > 0) {
+        hash = (37 * hash) + MEM_BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getMemBlockList().hashCode();
+      }
+      if (getChunkCount() > 0) {
+        hash = (37 * hash) + CHUNK_FIELD_NUMBER;
+        hash = (53 * hash) + getChunkList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.MemBlockAndChunkList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.MemBlockAndChunkList)
+        org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockAndChunkList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockAndChunkList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.class, org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMemBlockFieldBuilder();
+          getChunkFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (memBlockBuilder_ == null) {
+          memBlock_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          memBlockBuilder_.clear();
+        }
+        if (chunkBuilder_ == null) {
+          chunk_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          chunkBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryBlock.internal_static_oneflow_MemBlockAndChunkList_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList build() {
+        org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList buildPartial() {
+        org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList result = new org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList(this);
+        int from_bitField0_ = bitField0_;
+        if (memBlockBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            memBlock_ = java.util.Collections.unmodifiableList(memBlock_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.memBlock_ = memBlock_;
+        } else {
+          result.memBlock_ = memBlockBuilder_.build();
+        }
+        if (chunkBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            chunk_ = java.util.Collections.unmodifiableList(chunk_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.chunk_ = chunk_;
+        } else {
+          result.chunk_ = chunkBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList) {
+          return mergeFrom((org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList other) {
+        if (other == org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.getDefaultInstance()) return this;
+        if (memBlockBuilder_ == null) {
+          if (!other.memBlock_.isEmpty()) {
+            if (memBlock_.isEmpty()) {
+              memBlock_ = other.memBlock_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMemBlockIsMutable();
+              memBlock_.addAll(other.memBlock_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.memBlock_.isEmpty()) {
+            if (memBlockBuilder_.isEmpty()) {
+              memBlockBuilder_.dispose();
+              memBlockBuilder_ = null;
+              memBlock_ = other.memBlock_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              memBlockBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMemBlockFieldBuilder() : null;
+            } else {
+              memBlockBuilder_.addAllMessages(other.memBlock_);
+            }
+          }
+        }
+        if (chunkBuilder_ == null) {
+          if (!other.chunk_.isEmpty()) {
+            if (chunk_.isEmpty()) {
+              chunk_ = other.chunk_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureChunkIsMutable();
+              chunk_.addAll(other.chunk_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.chunk_.isEmpty()) {
+            if (chunkBuilder_.isEmpty()) {
+              chunkBuilder_.dispose();
+              chunkBuilder_ = null;
+              chunk_ = other.chunk_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              chunkBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChunkFieldBuilder() : null;
+            } else {
+              chunkBuilder_.addAllMessages(other.chunk_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getMemBlockCount(); i++) {
+          if (!getMemBlock(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getChunkCount(); i++) {
+          if (!getChunk(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto> memBlock_ =
+        java.util.Collections.emptyList();
+      private void ensureMemBlockIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          memBlock_ = new java.util.ArrayList<org.oneflow.core.memory.MemoryBlock.MemBlockProto>(memBlock_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.memory.MemoryBlock.MemBlockProto, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder, org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder> memBlockBuilder_;
+
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto> getMemBlockList() {
+        if (memBlockBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(memBlock_);
+        } else {
+          return memBlockBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public int getMemBlockCount() {
+        if (memBlockBuilder_ == null) {
+          return memBlock_.size();
+        } else {
+          return memBlockBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto getMemBlock(int index) {
+        if (memBlockBuilder_ == null) {
+          return memBlock_.get(index);
+        } else {
+          return memBlockBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder setMemBlock(
+          int index, org.oneflow.core.memory.MemoryBlock.MemBlockProto value) {
+        if (memBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMemBlockIsMutable();
+          memBlock_.set(index, value);
+          onChanged();
+        } else {
+          memBlockBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder setMemBlock(
+          int index, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder builderForValue) {
+        if (memBlockBuilder_ == null) {
+          ensureMemBlockIsMutable();
+          memBlock_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          memBlockBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder addMemBlock(org.oneflow.core.memory.MemoryBlock.MemBlockProto value) {
+        if (memBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMemBlockIsMutable();
+          memBlock_.add(value);
+          onChanged();
+        } else {
+          memBlockBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder addMemBlock(
+          int index, org.oneflow.core.memory.MemoryBlock.MemBlockProto value) {
+        if (memBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMemBlockIsMutable();
+          memBlock_.add(index, value);
+          onChanged();
+        } else {
+          memBlockBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder addMemBlock(
+          org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder builderForValue) {
+        if (memBlockBuilder_ == null) {
+          ensureMemBlockIsMutable();
+          memBlock_.add(builderForValue.build());
+          onChanged();
+        } else {
+          memBlockBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder addMemBlock(
+          int index, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder builderForValue) {
+        if (memBlockBuilder_ == null) {
+          ensureMemBlockIsMutable();
+          memBlock_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          memBlockBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder addAllMemBlock(
+          java.lang.Iterable<? extends org.oneflow.core.memory.MemoryBlock.MemBlockProto> values) {
+        if (memBlockBuilder_ == null) {
+          ensureMemBlockIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, memBlock_);
+          onChanged();
+        } else {
+          memBlockBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder clearMemBlock() {
+        if (memBlockBuilder_ == null) {
+          memBlock_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          memBlockBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public Builder removeMemBlock(int index) {
+        if (memBlockBuilder_ == null) {
+          ensureMemBlockIsMutable();
+          memBlock_.remove(index);
+          onChanged();
+        } else {
+          memBlockBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder getMemBlockBuilder(
+          int index) {
+        return getMemBlockFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder getMemBlockOrBuilder(
+          int index) {
+        if (memBlockBuilder_ == null) {
+          return memBlock_.get(index);  } else {
+          return memBlockBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder> 
+           getMemBlockOrBuilderList() {
+        if (memBlockBuilder_ != null) {
+          return memBlockBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(memBlock_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder addMemBlockBuilder() {
+        return getMemBlockFieldBuilder().addBuilder(
+            org.oneflow.core.memory.MemoryBlock.MemBlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder addMemBlockBuilder(
+          int index) {
+        return getMemBlockFieldBuilder().addBuilder(
+            index, org.oneflow.core.memory.MemoryBlock.MemBlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.MemBlockProto mem_block = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder> 
+           getMemBlockBuilderList() {
+        return getMemBlockFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.memory.MemoryBlock.MemBlockProto, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder, org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder> 
+          getMemBlockFieldBuilder() {
+        if (memBlockBuilder_ == null) {
+          memBlockBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.memory.MemoryBlock.MemBlockProto, org.oneflow.core.memory.MemoryBlock.MemBlockProto.Builder, org.oneflow.core.memory.MemoryBlock.MemBlockProtoOrBuilder>(
+                  memBlock_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          memBlock_ = null;
+        }
+        return memBlockBuilder_;
+      }
+
+      private java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto> chunk_ =
+        java.util.Collections.emptyList();
+      private void ensureChunkIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          chunk_ = new java.util.ArrayList<org.oneflow.core.memory.MemoryBlock.ChunkProto>(chunk_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.memory.MemoryBlock.ChunkProto, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder, org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder> chunkBuilder_;
+
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto> getChunkList() {
+        if (chunkBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(chunk_);
+        } else {
+          return chunkBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public int getChunkCount() {
+        if (chunkBuilder_ == null) {
+          return chunk_.size();
+        } else {
+          return chunkBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto getChunk(int index) {
+        if (chunkBuilder_ == null) {
+          return chunk_.get(index);
+        } else {
+          return chunkBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder setChunk(
+          int index, org.oneflow.core.memory.MemoryBlock.ChunkProto value) {
+        if (chunkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChunkIsMutable();
+          chunk_.set(index, value);
+          onChanged();
+        } else {
+          chunkBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder setChunk(
+          int index, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder builderForValue) {
+        if (chunkBuilder_ == null) {
+          ensureChunkIsMutable();
+          chunk_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          chunkBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder addChunk(org.oneflow.core.memory.MemoryBlock.ChunkProto value) {
+        if (chunkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChunkIsMutable();
+          chunk_.add(value);
+          onChanged();
+        } else {
+          chunkBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder addChunk(
+          int index, org.oneflow.core.memory.MemoryBlock.ChunkProto value) {
+        if (chunkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChunkIsMutable();
+          chunk_.add(index, value);
+          onChanged();
+        } else {
+          chunkBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder addChunk(
+          org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder builderForValue) {
+        if (chunkBuilder_ == null) {
+          ensureChunkIsMutable();
+          chunk_.add(builderForValue.build());
+          onChanged();
+        } else {
+          chunkBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder addChunk(
+          int index, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder builderForValue) {
+        if (chunkBuilder_ == null) {
+          ensureChunkIsMutable();
+          chunk_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          chunkBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder addAllChunk(
+          java.lang.Iterable<? extends org.oneflow.core.memory.MemoryBlock.ChunkProto> values) {
+        if (chunkBuilder_ == null) {
+          ensureChunkIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, chunk_);
+          onChanged();
+        } else {
+          chunkBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder clearChunk() {
+        if (chunkBuilder_ == null) {
+          chunk_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          chunkBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public Builder removeChunk(int index) {
+        if (chunkBuilder_ == null) {
+          ensureChunkIsMutable();
+          chunk_.remove(index);
+          onChanged();
+        } else {
+          chunkBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder getChunkBuilder(
+          int index) {
+        return getChunkFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder getChunkOrBuilder(
+          int index) {
+        if (chunkBuilder_ == null) {
+          return chunk_.get(index);  } else {
+          return chunkBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder> 
+           getChunkOrBuilderList() {
+        if (chunkBuilder_ != null) {
+          return chunkBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(chunk_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder addChunkBuilder() {
+        return getChunkFieldBuilder().addBuilder(
+            org.oneflow.core.memory.MemoryBlock.ChunkProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder addChunkBuilder(
+          int index) {
+        return getChunkFieldBuilder().addBuilder(
+            index, org.oneflow.core.memory.MemoryBlock.ChunkProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ChunkProto chunk = 2;</code>
+       */
+      public java.util.List<org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder> 
+           getChunkBuilderList() {
+        return getChunkFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.memory.MemoryBlock.ChunkProto, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder, org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder> 
+          getChunkFieldBuilder() {
+        if (chunkBuilder_ == null) {
+          chunkBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.memory.MemoryBlock.ChunkProto, org.oneflow.core.memory.MemoryBlock.ChunkProto.Builder, org.oneflow.core.memory.MemoryBlock.ChunkProtoOrBuilder>(
+                  chunk_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          chunk_ = null;
+        }
+        return chunkBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.MemBlockAndChunkList)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.MemBlockAndChunkList)
+    private static final org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList();
+    }
+
+    public static org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<MemBlockAndChunkList>
+        PARSER = new com.google.protobuf.AbstractParser<MemBlockAndChunkList>() {
+      public MemBlockAndChunkList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MemBlockAndChunkList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MemBlockAndChunkList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MemBlockAndChunkList> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_MemBlockProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_MemBlockProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ChunkProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ChunkProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_MemBlockAndChunkList_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_MemBlockAndChunkList_fieldAccessorTable;
 
@@ -51,8 +3650,8 @@ public final class MemoryBlock {
       "e\030\004 \002(\0132\023.oneflow.MemoryCase\022\020\n\010mem_size" +
       "\030\005 \002(\003\"e\n\024MemBlockAndChunkList\022)\n\tmem_bl" +
       "ock\030\001 \003(\0132\026.oneflow.MemBlockProto\022\"\n\005chu" +
-      "nk\030\002 \003(\0132\023.oneflow.ChunkProtoB\033\n\027org.one" +
-      "flow.core.memoryP\001"
+      "nk\030\002 \003(\0132\023.oneflow.ChunkProtoB\031\n\027org.one" +
+      "flow.core.memory"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

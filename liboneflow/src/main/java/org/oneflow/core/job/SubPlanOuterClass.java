@@ -14,24 +14,1995 @@ public final class SubPlanOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ThrdIdsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ThrdIds)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    java.util.List<java.lang.Long> getThrdIdList();
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    int getThrdIdCount();
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    long getThrdId(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.ThrdIds}
+   */
+  public  static final class ThrdIds extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ThrdIds)
+      ThrdIdsOrBuilder {
+    // Use ThrdIds.newBuilder() to construct.
+    private ThrdIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ThrdIds() {
+      thrdId_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ThrdIds(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                thrdId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              thrdId_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                thrdId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                thrdId_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          thrdId_ = java.util.Collections.unmodifiableList(thrdId_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ThrdIds_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ThrdIds_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.SubPlanOuterClass.ThrdIds.class, org.oneflow.core.job.SubPlanOuterClass.ThrdIds.Builder.class);
+    }
+
+    public static final int THRD_ID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> thrdId_;
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getThrdIdList() {
+      return thrdId_;
+    }
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    public int getThrdIdCount() {
+      return thrdId_.size();
+    }
+    /**
+     * <code>repeated int64 thrd_id = 1;</code>
+     */
+    public long getThrdId(int index) {
+      return thrdId_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < thrdId_.size(); i++) {
+        output.writeInt64(1, thrdId_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < thrdId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(thrdId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getThrdIdList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.SubPlanOuterClass.ThrdIds)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.SubPlanOuterClass.ThrdIds other = (org.oneflow.core.job.SubPlanOuterClass.ThrdIds) obj;
+
+      boolean result = true;
+      result = result && getThrdIdList()
+          .equals(other.getThrdIdList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getThrdIdCount() > 0) {
+        hash = (37 * hash) + THRD_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getThrdIdList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.SubPlanOuterClass.ThrdIds prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ThrdIds}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ThrdIds)
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIdsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ThrdIds_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ThrdIds_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.SubPlanOuterClass.ThrdIds.class, org.oneflow.core.job.SubPlanOuterClass.ThrdIds.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.SubPlanOuterClass.ThrdIds.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        thrdId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ThrdIds_descriptor;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getDefaultInstanceForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.ThrdIds.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ThrdIds build() {
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIds result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ThrdIds buildPartial() {
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIds result = new org.oneflow.core.job.SubPlanOuterClass.ThrdIds(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          thrdId_ = java.util.Collections.unmodifiableList(thrdId_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.thrdId_ = thrdId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.SubPlanOuterClass.ThrdIds) {
+          return mergeFrom((org.oneflow.core.job.SubPlanOuterClass.ThrdIds)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.SubPlanOuterClass.ThrdIds other) {
+        if (other == org.oneflow.core.job.SubPlanOuterClass.ThrdIds.getDefaultInstance()) return this;
+        if (!other.thrdId_.isEmpty()) {
+          if (thrdId_.isEmpty()) {
+            thrdId_ = other.thrdId_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureThrdIdIsMutable();
+            thrdId_.addAll(other.thrdId_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIds parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.SubPlanOuterClass.ThrdIds) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> thrdId_ = java.util.Collections.emptyList();
+      private void ensureThrdIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          thrdId_ = new java.util.ArrayList<java.lang.Long>(thrdId_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getThrdIdList() {
+        return java.util.Collections.unmodifiableList(thrdId_);
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public int getThrdIdCount() {
+        return thrdId_.size();
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public long getThrdId(int index) {
+        return thrdId_.get(index);
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public Builder setThrdId(
+          int index, long value) {
+        ensureThrdIdIsMutable();
+        thrdId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public Builder addThrdId(long value) {
+        ensureThrdIdIsMutable();
+        thrdId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public Builder addAllThrdId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureThrdIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, thrdId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 thrd_id = 1;</code>
+       */
+      public Builder clearThrdId() {
+        thrdId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ThrdIds)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ThrdIds)
+    private static final org.oneflow.core.job.SubPlanOuterClass.ThrdIds DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.SubPlanOuterClass.ThrdIds();
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.ThrdIds getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ThrdIds>
+        PARSER = new com.google.protobuf.AbstractParser<ThrdIds>() {
+      public ThrdIds parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ThrdIds(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ThrdIds> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ThrdIds> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClusterThrdIdsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ClusterThrdIds)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+    int getMachineId2ThrdIdsCount();
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+    boolean containsMachineId2ThrdIds(
+        long key);
+    /**
+     * Use {@link #getMachineId2ThrdIdsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+    getMachineId2ThrdIds();
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+    java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+    getMachineId2ThrdIdsMap();
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrDefault(
+        long key,
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIds defaultValue);
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrThrow(
+        long key);
+  }
+  /**
+   * Protobuf type {@code oneflow.ClusterThrdIds}
+   */
+  public  static final class ClusterThrdIds extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ClusterThrdIds)
+      ClusterThrdIdsOrBuilder {
+    // Use ClusterThrdIds.newBuilder() to construct.
+    private ClusterThrdIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterThrdIds() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterThrdIds(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                machineId2ThrdIds_ = com.google.protobuf.MapField.newMapField(
+                    MachineId2ThrdIdsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+              machineId2ThrdIds = input.readMessage(
+                  MachineId2ThrdIdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              machineId2ThrdIds_.getMutableMap().put(machineId2ThrdIds.getKey(), machineId2ThrdIds.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetMachineId2ThrdIds();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.class, org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.Builder.class);
+    }
+
+    public static final int MACHINE_ID2THRD_IDS_FIELD_NUMBER = 1;
+    private static final class MachineId2ThrdIdsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>newDefaultInstance(
+                  org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_MachineId2thrdIdsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.job.SubPlanOuterClass.ThrdIds.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> machineId2ThrdIds_;
+    private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+    internalGetMachineId2ThrdIds() {
+      if (machineId2ThrdIds_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MachineId2ThrdIdsDefaultEntryHolder.defaultEntry);
+      }
+      return machineId2ThrdIds_;
+    }
+
+    public int getMachineId2ThrdIdsCount() {
+      return internalGetMachineId2ThrdIds().getMap().size();
+    }
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    public boolean containsMachineId2ThrdIds(
+        long key) {
+      
+      return internalGetMachineId2ThrdIds().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMachineId2ThrdIdsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> getMachineId2ThrdIds() {
+      return getMachineId2ThrdIdsMap();
+    }
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    public java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> getMachineId2ThrdIdsMap() {
+      return internalGetMachineId2ThrdIds().getMap();
+    }
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrDefault(
+        long key,
+        org.oneflow.core.job.SubPlanOuterClass.ThrdIds defaultValue) {
+      
+      java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> map =
+          internalGetMachineId2ThrdIds().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+     */
+
+    public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrThrow(
+        long key) {
+      
+      java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> map =
+          internalGetMachineId2ThrdIds().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> entry
+           : internalGetMachineId2ThrdIds().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+        machineId2ThrdIds = MachineId2ThrdIdsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, machineId2ThrdIds);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> entry
+           : internalGetMachineId2ThrdIds().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+        machineId2ThrdIds = MachineId2ThrdIdsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, machineId2ThrdIds);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds other = (org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds) obj;
+
+      boolean result = true;
+      result = result && internalGetMachineId2ThrdIds().equals(
+          other.internalGetMachineId2ThrdIds());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetMachineId2ThrdIds().getMap().isEmpty()) {
+        hash = (37 * hash) + MACHINE_ID2THRD_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMachineId2ThrdIds().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ClusterThrdIds}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ClusterThrdIds)
+        org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIdsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMachineId2ThrdIds();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableMachineId2ThrdIds();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.class, org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableMachineId2ThrdIds().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_ClusterThrdIds_descriptor;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds getDefaultInstanceForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds build() {
+        org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds buildPartial() {
+        org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds result = new org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds(this);
+        int from_bitField0_ = bitField0_;
+        result.machineId2ThrdIds_ = internalGetMachineId2ThrdIds();
+        result.machineId2ThrdIds_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds) {
+          return mergeFrom((org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds other) {
+        if (other == org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds.getDefaultInstance()) return this;
+        internalGetMutableMachineId2ThrdIds().mergeFrom(
+            other.internalGetMachineId2ThrdIds());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> machineId2ThrdIds_;
+      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+      internalGetMachineId2ThrdIds() {
+        if (machineId2ThrdIds_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MachineId2ThrdIdsDefaultEntryHolder.defaultEntry);
+        }
+        return machineId2ThrdIds_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+      internalGetMutableMachineId2ThrdIds() {
+        onChanged();;
+        if (machineId2ThrdIds_ == null) {
+          machineId2ThrdIds_ = com.google.protobuf.MapField.newMapField(
+              MachineId2ThrdIdsDefaultEntryHolder.defaultEntry);
+        }
+        if (!machineId2ThrdIds_.isMutable()) {
+          machineId2ThrdIds_ = machineId2ThrdIds_.copy();
+        }
+        return machineId2ThrdIds_;
+      }
+
+      public int getMachineId2ThrdIdsCount() {
+        return internalGetMachineId2ThrdIds().getMap().size();
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public boolean containsMachineId2ThrdIds(
+          long key) {
+        
+        return internalGetMachineId2ThrdIds().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMachineId2ThrdIdsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> getMachineId2ThrdIds() {
+        return getMachineId2ThrdIdsMap();
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> getMachineId2ThrdIdsMap() {
+        return internalGetMachineId2ThrdIds().getMap();
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrDefault(
+          long key,
+          org.oneflow.core.job.SubPlanOuterClass.ThrdIds defaultValue) {
+        
+        java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> map =
+            internalGetMachineId2ThrdIds().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public org.oneflow.core.job.SubPlanOuterClass.ThrdIds getMachineId2ThrdIdsOrThrow(
+          long key) {
+        
+        java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> map =
+            internalGetMachineId2ThrdIds().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMachineId2ThrdIds() {
+        getMutableMachineId2ThrdIds().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public Builder removeMachineId2ThrdIds(
+          long key) {
+        
+        getMutableMachineId2ThrdIds().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds>
+      getMutableMachineId2ThrdIds() {
+        return internalGetMutableMachineId2ThrdIds().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+      public Builder putMachineId2ThrdIds(
+          long key,
+          org.oneflow.core.job.SubPlanOuterClass.ThrdIds value) {
+        
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableMachineId2ThrdIds().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, .oneflow.ThrdIds&gt; machine_id2thrd_ids = 1;</code>
+       */
+
+      public Builder putAllMachineId2ThrdIds(
+          java.util.Map<java.lang.Long, org.oneflow.core.job.SubPlanOuterClass.ThrdIds> values) {
+        getMutableMachineId2ThrdIds().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ClusterThrdIds)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ClusterThrdIds)
+    private static final org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds();
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClusterThrdIds>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterThrdIds>() {
+      public ClusterThrdIds parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClusterThrdIds(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterThrdIds> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterThrdIds> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.SubPlanOuterClass.ClusterThrdIds getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SubPlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.SubPlan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    java.util.List<org.oneflow.core.job.Task.TaskProto> 
+        getTaskList();
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    org.oneflow.core.job.Task.TaskProto getTask(int index);
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    int getTaskCount();
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.job.Task.TaskProtoOrBuilder> 
+        getTaskOrBuilderList();
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    org.oneflow.core.job.Task.TaskProtoOrBuilder getTaskOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.SubPlan}
+   */
+  public  static final class SubPlan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.SubPlan)
+      SubPlanOrBuilder {
+    // Use SubPlan.newBuilder() to construct.
+    private SubPlan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SubPlan() {
+      task_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SubPlan(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                task_ = new java.util.ArrayList<org.oneflow.core.job.Task.TaskProto>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              task_.add(
+                  input.readMessage(org.oneflow.core.job.Task.TaskProto.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          task_ = java.util.Collections.unmodifiableList(task_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_SubPlan_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_SubPlan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.SubPlanOuterClass.SubPlan.class, org.oneflow.core.job.SubPlanOuterClass.SubPlan.Builder.class);
+    }
+
+    public static final int TASK_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.job.Task.TaskProto> task_;
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.job.Task.TaskProto> getTaskList() {
+      return task_;
+    }
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.job.Task.TaskProtoOrBuilder> 
+        getTaskOrBuilderList() {
+      return task_;
+    }
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    public int getTaskCount() {
+      return task_.size();
+    }
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    public org.oneflow.core.job.Task.TaskProto getTask(int index) {
+      return task_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.TaskProto task = 1;</code>
+     */
+    public org.oneflow.core.job.Task.TaskProtoOrBuilder getTaskOrBuilder(
+        int index) {
+      return task_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getTaskCount(); i++) {
+        if (!getTask(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < task_.size(); i++) {
+        output.writeMessage(1, task_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < task_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, task_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.SubPlanOuterClass.SubPlan)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.SubPlanOuterClass.SubPlan other = (org.oneflow.core.job.SubPlanOuterClass.SubPlan) obj;
+
+      boolean result = true;
+      result = result && getTaskList()
+          .equals(other.getTaskList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getTaskCount() > 0) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTaskList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.SubPlanOuterClass.SubPlan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.SubPlan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.SubPlan)
+        org.oneflow.core.job.SubPlanOuterClass.SubPlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_SubPlan_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_SubPlan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.SubPlanOuterClass.SubPlan.class, org.oneflow.core.job.SubPlanOuterClass.SubPlan.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.SubPlanOuterClass.SubPlan.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTaskFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (taskBuilder_ == null) {
+          task_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          taskBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.internal_static_oneflow_SubPlan_descriptor;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.SubPlan getDefaultInstanceForType() {
+        return org.oneflow.core.job.SubPlanOuterClass.SubPlan.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.SubPlan build() {
+        org.oneflow.core.job.SubPlanOuterClass.SubPlan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.SubPlanOuterClass.SubPlan buildPartial() {
+        org.oneflow.core.job.SubPlanOuterClass.SubPlan result = new org.oneflow.core.job.SubPlanOuterClass.SubPlan(this);
+        int from_bitField0_ = bitField0_;
+        if (taskBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            task_ = java.util.Collections.unmodifiableList(task_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.task_ = task_;
+        } else {
+          result.task_ = taskBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.SubPlanOuterClass.SubPlan) {
+          return mergeFrom((org.oneflow.core.job.SubPlanOuterClass.SubPlan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.SubPlanOuterClass.SubPlan other) {
+        if (other == org.oneflow.core.job.SubPlanOuterClass.SubPlan.getDefaultInstance()) return this;
+        if (taskBuilder_ == null) {
+          if (!other.task_.isEmpty()) {
+            if (task_.isEmpty()) {
+              task_ = other.task_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTaskIsMutable();
+              task_.addAll(other.task_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.task_.isEmpty()) {
+            if (taskBuilder_.isEmpty()) {
+              taskBuilder_.dispose();
+              taskBuilder_ = null;
+              task_ = other.task_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              taskBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTaskFieldBuilder() : null;
+            } else {
+              taskBuilder_.addAllMessages(other.task_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getTaskCount(); i++) {
+          if (!getTask(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.SubPlanOuterClass.SubPlan parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.SubPlanOuterClass.SubPlan) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.job.Task.TaskProto> task_ =
+        java.util.Collections.emptyList();
+      private void ensureTaskIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          task_ = new java.util.ArrayList<org.oneflow.core.job.Task.TaskProto>(task_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.Task.TaskProto, org.oneflow.core.job.Task.TaskProto.Builder, org.oneflow.core.job.Task.TaskProtoOrBuilder> taskBuilder_;
+
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.Task.TaskProto> getTaskList() {
+        if (taskBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(task_);
+        } else {
+          return taskBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public int getTaskCount() {
+        if (taskBuilder_ == null) {
+          return task_.size();
+        } else {
+          return taskBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public org.oneflow.core.job.Task.TaskProto getTask(int index) {
+        if (taskBuilder_ == null) {
+          return task_.get(index);
+        } else {
+          return taskBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder setTask(
+          int index, org.oneflow.core.job.Task.TaskProto value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTaskIsMutable();
+          task_.set(index, value);
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder setTask(
+          int index, org.oneflow.core.job.Task.TaskProto.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          ensureTaskIsMutable();
+          task_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder addTask(org.oneflow.core.job.Task.TaskProto value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTaskIsMutable();
+          task_.add(value);
+          onChanged();
+        } else {
+          taskBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder addTask(
+          int index, org.oneflow.core.job.Task.TaskProto value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTaskIsMutable();
+          task_.add(index, value);
+          onChanged();
+        } else {
+          taskBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder addTask(
+          org.oneflow.core.job.Task.TaskProto.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          ensureTaskIsMutable();
+          task_.add(builderForValue.build());
+          onChanged();
+        } else {
+          taskBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder addTask(
+          int index, org.oneflow.core.job.Task.TaskProto.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          ensureTaskIsMutable();
+          task_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          taskBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder addAllTask(
+          java.lang.Iterable<? extends org.oneflow.core.job.Task.TaskProto> values) {
+        if (taskBuilder_ == null) {
+          ensureTaskIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, task_);
+          onChanged();
+        } else {
+          taskBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder clearTask() {
+        if (taskBuilder_ == null) {
+          task_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          taskBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public Builder removeTask(int index) {
+        if (taskBuilder_ == null) {
+          ensureTaskIsMutable();
+          task_.remove(index);
+          onChanged();
+        } else {
+          taskBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public org.oneflow.core.job.Task.TaskProto.Builder getTaskBuilder(
+          int index) {
+        return getTaskFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public org.oneflow.core.job.Task.TaskProtoOrBuilder getTaskOrBuilder(
+          int index) {
+        if (taskBuilder_ == null) {
+          return task_.get(index);  } else {
+          return taskBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.job.Task.TaskProtoOrBuilder> 
+           getTaskOrBuilderList() {
+        if (taskBuilder_ != null) {
+          return taskBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(task_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public org.oneflow.core.job.Task.TaskProto.Builder addTaskBuilder() {
+        return getTaskFieldBuilder().addBuilder(
+            org.oneflow.core.job.Task.TaskProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public org.oneflow.core.job.Task.TaskProto.Builder addTaskBuilder(
+          int index) {
+        return getTaskFieldBuilder().addBuilder(
+            index, org.oneflow.core.job.Task.TaskProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.TaskProto task = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.job.Task.TaskProto.Builder> 
+           getTaskBuilderList() {
+        return getTaskFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.job.Task.TaskProto, org.oneflow.core.job.Task.TaskProto.Builder, org.oneflow.core.job.Task.TaskProtoOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          taskBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.job.Task.TaskProto, org.oneflow.core.job.Task.TaskProto.Builder, org.oneflow.core.job.Task.TaskProtoOrBuilder>(
+                  task_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          task_ = null;
+        }
+        return taskBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.SubPlan)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.SubPlan)
+    private static final org.oneflow.core.job.SubPlanOuterClass.SubPlan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.SubPlanOuterClass.SubPlan();
+    }
+
+    public static org.oneflow.core.job.SubPlanOuterClass.SubPlan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SubPlan>
+        PARSER = new com.google.protobuf.AbstractParser<SubPlan>() {
+      public SubPlan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SubPlan(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SubPlan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SubPlan> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.SubPlanOuterClass.SubPlan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ThrdIds_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ThrdIds_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterThrdIds_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterThrdIds_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterThrdIds_MachineId2thrdIdsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterThrdIds_MachineId2thrdIdsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_SubPlan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_SubPlan_fieldAccessorTable;
 
@@ -50,8 +2021,8 @@ public final class SubPlanOuterClass {
       "usterThrdIds.MachineId2thrdIdsEntry\032J\n\026M" +
       "achineId2thrdIdsEntry\022\013\n\003key\030\001 \001(\003\022\037\n\005va" +
       "lue\030\002 \001(\0132\020.oneflow.ThrdIds:\0028\001\"+\n\007SubPl" +
-      "an\022 \n\004task\030\001 \003(\0132\022.oneflow.TaskProtoB\030\n\024" +
-      "org.oneflow.core.jobP\001"
+      "an\022 \n\004task\030\001 \003(\0132\022.oneflow.TaskProtoB\026\n\024" +
+      "org.oneflow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -14,24 +14,2432 @@ public final class FileSystemConfOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface LocalFsConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.LocalFsConf)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.LocalFsConf}
+   */
+  public  static final class LocalFsConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.LocalFsConf)
+      LocalFsConfOrBuilder {
+    // Use LocalFsConf.newBuilder() to construct.
+    private LocalFsConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LocalFsConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LocalFsConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_LocalFsConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_LocalFsConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf other = (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.LocalFsConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.LocalFsConf)
+        org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_LocalFsConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_LocalFsConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_LocalFsConf_descriptor;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf build() {
+        org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf buildPartial() {
+        org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf result = new org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) {
+          return mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf other) {
+        if (other == org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.LocalFsConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.LocalFsConf)
+    private static final org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf();
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LocalFsConf>
+        PARSER = new com.google.protobuf.AbstractParser<LocalFsConf>() {
+      public LocalFsConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LocalFsConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LocalFsConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocalFsConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NetworkFsConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.NetworkFsConf)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.NetworkFsConf}
+   */
+  public  static final class NetworkFsConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.NetworkFsConf)
+      NetworkFsConfOrBuilder {
+    // Use NetworkFsConf.newBuilder() to construct.
+    private NetworkFsConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NetworkFsConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NetworkFsConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_NetworkFsConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_NetworkFsConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf other = (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.NetworkFsConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.NetworkFsConf)
+        org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_NetworkFsConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_NetworkFsConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_NetworkFsConf_descriptor;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf build() {
+        org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf buildPartial() {
+        org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf result = new org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) {
+          return mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf other) {
+        if (other == org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.NetworkFsConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.NetworkFsConf)
+    private static final org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf();
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<NetworkFsConf>
+        PARSER = new com.google.protobuf.AbstractParser<NetworkFsConf>() {
+      public NetworkFsConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NetworkFsConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NetworkFsConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NetworkFsConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HdfsConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.HdfsConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    boolean hasNamenode();
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    java.lang.String getNamenode();
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNamenodeBytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.HdfsConf}
+   */
+  public  static final class HdfsConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.HdfsConf)
+      HdfsConfOrBuilder {
+    // Use HdfsConf.newBuilder() to construct.
+    private HdfsConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HdfsConf() {
+      namenode_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HdfsConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              namenode_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_HdfsConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_HdfsConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAMENODE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object namenode_;
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    public boolean hasNamenode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    public java.lang.String getNamenode() {
+      java.lang.Object ref = namenode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          namenode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string namenode = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNamenodeBytes() {
+      java.lang.Object ref = namenode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namenode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasNamenode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namenode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namenode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf other = (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) obj;
+
+      boolean result = true;
+      result = result && (hasNamenode() == other.hasNamenode());
+      if (hasNamenode()) {
+        result = result && getNamenode()
+            .equals(other.getNamenode());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasNamenode()) {
+        hash = (37 * hash) + NAMENODE_FIELD_NUMBER;
+        hash = (53 * hash) + getNamenode().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.HdfsConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.HdfsConf)
+        org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_HdfsConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_HdfsConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.class, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        namenode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_HdfsConf_descriptor;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf build() {
+        org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf buildPartial() {
+        org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf result = new org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.namenode_ = namenode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) {
+          return mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf other) {
+        if (other == org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance()) return this;
+        if (other.hasNamenode()) {
+          bitField0_ |= 0x00000001;
+          namenode_ = other.namenode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasNamenode()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object namenode_ = "";
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public boolean hasNamenode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public java.lang.String getNamenode() {
+        java.lang.Object ref = namenode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            namenode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNamenodeBytes() {
+        java.lang.Object ref = namenode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namenode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public Builder setNamenode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        namenode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public Builder clearNamenode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        namenode_ = getDefaultInstance().getNamenode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string namenode = 1;</code>
+       */
+      public Builder setNamenodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        namenode_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.HdfsConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.HdfsConf)
+    private static final org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf();
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<HdfsConf>
+        PARSER = new com.google.protobuf.AbstractParser<HdfsConf>() {
+      public HdfsConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HdfsConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HdfsConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HdfsConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FileSystemConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FileSystemConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    boolean hasLocalfsConf();
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getLocalfsConf();
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder getLocalfsConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    boolean hasNetworkfsConf();
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getNetworkfsConf();
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder getNetworkfsConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    boolean hasHdfsConf();
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getHdfsConf();
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder getHdfsConfOrBuilder();
+
+    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.FsTypeCase getFsTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.FileSystemConf}
+   */
+  public  static final class FileSystemConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FileSystemConf)
+      FileSystemConfOrBuilder {
+    // Use FileSystemConf.newBuilder() to construct.
+    private FileSystemConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FileSystemConf() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileSystemConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder subBuilder = null;
+              if (fsTypeCase_ == 1) {
+                subBuilder = ((org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_).toBuilder();
+              }
+              fsType_ =
+                  input.readMessage(org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_);
+                fsType_ = subBuilder.buildPartial();
+              }
+              fsTypeCase_ = 1;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder subBuilder = null;
+              if (fsTypeCase_ == 2) {
+                subBuilder = ((org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_).toBuilder();
+              }
+              fsType_ =
+                  input.readMessage(org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_);
+                fsType_ = subBuilder.buildPartial();
+              }
+              fsTypeCase_ = 2;
+              break;
+            }
+            case 26: {
+              org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder subBuilder = null;
+              if (fsTypeCase_ == 3) {
+                subBuilder = ((org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_).toBuilder();
+              }
+              fsType_ =
+                  input.readMessage(org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_);
+                fsType_ = subBuilder.buildPartial();
+              }
+              fsTypeCase_ = 3;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_FileSystemConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_FileSystemConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.class, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder.class);
+    }
+
+    private int bitField0_;
+    private int fsTypeCase_ = 0;
+    private java.lang.Object fsType_;
+    public enum FsTypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      LOCALFS_CONF(1),
+      NETWORKFS_CONF(2),
+      HDFS_CONF(3),
+      FSTYPE_NOT_SET(0);
+      private final int value;
+      private FsTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FsTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static FsTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return LOCALFS_CONF;
+          case 2: return NETWORKFS_CONF;
+          case 3: return HDFS_CONF;
+          case 0: return FSTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public FsTypeCase
+    getFsTypeCase() {
+      return FsTypeCase.forNumber(
+          fsTypeCase_);
+    }
+
+    public static final int LOCALFS_CONF_FIELD_NUMBER = 1;
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    public boolean hasLocalfsConf() {
+      return fsTypeCase_ == 1;
+    }
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getLocalfsConf() {
+      if (fsTypeCase_ == 1) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder getLocalfsConfOrBuilder() {
+      if (fsTypeCase_ == 1) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+    }
+
+    public static final int NETWORKFS_CONF_FIELD_NUMBER = 2;
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    public boolean hasNetworkfsConf() {
+      return fsTypeCase_ == 2;
+    }
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getNetworkfsConf() {
+      if (fsTypeCase_ == 2) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder getNetworkfsConfOrBuilder() {
+      if (fsTypeCase_ == 2) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+    }
+
+    public static final int HDFS_CONF_FIELD_NUMBER = 3;
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    public boolean hasHdfsConf() {
+      return fsTypeCase_ == 3;
+    }
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getHdfsConf() {
+      if (fsTypeCase_ == 3) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+     */
+    public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder getHdfsConfOrBuilder() {
+      if (fsTypeCase_ == 3) {
+         return (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_;
+      }
+      return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasHdfsConf()) {
+        if (!getHdfsConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fsTypeCase_ == 1) {
+        output.writeMessage(1, (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_);
+      }
+      if (fsTypeCase_ == 2) {
+        output.writeMessage(2, (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_);
+      }
+      if (fsTypeCase_ == 3) {
+        output.writeMessage(3, (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fsTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_);
+      }
+      if (fsTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_);
+      }
+      if (fsTypeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf other = (org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf) obj;
+
+      boolean result = true;
+      result = result && getFsTypeCase().equals(
+          other.getFsTypeCase());
+      if (!result) return false;
+      switch (fsTypeCase_) {
+        case 1:
+          result = result && getLocalfsConf()
+              .equals(other.getLocalfsConf());
+          break;
+        case 2:
+          result = result && getNetworkfsConf()
+              .equals(other.getNetworkfsConf());
+          break;
+        case 3:
+          result = result && getHdfsConf()
+              .equals(other.getHdfsConf());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (fsTypeCase_) {
+        case 1:
+          hash = (37 * hash) + LOCALFS_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getLocalfsConf().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + NETWORKFS_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getNetworkfsConf().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + HDFS_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getHdfsConf().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FileSystemConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FileSystemConf)
+        org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_FileSystemConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_FileSystemConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.class, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        fsTypeCase_ = 0;
+        fsType_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.internal_static_oneflow_FileSystemConf_descriptor;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDefaultInstanceForType() {
+        return org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf build() {
+        org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf buildPartial() {
+        org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf result = new org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (fsTypeCase_ == 1) {
+          if (localfsConfBuilder_ == null) {
+            result.fsType_ = fsType_;
+          } else {
+            result.fsType_ = localfsConfBuilder_.build();
+          }
+        }
+        if (fsTypeCase_ == 2) {
+          if (networkfsConfBuilder_ == null) {
+            result.fsType_ = fsType_;
+          } else {
+            result.fsType_ = networkfsConfBuilder_.build();
+          }
+        }
+        if (fsTypeCase_ == 3) {
+          if (hdfsConfBuilder_ == null) {
+            result.fsType_ = fsType_;
+          } else {
+            result.fsType_ = hdfsConfBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.fsTypeCase_ = fsTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf) {
+          return mergeFrom((org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf other) {
+        if (other == org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance()) return this;
+        switch (other.getFsTypeCase()) {
+          case LOCALFS_CONF: {
+            mergeLocalfsConf(other.getLocalfsConf());
+            break;
+          }
+          case NETWORKFS_CONF: {
+            mergeNetworkfsConf(other.getNetworkfsConf());
+            break;
+          }
+          case HDFS_CONF: {
+            mergeHdfsConf(other.getHdfsConf());
+            break;
+          }
+          case FSTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasHdfsConf()) {
+          if (!getHdfsConf().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int fsTypeCase_ = 0;
+      private java.lang.Object fsType_;
+      public FsTypeCase
+          getFsTypeCase() {
+        return FsTypeCase.forNumber(
+            fsTypeCase_);
+      }
+
+      public Builder clearFsType() {
+        fsTypeCase_ = 0;
+        fsType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder> localfsConfBuilder_;
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public boolean hasLocalfsConf() {
+        return fsTypeCase_ == 1;
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf getLocalfsConf() {
+        if (localfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 1) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+        } else {
+          if (fsTypeCase_ == 1) {
+            return localfsConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public Builder setLocalfsConf(org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf value) {
+        if (localfsConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fsType_ = value;
+          onChanged();
+        } else {
+          localfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public Builder setLocalfsConf(
+          org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder builderForValue) {
+        if (localfsConfBuilder_ == null) {
+          fsType_ = builderForValue.build();
+          onChanged();
+        } else {
+          localfsConfBuilder_.setMessage(builderForValue.build());
+        }
+        fsTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public Builder mergeLocalfsConf(org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf value) {
+        if (localfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 1 &&
+              fsType_ != org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance()) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.newBuilder((org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            fsType_ = value;
+          }
+          onChanged();
+        } else {
+          if (fsTypeCase_ == 1) {
+            localfsConfBuilder_.mergeFrom(value);
+          }
+          localfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public Builder clearLocalfsConf() {
+        if (localfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 1) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+            onChanged();
+          }
+        } else {
+          if (fsTypeCase_ == 1) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+          }
+          localfsConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder getLocalfsConfBuilder() {
+        return getLocalfsConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder getLocalfsConfOrBuilder() {
+        if ((fsTypeCase_ == 1) && (localfsConfBuilder_ != null)) {
+          return localfsConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (fsTypeCase_ == 1) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LocalFsConf localfs_conf = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder> 
+          getLocalfsConfFieldBuilder() {
+        if (localfsConfBuilder_ == null) {
+          if (!(fsTypeCase_ == 1)) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.getDefaultInstance();
+          }
+          localfsConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConfOrBuilder>(
+                  (org.oneflow.core.job.FileSystemConfOuterClass.LocalFsConf) fsType_,
+                  getParentForChildren(),
+                  isClean());
+          fsType_ = null;
+        }
+        fsTypeCase_ = 1;
+        onChanged();;
+        return localfsConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder> networkfsConfBuilder_;
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public boolean hasNetworkfsConf() {
+        return fsTypeCase_ == 2;
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf getNetworkfsConf() {
+        if (networkfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 2) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+        } else {
+          if (fsTypeCase_ == 2) {
+            return networkfsConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public Builder setNetworkfsConf(org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf value) {
+        if (networkfsConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fsType_ = value;
+          onChanged();
+        } else {
+          networkfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public Builder setNetworkfsConf(
+          org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder builderForValue) {
+        if (networkfsConfBuilder_ == null) {
+          fsType_ = builderForValue.build();
+          onChanged();
+        } else {
+          networkfsConfBuilder_.setMessage(builderForValue.build());
+        }
+        fsTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public Builder mergeNetworkfsConf(org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf value) {
+        if (networkfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 2 &&
+              fsType_ != org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance()) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.newBuilder((org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            fsType_ = value;
+          }
+          onChanged();
+        } else {
+          if (fsTypeCase_ == 2) {
+            networkfsConfBuilder_.mergeFrom(value);
+          }
+          networkfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public Builder clearNetworkfsConf() {
+        if (networkfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 2) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+            onChanged();
+          }
+        } else {
+          if (fsTypeCase_ == 2) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+          }
+          networkfsConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder getNetworkfsConfBuilder() {
+        return getNetworkfsConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder getNetworkfsConfOrBuilder() {
+        if ((fsTypeCase_ == 2) && (networkfsConfBuilder_ != null)) {
+          return networkfsConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (fsTypeCase_ == 2) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.NetworkFsConf networkfs_conf = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder> 
+          getNetworkfsConfFieldBuilder() {
+        if (networkfsConfBuilder_ == null) {
+          if (!(fsTypeCase_ == 2)) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.getDefaultInstance();
+          }
+          networkfsConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConfOrBuilder>(
+                  (org.oneflow.core.job.FileSystemConfOuterClass.NetworkFsConf) fsType_,
+                  getParentForChildren(),
+                  isClean());
+          fsType_ = null;
+        }
+        fsTypeCase_ = 2;
+        onChanged();;
+        return networkfsConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder> hdfsConfBuilder_;
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public boolean hasHdfsConf() {
+        return fsTypeCase_ == 3;
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf getHdfsConf() {
+        if (hdfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 3) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+        } else {
+          if (fsTypeCase_ == 3) {
+            return hdfsConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public Builder setHdfsConf(org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf value) {
+        if (hdfsConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fsType_ = value;
+          onChanged();
+        } else {
+          hdfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public Builder setHdfsConf(
+          org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder builderForValue) {
+        if (hdfsConfBuilder_ == null) {
+          fsType_ = builderForValue.build();
+          onChanged();
+        } else {
+          hdfsConfBuilder_.setMessage(builderForValue.build());
+        }
+        fsTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public Builder mergeHdfsConf(org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf value) {
+        if (hdfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 3 &&
+              fsType_ != org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance()) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.newBuilder((org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            fsType_ = value;
+          }
+          onChanged();
+        } else {
+          if (fsTypeCase_ == 3) {
+            hdfsConfBuilder_.mergeFrom(value);
+          }
+          hdfsConfBuilder_.setMessage(value);
+        }
+        fsTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public Builder clearHdfsConf() {
+        if (hdfsConfBuilder_ == null) {
+          if (fsTypeCase_ == 3) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+            onChanged();
+          }
+        } else {
+          if (fsTypeCase_ == 3) {
+            fsTypeCase_ = 0;
+            fsType_ = null;
+          }
+          hdfsConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder getHdfsConfBuilder() {
+        return getHdfsConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      public org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder getHdfsConfOrBuilder() {
+        if ((fsTypeCase_ == 3) && (hdfsConfBuilder_ != null)) {
+          return hdfsConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (fsTypeCase_ == 3) {
+            return (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_;
+          }
+          return org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.HdfsConf hdfs_conf = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder> 
+          getHdfsConfFieldBuilder() {
+        if (hdfsConfBuilder_ == null) {
+          if (!(fsTypeCase_ == 3)) {
+            fsType_ = org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.getDefaultInstance();
+          }
+          hdfsConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.HdfsConfOrBuilder>(
+                  (org.oneflow.core.job.FileSystemConfOuterClass.HdfsConf) fsType_,
+                  getParentForChildren(),
+                  isClean());
+          fsType_ = null;
+        }
+        fsTypeCase_ = 3;
+        onChanged();;
+        return hdfsConfBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FileSystemConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FileSystemConf)
+    private static final org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf();
+    }
+
+    public static org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FileSystemConf>
+        PARSER = new com.google.protobuf.AbstractParser<FileSystemConf>() {
+      public FileSystemConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FileSystemConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FileSystemConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileSystemConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_LocalFsConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_LocalFsConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_NetworkFsConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_NetworkFsConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_HdfsConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_HdfsConf_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_FileSystemConf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_FileSystemConf_fieldAccessorTable;
 
@@ -49,8 +2457,8 @@ public final class FileSystemConfOuterClass {
       "eSystemConf\022,\n\014localfs_conf\030\001 \001(\0132\024.onef" +
       "low.LocalFsConfH\000\0220\n\016networkfs_conf\030\002 \001(" +
       "\0132\026.oneflow.NetworkFsConfH\000\022&\n\thdfs_conf" +
-      "\030\003 \001(\0132\021.oneflow.HdfsConfH\000B\t\n\007fs_typeB\030" +
-      "\n\024org.oneflow.core.jobP\001"
+      "\030\003 \001(\0132\021.oneflow.HdfsConfH\000B\t\n\007fs_typeB\026" +
+      "\n\024org.oneflow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

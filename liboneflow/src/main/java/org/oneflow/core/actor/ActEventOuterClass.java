@@ -14,14 +14,2011 @@ public final class ActEventOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ReadableRegstInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ReadableRegstInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 regst_desc_id = 1;</code>
+     */
+    boolean hasRegstDescId();
+    /**
+     * <code>required int64 regst_desc_id = 1;</code>
+     */
+    long getRegstDescId();
+
+    /**
+     * <code>required int64 act_id = 2;</code>
+     */
+    boolean hasActId();
+    /**
+     * <code>required int64 act_id = 2;</code>
+     */
+    long getActId();
+  }
+  /**
+   * Protobuf type {@code oneflow.ReadableRegstInfo}
+   */
+  public  static final class ReadableRegstInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ReadableRegstInfo)
+      ReadableRegstInfoOrBuilder {
+    // Use ReadableRegstInfo.newBuilder() to construct.
+    private ReadableRegstInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReadableRegstInfo() {
+      regstDescId_ = 0L;
+      actId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReadableRegstInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              regstDescId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              actId_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ReadableRegstInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ReadableRegstInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.class, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REGST_DESC_ID_FIELD_NUMBER = 1;
+    private long regstDescId_;
+    /**
+     * <code>required int64 regst_desc_id = 1;</code>
+     */
+    public boolean hasRegstDescId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 regst_desc_id = 1;</code>
+     */
+    public long getRegstDescId() {
+      return regstDescId_;
+    }
+
+    public static final int ACT_ID_FIELD_NUMBER = 2;
+    private long actId_;
+    /**
+     * <code>required int64 act_id = 2;</code>
+     */
+    public boolean hasActId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 act_id = 2;</code>
+     */
+    public long getActId() {
+      return actId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasRegstDescId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasActId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, regstDescId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, actId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, regstDescId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, actId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo other = (org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo) obj;
+
+      boolean result = true;
+      result = result && (hasRegstDescId() == other.hasRegstDescId());
+      if (hasRegstDescId()) {
+        result = result && (getRegstDescId()
+            == other.getRegstDescId());
+      }
+      result = result && (hasActId() == other.hasActId());
+      if (hasActId()) {
+        result = result && (getActId()
+            == other.getActId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasRegstDescId()) {
+        hash = (37 * hash) + REGST_DESC_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRegstDescId());
+      }
+      if (hasActId()) {
+        hash = (37 * hash) + ACT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getActId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ReadableRegstInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ReadableRegstInfo)
+        org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ReadableRegstInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ReadableRegstInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.class, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        regstDescId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        actId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ReadableRegstInfo_descriptor;
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getDefaultInstanceForType() {
+        return org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.getDefaultInstance();
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo build() {
+        org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo buildPartial() {
+        org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo result = new org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.regstDescId_ = regstDescId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.actId_ = actId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo) {
+          return mergeFrom((org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo other) {
+        if (other == org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.getDefaultInstance()) return this;
+        if (other.hasRegstDescId()) {
+          setRegstDescId(other.getRegstDescId());
+        }
+        if (other.hasActId()) {
+          setActId(other.getActId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasRegstDescId()) {
+          return false;
+        }
+        if (!hasActId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long regstDescId_ ;
+      /**
+       * <code>required int64 regst_desc_id = 1;</code>
+       */
+      public boolean hasRegstDescId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 regst_desc_id = 1;</code>
+       */
+      public long getRegstDescId() {
+        return regstDescId_;
+      }
+      /**
+       * <code>required int64 regst_desc_id = 1;</code>
+       */
+      public Builder setRegstDescId(long value) {
+        bitField0_ |= 0x00000001;
+        regstDescId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 regst_desc_id = 1;</code>
+       */
+      public Builder clearRegstDescId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        regstDescId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long actId_ ;
+      /**
+       * <code>required int64 act_id = 2;</code>
+       */
+      public boolean hasActId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 act_id = 2;</code>
+       */
+      public long getActId() {
+        return actId_;
+      }
+      /**
+       * <code>required int64 act_id = 2;</code>
+       */
+      public Builder setActId(long value) {
+        bitField0_ |= 0x00000002;
+        actId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 act_id = 2;</code>
+       */
+      public Builder clearActId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        actId_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ReadableRegstInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ReadableRegstInfo)
+    private static final org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo();
+    }
+
+    public static org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ReadableRegstInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ReadableRegstInfo>() {
+      public ReadableRegstInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ReadableRegstInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReadableRegstInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReadableRegstInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ActEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required bool is_experiment_phase = 1;</code>
+     */
+    boolean hasIsExperimentPhase();
+    /**
+     * <code>required bool is_experiment_phase = 1;</code>
+     */
+    boolean getIsExperimentPhase();
+
+    /**
+     * <code>required int64 actor_id = 2;</code>
+     */
+    boolean hasActorId();
+    /**
+     * <code>required int64 actor_id = 2;</code>
+     */
+    long getActorId();
+
+    /**
+     * <code>required int64 work_stream_id = 3;</code>
+     */
+    boolean hasWorkStreamId();
+    /**
+     * <code>required int64 work_stream_id = 3;</code>
+     */
+    long getWorkStreamId();
+
+    /**
+     * <code>required int64 act_id = 4;</code>
+     */
+    boolean hasActId();
+    /**
+     * <code>required int64 act_id = 4;</code>
+     */
+    long getActId();
+
+    /**
+     * <code>required double ready_time = 5;</code>
+     */
+    boolean hasReadyTime();
+    /**
+     * <code>required double ready_time = 5;</code>
+     */
+    double getReadyTime();
+
+    /**
+     * <code>required double start_time = 6;</code>
+     */
+    boolean hasStartTime();
+    /**
+     * <code>required double start_time = 6;</code>
+     */
+    double getStartTime();
+
+    /**
+     * <code>required double stop_time = 7;</code>
+     */
+    boolean hasStopTime();
+    /**
+     * <code>required double stop_time = 7;</code>
+     */
+    double getStopTime();
+
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> 
+        getReadableRegstInfosList();
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getReadableRegstInfos(int index);
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    int getReadableRegstInfosCount();
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    java.util.List<? extends org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder> 
+        getReadableRegstInfosOrBuilderList();
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder getReadableRegstInfosOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.ActEvent}
+   */
+  public  static final class ActEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ActEvent)
+      ActEventOrBuilder {
+    // Use ActEvent.newBuilder() to construct.
+    private ActEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActEvent() {
+      isExperimentPhase_ = false;
+      actorId_ = 0L;
+      workStreamId_ = 0L;
+      actId_ = 0L;
+      readyTime_ = 0D;
+      startTime_ = 0D;
+      stopTime_ = 0D;
+      readableRegstInfos_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ActEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isExperimentPhase_ = input.readBool();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              actorId_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              workStreamId_ = input.readInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              actId_ = input.readInt64();
+              break;
+            }
+            case 41: {
+              bitField0_ |= 0x00000010;
+              readyTime_ = input.readDouble();
+              break;
+            }
+            case 49: {
+              bitField0_ |= 0x00000020;
+              startTime_ = input.readDouble();
+              break;
+            }
+            case 57: {
+              bitField0_ |= 0x00000040;
+              stopTime_ = input.readDouble();
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                readableRegstInfos_ = new java.util.ArrayList<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              readableRegstInfos_.add(
+                  input.readMessage(org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          readableRegstInfos_ = java.util.Collections.unmodifiableList(readableRegstInfos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ActEvent_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ActEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.actor.ActEventOuterClass.ActEvent.class, org.oneflow.core.actor.ActEventOuterClass.ActEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IS_EXPERIMENT_PHASE_FIELD_NUMBER = 1;
+    private boolean isExperimentPhase_;
+    /**
+     * <code>required bool is_experiment_phase = 1;</code>
+     */
+    public boolean hasIsExperimentPhase() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required bool is_experiment_phase = 1;</code>
+     */
+    public boolean getIsExperimentPhase() {
+      return isExperimentPhase_;
+    }
+
+    public static final int ACTOR_ID_FIELD_NUMBER = 2;
+    private long actorId_;
+    /**
+     * <code>required int64 actor_id = 2;</code>
+     */
+    public boolean hasActorId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 actor_id = 2;</code>
+     */
+    public long getActorId() {
+      return actorId_;
+    }
+
+    public static final int WORK_STREAM_ID_FIELD_NUMBER = 3;
+    private long workStreamId_;
+    /**
+     * <code>required int64 work_stream_id = 3;</code>
+     */
+    public boolean hasWorkStreamId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int64 work_stream_id = 3;</code>
+     */
+    public long getWorkStreamId() {
+      return workStreamId_;
+    }
+
+    public static final int ACT_ID_FIELD_NUMBER = 4;
+    private long actId_;
+    /**
+     * <code>required int64 act_id = 4;</code>
+     */
+    public boolean hasActId() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int64 act_id = 4;</code>
+     */
+    public long getActId() {
+      return actId_;
+    }
+
+    public static final int READY_TIME_FIELD_NUMBER = 5;
+    private double readyTime_;
+    /**
+     * <code>required double ready_time = 5;</code>
+     */
+    public boolean hasReadyTime() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required double ready_time = 5;</code>
+     */
+    public double getReadyTime() {
+      return readyTime_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 6;
+    private double startTime_;
+    /**
+     * <code>required double start_time = 6;</code>
+     */
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required double start_time = 6;</code>
+     */
+    public double getStartTime() {
+      return startTime_;
+    }
+
+    public static final int STOP_TIME_FIELD_NUMBER = 7;
+    private double stopTime_;
+    /**
+     * <code>required double stop_time = 7;</code>
+     */
+    public boolean hasStopTime() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required double stop_time = 7;</code>
+     */
+    public double getStopTime() {
+      return stopTime_;
+    }
+
+    public static final int READABLE_REGST_INFOS_FIELD_NUMBER = 10;
+    private java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> readableRegstInfos_;
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    public java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> getReadableRegstInfosList() {
+      return readableRegstInfos_;
+    }
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder> 
+        getReadableRegstInfosOrBuilderList() {
+      return readableRegstInfos_;
+    }
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    public int getReadableRegstInfosCount() {
+      return readableRegstInfos_.size();
+    }
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getReadableRegstInfos(int index) {
+      return readableRegstInfos_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+     */
+    public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder getReadableRegstInfosOrBuilder(
+        int index) {
+      return readableRegstInfos_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIsExperimentPhase()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasActorId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasWorkStreamId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasActId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasReadyTime()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasStartTime()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasStopTime()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getReadableRegstInfosCount(); i++) {
+        if (!getReadableRegstInfos(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, isExperimentPhase_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, actorId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, workStreamId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(4, actId_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeDouble(5, readyTime_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeDouble(6, startTime_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeDouble(7, stopTime_);
+      }
+      for (int i = 0; i < readableRegstInfos_.size(); i++) {
+        output.writeMessage(10, readableRegstInfos_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isExperimentPhase_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, actorId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, workStreamId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, actId_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(5, readyTime_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(6, startTime_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(7, stopTime_);
+      }
+      for (int i = 0; i < readableRegstInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, readableRegstInfos_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.actor.ActEventOuterClass.ActEvent)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.actor.ActEventOuterClass.ActEvent other = (org.oneflow.core.actor.ActEventOuterClass.ActEvent) obj;
+
+      boolean result = true;
+      result = result && (hasIsExperimentPhase() == other.hasIsExperimentPhase());
+      if (hasIsExperimentPhase()) {
+        result = result && (getIsExperimentPhase()
+            == other.getIsExperimentPhase());
+      }
+      result = result && (hasActorId() == other.hasActorId());
+      if (hasActorId()) {
+        result = result && (getActorId()
+            == other.getActorId());
+      }
+      result = result && (hasWorkStreamId() == other.hasWorkStreamId());
+      if (hasWorkStreamId()) {
+        result = result && (getWorkStreamId()
+            == other.getWorkStreamId());
+      }
+      result = result && (hasActId() == other.hasActId());
+      if (hasActId()) {
+        result = result && (getActId()
+            == other.getActId());
+      }
+      result = result && (hasReadyTime() == other.hasReadyTime());
+      if (hasReadyTime()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getReadyTime())
+            == java.lang.Double.doubleToLongBits(
+                other.getReadyTime()));
+      }
+      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getStartTime())
+            == java.lang.Double.doubleToLongBits(
+                other.getStartTime()));
+      }
+      result = result && (hasStopTime() == other.hasStopTime());
+      if (hasStopTime()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getStopTime())
+            == java.lang.Double.doubleToLongBits(
+                other.getStopTime()));
+      }
+      result = result && getReadableRegstInfosList()
+          .equals(other.getReadableRegstInfosList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasIsExperimentPhase()) {
+        hash = (37 * hash) + IS_EXPERIMENT_PHASE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsExperimentPhase());
+      }
+      if (hasActorId()) {
+        hash = (37 * hash) + ACTOR_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getActorId());
+      }
+      if (hasWorkStreamId()) {
+        hash = (37 * hash) + WORK_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getWorkStreamId());
+      }
+      if (hasActId()) {
+        hash = (37 * hash) + ACT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getActId());
+      }
+      if (hasReadyTime()) {
+        hash = (37 * hash) + READY_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getReadyTime()));
+      }
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getStartTime()));
+      }
+      if (hasStopTime()) {
+        hash = (37 * hash) + STOP_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getStopTime()));
+      }
+      if (getReadableRegstInfosCount() > 0) {
+        hash = (37 * hash) + READABLE_REGST_INFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getReadableRegstInfosList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.actor.ActEventOuterClass.ActEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ActEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ActEvent)
+        org.oneflow.core.actor.ActEventOuterClass.ActEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ActEvent_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ActEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.actor.ActEventOuterClass.ActEvent.class, org.oneflow.core.actor.ActEventOuterClass.ActEvent.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.actor.ActEventOuterClass.ActEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReadableRegstInfosFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        isExperimentPhase_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        actorId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        workStreamId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        actId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        readyTime_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        startTime_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        stopTime_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (readableRegstInfosBuilder_ == null) {
+          readableRegstInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          readableRegstInfosBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.actor.ActEventOuterClass.internal_static_oneflow_ActEvent_descriptor;
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ActEvent getDefaultInstanceForType() {
+        return org.oneflow.core.actor.ActEventOuterClass.ActEvent.getDefaultInstance();
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ActEvent build() {
+        org.oneflow.core.actor.ActEventOuterClass.ActEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.actor.ActEventOuterClass.ActEvent buildPartial() {
+        org.oneflow.core.actor.ActEventOuterClass.ActEvent result = new org.oneflow.core.actor.ActEventOuterClass.ActEvent(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.isExperimentPhase_ = isExperimentPhase_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.actorId_ = actorId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.workStreamId_ = workStreamId_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.actId_ = actId_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.readyTime_ = readyTime_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.startTime_ = startTime_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.stopTime_ = stopTime_;
+        if (readableRegstInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            readableRegstInfos_ = java.util.Collections.unmodifiableList(readableRegstInfos_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.readableRegstInfos_ = readableRegstInfos_;
+        } else {
+          result.readableRegstInfos_ = readableRegstInfosBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.actor.ActEventOuterClass.ActEvent) {
+          return mergeFrom((org.oneflow.core.actor.ActEventOuterClass.ActEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.actor.ActEventOuterClass.ActEvent other) {
+        if (other == org.oneflow.core.actor.ActEventOuterClass.ActEvent.getDefaultInstance()) return this;
+        if (other.hasIsExperimentPhase()) {
+          setIsExperimentPhase(other.getIsExperimentPhase());
+        }
+        if (other.hasActorId()) {
+          setActorId(other.getActorId());
+        }
+        if (other.hasWorkStreamId()) {
+          setWorkStreamId(other.getWorkStreamId());
+        }
+        if (other.hasActId()) {
+          setActId(other.getActId());
+        }
+        if (other.hasReadyTime()) {
+          setReadyTime(other.getReadyTime());
+        }
+        if (other.hasStartTime()) {
+          setStartTime(other.getStartTime());
+        }
+        if (other.hasStopTime()) {
+          setStopTime(other.getStopTime());
+        }
+        if (readableRegstInfosBuilder_ == null) {
+          if (!other.readableRegstInfos_.isEmpty()) {
+            if (readableRegstInfos_.isEmpty()) {
+              readableRegstInfos_ = other.readableRegstInfos_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureReadableRegstInfosIsMutable();
+              readableRegstInfos_.addAll(other.readableRegstInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.readableRegstInfos_.isEmpty()) {
+            if (readableRegstInfosBuilder_.isEmpty()) {
+              readableRegstInfosBuilder_.dispose();
+              readableRegstInfosBuilder_ = null;
+              readableRegstInfos_ = other.readableRegstInfos_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              readableRegstInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReadableRegstInfosFieldBuilder() : null;
+            } else {
+              readableRegstInfosBuilder_.addAllMessages(other.readableRegstInfos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIsExperimentPhase()) {
+          return false;
+        }
+        if (!hasActorId()) {
+          return false;
+        }
+        if (!hasWorkStreamId()) {
+          return false;
+        }
+        if (!hasActId()) {
+          return false;
+        }
+        if (!hasReadyTime()) {
+          return false;
+        }
+        if (!hasStartTime()) {
+          return false;
+        }
+        if (!hasStopTime()) {
+          return false;
+        }
+        for (int i = 0; i < getReadableRegstInfosCount(); i++) {
+          if (!getReadableRegstInfos(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.actor.ActEventOuterClass.ActEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.actor.ActEventOuterClass.ActEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isExperimentPhase_ ;
+      /**
+       * <code>required bool is_experiment_phase = 1;</code>
+       */
+      public boolean hasIsExperimentPhase() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required bool is_experiment_phase = 1;</code>
+       */
+      public boolean getIsExperimentPhase() {
+        return isExperimentPhase_;
+      }
+      /**
+       * <code>required bool is_experiment_phase = 1;</code>
+       */
+      public Builder setIsExperimentPhase(boolean value) {
+        bitField0_ |= 0x00000001;
+        isExperimentPhase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool is_experiment_phase = 1;</code>
+       */
+      public Builder clearIsExperimentPhase() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isExperimentPhase_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long actorId_ ;
+      /**
+       * <code>required int64 actor_id = 2;</code>
+       */
+      public boolean hasActorId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 actor_id = 2;</code>
+       */
+      public long getActorId() {
+        return actorId_;
+      }
+      /**
+       * <code>required int64 actor_id = 2;</code>
+       */
+      public Builder setActorId(long value) {
+        bitField0_ |= 0x00000002;
+        actorId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 actor_id = 2;</code>
+       */
+      public Builder clearActorId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        actorId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long workStreamId_ ;
+      /**
+       * <code>required int64 work_stream_id = 3;</code>
+       */
+      public boolean hasWorkStreamId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 work_stream_id = 3;</code>
+       */
+      public long getWorkStreamId() {
+        return workStreamId_;
+      }
+      /**
+       * <code>required int64 work_stream_id = 3;</code>
+       */
+      public Builder setWorkStreamId(long value) {
+        bitField0_ |= 0x00000004;
+        workStreamId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 work_stream_id = 3;</code>
+       */
+      public Builder clearWorkStreamId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        workStreamId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long actId_ ;
+      /**
+       * <code>required int64 act_id = 4;</code>
+       */
+      public boolean hasActId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int64 act_id = 4;</code>
+       */
+      public long getActId() {
+        return actId_;
+      }
+      /**
+       * <code>required int64 act_id = 4;</code>
+       */
+      public Builder setActId(long value) {
+        bitField0_ |= 0x00000008;
+        actId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 act_id = 4;</code>
+       */
+      public Builder clearActId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        actId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double readyTime_ ;
+      /**
+       * <code>required double ready_time = 5;</code>
+       */
+      public boolean hasReadyTime() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required double ready_time = 5;</code>
+       */
+      public double getReadyTime() {
+        return readyTime_;
+      }
+      /**
+       * <code>required double ready_time = 5;</code>
+       */
+      public Builder setReadyTime(double value) {
+        bitField0_ |= 0x00000010;
+        readyTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double ready_time = 5;</code>
+       */
+      public Builder clearReadyTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        readyTime_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double startTime_ ;
+      /**
+       * <code>required double start_time = 6;</code>
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required double start_time = 6;</code>
+       */
+      public double getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>required double start_time = 6;</code>
+       */
+      public Builder setStartTime(double value) {
+        bitField0_ |= 0x00000020;
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double start_time = 6;</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startTime_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double stopTime_ ;
+      /**
+       * <code>required double stop_time = 7;</code>
+       */
+      public boolean hasStopTime() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required double stop_time = 7;</code>
+       */
+      public double getStopTime() {
+        return stopTime_;
+      }
+      /**
+       * <code>required double stop_time = 7;</code>
+       */
+      public Builder setStopTime(double value) {
+        bitField0_ |= 0x00000040;
+        stopTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double stop_time = 7;</code>
+       */
+      public Builder clearStopTime() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        stopTime_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> readableRegstInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureReadableRegstInfosIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          readableRegstInfos_ = new java.util.ArrayList<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo>(readableRegstInfos_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder> readableRegstInfosBuilder_;
+
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> getReadableRegstInfosList() {
+        if (readableRegstInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(readableRegstInfos_);
+        } else {
+          return readableRegstInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public int getReadableRegstInfosCount() {
+        if (readableRegstInfosBuilder_ == null) {
+          return readableRegstInfos_.size();
+        } else {
+          return readableRegstInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo getReadableRegstInfos(int index) {
+        if (readableRegstInfosBuilder_ == null) {
+          return readableRegstInfos_.get(index);
+        } else {
+          return readableRegstInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder setReadableRegstInfos(
+          int index, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo value) {
+        if (readableRegstInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.set(index, value);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder setReadableRegstInfos(
+          int index, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder builderForValue) {
+        if (readableRegstInfosBuilder_ == null) {
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder addReadableRegstInfos(org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo value) {
+        if (readableRegstInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.add(value);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder addReadableRegstInfos(
+          int index, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo value) {
+        if (readableRegstInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.add(index, value);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder addReadableRegstInfos(
+          org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder builderForValue) {
+        if (readableRegstInfosBuilder_ == null) {
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder addReadableRegstInfos(
+          int index, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder builderForValue) {
+        if (readableRegstInfosBuilder_ == null) {
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder addAllReadableRegstInfos(
+          java.lang.Iterable<? extends org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo> values) {
+        if (readableRegstInfosBuilder_ == null) {
+          ensureReadableRegstInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, readableRegstInfos_);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder clearReadableRegstInfos() {
+        if (readableRegstInfosBuilder_ == null) {
+          readableRegstInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public Builder removeReadableRegstInfos(int index) {
+        if (readableRegstInfosBuilder_ == null) {
+          ensureReadableRegstInfosIsMutable();
+          readableRegstInfos_.remove(index);
+          onChanged();
+        } else {
+          readableRegstInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder getReadableRegstInfosBuilder(
+          int index) {
+        return getReadableRegstInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder getReadableRegstInfosOrBuilder(
+          int index) {
+        if (readableRegstInfosBuilder_ == null) {
+          return readableRegstInfos_.get(index);  } else {
+          return readableRegstInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder> 
+           getReadableRegstInfosOrBuilderList() {
+        if (readableRegstInfosBuilder_ != null) {
+          return readableRegstInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(readableRegstInfos_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder addReadableRegstInfosBuilder() {
+        return getReadableRegstInfosFieldBuilder().addBuilder(
+            org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder addReadableRegstInfosBuilder(
+          int index) {
+        return getReadableRegstInfosFieldBuilder().addBuilder(
+            index, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.ReadableRegstInfo readable_regst_infos = 10;</code>
+       */
+      public java.util.List<org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder> 
+           getReadableRegstInfosBuilderList() {
+        return getReadableRegstInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder> 
+          getReadableRegstInfosFieldBuilder() {
+        if (readableRegstInfosBuilder_ == null) {
+          readableRegstInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfo.Builder, org.oneflow.core.actor.ActEventOuterClass.ReadableRegstInfoOrBuilder>(
+                  readableRegstInfos_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  getParentForChildren(),
+                  isClean());
+          readableRegstInfos_ = null;
+        }
+        return readableRegstInfosBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ActEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ActEvent)
+    private static final org.oneflow.core.actor.ActEventOuterClass.ActEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.actor.ActEventOuterClass.ActEvent();
+    }
+
+    public static org.oneflow.core.actor.ActEventOuterClass.ActEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ActEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ActEvent>() {
+      public ActEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ActEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActEvent> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.actor.ActEventOuterClass.ActEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ReadableRegstInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ReadableRegstInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ActEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ActEvent_fieldAccessorTable;
 
@@ -41,7 +2038,7 @@ public final class ActEventOuterClass {
       "\004 \002(\003\022\022\n\nready_time\030\005 \002(\001\022\022\n\nstart_time\030" +
       "\006 \002(\001\022\021\n\tstop_time\030\007 \002(\001\0228\n\024readable_reg" +
       "st_infos\030\n \003(\0132\032.oneflow.ReadableRegstIn" +
-      "foB\032\n\026org.oneflow.core.actorP\001"
+      "foB\030\n\026org.oneflow.core.actor"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

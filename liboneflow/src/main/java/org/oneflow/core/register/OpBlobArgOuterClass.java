@@ -14,24 +14,3108 @@ public final class OpBlobArgOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface OpBlobArgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.OpBlobArg)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    boolean hasOpName();
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    java.lang.String getOpName();
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getOpNameBytes();
+
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    boolean hasBnInOp();
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    java.lang.String getBnInOp();
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBnInOpBytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.OpBlobArg}
+   */
+  public  static final class OpBlobArg extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.OpBlobArg)
+      OpBlobArgOrBuilder {
+    // Use OpBlobArg.newBuilder() to construct.
+    private OpBlobArg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OpBlobArg() {
+      opName_ = "";
+      bnInOp_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OpBlobArg(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              opName_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              bnInOp_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArg_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArg_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int OP_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object opName_;
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    public boolean hasOpName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    public java.lang.String getOpName() {
+      java.lang.Object ref = opName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          opName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string op_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOpNameBytes() {
+      java.lang.Object ref = opName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        opName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BN_IN_OP_FIELD_NUMBER = 2;
+    private volatile java.lang.Object bnInOp_;
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    public boolean hasBnInOp() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    public java.lang.String getBnInOp() {
+      java.lang.Object ref = bnInOp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          bnInOp_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * blob name in op
+     * </pre>
+     *
+     * <code>required string bn_in_op = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBnInOpBytes() {
+      java.lang.Object ref = bnInOp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bnInOp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasOpName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasBnInOp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, opName_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bnInOp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, opName_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bnInOp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg other = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg) obj;
+
+      boolean result = true;
+      result = result && (hasOpName() == other.hasOpName());
+      if (hasOpName()) {
+        result = result && getOpName()
+            .equals(other.getOpName());
+      }
+      result = result && (hasBnInOp() == other.hasBnInOp());
+      if (hasBnInOp()) {
+        result = result && getBnInOp()
+            .equals(other.getBnInOp());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasOpName()) {
+        hash = (37 * hash) + OP_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getOpName().hashCode();
+      }
+      if (hasBnInOp()) {
+        hash = (37 * hash) + BN_IN_OP_FIELD_NUMBER;
+        hash = (53 * hash) + getBnInOp().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.OpBlobArg}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.OpBlobArg)
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArg_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        opName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bnInOp_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArg_descriptor;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getDefaultInstanceForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg build() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg buildPartial() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg result = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.opName_ = opName_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bnInOp_ = bnInOp_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg) {
+          return mergeFrom((org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg other) {
+        if (other == org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance()) return this;
+        if (other.hasOpName()) {
+          bitField0_ |= 0x00000001;
+          opName_ = other.opName_;
+          onChanged();
+        }
+        if (other.hasBnInOp()) {
+          bitField0_ |= 0x00000002;
+          bnInOp_ = other.bnInOp_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasOpName()) {
+          return false;
+        }
+        if (!hasBnInOp()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object opName_ = "";
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public boolean hasOpName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public java.lang.String getOpName() {
+        java.lang.Object ref = opName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            opName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOpNameBytes() {
+        java.lang.Object ref = opName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          opName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public Builder setOpName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        opName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public Builder clearOpName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        opName_ = getDefaultInstance().getOpName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string op_name = 1;</code>
+       */
+      public Builder setOpNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        opName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bnInOp_ = "";
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public boolean hasBnInOp() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public java.lang.String getBnInOp() {
+        java.lang.Object ref = bnInOp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            bnInOp_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBnInOpBytes() {
+        java.lang.Object ref = bnInOp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bnInOp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public Builder setBnInOp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        bnInOp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public Builder clearBnInOp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bnInOp_ = getDefaultInstance().getBnInOp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * blob name in op
+       * </pre>
+       *
+       * <code>required string bn_in_op = 2;</code>
+       */
+      public Builder setBnInOpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        bnInOp_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.OpBlobArg)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.OpBlobArg)
+    private static final org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg();
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OpBlobArg>
+        PARSER = new com.google.protobuf.AbstractParser<OpBlobArg>() {
+      public OpBlobArg parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OpBlobArg(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OpBlobArg> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OpBlobArg> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OpBlobArgPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.OpBlobArgPair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    boolean hasFirst();
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getFirst();
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getFirstOrBuilder();
+
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    boolean hasSecond();
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getSecond();
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getSecondOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.OpBlobArgPair}
+   */
+  public  static final class OpBlobArgPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.OpBlobArgPair)
+      OpBlobArgPairOrBuilder {
+    // Use OpBlobArgPair.newBuilder() to construct.
+    private OpBlobArgPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OpBlobArgPair() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OpBlobArgPair(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = first_.toBuilder();
+              }
+              first_ = input.readMessage(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(first_);
+                first_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = second_.toBuilder();
+              }
+              second_ = input.readMessage(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(second_);
+                second_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPair_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FIRST_FIELD_NUMBER = 1;
+    private org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg first_;
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    public boolean hasFirst() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getFirst() {
+      return first_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : first_;
+    }
+    /**
+     * <code>required .oneflow.OpBlobArg first = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getFirstOrBuilder() {
+      return first_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : first_;
+    }
+
+    public static final int SECOND_FIELD_NUMBER = 2;
+    private org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg second_;
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    public boolean hasSecond() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getSecond() {
+      return second_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : second_;
+    }
+    /**
+     * <code>required .oneflow.OpBlobArg second = 2;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getSecondOrBuilder() {
+      return second_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : second_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFirst()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSecond()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getFirst().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getSecond().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getFirst());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getSecond());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFirst());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSecond());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair other = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair) obj;
+
+      boolean result = true;
+      result = result && (hasFirst() == other.hasFirst());
+      if (hasFirst()) {
+        result = result && getFirst()
+            .equals(other.getFirst());
+      }
+      result = result && (hasSecond() == other.hasSecond());
+      if (hasSecond()) {
+        result = result && getSecond()
+            .equals(other.getSecond());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasFirst()) {
+        hash = (37 * hash) + FIRST_FIELD_NUMBER;
+        hash = (53 * hash) + getFirst().hashCode();
+      }
+      if (hasSecond()) {
+        hash = (37 * hash) + SECOND_FIELD_NUMBER;
+        hash = (53 * hash) + getSecond().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.OpBlobArgPair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.OpBlobArgPair)
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPair_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFirstFieldBuilder();
+          getSecondFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (firstBuilder_ == null) {
+          first_ = null;
+        } else {
+          firstBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (secondBuilder_ == null) {
+          second_ = null;
+        } else {
+          secondBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPair_descriptor;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getDefaultInstanceForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair build() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair buildPartial() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair result = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (firstBuilder_ == null) {
+          result.first_ = first_;
+        } else {
+          result.first_ = firstBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (secondBuilder_ == null) {
+          result.second_ = second_;
+        } else {
+          result.second_ = secondBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair) {
+          return mergeFrom((org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair other) {
+        if (other == org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.getDefaultInstance()) return this;
+        if (other.hasFirst()) {
+          mergeFirst(other.getFirst());
+        }
+        if (other.hasSecond()) {
+          mergeSecond(other.getSecond());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFirst()) {
+          return false;
+        }
+        if (!hasSecond()) {
+          return false;
+        }
+        if (!getFirst().isInitialized()) {
+          return false;
+        }
+        if (!getSecond().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg first_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> firstBuilder_;
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public boolean hasFirst() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getFirst() {
+        if (firstBuilder_ == null) {
+          return first_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : first_;
+        } else {
+          return firstBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public Builder setFirst(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (firstBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          first_ = value;
+          onChanged();
+        } else {
+          firstBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public Builder setFirst(
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder builderForValue) {
+        if (firstBuilder_ == null) {
+          first_ = builderForValue.build();
+          onChanged();
+        } else {
+          firstBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public Builder mergeFirst(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (firstBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              first_ != null &&
+              first_ != org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance()) {
+            first_ =
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.newBuilder(first_).mergeFrom(value).buildPartial();
+          } else {
+            first_ = value;
+          }
+          onChanged();
+        } else {
+          firstBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public Builder clearFirst() {
+        if (firstBuilder_ == null) {
+          first_ = null;
+          onChanged();
+        } else {
+          firstBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder getFirstBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFirstFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getFirstOrBuilder() {
+        if (firstBuilder_ != null) {
+          return firstBuilder_.getMessageOrBuilder();
+        } else {
+          return first_ == null ?
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : first_;
+        }
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg first = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+          getFirstFieldBuilder() {
+        if (firstBuilder_ == null) {
+          firstBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder>(
+                  getFirst(),
+                  getParentForChildren(),
+                  isClean());
+          first_ = null;
+        }
+        return firstBuilder_;
+      }
+
+      private org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg second_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> secondBuilder_;
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public boolean hasSecond() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getSecond() {
+        if (secondBuilder_ == null) {
+          return second_ == null ? org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : second_;
+        } else {
+          return secondBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public Builder setSecond(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (secondBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          second_ = value;
+          onChanged();
+        } else {
+          secondBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public Builder setSecond(
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder builderForValue) {
+        if (secondBuilder_ == null) {
+          second_ = builderForValue.build();
+          onChanged();
+        } else {
+          secondBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public Builder mergeSecond(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (secondBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              second_ != null &&
+              second_ != org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance()) {
+            second_ =
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.newBuilder(second_).mergeFrom(value).buildPartial();
+          } else {
+            second_ = value;
+          }
+          onChanged();
+        } else {
+          secondBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public Builder clearSecond() {
+        if (secondBuilder_ == null) {
+          second_ = null;
+          onChanged();
+        } else {
+          secondBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder getSecondBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSecondFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getSecondOrBuilder() {
+        if (secondBuilder_ != null) {
+          return secondBuilder_.getMessageOrBuilder();
+        } else {
+          return second_ == null ?
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance() : second_;
+        }
+      }
+      /**
+       * <code>required .oneflow.OpBlobArg second = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+          getSecondFieldBuilder() {
+        if (secondBuilder_ == null) {
+          secondBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder>(
+                  getSecond(),
+                  getParentForChildren(),
+                  isClean());
+          second_ = null;
+        }
+        return secondBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.OpBlobArgPair)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.OpBlobArgPair)
+    private static final org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair();
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OpBlobArgPair>
+        PARSER = new com.google.protobuf.AbstractParser<OpBlobArgPair>() {
+      public OpBlobArgPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OpBlobArgPair(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OpBlobArgPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OpBlobArgPair> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OpBlobArgPairsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.OpBlobArgPairs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> 
+        getPairList();
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getPair(int index);
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    int getPairCount();
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder> 
+        getPairOrBuilderList();
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder getPairOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.OpBlobArgPairs}
+   */
+  public  static final class OpBlobArgPairs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.OpBlobArgPairs)
+      OpBlobArgPairsOrBuilder {
+    // Use OpBlobArgPairs.newBuilder() to construct.
+    private OpBlobArgPairs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OpBlobArgPairs() {
+      pair_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OpBlobArgPairs(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                pair_ = new java.util.ArrayList<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pair_.add(
+                  input.readMessage(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          pair_ = java.util.Collections.unmodifiableList(pair_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPairs_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPairs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.Builder.class);
+    }
+
+    public static final int PAIR_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> pair_;
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> getPairList() {
+      return pair_;
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder> 
+        getPairOrBuilderList() {
+      return pair_;
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    public int getPairCount() {
+      return pair_.size();
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getPair(int index) {
+      return pair_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder getPairOrBuilder(
+        int index) {
+      return pair_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getPairCount(); i++) {
+        if (!getPair(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pair_.size(); i++) {
+        output.writeMessage(1, pair_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pair_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pair_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs other = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs) obj;
+
+      boolean result = true;
+      result = result && getPairList()
+          .equals(other.getPairList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getPairCount() > 0) {
+        hash = (37 * hash) + PAIR_FIELD_NUMBER;
+        hash = (53 * hash) + getPairList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.OpBlobArgPairs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.OpBlobArgPairs)
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPairs_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPairs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPairFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (pairBuilder_ == null) {
+          pair_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          pairBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgPairs_descriptor;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs getDefaultInstanceForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs build() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs buildPartial() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs result = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs(this);
+        int from_bitField0_ = bitField0_;
+        if (pairBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            pair_ = java.util.Collections.unmodifiableList(pair_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pair_ = pair_;
+        } else {
+          result.pair_ = pairBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs) {
+          return mergeFrom((org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs other) {
+        if (other == org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs.getDefaultInstance()) return this;
+        if (pairBuilder_ == null) {
+          if (!other.pair_.isEmpty()) {
+            if (pair_.isEmpty()) {
+              pair_ = other.pair_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePairIsMutable();
+              pair_.addAll(other.pair_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pair_.isEmpty()) {
+            if (pairBuilder_.isEmpty()) {
+              pairBuilder_.dispose();
+              pairBuilder_ = null;
+              pair_ = other.pair_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pairBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairFieldBuilder() : null;
+            } else {
+              pairBuilder_.addAllMessages(other.pair_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getPairCount(); i++) {
+          if (!getPair(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> pair_ =
+        java.util.Collections.emptyList();
+      private void ensurePairIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          pair_ = new java.util.ArrayList<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair>(pair_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder> pairBuilder_;
+
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> getPairList() {
+        if (pairBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pair_);
+        } else {
+          return pairBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public int getPairCount() {
+        if (pairBuilder_ == null) {
+          return pair_.size();
+        } else {
+          return pairBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair getPair(int index) {
+        if (pairBuilder_ == null) {
+          return pair_.get(index);
+        } else {
+          return pairBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder setPair(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair value) {
+        if (pairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairIsMutable();
+          pair_.set(index, value);
+          onChanged();
+        } else {
+          pairBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder setPair(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder builderForValue) {
+        if (pairBuilder_ == null) {
+          ensurePairIsMutable();
+          pair_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder addPair(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair value) {
+        if (pairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairIsMutable();
+          pair_.add(value);
+          onChanged();
+        } else {
+          pairBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder addPair(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair value) {
+        if (pairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairIsMutable();
+          pair_.add(index, value);
+          onChanged();
+        } else {
+          pairBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder addPair(
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder builderForValue) {
+        if (pairBuilder_ == null) {
+          ensurePairIsMutable();
+          pair_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder addPair(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder builderForValue) {
+        if (pairBuilder_ == null) {
+          ensurePairIsMutable();
+          pair_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder addAllPair(
+          java.lang.Iterable<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair> values) {
+        if (pairBuilder_ == null) {
+          ensurePairIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pair_);
+          onChanged();
+        } else {
+          pairBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder clearPair() {
+        if (pairBuilder_ == null) {
+          pair_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pairBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public Builder removePair(int index) {
+        if (pairBuilder_ == null) {
+          ensurePairIsMutable();
+          pair_.remove(index);
+          onChanged();
+        } else {
+          pairBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder getPairBuilder(
+          int index) {
+        return getPairFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder getPairOrBuilder(
+          int index) {
+        if (pairBuilder_ == null) {
+          return pair_.get(index);  } else {
+          return pairBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder> 
+           getPairOrBuilderList() {
+        if (pairBuilder_ != null) {
+          return pairBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pair_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder addPairBuilder() {
+        return getPairFieldBuilder().addBuilder(
+            org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder addPairBuilder(
+          int index) {
+        return getPairFieldBuilder().addBuilder(
+            index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArgPair pair = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder> 
+           getPairBuilderList() {
+        return getPairFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder> 
+          getPairFieldBuilder() {
+        if (pairBuilder_ == null) {
+          pairBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPair.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairOrBuilder>(
+                  pair_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          pair_ = null;
+        }
+        return pairBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.OpBlobArgPairs)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.OpBlobArgPairs)
+    private static final org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs();
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OpBlobArgPairs>
+        PARSER = new com.google.protobuf.AbstractParser<OpBlobArgPairs>() {
+      public OpBlobArgPairs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OpBlobArgPairs(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OpBlobArgPairs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OpBlobArgPairs> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgPairs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OpBlobArgListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.OpBlobArgList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> 
+        getObaList();
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getOba(int index);
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    int getObaCount();
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+        getObaOrBuilderList();
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getObaOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.OpBlobArgList}
+   */
+  public  static final class OpBlobArgList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.OpBlobArgList)
+      OpBlobArgListOrBuilder {
+    // Use OpBlobArgList.newBuilder() to construct.
+    private OpBlobArgList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OpBlobArgList() {
+      oba_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OpBlobArgList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                oba_ = new java.util.ArrayList<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              oba_.add(
+                  input.readMessage(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          oba_ = java.util.Collections.unmodifiableList(oba_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.Builder.class);
+    }
+
+    public static final int OBA_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> oba_;
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> getObaList() {
+      return oba_;
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+        getObaOrBuilderList() {
+      return oba_;
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    public int getObaCount() {
+      return oba_.size();
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getOba(int index) {
+      return oba_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+     */
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getObaOrBuilder(
+        int index) {
+      return oba_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getObaCount(); i++) {
+        if (!getOba(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < oba_.size(); i++) {
+        output.writeMessage(1, oba_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < oba_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, oba_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList other = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList) obj;
+
+      boolean result = true;
+      result = result && getObaList()
+          .equals(other.getObaList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getObaCount() > 0) {
+        hash = (37 * hash) + OBA_FIELD_NUMBER;
+        hash = (53 * hash) + getObaList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.OpBlobArgList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.OpBlobArgList)
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.class, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getObaFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (obaBuilder_ == null) {
+          oba_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          obaBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.internal_static_oneflow_OpBlobArgList_descriptor;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList getDefaultInstanceForType() {
+        return org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList build() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList buildPartial() {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList result = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList(this);
+        int from_bitField0_ = bitField0_;
+        if (obaBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            oba_ = java.util.Collections.unmodifiableList(oba_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.oba_ = oba_;
+        } else {
+          result.oba_ = obaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList) {
+          return mergeFrom((org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList other) {
+        if (other == org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList.getDefaultInstance()) return this;
+        if (obaBuilder_ == null) {
+          if (!other.oba_.isEmpty()) {
+            if (oba_.isEmpty()) {
+              oba_ = other.oba_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureObaIsMutable();
+              oba_.addAll(other.oba_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oba_.isEmpty()) {
+            if (obaBuilder_.isEmpty()) {
+              obaBuilder_.dispose();
+              obaBuilder_ = null;
+              oba_ = other.oba_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              obaBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getObaFieldBuilder() : null;
+            } else {
+              obaBuilder_.addAllMessages(other.oba_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getObaCount(); i++) {
+          if (!getOba(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> oba_ =
+        java.util.Collections.emptyList();
+      private void ensureObaIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          oba_ = new java.util.ArrayList<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg>(oba_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> obaBuilder_;
+
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> getObaList() {
+        if (obaBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oba_);
+        } else {
+          return obaBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public int getObaCount() {
+        if (obaBuilder_ == null) {
+          return oba_.size();
+        } else {
+          return obaBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg getOba(int index) {
+        if (obaBuilder_ == null) {
+          return oba_.get(index);
+        } else {
+          return obaBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder setOba(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (obaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObaIsMutable();
+          oba_.set(index, value);
+          onChanged();
+        } else {
+          obaBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder setOba(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder builderForValue) {
+        if (obaBuilder_ == null) {
+          ensureObaIsMutable();
+          oba_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          obaBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder addOba(org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (obaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObaIsMutable();
+          oba_.add(value);
+          onChanged();
+        } else {
+          obaBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder addOba(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg value) {
+        if (obaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObaIsMutable();
+          oba_.add(index, value);
+          onChanged();
+        } else {
+          obaBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder addOba(
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder builderForValue) {
+        if (obaBuilder_ == null) {
+          ensureObaIsMutable();
+          oba_.add(builderForValue.build());
+          onChanged();
+        } else {
+          obaBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder addOba(
+          int index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder builderForValue) {
+        if (obaBuilder_ == null) {
+          ensureObaIsMutable();
+          oba_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          obaBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder addAllOba(
+          java.lang.Iterable<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg> values) {
+        if (obaBuilder_ == null) {
+          ensureObaIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oba_);
+          onChanged();
+        } else {
+          obaBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder clearOba() {
+        if (obaBuilder_ == null) {
+          oba_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          obaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public Builder removeOba(int index) {
+        if (obaBuilder_ == null) {
+          ensureObaIsMutable();
+          oba_.remove(index);
+          onChanged();
+        } else {
+          obaBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder getObaBuilder(
+          int index) {
+        return getObaFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder getObaOrBuilder(
+          int index) {
+        if (obaBuilder_ == null) {
+          return oba_.get(index);  } else {
+          return obaBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+           getObaOrBuilderList() {
+        if (obaBuilder_ != null) {
+          return obaBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oba_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder addObaBuilder() {
+        return getObaFieldBuilder().addBuilder(
+            org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder addObaBuilder(
+          int index) {
+        return getObaFieldBuilder().addBuilder(
+            index, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.OpBlobArg oba = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder> 
+           getObaBuilderList() {
+        return getObaFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder> 
+          getObaFieldBuilder() {
+        if (obaBuilder_ == null) {
+          obaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArg.Builder, org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgOrBuilder>(
+                  oba_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          oba_ = null;
+        }
+        return obaBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.OpBlobArgList)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.OpBlobArgList)
+    private static final org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList();
+    }
+
+    public static org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OpBlobArgList>
+        PARSER = new com.google.protobuf.AbstractParser<OpBlobArgList>() {
+      public OpBlobArgList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OpBlobArgList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OpBlobArgList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OpBlobArgList> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.OpBlobArgOuterClass.OpBlobArgList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_OpBlobArg_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_OpBlobArg_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_OpBlobArgPair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_OpBlobArgPair_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_OpBlobArgPairs_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_OpBlobArgPairs_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_OpBlobArgList_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_OpBlobArgList_fieldAccessorTable;
 
@@ -50,8 +3134,8 @@ public final class OpBlobArgOuterClass {
       "\030\002 \002(\0132\022.oneflow.OpBlobArg\"6\n\016OpBlobArgP" +
       "airs\022$\n\004pair\030\001 \003(\0132\026.oneflow.OpBlobArgPa" +
       "ir\"0\n\rOpBlobArgList\022\037\n\003oba\030\001 \003(\0132\022.onefl" +
-      "ow.OpBlobArgB\035\n\031org.oneflow.core.registe" +
-      "rP\001"
+      "ow.OpBlobArgB\033\n\031org.oneflow.core.registe" +
+      "r"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

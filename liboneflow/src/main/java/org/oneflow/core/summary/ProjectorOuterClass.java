@@ -14,39 +14,6378 @@ public final class ProjectorOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MetaDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.summary.MetaData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType getType();
+
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    java.lang.String getContent();
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.summary.MetaData}
+   */
+  public  static final class MetaData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.summary.MetaData)
+      MetaDataOrBuilder {
+    // Use MetaData.newBuilder() to construct.
+    private MetaData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetaData() {
+      type_ = 0;
+      content_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MetaData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType value = org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              content_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_MetaData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_MetaData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData.class, org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code oneflow.summary.MetaData.ProjectorType}
+     */
+    public enum ProjectorType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EMBEDDING = 0;</code>
+       */
+      EMBEDDING(0),
+      /**
+       * <code>EXCEPTION = 1;</code>
+       */
+      EXCEPTION(1),
+      ;
+
+      /**
+       * <code>EMBEDDING = 0;</code>
+       */
+      public static final int EMBEDDING_VALUE = 0;
+      /**
+       * <code>EXCEPTION = 1;</code>
+       */
+      public static final int EXCEPTION_VALUE = 1;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ProjectorType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ProjectorType forNumber(int value) {
+        switch (value) {
+          case 0: return EMBEDDING;
+          case 1: return EXCEPTION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ProjectorType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ProjectorType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ProjectorType>() {
+              public ProjectorType findValueByNumber(int number) {
+                return ProjectorType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ProjectorType[] VALUES = values();
+
+      public static ProjectorType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ProjectorType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:oneflow.summary.MetaData.ProjectorType)
+    }
+
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType getType() {
+      org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType result = org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType.valueOf(type_);
+      return result == null ? org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType.EMBEDDING : result;
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object content_;
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *Metadata specific information
+     * </pre>
+     *
+     * <code>optional string content = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.MetaData)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.summary.ProjectorOuterClass.MetaData other = (org.oneflow.core.summary.ProjectorOuterClass.MetaData) obj;
+
+      boolean result = true;
+      result = result && (hasType() == other.hasType());
+      if (hasType()) {
+        result = result && type_ == other.type_;
+      }
+      result = result && (hasContent() == other.hasContent());
+      if (hasContent()) {
+        result = result && getContent()
+            .equals(other.getContent());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.MetaData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.MetaData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.summary.MetaData)
+        org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_MetaData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_MetaData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.MetaData.class, org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.summary.ProjectorOuterClass.MetaData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_MetaData_descriptor;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData getDefaultInstanceForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance();
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData build() {
+        org.oneflow.core.summary.ProjectorOuterClass.MetaData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData buildPartial() {
+        org.oneflow.core.summary.ProjectorOuterClass.MetaData result = new org.oneflow.core.summary.ProjectorOuterClass.MetaData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.content_ = content_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.MetaData) {
+          return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.MetaData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.MetaData other) {
+        if (other == org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasContent()) {
+          bitField0_ |= 0x00000002;
+          content_ = other.content_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.summary.ProjectorOuterClass.MetaData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.MetaData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType getType() {
+        org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType result = org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType.valueOf(type_);
+        return result == null ? org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType.EMBEDDING : result;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+       */
+      public Builder setType(org.oneflow.core.summary.ProjectorOuterClass.MetaData.ProjectorType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData.ProjectorType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object content_ = "";
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Metadata specific information
+       * </pre>
+       *
+       * <code>optional string content = 2;</code>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.summary.MetaData)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.summary.MetaData)
+    private static final org.oneflow.core.summary.ProjectorOuterClass.MetaData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.MetaData();
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.MetaData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<MetaData>
+        PARSER = new com.google.protobuf.AbstractParser<MetaData>() {
+      public MetaData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MetaData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetaData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetaData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.summary.ProjectorOuterClass.MetaData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TensorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.summary.Tensor)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    boolean hasDtype();
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    java.lang.String getDtype();
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDtypeBytes();
+
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    boolean hasShape();
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getShape();
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder getShapeOrBuilder();
+
+    /**
+     * <code>optional bytes content = 3;</code>
+     */
+    boolean hasContent();
+    /**
+     * <code>optional bytes content = 3;</code>
+     */
+    com.google.protobuf.ByteString getContent();
+  }
+  /**
+   * Protobuf type {@code oneflow.summary.Tensor}
+   */
+  public  static final class Tensor extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.summary.Tensor)
+      TensorOrBuilder {
+    // Use Tensor.newBuilder() to construct.
+    private Tensor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tensor() {
+      dtype_ = "";
+      content_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Tensor(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              dtype_ = bs;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = shape_.toBuilder();
+              }
+              shape_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shape_);
+                shape_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              content_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder.class);
+    }
+
+    public interface TensorShapeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:oneflow.summary.Tensor.TensorShape)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> 
+          getDimList();
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDim(int index);
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      int getDimCount();
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder> 
+          getDimOrBuilderList();
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder getDimOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.Tensor.TensorShape}
+     */
+    public  static final class TensorShape extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:oneflow.summary.Tensor.TensorShape)
+        TensorShapeOrBuilder {
+      // Use TensorShape.newBuilder() to construct.
+      private TensorShape(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TensorShape() {
+        dim_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TensorShape(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  dim_ = new java.util.ArrayList<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                dim_.add(
+                    input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.PARSER, extensionRegistry));
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            dim_ = java.util.Collections.unmodifiableList(dim_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder.class);
+      }
+
+      public interface DimOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:oneflow.summary.Tensor.TensorShape.Dim)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required int64 size = 1;</code>
+         */
+        boolean hasSize();
+        /**
+         * <code>required int64 size = 1;</code>
+         */
+        long getSize();
+
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        boolean hasName();
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        java.lang.String getName();
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        com.google.protobuf.ByteString
+            getNameBytes();
+      }
+      /**
+       * Protobuf type {@code oneflow.summary.Tensor.TensorShape.Dim}
+       */
+      public  static final class Dim extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:oneflow.summary.Tensor.TensorShape.Dim)
+          DimOrBuilder {
+        // Use Dim.newBuilder() to construct.
+        private Dim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Dim() {
+          size_ = 0L;
+          name_ = "";
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Dim(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  size_ = input.readInt64();
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  name_ = bs;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_Dim_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_Dim_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int SIZE_FIELD_NUMBER = 1;
+        private long size_;
+        /**
+         * <code>required int64 size = 1;</code>
+         */
+        public boolean hasSize() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required int64 size = 1;</code>
+         */
+        public long getSize() {
+          return size_;
+        }
+
+        public static final int NAME_FIELD_NUMBER = 2;
+        private volatile java.lang.Object name_;
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasSize()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeInt64(1, size_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(1, size_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim)) {
+            return super.equals(obj);
+          }
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim other = (org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim) obj;
+
+          boolean result = true;
+          result = result && (hasSize() == other.hasSize());
+          if (hasSize()) {
+            result = result && (getSize()
+                == other.getSize());
+          }
+          result = result && (hasName() == other.hasName());
+          if (hasName()) {
+            result = result && getName()
+                .equals(other.getName());
+          }
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptorForType().hashCode();
+          if (hasSize()) {
+            hash = (37 * hash) + SIZE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                getSize());
+          }
+          if (hasName()) {
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code oneflow.summary.Tensor.TensorShape.Dim}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:oneflow.summary.Tensor.TensorShape.Dim)
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_Dim_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_Dim_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder.class);
+          }
+
+          // Construct using org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          public Builder clear() {
+            super.clear();
+            size_ = 0L;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            name_ = "";
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_Dim_descriptor;
+          }
+
+          public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDefaultInstanceForType() {
+            return org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.getDefaultInstance();
+          }
+
+          public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim build() {
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim buildPartial() {
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim result = new org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.size_ = size_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.name_ = name_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder clone() {
+            return (Builder) super.clone();
+          }
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.setField(field, value);
+          }
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return (Builder) super.clearField(field);
+          }
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return (Builder) super.clearOneof(oneof);
+          }
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, Object value) {
+            return (Builder) super.setRepeatedField(field, index, value);
+          }
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.addRepeatedField(field, value);
+          }
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim) {
+              return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim other) {
+            if (other == org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.getDefaultInstance()) return this;
+            if (other.hasSize()) {
+              setSize(other.getSize());
+            }
+            if (other.hasName()) {
+              bitField0_ |= 0x00000002;
+              name_ = other.name_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            if (!hasSize()) {
+              return false;
+            }
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private long size_ ;
+          /**
+           * <code>required int64 size = 1;</code>
+           */
+          public boolean hasSize() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>required int64 size = 1;</code>
+           */
+          public long getSize() {
+            return size_;
+          }
+          /**
+           * <code>required int64 size = 1;</code>
+           */
+          public Builder setSize(long value) {
+            bitField0_ |= 0x00000001;
+            size_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required int64 size = 1;</code>
+           */
+          public Builder clearSize() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            size_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object name_ = "";
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public boolean hasName() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                name_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public com.google.protobuf.ByteString
+              getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              name_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public Builder setName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public Builder clearName() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            name_ = getDefaultInstance().getName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional string name = 2;</code>
+           */
+          public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:oneflow.summary.Tensor.TensorShape.Dim)
+        }
+
+        // @@protoc_insertion_point(class_scope:oneflow.summary.Tensor.TensorShape.Dim)
+        private static final org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim();
+        }
+
+        public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<Dim>
+            PARSER = new com.google.protobuf.AbstractParser<Dim>() {
+          public Dim parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+              return new Dim(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Dim> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Dim> getParserForType() {
+          return PARSER;
+        }
+
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int DIM_FIELD_NUMBER = 1;
+      private java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> dim_;
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> getDimList() {
+        return dim_;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder> 
+          getDimOrBuilderList() {
+        return dim_;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      public int getDimCount() {
+        return dim_.size();
+      }
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDim(int index) {
+        return dim_.get(index);
+      }
+      /**
+       * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder getDimOrBuilder(
+          int index) {
+        return dim_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        for (int i = 0; i < getDimCount(); i++) {
+          if (!getDim(i).isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < dim_.size(); i++) {
+          output.writeMessage(1, dim_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < dim_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, dim_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape)) {
+          return super.equals(obj);
+        }
+        org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape other = (org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape) obj;
+
+        boolean result = true;
+        result = result && getDimList()
+            .equals(other.getDimList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (getDimCount() > 0) {
+          hash = (37 * hash) + DIM_FIELD_NUMBER;
+          hash = (53 * hash) + getDimList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code oneflow.summary.Tensor.TensorShape}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:oneflow.summary.Tensor.TensorShape)
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder.class);
+        }
+
+        // Construct using org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getDimFieldBuilder();
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          if (dimBuilder_ == null) {
+            dim_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            dimBuilder_.clear();
+          }
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_TensorShape_descriptor;
+        }
+
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getDefaultInstanceForType() {
+          return org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance();
+        }
+
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape build() {
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape buildPartial() {
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape result = new org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape(this);
+          int from_bitField0_ = bitField0_;
+          if (dimBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              dim_ = java.util.Collections.unmodifiableList(dim_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.dim_ = dim_;
+          } else {
+            result.dim_ = dimBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape) {
+            return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape other) {
+          if (other == org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance()) return this;
+          if (dimBuilder_ == null) {
+            if (!other.dim_.isEmpty()) {
+              if (dim_.isEmpty()) {
+                dim_ = other.dim_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureDimIsMutable();
+                dim_.addAll(other.dim_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.dim_.isEmpty()) {
+              if (dimBuilder_.isEmpty()) {
+                dimBuilder_.dispose();
+                dimBuilder_ = null;
+                dim_ = other.dim_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                dimBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getDimFieldBuilder() : null;
+              } else {
+                dimBuilder_.addAllMessages(other.dim_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          for (int i = 0; i < getDimCount(); i++) {
+            if (!getDim(i).isInitialized()) {
+              return false;
+            }
+          }
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> dim_ =
+          java.util.Collections.emptyList();
+        private void ensureDimIsMutable() {
+          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+            dim_ = new java.util.ArrayList<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim>(dim_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder> dimBuilder_;
+
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> getDimList() {
+          if (dimBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(dim_);
+          } else {
+            return dimBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public int getDimCount() {
+          if (dimBuilder_ == null) {
+            return dim_.size();
+          } else {
+            return dimBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim getDim(int index) {
+          if (dimBuilder_ == null) {
+            return dim_.get(index);
+          } else {
+            return dimBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder setDim(
+            int index, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim value) {
+          if (dimBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureDimIsMutable();
+            dim_.set(index, value);
+            onChanged();
+          } else {
+            dimBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder setDim(
+            int index, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder builderForValue) {
+          if (dimBuilder_ == null) {
+            ensureDimIsMutable();
+            dim_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            dimBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder addDim(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim value) {
+          if (dimBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureDimIsMutable();
+            dim_.add(value);
+            onChanged();
+          } else {
+            dimBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder addDim(
+            int index, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim value) {
+          if (dimBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureDimIsMutable();
+            dim_.add(index, value);
+            onChanged();
+          } else {
+            dimBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder addDim(
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder builderForValue) {
+          if (dimBuilder_ == null) {
+            ensureDimIsMutable();
+            dim_.add(builderForValue.build());
+            onChanged();
+          } else {
+            dimBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder addDim(
+            int index, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder builderForValue) {
+          if (dimBuilder_ == null) {
+            ensureDimIsMutable();
+            dim_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            dimBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder addAllDim(
+            java.lang.Iterable<? extends org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim> values) {
+          if (dimBuilder_ == null) {
+            ensureDimIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, dim_);
+            onChanged();
+          } else {
+            dimBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder clearDim() {
+          if (dimBuilder_ == null) {
+            dim_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            dimBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public Builder removeDim(int index) {
+          if (dimBuilder_ == null) {
+            ensureDimIsMutable();
+            dim_.remove(index);
+            onChanged();
+          } else {
+            dimBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder getDimBuilder(
+            int index) {
+          return getDimFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder getDimOrBuilder(
+            int index) {
+          if (dimBuilder_ == null) {
+            return dim_.get(index);  } else {
+            return dimBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder> 
+             getDimOrBuilderList() {
+          if (dimBuilder_ != null) {
+            return dimBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(dim_);
+          }
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder addDimBuilder() {
+          return getDimFieldBuilder().addBuilder(
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder addDimBuilder(
+            int index) {
+          return getDimFieldBuilder().addBuilder(
+              index, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .oneflow.summary.Tensor.TensorShape.Dim dim = 1;</code>
+         */
+        public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder> 
+             getDimBuilderList() {
+          return getDimFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder> 
+            getDimFieldBuilder() {
+          if (dimBuilder_ == null) {
+            dimBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Dim.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.DimOrBuilder>(
+                    dim_,
+                    ((bitField0_ & 0x00000001) == 0x00000001),
+                    getParentForChildren(),
+                    isClean());
+            dim_ = null;
+          }
+          return dimBuilder_;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:oneflow.summary.Tensor.TensorShape)
+      }
+
+      // @@protoc_insertion_point(class_scope:oneflow.summary.Tensor.TensorShape)
+      private static final org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape();
+      }
+
+      public static org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<TensorShape>
+          PARSER = new com.google.protobuf.AbstractParser<TensorShape>() {
+        public TensorShape parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TensorShape(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TensorShape> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TensorShape> getParserForType() {
+        return PARSER;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int DTYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dtype_;
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    public boolean hasDtype() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    public java.lang.String getDtype() {
+      java.lang.Object ref = dtype_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          dtype_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string dtype = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDtypeBytes() {
+      java.lang.Object ref = dtype_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dtype_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHAPE_FIELD_NUMBER = 2;
+    private org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape shape_;
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    public boolean hasShape() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getShape() {
+      return shape_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance() : shape_;
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder getShapeOrBuilder() {
+      return shape_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance() : shape_;
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString content_;
+    /**
+     * <code>optional bytes content = 3;</code>
+     */
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bytes content = 3;</code>
+     */
+    public com.google.protobuf.ByteString getContent() {
+      return content_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDtype()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasShape()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getShape().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dtype_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getShape());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, content_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dtype_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getShape());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, content_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.summary.ProjectorOuterClass.Tensor other = (org.oneflow.core.summary.ProjectorOuterClass.Tensor) obj;
+
+      boolean result = true;
+      result = result && (hasDtype() == other.hasDtype());
+      if (hasDtype()) {
+        result = result && getDtype()
+            .equals(other.getDtype());
+      }
+      result = result && (hasShape() == other.hasShape());
+      if (hasShape()) {
+        result = result && getShape()
+            .equals(other.getShape());
+      }
+      result = result && (hasContent() == other.hasContent());
+      if (hasContent()) {
+        result = result && getContent()
+            .equals(other.getContent());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDtype()) {
+        hash = (37 * hash) + DTYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDtype().hashCode();
+      }
+      if (hasShape()) {
+        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
+        hash = (53 * hash) + getShape().hashCode();
+      }
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.Tensor prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.Tensor}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.summary.Tensor)
+        org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.Tensor.class, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.summary.ProjectorOuterClass.Tensor.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getShapeFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        dtype_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Tensor_descriptor;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor getDefaultInstanceForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance();
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor build() {
+        org.oneflow.core.summary.ProjectorOuterClass.Tensor result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor buildPartial() {
+        org.oneflow.core.summary.ProjectorOuterClass.Tensor result = new org.oneflow.core.summary.ProjectorOuterClass.Tensor(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.dtype_ = dtype_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (shapeBuilder_ == null) {
+          result.shape_ = shape_;
+        } else {
+          result.shape_ = shapeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.content_ = content_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.Tensor) {
+          return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.Tensor)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.Tensor other) {
+        if (other == org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance()) return this;
+        if (other.hasDtype()) {
+          bitField0_ |= 0x00000001;
+          dtype_ = other.dtype_;
+          onChanged();
+        }
+        if (other.hasShape()) {
+          mergeShape(other.getShape());
+        }
+        if (other.hasContent()) {
+          setContent(other.getContent());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDtype()) {
+          return false;
+        }
+        if (!hasShape()) {
+          return false;
+        }
+        if (!getShape().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.summary.ProjectorOuterClass.Tensor parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.Tensor) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dtype_ = "";
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public boolean hasDtype() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public java.lang.String getDtype() {
+        java.lang.Object ref = dtype_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            dtype_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDtypeBytes() {
+        java.lang.Object ref = dtype_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dtype_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public Builder setDtype(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        dtype_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public Builder clearDtype() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dtype_ = getDefaultInstance().getDtype();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string dtype = 1;</code>
+       */
+      public Builder setDtypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        dtype_ = value;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape shape_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder> shapeBuilder_;
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public boolean hasShape() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape getShape() {
+        if (shapeBuilder_ == null) {
+          return shape_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance() : shape_;
+        } else {
+          return shapeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public Builder setShape(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape value) {
+        if (shapeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shape_ = value;
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public Builder setShape(
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder builderForValue) {
+        if (shapeBuilder_ == null) {
+          shape_ = builderForValue.build();
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public Builder mergeShape(org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape value) {
+        if (shapeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              shape_ != null &&
+              shape_ != org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance()) {
+            shape_ =
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.newBuilder(shape_).mergeFrom(value).buildPartial();
+          } else {
+            shape_ = value;
+          }
+          onChanged();
+        } else {
+          shapeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public Builder clearShape() {
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+          onChanged();
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder getShapeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getShapeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder getShapeOrBuilder() {
+        if (shapeBuilder_ != null) {
+          return shapeBuilder_.getMessageOrBuilder();
+        } else {
+          return shape_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.getDefaultInstance() : shape_;
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor.TensorShape shape = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder> 
+          getShapeFieldBuilder() {
+        if (shapeBuilder_ == null) {
+          shapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShape.Builder, org.oneflow.core.summary.ProjectorOuterClass.Tensor.TensorShapeOrBuilder>(
+                  getShape(),
+                  getParentForChildren(),
+                  isClean());
+          shape_ = null;
+        }
+        return shapeBuilder_;
+      }
+
+      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes content = 3;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bytes content = 3;</code>
+       */
+      public com.google.protobuf.ByteString getContent() {
+        return content_;
+      }
+      /**
+       * <code>optional bytes content = 3;</code>
+       */
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes content = 3;</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.summary.Tensor)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.summary.Tensor)
+    private static final org.oneflow.core.summary.ProjectorOuterClass.Tensor DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.Tensor();
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Tensor getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Tensor>
+        PARSER = new com.google.protobuf.AbstractParser<Tensor>() {
+      public Tensor parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Tensor(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tensor> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tensor> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SampleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.summary.Sample)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType getType();
+
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    boolean hasX();
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Tensor getX();
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getXOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.summary.Sample}
+   */
+  public  static final class Sample extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.summary.Sample)
+      SampleOrBuilder {
+    // Use Sample.newBuilder() to construct.
+    private Sample(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Sample() {
+      name_ = "";
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Sample(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType value = org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                type_ = rawValue;
+              }
+              break;
+            }
+            case 26: {
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = x_.toBuilder();
+              }
+              x_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Tensor.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(x_);
+                x_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Sample_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Sample_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.summary.ProjectorOuterClass.Sample.class, org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code oneflow.summary.Sample.SampleType}
+     */
+    public enum SampleType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>IMAGE = 0;</code>
+       */
+      IMAGE(0),
+      /**
+       * <code>AUDIO = 1;</code>
+       */
+      AUDIO(1),
+      /**
+       * <code>TEXT = 2;</code>
+       */
+      TEXT(2),
+      ;
+
+      /**
+       * <code>IMAGE = 0;</code>
+       */
+      public static final int IMAGE_VALUE = 0;
+      /**
+       * <code>AUDIO = 1;</code>
+       */
+      public static final int AUDIO_VALUE = 1;
+      /**
+       * <code>TEXT = 2;</code>
+       */
+      public static final int TEXT_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SampleType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SampleType forNumber(int value) {
+        switch (value) {
+          case 0: return IMAGE;
+          case 1: return AUDIO;
+          case 2: return TEXT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SampleType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SampleType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SampleType>() {
+              public SampleType findValueByNumber(int number) {
+                return SampleType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.Sample.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SampleType[] VALUES = values();
+
+      public static SampleType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SampleType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:oneflow.summary.Sample.SampleType)
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType getType() {
+      org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType result = org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType.valueOf(type_);
+      return result == null ? org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType.IMAGE : result;
+    }
+
+    public static final int X_FIELD_NUMBER = 3;
+    private org.oneflow.core.summary.ProjectorOuterClass.Tensor x_;
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    public boolean hasX() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor getX() {
+      return x_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : x_;
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor X = 3;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getXOrBuilder() {
+      return x_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : x_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasX()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getX().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, type_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, getX());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getX());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.Sample)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.summary.ProjectorOuterClass.Sample other = (org.oneflow.core.summary.ProjectorOuterClass.Sample) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasType() == other.hasType());
+      if (hasType()) {
+        result = result && type_ == other.type_;
+      }
+      result = result && (hasX() == other.hasX());
+      if (hasX()) {
+        result = result && getX()
+            .equals(other.getX());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
+      if (hasX()) {
+        hash = (37 * hash) + X_FIELD_NUMBER;
+        hash = (53 * hash) + getX().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.Sample prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.Sample}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.summary.Sample)
+        org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Sample_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Sample_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.Sample.class, org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.summary.ProjectorOuterClass.Sample.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getXFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (xBuilder_ == null) {
+          x_ = null;
+        } else {
+          xBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Sample_descriptor;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample getDefaultInstanceForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance();
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample build() {
+        org.oneflow.core.summary.ProjectorOuterClass.Sample result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample buildPartial() {
+        org.oneflow.core.summary.ProjectorOuterClass.Sample result = new org.oneflow.core.summary.ProjectorOuterClass.Sample(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (xBuilder_ == null) {
+          result.x_ = x_;
+        } else {
+          result.x_ = xBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.Sample) {
+          return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.Sample)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.Sample other) {
+        if (other == org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasX()) {
+          mergeX(other.getX());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          return false;
+        }
+        if (!hasType()) {
+          return false;
+        }
+        if (!hasX()) {
+          return false;
+        }
+        if (!getX().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.summary.ProjectorOuterClass.Sample parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.Sample) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType getType() {
+        org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType result = org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType.valueOf(type_);
+        return result == null ? org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType.IMAGE : result;
+      }
+      /**
+       * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+       */
+      public Builder setType(org.oneflow.core.summary.ProjectorOuterClass.Sample.SampleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Sample.SampleType type = 2;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.summary.ProjectorOuterClass.Tensor x_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> xBuilder_;
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public boolean hasX() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor getX() {
+        if (xBuilder_ == null) {
+          return x_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : x_;
+        } else {
+          return xBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public Builder setX(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (xBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          x_ = value;
+          onChanged();
+        } else {
+          xBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public Builder setX(
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder builderForValue) {
+        if (xBuilder_ == null) {
+          x_ = builderForValue.build();
+          onChanged();
+        } else {
+          xBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public Builder mergeX(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (xBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              x_ != null &&
+              x_ != org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance()) {
+            x_ =
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.newBuilder(x_).mergeFrom(value).buildPartial();
+          } else {
+            x_ = value;
+          }
+          onChanged();
+        } else {
+          xBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public Builder clearX() {
+        if (xBuilder_ == null) {
+          x_ = null;
+          onChanged();
+        } else {
+          xBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder getXBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getXFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getXOrBuilder() {
+        if (xBuilder_ != null) {
+          return xBuilder_.getMessageOrBuilder();
+        } else {
+          return x_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : x_;
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor X = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> 
+          getXFieldBuilder() {
+        if (xBuilder_ == null) {
+          xBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder>(
+                  getX(),
+                  getParentForChildren(),
+                  isClean());
+          x_ = null;
+        }
+        return xBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.summary.Sample)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.summary.Sample)
+    private static final org.oneflow.core.summary.ProjectorOuterClass.Sample DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.Sample();
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Sample getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Sample>
+        PARSER = new com.google.protobuf.AbstractParser<Sample>() {
+      public Sample parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Sample(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Sample> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Sample> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.summary.ProjectorOuterClass.Sample getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProjectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.summary.Projector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    boolean hasTag();
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    java.lang.String getTag();
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+
+    /**
+     * <code>optional int64 step = 2;</code>
+     */
+    boolean hasStep();
+    /**
+     * <code>optional int64 step = 2;</code>
+     */
+    long getStep();
+
+    /**
+     * <code>required double WALL_TIME = 3;</code>
+     */
+    boolean hasWALLTIME();
+    /**
+     * <code>required double WALL_TIME = 3;</code>
+     */
+    double getWALLTIME();
+
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Tensor getValue();
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getValueOrBuilder();
+
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    boolean hasLabel();
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Tensor getLabel();
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getLabelOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.summary.Projector}
+   */
+  public  static final class Projector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.summary.Projector)
+      ProjectorOrBuilder {
+    // Use Projector.newBuilder() to construct.
+    private Projector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Projector() {
+      tag_ = "";
+      step_ = 0L;
+      wALLTIME_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Projector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              tag_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              step_ = input.readInt64();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              wALLTIME_ = input.readDouble();
+              break;
+            }
+            case 34: {
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Tensor.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = label_.toBuilder();
+              }
+              label_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Tensor.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(label_);
+                label_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Projector_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Projector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.summary.ProjectorOuterClass.Projector.class, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TAG_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tag_;
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    public boolean hasTag() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          tag_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string tag = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STEP_FIELD_NUMBER = 2;
+    private long step_;
+    /**
+     * <code>optional int64 step = 2;</code>
+     */
+    public boolean hasStep() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int64 step = 2;</code>
+     */
+    public long getStep() {
+      return step_;
+    }
+
+    public static final int WALL_TIME_FIELD_NUMBER = 3;
+    private double wALLTIME_;
+    /**
+     * <code>required double WALL_TIME = 3;</code>
+     */
+    public boolean hasWALLTIME() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required double WALL_TIME = 3;</code>
+     */
+    public double getWALLTIME() {
+      return wALLTIME_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 4;
+    private org.oneflow.core.summary.ProjectorOuterClass.Tensor value_;
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor getValue() {
+      return value_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>required .oneflow.summary.Tensor value = 4;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getValueOrBuilder() {
+      return value_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : value_;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 5;
+    private org.oneflow.core.summary.ProjectorOuterClass.Tensor label_;
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    public boolean hasLabel() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Tensor getLabel() {
+      return label_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : label_;
+    }
+    /**
+     * <code>optional .oneflow.summary.Tensor label = 5;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getLabelOrBuilder() {
+      return label_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : label_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTag()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasWALLTIME()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasValue()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getValue().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasLabel()) {
+        if (!getLabel().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tag_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, step_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeDouble(3, wALLTIME_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, getValue());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, getLabel());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tag_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, step_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, wALLTIME_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getValue());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLabel());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.Projector)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.summary.ProjectorOuterClass.Projector other = (org.oneflow.core.summary.ProjectorOuterClass.Projector) obj;
+
+      boolean result = true;
+      result = result && (hasTag() == other.hasTag());
+      if (hasTag()) {
+        result = result && getTag()
+            .equals(other.getTag());
+      }
+      result = result && (hasStep() == other.hasStep());
+      if (hasStep()) {
+        result = result && (getStep()
+            == other.getStep());
+      }
+      result = result && (hasWALLTIME() == other.hasWALLTIME());
+      if (hasWALLTIME()) {
+        result = result && (
+            java.lang.Double.doubleToLongBits(getWALLTIME())
+            == java.lang.Double.doubleToLongBits(
+                other.getWALLTIME()));
+      }
+      result = result && (hasValue() == other.hasValue());
+      if (hasValue()) {
+        result = result && getValue()
+            .equals(other.getValue());
+      }
+      result = result && (hasLabel() == other.hasLabel());
+      if (hasLabel()) {
+        result = result && getLabel()
+            .equals(other.getLabel());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasTag()) {
+        hash = (37 * hash) + TAG_FIELD_NUMBER;
+        hash = (53 * hash) + getTag().hashCode();
+      }
+      if (hasStep()) {
+        hash = (37 * hash) + STEP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getStep());
+      }
+      if (hasWALLTIME()) {
+        hash = (37 * hash) + WALL_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getWALLTIME()));
+      }
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      if (hasLabel()) {
+        hash = (37 * hash) + LABEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLabel().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.Projector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.Projector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.summary.Projector)
+        org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Projector_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Projector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.Projector.class, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.summary.ProjectorOuterClass.Projector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValueFieldBuilder();
+          getLabelFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        tag_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        step_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        wALLTIME_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          valueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (labelBuilder_ == null) {
+          label_ = null;
+        } else {
+          labelBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_Projector_descriptor;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector getDefaultInstanceForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.Projector.getDefaultInstance();
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector build() {
+        org.oneflow.core.summary.ProjectorOuterClass.Projector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector buildPartial() {
+        org.oneflow.core.summary.ProjectorOuterClass.Projector result = new org.oneflow.core.summary.ProjectorOuterClass.Projector(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.tag_ = tag_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.step_ = step_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.wALLTIME_ = wALLTIME_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (labelBuilder_ == null) {
+          result.label_ = label_;
+        } else {
+          result.label_ = labelBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.Projector) {
+          return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.Projector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.Projector other) {
+        if (other == org.oneflow.core.summary.ProjectorOuterClass.Projector.getDefaultInstance()) return this;
+        if (other.hasTag()) {
+          bitField0_ |= 0x00000001;
+          tag_ = other.tag_;
+          onChanged();
+        }
+        if (other.hasStep()) {
+          setStep(other.getStep());
+        }
+        if (other.hasWALLTIME()) {
+          setWALLTIME(other.getWALLTIME());
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        if (other.hasLabel()) {
+          mergeLabel(other.getLabel());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTag()) {
+          return false;
+        }
+        if (!hasWALLTIME()) {
+          return false;
+        }
+        if (!hasValue()) {
+          return false;
+        }
+        if (!getValue().isInitialized()) {
+          return false;
+        }
+        if (hasLabel()) {
+          if (!getLabel().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.summary.ProjectorOuterClass.Projector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.Projector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tag_ = "";
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public boolean hasTag() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            tag_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        java.lang.Object ref = tag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public Builder clearTag() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tag_ = getDefaultInstance().getTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string tag = 1;</code>
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long step_ ;
+      /**
+       * <code>optional int64 step = 2;</code>
+       */
+      public boolean hasStep() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int64 step = 2;</code>
+       */
+      public long getStep() {
+        return step_;
+      }
+      /**
+       * <code>optional int64 step = 2;</code>
+       */
+      public Builder setStep(long value) {
+        bitField0_ |= 0x00000002;
+        step_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 step = 2;</code>
+       */
+      public Builder clearStep() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        step_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double wALLTIME_ ;
+      /**
+       * <code>required double WALL_TIME = 3;</code>
+       */
+      public boolean hasWALLTIME() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required double WALL_TIME = 3;</code>
+       */
+      public double getWALLTIME() {
+        return wALLTIME_;
+      }
+      /**
+       * <code>required double WALL_TIME = 3;</code>
+       */
+      public Builder setWALLTIME(double value) {
+        bitField0_ |= 0x00000004;
+        wALLTIME_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required double WALL_TIME = 3;</code>
+       */
+      public Builder clearWALLTIME() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        wALLTIME_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.summary.ProjectorOuterClass.Tensor value_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> valueBuilder_;
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public Builder setValue(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public Builder setValue(
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public Builder mergeValue(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (valueBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              value_ != null &&
+              value_ != org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance()) {
+            value_ =
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          valueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder getValueBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.Tensor value = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+
+      private org.oneflow.core.summary.ProjectorOuterClass.Tensor label_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> labelBuilder_;
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public boolean hasLabel() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor getLabel() {
+        if (labelBuilder_ == null) {
+          return label_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : label_;
+        } else {
+          return labelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public Builder setLabel(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (labelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          label_ = value;
+          onChanged();
+        } else {
+          labelBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public Builder setLabel(
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder builderForValue) {
+        if (labelBuilder_ == null) {
+          label_ = builderForValue.build();
+          onChanged();
+        } else {
+          labelBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public Builder mergeLabel(org.oneflow.core.summary.ProjectorOuterClass.Tensor value) {
+        if (labelBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              label_ != null &&
+              label_ != org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance()) {
+            label_ =
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.newBuilder(label_).mergeFrom(value).buildPartial();
+          } else {
+            label_ = value;
+          }
+          onChanged();
+        } else {
+          labelBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public Builder clearLabel() {
+        if (labelBuilder_ == null) {
+          label_ = null;
+          onChanged();
+        } else {
+          labelBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder getLabelBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getLabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder getLabelOrBuilder() {
+        if (labelBuilder_ != null) {
+          return labelBuilder_.getMessageOrBuilder();
+        } else {
+          return label_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor.getDefaultInstance() : label_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.summary.Tensor label = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder> 
+          getLabelFieldBuilder() {
+        if (labelBuilder_ == null) {
+          labelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Tensor, org.oneflow.core.summary.ProjectorOuterClass.Tensor.Builder, org.oneflow.core.summary.ProjectorOuterClass.TensorOrBuilder>(
+                  getLabel(),
+                  getParentForChildren(),
+                  isClean());
+          label_ = null;
+        }
+        return labelBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.summary.Projector)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.summary.Projector)
+    private static final org.oneflow.core.summary.ProjectorOuterClass.Projector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.Projector();
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.Projector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Projector>
+        PARSER = new com.google.protobuf.AbstractParser<Projector>() {
+      public Projector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Projector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Projector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Projector> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.summary.ProjectorOuterClass.Projector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SummaryProjectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.summary.SummaryProjector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    boolean hasMetadata();
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.MetaData getMetadata();
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    boolean hasSample();
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Sample getSample();
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder getSampleOrBuilder();
+
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector> 
+        getProjectorList();
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.Projector getProjector(int index);
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    int getProjectorCount();
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder> 
+        getProjectorOrBuilderList();
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder getProjectorOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.summary.SummaryProjector}
+   */
+  public  static final class SummaryProjector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.summary.SummaryProjector)
+      SummaryProjectorOrBuilder {
+    // Use SummaryProjector.newBuilder() to construct.
+    private SummaryProjector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SummaryProjector() {
+      projector_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SummaryProjector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                projector_ = new java.util.ArrayList<org.oneflow.core.summary.ProjectorOuterClass.Projector>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              projector_.add(
+                  input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Projector.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = sample_.toBuilder();
+              }
+              sample_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.Sample.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sample_);
+                sample_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 50: {
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(org.oneflow.core.summary.ProjectorOuterClass.MetaData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          projector_ = java.util.Collections.unmodifiableList(projector_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_SummaryProjector_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_SummaryProjector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.class, org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int METADATA_FIELD_NUMBER = 6;
+    private org.oneflow.core.summary.ProjectorOuterClass.MetaData metadata_;
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.MetaData getMetadata() {
+      return metadata_ == null ? org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance() : metadata_;
+    }
+
+    public static final int SAMPLE_FIELD_NUMBER = 2;
+    private org.oneflow.core.summary.ProjectorOuterClass.Sample sample_;
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    public boolean hasSample() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Sample getSample() {
+      return sample_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance() : sample_;
+    }
+    /**
+     * <code>optional .oneflow.summary.Sample sample = 2;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder getSampleOrBuilder() {
+      return sample_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance() : sample_;
+    }
+
+    public static final int PROJECTOR_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector> projector_;
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector> getProjectorList() {
+      return projector_;
+    }
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder> 
+        getProjectorOrBuilderList() {
+      return projector_;
+    }
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    public int getProjectorCount() {
+      return projector_.size();
+    }
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.Projector getProjector(int index) {
+      return projector_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+     */
+    public org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder getProjectorOrBuilder(
+        int index) {
+      return projector_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasMetadata()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getMetadata().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasSample()) {
+        if (!getSample().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getProjectorCount(); i++) {
+        if (!getProjector(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < projector_.size(); i++) {
+        output.writeMessage(1, projector_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getSample());
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(6, getMetadata());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < projector_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, projector_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSample());
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getMetadata());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector other = (org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector) obj;
+
+      boolean result = true;
+      result = result && (hasMetadata() == other.hasMetadata());
+      if (hasMetadata()) {
+        result = result && getMetadata()
+            .equals(other.getMetadata());
+      }
+      result = result && (hasSample() == other.hasSample());
+      if (hasSample()) {
+        result = result && getSample()
+            .equals(other.getSample());
+      }
+      result = result && getProjectorList()
+          .equals(other.getProjectorList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasSample()) {
+        hash = (37 * hash) + SAMPLE_FIELD_NUMBER;
+        hash = (53 * hash) + getSample().hashCode();
+      }
+      if (getProjectorCount() > 0) {
+        hash = (37 * hash) + PROJECTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectorList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.summary.SummaryProjector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.summary.SummaryProjector)
+        org.oneflow.core.summary.ProjectorOuterClass.SummaryProjectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_SummaryProjector_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_SummaryProjector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.class, org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+          getSampleFieldBuilder();
+          getProjectorFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (sampleBuilder_ == null) {
+          sample_ = null;
+        } else {
+          sampleBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (projectorBuilder_ == null) {
+          projector_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          projectorBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.internal_static_oneflow_summary_SummaryProjector_descriptor;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector getDefaultInstanceForType() {
+        return org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.getDefaultInstance();
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector build() {
+        org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector buildPartial() {
+        org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector result = new org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (sampleBuilder_ == null) {
+          result.sample_ = sample_;
+        } else {
+          result.sample_ = sampleBuilder_.build();
+        }
+        if (projectorBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            projector_ = java.util.Collections.unmodifiableList(projector_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.projector_ = projector_;
+        } else {
+          result.projector_ = projectorBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector) {
+          return mergeFrom((org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector other) {
+        if (other == org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (other.hasSample()) {
+          mergeSample(other.getSample());
+        }
+        if (projectorBuilder_ == null) {
+          if (!other.projector_.isEmpty()) {
+            if (projector_.isEmpty()) {
+              projector_ = other.projector_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureProjectorIsMutable();
+              projector_.addAll(other.projector_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.projector_.isEmpty()) {
+            if (projectorBuilder_.isEmpty()) {
+              projectorBuilder_.dispose();
+              projectorBuilder_ = null;
+              projector_ = other.projector_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              projectorBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProjectorFieldBuilder() : null;
+            } else {
+              projectorBuilder_.addAllMessages(other.projector_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMetadata()) {
+          return false;
+        }
+        if (!getMetadata().isInitialized()) {
+          return false;
+        }
+        if (hasSample()) {
+          if (!getSample().isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getProjectorCount(); i++) {
+          if (!getProjector(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.summary.ProjectorOuterClass.MetaData metadata_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.MetaData, org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder, org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder> metadataBuilder_;
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public Builder setMetadata(org.oneflow.core.summary.ProjectorOuterClass.MetaData value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public Builder setMetadata(
+          org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public Builder mergeMetadata(org.oneflow.core.summary.ProjectorOuterClass.MetaData value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              metadata_ != null &&
+              metadata_ != org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance()) {
+            metadata_ =
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>required .oneflow.summary.MetaData metadata = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.MetaData, org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder, org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.MetaData, org.oneflow.core.summary.ProjectorOuterClass.MetaData.Builder, org.oneflow.core.summary.ProjectorOuterClass.MetaDataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private org.oneflow.core.summary.ProjectorOuterClass.Sample sample_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Sample, org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder, org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder> sampleBuilder_;
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public boolean hasSample() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample getSample() {
+        if (sampleBuilder_ == null) {
+          return sample_ == null ? org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance() : sample_;
+        } else {
+          return sampleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public Builder setSample(org.oneflow.core.summary.ProjectorOuterClass.Sample value) {
+        if (sampleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sample_ = value;
+          onChanged();
+        } else {
+          sampleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public Builder setSample(
+          org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder builderForValue) {
+        if (sampleBuilder_ == null) {
+          sample_ = builderForValue.build();
+          onChanged();
+        } else {
+          sampleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public Builder mergeSample(org.oneflow.core.summary.ProjectorOuterClass.Sample value) {
+        if (sampleBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              sample_ != null &&
+              sample_ != org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance()) {
+            sample_ =
+              org.oneflow.core.summary.ProjectorOuterClass.Sample.newBuilder(sample_).mergeFrom(value).buildPartial();
+          } else {
+            sample_ = value;
+          }
+          onChanged();
+        } else {
+          sampleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public Builder clearSample() {
+        if (sampleBuilder_ == null) {
+          sample_ = null;
+          onChanged();
+        } else {
+          sampleBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder getSampleBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSampleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder getSampleOrBuilder() {
+        if (sampleBuilder_ != null) {
+          return sampleBuilder_.getMessageOrBuilder();
+        } else {
+          return sample_ == null ?
+              org.oneflow.core.summary.ProjectorOuterClass.Sample.getDefaultInstance() : sample_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.summary.Sample sample = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Sample, org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder, org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder> 
+          getSampleFieldBuilder() {
+        if (sampleBuilder_ == null) {
+          sampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Sample, org.oneflow.core.summary.ProjectorOuterClass.Sample.Builder, org.oneflow.core.summary.ProjectorOuterClass.SampleOrBuilder>(
+                  getSample(),
+                  getParentForChildren(),
+                  isClean());
+          sample_ = null;
+        }
+        return sampleBuilder_;
+      }
+
+      private java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector> projector_ =
+        java.util.Collections.emptyList();
+      private void ensureProjectorIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          projector_ = new java.util.ArrayList<org.oneflow.core.summary.ProjectorOuterClass.Projector>(projector_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Projector, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder, org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder> projectorBuilder_;
+
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector> getProjectorList() {
+        if (projectorBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(projector_);
+        } else {
+          return projectorBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public int getProjectorCount() {
+        if (projectorBuilder_ == null) {
+          return projector_.size();
+        } else {
+          return projectorBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector getProjector(int index) {
+        if (projectorBuilder_ == null) {
+          return projector_.get(index);
+        } else {
+          return projectorBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder setProjector(
+          int index, org.oneflow.core.summary.ProjectorOuterClass.Projector value) {
+        if (projectorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectorIsMutable();
+          projector_.set(index, value);
+          onChanged();
+        } else {
+          projectorBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder setProjector(
+          int index, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder builderForValue) {
+        if (projectorBuilder_ == null) {
+          ensureProjectorIsMutable();
+          projector_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          projectorBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder addProjector(org.oneflow.core.summary.ProjectorOuterClass.Projector value) {
+        if (projectorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectorIsMutable();
+          projector_.add(value);
+          onChanged();
+        } else {
+          projectorBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder addProjector(
+          int index, org.oneflow.core.summary.ProjectorOuterClass.Projector value) {
+        if (projectorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectorIsMutable();
+          projector_.add(index, value);
+          onChanged();
+        } else {
+          projectorBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder addProjector(
+          org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder builderForValue) {
+        if (projectorBuilder_ == null) {
+          ensureProjectorIsMutable();
+          projector_.add(builderForValue.build());
+          onChanged();
+        } else {
+          projectorBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder addProjector(
+          int index, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder builderForValue) {
+        if (projectorBuilder_ == null) {
+          ensureProjectorIsMutable();
+          projector_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          projectorBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder addAllProjector(
+          java.lang.Iterable<? extends org.oneflow.core.summary.ProjectorOuterClass.Projector> values) {
+        if (projectorBuilder_ == null) {
+          ensureProjectorIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, projector_);
+          onChanged();
+        } else {
+          projectorBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder clearProjector() {
+        if (projectorBuilder_ == null) {
+          projector_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          projectorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public Builder removeProjector(int index) {
+        if (projectorBuilder_ == null) {
+          ensureProjectorIsMutable();
+          projector_.remove(index);
+          onChanged();
+        } else {
+          projectorBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder getProjectorBuilder(
+          int index) {
+        return getProjectorFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder getProjectorOrBuilder(
+          int index) {
+        if (projectorBuilder_ == null) {
+          return projector_.get(index);  } else {
+          return projectorBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder> 
+           getProjectorOrBuilderList() {
+        if (projectorBuilder_ != null) {
+          return projectorBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(projector_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder addProjectorBuilder() {
+        return getProjectorFieldBuilder().addBuilder(
+            org.oneflow.core.summary.ProjectorOuterClass.Projector.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder addProjectorBuilder(
+          int index) {
+        return getProjectorFieldBuilder().addBuilder(
+            index, org.oneflow.core.summary.ProjectorOuterClass.Projector.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.summary.Projector projector = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder> 
+           getProjectorBuilderList() {
+        return getProjectorFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.summary.ProjectorOuterClass.Projector, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder, org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder> 
+          getProjectorFieldBuilder() {
+        if (projectorBuilder_ == null) {
+          projectorBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.summary.ProjectorOuterClass.Projector, org.oneflow.core.summary.ProjectorOuterClass.Projector.Builder, org.oneflow.core.summary.ProjectorOuterClass.ProjectorOrBuilder>(
+                  projector_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          projector_ = null;
+        }
+        return projectorBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.summary.SummaryProjector)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.summary.SummaryProjector)
+    private static final org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector();
+    }
+
+    public static org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SummaryProjector>
+        PARSER = new com.google.protobuf.AbstractParser<SummaryProjector>() {
+      public SummaryProjector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SummaryProjector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SummaryProjector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SummaryProjector> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.summary.ProjectorOuterClass.SummaryProjector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_MetaData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_MetaData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_Tensor_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_Tensor_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_Tensor_TensorShape_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_Tensor_TensorShape_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_Tensor_TensorShape_Dim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_Tensor_TensorShape_Dim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_Sample_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_Sample_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_Projector_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_Projector_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_summary_SummaryProjector_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_summary_SummaryProjector_fieldAccessorTable;
 
@@ -78,8 +6417,8 @@ public final class ProjectorOuterClass {
       "sor\"\227\001\n\020SummaryProjector\022+\n\010metadata\030\006 \002" +
       "(\0132\031.oneflow.summary.MetaData\022\'\n\006sample\030" +
       "\002 \001(\0132\027.oneflow.summary.Sample\022-\n\tprojec",
-      "tor\030\001 \003(\0132\032.oneflow.summary.ProjectorB\034\n" +
-      "\030org.oneflow.core.summaryP\001"
+      "tor\030\001 \003(\0132\032.oneflow.summary.ProjectorB\032\n" +
+      "\030org.oneflow.core.summary"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

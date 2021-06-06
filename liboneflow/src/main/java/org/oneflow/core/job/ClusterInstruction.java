@@ -14,24 +14,2591 @@ public final class ClusterInstruction {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ClusterCtrlSessionStartOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ClusterCtrlSessionStart)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.ClusterCtrlSessionStart}
+   */
+  public  static final class ClusterCtrlSessionStart extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ClusterCtrlSessionStart)
+      ClusterCtrlSessionStartOrBuilder {
+    // Use ClusterCtrlSessionStart.newBuilder() to construct.
+    private ClusterCtrlSessionStart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterCtrlSessionStart() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterCtrlSessionStart(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlSessionStart_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlSessionStart_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart other = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ClusterCtrlSessionStart}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ClusterCtrlSessionStart)
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlSessionStart_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlSessionStart_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlSessionStart_descriptor;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getDefaultInstanceForType() {
+        return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart build() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart buildPartial() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart result = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) {
+          return mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart other) {
+        if (other == org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ClusterCtrlSessionStart)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ClusterCtrlSessionStart)
+    private static final org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart();
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClusterCtrlSessionStart>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterCtrlSessionStart>() {
+      public ClusterCtrlSessionStart parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClusterCtrlSessionStart(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterCtrlSessionStart> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterCtrlSessionStart> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClusterCtrlHaltOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ClusterCtrlHalt)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.ClusterCtrlHalt}
+   */
+  public  static final class ClusterCtrlHalt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ClusterCtrlHalt)
+      ClusterCtrlHaltOrBuilder {
+    // Use ClusterCtrlHalt.newBuilder() to construct.
+    private ClusterCtrlHalt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterCtrlHalt() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterCtrlHalt(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlHalt_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlHalt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt other = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ClusterCtrlHalt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ClusterCtrlHalt)
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlHalt_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlHalt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlHalt_descriptor;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getDefaultInstanceForType() {
+        return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt build() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt buildPartial() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt result = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) {
+          return mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt other) {
+        if (other == org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ClusterCtrlHalt)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ClusterCtrlHalt)
+    private static final org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt();
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClusterCtrlHalt>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterCtrlHalt>() {
+      public ClusterCtrlHalt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClusterCtrlHalt(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterCtrlHalt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterCtrlHalt> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClusterCtrlAbortOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ClusterCtrlAbort)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.ClusterCtrlAbort}
+   */
+  public  static final class ClusterCtrlAbort extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ClusterCtrlAbort)
+      ClusterCtrlAbortOrBuilder {
+    // Use ClusterCtrlAbort.newBuilder() to construct.
+    private ClusterCtrlAbort(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterCtrlAbort() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterCtrlAbort(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlAbort_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlAbort_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort other = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ClusterCtrlAbort}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ClusterCtrlAbort)
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlAbort_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlAbort_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.class, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterCtrlAbort_descriptor;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getDefaultInstanceForType() {
+        return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort build() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort buildPartial() {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort result = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) {
+          return mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort other) {
+        if (other == org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ClusterCtrlAbort)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ClusterCtrlAbort)
+    private static final org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort();
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClusterCtrlAbort>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterCtrlAbort>() {
+      public ClusterCtrlAbort parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClusterCtrlAbort(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterCtrlAbort> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterCtrlAbort> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClusterInstructionProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.ClusterInstructionProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    boolean hasClusterCtrlSessionStart();
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getClusterCtrlSessionStart();
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder getClusterCtrlSessionStartOrBuilder();
+
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    boolean hasClusterCtrlHalt();
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getClusterCtrlHalt();
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder getClusterCtrlHaltOrBuilder();
+
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    boolean hasEagerInstruction();
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction getEagerInstruction();
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder getEagerInstructionOrBuilder();
+
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    boolean hasClusterCtrlAbort();
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getClusterCtrlAbort();
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder getClusterCtrlAbortOrBuilder();
+
+    public org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.InstructionTypeCase getInstructionTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.ClusterInstructionProto}
+   */
+  public  static final class ClusterInstructionProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.ClusterInstructionProto)
+      ClusterInstructionProtoOrBuilder {
+    // Use ClusterInstructionProto.newBuilder() to construct.
+    private ClusterInstructionProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterInstructionProto() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterInstructionProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder subBuilder = null;
+              if (instructionTypeCase_ == 1) {
+                subBuilder = ((org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_).toBuilder();
+              }
+              instructionType_ =
+                  input.readMessage(org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_);
+                instructionType_ = subBuilder.buildPartial();
+              }
+              instructionTypeCase_ = 1;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder subBuilder = null;
+              if (instructionTypeCase_ == 2) {
+                subBuilder = ((org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_).toBuilder();
+              }
+              instructionType_ =
+                  input.readMessage(org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_);
+                instructionType_ = subBuilder.buildPartial();
+              }
+              instructionTypeCase_ = 2;
+              break;
+            }
+            case 26: {
+              org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder subBuilder = null;
+              if (instructionTypeCase_ == 3) {
+                subBuilder = ((org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_).toBuilder();
+              }
+              instructionType_ =
+                  input.readMessage(org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_);
+                instructionType_ = subBuilder.buildPartial();
+              }
+              instructionTypeCase_ = 3;
+              break;
+            }
+            case 42: {
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder subBuilder = null;
+              if (instructionTypeCase_ == 5) {
+                subBuilder = ((org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_).toBuilder();
+              }
+              instructionType_ =
+                  input.readMessage(org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_);
+                instructionType_ = subBuilder.buildPartial();
+              }
+              instructionTypeCase_ = 5;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterInstructionProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterInstructionProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.class, org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.Builder.class);
+    }
+
+    private int bitField0_;
+    private int instructionTypeCase_ = 0;
+    private java.lang.Object instructionType_;
+    public enum InstructionTypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CLUSTER_CTRL_SESSION_START(1),
+      CLUSTER_CTRL_HALT(2),
+      EAGER_INSTRUCTION(3),
+      CLUSTER_CTRL_ABORT(5),
+      INSTRUCTIONTYPE_NOT_SET(0);
+      private final int value;
+      private InstructionTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InstructionTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static InstructionTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return CLUSTER_CTRL_SESSION_START;
+          case 2: return CLUSTER_CTRL_HALT;
+          case 3: return EAGER_INSTRUCTION;
+          case 5: return CLUSTER_CTRL_ABORT;
+          case 0: return INSTRUCTIONTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public InstructionTypeCase
+    getInstructionTypeCase() {
+      return InstructionTypeCase.forNumber(
+          instructionTypeCase_);
+    }
+
+    public static final int CLUSTER_CTRL_SESSION_START_FIELD_NUMBER = 1;
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    public boolean hasClusterCtrlSessionStart() {
+      return instructionTypeCase_ == 1;
+    }
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getClusterCtrlSessionStart() {
+      if (instructionTypeCase_ == 1) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder getClusterCtrlSessionStartOrBuilder() {
+      if (instructionTypeCase_ == 1) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+    }
+
+    public static final int CLUSTER_CTRL_HALT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    public boolean hasClusterCtrlHalt() {
+      return instructionTypeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getClusterCtrlHalt() {
+      if (instructionTypeCase_ == 2) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * normal exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder getClusterCtrlHaltOrBuilder() {
+      if (instructionTypeCase_ == 2) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+    }
+
+    public static final int EAGER_INSTRUCTION_FIELD_NUMBER = 3;
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    public boolean hasEagerInstruction() {
+      return instructionTypeCase_ == 3;
+    }
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    public org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction getEagerInstruction() {
+      if (instructionTypeCase_ == 3) {
+         return (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_;
+      }
+      return org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+     */
+    public org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder getEagerInstructionOrBuilder() {
+      if (instructionTypeCase_ == 3) {
+         return (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_;
+      }
+      return org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+    }
+
+    public static final int CLUSTER_CTRL_ABORT_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    public boolean hasClusterCtrlAbort() {
+      return instructionTypeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getClusterCtrlAbort() {
+      if (instructionTypeCase_ == 5) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * error exit
+     * </pre>
+     *
+     * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+     */
+    public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder getClusterCtrlAbortOrBuilder() {
+      if (instructionTypeCase_ == 5) {
+         return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_;
+      }
+      return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasEagerInstruction()) {
+        if (!getEagerInstruction().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (instructionTypeCase_ == 1) {
+        output.writeMessage(1, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_);
+      }
+      if (instructionTypeCase_ == 2) {
+        output.writeMessage(2, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_);
+      }
+      if (instructionTypeCase_ == 3) {
+        output.writeMessage(3, (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_);
+      }
+      if (instructionTypeCase_ == 5) {
+        output.writeMessage(5, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (instructionTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_);
+      }
+      if (instructionTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_);
+      }
+      if (instructionTypeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_);
+      }
+      if (instructionTypeCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto other = (org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto) obj;
+
+      boolean result = true;
+      result = result && getInstructionTypeCase().equals(
+          other.getInstructionTypeCase());
+      if (!result) return false;
+      switch (instructionTypeCase_) {
+        case 1:
+          result = result && getClusterCtrlSessionStart()
+              .equals(other.getClusterCtrlSessionStart());
+          break;
+        case 2:
+          result = result && getClusterCtrlHalt()
+              .equals(other.getClusterCtrlHalt());
+          break;
+        case 3:
+          result = result && getEagerInstruction()
+              .equals(other.getEagerInstruction());
+          break;
+        case 5:
+          result = result && getClusterCtrlAbort()
+              .equals(other.getClusterCtrlAbort());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (instructionTypeCase_) {
+        case 1:
+          hash = (37 * hash) + CLUSTER_CTRL_SESSION_START_FIELD_NUMBER;
+          hash = (53 * hash) + getClusterCtrlSessionStart().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + CLUSTER_CTRL_HALT_FIELD_NUMBER;
+          hash = (53 * hash) + getClusterCtrlHalt().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + EAGER_INSTRUCTION_FIELD_NUMBER;
+          hash = (53 * hash) + getEagerInstruction().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + CLUSTER_CTRL_ABORT_FIELD_NUMBER;
+          hash = (53 * hash) + getClusterCtrlAbort().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.ClusterInstructionProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.ClusterInstructionProto)
+        org.oneflow.core.job.ClusterInstruction.ClusterInstructionProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterInstructionProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterInstructionProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.class, org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        instructionTypeCase_ = 0;
+        instructionType_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.ClusterInstruction.internal_static_oneflow_ClusterInstructionProto_descriptor;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto getDefaultInstanceForType() {
+        return org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto build() {
+        org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto buildPartial() {
+        org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto result = new org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (instructionTypeCase_ == 1) {
+          if (clusterCtrlSessionStartBuilder_ == null) {
+            result.instructionType_ = instructionType_;
+          } else {
+            result.instructionType_ = clusterCtrlSessionStartBuilder_.build();
+          }
+        }
+        if (instructionTypeCase_ == 2) {
+          if (clusterCtrlHaltBuilder_ == null) {
+            result.instructionType_ = instructionType_;
+          } else {
+            result.instructionType_ = clusterCtrlHaltBuilder_.build();
+          }
+        }
+        if (instructionTypeCase_ == 3) {
+          if (eagerInstructionBuilder_ == null) {
+            result.instructionType_ = instructionType_;
+          } else {
+            result.instructionType_ = eagerInstructionBuilder_.build();
+          }
+        }
+        if (instructionTypeCase_ == 5) {
+          if (clusterCtrlAbortBuilder_ == null) {
+            result.instructionType_ = instructionType_;
+          } else {
+            result.instructionType_ = clusterCtrlAbortBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.instructionTypeCase_ = instructionTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto) {
+          return mergeFrom((org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto other) {
+        if (other == org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto.getDefaultInstance()) return this;
+        switch (other.getInstructionTypeCase()) {
+          case CLUSTER_CTRL_SESSION_START: {
+            mergeClusterCtrlSessionStart(other.getClusterCtrlSessionStart());
+            break;
+          }
+          case CLUSTER_CTRL_HALT: {
+            mergeClusterCtrlHalt(other.getClusterCtrlHalt());
+            break;
+          }
+          case EAGER_INSTRUCTION: {
+            mergeEagerInstruction(other.getEagerInstruction());
+            break;
+          }
+          case CLUSTER_CTRL_ABORT: {
+            mergeClusterCtrlAbort(other.getClusterCtrlAbort());
+            break;
+          }
+          case INSTRUCTIONTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasEagerInstruction()) {
+          if (!getEagerInstruction().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int instructionTypeCase_ = 0;
+      private java.lang.Object instructionType_;
+      public InstructionTypeCase
+          getInstructionTypeCase() {
+        return InstructionTypeCase.forNumber(
+            instructionTypeCase_);
+      }
+
+      public Builder clearInstructionType() {
+        instructionTypeCase_ = 0;
+        instructionType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder> clusterCtrlSessionStartBuilder_;
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public boolean hasClusterCtrlSessionStart() {
+        return instructionTypeCase_ == 1;
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart getClusterCtrlSessionStart() {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          if (instructionTypeCase_ == 1) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+        } else {
+          if (instructionTypeCase_ == 1) {
+            return clusterCtrlSessionStartBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public Builder setClusterCtrlSessionStart(org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart value) {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instructionType_ = value;
+          onChanged();
+        } else {
+          clusterCtrlSessionStartBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public Builder setClusterCtrlSessionStart(
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder builderForValue) {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          instructionType_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterCtrlSessionStartBuilder_.setMessage(builderForValue.build());
+        }
+        instructionTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public Builder mergeClusterCtrlSessionStart(org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart value) {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          if (instructionTypeCase_ == 1 &&
+              instructionType_ != org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance()) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.newBuilder((org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            instructionType_ = value;
+          }
+          onChanged();
+        } else {
+          if (instructionTypeCase_ == 1) {
+            clusterCtrlSessionStartBuilder_.mergeFrom(value);
+          }
+          clusterCtrlSessionStartBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public Builder clearClusterCtrlSessionStart() {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          if (instructionTypeCase_ == 1) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+            onChanged();
+          }
+        } else {
+          if (instructionTypeCase_ == 1) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+          }
+          clusterCtrlSessionStartBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder getClusterCtrlSessionStartBuilder() {
+        return getClusterCtrlSessionStartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder getClusterCtrlSessionStartOrBuilder() {
+        if ((instructionTypeCase_ == 1) && (clusterCtrlSessionStartBuilder_ != null)) {
+          return clusterCtrlSessionStartBuilder_.getMessageOrBuilder();
+        } else {
+          if (instructionTypeCase_ == 1) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ClusterCtrlSessionStart cluster_ctrl_session_start = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder> 
+          getClusterCtrlSessionStartFieldBuilder() {
+        if (clusterCtrlSessionStartBuilder_ == null) {
+          if (!(instructionTypeCase_ == 1)) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.getDefaultInstance();
+          }
+          clusterCtrlSessionStartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStartOrBuilder>(
+                  (org.oneflow.core.job.ClusterInstruction.ClusterCtrlSessionStart) instructionType_,
+                  getParentForChildren(),
+                  isClean());
+          instructionType_ = null;
+        }
+        instructionTypeCase_ = 1;
+        onChanged();;
+        return clusterCtrlSessionStartBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder> clusterCtrlHaltBuilder_;
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public boolean hasClusterCtrlHalt() {
+        return instructionTypeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt getClusterCtrlHalt() {
+        if (clusterCtrlHaltBuilder_ == null) {
+          if (instructionTypeCase_ == 2) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+        } else {
+          if (instructionTypeCase_ == 2) {
+            return clusterCtrlHaltBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public Builder setClusterCtrlHalt(org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt value) {
+        if (clusterCtrlHaltBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instructionType_ = value;
+          onChanged();
+        } else {
+          clusterCtrlHaltBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public Builder setClusterCtrlHalt(
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder builderForValue) {
+        if (clusterCtrlHaltBuilder_ == null) {
+          instructionType_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterCtrlHaltBuilder_.setMessage(builderForValue.build());
+        }
+        instructionTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public Builder mergeClusterCtrlHalt(org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt value) {
+        if (clusterCtrlHaltBuilder_ == null) {
+          if (instructionTypeCase_ == 2 &&
+              instructionType_ != org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance()) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.newBuilder((org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            instructionType_ = value;
+          }
+          onChanged();
+        } else {
+          if (instructionTypeCase_ == 2) {
+            clusterCtrlHaltBuilder_.mergeFrom(value);
+          }
+          clusterCtrlHaltBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public Builder clearClusterCtrlHalt() {
+        if (clusterCtrlHaltBuilder_ == null) {
+          if (instructionTypeCase_ == 2) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+            onChanged();
+          }
+        } else {
+          if (instructionTypeCase_ == 2) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+          }
+          clusterCtrlHaltBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder getClusterCtrlHaltBuilder() {
+        return getClusterCtrlHaltFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder getClusterCtrlHaltOrBuilder() {
+        if ((instructionTypeCase_ == 2) && (clusterCtrlHaltBuilder_ != null)) {
+          return clusterCtrlHaltBuilder_.getMessageOrBuilder();
+        } else {
+          if (instructionTypeCase_ == 2) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * normal exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlHalt cluster_ctrl_halt = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder> 
+          getClusterCtrlHaltFieldBuilder() {
+        if (clusterCtrlHaltBuilder_ == null) {
+          if (!(instructionTypeCase_ == 2)) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.getDefaultInstance();
+          }
+          clusterCtrlHaltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlHaltOrBuilder>(
+                  (org.oneflow.core.job.ClusterInstruction.ClusterCtrlHalt) instructionType_,
+                  getParentForChildren(),
+                  isClean());
+          instructionType_ = null;
+        }
+        instructionTypeCase_ = 2;
+        onChanged();;
+        return clusterCtrlHaltBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder> eagerInstructionBuilder_;
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public boolean hasEagerInstruction() {
+        return instructionTypeCase_ == 3;
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction getEagerInstruction() {
+        if (eagerInstructionBuilder_ == null) {
+          if (instructionTypeCase_ == 3) {
+            return (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_;
+          }
+          return org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+        } else {
+          if (instructionTypeCase_ == 3) {
+            return eagerInstructionBuilder_.getMessage();
+          }
+          return org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public Builder setEagerInstruction(org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction value) {
+        if (eagerInstructionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instructionType_ = value;
+          onChanged();
+        } else {
+          eagerInstructionBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public Builder setEagerInstruction(
+          org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder builderForValue) {
+        if (eagerInstructionBuilder_ == null) {
+          instructionType_ = builderForValue.build();
+          onChanged();
+        } else {
+          eagerInstructionBuilder_.setMessage(builderForValue.build());
+        }
+        instructionTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public Builder mergeEagerInstruction(org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction value) {
+        if (eagerInstructionBuilder_ == null) {
+          if (instructionTypeCase_ == 3 &&
+              instructionType_ != org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance()) {
+            instructionType_ = org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.newBuilder((org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            instructionType_ = value;
+          }
+          onChanged();
+        } else {
+          if (instructionTypeCase_ == 3) {
+            eagerInstructionBuilder_.mergeFrom(value);
+          }
+          eagerInstructionBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public Builder clearEagerInstruction() {
+        if (eagerInstructionBuilder_ == null) {
+          if (instructionTypeCase_ == 3) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+            onChanged();
+          }
+        } else {
+          if (instructionTypeCase_ == 3) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+          }
+          eagerInstructionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder getEagerInstructionBuilder() {
+        return getEagerInstructionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      public org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder getEagerInstructionOrBuilder() {
+        if ((instructionTypeCase_ == 3) && (eagerInstructionBuilder_ != null)) {
+          return eagerInstructionBuilder_.getMessageOrBuilder();
+        } else {
+          if (instructionTypeCase_ == 3) {
+            return (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_;
+          }
+          return org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.vm.EagerInstruction eager_instruction = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder> 
+          getEagerInstructionFieldBuilder() {
+        if (eagerInstructionBuilder_ == null) {
+          if (!(instructionTypeCase_ == 3)) {
+            instructionType_ = org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.getDefaultInstance();
+          }
+          eagerInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction.Builder, org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstructionOrBuilder>(
+                  (org.oneflow.core.eager.EagerInstructionOuterClass.EagerInstruction) instructionType_,
+                  getParentForChildren(),
+                  isClean());
+          instructionType_ = null;
+        }
+        instructionTypeCase_ = 3;
+        onChanged();;
+        return eagerInstructionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder> clusterCtrlAbortBuilder_;
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public boolean hasClusterCtrlAbort() {
+        return instructionTypeCase_ == 5;
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort getClusterCtrlAbort() {
+        if (clusterCtrlAbortBuilder_ == null) {
+          if (instructionTypeCase_ == 5) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+        } else {
+          if (instructionTypeCase_ == 5) {
+            return clusterCtrlAbortBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public Builder setClusterCtrlAbort(org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort value) {
+        if (clusterCtrlAbortBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instructionType_ = value;
+          onChanged();
+        } else {
+          clusterCtrlAbortBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public Builder setClusterCtrlAbort(
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder builderForValue) {
+        if (clusterCtrlAbortBuilder_ == null) {
+          instructionType_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterCtrlAbortBuilder_.setMessage(builderForValue.build());
+        }
+        instructionTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public Builder mergeClusterCtrlAbort(org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort value) {
+        if (clusterCtrlAbortBuilder_ == null) {
+          if (instructionTypeCase_ == 5 &&
+              instructionType_ != org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance()) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.newBuilder((org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            instructionType_ = value;
+          }
+          onChanged();
+        } else {
+          if (instructionTypeCase_ == 5) {
+            clusterCtrlAbortBuilder_.mergeFrom(value);
+          }
+          clusterCtrlAbortBuilder_.setMessage(value);
+        }
+        instructionTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public Builder clearClusterCtrlAbort() {
+        if (clusterCtrlAbortBuilder_ == null) {
+          if (instructionTypeCase_ == 5) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+            onChanged();
+          }
+        } else {
+          if (instructionTypeCase_ == 5) {
+            instructionTypeCase_ = 0;
+            instructionType_ = null;
+          }
+          clusterCtrlAbortBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder getClusterCtrlAbortBuilder() {
+        return getClusterCtrlAbortFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      public org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder getClusterCtrlAbortOrBuilder() {
+        if ((instructionTypeCase_ == 5) && (clusterCtrlAbortBuilder_ != null)) {
+          return clusterCtrlAbortBuilder_.getMessageOrBuilder();
+        } else {
+          if (instructionTypeCase_ == 5) {
+            return (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_;
+          }
+          return org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * error exit
+       * </pre>
+       *
+       * <code>optional .oneflow.ClusterCtrlAbort cluster_ctrl_abort = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder> 
+          getClusterCtrlAbortFieldBuilder() {
+        if (clusterCtrlAbortBuilder_ == null) {
+          if (!(instructionTypeCase_ == 5)) {
+            instructionType_ = org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.getDefaultInstance();
+          }
+          clusterCtrlAbortBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort.Builder, org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbortOrBuilder>(
+                  (org.oneflow.core.job.ClusterInstruction.ClusterCtrlAbort) instructionType_,
+                  getParentForChildren(),
+                  isClean());
+          instructionType_ = null;
+        }
+        instructionTypeCase_ = 5;
+        onChanged();;
+        return clusterCtrlAbortBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.ClusterInstructionProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.ClusterInstructionProto)
+    private static final org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto();
+    }
+
+    public static org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClusterInstructionProto>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterInstructionProto>() {
+      public ClusterInstructionProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClusterInstructionProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterInstructionProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterInstructionProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.ClusterInstruction.ClusterInstructionProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterCtrlSessionStart_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterCtrlSessionStart_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterCtrlHalt_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterCtrlHalt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterCtrlAbort_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterCtrlAbort_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ClusterInstructionProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ClusterInstructionProto_fieldAccessorTable;
 
@@ -54,7 +2621,7 @@ public final class ClusterInstruction {
       "\n\021eager_instruction\030\003 \001(\0132\034.oneflow.vm.E" +
       "agerInstructionH\000\0227\n\022cluster_ctrl_abort\030",
       "\005 \001(\0132\031.oneflow.ClusterCtrlAbortH\000B\022\n\020in" +
-      "struction_typeB\030\n\024org.oneflow.core.jobP\001"
+      "struction_typeB\026\n\024org.oneflow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

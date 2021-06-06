@@ -14,19 +14,3386 @@ public final class UserOpDefOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface UserOpDefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.UserOpDef)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> 
+        getInputList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getInput(int index);
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    int getInputCount();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+        getInputOrBuilderList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getInputOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> 
+        getOutputList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getOutput(int index);
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    int getOutputCount();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+        getOutputOrBuilderList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getOutputOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> 
+        getAttrList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getAttr(int index);
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    int getAttrCount();
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder> 
+        getAttrOrBuilderList();
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder getAttrOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.UserOpDef}
+   */
+  public  static final class UserOpDef extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.UserOpDef)
+      UserOpDefOrBuilder {
+    // Use UserOpDef.newBuilder() to construct.
+    private UserOpDef(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserOpDef() {
+      name_ = "";
+      input_ = java.util.Collections.emptyList();
+      output_ = java.util.Collections.emptyList();
+      attr_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserOpDef(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                input_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              input_.add(
+                  input.readMessage(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.PARSER, extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                output_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              output_.add(
+                  input.readMessage(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.PARSER, extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                attr_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              attr_.add(
+                  input.readMessage(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          input_ = java.util.Collections.unmodifiableList(input_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          output_ = java.util.Collections.unmodifiableList(output_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          attr_ = java.util.Collections.unmodifiableList(attr_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.Builder.class);
+    }
+
+    public interface ArgDefOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:oneflow.UserOpDef.ArgDef)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      boolean hasName();
+      /**
+       * <code>required string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <code>required string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional bool is_optional = 2 [default = false];</code>
+       */
+      boolean hasIsOptional();
+      /**
+       * <code>optional bool is_optional = 2 [default = false];</code>
+       */
+      boolean getIsOptional();
+
+      /**
+       * <code>required int32 num = 3;</code>
+       */
+      boolean hasNum();
+      /**
+       * <code>required int32 num = 3;</code>
+       */
+      int getNum();
+
+      /**
+       * <code>required bool num_as_min = 4;</code>
+       */
+      boolean hasNumAsMin();
+      /**
+       * <code>required bool num_as_min = 4;</code>
+       */
+      boolean getNumAsMin();
+    }
+    /**
+     * Protobuf type {@code oneflow.UserOpDef.ArgDef}
+     */
+    public  static final class ArgDef extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:oneflow.UserOpDef.ArgDef)
+        ArgDefOrBuilder {
+      // Use ArgDef.newBuilder() to construct.
+      private ArgDef(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ArgDef() {
+        name_ = "";
+        isOptional_ = false;
+        num_ = 0;
+        numAsMin_ = false;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ArgDef(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                isOptional_ = input.readBool();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                num_ = input.readInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                numAsMin_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_ArgDef_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_ArgDef_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int IS_OPTIONAL_FIELD_NUMBER = 2;
+      private boolean isOptional_;
+      /**
+       * <code>optional bool is_optional = 2 [default = false];</code>
+       */
+      public boolean hasIsOptional() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bool is_optional = 2 [default = false];</code>
+       */
+      public boolean getIsOptional() {
+        return isOptional_;
+      }
+
+      public static final int NUM_FIELD_NUMBER = 3;
+      private int num_;
+      /**
+       * <code>required int32 num = 3;</code>
+       */
+      public boolean hasNum() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 num = 3;</code>
+       */
+      public int getNum() {
+        return num_;
+      }
+
+      public static final int NUM_AS_MIN_FIELD_NUMBER = 4;
+      private boolean numAsMin_;
+      /**
+       * <code>required bool num_as_min = 4;</code>
+       */
+      public boolean hasNumAsMin() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required bool num_as_min = 4;</code>
+       */
+      public boolean getNumAsMin() {
+        return numAsMin_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        if (!hasName()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasNum()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasNumAsMin()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBool(2, isOptional_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeInt32(3, num_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeBool(4, numAsMin_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, isOptional_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, num_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, numAsMin_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef)) {
+          return super.equals(obj);
+        }
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef other = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef) obj;
+
+        boolean result = true;
+        result = result && (hasName() == other.hasName());
+        if (hasName()) {
+          result = result && getName()
+              .equals(other.getName());
+        }
+        result = result && (hasIsOptional() == other.hasIsOptional());
+        if (hasIsOptional()) {
+          result = result && (getIsOptional()
+              == other.getIsOptional());
+        }
+        result = result && (hasNum() == other.hasNum());
+        if (hasNum()) {
+          result = result && (getNum()
+              == other.getNum());
+        }
+        result = result && (hasNumAsMin() == other.hasNumAsMin());
+        if (hasNumAsMin()) {
+          result = result && (getNumAsMin()
+              == other.getNumAsMin());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (hasName()) {
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+        }
+        if (hasIsOptional()) {
+          hash = (37 * hash) + IS_OPTIONAL_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getIsOptional());
+        }
+        if (hasNum()) {
+          hash = (37 * hash) + NUM_FIELD_NUMBER;
+          hash = (53 * hash) + getNum();
+        }
+        if (hasNumAsMin()) {
+          hash = (37 * hash) + NUM_AS_MIN_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getNumAsMin());
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code oneflow.UserOpDef.ArgDef}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:oneflow.UserOpDef.ArgDef)
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_ArgDef_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_ArgDef_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder.class);
+        }
+
+        // Construct using org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          isOptional_ = false;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          num_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          numAsMin_ = false;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_ArgDef_descriptor;
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getDefaultInstanceForType() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance();
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef build() {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef buildPartial() {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef result = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.isOptional_ = isOptional_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.num_ = num_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.numAsMin_ = numAsMin_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef) {
+            return mergeFrom((org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef other) {
+          if (other == org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasIsOptional()) {
+            setIsOptional(other.getIsOptional());
+          }
+          if (other.hasNum()) {
+            setNum(other.getNum());
+          }
+          if (other.hasNumAsMin()) {
+            setNumAsMin(other.getNumAsMin());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          if (!hasName()) {
+            return false;
+          }
+          if (!hasNum()) {
+            return false;
+          }
+          if (!hasNumAsMin()) {
+            return false;
+          }
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean isOptional_ ;
+        /**
+         * <code>optional bool is_optional = 2 [default = false];</code>
+         */
+        public boolean hasIsOptional() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional bool is_optional = 2 [default = false];</code>
+         */
+        public boolean getIsOptional() {
+          return isOptional_;
+        }
+        /**
+         * <code>optional bool is_optional = 2 [default = false];</code>
+         */
+        public Builder setIsOptional(boolean value) {
+          bitField0_ |= 0x00000002;
+          isOptional_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool is_optional = 2 [default = false];</code>
+         */
+        public Builder clearIsOptional() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          isOptional_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int num_ ;
+        /**
+         * <code>required int32 num = 3;</code>
+         */
+        public boolean hasNum() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>required int32 num = 3;</code>
+         */
+        public int getNum() {
+          return num_;
+        }
+        /**
+         * <code>required int32 num = 3;</code>
+         */
+        public Builder setNum(int value) {
+          bitField0_ |= 0x00000004;
+          num_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required int32 num = 3;</code>
+         */
+        public Builder clearNum() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          num_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean numAsMin_ ;
+        /**
+         * <code>required bool num_as_min = 4;</code>
+         */
+        public boolean hasNumAsMin() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>required bool num_as_min = 4;</code>
+         */
+        public boolean getNumAsMin() {
+          return numAsMin_;
+        }
+        /**
+         * <code>required bool num_as_min = 4;</code>
+         */
+        public Builder setNumAsMin(boolean value) {
+          bitField0_ |= 0x00000008;
+          numAsMin_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required bool num_as_min = 4;</code>
+         */
+        public Builder clearNumAsMin() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          numAsMin_ = false;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:oneflow.UserOpDef.ArgDef)
+      }
+
+      // @@protoc_insertion_point(class_scope:oneflow.UserOpDef.ArgDef)
+      private static final org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef();
+      }
+
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ArgDef>
+          PARSER = new com.google.protobuf.AbstractParser<ArgDef>() {
+        public ArgDef parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ArgDef(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ArgDef> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ArgDef> getParserForType() {
+        return PARSER;
+      }
+
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AttrDefOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:oneflow.UserOpDef.AttrDef)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>required string name = 1;</code>
+       */
+      boolean hasName();
+      /**
+       * <code>required string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <code>required string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>required .oneflow.AttrType type = 2;</code>
+       */
+      boolean hasType();
+      /**
+       * <code>required .oneflow.AttrType type = 2;</code>
+       */
+      org.oneflow.core.framework.UserOpAttr.AttrType getType();
+
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      boolean hasDefaultVal();
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      org.oneflow.core.framework.UserOpAttr.AttrValue getDefaultVal();
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder getDefaultValOrBuilder();
+    }
+    /**
+     * Protobuf type {@code oneflow.UserOpDef.AttrDef}
+     */
+    public  static final class AttrDef extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:oneflow.UserOpDef.AttrDef)
+        AttrDefOrBuilder {
+      // Use AttrDef.newBuilder() to construct.
+      private AttrDef(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AttrDef() {
+        name_ = "";
+        type_ = 1;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AttrDef(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+                org.oneflow.core.framework.UserOpAttr.AttrType value = org.oneflow.core.framework.UserOpAttr.AttrType.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(2, rawValue);
+                } else {
+                  bitField0_ |= 0x00000002;
+                  type_ = rawValue;
+                }
+                break;
+              }
+              case 26: {
+                org.oneflow.core.framework.UserOpAttr.AttrValue.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                  subBuilder = defaultVal_.toBuilder();
+                }
+                defaultVal_ = input.readMessage(org.oneflow.core.framework.UserOpAttr.AttrValue.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(defaultVal_);
+                  defaultVal_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000004;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_AttrDef_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_AttrDef_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 2;
+      private int type_;
+      /**
+       * <code>required .oneflow.AttrType type = 2;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.AttrType type = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpAttr.AttrType getType() {
+        org.oneflow.core.framework.UserOpAttr.AttrType result = org.oneflow.core.framework.UserOpAttr.AttrType.valueOf(type_);
+        return result == null ? org.oneflow.core.framework.UserOpAttr.AttrType.kAtInt32 : result;
+      }
+
+      public static final int DEFAULT_VAL_FIELD_NUMBER = 3;
+      private org.oneflow.core.framework.UserOpAttr.AttrValue defaultVal_;
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      public boolean hasDefaultVal() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpAttr.AttrValue getDefaultVal() {
+        return defaultVal_ == null ? org.oneflow.core.framework.UserOpAttr.AttrValue.getDefaultInstance() : defaultVal_;
+      }
+      /**
+       * <code>optional .oneflow.AttrValue default_val = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder getDefaultValOrBuilder() {
+        return defaultVal_ == null ? org.oneflow.core.framework.UserOpAttr.AttrValue.getDefaultInstance() : defaultVal_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        if (!hasName()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasType()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeEnum(2, type_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeMessage(3, getDefaultVal());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, type_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDefaultVal());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef)) {
+          return super.equals(obj);
+        }
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef other = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef) obj;
+
+        boolean result = true;
+        result = result && (hasName() == other.hasName());
+        if (hasName()) {
+          result = result && getName()
+              .equals(other.getName());
+        }
+        result = result && (hasType() == other.hasType());
+        if (hasType()) {
+          result = result && type_ == other.type_;
+        }
+        result = result && (hasDefaultVal() == other.hasDefaultVal());
+        if (hasDefaultVal()) {
+          result = result && getDefaultVal()
+              .equals(other.getDefaultVal());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (hasName()) {
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+        }
+        if (hasType()) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + type_;
+        }
+        if (hasDefaultVal()) {
+          hash = (37 * hash) + DEFAULT_VAL_FIELD_NUMBER;
+          hash = (53 * hash) + getDefaultVal().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code oneflow.UserOpDef.AttrDef}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:oneflow.UserOpDef.AttrDef)
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_AttrDef_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_AttrDef_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder.class);
+        }
+
+        // Construct using org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getDefaultValFieldBuilder();
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          type_ = 1;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (defaultValBuilder_ == null) {
+            defaultVal_ = null;
+          } else {
+            defaultValBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_AttrDef_descriptor;
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getDefaultInstanceForType() {
+          return org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.getDefaultInstance();
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef build() {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef buildPartial() {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef result = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.type_ = type_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          if (defaultValBuilder_ == null) {
+            result.defaultVal_ = defaultVal_;
+          } else {
+            result.defaultVal_ = defaultValBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef) {
+            return mergeFrom((org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef other) {
+          if (other == org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (other.hasDefaultVal()) {
+            mergeDefaultVal(other.getDefaultVal());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          if (!hasName()) {
+            return false;
+          }
+          if (!hasType()) {
+            return false;
+          }
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int type_ = 1;
+        /**
+         * <code>required .oneflow.AttrType type = 2;</code>
+         */
+        public boolean hasType() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>required .oneflow.AttrType type = 2;</code>
+         */
+        public org.oneflow.core.framework.UserOpAttr.AttrType getType() {
+          org.oneflow.core.framework.UserOpAttr.AttrType result = org.oneflow.core.framework.UserOpAttr.AttrType.valueOf(type_);
+          return result == null ? org.oneflow.core.framework.UserOpAttr.AttrType.kAtInt32 : result;
+        }
+        /**
+         * <code>required .oneflow.AttrType type = 2;</code>
+         */
+        public Builder setType(org.oneflow.core.framework.UserOpAttr.AttrType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required .oneflow.AttrType type = 2;</code>
+         */
+        public Builder clearType() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          type_ = 1;
+          onChanged();
+          return this;
+        }
+
+        private org.oneflow.core.framework.UserOpAttr.AttrValue defaultVal_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.oneflow.core.framework.UserOpAttr.AttrValue, org.oneflow.core.framework.UserOpAttr.AttrValue.Builder, org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder> defaultValBuilder_;
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public boolean hasDefaultVal() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public org.oneflow.core.framework.UserOpAttr.AttrValue getDefaultVal() {
+          if (defaultValBuilder_ == null) {
+            return defaultVal_ == null ? org.oneflow.core.framework.UserOpAttr.AttrValue.getDefaultInstance() : defaultVal_;
+          } else {
+            return defaultValBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public Builder setDefaultVal(org.oneflow.core.framework.UserOpAttr.AttrValue value) {
+          if (defaultValBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            defaultVal_ = value;
+            onChanged();
+          } else {
+            defaultValBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public Builder setDefaultVal(
+            org.oneflow.core.framework.UserOpAttr.AttrValue.Builder builderForValue) {
+          if (defaultValBuilder_ == null) {
+            defaultVal_ = builderForValue.build();
+            onChanged();
+          } else {
+            defaultValBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public Builder mergeDefaultVal(org.oneflow.core.framework.UserOpAttr.AttrValue value) {
+          if (defaultValBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) == 0x00000004) &&
+                defaultVal_ != null &&
+                defaultVal_ != org.oneflow.core.framework.UserOpAttr.AttrValue.getDefaultInstance()) {
+              defaultVal_ =
+                org.oneflow.core.framework.UserOpAttr.AttrValue.newBuilder(defaultVal_).mergeFrom(value).buildPartial();
+            } else {
+              defaultVal_ = value;
+            }
+            onChanged();
+          } else {
+            defaultValBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public Builder clearDefaultVal() {
+          if (defaultValBuilder_ == null) {
+            defaultVal_ = null;
+            onChanged();
+          } else {
+            defaultValBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public org.oneflow.core.framework.UserOpAttr.AttrValue.Builder getDefaultValBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getDefaultValFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        public org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder getDefaultValOrBuilder() {
+          if (defaultValBuilder_ != null) {
+            return defaultValBuilder_.getMessageOrBuilder();
+          } else {
+            return defaultVal_ == null ?
+                org.oneflow.core.framework.UserOpAttr.AttrValue.getDefaultInstance() : defaultVal_;
+          }
+        }
+        /**
+         * <code>optional .oneflow.AttrValue default_val = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.oneflow.core.framework.UserOpAttr.AttrValue, org.oneflow.core.framework.UserOpAttr.AttrValue.Builder, org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder> 
+            getDefaultValFieldBuilder() {
+          if (defaultValBuilder_ == null) {
+            defaultValBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.oneflow.core.framework.UserOpAttr.AttrValue, org.oneflow.core.framework.UserOpAttr.AttrValue.Builder, org.oneflow.core.framework.UserOpAttr.AttrValueOrBuilder>(
+                    getDefaultVal(),
+                    getParentForChildren(),
+                    isClean());
+            defaultVal_ = null;
+          }
+          return defaultValBuilder_;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:oneflow.UserOpDef.AttrDef)
+      }
+
+      // @@protoc_insertion_point(class_scope:oneflow.UserOpDef.AttrDef)
+      private static final org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef();
+      }
+
+      public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<AttrDef>
+          PARSER = new com.google.protobuf.AbstractParser<AttrDef>() {
+        public AttrDef parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new AttrDef(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AttrDef> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AttrDef> getParserForType() {
+        return PARSER;
+      }
+
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 2;
+    private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> input_;
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> getInputList() {
+      return input_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+        getInputOrBuilderList() {
+      return input_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    public int getInputCount() {
+      return input_.size();
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getInput(int index) {
+      return input_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getInputOrBuilder(
+        int index) {
+      return input_.get(index);
+    }
+
+    public static final int OUTPUT_FIELD_NUMBER = 3;
+    private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> output_;
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> getOutputList() {
+      return output_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+        getOutputOrBuilderList() {
+      return output_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    public int getOutputCount() {
+      return output_.size();
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getOutput(int index) {
+      return output_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getOutputOrBuilder(
+        int index) {
+      return output_.get(index);
+    }
+
+    public static final int ATTR_FIELD_NUMBER = 4;
+    private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> attr_;
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> getAttrList() {
+      return attr_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder> 
+        getAttrOrBuilderList() {
+      return attr_;
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    public int getAttrCount() {
+      return attr_.size();
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getAttr(int index) {
+      return attr_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+     */
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder getAttrOrBuilder(
+        int index) {
+      return attr_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getInputCount(); i++) {
+        if (!getInput(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getOutputCount(); i++) {
+        if (!getOutput(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getAttrCount(); i++) {
+        if (!getAttr(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      for (int i = 0; i < input_.size(); i++) {
+        output.writeMessage(2, input_.get(i));
+      }
+      for (int i = 0; i < output_.size(); i++) {
+        output.writeMessage(3, output_.get(i));
+      }
+      for (int i = 0; i < attr_.size(); i++) {
+        output.writeMessage(4, attr_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      for (int i = 0; i < input_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, input_.get(i));
+      }
+      for (int i = 0; i < output_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, output_.get(i));
+      }
+      for (int i = 0; i < attr_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, attr_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef other = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && getInputList()
+          .equals(other.getInputList());
+      result = result && getOutputList()
+          .equals(other.getOutputList());
+      result = result && getAttrList()
+          .equals(other.getAttrList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (getInputCount() > 0) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInputList().hashCode();
+      }
+      if (getOutputCount() > 0) {
+        hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputList().hashCode();
+      }
+      if (getAttrCount() > 0) {
+        hash = (37 * hash) + ATTR_FIELD_NUMBER;
+        hash = (53 * hash) + getAttrList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.UserOpDef}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.UserOpDef)
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDefOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.class, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+          getOutputFieldBuilder();
+          getAttrFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (inputBuilder_ == null) {
+          input_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          inputBuilder_.clear();
+        }
+        if (outputBuilder_ == null) {
+          output_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          outputBuilder_.clear();
+        }
+        if (attrBuilder_ == null) {
+          attr_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          attrBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.internal_static_oneflow_UserOpDef_descriptor;
+      }
+
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef getDefaultInstanceForType() {
+        return org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.getDefaultInstance();
+      }
+
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef build() {
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef buildPartial() {
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef result = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            input_ = java.util.Collections.unmodifiableList(input_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.input_ = input_;
+        } else {
+          result.input_ = inputBuilder_.build();
+        }
+        if (outputBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            output_ = java.util.Collections.unmodifiableList(output_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.output_ = output_;
+        } else {
+          result.output_ = outputBuilder_.build();
+        }
+        if (attrBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            attr_ = java.util.Collections.unmodifiableList(attr_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.attr_ = attr_;
+        } else {
+          result.attr_ = attrBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef) {
+          return mergeFrom((org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef other) {
+        if (other == org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (inputBuilder_ == null) {
+          if (!other.input_.isEmpty()) {
+            if (input_.isEmpty()) {
+              input_ = other.input_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInputIsMutable();
+              input_.addAll(other.input_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.input_.isEmpty()) {
+            if (inputBuilder_.isEmpty()) {
+              inputBuilder_.dispose();
+              inputBuilder_ = null;
+              input_ = other.input_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              inputBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputFieldBuilder() : null;
+            } else {
+              inputBuilder_.addAllMessages(other.input_);
+            }
+          }
+        }
+        if (outputBuilder_ == null) {
+          if (!other.output_.isEmpty()) {
+            if (output_.isEmpty()) {
+              output_ = other.output_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureOutputIsMutable();
+              output_.addAll(other.output_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.output_.isEmpty()) {
+            if (outputBuilder_.isEmpty()) {
+              outputBuilder_.dispose();
+              outputBuilder_ = null;
+              output_ = other.output_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              outputBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutputFieldBuilder() : null;
+            } else {
+              outputBuilder_.addAllMessages(other.output_);
+            }
+          }
+        }
+        if (attrBuilder_ == null) {
+          if (!other.attr_.isEmpty()) {
+            if (attr_.isEmpty()) {
+              attr_ = other.attr_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAttrIsMutable();
+              attr_.addAll(other.attr_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attr_.isEmpty()) {
+            if (attrBuilder_.isEmpty()) {
+              attrBuilder_.dispose();
+              attrBuilder_ = null;
+              attr_ = other.attr_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              attrBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttrFieldBuilder() : null;
+            } else {
+              attrBuilder_.addAllMessages(other.attr_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          return false;
+        }
+        for (int i = 0; i < getInputCount(); i++) {
+          if (!getInput(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getOutputCount(); i++) {
+          if (!getOutput(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getAttrCount(); i++) {
+          if (!getAttr(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> input_ =
+        java.util.Collections.emptyList();
+      private void ensureInputIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          input_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef>(input_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> inputBuilder_;
+
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> getInputList() {
+        if (inputBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(input_);
+        } else {
+          return inputBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public int getInputCount() {
+        if (inputBuilder_ == null) {
+          return input_.size();
+        } else {
+          return inputBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getInput(int index) {
+        if (inputBuilder_ == null) {
+          return input_.get(index);
+        } else {
+          return inputBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder setInput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputIsMutable();
+          input_.set(index, value);
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder setInput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          ensureInputIsMutable();
+          input_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder addInput(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputIsMutable();
+          input_.add(value);
+          onChanged();
+        } else {
+          inputBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder addInput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputIsMutable();
+          input_.add(index, value);
+          onChanged();
+        } else {
+          inputBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder addInput(
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          ensureInputIsMutable();
+          input_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder addInput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          ensureInputIsMutable();
+          input_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder addAllInput(
+          java.lang.Iterable<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> values) {
+        if (inputBuilder_ == null) {
+          ensureInputIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, input_);
+          onChanged();
+        } else {
+          inputBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder clearInput() {
+        if (inputBuilder_ == null) {
+          input_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          inputBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public Builder removeInput(int index) {
+        if (inputBuilder_ == null) {
+          ensureInputIsMutable();
+          input_.remove(index);
+          onChanged();
+        } else {
+          inputBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder getInputBuilder(
+          int index) {
+        return getInputFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getInputOrBuilder(
+          int index) {
+        if (inputBuilder_ == null) {
+          return input_.get(index);  } else {
+          return inputBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+           getInputOrBuilderList() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(input_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder addInputBuilder() {
+        return getInputFieldBuilder().addBuilder(
+            org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder addInputBuilder(
+          int index) {
+        return getInputFieldBuilder().addBuilder(
+            index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef input = 2;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder> 
+           getInputBuilderList() {
+        return getInputFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder>(
+                  input_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> output_ =
+        java.util.Collections.emptyList();
+      private void ensureOutputIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          output_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef>(output_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> outputBuilder_;
+
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> getOutputList() {
+        if (outputBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(output_);
+        } else {
+          return outputBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public int getOutputCount() {
+        if (outputBuilder_ == null) {
+          return output_.size();
+        } else {
+          return outputBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef getOutput(int index) {
+        if (outputBuilder_ == null) {
+          return output_.get(index);
+        } else {
+          return outputBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder setOutput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputIsMutable();
+          output_.set(index, value);
+          onChanged();
+        } else {
+          outputBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder setOutput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          ensureOutputIsMutable();
+          output_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder addOutput(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputIsMutable();
+          output_.add(value);
+          onChanged();
+        } else {
+          outputBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder addOutput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputIsMutable();
+          output_.add(index, value);
+          onChanged();
+        } else {
+          outputBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder addOutput(
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          ensureOutputIsMutable();
+          output_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outputBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder addOutput(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          ensureOutputIsMutable();
+          output_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder addAllOutput(
+          java.lang.Iterable<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef> values) {
+        if (outputBuilder_ == null) {
+          ensureOutputIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, output_);
+          onChanged();
+        } else {
+          outputBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder clearOutput() {
+        if (outputBuilder_ == null) {
+          output_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          outputBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public Builder removeOutput(int index) {
+        if (outputBuilder_ == null) {
+          ensureOutputIsMutable();
+          output_.remove(index);
+          onChanged();
+        } else {
+          outputBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder getOutputBuilder(
+          int index) {
+        return getOutputFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder getOutputOrBuilder(
+          int index) {
+        if (outputBuilder_ == null) {
+          return output_.get(index);  } else {
+          return outputBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+           getOutputOrBuilderList() {
+        if (outputBuilder_ != null) {
+          return outputBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(output_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder addOutputBuilder() {
+        return getOutputFieldBuilder().addBuilder(
+            org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder addOutputBuilder(
+          int index) {
+        return getOutputFieldBuilder().addBuilder(
+            index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.ArgDef output = 3;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder> 
+           getOutputBuilderList() {
+        return getOutputFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder> 
+          getOutputFieldBuilder() {
+        if (outputBuilder_ == null) {
+          outputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.ArgDefOrBuilder>(
+                  output_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          output_ = null;
+        }
+        return outputBuilder_;
+      }
+
+      private java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> attr_ =
+        java.util.Collections.emptyList();
+      private void ensureAttrIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          attr_ = new java.util.ArrayList<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef>(attr_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder> attrBuilder_;
+
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> getAttrList() {
+        if (attrBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attr_);
+        } else {
+          return attrBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public int getAttrCount() {
+        if (attrBuilder_ == null) {
+          return attr_.size();
+        } else {
+          return attrBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef getAttr(int index) {
+        if (attrBuilder_ == null) {
+          return attr_.get(index);
+        } else {
+          return attrBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder setAttr(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef value) {
+        if (attrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttrIsMutable();
+          attr_.set(index, value);
+          onChanged();
+        } else {
+          attrBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder setAttr(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder builderForValue) {
+        if (attrBuilder_ == null) {
+          ensureAttrIsMutable();
+          attr_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attrBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder addAttr(org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef value) {
+        if (attrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttrIsMutable();
+          attr_.add(value);
+          onChanged();
+        } else {
+          attrBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder addAttr(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef value) {
+        if (attrBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttrIsMutable();
+          attr_.add(index, value);
+          onChanged();
+        } else {
+          attrBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder addAttr(
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder builderForValue) {
+        if (attrBuilder_ == null) {
+          ensureAttrIsMutable();
+          attr_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attrBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder addAttr(
+          int index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder builderForValue) {
+        if (attrBuilder_ == null) {
+          ensureAttrIsMutable();
+          attr_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attrBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder addAllAttr(
+          java.lang.Iterable<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef> values) {
+        if (attrBuilder_ == null) {
+          ensureAttrIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attr_);
+          onChanged();
+        } else {
+          attrBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder clearAttr() {
+        if (attrBuilder_ == null) {
+          attr_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          attrBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public Builder removeAttr(int index) {
+        if (attrBuilder_ == null) {
+          ensureAttrIsMutable();
+          attr_.remove(index);
+          onChanged();
+        } else {
+          attrBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder getAttrBuilder(
+          int index) {
+        return getAttrFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder getAttrOrBuilder(
+          int index) {
+        if (attrBuilder_ == null) {
+          return attr_.get(index);  } else {
+          return attrBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder> 
+           getAttrOrBuilderList() {
+        if (attrBuilder_ != null) {
+          return attrBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attr_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder addAttrBuilder() {
+        return getAttrFieldBuilder().addBuilder(
+            org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder addAttrBuilder(
+          int index) {
+        return getAttrFieldBuilder().addBuilder(
+            index, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.UserOpDef.AttrDef attr = 4;</code>
+       */
+      public java.util.List<org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder> 
+           getAttrBuilderList() {
+        return getAttrFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder> 
+          getAttrFieldBuilder() {
+        if (attrBuilder_ == null) {
+          attrBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDef.Builder, org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef.AttrDefOrBuilder>(
+                  attr_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          attr_ = null;
+        }
+        return attrBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.UserOpDef)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.UserOpDef)
+    private static final org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef();
+    }
+
+    public static org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UserOpDef>
+        PARSER = new com.google.protobuf.AbstractParser<UserOpDef>() {
+      public UserOpDef parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new UserOpDef(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserOpDef> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserOpDef> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.framework.UserOpDefOuterClass.UserOpDef getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_UserOpDef_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_UserOpDef_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_UserOpDef_ArgDef_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_UserOpDef_ArgDef_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_UserOpDef_AttrDef_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_UserOpDef_AttrDef_fieldAccessorTable;
 
@@ -48,8 +3415,8 @@ public final class UserOpDefOuterClass {
       "optional\030\002 \001(\010:\005false\022\013\n\003num\030\003 \002(\005\022\022\n\nnu" +
       "m_as_min\030\004 \002(\010\032a\n\007AttrDef\022\014\n\004name\030\001 \002(\t\022" +
       "\037\n\004type\030\002 \002(\0162\021.oneflow.AttrType\022\'\n\013defa",
-      "ult_val\030\003 \001(\0132\022.oneflow.AttrValueB\036\n\032org" +
-      ".oneflow.core.frameworkP\001"
+      "ult_val\030\003 \001(\0132\022.oneflow.AttrValueB\034\n\032org" +
+      ".oneflow.core.framework"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

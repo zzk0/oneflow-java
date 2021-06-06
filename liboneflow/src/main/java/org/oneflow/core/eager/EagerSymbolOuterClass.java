@@ -14,14 +14,2633 @@ public final class EagerSymbolOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EagerSymbolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.vm.EagerSymbol)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 symbol_id = 1;</code>
+     */
+    boolean hasSymbolId();
+    /**
+     * <code>required int64 symbol_id = 1;</code>
+     */
+    long getSymbolId();
+
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    boolean hasStringSymbol();
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    java.lang.String getStringSymbol();
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getStringSymbolBytes();
+
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    boolean hasScopeSymbol();
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    org.oneflow.core.job.Scope.ScopeProto getScopeSymbol();
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    org.oneflow.core.job.Scope.ScopeProtoOrBuilder getScopeSymbolOrBuilder();
+
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    boolean hasJobConfSymbol();
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    org.oneflow.core.job.JobConf.JobConfigProto getJobConfSymbol();
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfSymbolOrBuilder();
+
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    boolean hasParallelConfSymbol();
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    org.oneflow.core.job.PlacementOuterClass.ParallelConf getParallelConfSymbol();
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder getParallelConfSymbolOrBuilder();
+
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    boolean hasOpConfSymbol();
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    org.oneflow.core.operator.OpConf.OperatorConf getOpConfSymbol();
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    org.oneflow.core.operator.OpConf.OperatorConfOrBuilder getOpConfSymbolOrBuilder();
+
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    boolean hasOpNodeSignatureSymbol();
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature getOpNodeSignatureSymbol();
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder getOpNodeSignatureSymbolOrBuilder();
+
+    public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.EagerSymbolTypeCase getEagerSymbolTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.vm.EagerSymbol}
+   */
+  public  static final class EagerSymbol extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.vm.EagerSymbol)
+      EagerSymbolOrBuilder {
+    // Use EagerSymbol.newBuilder() to construct.
+    private EagerSymbol(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EagerSymbol() {
+      symbolId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EagerSymbol(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              symbolId_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              eagerSymbolTypeCase_ = 2;
+              eagerSymbolType_ = bs;
+              break;
+            }
+            case 26: {
+              org.oneflow.core.job.Scope.ScopeProto.Builder subBuilder = null;
+              if (eagerSymbolTypeCase_ == 3) {
+                subBuilder = ((org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_).toBuilder();
+              }
+              eagerSymbolType_ =
+                  input.readMessage(org.oneflow.core.job.Scope.ScopeProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_);
+                eagerSymbolType_ = subBuilder.buildPartial();
+              }
+              eagerSymbolTypeCase_ = 3;
+              break;
+            }
+            case 34: {
+              org.oneflow.core.job.JobConf.JobConfigProto.Builder subBuilder = null;
+              if (eagerSymbolTypeCase_ == 4) {
+                subBuilder = ((org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_).toBuilder();
+              }
+              eagerSymbolType_ =
+                  input.readMessage(org.oneflow.core.job.JobConf.JobConfigProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_);
+                eagerSymbolType_ = subBuilder.buildPartial();
+              }
+              eagerSymbolTypeCase_ = 4;
+              break;
+            }
+            case 42: {
+              org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder subBuilder = null;
+              if (eagerSymbolTypeCase_ == 5) {
+                subBuilder = ((org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_).toBuilder();
+              }
+              eagerSymbolType_ =
+                  input.readMessage(org.oneflow.core.job.PlacementOuterClass.ParallelConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_);
+                eagerSymbolType_ = subBuilder.buildPartial();
+              }
+              eagerSymbolTypeCase_ = 5;
+              break;
+            }
+            case 50: {
+              org.oneflow.core.operator.OpConf.OperatorConf.Builder subBuilder = null;
+              if (eagerSymbolTypeCase_ == 6) {
+                subBuilder = ((org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_).toBuilder();
+              }
+              eagerSymbolType_ =
+                  input.readMessage(org.oneflow.core.operator.OpConf.OperatorConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_);
+                eagerSymbolType_ = subBuilder.buildPartial();
+              }
+              eagerSymbolTypeCase_ = 6;
+              break;
+            }
+            case 58: {
+              org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder subBuilder = null;
+              if (eagerSymbolTypeCase_ == 7) {
+                subBuilder = ((org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_).toBuilder();
+              }
+              eagerSymbolType_ =
+                  input.readMessage(org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_);
+                eagerSymbolType_ = subBuilder.buildPartial();
+              }
+              eagerSymbolTypeCase_ = 7;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbol_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbol_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.class, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder.class);
+    }
+
+    private int bitField0_;
+    private int eagerSymbolTypeCase_ = 0;
+    private java.lang.Object eagerSymbolType_;
+    public enum EagerSymbolTypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      STRING_SYMBOL(2),
+      SCOPE_SYMBOL(3),
+      JOB_CONF_SYMBOL(4),
+      PARALLEL_CONF_SYMBOL(5),
+      OP_CONF_SYMBOL(6),
+      OP_NODE_SIGNATURE_SYMBOL(7),
+      EAGERSYMBOLTYPE_NOT_SET(0);
+      private final int value;
+      private EagerSymbolTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EagerSymbolTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EagerSymbolTypeCase forNumber(int value) {
+        switch (value) {
+          case 2: return STRING_SYMBOL;
+          case 3: return SCOPE_SYMBOL;
+          case 4: return JOB_CONF_SYMBOL;
+          case 5: return PARALLEL_CONF_SYMBOL;
+          case 6: return OP_CONF_SYMBOL;
+          case 7: return OP_NODE_SIGNATURE_SYMBOL;
+          case 0: return EAGERSYMBOLTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EagerSymbolTypeCase
+    getEagerSymbolTypeCase() {
+      return EagerSymbolTypeCase.forNumber(
+          eagerSymbolTypeCase_);
+    }
+
+    public static final int SYMBOL_ID_FIELD_NUMBER = 1;
+    private long symbolId_;
+    /**
+     * <code>required int64 symbol_id = 1;</code>
+     */
+    public boolean hasSymbolId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 symbol_id = 1;</code>
+     */
+    public long getSymbolId() {
+      return symbolId_;
+    }
+
+    public static final int STRING_SYMBOL_FIELD_NUMBER = 2;
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    public boolean hasStringSymbol() {
+      return eagerSymbolTypeCase_ == 2;
+    }
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    public java.lang.String getStringSymbol() {
+      java.lang.Object ref = "";
+      if (eagerSymbolTypeCase_ == 2) {
+        ref = eagerSymbolType_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8() && (eagerSymbolTypeCase_ == 2)) {
+          eagerSymbolType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string string_symbol = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStringSymbolBytes() {
+      java.lang.Object ref = "";
+      if (eagerSymbolTypeCase_ == 2) {
+        ref = eagerSymbolType_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (eagerSymbolTypeCase_ == 2) {
+          eagerSymbolType_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_SYMBOL_FIELD_NUMBER = 3;
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    public boolean hasScopeSymbol() {
+      return eagerSymbolTypeCase_ == 3;
+    }
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    public org.oneflow.core.job.Scope.ScopeProto getScopeSymbol() {
+      if (eagerSymbolTypeCase_ == 3) {
+         return (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+     */
+    public org.oneflow.core.job.Scope.ScopeProtoOrBuilder getScopeSymbolOrBuilder() {
+      if (eagerSymbolTypeCase_ == 3) {
+         return (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+    }
+
+    public static final int JOB_CONF_SYMBOL_FIELD_NUMBER = 4;
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    public boolean hasJobConfSymbol() {
+      return eagerSymbolTypeCase_ == 4;
+    }
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    public org.oneflow.core.job.JobConf.JobConfigProto getJobConfSymbol() {
+      if (eagerSymbolTypeCase_ == 4) {
+         return (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+     */
+    public org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfSymbolOrBuilder() {
+      if (eagerSymbolTypeCase_ == 4) {
+         return (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+    }
+
+    public static final int PARALLEL_CONF_SYMBOL_FIELD_NUMBER = 5;
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    public boolean hasParallelConfSymbol() {
+      return eagerSymbolTypeCase_ == 5;
+    }
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    public org.oneflow.core.job.PlacementOuterClass.ParallelConf getParallelConfSymbol() {
+      if (eagerSymbolTypeCase_ == 5) {
+         return (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+     */
+    public org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder getParallelConfSymbolOrBuilder() {
+      if (eagerSymbolTypeCase_ == 5) {
+         return (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_;
+      }
+      return org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+    }
+
+    public static final int OP_CONF_SYMBOL_FIELD_NUMBER = 6;
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    public boolean hasOpConfSymbol() {
+      return eagerSymbolTypeCase_ == 6;
+    }
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    public org.oneflow.core.operator.OpConf.OperatorConf getOpConfSymbol() {
+      if (eagerSymbolTypeCase_ == 6) {
+         return (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_;
+      }
+      return org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+     */
+    public org.oneflow.core.operator.OpConf.OperatorConfOrBuilder getOpConfSymbolOrBuilder() {
+      if (eagerSymbolTypeCase_ == 6) {
+         return (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_;
+      }
+      return org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+    }
+
+    public static final int OP_NODE_SIGNATURE_SYMBOL_FIELD_NUMBER = 7;
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    public boolean hasOpNodeSignatureSymbol() {
+      return eagerSymbolTypeCase_ == 7;
+    }
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    public org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature getOpNodeSignatureSymbol() {
+      if (eagerSymbolTypeCase_ == 7) {
+         return (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_;
+      }
+      return org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+     */
+    public org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder getOpNodeSignatureSymbolOrBuilder() {
+      if (eagerSymbolTypeCase_ == 7) {
+         return (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_;
+      }
+      return org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSymbolId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasScopeSymbol()) {
+        if (!getScopeSymbol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasJobConfSymbol()) {
+        if (!getJobConfSymbol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasParallelConfSymbol()) {
+        if (!getParallelConfSymbol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasOpConfSymbol()) {
+        if (!getOpConfSymbol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasOpNodeSignatureSymbol()) {
+        if (!getOpNodeSignatureSymbol().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, symbolId_);
+      }
+      if (eagerSymbolTypeCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 3) {
+        output.writeMessage(3, (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 4) {
+        output.writeMessage(4, (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 5) {
+        output.writeMessage(5, (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 6) {
+        output.writeMessage(6, (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 7) {
+        output.writeMessage(7, (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, symbolId_);
+      }
+      if (eagerSymbolTypeCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_);
+      }
+      if (eagerSymbolTypeCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol other = (org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol) obj;
+
+      boolean result = true;
+      result = result && (hasSymbolId() == other.hasSymbolId());
+      if (hasSymbolId()) {
+        result = result && (getSymbolId()
+            == other.getSymbolId());
+      }
+      result = result && getEagerSymbolTypeCase().equals(
+          other.getEagerSymbolTypeCase());
+      if (!result) return false;
+      switch (eagerSymbolTypeCase_) {
+        case 2:
+          result = result && getStringSymbol()
+              .equals(other.getStringSymbol());
+          break;
+        case 3:
+          result = result && getScopeSymbol()
+              .equals(other.getScopeSymbol());
+          break;
+        case 4:
+          result = result && getJobConfSymbol()
+              .equals(other.getJobConfSymbol());
+          break;
+        case 5:
+          result = result && getParallelConfSymbol()
+              .equals(other.getParallelConfSymbol());
+          break;
+        case 6:
+          result = result && getOpConfSymbol()
+              .equals(other.getOpConfSymbol());
+          break;
+        case 7:
+          result = result && getOpNodeSignatureSymbol()
+              .equals(other.getOpNodeSignatureSymbol());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasSymbolId()) {
+        hash = (37 * hash) + SYMBOL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSymbolId());
+      }
+      switch (eagerSymbolTypeCase_) {
+        case 2:
+          hash = (37 * hash) + STRING_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getStringSymbol().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + SCOPE_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getScopeSymbol().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + JOB_CONF_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getJobConfSymbol().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + PARALLEL_CONF_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getParallelConfSymbol().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + OP_CONF_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getOpConfSymbol().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + OP_NODE_SIGNATURE_SYMBOL_FIELD_NUMBER;
+          hash = (53 * hash) + getOpNodeSignatureSymbol().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.vm.EagerSymbol}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.vm.EagerSymbol)
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbol_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbol_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.class, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        symbolId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        eagerSymbolTypeCase_ = 0;
+        eagerSymbolType_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbol_descriptor;
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getDefaultInstanceForType() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.getDefaultInstance();
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol build() {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol buildPartial() {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol result = new org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.symbolId_ = symbolId_;
+        if (eagerSymbolTypeCase_ == 2) {
+          result.eagerSymbolType_ = eagerSymbolType_;
+        }
+        if (eagerSymbolTypeCase_ == 3) {
+          if (scopeSymbolBuilder_ == null) {
+            result.eagerSymbolType_ = eagerSymbolType_;
+          } else {
+            result.eagerSymbolType_ = scopeSymbolBuilder_.build();
+          }
+        }
+        if (eagerSymbolTypeCase_ == 4) {
+          if (jobConfSymbolBuilder_ == null) {
+            result.eagerSymbolType_ = eagerSymbolType_;
+          } else {
+            result.eagerSymbolType_ = jobConfSymbolBuilder_.build();
+          }
+        }
+        if (eagerSymbolTypeCase_ == 5) {
+          if (parallelConfSymbolBuilder_ == null) {
+            result.eagerSymbolType_ = eagerSymbolType_;
+          } else {
+            result.eagerSymbolType_ = parallelConfSymbolBuilder_.build();
+          }
+        }
+        if (eagerSymbolTypeCase_ == 6) {
+          if (opConfSymbolBuilder_ == null) {
+            result.eagerSymbolType_ = eagerSymbolType_;
+          } else {
+            result.eagerSymbolType_ = opConfSymbolBuilder_.build();
+          }
+        }
+        if (eagerSymbolTypeCase_ == 7) {
+          if (opNodeSignatureSymbolBuilder_ == null) {
+            result.eagerSymbolType_ = eagerSymbolType_;
+          } else {
+            result.eagerSymbolType_ = opNodeSignatureSymbolBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.eagerSymbolTypeCase_ = eagerSymbolTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol) {
+          return mergeFrom((org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol other) {
+        if (other == org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.getDefaultInstance()) return this;
+        if (other.hasSymbolId()) {
+          setSymbolId(other.getSymbolId());
+        }
+        switch (other.getEagerSymbolTypeCase()) {
+          case STRING_SYMBOL: {
+            eagerSymbolTypeCase_ = 2;
+            eagerSymbolType_ = other.eagerSymbolType_;
+            onChanged();
+            break;
+          }
+          case SCOPE_SYMBOL: {
+            mergeScopeSymbol(other.getScopeSymbol());
+            break;
+          }
+          case JOB_CONF_SYMBOL: {
+            mergeJobConfSymbol(other.getJobConfSymbol());
+            break;
+          }
+          case PARALLEL_CONF_SYMBOL: {
+            mergeParallelConfSymbol(other.getParallelConfSymbol());
+            break;
+          }
+          case OP_CONF_SYMBOL: {
+            mergeOpConfSymbol(other.getOpConfSymbol());
+            break;
+          }
+          case OP_NODE_SIGNATURE_SYMBOL: {
+            mergeOpNodeSignatureSymbol(other.getOpNodeSignatureSymbol());
+            break;
+          }
+          case EAGERSYMBOLTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSymbolId()) {
+          return false;
+        }
+        if (hasScopeSymbol()) {
+          if (!getScopeSymbol().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasJobConfSymbol()) {
+          if (!getJobConfSymbol().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasParallelConfSymbol()) {
+          if (!getParallelConfSymbol().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasOpConfSymbol()) {
+          if (!getOpConfSymbol().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasOpNodeSignatureSymbol()) {
+          if (!getOpNodeSignatureSymbol().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int eagerSymbolTypeCase_ = 0;
+      private java.lang.Object eagerSymbolType_;
+      public EagerSymbolTypeCase
+          getEagerSymbolTypeCase() {
+        return EagerSymbolTypeCase.forNumber(
+            eagerSymbolTypeCase_);
+      }
+
+      public Builder clearEagerSymbolType() {
+        eagerSymbolTypeCase_ = 0;
+        eagerSymbolType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private long symbolId_ ;
+      /**
+       * <code>required int64 symbol_id = 1;</code>
+       */
+      public boolean hasSymbolId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 symbol_id = 1;</code>
+       */
+      public long getSymbolId() {
+        return symbolId_;
+      }
+      /**
+       * <code>required int64 symbol_id = 1;</code>
+       */
+      public Builder setSymbolId(long value) {
+        bitField0_ |= 0x00000001;
+        symbolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 symbol_id = 1;</code>
+       */
+      public Builder clearSymbolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        symbolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public boolean hasStringSymbol() {
+        return eagerSymbolTypeCase_ == 2;
+      }
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public java.lang.String getStringSymbol() {
+        java.lang.Object ref = "";
+        if (eagerSymbolTypeCase_ == 2) {
+          ref = eagerSymbolType_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (eagerSymbolTypeCase_ == 2) {
+            if (bs.isValidUtf8()) {
+              eagerSymbolType_ = s;
+            }
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStringSymbolBytes() {
+        java.lang.Object ref = "";
+        if (eagerSymbolTypeCase_ == 2) {
+          ref = eagerSymbolType_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (eagerSymbolTypeCase_ == 2) {
+            eagerSymbolType_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public Builder setStringSymbol(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  eagerSymbolTypeCase_ = 2;
+        eagerSymbolType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public Builder clearStringSymbol() {
+        if (eagerSymbolTypeCase_ == 2) {
+          eagerSymbolTypeCase_ = 0;
+          eagerSymbolType_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional string string_symbol = 2;</code>
+       */
+      public Builder setStringSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  eagerSymbolTypeCase_ = 2;
+        eagerSymbolType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.Scope.ScopeProto, org.oneflow.core.job.Scope.ScopeProto.Builder, org.oneflow.core.job.Scope.ScopeProtoOrBuilder> scopeSymbolBuilder_;
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public boolean hasScopeSymbol() {
+        return eagerSymbolTypeCase_ == 3;
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public org.oneflow.core.job.Scope.ScopeProto getScopeSymbol() {
+        if (scopeSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 3) {
+            return (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+        } else {
+          if (eagerSymbolTypeCase_ == 3) {
+            return scopeSymbolBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public Builder setScopeSymbol(org.oneflow.core.job.Scope.ScopeProto value) {
+        if (scopeSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eagerSymbolType_ = value;
+          onChanged();
+        } else {
+          scopeSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public Builder setScopeSymbol(
+          org.oneflow.core.job.Scope.ScopeProto.Builder builderForValue) {
+        if (scopeSymbolBuilder_ == null) {
+          eagerSymbolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          scopeSymbolBuilder_.setMessage(builderForValue.build());
+        }
+        eagerSymbolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public Builder mergeScopeSymbol(org.oneflow.core.job.Scope.ScopeProto value) {
+        if (scopeSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 3 &&
+              eagerSymbolType_ != org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance()) {
+            eagerSymbolType_ = org.oneflow.core.job.Scope.ScopeProto.newBuilder((org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eagerSymbolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (eagerSymbolTypeCase_ == 3) {
+            scopeSymbolBuilder_.mergeFrom(value);
+          }
+          scopeSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public Builder clearScopeSymbol() {
+        if (scopeSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 3) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (eagerSymbolTypeCase_ == 3) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+          }
+          scopeSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public org.oneflow.core.job.Scope.ScopeProto.Builder getScopeSymbolBuilder() {
+        return getScopeSymbolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      public org.oneflow.core.job.Scope.ScopeProtoOrBuilder getScopeSymbolOrBuilder() {
+        if ((eagerSymbolTypeCase_ == 3) && (scopeSymbolBuilder_ != null)) {
+          return scopeSymbolBuilder_.getMessageOrBuilder();
+        } else {
+          if (eagerSymbolTypeCase_ == 3) {
+            return (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ScopeProto scope_symbol = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.Scope.ScopeProto, org.oneflow.core.job.Scope.ScopeProto.Builder, org.oneflow.core.job.Scope.ScopeProtoOrBuilder> 
+          getScopeSymbolFieldBuilder() {
+        if (scopeSymbolBuilder_ == null) {
+          if (!(eagerSymbolTypeCase_ == 3)) {
+            eagerSymbolType_ = org.oneflow.core.job.Scope.ScopeProto.getDefaultInstance();
+          }
+          scopeSymbolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.Scope.ScopeProto, org.oneflow.core.job.Scope.ScopeProto.Builder, org.oneflow.core.job.Scope.ScopeProtoOrBuilder>(
+                  (org.oneflow.core.job.Scope.ScopeProto) eagerSymbolType_,
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbolType_ = null;
+        }
+        eagerSymbolTypeCase_ = 3;
+        onChanged();;
+        return scopeSymbolBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder> jobConfSymbolBuilder_;
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public boolean hasJobConfSymbol() {
+        return eagerSymbolTypeCase_ == 4;
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProto getJobConfSymbol() {
+        if (jobConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 4) {
+            return (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+        } else {
+          if (eagerSymbolTypeCase_ == 4) {
+            return jobConfSymbolBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public Builder setJobConfSymbol(org.oneflow.core.job.JobConf.JobConfigProto value) {
+        if (jobConfSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eagerSymbolType_ = value;
+          onChanged();
+        } else {
+          jobConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public Builder setJobConfSymbol(
+          org.oneflow.core.job.JobConf.JobConfigProto.Builder builderForValue) {
+        if (jobConfSymbolBuilder_ == null) {
+          eagerSymbolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobConfSymbolBuilder_.setMessage(builderForValue.build());
+        }
+        eagerSymbolTypeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public Builder mergeJobConfSymbol(org.oneflow.core.job.JobConf.JobConfigProto value) {
+        if (jobConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 4 &&
+              eagerSymbolType_ != org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance()) {
+            eagerSymbolType_ = org.oneflow.core.job.JobConf.JobConfigProto.newBuilder((org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eagerSymbolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (eagerSymbolTypeCase_ == 4) {
+            jobConfSymbolBuilder_.mergeFrom(value);
+          }
+          jobConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public Builder clearJobConfSymbol() {
+        if (jobConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 4) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (eagerSymbolTypeCase_ == 4) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+          }
+          jobConfSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProto.Builder getJobConfSymbolBuilder() {
+        return getJobConfSymbolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      public org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder getJobConfSymbolOrBuilder() {
+        if ((eagerSymbolTypeCase_ == 4) && (jobConfSymbolBuilder_ != null)) {
+          return jobConfSymbolBuilder_.getMessageOrBuilder();
+        } else {
+          if (eagerSymbolTypeCase_ == 4) {
+            return (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.JobConfigProto job_conf_symbol = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder> 
+          getJobConfSymbolFieldBuilder() {
+        if (jobConfSymbolBuilder_ == null) {
+          if (!(eagerSymbolTypeCase_ == 4)) {
+            eagerSymbolType_ = org.oneflow.core.job.JobConf.JobConfigProto.getDefaultInstance();
+          }
+          jobConfSymbolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.JobConf.JobConfigProto, org.oneflow.core.job.JobConf.JobConfigProto.Builder, org.oneflow.core.job.JobConf.JobConfigProtoOrBuilder>(
+                  (org.oneflow.core.job.JobConf.JobConfigProto) eagerSymbolType_,
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbolType_ = null;
+        }
+        eagerSymbolTypeCase_ = 4;
+        onChanged();;
+        return jobConfSymbolBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.PlacementOuterClass.ParallelConf, org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder, org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder> parallelConfSymbolBuilder_;
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public boolean hasParallelConfSymbol() {
+        return eagerSymbolTypeCase_ == 5;
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.ParallelConf getParallelConfSymbol() {
+        if (parallelConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 5) {
+            return (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+        } else {
+          if (eagerSymbolTypeCase_ == 5) {
+            return parallelConfSymbolBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public Builder setParallelConfSymbol(org.oneflow.core.job.PlacementOuterClass.ParallelConf value) {
+        if (parallelConfSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eagerSymbolType_ = value;
+          onChanged();
+        } else {
+          parallelConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public Builder setParallelConfSymbol(
+          org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder builderForValue) {
+        if (parallelConfSymbolBuilder_ == null) {
+          eagerSymbolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          parallelConfSymbolBuilder_.setMessage(builderForValue.build());
+        }
+        eagerSymbolTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public Builder mergeParallelConfSymbol(org.oneflow.core.job.PlacementOuterClass.ParallelConf value) {
+        if (parallelConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 5 &&
+              eagerSymbolType_ != org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance()) {
+            eagerSymbolType_ = org.oneflow.core.job.PlacementOuterClass.ParallelConf.newBuilder((org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eagerSymbolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (eagerSymbolTypeCase_ == 5) {
+            parallelConfSymbolBuilder_.mergeFrom(value);
+          }
+          parallelConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public Builder clearParallelConfSymbol() {
+        if (parallelConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 5) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (eagerSymbolTypeCase_ == 5) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+          }
+          parallelConfSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder getParallelConfSymbolBuilder() {
+        return getParallelConfSymbolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      public org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder getParallelConfSymbolOrBuilder() {
+        if ((eagerSymbolTypeCase_ == 5) && (parallelConfSymbolBuilder_ != null)) {
+          return parallelConfSymbolBuilder_.getMessageOrBuilder();
+        } else {
+          if (eagerSymbolTypeCase_ == 5) {
+            return (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_;
+          }
+          return org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.ParallelConf parallel_conf_symbol = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.PlacementOuterClass.ParallelConf, org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder, org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder> 
+          getParallelConfSymbolFieldBuilder() {
+        if (parallelConfSymbolBuilder_ == null) {
+          if (!(eagerSymbolTypeCase_ == 5)) {
+            eagerSymbolType_ = org.oneflow.core.job.PlacementOuterClass.ParallelConf.getDefaultInstance();
+          }
+          parallelConfSymbolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.PlacementOuterClass.ParallelConf, org.oneflow.core.job.PlacementOuterClass.ParallelConf.Builder, org.oneflow.core.job.PlacementOuterClass.ParallelConfOrBuilder>(
+                  (org.oneflow.core.job.PlacementOuterClass.ParallelConf) eagerSymbolType_,
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbolType_ = null;
+        }
+        eagerSymbolTypeCase_ = 5;
+        onChanged();;
+        return parallelConfSymbolBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.OperatorConf, org.oneflow.core.operator.OpConf.OperatorConf.Builder, org.oneflow.core.operator.OpConf.OperatorConfOrBuilder> opConfSymbolBuilder_;
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public boolean hasOpConfSymbol() {
+        return eagerSymbolTypeCase_ == 6;
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public org.oneflow.core.operator.OpConf.OperatorConf getOpConfSymbol() {
+        if (opConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 6) {
+            return (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_;
+          }
+          return org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+        } else {
+          if (eagerSymbolTypeCase_ == 6) {
+            return opConfSymbolBuilder_.getMessage();
+          }
+          return org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public Builder setOpConfSymbol(org.oneflow.core.operator.OpConf.OperatorConf value) {
+        if (opConfSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eagerSymbolType_ = value;
+          onChanged();
+        } else {
+          opConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public Builder setOpConfSymbol(
+          org.oneflow.core.operator.OpConf.OperatorConf.Builder builderForValue) {
+        if (opConfSymbolBuilder_ == null) {
+          eagerSymbolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          opConfSymbolBuilder_.setMessage(builderForValue.build());
+        }
+        eagerSymbolTypeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public Builder mergeOpConfSymbol(org.oneflow.core.operator.OpConf.OperatorConf value) {
+        if (opConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 6 &&
+              eagerSymbolType_ != org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance()) {
+            eagerSymbolType_ = org.oneflow.core.operator.OpConf.OperatorConf.newBuilder((org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eagerSymbolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (eagerSymbolTypeCase_ == 6) {
+            opConfSymbolBuilder_.mergeFrom(value);
+          }
+          opConfSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public Builder clearOpConfSymbol() {
+        if (opConfSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 6) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (eagerSymbolTypeCase_ == 6) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+          }
+          opConfSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public org.oneflow.core.operator.OpConf.OperatorConf.Builder getOpConfSymbolBuilder() {
+        return getOpConfSymbolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      public org.oneflow.core.operator.OpConf.OperatorConfOrBuilder getOpConfSymbolOrBuilder() {
+        if ((eagerSymbolTypeCase_ == 6) && (opConfSymbolBuilder_ != null)) {
+          return opConfSymbolBuilder_.getMessageOrBuilder();
+        } else {
+          if (eagerSymbolTypeCase_ == 6) {
+            return (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_;
+          }
+          return org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.OperatorConf op_conf_symbol = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.OperatorConf, org.oneflow.core.operator.OpConf.OperatorConf.Builder, org.oneflow.core.operator.OpConf.OperatorConfOrBuilder> 
+          getOpConfSymbolFieldBuilder() {
+        if (opConfSymbolBuilder_ == null) {
+          if (!(eagerSymbolTypeCase_ == 6)) {
+            eagerSymbolType_ = org.oneflow.core.operator.OpConf.OperatorConf.getDefaultInstance();
+          }
+          opConfSymbolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.operator.OpConf.OperatorConf, org.oneflow.core.operator.OpConf.OperatorConf.Builder, org.oneflow.core.operator.OpConf.OperatorConfOrBuilder>(
+                  (org.oneflow.core.operator.OpConf.OperatorConf) eagerSymbolType_,
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbolType_ = null;
+        }
+        eagerSymbolTypeCase_ = 6;
+        onChanged();;
+        return opConfSymbolBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder> opNodeSignatureSymbolBuilder_;
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public boolean hasOpNodeSignatureSymbol() {
+        return eagerSymbolTypeCase_ == 7;
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature getOpNodeSignatureSymbol() {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 7) {
+            return (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_;
+          }
+          return org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+        } else {
+          if (eagerSymbolTypeCase_ == 7) {
+            return opNodeSignatureSymbolBuilder_.getMessage();
+          }
+          return org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public Builder setOpNodeSignatureSymbol(org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature value) {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eagerSymbolType_ = value;
+          onChanged();
+        } else {
+          opNodeSignatureSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public Builder setOpNodeSignatureSymbol(
+          org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder builderForValue) {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          eagerSymbolType_ = builderForValue.build();
+          onChanged();
+        } else {
+          opNodeSignatureSymbolBuilder_.setMessage(builderForValue.build());
+        }
+        eagerSymbolTypeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public Builder mergeOpNodeSignatureSymbol(org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature value) {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 7 &&
+              eagerSymbolType_ != org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance()) {
+            eagerSymbolType_ = org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.newBuilder((org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            eagerSymbolType_ = value;
+          }
+          onChanged();
+        } else {
+          if (eagerSymbolTypeCase_ == 7) {
+            opNodeSignatureSymbolBuilder_.mergeFrom(value);
+          }
+          opNodeSignatureSymbolBuilder_.setMessage(value);
+        }
+        eagerSymbolTypeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public Builder clearOpNodeSignatureSymbol() {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          if (eagerSymbolTypeCase_ == 7) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+            onChanged();
+          }
+        } else {
+          if (eagerSymbolTypeCase_ == 7) {
+            eagerSymbolTypeCase_ = 0;
+            eagerSymbolType_ = null;
+          }
+          opNodeSignatureSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder getOpNodeSignatureSymbolBuilder() {
+        return getOpNodeSignatureSymbolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      public org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder getOpNodeSignatureSymbolOrBuilder() {
+        if ((eagerSymbolTypeCase_ == 7) && (opNodeSignatureSymbolBuilder_ != null)) {
+          return opNodeSignatureSymbolBuilder_.getMessageOrBuilder();
+        } else {
+          if (eagerSymbolTypeCase_ == 7) {
+            return (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_;
+          }
+          return org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.OpNodeSignature op_node_signature_symbol = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder> 
+          getOpNodeSignatureSymbolFieldBuilder() {
+        if (opNodeSignatureSymbolBuilder_ == null) {
+          if (!(eagerSymbolTypeCase_ == 7)) {
+            eagerSymbolType_ = org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.getDefaultInstance();
+          }
+          opNodeSignatureSymbolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature.Builder, org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignatureOrBuilder>(
+                  (org.oneflow.core.operator.OpNodeSignatureOuterClass.OpNodeSignature) eagerSymbolType_,
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbolType_ = null;
+        }
+        eagerSymbolTypeCase_ = 7;
+        onChanged();;
+        return opNodeSignatureSymbolBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.vm.EagerSymbol)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.vm.EagerSymbol)
+    private static final org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol();
+    }
+
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EagerSymbol>
+        PARSER = new com.google.protobuf.AbstractParser<EagerSymbol>() {
+      public EagerSymbol parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EagerSymbol(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EagerSymbol> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EagerSymbol> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EagerSymbolListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.vm.EagerSymbolList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> 
+        getEagerSymbolList();
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getEagerSymbol(int index);
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    int getEagerSymbolCount();
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder> 
+        getEagerSymbolOrBuilderList();
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder getEagerSymbolOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.vm.EagerSymbolList}
+   */
+  public  static final class EagerSymbolList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.vm.EagerSymbolList)
+      EagerSymbolListOrBuilder {
+    // Use EagerSymbolList.newBuilder() to construct.
+    private EagerSymbolList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EagerSymbolList() {
+      eagerSymbol_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EagerSymbolList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                eagerSymbol_ = new java.util.ArrayList<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              eagerSymbol_.add(
+                  input.readMessage(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          eagerSymbol_ = java.util.Collections.unmodifiableList(eagerSymbol_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbolList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbolList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.class, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.Builder.class);
+    }
+
+    public static final int EAGER_SYMBOL_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> eagerSymbol_;
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> getEagerSymbolList() {
+      return eagerSymbol_;
+    }
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder> 
+        getEagerSymbolOrBuilderList() {
+      return eagerSymbol_;
+    }
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    public int getEagerSymbolCount() {
+      return eagerSymbol_.size();
+    }
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getEagerSymbol(int index) {
+      return eagerSymbol_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+     */
+    public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder getEagerSymbolOrBuilder(
+        int index) {
+      return eagerSymbol_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getEagerSymbolCount(); i++) {
+        if (!getEagerSymbol(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < eagerSymbol_.size(); i++) {
+        output.writeMessage(1, eagerSymbol_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < eagerSymbol_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, eagerSymbol_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList other = (org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList) obj;
+
+      boolean result = true;
+      result = result && getEagerSymbolList()
+          .equals(other.getEagerSymbolList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getEagerSymbolCount() > 0) {
+        hash = (37 * hash) + EAGER_SYMBOL_FIELD_NUMBER;
+        hash = (53 * hash) + getEagerSymbolList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.vm.EagerSymbolList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.vm.EagerSymbolList)
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbolList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbolList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.class, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEagerSymbolFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (eagerSymbolBuilder_ == null) {
+          eagerSymbol_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          eagerSymbolBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.internal_static_oneflow_vm_EagerSymbolList_descriptor;
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList getDefaultInstanceForType() {
+        return org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.getDefaultInstance();
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList build() {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList buildPartial() {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList result = new org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList(this);
+        int from_bitField0_ = bitField0_;
+        if (eagerSymbolBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            eagerSymbol_ = java.util.Collections.unmodifiableList(eagerSymbol_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.eagerSymbol_ = eagerSymbol_;
+        } else {
+          result.eagerSymbol_ = eagerSymbolBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList) {
+          return mergeFrom((org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList other) {
+        if (other == org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList.getDefaultInstance()) return this;
+        if (eagerSymbolBuilder_ == null) {
+          if (!other.eagerSymbol_.isEmpty()) {
+            if (eagerSymbol_.isEmpty()) {
+              eagerSymbol_ = other.eagerSymbol_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEagerSymbolIsMutable();
+              eagerSymbol_.addAll(other.eagerSymbol_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.eagerSymbol_.isEmpty()) {
+            if (eagerSymbolBuilder_.isEmpty()) {
+              eagerSymbolBuilder_.dispose();
+              eagerSymbolBuilder_ = null;
+              eagerSymbol_ = other.eagerSymbol_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eagerSymbolBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEagerSymbolFieldBuilder() : null;
+            } else {
+              eagerSymbolBuilder_.addAllMessages(other.eagerSymbol_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getEagerSymbolCount(); i++) {
+          if (!getEagerSymbol(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> eagerSymbol_ =
+        java.util.Collections.emptyList();
+      private void ensureEagerSymbolIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          eagerSymbol_ = new java.util.ArrayList<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol>(eagerSymbol_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder> eagerSymbolBuilder_;
+
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> getEagerSymbolList() {
+        if (eagerSymbolBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(eagerSymbol_);
+        } else {
+          return eagerSymbolBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public int getEagerSymbolCount() {
+        if (eagerSymbolBuilder_ == null) {
+          return eagerSymbol_.size();
+        } else {
+          return eagerSymbolBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol getEagerSymbol(int index) {
+        if (eagerSymbolBuilder_ == null) {
+          return eagerSymbol_.get(index);
+        } else {
+          return eagerSymbolBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder setEagerSymbol(
+          int index, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol value) {
+        if (eagerSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.set(index, value);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder setEagerSymbol(
+          int index, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder builderForValue) {
+        if (eagerSymbolBuilder_ == null) {
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder addEagerSymbol(org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol value) {
+        if (eagerSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.add(value);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder addEagerSymbol(
+          int index, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol value) {
+        if (eagerSymbolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.add(index, value);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder addEagerSymbol(
+          org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder builderForValue) {
+        if (eagerSymbolBuilder_ == null) {
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder addEagerSymbol(
+          int index, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder builderForValue) {
+        if (eagerSymbolBuilder_ == null) {
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder addAllEagerSymbol(
+          java.lang.Iterable<? extends org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol> values) {
+        if (eagerSymbolBuilder_ == null) {
+          ensureEagerSymbolIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, eagerSymbol_);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder clearEagerSymbol() {
+        if (eagerSymbolBuilder_ == null) {
+          eagerSymbol_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public Builder removeEagerSymbol(int index) {
+        if (eagerSymbolBuilder_ == null) {
+          ensureEagerSymbolIsMutable();
+          eagerSymbol_.remove(index);
+          onChanged();
+        } else {
+          eagerSymbolBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder getEagerSymbolBuilder(
+          int index) {
+        return getEagerSymbolFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder getEagerSymbolOrBuilder(
+          int index) {
+        if (eagerSymbolBuilder_ == null) {
+          return eagerSymbol_.get(index);  } else {
+          return eagerSymbolBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder> 
+           getEagerSymbolOrBuilderList() {
+        if (eagerSymbolBuilder_ != null) {
+          return eagerSymbolBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(eagerSymbol_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder addEagerSymbolBuilder() {
+        return getEagerSymbolFieldBuilder().addBuilder(
+            org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder addEagerSymbolBuilder(
+          int index) {
+        return getEagerSymbolFieldBuilder().addBuilder(
+            index, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.vm.EagerSymbol eager_symbol = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder> 
+           getEagerSymbolBuilderList() {
+        return getEagerSymbolFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder> 
+          getEagerSymbolFieldBuilder() {
+        if (eagerSymbolBuilder_ == null) {
+          eagerSymbolBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbol.Builder, org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolOrBuilder>(
+                  eagerSymbol_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          eagerSymbol_ = null;
+        }
+        return eagerSymbolBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.vm.EagerSymbolList)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.vm.EagerSymbolList)
+    private static final org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList();
+    }
+
+    public static org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EagerSymbolList>
+        PARSER = new com.google.protobuf.AbstractParser<EagerSymbolList>() {
+      public EagerSymbolList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EagerSymbolList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EagerSymbolList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EagerSymbolList> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.eager.EagerSymbolOuterClass.EagerSymbolList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_vm_EagerSymbol_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_vm_EagerSymbol_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_vm_EagerSymbolList_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_vm_EagerSymbolList_fieldAccessorTable;
 
@@ -49,7 +2668,7 @@ public final class EagerSymbolOuterClass {
       "l\030\007 \001(\0132\030.oneflow.OpNodeSignatureH\000B\023\n\021e" +
       "ager_symbol_type\"@\n\017EagerSymbolList\022-\n\014e" +
       "ager_symbol\030\001 \003(\0132\027.oneflow.vm.EagerSymb" +
-      "olB\032\n\026org.oneflow.core.eagerP\001"
+      "olB\030\n\026org.oneflow.core.eager"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

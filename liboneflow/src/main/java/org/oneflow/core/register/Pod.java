@@ -14,29 +14,4138 @@ public final class Pod {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code oneflow.FieldKey}
+   */
+  public enum FieldKey
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>kInvalidFieldKey = 0;</code>
+     */
+    kInvalidFieldKey(0),
+    /**
+     * <code>kTensorShape = 1;</code>
+     */
+    kTensorShape(1),
+    /**
+     * <code>kFieldKeySize = 2;</code>
+     */
+    kFieldKeySize(2),
+    ;
+
+    /**
+     * <code>kInvalidFieldKey = 0;</code>
+     */
+    public static final int kInvalidFieldKey_VALUE = 0;
+    /**
+     * <code>kTensorShape = 1;</code>
+     */
+    public static final int kTensorShape_VALUE = 1;
+    /**
+     * <code>kFieldKeySize = 2;</code>
+     */
+    public static final int kFieldKeySize_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FieldKey valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static FieldKey forNumber(int value) {
+      switch (value) {
+        case 0: return kInvalidFieldKey;
+        case 1: return kTensorShape;
+        case 2: return kFieldKeySize;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FieldKey>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FieldKey> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FieldKey>() {
+            public FieldKey findValueByNumber(int number) {
+              return FieldKey.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final FieldKey[] VALUES = values();
+
+    public static FieldKey valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FieldKey(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:oneflow.FieldKey)
+  }
+
+  public interface TensorPodProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.TensorPodProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    boolean hasShape();
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeProto getShape();
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder();
+
+    /**
+     * <code>required .oneflow.DataType data_type = 2;</code>
+     */
+    boolean hasDataType();
+    /**
+     * <code>required .oneflow.DataType data_type = 2;</code>
+     */
+    org.oneflow.core.common.DataTypeOuterClass.DataType getDataType();
+  }
+  /**
+   * Protobuf type {@code oneflow.TensorPodProto}
+   */
+  public  static final class TensorPodProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.TensorPodProto)
+      TensorPodProtoOrBuilder {
+    // Use TensorPodProto.newBuilder() to construct.
+    private TensorPodProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TensorPodProto() {
+      dataType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TensorPodProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.common.Shape.ShapeProto.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = shape_.toBuilder();
+              }
+              shape_ = input.readMessage(org.oneflow.core.common.Shape.ShapeProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shape_);
+                shape_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.common.DataTypeOuterClass.DataType value = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                dataType_ = rawValue;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_TensorPodProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_TensorPodProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.Pod.TensorPodProto.class, org.oneflow.core.register.Pod.TensorPodProto.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SHAPE_FIELD_NUMBER = 1;
+    private org.oneflow.core.common.Shape.ShapeProto shape_;
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    public boolean hasShape() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeProto getShape() {
+      return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+    }
+    /**
+     * <code>required .oneflow.ShapeProto shape = 1;</code>
+     */
+    public org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
+      return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+    }
+
+    public static final int DATA_TYPE_FIELD_NUMBER = 2;
+    private int dataType_;
+    /**
+     * <code>required .oneflow.DataType data_type = 2;</code>
+     */
+    public boolean hasDataType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .oneflow.DataType data_type = 2;</code>
+     */
+    public org.oneflow.core.common.DataTypeOuterClass.DataType getDataType() {
+      org.oneflow.core.common.DataTypeOuterClass.DataType result = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(dataType_);
+      return result == null ? org.oneflow.core.common.DataTypeOuterClass.DataType.kInvalidDataType : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasShape()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDataType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getShape());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, dataType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getShape());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, dataType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.Pod.TensorPodProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.Pod.TensorPodProto other = (org.oneflow.core.register.Pod.TensorPodProto) obj;
+
+      boolean result = true;
+      result = result && (hasShape() == other.hasShape());
+      if (hasShape()) {
+        result = result && getShape()
+            .equals(other.getShape());
+      }
+      result = result && (hasDataType() == other.hasDataType());
+      if (hasDataType()) {
+        result = result && dataType_ == other.dataType_;
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasShape()) {
+        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
+        hash = (53 * hash) + getShape().hashCode();
+      }
+      if (hasDataType()) {
+        hash = (37 * hash) + DATA_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + dataType_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.TensorPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.Pod.TensorPodProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.TensorPodProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.TensorPodProto)
+        org.oneflow.core.register.Pod.TensorPodProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_TensorPodProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_TensorPodProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.Pod.TensorPodProto.class, org.oneflow.core.register.Pod.TensorPodProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.Pod.TensorPodProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getShapeFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_TensorPodProto_descriptor;
+      }
+
+      public org.oneflow.core.register.Pod.TensorPodProto getDefaultInstanceForType() {
+        return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.Pod.TensorPodProto build() {
+        org.oneflow.core.register.Pod.TensorPodProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.Pod.TensorPodProto buildPartial() {
+        org.oneflow.core.register.Pod.TensorPodProto result = new org.oneflow.core.register.Pod.TensorPodProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (shapeBuilder_ == null) {
+          result.shape_ = shape_;
+        } else {
+          result.shape_ = shapeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.dataType_ = dataType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.Pod.TensorPodProto) {
+          return mergeFrom((org.oneflow.core.register.Pod.TensorPodProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.Pod.TensorPodProto other) {
+        if (other == org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance()) return this;
+        if (other.hasShape()) {
+          mergeShape(other.getShape());
+        }
+        if (other.hasDataType()) {
+          setDataType(other.getDataType());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasShape()) {
+          return false;
+        }
+        if (!hasDataType()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.Pod.TensorPodProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.Pod.TensorPodProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.common.Shape.ShapeProto shape_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder> shapeBuilder_;
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public boolean hasShape() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProto getShape() {
+        if (shapeBuilder_ == null) {
+          return shape_ == null ? org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+        } else {
+          return shapeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public Builder setShape(org.oneflow.core.common.Shape.ShapeProto value) {
+        if (shapeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shape_ = value;
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public Builder setShape(
+          org.oneflow.core.common.Shape.ShapeProto.Builder builderForValue) {
+        if (shapeBuilder_ == null) {
+          shape_ = builderForValue.build();
+          onChanged();
+        } else {
+          shapeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public Builder mergeShape(org.oneflow.core.common.Shape.ShapeProto value) {
+        if (shapeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              shape_ != null &&
+              shape_ != org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance()) {
+            shape_ =
+              org.oneflow.core.common.Shape.ShapeProto.newBuilder(shape_).mergeFrom(value).buildPartial();
+          } else {
+            shape_ = value;
+          }
+          onChanged();
+        } else {
+          shapeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public Builder clearShape() {
+        if (shapeBuilder_ == null) {
+          shape_ = null;
+          onChanged();
+        } else {
+          shapeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProto.Builder getShapeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getShapeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      public org.oneflow.core.common.Shape.ShapeProtoOrBuilder getShapeOrBuilder() {
+        if (shapeBuilder_ != null) {
+          return shapeBuilder_.getMessageOrBuilder();
+        } else {
+          return shape_ == null ?
+              org.oneflow.core.common.Shape.ShapeProto.getDefaultInstance() : shape_;
+        }
+      }
+      /**
+       * <code>required .oneflow.ShapeProto shape = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder> 
+          getShapeFieldBuilder() {
+        if (shapeBuilder_ == null) {
+          shapeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.common.Shape.ShapeProto, org.oneflow.core.common.Shape.ShapeProto.Builder, org.oneflow.core.common.Shape.ShapeProtoOrBuilder>(
+                  getShape(),
+                  getParentForChildren(),
+                  isClean());
+          shape_ = null;
+        }
+        return shapeBuilder_;
+      }
+
+      private int dataType_ = 0;
+      /**
+       * <code>required .oneflow.DataType data_type = 2;</code>
+       */
+      public boolean hasDataType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 2;</code>
+       */
+      public org.oneflow.core.common.DataTypeOuterClass.DataType getDataType() {
+        org.oneflow.core.common.DataTypeOuterClass.DataType result = org.oneflow.core.common.DataTypeOuterClass.DataType.valueOf(dataType_);
+        return result == null ? org.oneflow.core.common.DataTypeOuterClass.DataType.kInvalidDataType : result;
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 2;</code>
+       */
+      public Builder setDataType(org.oneflow.core.common.DataTypeOuterClass.DataType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        dataType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .oneflow.DataType data_type = 2;</code>
+       */
+      public Builder clearDataType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dataType_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.TensorPodProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.TensorPodProto)
+    private static final org.oneflow.core.register.Pod.TensorPodProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.Pod.TensorPodProto();
+    }
+
+    public static org.oneflow.core.register.Pod.TensorPodProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TensorPodProto>
+        PARSER = new com.google.protobuf.AbstractParser<TensorPodProto>() {
+      public TensorPodProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TensorPodProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TensorPodProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TensorPodProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.Pod.TensorPodProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StructPodProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.StructPodProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    java.util.List<org.oneflow.core.register.Pod.FieldPodProto> 
+        getFieldList();
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    org.oneflow.core.register.Pod.FieldPodProto getField(int index);
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    int getFieldCount();
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    java.util.List<? extends org.oneflow.core.register.Pod.FieldPodProtoOrBuilder> 
+        getFieldOrBuilderList();
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    org.oneflow.core.register.Pod.FieldPodProtoOrBuilder getFieldOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.StructPodProto}
+   */
+  public  static final class StructPodProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.StructPodProto)
+      StructPodProtoOrBuilder {
+    // Use StructPodProto.newBuilder() to construct.
+    private StructPodProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StructPodProto() {
+      field_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StructPodProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                field_ = new java.util.ArrayList<org.oneflow.core.register.Pod.FieldPodProto>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              field_.add(
+                  input.readMessage(org.oneflow.core.register.Pod.FieldPodProto.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          field_ = java.util.Collections.unmodifiableList(field_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_StructPodProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_StructPodProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.Pod.StructPodProto.class, org.oneflow.core.register.Pod.StructPodProto.Builder.class);
+    }
+
+    public static final int FIELD_FIELD_NUMBER = 1;
+    private java.util.List<org.oneflow.core.register.Pod.FieldPodProto> field_;
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    public java.util.List<org.oneflow.core.register.Pod.FieldPodProto> getFieldList() {
+      return field_;
+    }
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    public java.util.List<? extends org.oneflow.core.register.Pod.FieldPodProtoOrBuilder> 
+        getFieldOrBuilderList() {
+      return field_;
+    }
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    public int getFieldCount() {
+      return field_.size();
+    }
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.FieldPodProto getField(int index) {
+      return field_.get(index);
+    }
+    /**
+     * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.FieldPodProtoOrBuilder getFieldOrBuilder(
+        int index) {
+      return field_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getFieldCount(); i++) {
+        if (!getField(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < field_.size(); i++) {
+        output.writeMessage(1, field_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < field_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, field_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.Pod.StructPodProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.Pod.StructPodProto other = (org.oneflow.core.register.Pod.StructPodProto) obj;
+
+      boolean result = true;
+      result = result && getFieldList()
+          .equals(other.getFieldList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getFieldCount() > 0) {
+        hash = (37 * hash) + FIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.StructPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.Pod.StructPodProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.StructPodProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.StructPodProto)
+        org.oneflow.core.register.Pod.StructPodProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_StructPodProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_StructPodProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.Pod.StructPodProto.class, org.oneflow.core.register.Pod.StructPodProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.Pod.StructPodProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFieldFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (fieldBuilder_ == null) {
+          field_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          fieldBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_StructPodProto_descriptor;
+      }
+
+      public org.oneflow.core.register.Pod.StructPodProto getDefaultInstanceForType() {
+        return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.Pod.StructPodProto build() {
+        org.oneflow.core.register.Pod.StructPodProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.Pod.StructPodProto buildPartial() {
+        org.oneflow.core.register.Pod.StructPodProto result = new org.oneflow.core.register.Pod.StructPodProto(this);
+        int from_bitField0_ = bitField0_;
+        if (fieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            field_ = java.util.Collections.unmodifiableList(field_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.field_ = field_;
+        } else {
+          result.field_ = fieldBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.Pod.StructPodProto) {
+          return mergeFrom((org.oneflow.core.register.Pod.StructPodProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.Pod.StructPodProto other) {
+        if (other == org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance()) return this;
+        if (fieldBuilder_ == null) {
+          if (!other.field_.isEmpty()) {
+            if (field_.isEmpty()) {
+              field_ = other.field_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFieldIsMutable();
+              field_.addAll(other.field_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.field_.isEmpty()) {
+            if (fieldBuilder_.isEmpty()) {
+              fieldBuilder_.dispose();
+              fieldBuilder_ = null;
+              field_ = other.field_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fieldBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFieldFieldBuilder() : null;
+            } else {
+              fieldBuilder_.addAllMessages(other.field_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getFieldCount(); i++) {
+          if (!getField(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.Pod.StructPodProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.Pod.StructPodProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.oneflow.core.register.Pod.FieldPodProto> field_ =
+        java.util.Collections.emptyList();
+      private void ensureFieldIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          field_ = new java.util.ArrayList<org.oneflow.core.register.Pod.FieldPodProto>(field_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.Pod.FieldPodProto, org.oneflow.core.register.Pod.FieldPodProto.Builder, org.oneflow.core.register.Pod.FieldPodProtoOrBuilder> fieldBuilder_;
+
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.Pod.FieldPodProto> getFieldList() {
+        if (fieldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(field_);
+        } else {
+          return fieldBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public int getFieldCount() {
+        if (fieldBuilder_ == null) {
+          return field_.size();
+        } else {
+          return fieldBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldPodProto getField(int index) {
+        if (fieldBuilder_ == null) {
+          return field_.get(index);
+        } else {
+          return fieldBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder setField(
+          int index, org.oneflow.core.register.Pod.FieldPodProto value) {
+        if (fieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldIsMutable();
+          field_.set(index, value);
+          onChanged();
+        } else {
+          fieldBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder setField(
+          int index, org.oneflow.core.register.Pod.FieldPodProto.Builder builderForValue) {
+        if (fieldBuilder_ == null) {
+          ensureFieldIsMutable();
+          field_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder addField(org.oneflow.core.register.Pod.FieldPodProto value) {
+        if (fieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldIsMutable();
+          field_.add(value);
+          onChanged();
+        } else {
+          fieldBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder addField(
+          int index, org.oneflow.core.register.Pod.FieldPodProto value) {
+        if (fieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldIsMutable();
+          field_.add(index, value);
+          onChanged();
+        } else {
+          fieldBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder addField(
+          org.oneflow.core.register.Pod.FieldPodProto.Builder builderForValue) {
+        if (fieldBuilder_ == null) {
+          ensureFieldIsMutable();
+          field_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fieldBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder addField(
+          int index, org.oneflow.core.register.Pod.FieldPodProto.Builder builderForValue) {
+        if (fieldBuilder_ == null) {
+          ensureFieldIsMutable();
+          field_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder addAllField(
+          java.lang.Iterable<? extends org.oneflow.core.register.Pod.FieldPodProto> values) {
+        if (fieldBuilder_ == null) {
+          ensureFieldIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, field_);
+          onChanged();
+        } else {
+          fieldBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder clearField() {
+        if (fieldBuilder_ == null) {
+          field_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fieldBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public Builder removeField(int index) {
+        if (fieldBuilder_ == null) {
+          ensureFieldIsMutable();
+          field_.remove(index);
+          onChanged();
+        } else {
+          fieldBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldPodProto.Builder getFieldBuilder(
+          int index) {
+        return getFieldFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldPodProtoOrBuilder getFieldOrBuilder(
+          int index) {
+        if (fieldBuilder_ == null) {
+          return field_.get(index);  } else {
+          return fieldBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public java.util.List<? extends org.oneflow.core.register.Pod.FieldPodProtoOrBuilder> 
+           getFieldOrBuilderList() {
+        if (fieldBuilder_ != null) {
+          return fieldBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(field_);
+        }
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldPodProto.Builder addFieldBuilder() {
+        return getFieldFieldBuilder().addBuilder(
+            org.oneflow.core.register.Pod.FieldPodProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldPodProto.Builder addFieldBuilder(
+          int index) {
+        return getFieldFieldBuilder().addBuilder(
+            index, org.oneflow.core.register.Pod.FieldPodProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oneflow.FieldPodProto field = 1;</code>
+       */
+      public java.util.List<org.oneflow.core.register.Pod.FieldPodProto.Builder> 
+           getFieldBuilderList() {
+        return getFieldFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.oneflow.core.register.Pod.FieldPodProto, org.oneflow.core.register.Pod.FieldPodProto.Builder, org.oneflow.core.register.Pod.FieldPodProtoOrBuilder> 
+          getFieldFieldBuilder() {
+        if (fieldBuilder_ == null) {
+          fieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.oneflow.core.register.Pod.FieldPodProto, org.oneflow.core.register.Pod.FieldPodProto.Builder, org.oneflow.core.register.Pod.FieldPodProtoOrBuilder>(
+                  field_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          field_ = null;
+        }
+        return fieldBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.StructPodProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.StructPodProto)
+    private static final org.oneflow.core.register.Pod.StructPodProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.Pod.StructPodProto();
+    }
+
+    public static org.oneflow.core.register.Pod.StructPodProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StructPodProto>
+        PARSER = new com.google.protobuf.AbstractParser<StructPodProto>() {
+      public StructPodProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new StructPodProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StructPodProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StructPodProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.Pod.StructPodProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FieldIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FieldId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.FieldKey key = 1;</code>
+     */
+    boolean hasKey();
+    /**
+     * <code>optional .oneflow.FieldKey key = 1;</code>
+     */
+    org.oneflow.core.register.Pod.FieldKey getKey();
+
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    boolean hasLbi();
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId getLbi();
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder getLbiOrBuilder();
+
+    public org.oneflow.core.register.Pod.FieldId.FieldIdTypeCase getFieldIdTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.FieldId}
+   */
+  public  static final class FieldId extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FieldId)
+      FieldIdOrBuilder {
+    // Use FieldId.newBuilder() to construct.
+    private FieldId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FieldId() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FieldId(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              org.oneflow.core.register.Pod.FieldKey value = org.oneflow.core.register.Pod.FieldKey.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                fieldIdTypeCase_ = 1;
+                fieldIdType_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder subBuilder = null;
+              if (fieldIdTypeCase_ == 2) {
+                subBuilder = ((org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_).toBuilder();
+              }
+              fieldIdType_ =
+                  input.readMessage(org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_);
+                fieldIdType_ = subBuilder.buildPartial();
+              }
+              fieldIdTypeCase_ = 2;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_FieldId_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_FieldId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.Pod.FieldId.class, org.oneflow.core.register.Pod.FieldId.Builder.class);
+    }
+
+    private int bitField0_;
+    private int fieldIdTypeCase_ = 0;
+    private java.lang.Object fieldIdType_;
+    public enum FieldIdTypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      KEY(1),
+      LBI(2),
+      FIELDIDTYPE_NOT_SET(0);
+      private final int value;
+      private FieldIdTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FieldIdTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static FieldIdTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return KEY;
+          case 2: return LBI;
+          case 0: return FIELDIDTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public FieldIdTypeCase
+    getFieldIdTypeCase() {
+      return FieldIdTypeCase.forNumber(
+          fieldIdTypeCase_);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    /**
+     * <code>optional .oneflow.FieldKey key = 1;</code>
+     */
+    public boolean hasKey() {
+      return fieldIdTypeCase_ == 1;
+    }
+    /**
+     * <code>optional .oneflow.FieldKey key = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.FieldKey getKey() {
+      if (fieldIdTypeCase_ == 1) {
+        org.oneflow.core.register.Pod.FieldKey result = org.oneflow.core.register.Pod.FieldKey.valueOf(
+            (java.lang.Integer) fieldIdType_);
+        return result == null ? org.oneflow.core.register.Pod.FieldKey.kInvalidFieldKey : result;
+      }
+      return org.oneflow.core.register.Pod.FieldKey.kInvalidFieldKey;
+    }
+
+    public static final int LBI_FIELD_NUMBER = 2;
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    public boolean hasLbi() {
+      return fieldIdTypeCase_ == 2;
+    }
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId getLbi() {
+      if (fieldIdTypeCase_ == 2) {
+         return (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_;
+      }
+      return org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+     */
+    public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder getLbiOrBuilder() {
+      if (fieldIdTypeCase_ == 2) {
+         return (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_;
+      }
+      return org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fieldIdTypeCase_ == 1) {
+        output.writeEnum(1, ((java.lang.Integer) fieldIdType_));
+      }
+      if (fieldIdTypeCase_ == 2) {
+        output.writeMessage(2, (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fieldIdTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, ((java.lang.Integer) fieldIdType_));
+      }
+      if (fieldIdTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.Pod.FieldId)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.Pod.FieldId other = (org.oneflow.core.register.Pod.FieldId) obj;
+
+      boolean result = true;
+      result = result && getFieldIdTypeCase().equals(
+          other.getFieldIdTypeCase());
+      if (!result) return false;
+      switch (fieldIdTypeCase_) {
+        case 1:
+          result = result && getKey()
+              .equals(other.getKey());
+          break;
+        case 2:
+          result = result && getLbi()
+              .equals(other.getLbi());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (fieldIdTypeCase_) {
+        case 1:
+          hash = (37 * hash) + KEY_FIELD_NUMBER;
+          hash = (53 * hash) + getKey().getNumber();
+          break;
+        case 2:
+          hash = (37 * hash) + LBI_FIELD_NUMBER;
+          hash = (53 * hash) + getLbi().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.Pod.FieldId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FieldId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FieldId)
+        org.oneflow.core.register.Pod.FieldIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldId_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.Pod.FieldId.class, org.oneflow.core.register.Pod.FieldId.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.Pod.FieldId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        fieldIdTypeCase_ = 0;
+        fieldIdType_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldId_descriptor;
+      }
+
+      public org.oneflow.core.register.Pod.FieldId getDefaultInstanceForType() {
+        return org.oneflow.core.register.Pod.FieldId.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.Pod.FieldId build() {
+        org.oneflow.core.register.Pod.FieldId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.Pod.FieldId buildPartial() {
+        org.oneflow.core.register.Pod.FieldId result = new org.oneflow.core.register.Pod.FieldId(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (fieldIdTypeCase_ == 1) {
+          result.fieldIdType_ = fieldIdType_;
+        }
+        if (fieldIdTypeCase_ == 2) {
+          if (lbiBuilder_ == null) {
+            result.fieldIdType_ = fieldIdType_;
+          } else {
+            result.fieldIdType_ = lbiBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.fieldIdTypeCase_ = fieldIdTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.Pod.FieldId) {
+          return mergeFrom((org.oneflow.core.register.Pod.FieldId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.Pod.FieldId other) {
+        if (other == org.oneflow.core.register.Pod.FieldId.getDefaultInstance()) return this;
+        switch (other.getFieldIdTypeCase()) {
+          case KEY: {
+            setKey(other.getKey());
+            break;
+          }
+          case LBI: {
+            mergeLbi(other.getLbi());
+            break;
+          }
+          case FIELDIDTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.Pod.FieldId parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.Pod.FieldId) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int fieldIdTypeCase_ = 0;
+      private java.lang.Object fieldIdType_;
+      public FieldIdTypeCase
+          getFieldIdTypeCase() {
+        return FieldIdTypeCase.forNumber(
+            fieldIdTypeCase_);
+      }
+
+      public Builder clearFieldIdType() {
+        fieldIdTypeCase_ = 0;
+        fieldIdType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>optional .oneflow.FieldKey key = 1;</code>
+       */
+      public boolean hasKey() {
+        return fieldIdTypeCase_ == 1;
+      }
+      /**
+       * <code>optional .oneflow.FieldKey key = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldKey getKey() {
+        if (fieldIdTypeCase_ == 1) {
+          org.oneflow.core.register.Pod.FieldKey result = org.oneflow.core.register.Pod.FieldKey.valueOf(
+              (java.lang.Integer) fieldIdType_);
+          return result == null ? org.oneflow.core.register.Pod.FieldKey.kInvalidFieldKey : result;
+        }
+        return org.oneflow.core.register.Pod.FieldKey.kInvalidFieldKey;
+      }
+      /**
+       * <code>optional .oneflow.FieldKey key = 1;</code>
+       */
+      public Builder setKey(org.oneflow.core.register.Pod.FieldKey value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        fieldIdTypeCase_ = 1;
+        fieldIdType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.FieldKey key = 1;</code>
+       */
+      public Builder clearKey() {
+        if (fieldIdTypeCase_ == 1) {
+          fieldIdTypeCase_ = 0;
+          fieldIdType_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder> lbiBuilder_;
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public boolean hasLbi() {
+        return fieldIdTypeCase_ == 2;
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId getLbi() {
+        if (lbiBuilder_ == null) {
+          if (fieldIdTypeCase_ == 2) {
+            return (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_;
+          }
+          return org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+        } else {
+          if (fieldIdTypeCase_ == 2) {
+            return lbiBuilder_.getMessage();
+          }
+          return org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public Builder setLbi(org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId value) {
+        if (lbiBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fieldIdType_ = value;
+          onChanged();
+        } else {
+          lbiBuilder_.setMessage(value);
+        }
+        fieldIdTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public Builder setLbi(
+          org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder builderForValue) {
+        if (lbiBuilder_ == null) {
+          fieldIdType_ = builderForValue.build();
+          onChanged();
+        } else {
+          lbiBuilder_.setMessage(builderForValue.build());
+        }
+        fieldIdTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public Builder mergeLbi(org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId value) {
+        if (lbiBuilder_ == null) {
+          if (fieldIdTypeCase_ == 2 &&
+              fieldIdType_ != org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance()) {
+            fieldIdType_ = org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.newBuilder((org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            fieldIdType_ = value;
+          }
+          onChanged();
+        } else {
+          if (fieldIdTypeCase_ == 2) {
+            lbiBuilder_.mergeFrom(value);
+          }
+          lbiBuilder_.setMessage(value);
+        }
+        fieldIdTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public Builder clearLbi() {
+        if (lbiBuilder_ == null) {
+          if (fieldIdTypeCase_ == 2) {
+            fieldIdTypeCase_ = 0;
+            fieldIdType_ = null;
+            onChanged();
+          }
+        } else {
+          if (fieldIdTypeCase_ == 2) {
+            fieldIdTypeCase_ = 0;
+            fieldIdType_ = null;
+          }
+          lbiBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder getLbiBuilder() {
+        return getLbiFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      public org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder getLbiOrBuilder() {
+        if ((fieldIdTypeCase_ == 2) && (lbiBuilder_ != null)) {
+          return lbiBuilder_.getMessageOrBuilder();
+        } else {
+          if (fieldIdTypeCase_ == 2) {
+            return (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_;
+          }
+          return org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.LogicalBlobId lbi = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder> 
+          getLbiFieldBuilder() {
+        if (lbiBuilder_ == null) {
+          if (!(fieldIdTypeCase_ == 2)) {
+            fieldIdType_ = org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.getDefaultInstance();
+          }
+          lbiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId.Builder, org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobIdOrBuilder>(
+                  (org.oneflow.core.register.LogicalBlobIdOuterClass.LogicalBlobId) fieldIdType_,
+                  getParentForChildren(),
+                  isClean());
+          fieldIdType_ = null;
+        }
+        fieldIdTypeCase_ = 2;
+        onChanged();;
+        return lbiBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FieldId)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FieldId)
+    private static final org.oneflow.core.register.Pod.FieldId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.Pod.FieldId();
+    }
+
+    public static org.oneflow.core.register.Pod.FieldId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FieldId>
+        PARSER = new com.google.protobuf.AbstractParser<FieldId>() {
+      public FieldId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FieldId(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FieldId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FieldId> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.Pod.FieldId getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FieldPodProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FieldPodProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    boolean hasFieldId();
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    org.oneflow.core.register.Pod.FieldId getFieldId();
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    org.oneflow.core.register.Pod.FieldIdOrBuilder getFieldIdOrBuilder();
+
+    /**
+     * <code>required int32 alignment = 2;</code>
+     */
+    boolean hasAlignment();
+    /**
+     * <code>required int32 alignment = 2;</code>
+     */
+    int getAlignment();
+
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    boolean hasPod();
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    org.oneflow.core.register.Pod.PodProto getPod();
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    org.oneflow.core.register.Pod.PodProtoOrBuilder getPodOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oneflow.FieldPodProto}
+   */
+  public  static final class FieldPodProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FieldPodProto)
+      FieldPodProtoOrBuilder {
+    // Use FieldPodProto.newBuilder() to construct.
+    private FieldPodProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FieldPodProto() {
+      alignment_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FieldPodProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.register.Pod.FieldId.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = fieldId_.toBuilder();
+              }
+              fieldId_ = input.readMessage(org.oneflow.core.register.Pod.FieldId.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fieldId_);
+                fieldId_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              alignment_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              org.oneflow.core.register.Pod.PodProto.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = pod_.toBuilder();
+              }
+              pod_ = input.readMessage(org.oneflow.core.register.Pod.PodProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pod_);
+                pod_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_FieldPodProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_FieldPodProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.Pod.FieldPodProto.class, org.oneflow.core.register.Pod.FieldPodProto.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FIELD_ID_FIELD_NUMBER = 1;
+    private org.oneflow.core.register.Pod.FieldId fieldId_;
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    public boolean hasFieldId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.FieldId getFieldId() {
+      return fieldId_ == null ? org.oneflow.core.register.Pod.FieldId.getDefaultInstance() : fieldId_;
+    }
+    /**
+     * <code>required .oneflow.FieldId field_id = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.FieldIdOrBuilder getFieldIdOrBuilder() {
+      return fieldId_ == null ? org.oneflow.core.register.Pod.FieldId.getDefaultInstance() : fieldId_;
+    }
+
+    public static final int ALIGNMENT_FIELD_NUMBER = 2;
+    private int alignment_;
+    /**
+     * <code>required int32 alignment = 2;</code>
+     */
+    public boolean hasAlignment() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 alignment = 2;</code>
+     */
+    public int getAlignment() {
+      return alignment_;
+    }
+
+    public static final int POD_FIELD_NUMBER = 3;
+    private org.oneflow.core.register.Pod.PodProto pod_;
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    public boolean hasPod() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    public org.oneflow.core.register.Pod.PodProto getPod() {
+      return pod_ == null ? org.oneflow.core.register.Pod.PodProto.getDefaultInstance() : pod_;
+    }
+    /**
+     * <code>required .oneflow.PodProto pod = 3;</code>
+     */
+    public org.oneflow.core.register.Pod.PodProtoOrBuilder getPodOrBuilder() {
+      return pod_ == null ? org.oneflow.core.register.Pod.PodProto.getDefaultInstance() : pod_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFieldId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAlignment()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPod()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getPod().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getFieldId());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, alignment_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, getPod());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFieldId());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, alignment_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPod());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.Pod.FieldPodProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.Pod.FieldPodProto other = (org.oneflow.core.register.Pod.FieldPodProto) obj;
+
+      boolean result = true;
+      result = result && (hasFieldId() == other.hasFieldId());
+      if (hasFieldId()) {
+        result = result && getFieldId()
+            .equals(other.getFieldId());
+      }
+      result = result && (hasAlignment() == other.hasAlignment());
+      if (hasAlignment()) {
+        result = result && (getAlignment()
+            == other.getAlignment());
+      }
+      result = result && (hasPod() == other.hasPod());
+      if (hasPod()) {
+        result = result && getPod()
+            .equals(other.getPod());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasFieldId()) {
+        hash = (37 * hash) + FIELD_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldId().hashCode();
+      }
+      if (hasAlignment()) {
+        hash = (37 * hash) + ALIGNMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAlignment();
+      }
+      if (hasPod()) {
+        hash = (37 * hash) + POD_FIELD_NUMBER;
+        hash = (53 * hash) + getPod().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.FieldPodProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.Pod.FieldPodProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FieldPodProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FieldPodProto)
+        org.oneflow.core.register.Pod.FieldPodProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldPodProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldPodProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.Pod.FieldPodProto.class, org.oneflow.core.register.Pod.FieldPodProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.Pod.FieldPodProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFieldIdFieldBuilder();
+          getPodFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (fieldIdBuilder_ == null) {
+          fieldId_ = null;
+        } else {
+          fieldIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        alignment_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (podBuilder_ == null) {
+          pod_ = null;
+        } else {
+          podBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_FieldPodProto_descriptor;
+      }
+
+      public org.oneflow.core.register.Pod.FieldPodProto getDefaultInstanceForType() {
+        return org.oneflow.core.register.Pod.FieldPodProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.Pod.FieldPodProto build() {
+        org.oneflow.core.register.Pod.FieldPodProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.Pod.FieldPodProto buildPartial() {
+        org.oneflow.core.register.Pod.FieldPodProto result = new org.oneflow.core.register.Pod.FieldPodProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (fieldIdBuilder_ == null) {
+          result.fieldId_ = fieldId_;
+        } else {
+          result.fieldId_ = fieldIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.alignment_ = alignment_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (podBuilder_ == null) {
+          result.pod_ = pod_;
+        } else {
+          result.pod_ = podBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.Pod.FieldPodProto) {
+          return mergeFrom((org.oneflow.core.register.Pod.FieldPodProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.Pod.FieldPodProto other) {
+        if (other == org.oneflow.core.register.Pod.FieldPodProto.getDefaultInstance()) return this;
+        if (other.hasFieldId()) {
+          mergeFieldId(other.getFieldId());
+        }
+        if (other.hasAlignment()) {
+          setAlignment(other.getAlignment());
+        }
+        if (other.hasPod()) {
+          mergePod(other.getPod());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFieldId()) {
+          return false;
+        }
+        if (!hasAlignment()) {
+          return false;
+        }
+        if (!hasPod()) {
+          return false;
+        }
+        if (!getPod().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.Pod.FieldPodProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.Pod.FieldPodProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.register.Pod.FieldId fieldId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.FieldId, org.oneflow.core.register.Pod.FieldId.Builder, org.oneflow.core.register.Pod.FieldIdOrBuilder> fieldIdBuilder_;
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public boolean hasFieldId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldId getFieldId() {
+        if (fieldIdBuilder_ == null) {
+          return fieldId_ == null ? org.oneflow.core.register.Pod.FieldId.getDefaultInstance() : fieldId_;
+        } else {
+          return fieldIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public Builder setFieldId(org.oneflow.core.register.Pod.FieldId value) {
+        if (fieldIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fieldId_ = value;
+          onChanged();
+        } else {
+          fieldIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public Builder setFieldId(
+          org.oneflow.core.register.Pod.FieldId.Builder builderForValue) {
+        if (fieldIdBuilder_ == null) {
+          fieldId_ = builderForValue.build();
+          onChanged();
+        } else {
+          fieldIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public Builder mergeFieldId(org.oneflow.core.register.Pod.FieldId value) {
+        if (fieldIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              fieldId_ != null &&
+              fieldId_ != org.oneflow.core.register.Pod.FieldId.getDefaultInstance()) {
+            fieldId_ =
+              org.oneflow.core.register.Pod.FieldId.newBuilder(fieldId_).mergeFrom(value).buildPartial();
+          } else {
+            fieldId_ = value;
+          }
+          onChanged();
+        } else {
+          fieldIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public Builder clearFieldId() {
+        if (fieldIdBuilder_ == null) {
+          fieldId_ = null;
+          onChanged();
+        } else {
+          fieldIdBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldId.Builder getFieldIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFieldIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.FieldIdOrBuilder getFieldIdOrBuilder() {
+        if (fieldIdBuilder_ != null) {
+          return fieldIdBuilder_.getMessageOrBuilder();
+        } else {
+          return fieldId_ == null ?
+              org.oneflow.core.register.Pod.FieldId.getDefaultInstance() : fieldId_;
+        }
+      }
+      /**
+       * <code>required .oneflow.FieldId field_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.FieldId, org.oneflow.core.register.Pod.FieldId.Builder, org.oneflow.core.register.Pod.FieldIdOrBuilder> 
+          getFieldIdFieldBuilder() {
+        if (fieldIdBuilder_ == null) {
+          fieldIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.Pod.FieldId, org.oneflow.core.register.Pod.FieldId.Builder, org.oneflow.core.register.Pod.FieldIdOrBuilder>(
+                  getFieldId(),
+                  getParentForChildren(),
+                  isClean());
+          fieldId_ = null;
+        }
+        return fieldIdBuilder_;
+      }
+
+      private int alignment_ ;
+      /**
+       * <code>required int32 alignment = 2;</code>
+       */
+      public boolean hasAlignment() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 alignment = 2;</code>
+       */
+      public int getAlignment() {
+        return alignment_;
+      }
+      /**
+       * <code>required int32 alignment = 2;</code>
+       */
+      public Builder setAlignment(int value) {
+        bitField0_ |= 0x00000002;
+        alignment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 alignment = 2;</code>
+       */
+      public Builder clearAlignment() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        alignment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private org.oneflow.core.register.Pod.PodProto pod_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.PodProto, org.oneflow.core.register.Pod.PodProto.Builder, org.oneflow.core.register.Pod.PodProtoOrBuilder> podBuilder_;
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public boolean hasPod() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public org.oneflow.core.register.Pod.PodProto getPod() {
+        if (podBuilder_ == null) {
+          return pod_ == null ? org.oneflow.core.register.Pod.PodProto.getDefaultInstance() : pod_;
+        } else {
+          return podBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public Builder setPod(org.oneflow.core.register.Pod.PodProto value) {
+        if (podBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pod_ = value;
+          onChanged();
+        } else {
+          podBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public Builder setPod(
+          org.oneflow.core.register.Pod.PodProto.Builder builderForValue) {
+        if (podBuilder_ == null) {
+          pod_ = builderForValue.build();
+          onChanged();
+        } else {
+          podBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public Builder mergePod(org.oneflow.core.register.Pod.PodProto value) {
+        if (podBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              pod_ != null &&
+              pod_ != org.oneflow.core.register.Pod.PodProto.getDefaultInstance()) {
+            pod_ =
+              org.oneflow.core.register.Pod.PodProto.newBuilder(pod_).mergeFrom(value).buildPartial();
+          } else {
+            pod_ = value;
+          }
+          onChanged();
+        } else {
+          podBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public Builder clearPod() {
+        if (podBuilder_ == null) {
+          pod_ = null;
+          onChanged();
+        } else {
+          podBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public org.oneflow.core.register.Pod.PodProto.Builder getPodBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      public org.oneflow.core.register.Pod.PodProtoOrBuilder getPodOrBuilder() {
+        if (podBuilder_ != null) {
+          return podBuilder_.getMessageOrBuilder();
+        } else {
+          return pod_ == null ?
+              org.oneflow.core.register.Pod.PodProto.getDefaultInstance() : pod_;
+        }
+      }
+      /**
+       * <code>required .oneflow.PodProto pod = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.PodProto, org.oneflow.core.register.Pod.PodProto.Builder, org.oneflow.core.register.Pod.PodProtoOrBuilder> 
+          getPodFieldBuilder() {
+        if (podBuilder_ == null) {
+          podBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.Pod.PodProto, org.oneflow.core.register.Pod.PodProto.Builder, org.oneflow.core.register.Pod.PodProtoOrBuilder>(
+                  getPod(),
+                  getParentForChildren(),
+                  isClean());
+          pod_ = null;
+        }
+        return podBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FieldPodProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FieldPodProto)
+    private static final org.oneflow.core.register.Pod.FieldPodProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.Pod.FieldPodProto();
+    }
+
+    public static org.oneflow.core.register.Pod.FieldPodProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FieldPodProto>
+        PARSER = new com.google.protobuf.AbstractParser<FieldPodProto>() {
+      public FieldPodProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FieldPodProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FieldPodProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FieldPodProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.Pod.FieldPodProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PodProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.PodProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    boolean hasTensorPod();
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    org.oneflow.core.register.Pod.TensorPodProto getTensorPod();
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    org.oneflow.core.register.Pod.TensorPodProtoOrBuilder getTensorPodOrBuilder();
+
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    boolean hasStructPod();
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    org.oneflow.core.register.Pod.StructPodProto getStructPod();
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    org.oneflow.core.register.Pod.StructPodProtoOrBuilder getStructPodOrBuilder();
+
+    public org.oneflow.core.register.Pod.PodProto.PodTypeCase getPodTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.PodProto}
+   */
+  public  static final class PodProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.PodProto)
+      PodProtoOrBuilder {
+    // Use PodProto.newBuilder() to construct.
+    private PodProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PodProto() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PodProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.register.Pod.TensorPodProto.Builder subBuilder = null;
+              if (podTypeCase_ == 1) {
+                subBuilder = ((org.oneflow.core.register.Pod.TensorPodProto) podType_).toBuilder();
+              }
+              podType_ =
+                  input.readMessage(org.oneflow.core.register.Pod.TensorPodProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.register.Pod.TensorPodProto) podType_);
+                podType_ = subBuilder.buildPartial();
+              }
+              podTypeCase_ = 1;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.register.Pod.StructPodProto.Builder subBuilder = null;
+              if (podTypeCase_ == 2) {
+                subBuilder = ((org.oneflow.core.register.Pod.StructPodProto) podType_).toBuilder();
+              }
+              podType_ =
+                  input.readMessage(org.oneflow.core.register.Pod.StructPodProto.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.register.Pod.StructPodProto) podType_);
+                podType_ = subBuilder.buildPartial();
+              }
+              podTypeCase_ = 2;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_PodProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.register.Pod.internal_static_oneflow_PodProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.register.Pod.PodProto.class, org.oneflow.core.register.Pod.PodProto.Builder.class);
+    }
+
+    private int bitField0_;
+    private int podTypeCase_ = 0;
+    private java.lang.Object podType_;
+    public enum PodTypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      TENSOR_POD(1),
+      STRUCT_POD(2),
+      PODTYPE_NOT_SET(0);
+      private final int value;
+      private PodTypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PodTypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PodTypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return TENSOR_POD;
+          case 2: return STRUCT_POD;
+          case 0: return PODTYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PodTypeCase
+    getPodTypeCase() {
+      return PodTypeCase.forNumber(
+          podTypeCase_);
+    }
+
+    public static final int TENSOR_POD_FIELD_NUMBER = 1;
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    public boolean hasTensorPod() {
+      return podTypeCase_ == 1;
+    }
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.TensorPodProto getTensorPod() {
+      if (podTypeCase_ == 1) {
+         return (org.oneflow.core.register.Pod.TensorPodProto) podType_;
+      }
+      return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+     */
+    public org.oneflow.core.register.Pod.TensorPodProtoOrBuilder getTensorPodOrBuilder() {
+      if (podTypeCase_ == 1) {
+         return (org.oneflow.core.register.Pod.TensorPodProto) podType_;
+      }
+      return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+    }
+
+    public static final int STRUCT_POD_FIELD_NUMBER = 2;
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    public boolean hasStructPod() {
+      return podTypeCase_ == 2;
+    }
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    public org.oneflow.core.register.Pod.StructPodProto getStructPod() {
+      if (podTypeCase_ == 2) {
+         return (org.oneflow.core.register.Pod.StructPodProto) podType_;
+      }
+      return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+     */
+    public org.oneflow.core.register.Pod.StructPodProtoOrBuilder getStructPodOrBuilder() {
+      if (podTypeCase_ == 2) {
+         return (org.oneflow.core.register.Pod.StructPodProto) podType_;
+      }
+      return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasTensorPod()) {
+        if (!getTensorPod().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasStructPod()) {
+        if (!getStructPod().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (podTypeCase_ == 1) {
+        output.writeMessage(1, (org.oneflow.core.register.Pod.TensorPodProto) podType_);
+      }
+      if (podTypeCase_ == 2) {
+        output.writeMessage(2, (org.oneflow.core.register.Pod.StructPodProto) podType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (podTypeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (org.oneflow.core.register.Pod.TensorPodProto) podType_);
+      }
+      if (podTypeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.oneflow.core.register.Pod.StructPodProto) podType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.register.Pod.PodProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.register.Pod.PodProto other = (org.oneflow.core.register.Pod.PodProto) obj;
+
+      boolean result = true;
+      result = result && getPodTypeCase().equals(
+          other.getPodTypeCase());
+      if (!result) return false;
+      switch (podTypeCase_) {
+        case 1:
+          result = result && getTensorPod()
+              .equals(other.getTensorPod());
+          break;
+        case 2:
+          result = result && getStructPod()
+              .equals(other.getStructPod());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (podTypeCase_) {
+        case 1:
+          hash = (37 * hash) + TENSOR_POD_FIELD_NUMBER;
+          hash = (53 * hash) + getTensorPod().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + STRUCT_POD_FIELD_NUMBER;
+          hash = (53 * hash) + getStructPod().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.register.Pod.PodProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.register.Pod.PodProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.PodProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.PodProto)
+        org.oneflow.core.register.Pod.PodProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_PodProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_PodProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.register.Pod.PodProto.class, org.oneflow.core.register.Pod.PodProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.register.Pod.PodProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        podTypeCase_ = 0;
+        podType_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.register.Pod.internal_static_oneflow_PodProto_descriptor;
+      }
+
+      public org.oneflow.core.register.Pod.PodProto getDefaultInstanceForType() {
+        return org.oneflow.core.register.Pod.PodProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.register.Pod.PodProto build() {
+        org.oneflow.core.register.Pod.PodProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.register.Pod.PodProto buildPartial() {
+        org.oneflow.core.register.Pod.PodProto result = new org.oneflow.core.register.Pod.PodProto(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (podTypeCase_ == 1) {
+          if (tensorPodBuilder_ == null) {
+            result.podType_ = podType_;
+          } else {
+            result.podType_ = tensorPodBuilder_.build();
+          }
+        }
+        if (podTypeCase_ == 2) {
+          if (structPodBuilder_ == null) {
+            result.podType_ = podType_;
+          } else {
+            result.podType_ = structPodBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.podTypeCase_ = podTypeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.register.Pod.PodProto) {
+          return mergeFrom((org.oneflow.core.register.Pod.PodProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.register.Pod.PodProto other) {
+        if (other == org.oneflow.core.register.Pod.PodProto.getDefaultInstance()) return this;
+        switch (other.getPodTypeCase()) {
+          case TENSOR_POD: {
+            mergeTensorPod(other.getTensorPod());
+            break;
+          }
+          case STRUCT_POD: {
+            mergeStructPod(other.getStructPod());
+            break;
+          }
+          case PODTYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasTensorPod()) {
+          if (!getTensorPod().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasStructPod()) {
+          if (!getStructPod().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.register.Pod.PodProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.register.Pod.PodProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int podTypeCase_ = 0;
+      private java.lang.Object podType_;
+      public PodTypeCase
+          getPodTypeCase() {
+        return PodTypeCase.forNumber(
+            podTypeCase_);
+      }
+
+      public Builder clearPodType() {
+        podTypeCase_ = 0;
+        podType_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.TensorPodProto, org.oneflow.core.register.Pod.TensorPodProto.Builder, org.oneflow.core.register.Pod.TensorPodProtoOrBuilder> tensorPodBuilder_;
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public boolean hasTensorPod() {
+        return podTypeCase_ == 1;
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.TensorPodProto getTensorPod() {
+        if (tensorPodBuilder_ == null) {
+          if (podTypeCase_ == 1) {
+            return (org.oneflow.core.register.Pod.TensorPodProto) podType_;
+          }
+          return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+        } else {
+          if (podTypeCase_ == 1) {
+            return tensorPodBuilder_.getMessage();
+          }
+          return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public Builder setTensorPod(org.oneflow.core.register.Pod.TensorPodProto value) {
+        if (tensorPodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          podType_ = value;
+          onChanged();
+        } else {
+          tensorPodBuilder_.setMessage(value);
+        }
+        podTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public Builder setTensorPod(
+          org.oneflow.core.register.Pod.TensorPodProto.Builder builderForValue) {
+        if (tensorPodBuilder_ == null) {
+          podType_ = builderForValue.build();
+          onChanged();
+        } else {
+          tensorPodBuilder_.setMessage(builderForValue.build());
+        }
+        podTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public Builder mergeTensorPod(org.oneflow.core.register.Pod.TensorPodProto value) {
+        if (tensorPodBuilder_ == null) {
+          if (podTypeCase_ == 1 &&
+              podType_ != org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance()) {
+            podType_ = org.oneflow.core.register.Pod.TensorPodProto.newBuilder((org.oneflow.core.register.Pod.TensorPodProto) podType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            podType_ = value;
+          }
+          onChanged();
+        } else {
+          if (podTypeCase_ == 1) {
+            tensorPodBuilder_.mergeFrom(value);
+          }
+          tensorPodBuilder_.setMessage(value);
+        }
+        podTypeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public Builder clearTensorPod() {
+        if (tensorPodBuilder_ == null) {
+          if (podTypeCase_ == 1) {
+            podTypeCase_ = 0;
+            podType_ = null;
+            onChanged();
+          }
+        } else {
+          if (podTypeCase_ == 1) {
+            podTypeCase_ = 0;
+            podType_ = null;
+          }
+          tensorPodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.TensorPodProto.Builder getTensorPodBuilder() {
+        return getTensorPodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      public org.oneflow.core.register.Pod.TensorPodProtoOrBuilder getTensorPodOrBuilder() {
+        if ((podTypeCase_ == 1) && (tensorPodBuilder_ != null)) {
+          return tensorPodBuilder_.getMessageOrBuilder();
+        } else {
+          if (podTypeCase_ == 1) {
+            return (org.oneflow.core.register.Pod.TensorPodProto) podType_;
+          }
+          return org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.TensorPodProto tensor_pod = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.TensorPodProto, org.oneflow.core.register.Pod.TensorPodProto.Builder, org.oneflow.core.register.Pod.TensorPodProtoOrBuilder> 
+          getTensorPodFieldBuilder() {
+        if (tensorPodBuilder_ == null) {
+          if (!(podTypeCase_ == 1)) {
+            podType_ = org.oneflow.core.register.Pod.TensorPodProto.getDefaultInstance();
+          }
+          tensorPodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.Pod.TensorPodProto, org.oneflow.core.register.Pod.TensorPodProto.Builder, org.oneflow.core.register.Pod.TensorPodProtoOrBuilder>(
+                  (org.oneflow.core.register.Pod.TensorPodProto) podType_,
+                  getParentForChildren(),
+                  isClean());
+          podType_ = null;
+        }
+        podTypeCase_ = 1;
+        onChanged();;
+        return tensorPodBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.StructPodProto, org.oneflow.core.register.Pod.StructPodProto.Builder, org.oneflow.core.register.Pod.StructPodProtoOrBuilder> structPodBuilder_;
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public boolean hasStructPod() {
+        return podTypeCase_ == 2;
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public org.oneflow.core.register.Pod.StructPodProto getStructPod() {
+        if (structPodBuilder_ == null) {
+          if (podTypeCase_ == 2) {
+            return (org.oneflow.core.register.Pod.StructPodProto) podType_;
+          }
+          return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+        } else {
+          if (podTypeCase_ == 2) {
+            return structPodBuilder_.getMessage();
+          }
+          return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public Builder setStructPod(org.oneflow.core.register.Pod.StructPodProto value) {
+        if (structPodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          podType_ = value;
+          onChanged();
+        } else {
+          structPodBuilder_.setMessage(value);
+        }
+        podTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public Builder setStructPod(
+          org.oneflow.core.register.Pod.StructPodProto.Builder builderForValue) {
+        if (structPodBuilder_ == null) {
+          podType_ = builderForValue.build();
+          onChanged();
+        } else {
+          structPodBuilder_.setMessage(builderForValue.build());
+        }
+        podTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public Builder mergeStructPod(org.oneflow.core.register.Pod.StructPodProto value) {
+        if (structPodBuilder_ == null) {
+          if (podTypeCase_ == 2 &&
+              podType_ != org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance()) {
+            podType_ = org.oneflow.core.register.Pod.StructPodProto.newBuilder((org.oneflow.core.register.Pod.StructPodProto) podType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            podType_ = value;
+          }
+          onChanged();
+        } else {
+          if (podTypeCase_ == 2) {
+            structPodBuilder_.mergeFrom(value);
+          }
+          structPodBuilder_.setMessage(value);
+        }
+        podTypeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public Builder clearStructPod() {
+        if (structPodBuilder_ == null) {
+          if (podTypeCase_ == 2) {
+            podTypeCase_ = 0;
+            podType_ = null;
+            onChanged();
+          }
+        } else {
+          if (podTypeCase_ == 2) {
+            podTypeCase_ = 0;
+            podType_ = null;
+          }
+          structPodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public org.oneflow.core.register.Pod.StructPodProto.Builder getStructPodBuilder() {
+        return getStructPodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      public org.oneflow.core.register.Pod.StructPodProtoOrBuilder getStructPodOrBuilder() {
+        if ((podTypeCase_ == 2) && (structPodBuilder_ != null)) {
+          return structPodBuilder_.getMessageOrBuilder();
+        } else {
+          if (podTypeCase_ == 2) {
+            return (org.oneflow.core.register.Pod.StructPodProto) podType_;
+          }
+          return org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.StructPodProto struct_pod = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.register.Pod.StructPodProto, org.oneflow.core.register.Pod.StructPodProto.Builder, org.oneflow.core.register.Pod.StructPodProtoOrBuilder> 
+          getStructPodFieldBuilder() {
+        if (structPodBuilder_ == null) {
+          if (!(podTypeCase_ == 2)) {
+            podType_ = org.oneflow.core.register.Pod.StructPodProto.getDefaultInstance();
+          }
+          structPodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.register.Pod.StructPodProto, org.oneflow.core.register.Pod.StructPodProto.Builder, org.oneflow.core.register.Pod.StructPodProtoOrBuilder>(
+                  (org.oneflow.core.register.Pod.StructPodProto) podType_,
+                  getParentForChildren(),
+                  isClean());
+          podType_ = null;
+        }
+        podTypeCase_ = 2;
+        onChanged();;
+        return structPodBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.PodProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.PodProto)
+    private static final org.oneflow.core.register.Pod.PodProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.register.Pod.PodProto();
+    }
+
+    public static org.oneflow.core.register.Pod.PodProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PodProto>
+        PARSER = new com.google.protobuf.AbstractParser<PodProto>() {
+      public PodProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PodProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PodProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PodProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.register.Pod.PodProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_TensorPodProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_TensorPodProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_StructPodProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_StructPodProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_FieldId_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_FieldId_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_FieldPodProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_FieldPodProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_PodProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_PodProto_fieldAccessorTable;
 
@@ -65,8 +4174,8 @@ public final class Pod {
       "PodProtoH\000\022-\n\nstruct_pod\030\002 \001(\0132\027.oneflow" +
       ".StructPodProtoH\000B\n\n\010pod_type*E\n\010FieldKe" +
       "y\022\024\n\020kInvalidFieldKey\020\000\022\020\n\014kTensorShape\020" +
-      "\001\022\021\n\rkFieldKeySize\020\002B\035\n\031org.oneflow.core" +
-      ".registerP\001"
+      "\001\022\021\n\rkFieldKeySize\020\002B\033\n\031org.oneflow.core" +
+      ".register"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

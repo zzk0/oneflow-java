@@ -14,24 +14,2159 @@ public final class Ibverbs {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IBVerbsMemDescProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.IBVerbsMemDescProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    java.util.List<java.lang.Long> getMemPtrList();
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    int getMemPtrCount();
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    long getMemPtr(int index);
+
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getMrRkeyList();
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    int getMrRkeyCount();
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    int getMrRkey(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.IBVerbsMemDescProto}
+   */
+  public  static final class IBVerbsMemDescProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.IBVerbsMemDescProto)
+      IBVerbsMemDescProtoOrBuilder {
+    // Use IBVerbsMemDescProto.newBuilder() to construct.
+    private IBVerbsMemDescProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IBVerbsMemDescProto() {
+      memPtr_ = java.util.Collections.emptyList();
+      mrRkey_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IBVerbsMemDescProto(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                memPtr_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              memPtr_.add(input.readUInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                memPtr_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                memPtr_.add(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                mrRkey_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              mrRkey_.add(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                mrRkey_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                mrRkey_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          memPtr_ = java.util.Collections.unmodifiableList(memPtr_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          mrRkey_ = java.util.Collections.unmodifiableList(mrRkey_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsMemDescProto_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsMemDescProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.Builder.class);
+    }
+
+    public static final int MEM_PTR_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> memPtr_;
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getMemPtrList() {
+      return memPtr_;
+    }
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    public int getMemPtrCount() {
+      return memPtr_.size();
+    }
+    /**
+     * <code>repeated uint64 mem_ptr = 1;</code>
+     */
+    public long getMemPtr(int index) {
+      return memPtr_.get(index);
+    }
+
+    public static final int MR_RKEY_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> mrRkey_;
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getMrRkeyList() {
+      return mrRkey_;
+    }
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    public int getMrRkeyCount() {
+      return mrRkey_.size();
+    }
+    /**
+     * <code>repeated uint32 mr_rkey = 2;</code>
+     */
+    public int getMrRkey(int index) {
+      return mrRkey_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < memPtr_.size(); i++) {
+        output.writeUInt64(1, memPtr_.get(i));
+      }
+      for (int i = 0; i < mrRkey_.size(); i++) {
+        output.writeUInt32(2, mrRkey_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < memPtr_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(memPtr_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getMemPtrList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mrRkey_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(mrRkey_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getMrRkeyList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto other = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto) obj;
+
+      boolean result = true;
+      result = result && getMemPtrList()
+          .equals(other.getMemPtrList());
+      result = result && getMrRkeyList()
+          .equals(other.getMrRkeyList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getMemPtrCount() > 0) {
+        hash = (37 * hash) + MEM_PTR_FIELD_NUMBER;
+        hash = (53 * hash) + getMemPtrList().hashCode();
+      }
+      if (getMrRkeyCount() > 0) {
+        hash = (37 * hash) + MR_RKEY_FIELD_NUMBER;
+        hash = (53 * hash) + getMrRkeyList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.IBVerbsMemDescProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.IBVerbsMemDescProto)
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsMemDescProto_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsMemDescProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        memPtr_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        mrRkey_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsMemDescProto_descriptor;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getDefaultInstanceForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.getDefaultInstance();
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto build() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto buildPartial() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto result = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          memPtr_ = java.util.Collections.unmodifiableList(memPtr_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.memPtr_ = memPtr_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          mrRkey_ = java.util.Collections.unmodifiableList(mrRkey_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.mrRkey_ = mrRkey_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto) {
+          return mergeFrom((org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto other) {
+        if (other == org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.getDefaultInstance()) return this;
+        if (!other.memPtr_.isEmpty()) {
+          if (memPtr_.isEmpty()) {
+            memPtr_ = other.memPtr_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMemPtrIsMutable();
+            memPtr_.addAll(other.memPtr_);
+          }
+          onChanged();
+        }
+        if (!other.mrRkey_.isEmpty()) {
+          if (mrRkey_.isEmpty()) {
+            mrRkey_ = other.mrRkey_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMrRkeyIsMutable();
+            mrRkey_.addAll(other.mrRkey_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> memPtr_ = java.util.Collections.emptyList();
+      private void ensureMemPtrIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          memPtr_ = new java.util.ArrayList<java.lang.Long>(memPtr_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getMemPtrList() {
+        return java.util.Collections.unmodifiableList(memPtr_);
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public int getMemPtrCount() {
+        return memPtr_.size();
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public long getMemPtr(int index) {
+        return memPtr_.get(index);
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public Builder setMemPtr(
+          int index, long value) {
+        ensureMemPtrIsMutable();
+        memPtr_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public Builder addMemPtr(long value) {
+        ensureMemPtrIsMutable();
+        memPtr_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public Builder addAllMemPtr(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureMemPtrIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, memPtr_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 mem_ptr = 1;</code>
+       */
+      public Builder clearMemPtr() {
+        memPtr_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> mrRkey_ = java.util.Collections.emptyList();
+      private void ensureMrRkeyIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          mrRkey_ = new java.util.ArrayList<java.lang.Integer>(mrRkey_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getMrRkeyList() {
+        return java.util.Collections.unmodifiableList(mrRkey_);
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public int getMrRkeyCount() {
+        return mrRkey_.size();
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public int getMrRkey(int index) {
+        return mrRkey_.get(index);
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public Builder setMrRkey(
+          int index, int value) {
+        ensureMrRkeyIsMutable();
+        mrRkey_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public Builder addMrRkey(int value) {
+        ensureMrRkeyIsMutable();
+        mrRkey_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public Builder addAllMrRkey(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureMrRkeyIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mrRkey_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 mr_rkey = 2;</code>
+       */
+      public Builder clearMrRkey() {
+        mrRkey_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.IBVerbsMemDescProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.IBVerbsMemDescProto)
+    private static final org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto();
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IBVerbsMemDescProto>
+        PARSER = new com.google.protobuf.AbstractParser<IBVerbsMemDescProto>() {
+      public IBVerbsMemDescProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IBVerbsMemDescProto(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IBVerbsMemDescProto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IBVerbsMemDescProto> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IBVerbsConnectionInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.IBVerbsConnectionInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required uint32 lid = 1;</code>
+     */
+    boolean hasLid();
+    /**
+     * <code>required uint32 lid = 1;</code>
+     */
+    int getLid();
+
+    /**
+     * <code>required uint32 qp_num = 2;</code>
+     */
+    boolean hasQpNum();
+    /**
+     * <code>required uint32 qp_num = 2;</code>
+     */
+    int getQpNum();
+
+    /**
+     * <code>required uint64 subnet_prefix = 3;</code>
+     */
+    boolean hasSubnetPrefix();
+    /**
+     * <code>required uint64 subnet_prefix = 3;</code>
+     */
+    long getSubnetPrefix();
+
+    /**
+     * <code>required uint64 interface_id = 4;</code>
+     */
+    boolean hasInterfaceId();
+    /**
+     * <code>required uint64 interface_id = 4;</code>
+     */
+    long getInterfaceId();
+  }
+  /**
+   * Protobuf type {@code oneflow.IBVerbsConnectionInfo}
+   */
+  public  static final class IBVerbsConnectionInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.IBVerbsConnectionInfo)
+      IBVerbsConnectionInfoOrBuilder {
+    // Use IBVerbsConnectionInfo.newBuilder() to construct.
+    private IBVerbsConnectionInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IBVerbsConnectionInfo() {
+      lid_ = 0;
+      qpNum_ = 0;
+      subnetPrefix_ = 0L;
+      interfaceId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IBVerbsConnectionInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              lid_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              qpNum_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              subnetPrefix_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              interfaceId_ = input.readUInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsConnectionInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsConnectionInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LID_FIELD_NUMBER = 1;
+    private int lid_;
+    /**
+     * <code>required uint32 lid = 1;</code>
+     */
+    public boolean hasLid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required uint32 lid = 1;</code>
+     */
+    public int getLid() {
+      return lid_;
+    }
+
+    public static final int QP_NUM_FIELD_NUMBER = 2;
+    private int qpNum_;
+    /**
+     * <code>required uint32 qp_num = 2;</code>
+     */
+    public boolean hasQpNum() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required uint32 qp_num = 2;</code>
+     */
+    public int getQpNum() {
+      return qpNum_;
+    }
+
+    public static final int SUBNET_PREFIX_FIELD_NUMBER = 3;
+    private long subnetPrefix_;
+    /**
+     * <code>required uint64 subnet_prefix = 3;</code>
+     */
+    public boolean hasSubnetPrefix() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required uint64 subnet_prefix = 3;</code>
+     */
+    public long getSubnetPrefix() {
+      return subnetPrefix_;
+    }
+
+    public static final int INTERFACE_ID_FIELD_NUMBER = 4;
+    private long interfaceId_;
+    /**
+     * <code>required uint64 interface_id = 4;</code>
+     */
+    public boolean hasInterfaceId() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required uint64 interface_id = 4;</code>
+     */
+    public long getInterfaceId() {
+      return interfaceId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasLid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasQpNum()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSubnetPrefix()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInterfaceId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, lid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, qpNum_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt64(3, subnetPrefix_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeUInt64(4, interfaceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, lid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, qpNum_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, subnetPrefix_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, interfaceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo other = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo) obj;
+
+      boolean result = true;
+      result = result && (hasLid() == other.hasLid());
+      if (hasLid()) {
+        result = result && (getLid()
+            == other.getLid());
+      }
+      result = result && (hasQpNum() == other.hasQpNum());
+      if (hasQpNum()) {
+        result = result && (getQpNum()
+            == other.getQpNum());
+      }
+      result = result && (hasSubnetPrefix() == other.hasSubnetPrefix());
+      if (hasSubnetPrefix()) {
+        result = result && (getSubnetPrefix()
+            == other.getSubnetPrefix());
+      }
+      result = result && (hasInterfaceId() == other.hasInterfaceId());
+      if (hasInterfaceId()) {
+        result = result && (getInterfaceId()
+            == other.getInterfaceId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasLid()) {
+        hash = (37 * hash) + LID_FIELD_NUMBER;
+        hash = (53 * hash) + getLid();
+      }
+      if (hasQpNum()) {
+        hash = (37 * hash) + QP_NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getQpNum();
+      }
+      if (hasSubnetPrefix()) {
+        hash = (37 * hash) + SUBNET_PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSubnetPrefix());
+      }
+      if (hasInterfaceId()) {
+        hash = (37 * hash) + INTERFACE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getInterfaceId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.IBVerbsConnectionInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.IBVerbsConnectionInfo)
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsConnectionInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsConnectionInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        qpNum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subnetPrefix_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        interfaceId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsConnectionInfo_descriptor;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo getDefaultInstanceForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.getDefaultInstance();
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo build() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo buildPartial() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo result = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.lid_ = lid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.qpNum_ = qpNum_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.subnetPrefix_ = subnetPrefix_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.interfaceId_ = interfaceId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo) {
+          return mergeFrom((org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo other) {
+        if (other == org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo.getDefaultInstance()) return this;
+        if (other.hasLid()) {
+          setLid(other.getLid());
+        }
+        if (other.hasQpNum()) {
+          setQpNum(other.getQpNum());
+        }
+        if (other.hasSubnetPrefix()) {
+          setSubnetPrefix(other.getSubnetPrefix());
+        }
+        if (other.hasInterfaceId()) {
+          setInterfaceId(other.getInterfaceId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasLid()) {
+          return false;
+        }
+        if (!hasQpNum()) {
+          return false;
+        }
+        if (!hasSubnetPrefix()) {
+          return false;
+        }
+        if (!hasInterfaceId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int lid_ ;
+      /**
+       * <code>required uint32 lid = 1;</code>
+       */
+      public boolean hasLid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required uint32 lid = 1;</code>
+       */
+      public int getLid() {
+        return lid_;
+      }
+      /**
+       * <code>required uint32 lid = 1;</code>
+       */
+      public Builder setLid(int value) {
+        bitField0_ |= 0x00000001;
+        lid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 lid = 1;</code>
+       */
+      public Builder clearLid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int qpNum_ ;
+      /**
+       * <code>required uint32 qp_num = 2;</code>
+       */
+      public boolean hasQpNum() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required uint32 qp_num = 2;</code>
+       */
+      public int getQpNum() {
+        return qpNum_;
+      }
+      /**
+       * <code>required uint32 qp_num = 2;</code>
+       */
+      public Builder setQpNum(int value) {
+        bitField0_ |= 0x00000002;
+        qpNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 qp_num = 2;</code>
+       */
+      public Builder clearQpNum() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        qpNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long subnetPrefix_ ;
+      /**
+       * <code>required uint64 subnet_prefix = 3;</code>
+       */
+      public boolean hasSubnetPrefix() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required uint64 subnet_prefix = 3;</code>
+       */
+      public long getSubnetPrefix() {
+        return subnetPrefix_;
+      }
+      /**
+       * <code>required uint64 subnet_prefix = 3;</code>
+       */
+      public Builder setSubnetPrefix(long value) {
+        bitField0_ |= 0x00000004;
+        subnetPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint64 subnet_prefix = 3;</code>
+       */
+      public Builder clearSubnetPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        subnetPrefix_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long interfaceId_ ;
+      /**
+       * <code>required uint64 interface_id = 4;</code>
+       */
+      public boolean hasInterfaceId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required uint64 interface_id = 4;</code>
+       */
+      public long getInterfaceId() {
+        return interfaceId_;
+      }
+      /**
+       * <code>required uint64 interface_id = 4;</code>
+       */
+      public Builder setInterfaceId(long value) {
+        bitField0_ |= 0x00000008;
+        interfaceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint64 interface_id = 4;</code>
+       */
+      public Builder clearInterfaceId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        interfaceId_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.IBVerbsConnectionInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.IBVerbsConnectionInfo)
+    private static final org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo();
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IBVerbsConnectionInfo>
+        PARSER = new com.google.protobuf.AbstractParser<IBVerbsConnectionInfo>() {
+      public IBVerbsConnectionInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IBVerbsConnectionInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IBVerbsConnectionInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IBVerbsConnectionInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsConnectionInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IBVerbsTokensMsgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.IBVerbsTokensMsg)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+    int getToken2MemDescCount();
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+    boolean containsToken2MemDesc(
+        long key);
+    /**
+     * Use {@link #getToken2MemDescMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+    getToken2MemDesc();
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+    java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+    getToken2MemDescMap();
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrDefault(
+        long key,
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto defaultValue);
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrThrow(
+        long key);
+  }
+  /**
+   * Protobuf type {@code oneflow.IBVerbsTokensMsg}
+   */
+  public  static final class IBVerbsTokensMsg extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.IBVerbsTokensMsg)
+      IBVerbsTokensMsgOrBuilder {
+    // Use IBVerbsTokensMsg.newBuilder() to construct.
+    private IBVerbsTokensMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IBVerbsTokensMsg() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IBVerbsTokensMsg(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                token2MemDesc_ = com.google.protobuf.MapField.newMapField(
+                    Token2MemDescDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+              token2MemDesc = input.readMessage(
+                  Token2MemDescDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              token2MemDesc_.getMutableMap().put(token2MemDesc.getKey(), token2MemDesc.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetToken2MemDesc();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.Builder.class);
+    }
+
+    public static final int TOKEN2MEM_DESC_FIELD_NUMBER = 1;
+    private static final class Token2MemDescDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>newDefaultInstance(
+                  org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_Token2memDescEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> token2MemDesc_;
+    private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+    internalGetToken2MemDesc() {
+      if (token2MemDesc_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            Token2MemDescDefaultEntryHolder.defaultEntry);
+      }
+      return token2MemDesc_;
+    }
+
+    public int getToken2MemDescCount() {
+      return internalGetToken2MemDesc().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    public boolean containsToken2MemDesc(
+        long key) {
+      
+      return internalGetToken2MemDesc().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getToken2MemDescMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> getToken2MemDesc() {
+      return getToken2MemDescMap();
+    }
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    public java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> getToken2MemDescMap() {
+      return internalGetToken2MemDesc().getMap();
+    }
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrDefault(
+        long key,
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto defaultValue) {
+      
+      java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> map =
+          internalGetToken2MemDesc().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+     */
+
+    public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrThrow(
+        long key) {
+      
+      java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> map =
+          internalGetToken2MemDesc().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> entry
+           : internalGetToken2MemDesc().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+        token2MemDesc = Token2MemDescDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, token2MemDesc);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> entry
+           : internalGetToken2MemDesc().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+        token2MemDesc = Token2MemDescDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, token2MemDesc);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg other = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg) obj;
+
+      boolean result = true;
+      result = result && internalGetToken2MemDesc().equals(
+          other.internalGetToken2MemDesc());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (!internalGetToken2MemDesc().getMap().isEmpty()) {
+        hash = (37 * hash) + TOKEN2MEM_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetToken2MemDesc().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.IBVerbsTokensMsg}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.IBVerbsTokensMsg)
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsgOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetToken2MemDesc();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableToken2MemDesc();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.class, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableToken2MemDesc().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.internal_static_oneflow_IBVerbsTokensMsg_descriptor;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg getDefaultInstanceForType() {
+        return org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.getDefaultInstance();
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg build() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg buildPartial() {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg result = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg(this);
+        int from_bitField0_ = bitField0_;
+        result.token2MemDesc_ = internalGetToken2MemDesc();
+        result.token2MemDesc_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg) {
+          return mergeFrom((org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg other) {
+        if (other == org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg.getDefaultInstance()) return this;
+        internalGetMutableToken2MemDesc().mergeFrom(
+            other.internalGetToken2MemDesc());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> token2MemDesc_;
+      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+      internalGetToken2MemDesc() {
+        if (token2MemDesc_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              Token2MemDescDefaultEntryHolder.defaultEntry);
+        }
+        return token2MemDesc_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+      internalGetMutableToken2MemDesc() {
+        onChanged();;
+        if (token2MemDesc_ == null) {
+          token2MemDesc_ = com.google.protobuf.MapField.newMapField(
+              Token2MemDescDefaultEntryHolder.defaultEntry);
+        }
+        if (!token2MemDesc_.isMutable()) {
+          token2MemDesc_ = token2MemDesc_.copy();
+        }
+        return token2MemDesc_;
+      }
+
+      public int getToken2MemDescCount() {
+        return internalGetToken2MemDesc().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public boolean containsToken2MemDesc(
+          long key) {
+        
+        return internalGetToken2MemDesc().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getToken2MemDescMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> getToken2MemDesc() {
+        return getToken2MemDescMap();
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> getToken2MemDescMap() {
+        return internalGetToken2MemDesc().getMap();
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrDefault(
+          long key,
+          org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto defaultValue) {
+        
+        java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> map =
+            internalGetToken2MemDesc().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto getToken2MemDescOrThrow(
+          long key) {
+        
+        java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> map =
+            internalGetToken2MemDesc().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearToken2MemDesc() {
+        getMutableToken2MemDesc().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public Builder removeToken2MemDesc(
+          long key) {
+        
+        getMutableToken2MemDesc().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto>
+      getMutableToken2MemDesc() {
+        return internalGetMutableToken2MemDesc().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+      public Builder putToken2MemDesc(
+          long key,
+          org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto value) {
+        
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableToken2MemDesc().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, .oneflow.IBVerbsMemDescProto&gt; token2mem_desc = 1;</code>
+       */
+
+      public Builder putAllToken2MemDesc(
+          java.util.Map<java.lang.Long, org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsMemDescProto> values) {
+        getMutableToken2MemDesc().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.IBVerbsTokensMsg)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.IBVerbsTokensMsg)
+    private static final org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg();
+    }
+
+    public static org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IBVerbsTokensMsg>
+        PARSER = new com.google.protobuf.AbstractParser<IBVerbsTokensMsg>() {
+      public IBVerbsTokensMsg parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IBVerbsTokensMsg(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IBVerbsTokensMsg> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IBVerbsTokensMsg> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.comm_network.ibverbs.Ibverbs.IBVerbsTokensMsg getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_IBVerbsMemDescProto_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_IBVerbsMemDescProto_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_IBVerbsConnectionInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_IBVerbsConnectionInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_IBVerbsTokensMsg_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_IBVerbsTokensMsg_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_IBVerbsTokensMsg_Token2memDescEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_IBVerbsTokensMsg_Token2memDescEntry_fieldAccessorTable;
 
@@ -52,8 +2187,8 @@ public final class Ibverbs {
       "oken2mem_desc\030\001 \003(\0132,.oneflow.IBVerbsTok" +
       "ensMsg.Token2memDescEntry\032R\n\022Token2memDe" +
       "scEntry\022\013\n\003key\030\001 \001(\004\022+\n\005value\030\002 \001(\0132\034.on" +
-      "eflow.IBVerbsMemDescProto:\0028\001B)\n%org.one",
-      "flow.core.comm_network.ibverbsP\001"
+      "eflow.IBVerbsMemDescProto:\0028\001B\'\n%org.one",
+      "flow.core.comm_network.ibverbs"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

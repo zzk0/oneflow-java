@@ -14,24 +14,2554 @@ public final class MemoryCaseOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CudaPinnedMemoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CudaPinnedMemory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    boolean hasDeviceId();
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    long getDeviceId();
+  }
+  /**
+   * Protobuf type {@code oneflow.CudaPinnedMemory}
+   */
+  public  static final class CudaPinnedMemory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CudaPinnedMemory)
+      CudaPinnedMemoryOrBuilder {
+    // Use CudaPinnedMemory.newBuilder() to construct.
+    private CudaPinnedMemory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CudaPinnedMemory() {
+      deviceId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CudaPinnedMemory(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              deviceId_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_CudaPinnedMemory_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_CudaPinnedMemory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
+    private long deviceId_;
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    public boolean hasDeviceId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    public long getDeviceId() {
+      return deviceId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDeviceId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, deviceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, deviceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory other = (org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory) obj;
+
+      boolean result = true;
+      result = result && (hasDeviceId() == other.hasDeviceId());
+      if (hasDeviceId()) {
+        result = result && (getDeviceId()
+            == other.getDeviceId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDeviceId()) {
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDeviceId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CudaPinnedMemory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CudaPinnedMemory)
+        org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_CudaPinnedMemory_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_CudaPinnedMemory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        deviceId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_CudaPinnedMemory_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory build() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory buildPartial() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory result = new org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.deviceId_ = deviceId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory) {
+          return mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory other) {
+        if (other == org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance()) return this;
+        if (other.hasDeviceId()) {
+          setDeviceId(other.getDeviceId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDeviceId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long deviceId_ ;
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public boolean hasDeviceId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public long getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public Builder setDeviceId(long value) {
+        bitField0_ |= 0x00000001;
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public Builder clearDeviceId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        deviceId_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CudaPinnedMemory)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CudaPinnedMemory)
+    private static final org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory();
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CudaPinnedMemory>
+        PARSER = new com.google.protobuf.AbstractParser<CudaPinnedMemory>() {
+      public CudaPinnedMemory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CudaPinnedMemory(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CudaPinnedMemory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CudaPinnedMemory> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HostMemoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.HostMemory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    boolean hasCudaPinnedMem();
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getCudaPinnedMem();
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder getCudaPinnedMemOrBuilder();
+
+    /**
+     * <code>optional bool used_by_network = 2 [default = false];</code>
+     */
+    boolean hasUsedByNetwork();
+    /**
+     * <code>optional bool used_by_network = 2 [default = false];</code>
+     */
+    boolean getUsedByNetwork();
+  }
+  /**
+   * Protobuf type {@code oneflow.HostMemory}
+   */
+  public  static final class HostMemory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.HostMemory)
+      HostMemoryOrBuilder {
+    // Use HostMemory.newBuilder() to construct.
+    private HostMemory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HostMemory() {
+      usedByNetwork_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HostMemory(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = cudaPinnedMem_.toBuilder();
+              }
+              cudaPinnedMem_ = input.readMessage(org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cudaPinnedMem_);
+                cudaPinnedMem_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              usedByNetwork_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_HostMemory_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_HostMemory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CUDA_PINNED_MEM_FIELD_NUMBER = 1;
+    private org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory cudaPinnedMem_;
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    public boolean hasCudaPinnedMem() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getCudaPinnedMem() {
+      return cudaPinnedMem_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance() : cudaPinnedMem_;
+    }
+    /**
+     * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder getCudaPinnedMemOrBuilder() {
+      return cudaPinnedMem_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance() : cudaPinnedMem_;
+    }
+
+    public static final int USED_BY_NETWORK_FIELD_NUMBER = 2;
+    private boolean usedByNetwork_;
+    /**
+     * <code>optional bool used_by_network = 2 [default = false];</code>
+     */
+    public boolean hasUsedByNetwork() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional bool used_by_network = 2 [default = false];</code>
+     */
+    public boolean getUsedByNetwork() {
+      return usedByNetwork_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasCudaPinnedMem()) {
+        if (!getCudaPinnedMem().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getCudaPinnedMem());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBool(2, usedByNetwork_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCudaPinnedMem());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, usedByNetwork_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory other = (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) obj;
+
+      boolean result = true;
+      result = result && (hasCudaPinnedMem() == other.hasCudaPinnedMem());
+      if (hasCudaPinnedMem()) {
+        result = result && getCudaPinnedMem()
+            .equals(other.getCudaPinnedMem());
+      }
+      result = result && (hasUsedByNetwork() == other.hasUsedByNetwork());
+      if (hasUsedByNetwork()) {
+        result = result && (getUsedByNetwork()
+            == other.getUsedByNetwork());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasCudaPinnedMem()) {
+        hash = (37 * hash) + CUDA_PINNED_MEM_FIELD_NUMBER;
+        hash = (53 * hash) + getCudaPinnedMem().hashCode();
+      }
+      if (hasUsedByNetwork()) {
+        hash = (37 * hash) + USED_BY_NETWORK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUsedByNetwork());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.HostMemory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.HostMemory)
+        org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_HostMemory_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_HostMemory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCudaPinnedMemFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (cudaPinnedMemBuilder_ == null) {
+          cudaPinnedMem_ = null;
+        } else {
+          cudaPinnedMemBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        usedByNetwork_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_HostMemory_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory build() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory buildPartial() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory result = new org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (cudaPinnedMemBuilder_ == null) {
+          result.cudaPinnedMem_ = cudaPinnedMem_;
+        } else {
+          result.cudaPinnedMem_ = cudaPinnedMemBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.usedByNetwork_ = usedByNetwork_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) {
+          return mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory other) {
+        if (other == org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance()) return this;
+        if (other.hasCudaPinnedMem()) {
+          mergeCudaPinnedMem(other.getCudaPinnedMem());
+        }
+        if (other.hasUsedByNetwork()) {
+          setUsedByNetwork(other.getUsedByNetwork());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasCudaPinnedMem()) {
+          if (!getCudaPinnedMem().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory cudaPinnedMem_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder> cudaPinnedMemBuilder_;
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public boolean hasCudaPinnedMem() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory getCudaPinnedMem() {
+        if (cudaPinnedMemBuilder_ == null) {
+          return cudaPinnedMem_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance() : cudaPinnedMem_;
+        } else {
+          return cudaPinnedMemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public Builder setCudaPinnedMem(org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory value) {
+        if (cudaPinnedMemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cudaPinnedMem_ = value;
+          onChanged();
+        } else {
+          cudaPinnedMemBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public Builder setCudaPinnedMem(
+          org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder builderForValue) {
+        if (cudaPinnedMemBuilder_ == null) {
+          cudaPinnedMem_ = builderForValue.build();
+          onChanged();
+        } else {
+          cudaPinnedMemBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public Builder mergeCudaPinnedMem(org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory value) {
+        if (cudaPinnedMemBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              cudaPinnedMem_ != null &&
+              cudaPinnedMem_ != org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance()) {
+            cudaPinnedMem_ =
+              org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.newBuilder(cudaPinnedMem_).mergeFrom(value).buildPartial();
+          } else {
+            cudaPinnedMem_ = value;
+          }
+          onChanged();
+        } else {
+          cudaPinnedMemBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public Builder clearCudaPinnedMem() {
+        if (cudaPinnedMemBuilder_ == null) {
+          cudaPinnedMem_ = null;
+          onChanged();
+        } else {
+          cudaPinnedMemBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder getCudaPinnedMemBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCudaPinnedMemFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder getCudaPinnedMemOrBuilder() {
+        if (cudaPinnedMemBuilder_ != null) {
+          return cudaPinnedMemBuilder_.getMessageOrBuilder();
+        } else {
+          return cudaPinnedMem_ == null ?
+              org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance() : cudaPinnedMem_;
+        }
+      }
+      /**
+       * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder> 
+          getCudaPinnedMemFieldBuilder() {
+        if (cudaPinnedMemBuilder_ == null) {
+          cudaPinnedMemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder>(
+                  getCudaPinnedMem(),
+                  getParentForChildren(),
+                  isClean());
+          cudaPinnedMem_ = null;
+        }
+        return cudaPinnedMemBuilder_;
+      }
+
+      private boolean usedByNetwork_ ;
+      /**
+       * <code>optional bool used_by_network = 2 [default = false];</code>
+       */
+      public boolean hasUsedByNetwork() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bool used_by_network = 2 [default = false];</code>
+       */
+      public boolean getUsedByNetwork() {
+        return usedByNetwork_;
+      }
+      /**
+       * <code>optional bool used_by_network = 2 [default = false];</code>
+       */
+      public Builder setUsedByNetwork(boolean value) {
+        bitField0_ |= 0x00000002;
+        usedByNetwork_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool used_by_network = 2 [default = false];</code>
+       */
+      public Builder clearUsedByNetwork() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        usedByNetwork_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.HostMemory)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.HostMemory)
+    private static final org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory();
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<HostMemory>
+        PARSER = new com.google.protobuf.AbstractParser<HostMemory>() {
+      public HostMemory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HostMemory(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HostMemory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HostMemory> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeviceCudaMemoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.DeviceCudaMemory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    boolean hasDeviceId();
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    long getDeviceId();
+  }
+  /**
+   * Protobuf type {@code oneflow.DeviceCudaMemory}
+   */
+  public  static final class DeviceCudaMemory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.DeviceCudaMemory)
+      DeviceCudaMemoryOrBuilder {
+    // Use DeviceCudaMemory.newBuilder() to construct.
+    private DeviceCudaMemory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeviceCudaMemory() {
+      deviceId_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeviceCudaMemory(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              deviceId_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_DeviceCudaMemory_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_DeviceCudaMemory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
+    private long deviceId_;
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    public boolean hasDeviceId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 device_id = 1;</code>
+     */
+    public long getDeviceId() {
+      return deviceId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDeviceId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, deviceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, deviceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory other = (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) obj;
+
+      boolean result = true;
+      result = result && (hasDeviceId() == other.hasDeviceId());
+      if (hasDeviceId()) {
+        result = result && (getDeviceId()
+            == other.getDeviceId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasDeviceId()) {
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDeviceId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.DeviceCudaMemory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.DeviceCudaMemory)
+        org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_DeviceCudaMemory_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_DeviceCudaMemory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.class, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        deviceId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_DeviceCudaMemory_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory build() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory buildPartial() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory result = new org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.deviceId_ = deviceId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) {
+          return mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory other) {
+        if (other == org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance()) return this;
+        if (other.hasDeviceId()) {
+          setDeviceId(other.getDeviceId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDeviceId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long deviceId_ ;
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public boolean hasDeviceId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public long getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public Builder setDeviceId(long value) {
+        bitField0_ |= 0x00000001;
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 device_id = 1;</code>
+       */
+      public Builder clearDeviceId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        deviceId_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.DeviceCudaMemory)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.DeviceCudaMemory)
+    private static final org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory();
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeviceCudaMemory>
+        PARSER = new com.google.protobuf.AbstractParser<DeviceCudaMemory>() {
+      public DeviceCudaMemory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeviceCudaMemory(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeviceCudaMemory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeviceCudaMemory> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MemoryCaseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.MemoryCase)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    boolean hasHostMem();
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getHostMem();
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder getHostMemOrBuilder();
+
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    boolean hasDeviceCudaMem();
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDeviceCudaMem();
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder getDeviceCudaMemOrBuilder();
+
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.CaseCase getCaseCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.MemoryCase}
+   */
+  public  static final class MemoryCase extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.MemoryCase)
+      MemoryCaseOrBuilder {
+    // Use MemoryCase.newBuilder() to construct.
+    private MemoryCase(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MemoryCase() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MemoryCase(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder subBuilder = null;
+              if (caseCase_ == 1) {
+                subBuilder = ((org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_).toBuilder();
+              }
+              case_ =
+                  input.readMessage(org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_);
+                case_ = subBuilder.buildPartial();
+              }
+              caseCase_ = 1;
+              break;
+            }
+            case 18: {
+              org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder subBuilder = null;
+              if (caseCase_ == 2) {
+                subBuilder = ((org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_).toBuilder();
+              }
+              case_ =
+                  input.readMessage(org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_);
+                case_ = subBuilder.buildPartial();
+              }
+              caseCase_ = 2;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_MemoryCase_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_MemoryCase_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.class, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder.class);
+    }
+
+    private int bitField0_;
+    private int caseCase_ = 0;
+    private java.lang.Object case_;
+    public enum CaseCase
+        implements com.google.protobuf.Internal.EnumLite {
+      HOST_MEM(1),
+      DEVICE_CUDA_MEM(2),
+      CASE_NOT_SET(0);
+      private final int value;
+      private CaseCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CaseCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static CaseCase forNumber(int value) {
+        switch (value) {
+          case 1: return HOST_MEM;
+          case 2: return DEVICE_CUDA_MEM;
+          case 0: return CASE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public CaseCase
+    getCaseCase() {
+      return CaseCase.forNumber(
+          caseCase_);
+    }
+
+    public static final int HOST_MEM_FIELD_NUMBER = 1;
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    public boolean hasHostMem() {
+      return caseCase_ == 1;
+    }
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getHostMem() {
+      if (caseCase_ == 1) {
+         return (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_;
+      }
+      return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder getHostMemOrBuilder() {
+      if (caseCase_ == 1) {
+         return (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_;
+      }
+      return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+    }
+
+    public static final int DEVICE_CUDA_MEM_FIELD_NUMBER = 2;
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    public boolean hasDeviceCudaMem() {
+      return caseCase_ == 2;
+    }
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDeviceCudaMem() {
+      if (caseCase_ == 2) {
+         return (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_;
+      }
+      return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+     */
+    public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder getDeviceCudaMemOrBuilder() {
+      if (caseCase_ == 2) {
+         return (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_;
+      }
+      return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (hasHostMem()) {
+        if (!getHostMem().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasDeviceCudaMem()) {
+        if (!getDeviceCudaMem().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (caseCase_ == 1) {
+        output.writeMessage(1, (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_);
+      }
+      if (caseCase_ == 2) {
+        output.writeMessage(2, (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (caseCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_);
+      }
+      if (caseCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase other = (org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase) obj;
+
+      boolean result = true;
+      result = result && getCaseCase().equals(
+          other.getCaseCase());
+      if (!result) return false;
+      switch (caseCase_) {
+        case 1:
+          result = result && getHostMem()
+              .equals(other.getHostMem());
+          break;
+        case 2:
+          result = result && getDeviceCudaMem()
+              .equals(other.getDeviceCudaMem());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      switch (caseCase_) {
+        case 1:
+          hash = (37 * hash) + HOST_MEM_FIELD_NUMBER;
+          hash = (53 * hash) + getHostMem().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + DEVICE_CUDA_MEM_FIELD_NUMBER;
+          hash = (53 * hash) + getDeviceCudaMem().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.MemoryCase}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.MemoryCase)
+        org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCaseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_MemoryCase_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_MemoryCase_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.class, org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        caseCase_ = 0;
+        case_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.internal_static_oneflow_MemoryCase_descriptor;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getDefaultInstanceForType() {
+        return org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance();
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase build() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase buildPartial() {
+        org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase result = new org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (caseCase_ == 1) {
+          if (hostMemBuilder_ == null) {
+            result.case_ = case_;
+          } else {
+            result.case_ = hostMemBuilder_.build();
+          }
+        }
+        if (caseCase_ == 2) {
+          if (deviceCudaMemBuilder_ == null) {
+            result.case_ = case_;
+          } else {
+            result.case_ = deviceCudaMemBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.caseCase_ = caseCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase) {
+          return mergeFrom((org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase other) {
+        if (other == org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase.getDefaultInstance()) return this;
+        switch (other.getCaseCase()) {
+          case HOST_MEM: {
+            mergeHostMem(other.getHostMem());
+            break;
+          }
+          case DEVICE_CUDA_MEM: {
+            mergeDeviceCudaMem(other.getDeviceCudaMem());
+            break;
+          }
+          case CASE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasHostMem()) {
+          if (!getHostMem().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasDeviceCudaMem()) {
+          if (!getDeviceCudaMem().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int caseCase_ = 0;
+      private java.lang.Object case_;
+      public CaseCase
+          getCaseCase() {
+        return CaseCase.forNumber(
+            caseCase_);
+      }
+
+      public Builder clearCase() {
+        caseCase_ = 0;
+        case_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder> hostMemBuilder_;
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public boolean hasHostMem() {
+        return caseCase_ == 1;
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory getHostMem() {
+        if (hostMemBuilder_ == null) {
+          if (caseCase_ == 1) {
+            return (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_;
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+        } else {
+          if (caseCase_ == 1) {
+            return hostMemBuilder_.getMessage();
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public Builder setHostMem(org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory value) {
+        if (hostMemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          case_ = value;
+          onChanged();
+        } else {
+          hostMemBuilder_.setMessage(value);
+        }
+        caseCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public Builder setHostMem(
+          org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder builderForValue) {
+        if (hostMemBuilder_ == null) {
+          case_ = builderForValue.build();
+          onChanged();
+        } else {
+          hostMemBuilder_.setMessage(builderForValue.build());
+        }
+        caseCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public Builder mergeHostMem(org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory value) {
+        if (hostMemBuilder_ == null) {
+          if (caseCase_ == 1 &&
+              case_ != org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance()) {
+            case_ = org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.newBuilder((org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            case_ = value;
+          }
+          onChanged();
+        } else {
+          if (caseCase_ == 1) {
+            hostMemBuilder_.mergeFrom(value);
+          }
+          hostMemBuilder_.setMessage(value);
+        }
+        caseCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public Builder clearHostMem() {
+        if (hostMemBuilder_ == null) {
+          if (caseCase_ == 1) {
+            caseCase_ = 0;
+            case_ = null;
+            onChanged();
+          }
+        } else {
+          if (caseCase_ == 1) {
+            caseCase_ = 0;
+            case_ = null;
+          }
+          hostMemBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder getHostMemBuilder() {
+        return getHostMemFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder getHostMemOrBuilder() {
+        if ((caseCase_ == 1) && (hostMemBuilder_ != null)) {
+          return hostMemBuilder_.getMessageOrBuilder();
+        } else {
+          if (caseCase_ == 1) {
+            return (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_;
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.HostMemory host_mem = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder> 
+          getHostMemFieldBuilder() {
+        if (hostMemBuilder_ == null) {
+          if (!(caseCase_ == 1)) {
+            case_ = org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance();
+          }
+          hostMemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.HostMemoryOrBuilder>(
+                  (org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory) case_,
+                  getParentForChildren(),
+                  isClean());
+          case_ = null;
+        }
+        caseCase_ = 1;
+        onChanged();;
+        return hostMemBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder> deviceCudaMemBuilder_;
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public boolean hasDeviceCudaMem() {
+        return caseCase_ == 2;
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory getDeviceCudaMem() {
+        if (deviceCudaMemBuilder_ == null) {
+          if (caseCase_ == 2) {
+            return (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_;
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+        } else {
+          if (caseCase_ == 2) {
+            return deviceCudaMemBuilder_.getMessage();
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public Builder setDeviceCudaMem(org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory value) {
+        if (deviceCudaMemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          case_ = value;
+          onChanged();
+        } else {
+          deviceCudaMemBuilder_.setMessage(value);
+        }
+        caseCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public Builder setDeviceCudaMem(
+          org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder builderForValue) {
+        if (deviceCudaMemBuilder_ == null) {
+          case_ = builderForValue.build();
+          onChanged();
+        } else {
+          deviceCudaMemBuilder_.setMessage(builderForValue.build());
+        }
+        caseCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public Builder mergeDeviceCudaMem(org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory value) {
+        if (deviceCudaMemBuilder_ == null) {
+          if (caseCase_ == 2 &&
+              case_ != org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance()) {
+            case_ = org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.newBuilder((org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            case_ = value;
+          }
+          onChanged();
+        } else {
+          if (caseCase_ == 2) {
+            deviceCudaMemBuilder_.mergeFrom(value);
+          }
+          deviceCudaMemBuilder_.setMessage(value);
+        }
+        caseCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public Builder clearDeviceCudaMem() {
+        if (deviceCudaMemBuilder_ == null) {
+          if (caseCase_ == 2) {
+            caseCase_ = 0;
+            case_ = null;
+            onChanged();
+          }
+        } else {
+          if (caseCase_ == 2) {
+            caseCase_ = 0;
+            case_ = null;
+          }
+          deviceCudaMemBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder getDeviceCudaMemBuilder() {
+        return getDeviceCudaMemFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      public org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder getDeviceCudaMemOrBuilder() {
+        if ((caseCase_ == 2) && (deviceCudaMemBuilder_ != null)) {
+          return deviceCudaMemBuilder_.getMessageOrBuilder();
+        } else {
+          if (caseCase_ == 2) {
+            return (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_;
+          }
+          return org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.DeviceCudaMemory device_cuda_mem = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder> 
+          getDeviceCudaMemFieldBuilder() {
+        if (deviceCudaMemBuilder_ == null) {
+          if (!(caseCase_ == 2)) {
+            case_ = org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.getDefaultInstance();
+          }
+          deviceCudaMemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory.Builder, org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemoryOrBuilder>(
+                  (org.oneflow.core.memory.MemoryCaseOuterClass.DeviceCudaMemory) case_,
+                  getParentForChildren(),
+                  isClean());
+          case_ = null;
+        }
+        caseCase_ = 2;
+        onChanged();;
+        return deviceCudaMemBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.MemoryCase)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.MemoryCase)
+    private static final org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase();
+    }
+
+    public static org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<MemoryCase>
+        PARSER = new com.google.protobuf.AbstractParser<MemoryCase>() {
+      public MemoryCase parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MemoryCase(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MemoryCase> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MemoryCase> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.memory.MemoryCaseOuterClass.MemoryCase getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CudaPinnedMemory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CudaPinnedMemory_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_HostMemory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_HostMemory_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_DeviceCudaMemory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_DeviceCudaMemory_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_MemoryCase_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_MemoryCase_fieldAccessorTable;
 
@@ -51,8 +2581,8 @@ public final class MemoryCaseOuterClass {
       "emory\022\021\n\tdevice_id\030\001 \002(\003\"s\n\nMemoryCase\022\'" +
       "\n\010host_mem\030\001 \001(\0132\023.oneflow.HostMemoryH\000\022" +
       "4\n\017device_cuda_mem\030\002 \001(\0132\031.oneflow.Devic" +
-      "eCudaMemoryH\000B\006\n\004caseB\033\n\027org.oneflow.cor" +
-      "e.memoryP\001"
+      "eCudaMemoryH\000B\006\n\004caseB\031\n\027org.oneflow.cor" +
+      "e.memory"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

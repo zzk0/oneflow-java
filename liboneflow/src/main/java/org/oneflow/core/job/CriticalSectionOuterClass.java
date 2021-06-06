@@ -14,29 +14,2847 @@ public final class CriticalSectionOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TotalJobCriticalSectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.TotalJobCriticalSection)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.TotalJobCriticalSection}
+   */
+  public  static final class TotalJobCriticalSection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.TotalJobCriticalSection)
+      TotalJobCriticalSectionOrBuilder {
+    // Use TotalJobCriticalSection.newBuilder() to construct.
+    private TotalJobCriticalSection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalJobCriticalSection() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TotalJobCriticalSection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_TotalJobCriticalSection_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_TotalJobCriticalSection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection other = (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.TotalJobCriticalSection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.TotalJobCriticalSection)
+        org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_TotalJobCriticalSection_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_TotalJobCriticalSection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_TotalJobCriticalSection_descriptor;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getDefaultInstanceForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection build() {
+        org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection buildPartial() {
+        org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection result = new org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) {
+          return mergeFrom((org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection other) {
+        if (other == org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.TotalJobCriticalSection)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.TotalJobCriticalSection)
+    private static final org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection();
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TotalJobCriticalSection>
+        PARSER = new com.google.protobuf.AbstractParser<TotalJobCriticalSection>() {
+      public TotalJobCriticalSection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TotalJobCriticalSection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalJobCriticalSection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalJobCriticalSection> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InputOutputCriticalSectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.InputOutputCriticalSection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getLbiProducerOpNameList();
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    int getLbiProducerOpNameCount();
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    java.lang.String getLbiProducerOpName(int index);
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getLbiProducerOpNameBytes(int index);
+  }
+  /**
+   * Protobuf type {@code oneflow.InputOutputCriticalSection}
+   */
+  public  static final class InputOutputCriticalSection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.InputOutputCriticalSection)
+      InputOutputCriticalSectionOrBuilder {
+    // Use InputOutputCriticalSection.newBuilder() to construct.
+    private InputOutputCriticalSection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InputOutputCriticalSection() {
+      lbiProducerOpName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InputOutputCriticalSection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                lbiProducerOpName_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              lbiProducerOpName_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          lbiProducerOpName_ = lbiProducerOpName_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_InputOutputCriticalSection_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_InputOutputCriticalSection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder.class);
+    }
+
+    public static final int LBI_PRODUCER_OP_NAME_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList lbiProducerOpName_;
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLbiProducerOpNameList() {
+      return lbiProducerOpName_;
+    }
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    public int getLbiProducerOpNameCount() {
+      return lbiProducerOpName_.size();
+    }
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    public java.lang.String getLbiProducerOpName(int index) {
+      return lbiProducerOpName_.get(index);
+    }
+    /**
+     * <code>repeated string lbi_producer_op_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLbiProducerOpNameBytes(int index) {
+      return lbiProducerOpName_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < lbiProducerOpName_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lbiProducerOpName_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < lbiProducerOpName_.size(); i++) {
+          dataSize += computeStringSizeNoTag(lbiProducerOpName_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getLbiProducerOpNameList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection other = (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) obj;
+
+      boolean result = true;
+      result = result && getLbiProducerOpNameList()
+          .equals(other.getLbiProducerOpNameList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getLbiProducerOpNameCount() > 0) {
+        hash = (37 * hash) + LBI_PRODUCER_OP_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getLbiProducerOpNameList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.InputOutputCriticalSection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.InputOutputCriticalSection)
+        org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_InputOutputCriticalSection_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_InputOutputCriticalSection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lbiProducerOpName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_InputOutputCriticalSection_descriptor;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getDefaultInstanceForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection build() {
+        org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection buildPartial() {
+        org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection result = new org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          lbiProducerOpName_ = lbiProducerOpName_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.lbiProducerOpName_ = lbiProducerOpName_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) {
+          return mergeFrom((org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection other) {
+        if (other == org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance()) return this;
+        if (!other.lbiProducerOpName_.isEmpty()) {
+          if (lbiProducerOpName_.isEmpty()) {
+            lbiProducerOpName_ = other.lbiProducerOpName_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLbiProducerOpNameIsMutable();
+            lbiProducerOpName_.addAll(other.lbiProducerOpName_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList lbiProducerOpName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLbiProducerOpNameIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          lbiProducerOpName_ = new com.google.protobuf.LazyStringArrayList(lbiProducerOpName_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLbiProducerOpNameList() {
+        return lbiProducerOpName_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public int getLbiProducerOpNameCount() {
+        return lbiProducerOpName_.size();
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public java.lang.String getLbiProducerOpName(int index) {
+        return lbiProducerOpName_.get(index);
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLbiProducerOpNameBytes(int index) {
+        return lbiProducerOpName_.getByteString(index);
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public Builder setLbiProducerOpName(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLbiProducerOpNameIsMutable();
+        lbiProducerOpName_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public Builder addLbiProducerOpName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLbiProducerOpNameIsMutable();
+        lbiProducerOpName_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public Builder addAllLbiProducerOpName(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLbiProducerOpNameIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, lbiProducerOpName_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public Builder clearLbiProducerOpName() {
+        lbiProducerOpName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lbi_producer_op_name = 1;</code>
+       */
+      public Builder addLbiProducerOpNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLbiProducerOpNameIsMutable();
+        lbiProducerOpName_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.InputOutputCriticalSection)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.InputOutputCriticalSection)
+    private static final org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection();
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<InputOutputCriticalSection>
+        PARSER = new com.google.protobuf.AbstractParser<InputOutputCriticalSection>() {
+      public InputOutputCriticalSection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InputOutputCriticalSection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InputOutputCriticalSection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InputOutputCriticalSection> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CriticalSectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.CriticalSection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int64 job_id = 1;</code>
+     */
+    boolean hasJobId();
+    /**
+     * <code>required int64 job_id = 1;</code>
+     */
+    long getJobId();
+
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+    int getMachineId2SourceTickOpNameCount();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+    boolean containsMachineId2SourceTickOpName(
+        long key);
+    /**
+     * Use {@link #getMachineId2SourceTickOpNameMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, java.lang.String>
+    getMachineId2SourceTickOpName();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+    java.util.Map<java.lang.Long, java.lang.String>
+    getMachineId2SourceTickOpNameMap();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    java.lang.String getMachineId2SourceTickOpNameOrDefault(
+        long key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    java.lang.String getMachineId2SourceTickOpNameOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+    int getMachineId2SinkTickOpNameCount();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+    boolean containsMachineId2SinkTickOpName(
+        long key);
+    /**
+     * Use {@link #getMachineId2SinkTickOpNameMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, java.lang.String>
+    getMachineId2SinkTickOpName();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+    java.util.Map<java.lang.Long, java.lang.String>
+    getMachineId2SinkTickOpNameMap();
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    java.lang.String getMachineId2SinkTickOpNameOrDefault(
+        long key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    java.lang.String getMachineId2SinkTickOpNameOrThrow(
+        long key);
+
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    java.util.List<java.lang.Long> getMemBlockIdList();
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    int getMemBlockIdCount();
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    long getMemBlockId(int index);
+
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    java.util.List<java.lang.Long> getChunkIdList();
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    int getChunkIdCount();
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    long getChunkId(int index);
+
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    boolean hasTotalJobCriticalSection();
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getTotalJobCriticalSection();
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder getTotalJobCriticalSectionOrBuilder();
+
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    boolean hasInputOutputCriticalSection();
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getInputOutputCriticalSection();
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder getInputOutputCriticalSectionOrBuilder();
+
+    public org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code oneflow.CriticalSection}
+   */
+  public  static final class CriticalSection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.CriticalSection)
+      CriticalSectionOrBuilder {
+    // Use CriticalSection.newBuilder() to construct.
+    private CriticalSection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CriticalSection() {
+      jobId_ = 0L;
+      memBlockId_ = java.util.Collections.emptyList();
+      chunkId_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CriticalSection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              jobId_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                machineId2SourceTickOpName_ = com.google.protobuf.MapField.newMapField(
+                    MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+              machineId2SourceTickOpName = input.readMessage(
+                  MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              machineId2SourceTickOpName_.getMutableMap().put(machineId2SourceTickOpName.getKey(), machineId2SourceTickOpName.getValue());
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                machineId2SinkTickOpName_ = com.google.protobuf.MapField.newMapField(
+                    MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+              machineId2SinkTickOpName = input.readMessage(
+                  MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              machineId2SinkTickOpName_.getMutableMap().put(machineId2SinkTickOpName.getKey(), machineId2SinkTickOpName.getValue());
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                memBlockId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              memBlockId_.add(input.readInt64());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                memBlockId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                memBlockId_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                chunkId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              chunkId_.add(input.readInt64());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
+                chunkId_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                chunkId_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 50: {
+              org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder subBuilder = null;
+              if (typeCase_ == 6) {
+                subBuilder = ((org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 6;
+              break;
+            }
+            case 58: {
+              org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder subBuilder = null;
+              if (typeCase_ == 7) {
+                subBuilder = ((org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 7;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          memBlockId_ = java.util.Collections.unmodifiableList(memBlockId_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          chunkId_ = java.util.Collections.unmodifiableList(chunkId_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMachineId2SourceTickOpName();
+        case 3:
+          return internalGetMachineId2SinkTickOpName();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.Builder.class);
+    }
+
+    private int bitField0_;
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      TOTAL_JOB_CRITICAL_SECTION(6),
+      INPUT_OUTPUT_CRITICAL_SECTION(7),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 6: return TOTAL_JOB_CRITICAL_SECTION;
+          case 7: return INPUT_OUTPUT_CRITICAL_SECTION;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private long jobId_;
+    /**
+     * <code>required int64 job_id = 1;</code>
+     */
+    public boolean hasJobId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 job_id = 1;</code>
+     */
+    public long getJobId() {
+      return jobId_;
+    }
+
+    public static final int MACHINE_ID2SOURCE_TICK_OP_NAME_FIELD_NUMBER = 2;
+    private static final class MachineId2SourceTickOpNameDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, java.lang.String>newDefaultInstance(
+                  org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_MachineId2sourceTickOpNameEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Long, java.lang.String> machineId2SourceTickOpName_;
+    private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+    internalGetMachineId2SourceTickOpName() {
+      if (machineId2SourceTickOpName_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry);
+      }
+      return machineId2SourceTickOpName_;
+    }
+
+    public int getMachineId2SourceTickOpNameCount() {
+      return internalGetMachineId2SourceTickOpName().getMap().size();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    public boolean containsMachineId2SourceTickOpName(
+        long key) {
+      
+      return internalGetMachineId2SourceTickOpName().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMachineId2SourceTickOpNameMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SourceTickOpName() {
+      return getMachineId2SourceTickOpNameMap();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SourceTickOpNameMap() {
+      return internalGetMachineId2SourceTickOpName().getMap();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    public java.lang.String getMachineId2SourceTickOpNameOrDefault(
+        long key,
+        java.lang.String defaultValue) {
+      
+      java.util.Map<java.lang.Long, java.lang.String> map =
+          internalGetMachineId2SourceTickOpName().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+     */
+
+    public java.lang.String getMachineId2SourceTickOpNameOrThrow(
+        long key) {
+      
+      java.util.Map<java.lang.Long, java.lang.String> map =
+          internalGetMachineId2SourceTickOpName().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MACHINE_ID2SINK_TICK_OP_NAME_FIELD_NUMBER = 3;
+    private static final class MachineId2SinkTickOpNameDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, java.lang.String>newDefaultInstance(
+                  org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_MachineId2sinkTickOpNameEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Long, java.lang.String> machineId2SinkTickOpName_;
+    private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+    internalGetMachineId2SinkTickOpName() {
+      if (machineId2SinkTickOpName_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry);
+      }
+      return machineId2SinkTickOpName_;
+    }
+
+    public int getMachineId2SinkTickOpNameCount() {
+      return internalGetMachineId2SinkTickOpName().getMap().size();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    public boolean containsMachineId2SinkTickOpName(
+        long key) {
+      
+      return internalGetMachineId2SinkTickOpName().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMachineId2SinkTickOpNameMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SinkTickOpName() {
+      return getMachineId2SinkTickOpNameMap();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SinkTickOpNameMap() {
+      return internalGetMachineId2SinkTickOpName().getMap();
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    public java.lang.String getMachineId2SinkTickOpNameOrDefault(
+        long key,
+        java.lang.String defaultValue) {
+      
+      java.util.Map<java.lang.Long, java.lang.String> map =
+          internalGetMachineId2SinkTickOpName().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+     */
+
+    public java.lang.String getMachineId2SinkTickOpNameOrThrow(
+        long key) {
+      
+      java.util.Map<java.lang.Long, java.lang.String> map =
+          internalGetMachineId2SinkTickOpName().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MEM_BLOCK_ID_FIELD_NUMBER = 4;
+    private java.util.List<java.lang.Long> memBlockId_;
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getMemBlockIdList() {
+      return memBlockId_;
+    }
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    public int getMemBlockIdCount() {
+      return memBlockId_.size();
+    }
+    /**
+     * <code>repeated int64 mem_block_id = 4;</code>
+     */
+    public long getMemBlockId(int index) {
+      return memBlockId_.get(index);
+    }
+
+    public static final int CHUNK_ID_FIELD_NUMBER = 5;
+    private java.util.List<java.lang.Long> chunkId_;
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getChunkIdList() {
+      return chunkId_;
+    }
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    public int getChunkIdCount() {
+      return chunkId_.size();
+    }
+    /**
+     * <code>repeated int64 chunk_id = 5;</code>
+     */
+    public long getChunkId(int index) {
+      return chunkId_.get(index);
+    }
+
+    public static final int TOTAL_JOB_CRITICAL_SECTION_FIELD_NUMBER = 6;
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    public boolean hasTotalJobCriticalSection() {
+      return typeCase_ == 6;
+    }
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getTotalJobCriticalSection() {
+      if (typeCase_ == 6) {
+         return (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_;
+      }
+      return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+     */
+    public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder getTotalJobCriticalSectionOrBuilder() {
+      if (typeCase_ == 6) {
+         return (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_;
+      }
+      return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+    }
+
+    public static final int INPUT_OUTPUT_CRITICAL_SECTION_FIELD_NUMBER = 7;
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    public boolean hasInputOutputCriticalSection() {
+      return typeCase_ == 7;
+    }
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getInputOutputCriticalSection() {
+      if (typeCase_ == 7) {
+         return (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_;
+      }
+      return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+     */
+    public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder getInputOutputCriticalSectionOrBuilder() {
+      if (typeCase_ == 7) {
+         return (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_;
+      }
+      return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasJobId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, jobId_);
+      }
+      for (java.util.Map.Entry<java.lang.Long, java.lang.String> entry
+           : internalGetMachineId2SourceTickOpName().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+        machineId2SourceTickOpName = MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(2, machineId2SourceTickOpName);
+      }
+      for (java.util.Map.Entry<java.lang.Long, java.lang.String> entry
+           : internalGetMachineId2SinkTickOpName().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+        machineId2SinkTickOpName = MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(3, machineId2SinkTickOpName);
+      }
+      for (int i = 0; i < memBlockId_.size(); i++) {
+        output.writeInt64(4, memBlockId_.get(i));
+      }
+      for (int i = 0; i < chunkId_.size(); i++) {
+        output.writeInt64(5, chunkId_.get(i));
+      }
+      if (typeCase_ == 6) {
+        output.writeMessage(6, (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_);
+      }
+      if (typeCase_ == 7) {
+        output.writeMessage(7, (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, jobId_);
+      }
+      for (java.util.Map.Entry<java.lang.Long, java.lang.String> entry
+           : internalGetMachineId2SourceTickOpName().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+        machineId2SourceTickOpName = MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, machineId2SourceTickOpName);
+      }
+      for (java.util.Map.Entry<java.lang.Long, java.lang.String> entry
+           : internalGetMachineId2SinkTickOpName().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+        machineId2SinkTickOpName = MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, machineId2SinkTickOpName);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < memBlockId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(memBlockId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getMemBlockIdList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chunkId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(chunkId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getChunkIdList().size();
+      }
+      if (typeCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_);
+      }
+      if (typeCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection other = (org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection) obj;
+
+      boolean result = true;
+      result = result && (hasJobId() == other.hasJobId());
+      if (hasJobId()) {
+        result = result && (getJobId()
+            == other.getJobId());
+      }
+      result = result && internalGetMachineId2SourceTickOpName().equals(
+          other.internalGetMachineId2SourceTickOpName());
+      result = result && internalGetMachineId2SinkTickOpName().equals(
+          other.internalGetMachineId2SinkTickOpName());
+      result = result && getMemBlockIdList()
+          .equals(other.getMemBlockIdList());
+      result = result && getChunkIdList()
+          .equals(other.getChunkIdList());
+      result = result && getTypeCase().equals(
+          other.getTypeCase());
+      if (!result) return false;
+      switch (typeCase_) {
+        case 6:
+          result = result && getTotalJobCriticalSection()
+              .equals(other.getTotalJobCriticalSection());
+          break;
+        case 7:
+          result = result && getInputOutputCriticalSection()
+              .equals(other.getInputOutputCriticalSection());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasJobId()) {
+        hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getJobId());
+      }
+      if (!internalGetMachineId2SourceTickOpName().getMap().isEmpty()) {
+        hash = (37 * hash) + MACHINE_ID2SOURCE_TICK_OP_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMachineId2SourceTickOpName().hashCode();
+      }
+      if (!internalGetMachineId2SinkTickOpName().getMap().isEmpty()) {
+        hash = (37 * hash) + MACHINE_ID2SINK_TICK_OP_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMachineId2SinkTickOpName().hashCode();
+      }
+      if (getMemBlockIdCount() > 0) {
+        hash = (37 * hash) + MEM_BLOCK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getMemBlockIdList().hashCode();
+      }
+      if (getChunkIdCount() > 0) {
+        hash = (37 * hash) + CHUNK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getChunkIdList().hashCode();
+      }
+      switch (typeCase_) {
+        case 6:
+          hash = (37 * hash) + TOTAL_JOB_CRITICAL_SECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getTotalJobCriticalSection().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + INPUT_OUTPUT_CRITICAL_SECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getInputOutputCriticalSection().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.CriticalSection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.CriticalSection)
+        org.oneflow.core.job.CriticalSectionOuterClass.CriticalSectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMachineId2SourceTickOpName();
+          case 3:
+            return internalGetMachineId2SinkTickOpName();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableMachineId2SourceTickOpName();
+          case 3:
+            return internalGetMutableMachineId2SinkTickOpName();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.class, org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        jobId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableMachineId2SourceTickOpName().clear();
+        internalGetMutableMachineId2SinkTickOpName().clear();
+        memBlockId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        chunkId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.internal_static_oneflow_CriticalSection_descriptor;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection getDefaultInstanceForType() {
+        return org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.getDefaultInstance();
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection build() {
+        org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection buildPartial() {
+        org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection result = new org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.jobId_ = jobId_;
+        result.machineId2SourceTickOpName_ = internalGetMachineId2SourceTickOpName();
+        result.machineId2SourceTickOpName_.makeImmutable();
+        result.machineId2SinkTickOpName_ = internalGetMachineId2SinkTickOpName();
+        result.machineId2SinkTickOpName_.makeImmutable();
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          memBlockId_ = java.util.Collections.unmodifiableList(memBlockId_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.memBlockId_ = memBlockId_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          chunkId_ = java.util.Collections.unmodifiableList(chunkId_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.chunkId_ = chunkId_;
+        if (typeCase_ == 6) {
+          if (totalJobCriticalSectionBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = totalJobCriticalSectionBuilder_.build();
+          }
+        }
+        if (typeCase_ == 7) {
+          if (inputOutputCriticalSectionBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = inputOutputCriticalSectionBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection) {
+          return mergeFrom((org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection other) {
+        if (other == org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection.getDefaultInstance()) return this;
+        if (other.hasJobId()) {
+          setJobId(other.getJobId());
+        }
+        internalGetMutableMachineId2SourceTickOpName().mergeFrom(
+            other.internalGetMachineId2SourceTickOpName());
+        internalGetMutableMachineId2SinkTickOpName().mergeFrom(
+            other.internalGetMachineId2SinkTickOpName());
+        if (!other.memBlockId_.isEmpty()) {
+          if (memBlockId_.isEmpty()) {
+            memBlockId_ = other.memBlockId_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureMemBlockIdIsMutable();
+            memBlockId_.addAll(other.memBlockId_);
+          }
+          onChanged();
+        }
+        if (!other.chunkId_.isEmpty()) {
+          if (chunkId_.isEmpty()) {
+            chunkId_ = other.chunkId_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureChunkIdIsMutable();
+            chunkId_.addAll(other.chunkId_);
+          }
+          onChanged();
+        }
+        switch (other.getTypeCase()) {
+          case TOTAL_JOB_CRITICAL_SECTION: {
+            mergeTotalJobCriticalSection(other.getTotalJobCriticalSection());
+            break;
+          }
+          case INPUT_OUTPUT_CRITICAL_SECTION: {
+            mergeInputOutputCriticalSection(other.getInputOutputCriticalSection());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasJobId()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private long jobId_ ;
+      /**
+       * <code>required int64 job_id = 1;</code>
+       */
+      public boolean hasJobId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 job_id = 1;</code>
+       */
+      public long getJobId() {
+        return jobId_;
+      }
+      /**
+       * <code>required int64 job_id = 1;</code>
+       */
+      public Builder setJobId(long value) {
+        bitField0_ |= 0x00000001;
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 job_id = 1;</code>
+       */
+      public Builder clearJobId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, java.lang.String> machineId2SourceTickOpName_;
+      private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+      internalGetMachineId2SourceTickOpName() {
+        if (machineId2SourceTickOpName_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry);
+        }
+        return machineId2SourceTickOpName_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+      internalGetMutableMachineId2SourceTickOpName() {
+        onChanged();;
+        if (machineId2SourceTickOpName_ == null) {
+          machineId2SourceTickOpName_ = com.google.protobuf.MapField.newMapField(
+              MachineId2SourceTickOpNameDefaultEntryHolder.defaultEntry);
+        }
+        if (!machineId2SourceTickOpName_.isMutable()) {
+          machineId2SourceTickOpName_ = machineId2SourceTickOpName_.copy();
+        }
+        return machineId2SourceTickOpName_;
+      }
+
+      public int getMachineId2SourceTickOpNameCount() {
+        return internalGetMachineId2SourceTickOpName().getMap().size();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public boolean containsMachineId2SourceTickOpName(
+          long key) {
+        
+        return internalGetMachineId2SourceTickOpName().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMachineId2SourceTickOpNameMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SourceTickOpName() {
+        return getMachineId2SourceTickOpNameMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SourceTickOpNameMap() {
+        return internalGetMachineId2SourceTickOpName().getMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public java.lang.String getMachineId2SourceTickOpNameOrDefault(
+          long key,
+          java.lang.String defaultValue) {
+        
+        java.util.Map<java.lang.Long, java.lang.String> map =
+            internalGetMachineId2SourceTickOpName().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public java.lang.String getMachineId2SourceTickOpNameOrThrow(
+          long key) {
+        
+        java.util.Map<java.lang.Long, java.lang.String> map =
+            internalGetMachineId2SourceTickOpName().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMachineId2SourceTickOpName() {
+        getMutableMachineId2SourceTickOpName().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public Builder removeMachineId2SourceTickOpName(
+          long key) {
+        
+        getMutableMachineId2SourceTickOpName().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, java.lang.String>
+      getMutableMachineId2SourceTickOpName() {
+        return internalGetMutableMachineId2SourceTickOpName().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+      public Builder putMachineId2SourceTickOpName(
+          long key,
+          java.lang.String value) {
+        
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableMachineId2SourceTickOpName().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2source_tick_op_name = 2;</code>
+       */
+
+      public Builder putAllMachineId2SourceTickOpName(
+          java.util.Map<java.lang.Long, java.lang.String> values) {
+        getMutableMachineId2SourceTickOpName().putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, java.lang.String> machineId2SinkTickOpName_;
+      private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+      internalGetMachineId2SinkTickOpName() {
+        if (machineId2SinkTickOpName_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry);
+        }
+        return machineId2SinkTickOpName_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
+      internalGetMutableMachineId2SinkTickOpName() {
+        onChanged();;
+        if (machineId2SinkTickOpName_ == null) {
+          machineId2SinkTickOpName_ = com.google.protobuf.MapField.newMapField(
+              MachineId2SinkTickOpNameDefaultEntryHolder.defaultEntry);
+        }
+        if (!machineId2SinkTickOpName_.isMutable()) {
+          machineId2SinkTickOpName_ = machineId2SinkTickOpName_.copy();
+        }
+        return machineId2SinkTickOpName_;
+      }
+
+      public int getMachineId2SinkTickOpNameCount() {
+        return internalGetMachineId2SinkTickOpName().getMap().size();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public boolean containsMachineId2SinkTickOpName(
+          long key) {
+        
+        return internalGetMachineId2SinkTickOpName().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMachineId2SinkTickOpNameMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SinkTickOpName() {
+        return getMachineId2SinkTickOpNameMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public java.util.Map<java.lang.Long, java.lang.String> getMachineId2SinkTickOpNameMap() {
+        return internalGetMachineId2SinkTickOpName().getMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public java.lang.String getMachineId2SinkTickOpNameOrDefault(
+          long key,
+          java.lang.String defaultValue) {
+        
+        java.util.Map<java.lang.Long, java.lang.String> map =
+            internalGetMachineId2SinkTickOpName().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public java.lang.String getMachineId2SinkTickOpNameOrThrow(
+          long key) {
+        
+        java.util.Map<java.lang.Long, java.lang.String> map =
+            internalGetMachineId2SinkTickOpName().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMachineId2SinkTickOpName() {
+        getMutableMachineId2SinkTickOpName().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public Builder removeMachineId2SinkTickOpName(
+          long key) {
+        
+        getMutableMachineId2SinkTickOpName().remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, java.lang.String>
+      getMutableMachineId2SinkTickOpName() {
+        return internalGetMutableMachineId2SinkTickOpName().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+      public Builder putMachineId2SinkTickOpName(
+          long key,
+          java.lang.String value) {
+        
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        getMutableMachineId2SinkTickOpName().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, string&gt; machine_id2sink_tick_op_name = 3;</code>
+       */
+
+      public Builder putAllMachineId2SinkTickOpName(
+          java.util.Map<java.lang.Long, java.lang.String> values) {
+        getMutableMachineId2SinkTickOpName().putAll(values);
+        return this;
+      }
+
+      private java.util.List<java.lang.Long> memBlockId_ = java.util.Collections.emptyList();
+      private void ensureMemBlockIdIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          memBlockId_ = new java.util.ArrayList<java.lang.Long>(memBlockId_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getMemBlockIdList() {
+        return java.util.Collections.unmodifiableList(memBlockId_);
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public int getMemBlockIdCount() {
+        return memBlockId_.size();
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public long getMemBlockId(int index) {
+        return memBlockId_.get(index);
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public Builder setMemBlockId(
+          int index, long value) {
+        ensureMemBlockIdIsMutable();
+        memBlockId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public Builder addMemBlockId(long value) {
+        ensureMemBlockIdIsMutable();
+        memBlockId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public Builder addAllMemBlockId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureMemBlockIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, memBlockId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 mem_block_id = 4;</code>
+       */
+      public Builder clearMemBlockId() {
+        memBlockId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Long> chunkId_ = java.util.Collections.emptyList();
+      private void ensureChunkIdIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          chunkId_ = new java.util.ArrayList<java.lang.Long>(chunkId_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getChunkIdList() {
+        return java.util.Collections.unmodifiableList(chunkId_);
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public int getChunkIdCount() {
+        return chunkId_.size();
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public long getChunkId(int index) {
+        return chunkId_.get(index);
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public Builder setChunkId(
+          int index, long value) {
+        ensureChunkIdIsMutable();
+        chunkId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public Builder addChunkId(long value) {
+        ensureChunkIdIsMutable();
+        chunkId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public Builder addAllChunkId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureChunkIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chunkId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 chunk_id = 5;</code>
+       */
+      public Builder clearChunkId() {
+        chunkId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder> totalJobCriticalSectionBuilder_;
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public boolean hasTotalJobCriticalSection() {
+        return typeCase_ == 6;
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection getTotalJobCriticalSection() {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 6) {
+            return (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_;
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+        } else {
+          if (typeCase_ == 6) {
+            return totalJobCriticalSectionBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public Builder setTotalJobCriticalSection(org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection value) {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          totalJobCriticalSectionBuilder_.setMessage(value);
+        }
+        typeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public Builder setTotalJobCriticalSection(
+          org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder builderForValue) {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          totalJobCriticalSectionBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public Builder mergeTotalJobCriticalSection(org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection value) {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 6 &&
+              type_ != org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.newBuilder((org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 6) {
+            totalJobCriticalSectionBuilder_.mergeFrom(value);
+          }
+          totalJobCriticalSectionBuilder_.setMessage(value);
+        }
+        typeCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public Builder clearTotalJobCriticalSection() {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 6) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 6) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          totalJobCriticalSectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder getTotalJobCriticalSectionBuilder() {
+        return getTotalJobCriticalSectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder getTotalJobCriticalSectionOrBuilder() {
+        if ((typeCase_ == 6) && (totalJobCriticalSectionBuilder_ != null)) {
+          return totalJobCriticalSectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 6) {
+            return (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_;
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.TotalJobCriticalSection total_job_critical_section = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder> 
+          getTotalJobCriticalSectionFieldBuilder() {
+        if (totalJobCriticalSectionBuilder_ == null) {
+          if (!(typeCase_ == 6)) {
+            type_ = org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.getDefaultInstance();
+          }
+          totalJobCriticalSectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSectionOrBuilder>(
+                  (org.oneflow.core.job.CriticalSectionOuterClass.TotalJobCriticalSection) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 6;
+        onChanged();;
+        return totalJobCriticalSectionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder> inputOutputCriticalSectionBuilder_;
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public boolean hasInputOutputCriticalSection() {
+        return typeCase_ == 7;
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection getInputOutputCriticalSection() {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 7) {
+            return (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_;
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+        } else {
+          if (typeCase_ == 7) {
+            return inputOutputCriticalSectionBuilder_.getMessage();
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public Builder setInputOutputCriticalSection(org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection value) {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          inputOutputCriticalSectionBuilder_.setMessage(value);
+        }
+        typeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public Builder setInputOutputCriticalSection(
+          org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder builderForValue) {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputOutputCriticalSectionBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public Builder mergeInputOutputCriticalSection(org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection value) {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 7 &&
+              type_ != org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance()) {
+            type_ = org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.newBuilder((org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 7) {
+            inputOutputCriticalSectionBuilder_.mergeFrom(value);
+          }
+          inputOutputCriticalSectionBuilder_.setMessage(value);
+        }
+        typeCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public Builder clearInputOutputCriticalSection() {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          if (typeCase_ == 7) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 7) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          inputOutputCriticalSectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder getInputOutputCriticalSectionBuilder() {
+        return getInputOutputCriticalSectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      public org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder getInputOutputCriticalSectionOrBuilder() {
+        if ((typeCase_ == 7) && (inputOutputCriticalSectionBuilder_ != null)) {
+          return inputOutputCriticalSectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 7) {
+            return (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_;
+          }
+          return org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.InputOutputCriticalSection input_output_critical_section = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder> 
+          getInputOutputCriticalSectionFieldBuilder() {
+        if (inputOutputCriticalSectionBuilder_ == null) {
+          if (!(typeCase_ == 7)) {
+            type_ = org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.getDefaultInstance();
+          }
+          inputOutputCriticalSectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection.Builder, org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSectionOrBuilder>(
+                  (org.oneflow.core.job.CriticalSectionOuterClass.InputOutputCriticalSection) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 7;
+        onChanged();;
+        return inputOutputCriticalSectionBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.CriticalSection)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.CriticalSection)
+    private static final org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection();
+    }
+
+    public static org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CriticalSection>
+        PARSER = new com.google.protobuf.AbstractParser<CriticalSection>() {
+      public CriticalSection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CriticalSection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CriticalSection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CriticalSection> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.job.CriticalSectionOuterClass.CriticalSection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_TotalJobCriticalSection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_TotalJobCriticalSection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_InputOutputCriticalSection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_InputOutputCriticalSection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CriticalSection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CriticalSection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CriticalSection_MachineId2sourceTickOpNameEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CriticalSection_MachineId2sourceTickOpNameEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_CriticalSection_MachineId2sinkTickOpNameEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_CriticalSection_MachineId2sinkTickOpNameEntry_fieldAccessorTable;
 
@@ -65,8 +2883,7 @@ public final class CriticalSectionOuterClass {
       "achineId2sourceTickOpNameEntry\022\013\n\003key\030\001 " +
       "\001(\003\022\r\n\005value\030\002 \001(\t:\0028\001\032?\n\035MachineId2sink" +
       "TickOpNameEntry\022\013\n\003key\030\001 \001(\003\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001B\006\n\004typeB\030\n\024org.oneflow.core.jobP" +
-      "\001"
+      "\001(\t:\0028\001B\006\n\004typeB\026\n\024org.oneflow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
