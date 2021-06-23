@@ -2,13 +2,17 @@ package org.oneflow;
 
 import org.oneflow.core.job.Env;
 import org.oneflow.core.job.Env.EnvProto;
-import org.oneflow.core.serving.SavedModelOuterClass;
+import org.oneflow.core.job.JobConf;
+import org.oneflow.core.job.JobConf.JobConfigProto;
+import org.oneflow.core.operator.OpConf;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
+import org.oneflow.core.operator.OpConf.OperatorConf;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.lang.reflect.Method;
 
 
 /**
@@ -52,7 +56,11 @@ public class App {
         // ------------------ [Load Computation Graph Stage Start] ------------------
         String savedModelPath = "./models/1/";
         File file = new File(savedModelPath + "saved_model.pb");
-        SavedModel model = SavedModel.newBuilder().build();
+        SavedModel model = SavedModel.newBuilder()
+                .setName("")
+                .setVersion(1)
+                .setCheckpointDir("")
+                .build();
         try (InputStream fis = new FileInputStream(file)) {
             model = SavedModel.parseFrom(fis);
         }
@@ -62,12 +70,32 @@ public class App {
         String checkpointPath = savedModelPath + model.getCheckpointDir();
         String graphName = model.getDefaultGraphName();
         GraphDef graphDef = model.getGraphsOrThrow(graphName);
+        System.out.println(checkpointPath);
+        System.out.println(graphName);
         // ------------------ [Load Computation Graph Stage End] ------------------
 
         // ------------------ [Compile Computation Graph Stage Start] ------------------
         // 1, prepare environment
+        String jobName = "mlp_inference";
+        Library.openJobBuildAndInferCtx(jobName);
+        JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
+                .setJobName(jobName)
+                .setPredictConf(JobConf.PredictConf.newBuilder().build())
+                .build();
+        System.out.println(jobConfigProto.toString());
+        Library.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
+        Library.setScopeForCurJob();
+
         // 2, do the compilation
+        for (OperatorConf conf : graphDef.getOpListList()) {
+            Library.curJobAddOp(conf.toString());
+        }
+        Library.completeCurJobBuildAndInferCtx();
+        Library.rebuildCurJobBuildAndInferCtx();
+
         // 3, clean the environment
+        Library.unsetScopeForCurJob();
+        Library.closeJobBuildAndInferCtx();
         // ------------------ [Compile Computation Graph Stage End] ------------------
     }
 
@@ -82,3 +110,28 @@ public class App {
         Library.initEnv(envProto.toString());
     }
 }
+
+// some deleted code
+//            System.out.println(conf.toString());
+//            OpConf.OperatorConf.Builder builder = OperatorConf.newBuilder();
+//            builder.setName(conf.getName());
+//            builder.setDeviceTag("gpu");
+//            builder.setScopeSymbolId(scopeSymbolId);
+//
+//            if (!conf.getVariableConf().toString().isEmpty()) {
+//                builder.setVariableConf(conf.getVariableConf());
+//            }
+//            else if (!conf.getUserConf().toString().isEmpty()) {
+//                builder.setUserConf(conf.getUserConf());
+//            }
+//            else if (!conf.getInputConf().toString().isEmpty()) {
+//                builder.setInputConf(conf.getInputConf());
+//            }
+//            else if (!conf.getOutputConf().toString().isEmpty()) {
+//                builder.setOutputConf(conf.getOutputConf());
+//            }
+//            else if (!conf.getReturnConf().toString().isEmpty()) {
+//                builder.setReturnConf(conf.getReturnConf());
+//            }
+//
+//            Library.curJobAddOp(builder.build().toString());
