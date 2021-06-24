@@ -97,6 +97,12 @@ public class App {
         Library.unsetScopeForCurJob();
         Library.closeJobBuildAndInferCtx();
         // ------------------ [Compile Computation Graph Stage End] ------------------
+
+        // ------------------ [Launch Stage Start] ------------------
+        Library.startLazyGlobalSession();
+        Library.loadCheckpoint();
+        // ------------------ [Launch Stage End] ------------------
+
     }
 
     public static void doEnvInit() {

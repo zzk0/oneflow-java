@@ -26,4 +26,8 @@ public class Library {
     public static native void rebuildCurJobBuildAndInferCtx();
     public static native void unsetScopeForCurJob();
     public static native void closeJobBuildAndInferCtx();
+
+    // launch
+    public static native void startLazyGlobalSession();
+    public static native void loadCheckpoint();
 }
