@@ -9,6 +9,9 @@ import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
 import org.oneflow.core.operator.OpConf.OperatorConf;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.awt.image.Raster;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -82,7 +85,7 @@ public class App {
                 .setJobName(jobName)
                 .setPredictConf(JobConf.PredictConf.newBuilder().build())
                 .build();
-        System.out.println(jobConfigProto.toString());
+//        System.out.println(jobConfigProto.toString());
         Library.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
         Library.setScopeForCurJob();
 
@@ -103,6 +106,27 @@ public class App {
         Library.loadCheckpoint();
         // ------------------ [Launch Stage End] ------------------
 
+        // ------------------ [Forward Stage 1: Push Start] ------------------
+        float[] image = readImage("./7.png");
+        Library.runPushJob(image);
+        // ------------------ [Forward Stage 1: Push End] ------------------
+
+        // ------------------ [Forward Stage 2: Inference Start] ------------------
+        Library.runInferenceJob();
+        // ------------------ [Forward Stage 2: Inference End] ------------------
+
+        // ------------------ [Forward Stage 3: Pull Start] ------------------
+        Library.runPullJob();
+        // ------------------ [Forward Stage 3: Pull End] ------------------
+
+        // ------------------ [Clean Stage Start] ------------------
+//        Library.stopLazyGlobalSession();
+//        Library.destroyLazyGlobalSession();
+//        Library.destroyEnv();
+//        Library.setShuttingDown();
+        // ------------------ [Clean Stage End] ------------------
+
+        System.out.println("pause");
     }
 
     public static void doEnvInit() {
@@ -114,6 +138,30 @@ public class App {
                 .setCtrlPort(8888)
                 .build();
         Library.initEnv(envProto.toString());
+    }
+
+    public static float[] readImage(String filePath) {
+        File file = new File(filePath);
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(file);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        assert image != null;
+
+        int width = image.getWidth();
+        int height = image.getHeight();
+        Raster raster = image.getRaster();
+        float[] pixels = new float[width * height];
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                // Caution: transform the image
+                pixels[i * width + j] = (raster.getSample(j, i, 0) - 128.0f) / 255.0f;
+            }
+        }
+        return pixels;
     }
 }
 

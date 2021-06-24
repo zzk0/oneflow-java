@@ -30,4 +30,15 @@ public class Library {
     // launch
     public static native void startLazyGlobalSession();
     public static native void loadCheckpoint();
+
+    // forward
+    public static native void runPushJob(float[] arr);
+    public static native void runInferenceJob();
+    public static native void runPullJob();
+
+    // clean
+    public static native void stopLazyGlobalSession();
+    public static native void destroyLazyGlobalSession();
+    public static native void destroyEnv();
+    public static native void setShuttingDown();
 }
