@@ -22,7 +22,7 @@ public class InferenceSessionTest {
 
         // input
         float[] image = readImage("./7.png");
-        Tensor tensor = Tensor.fromBlob(new int[]{ 0 }, new long[]{ 1 }, DType.INT32);
+        Tensor tensor = Tensor.fromBlob(new int[]{ 0 }, new long[]{ 1 }, DType.INT);
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 28, 28 }, DType.FLOAT);
         Map<String, Tensor> tensors = new HashMap<>();
         tensors.put("Input_14", imageTensor);
@@ -31,7 +31,19 @@ public class InferenceSessionTest {
         // forward
         Tensor[] result = session.run("mlp_inference", tensors);
         Tensor prediction = result[0];
-        System.out.println(prediction.toString());
+        float[] vector = prediction.getFloatData();
+
+        // close
+        session.close();
+
+        // assert
+        assertEquals(10, vector.length);
+        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
+                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
+        float delta = 0.0001f;
+        for (int i = 0; i < 10; i++) {
+            assertEquals(expectedVector[i], vector[i], delta);
+        }
     }
 
     public static float[] readImage(String filePath) {
