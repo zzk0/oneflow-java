@@ -4,7 +4,6 @@ import org.oneflow.core.job.Env;
 import org.oneflow.core.job.Env.EnvProto;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
-import org.oneflow.core.operator.OpConf;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
 import org.oneflow.core.operator.OpConf.OperatorConf;
@@ -15,7 +14,6 @@ import java.awt.image.Raster;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.lang.reflect.Method;
 
 
 /**
@@ -24,15 +22,15 @@ import java.lang.reflect.Method;
 public class App {
     public static void main(String[] args) {
         // ------------------ [Default Init Stage Start] ------------------
-        Library.initDefaultSession();
+        InferenceSession.initDefaultSession();
         // ------------------ [Default Init Stage End] ------------------
 
         // ------------------ [Init Stage Start] ------------------
         // 1, env init
-        if (!Library.isEnvInited()) {
+        if (!InferenceSession.isEnvInited()) {
             doEnvInit();
         }
-        if (Library.isEnvInited()) {
+        if (InferenceSession.isEnvInited()) {
             System.out.println("env is inited");
         }
         else {
@@ -41,13 +39,13 @@ public class App {
         }
 
         // 2, scope init
-        Library.initScopeStack();
+        InferenceSession.initScopeStack();
 
         // 3, session init
-        if (!Library.isSessionInited()) {
-            Library.initSession();
+        if (!InferenceSession.isSessionInited()) {
+            InferenceSession.initSession();
         }
-        if (Library.isSessionInited()) {
+        if (InferenceSession.isSessionInited()) {
             System.out.println("session is inited");
         }
         else {
@@ -80,43 +78,43 @@ public class App {
         // ------------------ [Compile Computation Graph Stage Start] ------------------
         // 1, prepare environment
         String jobName = "mlp_inference";
-        Library.openJobBuildAndInferCtx(jobName);
+        InferenceSession.openJobBuildAndInferCtx(jobName);
         JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
                 .setJobName(jobName)
                 .setPredictConf(JobConf.PredictConf.newBuilder().build())
                 .build();
 //        System.out.println(jobConfigProto.toString());
-        Library.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
-        Library.setScopeForCurJob();
+        InferenceSession.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
+        InferenceSession.setScopeForCurJob();
 
         // 2, do the compilation
         for (OperatorConf conf : graphDef.getOpListList()) {
-            Library.curJobAddOp(conf.toString());
+            InferenceSession.curJobAddOp(conf.toString());
         }
-        Library.completeCurJobBuildAndInferCtx();
-        Library.rebuildCurJobBuildAndInferCtx();
+        InferenceSession.completeCurJobBuildAndInferCtx();
+        InferenceSession.rebuildCurJobBuildAndInferCtx();
 
         // 3, clean the environment
-        Library.unsetScopeForCurJob();
-        Library.closeJobBuildAndInferCtx();
+        InferenceSession.unsetScopeForCurJob();
+        InferenceSession.closeJobBuildAndInferCtx();
         // ------------------ [Compile Computation Graph Stage End] ------------------
 
         // ------------------ [Launch Stage Start] ------------------
-        Library.startLazyGlobalSession();
-        Library.loadCheckpoint();
+        InferenceSession.startLazyGlobalSession();
+        InferenceSession.loadCheckpoint();
         // ------------------ [Launch Stage End] ------------------
 
         // ------------------ [Forward Stage 1: Push Start] ------------------
         float[] image = readImage("./7.png");
-        Library.runPushJob(image);
+        InferenceSession.runPushJob(image);
         // ------------------ [Forward Stage 1: Push End] ------------------
 
         // ------------------ [Forward Stage 2: Inference Start] ------------------
-        Library.runInferenceJob();
+        InferenceSession.runInferenceJob();
         // ------------------ [Forward Stage 2: Inference End] ------------------
 
         // ------------------ [Forward Stage 3: Pull Start] ------------------
-        Library.runPullJob();
+        InferenceSession.runPullJob();
         // ------------------ [Forward Stage 3: Pull End] ------------------
 
         // ------------------ [Clean Stage Start] ------------------
@@ -137,7 +135,7 @@ public class App {
                         .setAddr("127.0.0.1"))
                 .setCtrlPort(8888)
                 .build();
-        Library.initEnv(envProto.toString());
+        InferenceSession.initEnv(envProto.toString());
     }
 
     public static float[] readImage(String filePath) {

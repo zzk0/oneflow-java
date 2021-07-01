@@ -1,13 +1,50 @@
 package org.oneflow;
 
+import java.util.Map;
+
 /**
  * All functions in one class
  */
-public class Library {
+public class InferenceSession {
 
     static {
         System.loadLibrary("oneflow");
     }
+
+    private Option option;
+    private SessionStateState state;
+
+    public InferenceSession() {
+        this.option = new Option();
+        this.state = SessionStateState.CLOSE;
+    }
+
+    public InferenceSession(Option option) {
+        this.option = option;
+        this.state = SessionStateState.CLOSE;
+    }
+
+    public void open() {
+
+    }
+
+    public void loadSavedModel(String path) {
+
+    }
+
+    public void launch() {
+
+    }
+
+    public Tensor[] run(String jobName, Map<String, Tensor> tensors) {
+        return null;
+    }
+
+    public void close() {
+
+    }
+
+    // ----------------------- The methods below will be removed -----------------------
 
     // init
     public static native void initDefaultSession();
