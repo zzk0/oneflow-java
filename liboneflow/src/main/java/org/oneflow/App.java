@@ -14,6 +14,10 @@ import java.awt.image.Raster;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
+import java.nio.FloatBuffer;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -21,6 +25,36 @@ import java.io.InputStream;
  */
 public class App {
     public static void main(String[] args) {
+//        InferenceSession session = new InferenceSession();
+//        session.open();
+//        session.loadSavedModel("./models/1/");
+//        session.launch();
+//
+//        // input
+//        float[] image = readImage("./7.png");
+//        Tensor tensor = Tensor.fromBlob(new int[]{ 0 }, new long[]{ 1 }, DType.INT);
+//        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 28, 28 }, DType.FLOAT);
+//        Map<String, Tensor> tensors = new HashMap<>();
+//        tensors.put("Input_14", imageTensor);
+//        tensors.put("Input_15", tensor);
+//
+//        // forward
+//        Tensor[] result = session.run("mlp_inference", tensors);
+//        Tensor prediction = result[0];
+//        float[] vector = prediction.getFloatData();
+//
+//        // close
+//        // session.close();
+//
+//        // assert
+//        assert (10 == vector.length);
+//        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
+//                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
+//        float delta = 0.0001f;
+//        for (int i = 0; i < 10; i++) {
+//            assert (Math.abs(expectedVector[i] - vector[i]) < delta);
+//        }
+
         // ------------------ [Default Init Stage Start] ------------------
         InferenceSession.initDefaultSession();
         // ------------------ [Default Init Stage End] ------------------
@@ -106,7 +140,8 @@ public class App {
 
         // ------------------ [Forward Stage 1: Push Start] ------------------
         float[] image = readImage("./7.png");
-        InferenceSession.runPushJob(image);
+        Tensor tensor = Tensor.fromBlob(image, new long[]{ 28, 28 });
+        InferenceSession.runPushJob(tensor);
         // ------------------ [Forward Stage 1: Push End] ------------------
 
         // ------------------ [Forward Stage 2: Inference Start] ------------------
