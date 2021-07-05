@@ -4,6 +4,8 @@ import org.oneflow.DType;
 import org.oneflow.Tensor;
 
 import java.nio.Buffer;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 public class FloatTensor extends Tensor {
@@ -30,5 +32,14 @@ public class FloatTensor extends Tensor {
         float[] arr = new float[data.remaining()];
         data.get(arr);
         return arr;
+    }
+
+    @Override
+    public byte[] getBytes() {
+        ByteBuffer byteBuffer = ByteBuffer.allocate(data.capacity() * Float.BYTES);
+        data.rewind();
+        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.asFloatBuffer().put(data);
+        return byteBuffer.array();
     }
 }
