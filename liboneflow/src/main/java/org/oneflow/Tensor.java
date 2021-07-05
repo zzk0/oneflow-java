@@ -40,6 +40,8 @@ public abstract class Tensor {
 
     public abstract Buffer getRawDataBuffer();
 
+    public abstract byte[] getBytes();
+
     public int[] getDataAsIntArray() {
         throw new IllegalStateException(getClass().getSimpleName() +
                 " cannot return data as int array");

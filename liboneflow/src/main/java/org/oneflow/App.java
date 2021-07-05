@@ -1,7 +1,9 @@
 package org.oneflow;
 
+import com.google.protobuf.InvalidProtocolBufferException;
 import org.oneflow.core.job.Env;
 import org.oneflow.core.job.Env.EnvProto;
+import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
@@ -119,7 +121,7 @@ public class App {
                 .build();
 //        System.out.println(jobConfigProto.toString());
         InferenceSession.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
-        InferenceSession.setScopeForCurJob();
+        InferenceSession.setScopeForCurJob(jobConfigProto.toString());
 
         // 2, do the compilation
         for (OperatorConf conf : graphDef.getOpListList()) {
@@ -135,13 +137,41 @@ public class App {
 
         // ------------------ [Launch Stage Start] ------------------
         InferenceSession.startLazyGlobalSession();
-        InferenceSession.loadCheckpoint();
+
+        String interUserJobInfo = InferenceSession.getInterUserJobInfo();
+        InterUserJobInfo info = null;
+        try {
+            info = InterUserJobInfo.parseFrom(interUserJobInfo.getBytes());
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        if (info == null) {
+            System.out.println("info is null");
+            return;
+        }
+
+        InferenceSession.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointPath.getBytes());
         // ------------------ [Launch Stage End] ------------------
 
         // ------------------ [Forward Stage 1: Push Start] ------------------
         float[] image = readImage("./7.png");
-        Tensor tensor = Tensor.fromBlob(image, new long[]{ 28, 28 });
-        InferenceSession.runPushJob(tensor);
+        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
+        Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
+        Map<String, Tensor> tensorMap = new HashMap<>();
+        tensorMap.put("Input_14", imageTensor);
+        tensorMap.put("Input_15", tagTensor);
+
+
+        Map<String, String> inputNameToJobName = info.getInputOrVarOpName2PushJobNameMap();
+        for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+            Tensor tensor = tensorMap.get(entry.getKey());
+            byte[] tensorBytes = tensor.getBytes();
+            InferenceSession.runSinglePushJob(tensorBytes, tensor.getShape(),
+                    tensor.getDataType().code, entry.getValue(), entry.getKey());
+        }
+
+
         // ------------------ [Forward Stage 1: Push End] ------------------
 
         // ------------------ [Forward Stage 2: Inference Start] ------------------
@@ -153,10 +183,10 @@ public class App {
         // ------------------ [Forward Stage 3: Pull End] ------------------
 
         // ------------------ [Clean Stage Start] ------------------
-//        Library.stopLazyGlobalSession();
-//        Library.destroyLazyGlobalSession();
-//        Library.destroyEnv();
-//        Library.setShuttingDown();
+//        InferenceSession.stopLazyGlobalSession();
+//        InferenceSession.destroyLazyGlobalSession();
+//        InferenceSession.destroyEnv();
+//        InferenceSession.setShuttingDown();
         // ------------------ [Clean Stage End] ------------------
 
         System.out.println("pause");

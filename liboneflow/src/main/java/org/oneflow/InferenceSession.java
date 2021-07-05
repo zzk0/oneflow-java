@@ -135,7 +135,7 @@ public class InferenceSession {
     // compile
     public static native void openJobBuildAndInferCtx(String jobName);
     public static native void setJobConfForCurJobBuildAndInferCtx(String jobConfProto);
-    public static native void setScopeForCurJob();
+    public static native void setScopeForCurJob(String jobConfProto);
     public static native void curJobAddOp(String opConfProto);
     public static native void completeCurJobBuildAndInferCtx();
     public static native void rebuildCurJobBuildAndInferCtx();
@@ -144,10 +144,15 @@ public class InferenceSession {
 
     // launch
     public static native void startLazyGlobalSession();
-    public static native void loadCheckpoint();
+    public static native void loadCheckpoint(String jobName, byte[] path);
 
     // forward
-    public static native void runPushJob(Tensor tensor);
+    public static native void runPushJob(float[] arr);
+    public static native void runSinglePushJob(byte[] data,
+                                               long[] shape,
+                                               int dTypeCode,
+                                               String job_name,
+                                               String op_name);
     public static native void runInferenceJob();
     public static native void runPullJob();
 
@@ -156,4 +161,7 @@ public class InferenceSession {
     public static native void destroyLazyGlobalSession();
     public static native void destroyEnv();
     public static native void setShuttingDown();
+
+    // others
+    public static native String getInterUserJobInfo();
 }
