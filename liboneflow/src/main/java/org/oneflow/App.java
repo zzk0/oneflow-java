@@ -180,18 +180,20 @@ public class App {
         // ------------------ [Forward Stage 2: Inference End] ------------------
 
         // ------------------ [Forward Stage 3: Pull Start] ------------------
-        byte[] res = InferenceSession.runPullJob();
-        ByteBuffer byteBuffer = ByteBuffer.wrap(res);
-        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-        FloatBuffer floatBuffer = byteBuffer.asFloatBuffer();
-        floatBuffer.rewind();
-        float[] pred = new float[floatBuffer.limit()];
-        floatBuffer.rewind();
-        floatBuffer.get(pred);
-        for (float x : pred) {
-            System.out.print(x + " ");
+        for (Map.Entry<String, String> entry : info.getOutputOrVarOpName2PullJobNameMap().entrySet()) {
+            byte[] res = InferenceSession.runPullJob(entry.getValue(), entry.getKey());
+            ByteBuffer byteBuffer = ByteBuffer.wrap(res);
+            byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+            FloatBuffer floatBuffer = byteBuffer.asFloatBuffer();
+            floatBuffer.rewind();
+            float[] pred = new float[floatBuffer.limit()];
+            floatBuffer.rewind();
+            floatBuffer.get(pred);
+            for (float x : pred) {
+                System.out.print(x + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
         // ------------------ [Forward Stage 3: Pull End] ------------------
 
         // ------------------ [Clean Stage Start] ------------------

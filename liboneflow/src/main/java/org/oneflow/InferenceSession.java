@@ -150,10 +150,10 @@ public class InferenceSession {
     public static native void runSinglePushJob(byte[] data,
                                                long[] shape,
                                                int dTypeCode,
-                                               String job_name,
-                                               String op_name);
+                                               String jobName,
+                                               String opName);
     public static native void runInferenceJob(String jobName);
-    public static native byte[] runPullJob();
+    public static native byte[] runPullJob(String jobName, String opName);
 
     // clean
     public static native void stopLazyGlobalSession();
