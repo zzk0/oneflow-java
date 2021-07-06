@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.Map;
@@ -64,7 +65,7 @@ public class App {
         // ------------------ [Init Stage Start] ------------------
         // 1, env init
         if (!InferenceSession.isEnvInited()) {
-            doEnvInit();
+            doEnvInit(8888);
         }
         if (InferenceSession.isEnvInited()) {
             System.out.println("env is inited");
@@ -175,30 +176,40 @@ public class App {
         // ------------------ [Forward Stage 1: Push End] ------------------
 
         // ------------------ [Forward Stage 2: Inference Start] ------------------
-        InferenceSession.runInferenceJob();
+        InferenceSession.runInferenceJob(jobName);
         // ------------------ [Forward Stage 2: Inference End] ------------------
 
         // ------------------ [Forward Stage 3: Pull Start] ------------------
-        InferenceSession.runPullJob();
+        byte[] res = InferenceSession.runPullJob();
+        ByteBuffer byteBuffer = ByteBuffer.wrap(res);
+        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+        FloatBuffer floatBuffer = byteBuffer.asFloatBuffer();
+        floatBuffer.rewind();
+        float[] pred = new float[floatBuffer.limit()];
+        floatBuffer.rewind();
+        floatBuffer.get(pred);
+        for (float x : pred) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
         // ------------------ [Forward Stage 3: Pull End] ------------------
 
         // ------------------ [Clean Stage Start] ------------------
-//        InferenceSession.stopLazyGlobalSession();
-//        InferenceSession.destroyLazyGlobalSession();
-//        InferenceSession.destroyEnv();
-//        InferenceSession.setShuttingDown();
+        InferenceSession.stopLazyGlobalSession();
+        InferenceSession.destroyLazyGlobalSession();
+        InferenceSession.destroyEnv();
+        InferenceSession.setShuttingDown();
         // ------------------ [Clean Stage End] ------------------
 
-        System.out.println("pause");
     }
 
-    public static void doEnvInit() {
+    public static void doEnvInit(int port) {
         // reference: env_util.py 365 line
         EnvProto envProto = EnvProto.newBuilder()
                 .addMachine(Env.Machine.newBuilder()
                         .setId(0)
                         .setAddr("127.0.0.1"))
-                .setCtrlPort(8888)
+                .setCtrlPort(port)
                 .build();
         InferenceSession.initEnv(envProto.toString());
     }

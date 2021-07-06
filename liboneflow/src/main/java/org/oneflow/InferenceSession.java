@@ -147,14 +147,13 @@ public class InferenceSession {
     public static native void loadCheckpoint(String jobName, byte[] path);
 
     // forward
-    public static native void runPushJob(float[] arr);
     public static native void runSinglePushJob(byte[] data,
                                                long[] shape,
                                                int dTypeCode,
                                                String job_name,
                                                String op_name);
-    public static native void runInferenceJob();
-    public static native void runPullJob();
+    public static native void runInferenceJob(String jobName);
+    public static native byte[] runPullJob();
 
     // clean
     public static native void stopLazyGlobalSession();
