@@ -153,7 +153,7 @@ public class InferenceSession {
                                                String jobName,
                                                String opName);
     public static native void runInferenceJob(String jobName);
-    public static native byte[] runPullJob(String jobName, String opName);
+    public static native Tensor runPullJob(String jobName, String opName);
 
     // clean
     public static native void stopLazyGlobalSession();

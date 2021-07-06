@@ -4,9 +4,7 @@ package org.oneflow;
 import org.oneflow.tensor.FloatTensor;
 import org.oneflow.tensor.IntTensor;
 
-import java.nio.Buffer;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
+import java.nio.*;
 
 public abstract class Tensor {
     private final long[] shape;
@@ -50,5 +48,19 @@ public abstract class Tensor {
     public float[] getDataAsFloatArray(){
         throw new IllegalStateException(getClass().getSimpleName() +
                 " cannot return data as float array");
+    }
+
+    public static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
+        Tensor tensor = null;
+        ByteBuffer byteBuffer = ByteBuffer.wrap(data);
+
+        if (2 == dType) {
+            tensor = new FloatTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asFloatBuffer());
+        }
+        else if (5 == dType) {
+            tensor = new IntTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asIntBuffer());
+        }
+
+        return tensor;
     }
 }

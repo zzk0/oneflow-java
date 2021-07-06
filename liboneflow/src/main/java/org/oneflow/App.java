@@ -16,6 +16,7 @@ import java.awt.image.Raster;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -57,6 +58,16 @@ public class App {
 //        for (int i = 0; i < 10; i++) {
 //            assert (Math.abs(expectedVector[i] - vector[i]) < delta);
 //        }
+        // ------------------ [User Configuration Start] ------------------
+        String jobName = "mlp_inference";
+        String savedModelDir = "./models";
+        float[] image = readImage("./7.png");
+        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
+        Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
+        Map<String, Tensor> tensorMap = new HashMap<>();
+        tensorMap.put("Input_14", imageTensor);
+        tensorMap.put("Input_15", tagTensor);
+        // ------------------ [User Configuration End] ------------------
 
         // ------------------ [Default Init Stage Start] ------------------
         InferenceSession.initDefaultSession();
@@ -92,8 +103,8 @@ public class App {
         // ------------------ [Init Stage End] ------------------
 
         // ------------------ [Load Computation Graph Stage Start] ------------------
-        String savedModelPath = "./models/1/";
-        File file = new File(savedModelPath + "saved_model.pb");
+        String savedModelPath = savedModelDir + "/1/";  // Todo: version
+        File file = new File(savedModelPath + "saved_model.pb");  // Todo: support different format
         SavedModel model = SavedModel.newBuilder()
                 .setName("")
                 .setVersion(1)
@@ -114,7 +125,6 @@ public class App {
 
         // ------------------ [Compile Computation Graph Stage Start] ------------------
         // 1, prepare environment
-        String jobName = "mlp_inference";
         InferenceSession.openJobBuildAndInferCtx(jobName);
         JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
                 .setJobName(jobName)
@@ -155,14 +165,6 @@ public class App {
         // ------------------ [Launch Stage End] ------------------
 
         // ------------------ [Forward Stage 1: Push Start] ------------------
-        float[] image = readImage("./7.png");
-        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
-        Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
-        Map<String, Tensor> tensorMap = new HashMap<>();
-        tensorMap.put("Input_14", imageTensor);
-        tensorMap.put("Input_15", tagTensor);
-
-
         Map<String, String> inputNameToJobName = info.getInputOrVarOpName2PushJobNameMap();
         for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
@@ -172,7 +174,6 @@ public class App {
                     tensor.getDataType().code, entry.getValue(), entry.getKey());
         }
 
-
         // ------------------ [Forward Stage 1: Push End] ------------------
 
         // ------------------ [Forward Stage 2: Inference Start] ------------------
@@ -180,20 +181,20 @@ public class App {
         // ------------------ [Forward Stage 2: Inference End] ------------------
 
         // ------------------ [Forward Stage 3: Pull Start] ------------------
-        for (Map.Entry<String, String> entry : info.getOutputOrVarOpName2PullJobNameMap().entrySet()) {
-            byte[] res = InferenceSession.runPullJob(entry.getValue(), entry.getKey());
-            ByteBuffer byteBuffer = ByteBuffer.wrap(res);
-            byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-            FloatBuffer floatBuffer = byteBuffer.asFloatBuffer();
-            floatBuffer.rewind();
-            float[] pred = new float[floatBuffer.limit()];
-            floatBuffer.rewind();
-            floatBuffer.get(pred);
-            for (float x : pred) {
-                System.out.print(x + " ");
+        long curTime = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            for (Map.Entry<String, String> entry : info.getOutputOrVarOpName2PullJobNameMap().entrySet()) {
+                Tensor res = InferenceSession.runPullJob(entry.getValue(), entry.getKey());
+//                float[] pred = res.getDataAsFloatArray();
+//                for (float x : pred) {
+//                    System.out.print(x + " ");
+//                }
+//                System.out.println();
             }
-            System.out.println();
         }
+        System.out.printf("It takes %d ms to forward %d times%n",
+                System.currentTimeMillis() - curTime,
+                5);
         // ------------------ [Forward Stage 3: Pull End] ------------------
 
         // ------------------ [Clean Stage Start] ------------------
@@ -202,7 +203,6 @@ public class App {
         InferenceSession.destroyEnv();
         InferenceSession.setShuttingDown();
         // ------------------ [Clean Stage End] ------------------
-
     }
 
     public static void doEnvInit(int port) {
@@ -241,7 +241,9 @@ public class App {
     }
 }
 
-// some deleted code
+// Todo: some deleted code, do we need to set device tag to "gpu"?
+// line: 294 ~ 303, it doesn't  do that, so we don't need to
+//
 //            System.out.println(conf.toString());
 //            OpConf.OperatorConf.Builder builder = OperatorConf.newBuilder();
 //            builder.setName(conf.getName());
