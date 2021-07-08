@@ -16,14 +16,13 @@ public abstract class Tensor {
     // --------------------------- Constructor Methods ---------------------------
 
     public static Tensor fromBlob(int[] data, long[] shape) {
-        // Todo: replace Integer.BYTES using enum DType
-        final IntBuffer intBuffer = IntBuffer.allocate(data.length * Integer.BYTES);
+        final IntBuffer intBuffer = IntBuffer.allocate(data.length * DType.kInt32.bytes);
         intBuffer.put(data);
         return new IntTensor(shape, intBuffer);
     }
 
     public static Tensor fromBlob(float[] data, long[] shape) {
-        final FloatBuffer floatBuffer = FloatBuffer.allocate(data.length * Float.BYTES);
+        final FloatBuffer floatBuffer = FloatBuffer.allocate(data.length * DType.kFloat.bytes);
         floatBuffer.put(data);
         return new FloatTensor(shape, floatBuffer);
     }
@@ -50,14 +49,18 @@ public abstract class Tensor {
                 " cannot return data as float array");
     }
 
+    /**
+     * This function will be called from native code, so when the function
+     * signature changed, you need to changed the native code too
+     */
     public static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
         Tensor tensor = null;
         ByteBuffer byteBuffer = ByteBuffer.wrap(data);
 
-        if (2 == dType) {
+        if (DType.kFloat.code == dType) {
             tensor = new FloatTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asFloatBuffer());
         }
-        else if (5 == dType) {
+        else if (DType.kInt32.code == dType) {
             tensor = new IntTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asIntBuffer());
         }
 

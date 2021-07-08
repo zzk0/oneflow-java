@@ -18,7 +18,7 @@ public class FloatTensor extends Tensor {
 
     @Override
     public DType getDataType() {
-        return DType.FLOAT;
+        return DType.kFloat;
     }
 
     @Override
@@ -36,9 +36,9 @@ public class FloatTensor extends Tensor {
 
     @Override
     public byte[] getBytes() {
-        ByteBuffer byteBuffer = ByteBuffer.allocate(data.capacity() * Float.BYTES);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(data.capacity() * DType.kFloat.bytes);
         data.rewind();
-        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);  // Todo: to support different platform
         byteBuffer.asFloatBuffer().put(data);
         return byteBuffer.array();
     }

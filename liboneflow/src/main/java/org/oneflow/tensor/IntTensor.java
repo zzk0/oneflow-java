@@ -18,7 +18,7 @@ public class IntTensor extends Tensor {
 
     @Override
     public DType getDataType() {
-        return DType.INT;
+        return DType.kInt32;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class IntTensor extends Tensor {
 
     @Override
     public byte[] getBytes() {
-        ByteBuffer byteBuffer = ByteBuffer.allocate(data.capacity() * Integer.BYTES);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(data.capacity() * DType.kInt32.bytes);
         data.rewind();
         byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
         byteBuffer.asIntBuffer().put(data);

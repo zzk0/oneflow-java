@@ -29,35 +29,6 @@ import java.util.Map;
  */
 public class App {
     public static void main(String[] args) {
-//        InferenceSession session = new InferenceSession();
-//        session.open();
-//        session.loadSavedModel("./models/1/");
-//        session.launch();
-//
-//        // input
-//        float[] image = readImage("./7.png");
-//        Tensor tensor = Tensor.fromBlob(new int[]{ 0 }, new long[]{ 1 }, DType.INT);
-//        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 28, 28 }, DType.FLOAT);
-//        Map<String, Tensor> tensors = new HashMap<>();
-//        tensors.put("Input_14", imageTensor);
-//        tensors.put("Input_15", tensor);
-//
-//        // forward
-//        Tensor[] result = session.run("mlp_inference", tensors);
-//        Tensor prediction = result[0];
-//        float[] vector = prediction.getFloatData();
-//
-//        // close
-//        // session.close();
-//
-//        // assert
-//        assert (10 == vector.length);
-//        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
-//                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
-//        float delta = 0.0001f;
-//        for (int i = 0; i < 10; i++) {
-//            assert (Math.abs(expectedVector[i] - vector[i]) < delta);
-//        }
         // ------------------ [User Configuration Start] ------------------
         String jobName = "mlp_inference";
         String savedModelDir = "./models";
@@ -65,7 +36,7 @@ public class App {
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
         Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
         Map<String, Tensor> tensorMap = new HashMap<>();
-        tensorMap.put("Input_14", imageTensor);
+        tensorMap.put("Input_14", imageTensor);  // Todo: support different signature
         tensorMap.put("Input_15", tagTensor);
         // ------------------ [User Configuration End] ------------------
 
@@ -267,3 +238,35 @@ public class App {
 //            }
 //
 //            Library.curJobAddOp(builder.build().toString());
+
+// Todo: new interface
+//
+//        InferenceSession session = new InferenceSession();
+//        session.open();
+//        session.loadSavedModel("./models/1/");
+//        session.launch();
+//
+//        // input
+//        float[] image = readImage("./7.png");
+//        Tensor tensor = Tensor.fromBlob(new int[]{ 0 }, new long[]{ 1 }, DType.INT);
+//        Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 28, 28 }, DType.FLOAT);
+//        Map<String, Tensor> tensors = new HashMap<>();
+//        tensors.put("Input_14", imageTensor);
+//        tensors.put("Input_15", tensor);
+//
+//        // forward
+//        Tensor[] result = session.run("mlp_inference", tensors);
+//        Tensor prediction = result[0];
+//        float[] vector = prediction.getFloatData();
+//
+//        // close
+//        // session.close();
+//
+//        // assert
+//        assert (10 == vector.length);
+//        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
+//                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
+//        float delta = 0.0001f;
+//        for (int i = 0; i < 10; i++) {
+//            assert (Math.abs(expectedVector[i] - vector[i]) < delta);
+//        }

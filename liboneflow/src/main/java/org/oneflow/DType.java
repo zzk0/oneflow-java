@@ -1,24 +1,23 @@
 package org.oneflow;
 
 public enum DType {
-    BOOL(10),
-    UINT8(11),
-    INT8(12),
-    INT(13),
-    INT32(14),
-    INT64(15),
-    LONG(16),
+    kInvalidDataType(0, -1),
+    kChar(1, 1),
+    kFloat(2, 4),
+    kDouble(3, 8),
+    kInt8(4, 1),
+    kInt32(5, 4),
+    kInt64(6, 8),
+    kUInt8(7, 1),
+    kOFRecord(8, -1),
+    kFloat16(9, 2),
+    kTensorBuffer(10, -1);
 
-    FLOAT16(20),
-    HALF(21),
-    FLOAT(22),
-    FLOAT32(23),
-    FLOAT64(24),
-    DOUBLE(25);
+    public final int code;
+    public final int bytes;
 
-    final int code;
-
-    DType(int code) {
+    DType(int code, int bytes) {
         this.code = code;
+        this.bytes = bytes;
     }
 }
