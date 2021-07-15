@@ -1,5 +1,8 @@
 package org.oneflow;
 
+/**
+ * Reference: oneflow/core/common/data_type.proto
+ */
 public enum DType {
     kInvalidDataType(0, -1),
     kChar(1, 1),
