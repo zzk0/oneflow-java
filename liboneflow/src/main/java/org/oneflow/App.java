@@ -77,12 +77,3 @@ public class App {
         return pixels;
     }
 }
-
-//        // assert
-//        assert (10 == vector.length);
-//        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
-//                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
-//        float delta = 0.0001f;
-//        for (int i = 0; i < 10; i++) {
-//            assert (Math.abs(expectedVector[i] - vector[i]) < delta);
-//        }
