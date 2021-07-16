@@ -46,13 +46,13 @@ public class InferenceSession {
         // 1, env init
         if (!InferenceSession.isEnvInited()) {
             doEnvInit(this.port);
+
+            // 2, scope init
+            InferenceSession.initScopeStack();
         }
         if (!InferenceSession.isEnvInited()) {
             throw new InitializationException("Env is not inited correctly");
         }
-
-        // 2, scope init
-        InferenceSession.initScopeStack();
 
         // 3, session init
         if (!InferenceSession.isSessionInited()) {
