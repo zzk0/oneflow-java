@@ -5,7 +5,7 @@
     <groupId>org.oneflow</groupId>
     <artifactId>liboneflow</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0-Dev</version>
+    <version>1.0.0-alpha</version>
     <name>liboneflow</name>
 
     <url>http://maven.apache.org</url>
