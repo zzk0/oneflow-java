@@ -6,11 +6,11 @@
 
 # 使用指南
 
-为了使用 OneFlow 的 Java 版本，你进行一些配置。
+为了使用 OneFlow 的 Java 版本，你需要进行一些配置。
 
 ## 构建 liboneflow.so
 
-下载 oneflow 源码，并且切换到 liboneflow_java 分支，接着执行命令以构建。
+下载 oneflow 源码，并且切换到 liboneflow_java 分支，接着执行命令以构建。步骤如下。
 
 **clone 我的源码**
 
@@ -52,7 +52,7 @@ export LD_LIBRARY_PATH="{path}/oneflow/build/oneflow/api/java:$LD_LIBRARY_PATH"
 
 ## 使用 Java 版本的 OneFlow
 
-从 Github 上面下载 (release)[https://github.com/zzk0/oneflow-java/releases/download/v1.0.0-alpha/liboneflow-1.0.0-alpha.zip]
+从 Github 上面下载 [release](https://github.com/zzk0/oneflow-java/releases/download/v1.0.0-alpha/liboneflow-1.0.0-alpha.zip)
 
 解压，里面有一个 jar 包。这个 jar 包依赖了 `com.google.protobuf` 使用的时候，也需要引入。下面给出 Maven 中的使用办法。
 
