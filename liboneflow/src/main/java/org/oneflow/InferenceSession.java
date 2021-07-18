@@ -15,6 +15,9 @@ import org.oneflow.util.ConfigConst;
 
 import java.io.*;
 import java.nio.Buffer;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.LongBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -124,7 +127,10 @@ public class InferenceSession {
         }
 
         this.interUserJobInfo = info;
-        InferenceSession.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointPath.getBytes());
+        byte[] checkpointBytes = checkpointPath.getBytes();
+        ByteBuffer checkpointBuffer = ByteBuffer.allocateDirect(checkpointBytes.length);
+        checkpointBuffer.put(checkpointBytes);
+        InferenceSession.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointBuffer);
     }
 
     public Map<String, Tensor> run(String jobName, Map<String, Tensor> tensorMap) {
@@ -133,7 +139,8 @@ public class InferenceSession {
         for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
             Tensor tensor = tensorMap.get(entry.getKey());
             Buffer dataBuffer = tensor.getDataBuffer();
-            InferenceSession.runSinglePushJob(dataBuffer, tensor.getShape(),
+
+            InferenceSession.runSinglePushJob(dataBuffer, tensor.getShapeBuffer(),
                     tensor.getDataType().code, entry.getValue(), entry.getKey());
         }
 
@@ -190,11 +197,11 @@ public class InferenceSession {
 
     // launch
     public static native void startLazyGlobalSession();
-    public static native void loadCheckpoint(String jobName, byte[] path);
+    public static native void loadCheckpoint(String jobName, Buffer path);
 
     // forward
     public static native void runSinglePushJob(Buffer data,
-                                               long[] shape,
+                                               Buffer shape,
                                                int dTypeCode,
                                                String jobName,
                                                String opName);

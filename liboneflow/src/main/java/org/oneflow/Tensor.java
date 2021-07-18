@@ -33,6 +33,18 @@ public abstract class Tensor {
         return shape;
     }
 
+    /**
+     * The byte order will depend on host machine, for x86, it will be little endian
+     * @return specifically It is a DirectBuffer
+     */
+    public Buffer getShapeBuffer() {
+        LongBuffer buffer = ByteBuffer.allocateDirect(shape.length * Long.BYTES)
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .asLongBuffer();
+        buffer.put(shape);
+        return buffer;
+    }
+
     public abstract DType getDataType();
 
     public abstract Buffer getDataBuffer();

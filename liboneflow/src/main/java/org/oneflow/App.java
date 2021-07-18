@@ -33,6 +33,20 @@ public class App {
             }
             System.out.println();
         }
+
+        int forwardTimes = 10000;
+        long curTime = System.currentTimeMillis();
+        for (int i = 0; i < forwardTimes; i++) {
+            resultMap = inferenceSession.run(jobName, tensorMap);
+            for (Map.Entry<String, Tensor> entry : resultMap.entrySet()) {
+                Tensor resTensor = entry.getValue();
+                resTensor.getDataAsFloatArray();
+            }
+        }
+        System.out.printf("It takes %fs to forward %d times",
+                (System.currentTimeMillis() - curTime) / 1000.0f,
+                forwardTimes);
+
         inferenceSession.close();
 
         // assert
