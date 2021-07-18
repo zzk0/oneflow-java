@@ -13,21 +13,21 @@ public abstract class Tensor {
         this.shape = shape;
     }
 
-    // --------------------------- Constructor Methods ---------------------------
-
     public static Tensor fromBlob(int[] data, long[] shape) {
-        final IntBuffer intBuffer = IntBuffer.allocate(data.length * DType.kInt32.bytes);
+        final IntBuffer intBuffer = ByteBuffer.allocate(data.length * DType.kInt32.bytes)
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .asIntBuffer();
         intBuffer.put(data);
         return new IntTensor(shape, intBuffer);
     }
 
     public static Tensor fromBlob(float[] data, long[] shape) {
-        final FloatBuffer floatBuffer = FloatBuffer.allocate(data.length * DType.kFloat.bytes);
+        final FloatBuffer floatBuffer = ByteBuffer.allocate(data.length * DType.kFloat.bytes)
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .asFloatBuffer();
         floatBuffer.put(data);
         return new FloatTensor(shape, floatBuffer);
     }
-
-    // --------------------------- Get Information ---------------------------
 
     public long[] getShape() {
         return shape;
@@ -35,18 +35,41 @@ public abstract class Tensor {
 
     public abstract DType getDataType();
 
-    public abstract Buffer getRawDataBuffer();
+    public abstract Buffer getDataBuffer();
 
-    public abstract byte[] getBytes();
+    public boolean[] getDataAsBooleanArray() {
+        throw new IllegalStateException(getClass().getSimpleName() +
+                " cannot return data as boolean array");
+    }
+
+    public byte[] getDataAsByteArray() {
+        throw new IllegalStateException(getClass().getSimpleName() +
+                " cannot return data as byte array");
+    }
+
+    public short[] getDataAsShortArray() {
+        throw new IllegalStateException(getClass().getSimpleName() +
+                " cannot return data as short array");
+    }
 
     public int[] getDataAsIntArray() {
         throw new IllegalStateException(getClass().getSimpleName() +
                 " cannot return data as int array");
     }
 
-    public float[] getDataAsFloatArray(){
+    public long[] getDataAsLongArray() {
+        throw new IllegalStateException(getClass().getSimpleName() +
+                " cannot return data as long array");
+    }
+
+    public float[] getDataAsFloatArray() {
         throw new IllegalStateException(getClass().getSimpleName() +
                 " cannot return data as float array");
+    }
+
+    public double[] getDataAsDoubleArray() {
+        throw new IllegalStateException(getClass().getSimpleName() +
+                " cannot return data as double array");
     }
 
     /**
