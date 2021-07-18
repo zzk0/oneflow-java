@@ -14,7 +14,7 @@ public abstract class Tensor {
     }
 
     public static Tensor fromBlob(int[] data, long[] shape) {
-        final IntBuffer intBuffer = ByteBuffer.allocate(data.length * DType.kInt32.bytes)
+        final IntBuffer intBuffer = ByteBuffer.allocateDirect(data.length * DType.kInt32.bytes)
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .asIntBuffer();
         intBuffer.put(data);
@@ -22,7 +22,7 @@ public abstract class Tensor {
     }
 
     public static Tensor fromBlob(float[] data, long[] shape) {
-        final FloatBuffer floatBuffer = ByteBuffer.allocate(data.length * DType.kFloat.bytes)
+        final FloatBuffer floatBuffer = ByteBuffer.allocateDirect(data.length * DType.kFloat.bytes)
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .asFloatBuffer();
         floatBuffer.put(data);

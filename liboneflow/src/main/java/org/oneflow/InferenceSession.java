@@ -14,6 +14,7 @@ import org.oneflow.exception.InitializationException;
 import org.oneflow.util.ConfigConst;
 
 import java.io.*;
+import java.nio.Buffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -131,8 +132,8 @@ public class InferenceSession {
         Map<String, String> inputNameToJobName = interUserJobInfo.getInputOrVarOpName2PushJobNameMap();
         for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
             Tensor tensor = tensorMap.get(entry.getKey());
-            byte[] tensorBytes = tensor.getBytes();
-            InferenceSession.runSinglePushJob(tensorBytes, tensor.getShape(),
+            Buffer dataBuffer = tensor.getDataBuffer();
+            InferenceSession.runSinglePushJob(dataBuffer, tensor.getShape(),
                     tensor.getDataType().code, entry.getValue(), entry.getKey());
         }
 
@@ -192,7 +193,7 @@ public class InferenceSession {
     public static native void loadCheckpoint(String jobName, byte[] path);
 
     // forward
-    public static native void runSinglePushJob(byte[] data,
+    public static native void runSinglePushJob(Buffer data,
                                                long[] shape,
                                                int dTypeCode,
                                                String jobName,
