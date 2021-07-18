@@ -102,7 +102,7 @@ mvn install:install-file -DgroupId=org.oneflow -DartifactId=liboneflow -Dversion
 
 OneFlow 版本 0.3.5。
 
-在 4.0.0 版本中，有些类和接口发生了改变，构建直接失败了。比如，`foreign_job_instance` 已经被重构成 callback 和 watcher。对于这个问题，目前没有什么比较好的解决办法，只能是多多跟进。
+在 4.0.0 版本中，有些类和接口发生了改变，构建直接失败了。比如，`foreign_job_instance` 改了个名字。对于这个问题，目前没有什么比较好的解决办法，只能是多多跟进。
 
 # 其他
 
