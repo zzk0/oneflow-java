@@ -34,7 +34,7 @@ public class App {
             System.out.println();
         }
 
-        int forwardTimes = 10000;
+        int forwardTimes = 1000;
         long curTime = System.currentTimeMillis();
         for (int i = 0; i < forwardTimes; i++) {
             resultMap = inferenceSession.run(jobName, tensorMap);
@@ -43,7 +43,7 @@ public class App {
                 resTensor.getDataAsFloatArray();
             }
         }
-        System.out.printf("It takes %fs to forward %d times",
+        System.out.printf("It takes %fs to forward %d times\n",
                 (System.currentTimeMillis() - curTime) / 1000.0f,
                 forwardTimes);
 

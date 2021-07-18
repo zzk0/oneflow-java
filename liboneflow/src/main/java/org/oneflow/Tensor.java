@@ -6,7 +6,14 @@ import org.oneflow.tensor.IntTensor;
 
 import java.nio.*;
 
+/**
+ * Some fields and methods that I don't want user to set them or call them,
+ * and I need to set them or call them in other classes, how can I make it?
+ * e.g. endian and getShapeBuffer
+ */
 public abstract class Tensor {
+    public static ByteOrder endian = ByteOrder.LITTLE_ENDIAN;
+
     private final long[] shape;
 
     protected Tensor(long[] shape) {
@@ -15,7 +22,7 @@ public abstract class Tensor {
 
     public static Tensor fromBlob(int[] data, long[] shape) {
         final IntBuffer intBuffer = ByteBuffer.allocateDirect(data.length * DType.kInt32.bytes)
-                .order(ByteOrder.LITTLE_ENDIAN)
+                .order(Tensor.endian)
                 .asIntBuffer();
         intBuffer.put(data);
         return new IntTensor(shape, intBuffer);
@@ -23,7 +30,7 @@ public abstract class Tensor {
 
     public static Tensor fromBlob(float[] data, long[] shape) {
         final FloatBuffer floatBuffer = ByteBuffer.allocateDirect(data.length * DType.kFloat.bytes)
-                .order(ByteOrder.LITTLE_ENDIAN)
+                .order(Tensor.endian)
                 .asFloatBuffer();
         floatBuffer.put(data);
         return new FloatTensor(shape, floatBuffer);
@@ -39,7 +46,7 @@ public abstract class Tensor {
      */
     public Buffer getShapeBuffer() {
         LongBuffer buffer = ByteBuffer.allocateDirect(shape.length * Long.BYTES)
-                .order(ByteOrder.LITTLE_ENDIAN)
+                .order(endian)
                 .asLongBuffer();
         buffer.put(shape);
         return buffer;
@@ -93,10 +100,10 @@ public abstract class Tensor {
         ByteBuffer byteBuffer = ByteBuffer.wrap(data);
 
         if (DType.kFloat.code == dType) {
-            tensor = new FloatTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asFloatBuffer());
+            tensor = new FloatTensor(shape, byteBuffer.order(endian).asFloatBuffer());
         }
         else if (DType.kInt32.code == dType) {
-            tensor = new IntTensor(shape, byteBuffer.order(ByteOrder.LITTLE_ENDIAN).asIntBuffer());
+            tensor = new IntTensor(shape, byteBuffer.order(endian).asIntBuffer());
         }
 
         return tensor;

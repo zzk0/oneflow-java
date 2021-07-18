@@ -29,6 +29,9 @@ public class InferenceSession {
 
         // Default Initialization: beyond import oneflow as flow
         InferenceSession.initDefaultSession();
+        if (getEndian() == 0) {
+            Tensor.endian = ByteOrder.BIG_ENDIAN;
+        }
     }
 
     private final int port;
@@ -175,45 +178,46 @@ public class InferenceSession {
         InferenceSession.initEnv(envProto.toString());
     }
 
-    // The methods below will be private in future
+    // 0 for big endian, 1 for little endian
+    private static native int getEndian();
 
     // init
-    public static native void initDefaultSession();
-    public static native boolean isEnvInited();
-    public static native void initEnv(String envProto);
-    public static native void initScopeStack();
-    public static native boolean isSessionInited();
-    public static native void initSession();
+    private static native void initDefaultSession();
+    private static native boolean isEnvInited();
+    private static native void initEnv(String envProto);
+    private static native void initScopeStack();
+    private static native boolean isSessionInited();
+    private static native void initSession();
 
     // compile
-    public static native void openJobBuildAndInferCtx(String jobName);
-    public static native void setJobConfForCurJobBuildAndInferCtx(String jobConfProto);
-    public static native void setScopeForCurJob(String jobConfProto);
-    public static native void curJobAddOp(String opConfProto);
-    public static native void completeCurJobBuildAndInferCtx();
-    public static native void rebuildCurJobBuildAndInferCtx();
-    public static native void unsetScopeForCurJob();
-    public static native void closeJobBuildAndInferCtx();
+    private static native void openJobBuildAndInferCtx(String jobName);
+    private static native void setJobConfForCurJobBuildAndInferCtx(String jobConfProto);
+    private static native void setScopeForCurJob(String jobConfProto);
+    private static native void curJobAddOp(String opConfProto);
+    private static native void completeCurJobBuildAndInferCtx();
+    private static native void rebuildCurJobBuildAndInferCtx();
+    private static native void unsetScopeForCurJob();
+    private static native void closeJobBuildAndInferCtx();
 
     // launch
-    public static native void startLazyGlobalSession();
-    public static native void loadCheckpoint(String jobName, Buffer path);
+    private static native void startLazyGlobalSession();
+    private static native void loadCheckpoint(String jobName, Buffer path);
 
     // forward
-    public static native void runSinglePushJob(Buffer data,
+    private static native void runSinglePushJob(Buffer data,
                                                Buffer shape,
                                                int dTypeCode,
                                                String jobName,
                                                String opName);
-    public static native void runInferenceJob(String jobName);
-    public static native Tensor runPullJob(String jobName, String opName);
+    private static native void runInferenceJob(String jobName);
+    private static native Tensor runPullJob(String jobName, String opName);
 
     // clean
-    public static native void stopLazyGlobalSession();
-    public static native void destroyLazyGlobalSession();
-    public static native void destroyEnv();
-    public static native void setShuttingDown();
+    private static native void stopLazyGlobalSession();
+    private static native void destroyLazyGlobalSession();
+    private static native void destroyEnv();
+    private static native void setShuttingDown();
 
     // others
-    public static native String getInterUserJobInfo();
+    private static native String getInterUserJobInfo();
 }
