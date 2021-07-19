@@ -7,6 +7,7 @@ import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
 import org.oneflow.core.job.JobSetOuterClass.ConfigProto;
+import org.oneflow.core.job.ResourceOuterClass;
 import org.oneflow.core.operator.OpConf.OperatorConf;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
@@ -66,7 +67,16 @@ public class InferenceSession {
 
         // 3, session init
         if (!InferenceSession.isSessionInited()) {
-            InferenceSession.initSession();
+            ConfigProto configProto = ConfigProto.newBuilder()
+                    .setResource(ResourceOuterClass.Resource.newBuilder()
+                            .setMachineNum(1)
+                            .setGpuDeviceNum(1)
+                            .setEnableLegacyModelIo(true)
+                            .build())
+                    .setSessionId(0)
+                    .build();
+
+            InferenceSession.initSession(configProto.toString());
         }
         if (!InferenceSession.isSessionInited()) {
             throw new InitializationException("Session is not inited correctly");
@@ -191,7 +201,7 @@ public class InferenceSession {
     private static native void initEnv(String envProto);
     private static native void initScopeStack();
     private static native boolean isSessionInited();
-    private static native void initSession();
+    private static native void initSession(String configProto);
 
     // compile
     private static native void openJobBuildAndInferCtx(String jobName);
