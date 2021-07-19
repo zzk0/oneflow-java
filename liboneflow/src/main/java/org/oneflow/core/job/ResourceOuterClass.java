@@ -2896,15 +2896,6 @@ public final class ResourceOuterClass {
     long getReservedDeviceMemMbyte();
 
     /**
-     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-     */
-    boolean hasEnableNumaAwareCudaMallocHost();
-    /**
-     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-     */
-    boolean getEnableNumaAwareCudaMallocHost();
-
-    /**
      * <code>optional int32 compute_thread_pool_size = 15;</code>
      */
     boolean hasComputeThreadPoolSize();
@@ -2958,19 +2949,6 @@ public final class ResourceOuterClass {
     boolean getEnableDebugMode();
 
     /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    boolean hasCollectiveBoxingConf();
-    /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf();
-    /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder();
-
-    /**
      * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
      */
     boolean hasEnableTensorFloat32Compute();
@@ -2987,6 +2965,19 @@ public final class ResourceOuterClass {
      * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
      */
     boolean getEnableMemChainMerge();
+
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    boolean hasCollectiveBoxingConf();
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf();
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder();
 
     /**
      * <pre>
@@ -3026,6 +3017,32 @@ public final class ResourceOuterClass {
      * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
      */
     org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder getCudnnConfOrBuilder();
+
+    /**
+     * <pre>
+     * io_conf
+     * </pre>
+     *
+     * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+     */
+    boolean hasEnableModelIoV2();
+    /**
+     * <pre>
+     * io_conf
+     * </pre>
+     *
+     * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+     */
+    boolean getEnableModelIoV2();
+
+    /**
+     * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+     */
+    boolean hasEnableLegacyModelIo();
+    /**
+     * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+     */
+    boolean getEnableLegacyModelIo();
   }
   /**
    * Protobuf type {@code oneflow.Resource}
@@ -3049,7 +3066,6 @@ public final class ResourceOuterClass {
       rdmaRecvMsgBufMbyte_ = 6L;
       reservedHostMemMbyte_ = 500L;
       reservedDeviceMemMbyte_ = 500L;
-      enableNumaAwareCudaMallocHost_ = false;
       computeThreadPoolSize_ = 0;
       threadEnableLocalMessageQueue_ = false;
       enableThreadLocalCache_ = true;
@@ -3059,6 +3075,8 @@ public final class ResourceOuterClass {
       enableMemChainMerge_ = true;
       ncclUseComputeStream_ = false;
       disableGroupBoxingByDstParallel_ = false;
+      enableModelIoV2_ = false;
+      enableLegacyModelIo_ = false;
     }
 
     @java.lang.Override
@@ -3139,34 +3157,29 @@ public final class ResourceOuterClass {
               reservedDeviceMemMbyte_ = input.readUInt64();
               break;
             }
-            case 112: {
-              bitField0_ |= 0x00000400;
-              enableNumaAwareCudaMallocHost_ = input.readBool();
-              break;
-            }
             case 120: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               computeThreadPoolSize_ = input.readInt32();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00001000;
               enableThreadLocalCache_ = input.readBool();
               break;
             }
             case 136: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               threadLocalCacheMaxSize_ = input.readInt64();
               break;
             }
             case 144: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00004000;
               enableDebugMode_ = input.readBool();
               break;
             }
             case 154: {
               org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder subBuilder = null;
-              if (((bitField0_ & 0x00010000) == 0x00010000)) {
+              if (((bitField0_ & 0x00020000) == 0x00020000)) {
                 subBuilder = collectiveBoxingConf_.toBuilder();
               }
               collectiveBoxingConf_ = input.readMessage(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.PARSER, extensionRegistry);
@@ -3174,32 +3187,32 @@ public final class ResourceOuterClass {
                 subBuilder.mergeFrom(collectiveBoxingConf_);
                 collectiveBoxingConf_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             }
             case 160: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00008000;
               enableTensorFloat32Compute_ = input.readBool();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00010000;
               enableMemChainMerge_ = input.readBool();
               break;
             }
             case 240: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00040000;
               ncclUseComputeStream_ = input.readBool();
               break;
             }
             case 248: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00080000;
               disableGroupBoxingByDstParallel_ = input.readBool();
               break;
             }
             case 258: {
               org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder subBuilder = null;
-              if (((bitField0_ & 0x00200000) == 0x00200000)) {
+              if (((bitField0_ & 0x00100000) == 0x00100000)) {
                 subBuilder = cudnnConf_.toBuilder();
               }
               cudnnConf_ = input.readMessage(org.oneflow.core.job.ResourceOuterClass.CudnnConfig.PARSER, extensionRegistry);
@@ -3207,11 +3220,21 @@ public final class ResourceOuterClass {
                 subBuilder.mergeFrom(cudnnConf_);
                 cudnnConf_ = subBuilder.buildPartial();
               }
+              bitField0_ |= 0x00100000;
+              break;
+            }
+            case 328: {
               bitField0_ |= 0x00200000;
+              enableModelIoV2_ = input.readBool();
+              break;
+            }
+            case 336: {
+              bitField0_ |= 0x00400000;
+              enableLegacyModelIo_ = input.readBool();
               break;
             }
             case 824: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               threadEnableLocalMessageQueue_ = input.readBool();
               break;
             }
@@ -3390,28 +3413,13 @@ public final class ResourceOuterClass {
       return reservedDeviceMemMbyte_;
     }
 
-    public static final int ENABLE_NUMA_AWARE_CUDA_MALLOC_HOST_FIELD_NUMBER = 14;
-    private boolean enableNumaAwareCudaMallocHost_;
-    /**
-     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-     */
-    public boolean hasEnableNumaAwareCudaMallocHost() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-     */
-    public boolean getEnableNumaAwareCudaMallocHost() {
-      return enableNumaAwareCudaMallocHost_;
-    }
-
     public static final int COMPUTE_THREAD_POOL_SIZE_FIELD_NUMBER = 15;
     private int computeThreadPoolSize_;
     /**
      * <code>optional int32 compute_thread_pool_size = 15;</code>
      */
     public boolean hasComputeThreadPoolSize() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>optional int32 compute_thread_pool_size = 15;</code>
@@ -3426,7 +3434,7 @@ public final class ResourceOuterClass {
      * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
      */
     public boolean hasThreadEnableLocalMessageQueue() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
@@ -3441,7 +3449,7 @@ public final class ResourceOuterClass {
      * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
      */
     public boolean hasEnableThreadLocalCache() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
@@ -3460,7 +3468,7 @@ public final class ResourceOuterClass {
      * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
      */
     public boolean hasThreadLocalCacheMaxSize() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <pre>
@@ -3479,7 +3487,7 @@ public final class ResourceOuterClass {
      * <code>optional bool enable_debug_mode = 18 [default = false];</code>
      */
     public boolean hasEnableDebugMode() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>optional bool enable_debug_mode = 18 [default = false];</code>
@@ -3488,34 +3496,13 @@ public final class ResourceOuterClass {
       return enableDebugMode_;
     }
 
-    public static final int COLLECTIVE_BOXING_CONF_FIELD_NUMBER = 19;
-    private org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf collectiveBoxingConf_;
-    /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    public boolean hasCollectiveBoxingConf() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
-    }
-    /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf() {
-      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
-    }
-    /**
-     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
-     */
-    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder() {
-      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
-    }
-
     public static final int ENABLE_TENSOR_FLOAT_32_COMPUTE_FIELD_NUMBER = 20;
     private boolean enableTensorFloat32Compute_;
     /**
      * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
      */
     public boolean hasEnableTensorFloat32Compute() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
+      return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
      * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
@@ -3530,13 +3517,34 @@ public final class ResourceOuterClass {
      * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
      */
     public boolean hasEnableMemChainMerge() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
      * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
      */
     public boolean getEnableMemChainMerge() {
       return enableMemChainMerge_;
+    }
+
+    public static final int COLLECTIVE_BOXING_CONF_FIELD_NUMBER = 19;
+    private org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf collectiveBoxingConf_;
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public boolean hasCollectiveBoxingConf() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf getCollectiveBoxingConf() {
+      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
+    }
+    /**
+     * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
+     */
+    public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConfOrBuilder getCollectiveBoxingConfOrBuilder() {
+      return collectiveBoxingConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance() : collectiveBoxingConf_;
     }
 
     public static final int NCCL_USE_COMPUTE_STREAM_FIELD_NUMBER = 30;
@@ -3549,7 +3557,7 @@ public final class ResourceOuterClass {
      * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
      */
     public boolean hasNcclUseComputeStream() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <pre>
@@ -3568,7 +3576,7 @@ public final class ResourceOuterClass {
      * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
      */
     public boolean hasDisableGroupBoxingByDstParallel() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
@@ -3583,7 +3591,7 @@ public final class ResourceOuterClass {
      * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
      */
     public boolean hasCudnnConf() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
@@ -3596,6 +3604,44 @@ public final class ResourceOuterClass {
      */
     public org.oneflow.core.job.ResourceOuterClass.CudnnConfigOrBuilder getCudnnConfOrBuilder() {
       return cudnnConf_ == null ? org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance() : cudnnConf_;
+    }
+
+    public static final int ENABLE_MODEL_IO_V2_FIELD_NUMBER = 41;
+    private boolean enableModelIoV2_;
+    /**
+     * <pre>
+     * io_conf
+     * </pre>
+     *
+     * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+     */
+    public boolean hasEnableModelIoV2() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <pre>
+     * io_conf
+     * </pre>
+     *
+     * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+     */
+    public boolean getEnableModelIoV2() {
+      return enableModelIoV2_;
+    }
+
+    public static final int ENABLE_LEGACY_MODEL_IO_FIELD_NUMBER = 42;
+    private boolean enableLegacyModelIo_;
+    /**
+     * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+     */
+    public boolean hasEnableLegacyModelIo() {
+      return ((bitField0_ & 0x00400000) == 0x00400000);
+    }
+    /**
+     * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+     */
+    public boolean getEnableLegacyModelIo() {
+      return enableLegacyModelIo_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3641,39 +3687,42 @@ public final class ResourceOuterClass {
         output.writeUInt64(13, reservedDeviceMemMbyte_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeBool(14, enableNumaAwareCudaMallocHost_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(15, computeThreadPoolSize_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeBool(16, enableThreadLocalCache_);
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeInt64(17, threadLocalCacheMaxSize_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeBool(18, enableDebugMode_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeMessage(19, getCollectiveBoxingConf());
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeBool(20, enableTensorFloat32Compute_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeBool(21, enableMemChainMerge_);
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeBool(30, ncclUseComputeStream_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeBool(31, disableGroupBoxingByDstParallel_);
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeMessage(32, getCudnnConf());
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeBool(41, enableModelIoV2_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        output.writeBool(42, enableLegacyModelIo_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBool(103, threadEnableLocalMessageQueue_);
       }
       unknownFields.writeTo(output);
@@ -3726,49 +3775,53 @@ public final class ResourceOuterClass {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, enableNumaAwareCudaMallocHost_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(15, computeThreadPoolSize_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, enableThreadLocalCache_);
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(17, threadLocalCacheMaxSize_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, enableDebugMode_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getCollectiveBoxingConf());
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(20, enableTensorFloat32Compute_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(21, enableMemChainMerge_);
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(30, ncclUseComputeStream_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(31, disableGroupBoxingByDstParallel_);
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32, getCudnnConf());
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(41, enableModelIoV2_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(42, enableLegacyModelIo_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(103, threadEnableLocalMessageQueue_);
       }
@@ -3839,11 +3892,6 @@ public final class ResourceOuterClass {
         result = result && (getReservedDeviceMemMbyte()
             == other.getReservedDeviceMemMbyte());
       }
-      result = result && (hasEnableNumaAwareCudaMallocHost() == other.hasEnableNumaAwareCudaMallocHost());
-      if (hasEnableNumaAwareCudaMallocHost()) {
-        result = result && (getEnableNumaAwareCudaMallocHost()
-            == other.getEnableNumaAwareCudaMallocHost());
-      }
       result = result && (hasComputeThreadPoolSize() == other.hasComputeThreadPoolSize());
       if (hasComputeThreadPoolSize()) {
         result = result && (getComputeThreadPoolSize()
@@ -3869,11 +3917,6 @@ public final class ResourceOuterClass {
         result = result && (getEnableDebugMode()
             == other.getEnableDebugMode());
       }
-      result = result && (hasCollectiveBoxingConf() == other.hasCollectiveBoxingConf());
-      if (hasCollectiveBoxingConf()) {
-        result = result && getCollectiveBoxingConf()
-            .equals(other.getCollectiveBoxingConf());
-      }
       result = result && (hasEnableTensorFloat32Compute() == other.hasEnableTensorFloat32Compute());
       if (hasEnableTensorFloat32Compute()) {
         result = result && (getEnableTensorFloat32Compute()
@@ -3883,6 +3926,11 @@ public final class ResourceOuterClass {
       if (hasEnableMemChainMerge()) {
         result = result && (getEnableMemChainMerge()
             == other.getEnableMemChainMerge());
+      }
+      result = result && (hasCollectiveBoxingConf() == other.hasCollectiveBoxingConf());
+      if (hasCollectiveBoxingConf()) {
+        result = result && getCollectiveBoxingConf()
+            .equals(other.getCollectiveBoxingConf());
       }
       result = result && (hasNcclUseComputeStream() == other.hasNcclUseComputeStream());
       if (hasNcclUseComputeStream()) {
@@ -3898,6 +3946,16 @@ public final class ResourceOuterClass {
       if (hasCudnnConf()) {
         result = result && getCudnnConf()
             .equals(other.getCudnnConf());
+      }
+      result = result && (hasEnableModelIoV2() == other.hasEnableModelIoV2());
+      if (hasEnableModelIoV2()) {
+        result = result && (getEnableModelIoV2()
+            == other.getEnableModelIoV2());
+      }
+      result = result && (hasEnableLegacyModelIo() == other.hasEnableLegacyModelIo());
+      if (hasEnableLegacyModelIo()) {
+        result = result && (getEnableLegacyModelIo()
+            == other.getEnableLegacyModelIo());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -3955,11 +4013,6 @@ public final class ResourceOuterClass {
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getReservedDeviceMemMbyte());
       }
-      if (hasEnableNumaAwareCudaMallocHost()) {
-        hash = (37 * hash) + ENABLE_NUMA_AWARE_CUDA_MALLOC_HOST_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getEnableNumaAwareCudaMallocHost());
-      }
       if (hasComputeThreadPoolSize()) {
         hash = (37 * hash) + COMPUTE_THREAD_POOL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getComputeThreadPoolSize();
@@ -3984,10 +4037,6 @@ public final class ResourceOuterClass {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getEnableDebugMode());
       }
-      if (hasCollectiveBoxingConf()) {
-        hash = (37 * hash) + COLLECTIVE_BOXING_CONF_FIELD_NUMBER;
-        hash = (53 * hash) + getCollectiveBoxingConf().hashCode();
-      }
       if (hasEnableTensorFloat32Compute()) {
         hash = (37 * hash) + ENABLE_TENSOR_FLOAT_32_COMPUTE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -3997,6 +4046,10 @@ public final class ResourceOuterClass {
         hash = (37 * hash) + ENABLE_MEM_CHAIN_MERGE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getEnableMemChainMerge());
+      }
+      if (hasCollectiveBoxingConf()) {
+        hash = (37 * hash) + COLLECTIVE_BOXING_CONF_FIELD_NUMBER;
+        hash = (53 * hash) + getCollectiveBoxingConf().hashCode();
       }
       if (hasNcclUseComputeStream()) {
         hash = (37 * hash) + NCCL_USE_COMPUTE_STREAM_FIELD_NUMBER;
@@ -4011,6 +4064,16 @@ public final class ResourceOuterClass {
       if (hasCudnnConf()) {
         hash = (37 * hash) + CUDNN_CONF_FIELD_NUMBER;
         hash = (53 * hash) + getCudnnConf().hashCode();
+      }
+      if (hasEnableModelIoV2()) {
+        hash = (37 * hash) + ENABLE_MODEL_IO_V2_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableModelIoV2());
+      }
+      if (hasEnableLegacyModelIo()) {
+        hash = (37 * hash) + ENABLE_LEGACY_MODEL_IO_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnableLegacyModelIo());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4152,38 +4215,40 @@ public final class ResourceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000100);
         reservedDeviceMemMbyte_ = 500L;
         bitField0_ = (bitField0_ & ~0x00000200);
-        enableNumaAwareCudaMallocHost_ = false;
-        bitField0_ = (bitField0_ & ~0x00000400);
         computeThreadPoolSize_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         threadEnableLocalMessageQueue_ = false;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         enableThreadLocalCache_ = true;
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         threadLocalCacheMaxSize_ = 67108864L;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         enableDebugMode_ = false;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        enableTensorFloat32Compute_ = true;
         bitField0_ = (bitField0_ & ~0x00008000);
+        enableMemChainMerge_ = true;
+        bitField0_ = (bitField0_ & ~0x00010000);
         if (collectiveBoxingConfBuilder_ == null) {
           collectiveBoxingConf_ = null;
         } else {
           collectiveBoxingConfBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
-        enableTensorFloat32Compute_ = true;
         bitField0_ = (bitField0_ & ~0x00020000);
-        enableMemChainMerge_ = true;
-        bitField0_ = (bitField0_ & ~0x00040000);
         ncclUseComputeStream_ = false;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         disableGroupBoxingByDstParallel_ = false;
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         if (cudnnConfBuilder_ == null) {
           cudnnConf_ = null;
         } else {
           cudnnConfBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00100000);
+        enableModelIoV2_ = false;
         bitField0_ = (bitField0_ & ~0x00200000);
+        enableLegacyModelIo_ = false;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -4251,59 +4316,63 @@ public final class ResourceOuterClass {
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.enableNumaAwareCudaMallocHost_ = enableNumaAwareCudaMallocHost_;
+        result.computeThreadPoolSize_ = computeThreadPoolSize_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.computeThreadPoolSize_ = computeThreadPoolSize_;
+        result.threadEnableLocalMessageQueue_ = threadEnableLocalMessageQueue_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.threadEnableLocalMessageQueue_ = threadEnableLocalMessageQueue_;
+        result.enableThreadLocalCache_ = enableThreadLocalCache_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.enableThreadLocalCache_ = enableThreadLocalCache_;
+        result.threadLocalCacheMaxSize_ = threadLocalCacheMaxSize_;
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.threadLocalCacheMaxSize_ = threadLocalCacheMaxSize_;
+        result.enableDebugMode_ = enableDebugMode_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00008000;
         }
-        result.enableDebugMode_ = enableDebugMode_;
+        result.enableTensorFloat32Compute_ = enableTensorFloat32Compute_;
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00010000;
+        }
+        result.enableMemChainMerge_ = enableMemChainMerge_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
         }
         if (collectiveBoxingConfBuilder_ == null) {
           result.collectiveBoxingConf_ = collectiveBoxingConf_;
         } else {
           result.collectiveBoxingConf_ = collectiveBoxingConfBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
-          to_bitField0_ |= 0x00020000;
-        }
-        result.enableTensorFloat32Compute_ = enableTensorFloat32Compute_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00040000;
         }
-        result.enableMemChainMerge_ = enableMemChainMerge_;
+        result.ncclUseComputeStream_ = ncclUseComputeStream_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.ncclUseComputeStream_ = ncclUseComputeStream_;
+        result.disableGroupBoxingByDstParallel_ = disableGroupBoxingByDstParallel_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
-        }
-        result.disableGroupBoxingByDstParallel_ = disableGroupBoxingByDstParallel_;
-        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
-          to_bitField0_ |= 0x00200000;
         }
         if (cudnnConfBuilder_ == null) {
           result.cudnnConf_ = cudnnConf_;
         } else {
           result.cudnnConf_ = cudnnConfBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        result.enableModelIoV2_ = enableModelIoV2_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00400000;
+        }
+        result.enableLegacyModelIo_ = enableLegacyModelIo_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4376,9 +4445,6 @@ public final class ResourceOuterClass {
         if (other.hasReservedDeviceMemMbyte()) {
           setReservedDeviceMemMbyte(other.getReservedDeviceMemMbyte());
         }
-        if (other.hasEnableNumaAwareCudaMallocHost()) {
-          setEnableNumaAwareCudaMallocHost(other.getEnableNumaAwareCudaMallocHost());
-        }
         if (other.hasComputeThreadPoolSize()) {
           setComputeThreadPoolSize(other.getComputeThreadPoolSize());
         }
@@ -4394,14 +4460,14 @@ public final class ResourceOuterClass {
         if (other.hasEnableDebugMode()) {
           setEnableDebugMode(other.getEnableDebugMode());
         }
-        if (other.hasCollectiveBoxingConf()) {
-          mergeCollectiveBoxingConf(other.getCollectiveBoxingConf());
-        }
         if (other.hasEnableTensorFloat32Compute()) {
           setEnableTensorFloat32Compute(other.getEnableTensorFloat32Compute());
         }
         if (other.hasEnableMemChainMerge()) {
           setEnableMemChainMerge(other.getEnableMemChainMerge());
+        }
+        if (other.hasCollectiveBoxingConf()) {
+          mergeCollectiveBoxingConf(other.getCollectiveBoxingConf());
         }
         if (other.hasNcclUseComputeStream()) {
           setNcclUseComputeStream(other.getNcclUseComputeStream());
@@ -4411,6 +4477,12 @@ public final class ResourceOuterClass {
         }
         if (other.hasCudnnConf()) {
           mergeCudnnConf(other.getCudnnConf());
+        }
+        if (other.hasEnableModelIoV2()) {
+          setEnableModelIoV2(other.getEnableModelIoV2());
+        }
+        if (other.hasEnableLegacyModelIo()) {
+          setEnableLegacyModelIo(other.getEnableLegacyModelIo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4760,44 +4832,12 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private boolean enableNumaAwareCudaMallocHost_ ;
-      /**
-       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-       */
-      public boolean hasEnableNumaAwareCudaMallocHost() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
-      }
-      /**
-       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-       */
-      public boolean getEnableNumaAwareCudaMallocHost() {
-        return enableNumaAwareCudaMallocHost_;
-      }
-      /**
-       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-       */
-      public Builder setEnableNumaAwareCudaMallocHost(boolean value) {
-        bitField0_ |= 0x00000400;
-        enableNumaAwareCudaMallocHost_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool enable_numa_aware_cuda_malloc_host = 14 [default = false];</code>
-       */
-      public Builder clearEnableNumaAwareCudaMallocHost() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        enableNumaAwareCudaMallocHost_ = false;
-        onChanged();
-        return this;
-      }
-
       private int computeThreadPoolSize_ ;
       /**
        * <code>optional int32 compute_thread_pool_size = 15;</code>
        */
       public boolean hasComputeThreadPoolSize() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional int32 compute_thread_pool_size = 15;</code>
@@ -4809,7 +4849,7 @@ public final class ResourceOuterClass {
        * <code>optional int32 compute_thread_pool_size = 15;</code>
        */
       public Builder setComputeThreadPoolSize(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         computeThreadPoolSize_ = value;
         onChanged();
         return this;
@@ -4818,7 +4858,7 @@ public final class ResourceOuterClass {
        * <code>optional int32 compute_thread_pool_size = 15;</code>
        */
       public Builder clearComputeThreadPoolSize() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         computeThreadPoolSize_ = 0;
         onChanged();
         return this;
@@ -4829,7 +4869,7 @@ public final class ResourceOuterClass {
        * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
        */
       public boolean hasThreadEnableLocalMessageQueue() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
@@ -4841,7 +4881,7 @@ public final class ResourceOuterClass {
        * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
        */
       public Builder setThreadEnableLocalMessageQueue(boolean value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         threadEnableLocalMessageQueue_ = value;
         onChanged();
         return this;
@@ -4850,7 +4890,7 @@ public final class ResourceOuterClass {
        * <code>optional bool thread_enable_local_message_queue = 103 [default = false];</code>
        */
       public Builder clearThreadEnableLocalMessageQueue() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         threadEnableLocalMessageQueue_ = false;
         onChanged();
         return this;
@@ -4861,7 +4901,7 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
        */
       public boolean hasEnableThreadLocalCache() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
@@ -4873,7 +4913,7 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
        */
       public Builder setEnableThreadLocalCache(boolean value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
         enableThreadLocalCache_ = value;
         onChanged();
         return this;
@@ -4882,7 +4922,7 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_thread_local_cache = 16 [default = true];</code>
        */
       public Builder clearEnableThreadLocalCache() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         enableThreadLocalCache_ = true;
         onChanged();
         return this;
@@ -4897,7 +4937,7 @@ public final class ResourceOuterClass {
        * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
        */
       public boolean hasThreadLocalCacheMaxSize() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <pre>
@@ -4917,7 +4957,7 @@ public final class ResourceOuterClass {
        * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
        */
       public Builder setThreadLocalCacheMaxSize(long value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00002000;
         threadLocalCacheMaxSize_ = value;
         onChanged();
         return this;
@@ -4930,7 +4970,7 @@ public final class ResourceOuterClass {
        * <code>optional int64 thread_local_cache_max_size = 17 [default = 67108864];</code>
        */
       public Builder clearThreadLocalCacheMaxSize() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         threadLocalCacheMaxSize_ = 67108864L;
         onChanged();
         return this;
@@ -4941,7 +4981,7 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_debug_mode = 18 [default = false];</code>
        */
       public boolean hasEnableDebugMode() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional bool enable_debug_mode = 18 [default = false];</code>
@@ -4953,7 +4993,7 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_debug_mode = 18 [default = false];</code>
        */
       public Builder setEnableDebugMode(boolean value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00004000;
         enableDebugMode_ = value;
         onChanged();
         return this;
@@ -4962,8 +5002,72 @@ public final class ResourceOuterClass {
        * <code>optional bool enable_debug_mode = 18 [default = false];</code>
        */
       public Builder clearEnableDebugMode() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         enableDebugMode_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableTensorFloat32Compute_ = true;
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public boolean hasEnableTensorFloat32Compute() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public boolean getEnableTensorFloat32Compute() {
+        return enableTensorFloat32Compute_;
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public Builder setEnableTensorFloat32Compute(boolean value) {
+        bitField0_ |= 0x00008000;
+        enableTensorFloat32Compute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
+       */
+      public Builder clearEnableTensorFloat32Compute() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        enableTensorFloat32Compute_ = true;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableMemChainMerge_ = true;
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public boolean hasEnableMemChainMerge() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public boolean getEnableMemChainMerge() {
+        return enableMemChainMerge_;
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public Builder setEnableMemChainMerge(boolean value) {
+        bitField0_ |= 0x00010000;
+        enableMemChainMerge_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
+       */
+      public Builder clearEnableMemChainMerge() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        enableMemChainMerge_ = true;
         onChanged();
         return this;
       }
@@ -4975,7 +5079,7 @@ public final class ResourceOuterClass {
        * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
        */
       public boolean hasCollectiveBoxingConf() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
@@ -5000,7 +5104,7 @@ public final class ResourceOuterClass {
         } else {
           collectiveBoxingConfBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -5014,7 +5118,7 @@ public final class ResourceOuterClass {
         } else {
           collectiveBoxingConfBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -5022,7 +5126,7 @@ public final class ResourceOuterClass {
        */
       public Builder mergeCollectiveBoxingConf(org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf value) {
         if (collectiveBoxingConfBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000) &&
+          if (((bitField0_ & 0x00020000) == 0x00020000) &&
               collectiveBoxingConf_ != null &&
               collectiveBoxingConf_ != org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.getDefaultInstance()) {
             collectiveBoxingConf_ =
@@ -5034,7 +5138,7 @@ public final class ResourceOuterClass {
         } else {
           collectiveBoxingConfBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -5047,14 +5151,14 @@ public final class ResourceOuterClass {
         } else {
           collectiveBoxingConfBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
       /**
        * <code>optional .oneflow.CollectiveBoxingConf collective_boxing_conf = 19;</code>
        */
       public org.oneflow.core.job.ResourceOuterClass.CollectiveBoxingConf.Builder getCollectiveBoxingConfBuilder() {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return getCollectiveBoxingConfFieldBuilder().getBuilder();
       }
@@ -5086,70 +5190,6 @@ public final class ResourceOuterClass {
         return collectiveBoxingConfBuilder_;
       }
 
-      private boolean enableTensorFloat32Compute_ = true;
-      /**
-       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
-       */
-      public boolean hasEnableTensorFloat32Compute() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
-      }
-      /**
-       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
-       */
-      public boolean getEnableTensorFloat32Compute() {
-        return enableTensorFloat32Compute_;
-      }
-      /**
-       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
-       */
-      public Builder setEnableTensorFloat32Compute(boolean value) {
-        bitField0_ |= 0x00020000;
-        enableTensorFloat32Compute_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool enable_tensor_float_32_compute = 20 [default = true];</code>
-       */
-      public Builder clearEnableTensorFloat32Compute() {
-        bitField0_ = (bitField0_ & ~0x00020000);
-        enableTensorFloat32Compute_ = true;
-        onChanged();
-        return this;
-      }
-
-      private boolean enableMemChainMerge_ = true;
-      /**
-       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
-       */
-      public boolean hasEnableMemChainMerge() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
-      }
-      /**
-       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
-       */
-      public boolean getEnableMemChainMerge() {
-        return enableMemChainMerge_;
-      }
-      /**
-       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
-       */
-      public Builder setEnableMemChainMerge(boolean value) {
-        bitField0_ |= 0x00040000;
-        enableMemChainMerge_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool enable_mem_chain_merge = 21 [default = true];</code>
-       */
-      public Builder clearEnableMemChainMerge() {
-        bitField0_ = (bitField0_ & ~0x00040000);
-        enableMemChainMerge_ = true;
-        onChanged();
-        return this;
-      }
-
       private boolean ncclUseComputeStream_ ;
       /**
        * <pre>
@@ -5159,7 +5199,7 @@ public final class ResourceOuterClass {
        * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
        */
       public boolean hasNcclUseComputeStream() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <pre>
@@ -5179,7 +5219,7 @@ public final class ResourceOuterClass {
        * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
        */
       public Builder setNcclUseComputeStream(boolean value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         ncclUseComputeStream_ = value;
         onChanged();
         return this;
@@ -5192,7 +5232,7 @@ public final class ResourceOuterClass {
        * <code>optional bool nccl_use_compute_stream = 30 [default = false];</code>
        */
       public Builder clearNcclUseComputeStream() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         ncclUseComputeStream_ = false;
         onChanged();
         return this;
@@ -5203,7 +5243,7 @@ public final class ResourceOuterClass {
        * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
        */
       public boolean hasDisableGroupBoxingByDstParallel() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
@@ -5215,7 +5255,7 @@ public final class ResourceOuterClass {
        * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
        */
       public Builder setDisableGroupBoxingByDstParallel(boolean value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         disableGroupBoxingByDstParallel_ = value;
         onChanged();
         return this;
@@ -5224,7 +5264,7 @@ public final class ResourceOuterClass {
        * <code>optional bool disable_group_boxing_by_dst_parallel = 31 [default = false];</code>
        */
       public Builder clearDisableGroupBoxingByDstParallel() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         disableGroupBoxingByDstParallel_ = false;
         onChanged();
         return this;
@@ -5237,7 +5277,7 @@ public final class ResourceOuterClass {
        * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
        */
       public boolean hasCudnnConf() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
@@ -5262,7 +5302,7 @@ public final class ResourceOuterClass {
         } else {
           cudnnConfBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         return this;
       }
       /**
@@ -5276,7 +5316,7 @@ public final class ResourceOuterClass {
         } else {
           cudnnConfBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         return this;
       }
       /**
@@ -5284,7 +5324,7 @@ public final class ResourceOuterClass {
        */
       public Builder mergeCudnnConf(org.oneflow.core.job.ResourceOuterClass.CudnnConfig value) {
         if (cudnnConfBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000) &&
+          if (((bitField0_ & 0x00100000) == 0x00100000) &&
               cudnnConf_ != null &&
               cudnnConf_ != org.oneflow.core.job.ResourceOuterClass.CudnnConfig.getDefaultInstance()) {
             cudnnConf_ =
@@ -5296,7 +5336,7 @@ public final class ResourceOuterClass {
         } else {
           cudnnConfBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         return this;
       }
       /**
@@ -5309,14 +5349,14 @@ public final class ResourceOuterClass {
         } else {
           cudnnConfBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
       /**
        * <code>optional .oneflow.CudnnConfig cudnn_conf = 32;</code>
        */
       public org.oneflow.core.job.ResourceOuterClass.CudnnConfig.Builder getCudnnConfBuilder() {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return getCudnnConfFieldBuilder().getBuilder();
       }
@@ -5346,6 +5386,86 @@ public final class ResourceOuterClass {
           cudnnConf_ = null;
         }
         return cudnnConfBuilder_;
+      }
+
+      private boolean enableModelIoV2_ ;
+      /**
+       * <pre>
+       * io_conf
+       * </pre>
+       *
+       * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+       */
+      public boolean hasEnableModelIoV2() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <pre>
+       * io_conf
+       * </pre>
+       *
+       * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+       */
+      public boolean getEnableModelIoV2() {
+        return enableModelIoV2_;
+      }
+      /**
+       * <pre>
+       * io_conf
+       * </pre>
+       *
+       * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+       */
+      public Builder setEnableModelIoV2(boolean value) {
+        bitField0_ |= 0x00200000;
+        enableModelIoV2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * io_conf
+       * </pre>
+       *
+       * <code>optional bool enable_model_io_v2 = 41 [default = false];</code>
+       */
+      public Builder clearEnableModelIoV2() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        enableModelIoV2_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableLegacyModelIo_ ;
+      /**
+       * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+       */
+      public boolean hasEnableLegacyModelIo() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+       */
+      public boolean getEnableLegacyModelIo() {
+        return enableLegacyModelIo_;
+      }
+      /**
+       * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+       */
+      public Builder setEnableLegacyModelIo(boolean value) {
+        bitField0_ |= 0x00400000;
+        enableLegacyModelIo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable_legacy_model_io = 42 [default = false];</code>
+       */
+      public Builder clearEnableLegacyModelIo() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        enableLegacyModelIo_ = false;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5444,7 +5564,7 @@ public final class ResourceOuterClass {
       "udnn_conv_use_deterministic_algo_only\030\007 " +
       "\001(\010:\005false\0221\n)enable_cudnn_fused_normali" +
       "zation_add_relu\030\010 \001(\010\022+\n\035cudnn_conv_enab" +
-      "le_pseudo_half\030\t \001(\010:\004true\"\342\006\n\010Resource\022" +
+      "le_pseudo_half\030\t \001(\010:\004true\"\371\006\n\010Resource\022" +
       "\026\n\013machine_num\030\001 \001(\005:\0010\022\031\n\016gpu_device_nu" +
       "m\030\004 \001(\005:\0010\022\031\n\016cpu_device_num\030\005 \001(\005:\0010\022\036\n" +
       "\023comm_net_worker_num\030\006 \001(\005:\0014\022!\n\025max_mds" +
@@ -5452,22 +5572,22 @@ public final class ResourceOuterClass {
       "(\010:\005false\022\037\n\024rdma_mem_block_mbyte\030\t \001(\004:",
       "\0018\022\"\n\027rdma_recv_msg_buf_mbyte\030\n \001(\004:\0016\022$" +
       "\n\027reserved_host_mem_mbyte\030\014 \001(\004:\003500\022&\n\031" +
-      "reserved_device_mem_mbyte\030\r \001(\004:\003500\0221\n\"" +
-      "enable_numa_aware_cuda_malloc_host\030\016 \001(\010" +
-      ":\005false\022 \n\030compute_thread_pool_size\030\017 \001(" +
-      "\005\0220\n!thread_enable_local_message_queue\030g" +
-      " \001(\010:\005false\022\'\n\031enable_thread_local_cache" +
-      "\030\020 \001(\010:\004true\022-\n\033thread_local_cache_max_s" +
-      "ize\030\021 \001(\003:\01067108864\022 \n\021enable_debug_mode" +
-      "\030\022 \001(\010:\005false\022=\n\026collective_boxing_conf\030",
-      "\023 \001(\0132\035.oneflow.CollectiveBoxingConf\022,\n\036" +
-      "enable_tensor_float_32_compute\030\024 \001(\010:\004tr" +
-      "ue\022$\n\026enable_mem_chain_merge\030\025 \001(\010:\004true" +
-      "\022&\n\027nccl_use_compute_stream\030\036 \001(\010:\005false" +
-      "\0223\n$disable_group_boxing_by_dst_parallel" +
-      "\030\037 \001(\010:\005false\022(\n\ncudnn_conf\030  \001(\0132\024.onef" +
-      "low.CudnnConfigB\026\n\024org.oneflow.core.jobP" +
-      "\000"
+      "reserved_device_mem_mbyte\030\r \001(\004:\003500\022 \n\030" +
+      "compute_thread_pool_size\030\017 \001(\005\0220\n!thread" +
+      "_enable_local_message_queue\030g \001(\010:\005false" +
+      "\022\'\n\031enable_thread_local_cache\030\020 \001(\010:\004tru" +
+      "e\022-\n\033thread_local_cache_max_size\030\021 \001(\003:\010" +
+      "67108864\022 \n\021enable_debug_mode\030\022 \001(\010:\005fal" +
+      "se\022,\n\036enable_tensor_float_32_compute\030\024 \001" +
+      "(\010:\004true\022$\n\026enable_mem_chain_merge\030\025 \001(\010",
+      ":\004true\022=\n\026collective_boxing_conf\030\023 \001(\0132\035" +
+      ".oneflow.CollectiveBoxingConf\022&\n\027nccl_us" +
+      "e_compute_stream\030\036 \001(\010:\005false\0223\n$disable" +
+      "_group_boxing_by_dst_parallel\030\037 \001(\010:\005fal" +
+      "se\022(\n\ncudnn_conf\030  \001(\0132\024.oneflow.CudnnCo" +
+      "nfig\022!\n\022enable_model_io_v2\030) \001(\010:\005false\022" +
+      "%\n\026enable_legacy_model_io\030* \001(\010:\005falseB\026" +
+      "\n\024org.oneflow.core.jobP\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5499,7 +5619,7 @@ public final class ResourceOuterClass {
     internal_static_oneflow_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_Resource_descriptor,
-        new java.lang.String[] { "MachineNum", "GpuDeviceNum", "CpuDeviceNum", "CommNetWorkerNum", "MaxMdsaveWorkerNum", "UseRdma", "RdmaMemBlockMbyte", "RdmaRecvMsgBufMbyte", "ReservedHostMemMbyte", "ReservedDeviceMemMbyte", "EnableNumaAwareCudaMallocHost", "ComputeThreadPoolSize", "ThreadEnableLocalMessageQueue", "EnableThreadLocalCache", "ThreadLocalCacheMaxSize", "EnableDebugMode", "CollectiveBoxingConf", "EnableTensorFloat32Compute", "EnableMemChainMerge", "NcclUseComputeStream", "DisableGroupBoxingByDstParallel", "CudnnConf", });
+        new java.lang.String[] { "MachineNum", "GpuDeviceNum", "CpuDeviceNum", "CommNetWorkerNum", "MaxMdsaveWorkerNum", "UseRdma", "RdmaMemBlockMbyte", "RdmaRecvMsgBufMbyte", "ReservedHostMemMbyte", "ReservedDeviceMemMbyte", "ComputeThreadPoolSize", "ThreadEnableLocalMessageQueue", "EnableThreadLocalCache", "ThreadLocalCacheMaxSize", "EnableDebugMode", "EnableTensorFloat32Compute", "EnableMemChainMerge", "CollectiveBoxingConf", "NcclUseComputeStream", "DisableGroupBoxingByDstParallel", "CudnnConf", "EnableModelIoV2", "EnableLegacyModelIo", });
     org.oneflow.core.common.DeviceTypeOuterClass.getDescriptor();
   }
 

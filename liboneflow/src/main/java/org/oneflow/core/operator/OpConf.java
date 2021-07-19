@@ -10286,6 +10286,2223 @@ public final class OpConf {
 
   }
 
+  public interface FeedInputOpConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FeedInputOpConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    boolean hasIn0();
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    java.lang.String getIn0();
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIn0Bytes();
+
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    boolean hasOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    java.lang.String getOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getOut0Bytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.FeedInputOpConf}
+   */
+  public  static final class FeedInputOpConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FeedInputOpConf)
+      FeedInputOpConfOrBuilder {
+    // Use FeedInputOpConf.newBuilder() to construct.
+    private FeedInputOpConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedInputOpConf() {
+      in0_ = "";
+      out0_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedInputOpConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              in0_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              out0_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedInputOpConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedInputOpConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.operator.OpConf.FeedInputOpConf.class, org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IN_0_FIELD_NUMBER = 1;
+    private volatile java.lang.Object in0_;
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    public boolean hasIn0() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    public java.lang.String getIn0() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          in0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+     * </pre>
+     *
+     * <code>required string in_0 = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIn0Bytes() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        in0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUT_0_FIELD_NUMBER = 2;
+    private volatile java.lang.Object out0_;
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public boolean hasOut0() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public java.lang.String getOut0() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          out0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOut0Bytes() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        out0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIn0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOut0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, out0_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, out0_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.operator.OpConf.FeedInputOpConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.operator.OpConf.FeedInputOpConf other = (org.oneflow.core.operator.OpConf.FeedInputOpConf) obj;
+
+      boolean result = true;
+      result = result && (hasIn0() == other.hasIn0());
+      if (hasIn0()) {
+        result = result && getIn0()
+            .equals(other.getIn0());
+      }
+      result = result && (hasOut0() == other.hasOut0());
+      if (hasOut0()) {
+        result = result && getOut0()
+            .equals(other.getOut0());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasIn0()) {
+        hash = (37 * hash) + IN_0_FIELD_NUMBER;
+        hash = (53 * hash) + getIn0().hashCode();
+      }
+      if (hasOut0()) {
+        hash = (37 * hash) + OUT_0_FIELD_NUMBER;
+        hash = (53 * hash) + getOut0().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.operator.OpConf.FeedInputOpConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FeedInputOpConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FeedInputOpConf)
+        org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedInputOpConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedInputOpConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.operator.OpConf.FeedInputOpConf.class, org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.operator.OpConf.FeedInputOpConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        in0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        out0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedInputOpConf_descriptor;
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedInputOpConf getDefaultInstanceForType() {
+        return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedInputOpConf build() {
+        org.oneflow.core.operator.OpConf.FeedInputOpConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedInputOpConf buildPartial() {
+        org.oneflow.core.operator.OpConf.FeedInputOpConf result = new org.oneflow.core.operator.OpConf.FeedInputOpConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.in0_ = in0_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.out0_ = out0_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.operator.OpConf.FeedInputOpConf) {
+          return mergeFrom((org.oneflow.core.operator.OpConf.FeedInputOpConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.operator.OpConf.FeedInputOpConf other) {
+        if (other == org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance()) return this;
+        if (other.hasIn0()) {
+          bitField0_ |= 0x00000001;
+          in0_ = other.in0_;
+          onChanged();
+        }
+        if (other.hasOut0()) {
+          bitField0_ |= 0x00000002;
+          out0_ = other.out0_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIn0()) {
+          return false;
+        }
+        if (!hasOut0()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.operator.OpConf.FeedInputOpConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.operator.OpConf.FeedInputOpConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object in0_ = "";
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public boolean hasIn0() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public java.lang.String getIn0() {
+        java.lang.Object ref = in0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            in0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIn0Bytes() {
+        java.lang.Object ref = in0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          in0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder clearIn0() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        in0_ = getDefaultInstance().getIn0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): define in/out key as UserOp ibn/obn.
+       * </pre>
+       *
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object out0_ = "";
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public boolean hasOut0() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public java.lang.String getOut0() {
+        java.lang.Object ref = out0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            out0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOut0Bytes() {
+        java.lang.Object ref = out0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          out0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder clearOut0() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        out0_ = getDefaultInstance().getOut0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FeedInputOpConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FeedInputOpConf)
+    private static final org.oneflow.core.operator.OpConf.FeedInputOpConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.operator.OpConf.FeedInputOpConf();
+    }
+
+    public static org.oneflow.core.operator.OpConf.FeedInputOpConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FeedInputOpConf>
+        PARSER = new com.google.protobuf.AbstractParser<FeedInputOpConf>() {
+      public FeedInputOpConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FeedInputOpConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedInputOpConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedInputOpConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.operator.OpConf.FeedInputOpConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedVariableOpConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FeedVariableOpConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    boolean hasIn0();
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    java.lang.String getIn0();
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIn0Bytes();
+
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    boolean hasOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    java.lang.String getOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getOut0Bytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.FeedVariableOpConf}
+   */
+  public  static final class FeedVariableOpConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FeedVariableOpConf)
+      FeedVariableOpConfOrBuilder {
+    // Use FeedVariableOpConf.newBuilder() to construct.
+    private FeedVariableOpConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedVariableOpConf() {
+      in0_ = "";
+      out0_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedVariableOpConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              in0_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              out0_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedVariableOpConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedVariableOpConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.operator.OpConf.FeedVariableOpConf.class, org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IN_0_FIELD_NUMBER = 1;
+    private volatile java.lang.Object in0_;
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public boolean hasIn0() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public java.lang.String getIn0() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          in0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIn0Bytes() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        in0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUT_0_FIELD_NUMBER = 2;
+    private volatile java.lang.Object out0_;
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public boolean hasOut0() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public java.lang.String getOut0() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          out0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOut0Bytes() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        out0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIn0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOut0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, out0_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, out0_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.operator.OpConf.FeedVariableOpConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.operator.OpConf.FeedVariableOpConf other = (org.oneflow.core.operator.OpConf.FeedVariableOpConf) obj;
+
+      boolean result = true;
+      result = result && (hasIn0() == other.hasIn0());
+      if (hasIn0()) {
+        result = result && getIn0()
+            .equals(other.getIn0());
+      }
+      result = result && (hasOut0() == other.hasOut0());
+      if (hasOut0()) {
+        result = result && getOut0()
+            .equals(other.getOut0());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasIn0()) {
+        hash = (37 * hash) + IN_0_FIELD_NUMBER;
+        hash = (53 * hash) + getIn0().hashCode();
+      }
+      if (hasOut0()) {
+        hash = (37 * hash) + OUT_0_FIELD_NUMBER;
+        hash = (53 * hash) + getOut0().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.operator.OpConf.FeedVariableOpConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FeedVariableOpConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FeedVariableOpConf)
+        org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedVariableOpConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedVariableOpConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.operator.OpConf.FeedVariableOpConf.class, org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.operator.OpConf.FeedVariableOpConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        in0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        out0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FeedVariableOpConf_descriptor;
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConf getDefaultInstanceForType() {
+        return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConf build() {
+        org.oneflow.core.operator.OpConf.FeedVariableOpConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConf buildPartial() {
+        org.oneflow.core.operator.OpConf.FeedVariableOpConf result = new org.oneflow.core.operator.OpConf.FeedVariableOpConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.in0_ = in0_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.out0_ = out0_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.operator.OpConf.FeedVariableOpConf) {
+          return mergeFrom((org.oneflow.core.operator.OpConf.FeedVariableOpConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.operator.OpConf.FeedVariableOpConf other) {
+        if (other == org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance()) return this;
+        if (other.hasIn0()) {
+          bitField0_ |= 0x00000001;
+          in0_ = other.in0_;
+          onChanged();
+        }
+        if (other.hasOut0()) {
+          bitField0_ |= 0x00000002;
+          out0_ = other.out0_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIn0()) {
+          return false;
+        }
+        if (!hasOut0()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.operator.OpConf.FeedVariableOpConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.operator.OpConf.FeedVariableOpConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object in0_ = "";
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public boolean hasIn0() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public java.lang.String getIn0() {
+        java.lang.Object ref = in0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            in0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIn0Bytes() {
+        java.lang.Object ref = in0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          in0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder clearIn0() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        in0_ = getDefaultInstance().getIn0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object out0_ = "";
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public boolean hasOut0() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public java.lang.String getOut0() {
+        java.lang.Object ref = out0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            out0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOut0Bytes() {
+        java.lang.Object ref = out0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          out0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder clearOut0() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        out0_ = getDefaultInstance().getOut0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FeedVariableOpConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FeedVariableOpConf)
+    private static final org.oneflow.core.operator.OpConf.FeedVariableOpConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.operator.OpConf.FeedVariableOpConf();
+    }
+
+    public static org.oneflow.core.operator.OpConf.FeedVariableOpConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FeedVariableOpConf>
+        PARSER = new com.google.protobuf.AbstractParser<FeedVariableOpConf>() {
+      public FeedVariableOpConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FeedVariableOpConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedVariableOpConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedVariableOpConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.operator.OpConf.FeedVariableOpConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FetchOutputOpConfOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.FetchOutputOpConf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    boolean hasIn0();
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    java.lang.String getIn0();
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIn0Bytes();
+
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    boolean hasOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    java.lang.String getOut0();
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getOut0Bytes();
+  }
+  /**
+   * Protobuf type {@code oneflow.FetchOutputOpConf}
+   */
+  public  static final class FetchOutputOpConf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.FetchOutputOpConf)
+      FetchOutputOpConfOrBuilder {
+    // Use FetchOutputOpConf.newBuilder() to construct.
+    private FetchOutputOpConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FetchOutputOpConf() {
+      in0_ = "";
+      out0_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FetchOutputOpConf(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              in0_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              out0_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FetchOutputOpConf_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.operator.OpConf.internal_static_oneflow_FetchOutputOpConf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.operator.OpConf.FetchOutputOpConf.class, org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IN_0_FIELD_NUMBER = 1;
+    private volatile java.lang.Object in0_;
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public boolean hasIn0() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public java.lang.String getIn0() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          in0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string in_0 = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIn0Bytes() {
+      java.lang.Object ref = in0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        in0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUT_0_FIELD_NUMBER = 2;
+    private volatile java.lang.Object out0_;
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public boolean hasOut0() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public java.lang.String getOut0() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          out0_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string out_0 = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOut0Bytes() {
+      java.lang.Object ref = out0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        out0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIn0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasOut0()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, out0_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, in0_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, out0_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.operator.OpConf.FetchOutputOpConf)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.operator.OpConf.FetchOutputOpConf other = (org.oneflow.core.operator.OpConf.FetchOutputOpConf) obj;
+
+      boolean result = true;
+      result = result && (hasIn0() == other.hasIn0());
+      if (hasIn0()) {
+        result = result && getIn0()
+            .equals(other.getIn0());
+      }
+      result = result && (hasOut0() == other.hasOut0());
+      if (hasOut0()) {
+        result = result && getOut0()
+            .equals(other.getOut0());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasIn0()) {
+        hash = (37 * hash) + IN_0_FIELD_NUMBER;
+        hash = (53 * hash) + getIn0().hashCode();
+      }
+      if (hasOut0()) {
+        hash = (37 * hash) + OUT_0_FIELD_NUMBER;
+        hash = (53 * hash) + getOut0().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.operator.OpConf.FetchOutputOpConf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.FetchOutputOpConf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.FetchOutputOpConf)
+        org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FetchOutputOpConf_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FetchOutputOpConf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.operator.OpConf.FetchOutputOpConf.class, org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.operator.OpConf.FetchOutputOpConf.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        in0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        out0_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.operator.OpConf.internal_static_oneflow_FetchOutputOpConf_descriptor;
+      }
+
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConf getDefaultInstanceForType() {
+        return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+      }
+
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConf build() {
+        org.oneflow.core.operator.OpConf.FetchOutputOpConf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConf buildPartial() {
+        org.oneflow.core.operator.OpConf.FetchOutputOpConf result = new org.oneflow.core.operator.OpConf.FetchOutputOpConf(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.in0_ = in0_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.out0_ = out0_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.operator.OpConf.FetchOutputOpConf) {
+          return mergeFrom((org.oneflow.core.operator.OpConf.FetchOutputOpConf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.operator.OpConf.FetchOutputOpConf other) {
+        if (other == org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance()) return this;
+        if (other.hasIn0()) {
+          bitField0_ |= 0x00000001;
+          in0_ = other.in0_;
+          onChanged();
+        }
+        if (other.hasOut0()) {
+          bitField0_ |= 0x00000002;
+          out0_ = other.out0_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIn0()) {
+          return false;
+        }
+        if (!hasOut0()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.operator.OpConf.FetchOutputOpConf parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.operator.OpConf.FetchOutputOpConf) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object in0_ = "";
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public boolean hasIn0() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public java.lang.String getIn0() {
+        java.lang.Object ref = in0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            in0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIn0Bytes() {
+        java.lang.Object ref = in0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          in0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder clearIn0() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        in0_ = getDefaultInstance().getIn0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string in_0 = 1;</code>
+       */
+      public Builder setIn0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        in0_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object out0_ = "";
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public boolean hasOut0() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public java.lang.String getOut0() {
+        java.lang.Object ref = out0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            out0_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOut0Bytes() {
+        java.lang.Object ref = out0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          out0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder clearOut0() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        out0_ = getDefaultInstance().getOut0();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string out_0 = 2;</code>
+       */
+      public Builder setOut0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        out0_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.FetchOutputOpConf)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.FetchOutputOpConf)
+    private static final org.oneflow.core.operator.OpConf.FetchOutputOpConf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.operator.OpConf.FetchOutputOpConf();
+    }
+
+    public static org.oneflow.core.operator.OpConf.FetchOutputOpConf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<FetchOutputOpConf>
+        PARSER = new com.google.protobuf.AbstractParser<FetchOutputOpConf>() {
+      public FetchOutputOpConf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FetchOutputOpConf(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FetchOutputOpConf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FetchOutputOpConf> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.operator.OpConf.FetchOutputOpConf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface InputOpConfOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oneflow.InputOpConf)
       com.google.protobuf.MessageOrBuilder {
@@ -62781,6 +64998,75 @@ public final class OpConf {
      */
     org.oneflow.core.operator.OpConf.BroadcastToCompatibleWithOpConfOrBuilder getBroadcastToCompatibleWithConfOrBuilder();
 
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    boolean hasFeedInputConf();
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    org.oneflow.core.operator.OpConf.FeedInputOpConf getFeedInputConf();
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder getFeedInputConfOrBuilder();
+
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    boolean hasFeedVariableConf();
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    org.oneflow.core.operator.OpConf.FeedVariableOpConf getFeedVariableConf();
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder getFeedVariableConfOrBuilder();
+
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    boolean hasFetchOutputConf();
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    org.oneflow.core.operator.OpConf.FetchOutputOpConf getFetchOutputConf();
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder getFetchOutputConfOrBuilder();
+
     public org.oneflow.core.operator.OpConf.OperatorConf.OpTypeCase getOpTypeCase();
   }
   /**
@@ -62815,6 +65101,7 @@ public final class OpConf {
       this();
       int mutable_bitField0_ = 0;
       int mutable_bitField1_ = 0;
+      int mutable_bitField2_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -63653,6 +65940,48 @@ public final class OpConf {
               opTypeCase_ = 525;
               break;
             }
+            case 4802: {
+              org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder subBuilder = null;
+              if (opTypeCase_ == 600) {
+                subBuilder = ((org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_).toBuilder();
+              }
+              opType_ =
+                  input.readMessage(org.oneflow.core.operator.OpConf.FeedInputOpConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_);
+                opType_ = subBuilder.buildPartial();
+              }
+              opTypeCase_ = 600;
+              break;
+            }
+            case 4810: {
+              org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder subBuilder = null;
+              if (opTypeCase_ == 601) {
+                subBuilder = ((org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_).toBuilder();
+              }
+              opType_ =
+                  input.readMessage(org.oneflow.core.operator.OpConf.FeedVariableOpConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_);
+                opType_ = subBuilder.buildPartial();
+              }
+              opTypeCase_ = 601;
+              break;
+            }
+            case 4818: {
+              org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder subBuilder = null;
+              if (opTypeCase_ == 602) {
+                subBuilder = ((org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_).toBuilder();
+              }
+              opType_ =
+                  input.readMessage(org.oneflow.core.operator.OpConf.FetchOutputOpConf.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_);
+                opType_ = subBuilder.buildPartial();
+              }
+              opTypeCase_ = 602;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -63742,6 +66071,9 @@ public final class OpConf {
       IMAGE_DECODER_RANDOM_CROP_RESIZE_CONF(349),
       XRT_LAUNCH_CONF(410),
       BROADCAST_TO_COMPATIBLE_WITH_CONF(525),
+      FEED_INPUT_CONF(600),
+      FEED_VARIABLE_CONF(601),
+      FETCH_OUTPUT_CONF(602),
       OPTYPE_NOT_SET(0);
       private final int value;
       private OpTypeCase(int value) {
@@ -63813,6 +66145,9 @@ public final class OpConf {
           case 349: return IMAGE_DECODER_RANDOM_CROP_RESIZE_CONF;
           case 410: return XRT_LAUNCH_CONF;
           case 525: return BROADCAST_TO_COMPATIBLE_WITH_CONF;
+          case 600: return FEED_INPUT_CONF;
+          case 601: return FEED_VARIABLE_CONF;
+          case 602: return FETCH_OUTPUT_CONF;
           case 0: return OPTYPE_NOT_SET;
           default: return null;
         }
@@ -65505,6 +67840,114 @@ public final class OpConf {
       return org.oneflow.core.operator.OpConf.BroadcastToCompatibleWithOpConf.getDefaultInstance();
     }
 
+    public static final int FEED_INPUT_CONF_FIELD_NUMBER = 600;
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    public boolean hasFeedInputConf() {
+      return opTypeCase_ == 600;
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FeedInputOpConf getFeedInputConf() {
+      if (opTypeCase_ == 600) {
+         return (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * NOTE(chengcheng): Lazy 1.0 system ops.
+     *   Feed EagerTensor to interface op. 
+     *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+     * </pre>
+     *
+     * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder getFeedInputConfOrBuilder() {
+      if (opTypeCase_ == 600) {
+         return (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+    }
+
+    public static final int FEED_VARIABLE_CONF_FIELD_NUMBER = 601;
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    public boolean hasFeedVariableConf() {
+      return opTypeCase_ == 601;
+    }
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FeedVariableOpConf getFeedVariableConf() {
+      if (opTypeCase_ == 601) {
+         return (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder getFeedVariableConfOrBuilder() {
+      if (opTypeCase_ == 601) {
+         return (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+    }
+
+    public static final int FETCH_OUTPUT_CONF_FIELD_NUMBER = 602;
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    public boolean hasFetchOutputConf() {
+      return opTypeCase_ == 602;
+    }
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FetchOutputOpConf getFetchOutputConf() {
+      if (opTypeCase_ == 602) {
+         return (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     *   Fetch EagerTensor from output op
+     * </pre>
+     *
+     * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+     */
+    public org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder getFetchOutputConfOrBuilder() {
+      if (opTypeCase_ == 602) {
+         return (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_;
+      }
+      return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -65851,6 +68294,24 @@ public final class OpConf {
           return false;
         }
       }
+      if (hasFeedInputConf()) {
+        if (!getFeedInputConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasFeedVariableConf()) {
+        if (!getFeedVariableConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasFetchOutputConf()) {
+        if (!getFetchOutputConf().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -66042,6 +68503,15 @@ public final class OpConf {
       }
       if (opTypeCase_ == 525) {
         output.writeMessage(525, (org.oneflow.core.operator.OpConf.BroadcastToCompatibleWithOpConf) opType_);
+      }
+      if (opTypeCase_ == 600) {
+        output.writeMessage(600, (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_);
+      }
+      if (opTypeCase_ == 601) {
+        output.writeMessage(601, (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_);
+      }
+      if (opTypeCase_ == 602) {
+        output.writeMessage(602, (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_);
       }
       unknownFields.writeTo(output);
     }
@@ -66299,6 +68769,18 @@ public final class OpConf {
       if (opTypeCase_ == 525) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(525, (org.oneflow.core.operator.OpConf.BroadcastToCompatibleWithOpConf) opType_);
+      }
+      if (opTypeCase_ == 600) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(600, (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_);
+      }
+      if (opTypeCase_ == 601) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(601, (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_);
+      }
+      if (opTypeCase_ == 602) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(602, (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -66572,6 +69054,18 @@ public final class OpConf {
           result = result && getBroadcastToCompatibleWithConf()
               .equals(other.getBroadcastToCompatibleWithConf());
           break;
+        case 600:
+          result = result && getFeedInputConf()
+              .equals(other.getFeedInputConf());
+          break;
+        case 601:
+          result = result && getFeedVariableConf()
+              .equals(other.getFeedVariableConf());
+          break;
+        case 602:
+          result = result && getFetchOutputConf()
+              .equals(other.getFetchOutputConf());
+          break;
         case 0:
         default:
       }
@@ -66836,6 +69330,18 @@ public final class OpConf {
           hash = (37 * hash) + BROADCAST_TO_COMPATIBLE_WITH_CONF_FIELD_NUMBER;
           hash = (53 * hash) + getBroadcastToCompatibleWithConf().hashCode();
           break;
+        case 600:
+          hash = (37 * hash) + FEED_INPUT_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getFeedInputConf().hashCode();
+          break;
+        case 601:
+          hash = (37 * hash) + FEED_VARIABLE_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getFeedVariableConf().hashCode();
+          break;
+        case 602:
+          hash = (37 * hash) + FETCH_OUTPUT_CONF_FIELD_NUMBER;
+          hash = (53 * hash) + getFetchOutputConf().hashCode();
+          break;
         case 0:
         default:
       }
@@ -66995,6 +69501,7 @@ public final class OpConf {
         org.oneflow.core.operator.OpConf.OperatorConf result = new org.oneflow.core.operator.OpConf.OperatorConf(this);
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
+        int from_bitField2_ = bitField2_;
         int to_bitField0_ = 0;
         int to_bitField1_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -67414,6 +69921,27 @@ public final class OpConf {
             result.opType_ = broadcastToCompatibleWithConfBuilder_.build();
           }
         }
+        if (opTypeCase_ == 600) {
+          if (feedInputConfBuilder_ == null) {
+            result.opType_ = opType_;
+          } else {
+            result.opType_ = feedInputConfBuilder_.build();
+          }
+        }
+        if (opTypeCase_ == 601) {
+          if (feedVariableConfBuilder_ == null) {
+            result.opType_ = opType_;
+          } else {
+            result.opType_ = feedVariableConfBuilder_.build();
+          }
+        }
+        if (opTypeCase_ == 602) {
+          if (fetchOutputConfBuilder_ == null) {
+            result.opType_ = opType_;
+          } else {
+            result.opType_ = fetchOutputConfBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.opTypeCase_ = opTypeCase_;
@@ -67714,6 +70242,18 @@ public final class OpConf {
             mergeBroadcastToCompatibleWithConf(other.getBroadcastToCompatibleWithConf());
             break;
           }
+          case FEED_INPUT_CONF: {
+            mergeFeedInputConf(other.getFeedInputConf());
+            break;
+          }
+          case FEED_VARIABLE_CONF: {
+            mergeFeedVariableConf(other.getFeedVariableConf());
+            break;
+          }
+          case FETCH_OUTPUT_CONF: {
+            mergeFetchOutputConf(other.getFetchOutputConf());
+            break;
+          }
           case OPTYPE_NOT_SET: {
             break;
           }
@@ -68007,6 +70547,21 @@ public final class OpConf {
             return false;
           }
         }
+        if (hasFeedInputConf()) {
+          if (!getFeedInputConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasFeedVariableConf()) {
+          if (!getFeedVariableConf().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasFetchOutputConf()) {
+          if (!getFetchOutputConf().isInitialized()) {
+            return false;
+          }
+        }
         return true;
       }
 
@@ -68044,6 +70599,7 @@ public final class OpConf {
 
       private int bitField0_;
       private int bitField1_;
+      private int bitField2_;
 
       private java.lang.Object name_ = "";
       /**
@@ -76153,6 +78709,504 @@ public final class OpConf {
         onChanged();;
         return broadcastToCompatibleWithConfBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FeedInputOpConf, org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder, org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder> feedInputConfBuilder_;
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public boolean hasFeedInputConf() {
+        return opTypeCase_ == 600;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedInputOpConf getFeedInputConf() {
+        if (feedInputConfBuilder_ == null) {
+          if (opTypeCase_ == 600) {
+            return (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+        } else {
+          if (opTypeCase_ == 600) {
+            return feedInputConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public Builder setFeedInputConf(org.oneflow.core.operator.OpConf.FeedInputOpConf value) {
+        if (feedInputConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opType_ = value;
+          onChanged();
+        } else {
+          feedInputConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 600;
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public Builder setFeedInputConf(
+          org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder builderForValue) {
+        if (feedInputConfBuilder_ == null) {
+          opType_ = builderForValue.build();
+          onChanged();
+        } else {
+          feedInputConfBuilder_.setMessage(builderForValue.build());
+        }
+        opTypeCase_ = 600;
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public Builder mergeFeedInputConf(org.oneflow.core.operator.OpConf.FeedInputOpConf value) {
+        if (feedInputConfBuilder_ == null) {
+          if (opTypeCase_ == 600 &&
+              opType_ != org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance()) {
+            opType_ = org.oneflow.core.operator.OpConf.FeedInputOpConf.newBuilder((org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            opType_ = value;
+          }
+          onChanged();
+        } else {
+          if (opTypeCase_ == 600) {
+            feedInputConfBuilder_.mergeFrom(value);
+          }
+          feedInputConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 600;
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public Builder clearFeedInputConf() {
+        if (feedInputConfBuilder_ == null) {
+          if (opTypeCase_ == 600) {
+            opTypeCase_ = 0;
+            opType_ = null;
+            onChanged();
+          }
+        } else {
+          if (opTypeCase_ == 600) {
+            opTypeCase_ = 0;
+            opType_ = null;
+          }
+          feedInputConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder getFeedInputConfBuilder() {
+        return getFeedInputConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder getFeedInputConfOrBuilder() {
+        if ((opTypeCase_ == 600) && (feedInputConfBuilder_ != null)) {
+          return feedInputConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (opTypeCase_ == 600) {
+            return (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * NOTE(chengcheng): Lazy 1.0 system ops.
+       *   Feed EagerTensor to interface op. 
+       *   Note that FeedxxOp just for build CustomOpExpr, and has NO operator impl.
+       * </pre>
+       *
+       * <code>optional .oneflow.FeedInputOpConf feed_input_conf = 600;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FeedInputOpConf, org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder, org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder> 
+          getFeedInputConfFieldBuilder() {
+        if (feedInputConfBuilder_ == null) {
+          if (!(opTypeCase_ == 600)) {
+            opType_ = org.oneflow.core.operator.OpConf.FeedInputOpConf.getDefaultInstance();
+          }
+          feedInputConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.operator.OpConf.FeedInputOpConf, org.oneflow.core.operator.OpConf.FeedInputOpConf.Builder, org.oneflow.core.operator.OpConf.FeedInputOpConfOrBuilder>(
+                  (org.oneflow.core.operator.OpConf.FeedInputOpConf) opType_,
+                  getParentForChildren(),
+                  isClean());
+          opType_ = null;
+        }
+        opTypeCase_ = 600;
+        onChanged();;
+        return feedInputConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FeedVariableOpConf, org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder, org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder> feedVariableConfBuilder_;
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public boolean hasFeedVariableConf() {
+        return opTypeCase_ == 601;
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConf getFeedVariableConf() {
+        if (feedVariableConfBuilder_ == null) {
+          if (opTypeCase_ == 601) {
+            return (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+        } else {
+          if (opTypeCase_ == 601) {
+            return feedVariableConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public Builder setFeedVariableConf(org.oneflow.core.operator.OpConf.FeedVariableOpConf value) {
+        if (feedVariableConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opType_ = value;
+          onChanged();
+        } else {
+          feedVariableConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 601;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public Builder setFeedVariableConf(
+          org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder builderForValue) {
+        if (feedVariableConfBuilder_ == null) {
+          opType_ = builderForValue.build();
+          onChanged();
+        } else {
+          feedVariableConfBuilder_.setMessage(builderForValue.build());
+        }
+        opTypeCase_ = 601;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public Builder mergeFeedVariableConf(org.oneflow.core.operator.OpConf.FeedVariableOpConf value) {
+        if (feedVariableConfBuilder_ == null) {
+          if (opTypeCase_ == 601 &&
+              opType_ != org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance()) {
+            opType_ = org.oneflow.core.operator.OpConf.FeedVariableOpConf.newBuilder((org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            opType_ = value;
+          }
+          onChanged();
+        } else {
+          if (opTypeCase_ == 601) {
+            feedVariableConfBuilder_.mergeFrom(value);
+          }
+          feedVariableConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 601;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public Builder clearFeedVariableConf() {
+        if (feedVariableConfBuilder_ == null) {
+          if (opTypeCase_ == 601) {
+            opTypeCase_ = 0;
+            opType_ = null;
+            onChanged();
+          }
+        } else {
+          if (opTypeCase_ == 601) {
+            opTypeCase_ = 0;
+            opType_ = null;
+          }
+          feedVariableConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder getFeedVariableConfBuilder() {
+        return getFeedVariableConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder getFeedVariableConfOrBuilder() {
+        if ((opTypeCase_ == 601) && (feedVariableConfBuilder_ != null)) {
+          return feedVariableConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (opTypeCase_ == 601) {
+            return (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.FeedVariableOpConf feed_variable_conf = 601;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FeedVariableOpConf, org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder, org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder> 
+          getFeedVariableConfFieldBuilder() {
+        if (feedVariableConfBuilder_ == null) {
+          if (!(opTypeCase_ == 601)) {
+            opType_ = org.oneflow.core.operator.OpConf.FeedVariableOpConf.getDefaultInstance();
+          }
+          feedVariableConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.operator.OpConf.FeedVariableOpConf, org.oneflow.core.operator.OpConf.FeedVariableOpConf.Builder, org.oneflow.core.operator.OpConf.FeedVariableOpConfOrBuilder>(
+                  (org.oneflow.core.operator.OpConf.FeedVariableOpConf) opType_,
+                  getParentForChildren(),
+                  isClean());
+          opType_ = null;
+        }
+        opTypeCase_ = 601;
+        onChanged();;
+        return feedVariableConfBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FetchOutputOpConf, org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder, org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder> fetchOutputConfBuilder_;
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public boolean hasFetchOutputConf() {
+        return opTypeCase_ == 602;
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConf getFetchOutputConf() {
+        if (fetchOutputConfBuilder_ == null) {
+          if (opTypeCase_ == 602) {
+            return (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+        } else {
+          if (opTypeCase_ == 602) {
+            return fetchOutputConfBuilder_.getMessage();
+          }
+          return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public Builder setFetchOutputConf(org.oneflow.core.operator.OpConf.FetchOutputOpConf value) {
+        if (fetchOutputConfBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opType_ = value;
+          onChanged();
+        } else {
+          fetchOutputConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 602;
+        return this;
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public Builder setFetchOutputConf(
+          org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder builderForValue) {
+        if (fetchOutputConfBuilder_ == null) {
+          opType_ = builderForValue.build();
+          onChanged();
+        } else {
+          fetchOutputConfBuilder_.setMessage(builderForValue.build());
+        }
+        opTypeCase_ = 602;
+        return this;
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public Builder mergeFetchOutputConf(org.oneflow.core.operator.OpConf.FetchOutputOpConf value) {
+        if (fetchOutputConfBuilder_ == null) {
+          if (opTypeCase_ == 602 &&
+              opType_ != org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance()) {
+            opType_ = org.oneflow.core.operator.OpConf.FetchOutputOpConf.newBuilder((org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            opType_ = value;
+          }
+          onChanged();
+        } else {
+          if (opTypeCase_ == 602) {
+            fetchOutputConfBuilder_.mergeFrom(value);
+          }
+          fetchOutputConfBuilder_.setMessage(value);
+        }
+        opTypeCase_ = 602;
+        return this;
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public Builder clearFetchOutputConf() {
+        if (fetchOutputConfBuilder_ == null) {
+          if (opTypeCase_ == 602) {
+            opTypeCase_ = 0;
+            opType_ = null;
+            onChanged();
+          }
+        } else {
+          if (opTypeCase_ == 602) {
+            opTypeCase_ = 0;
+            opType_ = null;
+          }
+          fetchOutputConfBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder getFetchOutputConfBuilder() {
+        return getFetchOutputConfFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      public org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder getFetchOutputConfOrBuilder() {
+        if ((opTypeCase_ == 602) && (fetchOutputConfBuilder_ != null)) {
+          return fetchOutputConfBuilder_.getMessageOrBuilder();
+        } else {
+          if (opTypeCase_ == 602) {
+            return (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_;
+          }
+          return org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       *   Fetch EagerTensor from output op
+       * </pre>
+       *
+       * <code>optional .oneflow.FetchOutputOpConf fetch_output_conf = 602;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.operator.OpConf.FetchOutputOpConf, org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder, org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder> 
+          getFetchOutputConfFieldBuilder() {
+        if (fetchOutputConfBuilder_ == null) {
+          if (!(opTypeCase_ == 602)) {
+            opType_ = org.oneflow.core.operator.OpConf.FetchOutputOpConf.getDefaultInstance();
+          }
+          fetchOutputConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.operator.OpConf.FetchOutputOpConf, org.oneflow.core.operator.OpConf.FetchOutputOpConf.Builder, org.oneflow.core.operator.OpConf.FetchOutputOpConfOrBuilder>(
+                  (org.oneflow.core.operator.OpConf.FetchOutputOpConf) opType_,
+                  getParentForChildren(),
+                  isClean());
+          opType_ = null;
+        }
+        opTypeCase_ = 602;
+        onChanged();;
+        return fetchOutputConfBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
@@ -78255,6 +81309,21 @@ public final class OpConf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_DynamicReshapeLikeOpConf_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oneflow_FeedInputOpConf_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_oneflow_FeedInputOpConf_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oneflow_FeedVariableOpConf_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_oneflow_FeedVariableOpConf_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oneflow_FetchOutputOpConf_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_oneflow_FetchOutputOpConf_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_InputOpConf_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -78604,263 +81673,271 @@ public final class OpConf {
       "\007out_box\"S\n\024DynamicReshapeOpConf\022\n\n\002in\030\001" +
       " \002(\t\022\013\n\003out\030\002 \002(\t\022\"\n\005shape\030\003 \002(\0132\023.onefl",
       "ow.ShapeProto\">\n\030DynamicReshapeLikeOpCon" +
-      "f\022\t\n\001x\030\001 \002(\t\022\t\n\001y\030\002 \002(\t\022\014\n\004like\030\003 \002(\t\"W\n" +
-      "\013InputOpConf\022\014\n\004tick\030\001 \001(\t\022\013\n\003out\030\002 \002(\t\022" +
-      "-\n\tblob_conf\030\003 \002(\0132\032.oneflow.InterfaceBl" +
-      "obConf\"z\n\022ForeignInputOpConf\022\014\n\004tick\030\001 \001" +
-      "(\t\022\013\n\003out\030\002 \002(\t\022-\n\tblob_conf\030\003 \002(\0132\032.one" +
-      "flow.InterfaceBlobConf\022\032\n\022ofblob_buffer_" +
-      "name\030\004 \002(\t\"\'\n\014ReturnOpConf\022\n\n\002in\030\001 \002(\t\022\013" +
-      "\n\003out\030\002 \002(\t\"V\n\014OutputOpConf\022\n\n\002in\030\001 \002(\t\022" +
-      "\013\n\003out\030\002 \002(\t\022-\n\tblob_conf\030\003 \002(\0132\032.oneflo",
-      "w.InterfaceBlobConf\"=\n\023ForeignOutputOpCo" +
-      "nf\022\n\n\002in\030\001 \002(\t\022\032\n\022ofblob_buffer_name\030\003 \002" +
-      "(\t\"6\n\022ForeignWatchOpConf\022\n\n\002in\030\001 \002(\t\022\024\n\014" +
-      "handler_uuid\030\002 \002(\t\"\225\003\n\016VariableOpConf\022\014\n" +
-      "\004tick\030\001 \001(\t\022\013\n\003out\030\002 \002(\t\022\"\n\005shape\030\003 \002(\0132" +
-      "\023.oneflow.ShapeProto\022$\n\tdata_type\030\004 \001(\0162" +
-      "\021.oneflow.DataType\022/\n\013initializer\030\005 \001(\0132" +
-      "\030.oneflow.InitializerConfH\000\022G\n\030initializ" +
-      "e_with_snapshot\030\006 \001(\0132#.oneflow.Initiali" +
-      "zeWithSnapshotConfH\000\022\032\n\nmodel_name\030\007 \001(\t",
-      ":\006weight\022\023\n\013random_seed\030\t \001(\003\022-\n\013regular" +
-      "izer\030\n \001(\0132\030.oneflow.RegularizerConf\022\027\n\t" +
-      "trainable\030\013 \001(\010:\004true\022\035\n\025parallel_distri" +
-      "bution\030\014 \003(\tB\014\n\ninitialize\"\301\001\n\022DecodeRan" +
-      "domOpConf\022\014\n\004tick\030\001 \001(\t\022\013\n\003out\030\002 \002(\t\022\"\n\005" +
-      "shape\030\003 \002(\0132\023.oneflow.ShapeProto\022$\n\tdata" +
-      "_type\030\004 \002(\0162\021.oneflow.DataType\0222\n\020data_i" +
-      "nitializer\030\005 \002(\0132\030.oneflow.InitializerCo" +
-      "nf\022\022\n\nbatch_size\030\010 \002(\003\"\'\n\nTickOpConf\022\014\n\004" +
-      "tick\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\"V\n\020DeviceTickOpC",
-      "onf\022\014\n\004tick\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\022\'\n\ntime_s" +
-      "hape\030\003 \001(\0132\023.oneflow.ShapeProto\"\220\001\n\024Wait" +
-      "AndSendIdsOpConf\022\013\n\003out\030\001 \002(\t\022\030\n\020wait_bu" +
-      "ffer_name\030\002 \002(\t\022#\n\007id_list\030\003 \003(\0132\022.onefl" +
-      "ow.Int64List\022,\n\tdata_type\030\004 \002(\0162\021.oneflo" +
-      "w.DataType:\006kInt32\"@\n\024CallbackNotifyOpCo" +
-      "nf\022\n\n\002in\030\001 \002(\t\022\034\n\024callback_buffer_name\030\002" +
-      " \003(\t\"y\n\023ReentrantLockOpConf\022\r\n\005start\030\001 \002" +
-      "(\t\022\013\n\003end\030\002 \001(\t\022\013\n\003out\030\003 \002(\t\0229\n\035lock_id2" +
-      "intersecting_lock_ids\030\004 \003(\0132\022.oneflow.In",
-      "t64List\".\n\023SrcSubsetTickOpConf\022\n\n\002in\030\001 \003" +
-      "(\t\022\013\n\003out\030\002 \002(\t\".\n\023DstSubsetTickOpConf\022\n" +
-      "\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\"\037\n\020SourceTickOpC" +
-      "onf\022\013\n\003out\030\001 \002(\t\"+\n\016SinkTickOpConf\022\014\n\004ti" +
-      "ck\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\"5\n\032TotalLossInstan" +
-      "ceNumOpConf\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\"$\n\024" +
-      "ShapeElemCntAxisConf\022\014\n\004axis\030\001 \003(\005\"H\n\031Sh" +
-      "apeElemCntRangeAxisConf\022\025\n\nbegin_axis\030\001 " +
-      "\001(\005:\0010\022\024\n\010end_axis\030\002 \001(\005:\002-1\"\234\002\n\022ShapeEl" +
-      "emCntOpConf\022\t\n\001x\030\001 \002(\t\022\t\n\001y\030\002 \002(\t\022,\n\tdat",
-      "a_type\030\003 \001(\0162\021.oneflow.DataType:\006kInt32\022" +
-      ":\n\021exclude_axis_conf\030\004 \001(\0132\035.oneflow.Sha" +
-      "peElemCntAxisConfH\000\022:\n\021include_axis_conf" +
-      "\030\005 \001(\0132\035.oneflow.ShapeElemCntAxisConfH\000\022" +
-      "=\n\017range_axis_conf\030\006 \001(\0132\".oneflow.Shape" +
-      "ElemCntRangeAxisConfH\000B\013\n\taxis_conf\"A\n\rA" +
-      "ccTickOpConf\022\013\n\003one\030\001 \002(\t\022\013\n\003acc\030\002 \002(\t\022\026" +
-      "\n\013max_acc_num\030\003 \001(\005:\0011\"\177\n\017ModelInitOpCon" +
-      "f\022\014\n\004tick\030\001 \001(\t\022\013\n\003out\030\002 \003(\t\022\030\n\020variable" +
-      "_op_name\030\003 \003(\t\0227\n\026original_variable_conf",
-      "\030\004 \003(\0132\027.oneflow.VariableOpConf\"\177\n\017Model" +
-      "LoadOpConf\022\014\n\004path\030\001 \002(\t\022\013\n\003out\030\002 \003(\t\022\030\n" +
-      "\020variable_op_name\030\003 \003(\t\0227\n\026original_vari" +
-      "able_conf\030\004 \003(\0132\027.oneflow.VariableOpConf" +
-      "\")\n\016IdentityOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 " +
-      "\002(\t\"%\n\nCopyOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002" +
-      "(\t\"[\n\024CastToMirroredOpConf\022\n\n\002in\030\001 \002(\t\022\013" +
-      "\n\003out\030\002 \002(\t\022*\n\014sbp_parallel\030\003 \002(\0132\024.onef" +
-      "low.SbpParallel\"]\n\026CastFromMirroredOpCon" +
-      "f\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t\022*\n\014sbp_parall",
-      "el\030\003 \002(\0132\024.oneflow.SbpParallel\"%\n\nCaseOp" +
-      "Conf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \003(\t\"S\n\nEsacOpC" +
-      "onf\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\022,\n\tdata_typ" +
-      "e\030\003 \001(\0162\021.oneflow.DataType:\006kInt32\"*\n\014As" +
-      "signOpConf\022\013\n\003ref\030\001 \002(\t\022\r\n\005value\030\002 \002(\t\"8" +
-      "\n\017ModelSaveOpConf\022\014\n\004path\030\001 \002(\t\022\n\n\002in\030\002 " +
-      "\003(\t\022\013\n\003key\030\003 \003(\t\"\273\001\n\032LearningRateSchedul" +
-      "eOpConf\022\022\n\ntrain_step\030\001 \002(\t\022\013\n\003out\030\002 \002(\t" +
-      "\022\025\n\rlearning_rate\030\003 \002(\002\022;\n\023learning_rate" +
-      "_decay\030\004 \001(\0132\036.oneflow.LearningRateDecay",
-      "Conf\022(\n\013warmup_conf\030\005 \001(\0132\023.oneflow.Warm" +
-      "upConf\"\301\001\n\017SliceBoxingConf\022#\n\003lbi\030\001 \002(\0132" +
-      "\026.oneflow.LogicalBlobId\022/\n\010in_slice\030\002 \003(" +
-      "\0132\035.oneflow.TensorSliceViewProto\0220\n\tout_" +
-      "slice\030\003 \002(\0132\035.oneflow.TensorSliceViewPro" +
-      "to\022&\n\tout_shape\030\004 \001(\0132\023.oneflow.ShapePro" +
-      "to\"L\n\025SliceBoxingCopyOpConf\0223\n\021slice_box" +
-      "ing_conf\030\001 \002(\0132\030.oneflow.SliceBoxingConf" +
-      "\"K\n\024SliceBoxingAddOpConf\0223\n\021slice_boxing" +
-      "_conf\030\001 \002(\0132\030.oneflow.SliceBoxingConf\"\211\007",
-      "\n\017XrtLaunchOpConf\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \003" +
-      "(\t\0223\n\010function\030\003 \002(\0132!.oneflow.XrtLaunch" +
-      "OpConf.Function\022\016\n\006engine\030\004 \002(\t\022G\n\020input" +
-      "_mutability\030\005 \003(\0132-.oneflow.XrtLaunchOpC" +
-      "onf.InputMutabilityEntry\022N\n\024input_output" +
-      "_mapping\030\006 \003(\01320.oneflow.XrtLaunchOpConf" +
-      ".InputOutputMappingEntry\022C\n\016sbp_signatur" +
-      "es\030\010 \003(\0132+.oneflow.XrtLaunchOpConf.SbpSi" +
-      "gnaturesEntry\022\033\n\014model_update\030\t \001(\010:\005fal" +
-      "se\022P\n\025lbn2logical_blob_desc\030\n \003(\01321.onef",
-      "low.XrtLaunchOpConf.Lbn2logicalBlobDescE" +
-      "ntry\032Q\n\010Argument\022\014\n\004name\030\001 \002(\t\022\r\n\005value\030" +
-      "\002 \002(\t\022(\n\013device_type\030\003 \002(\0162\023.oneflow.Dev" +
-      "iceType\032d\n\010Function\0223\n\010argument\030\001 \003(\0132!." +
-      "oneflow.XrtLaunchOpConf.Argument\022#\n\004node" +
-      "\030\002 \003(\0132\025.oneflow.OperatorConf\0326\n\024InputMu" +
-      "tabilityEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\010:\0028\001\0329\n\027InputOutputMappingEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032K\n\022SbpSignature" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\0132\025.one",
-      "flow.SbpSignature:\0028\001\032R\n\030Lbn2logicalBlob" +
-      "DescEntry\022\013\n\003key\030\001 \001(\t\022%\n\005value\030\002 \001(\0132\026." +
-      "oneflow.BlobDescProto:\0028\001\"s\n\021ModelInitV2" +
-      "OpConf\022\013\n\003ref\030\001 \003(\t\022\030\n\020variable_op_name\030" +
-      "\002 \003(\t\0227\n\026original_variable_conf\030\003 \003(\0132\027." +
-      "oneflow.VariableOpConf\"\201\001\n\021ModelLoadV2Op" +
-      "Conf\022\014\n\004path\030\001 \002(\t\022\013\n\003ref\030\002 \003(\t\022\030\n\020varia" +
+      "f\022\t\n\001x\030\001 \002(\t\022\t\n\001y\030\002 \002(\t\022\014\n\004like\030\003 \002(\t\".\n" +
+      "\017FeedInputOpConf\022\014\n\004in_0\030\001 \002(\t\022\r\n\005out_0\030" +
+      "\002 \002(\t\"1\n\022FeedVariableOpConf\022\014\n\004in_0\030\001 \002(" +
+      "\t\022\r\n\005out_0\030\002 \002(\t\"0\n\021FetchOutputOpConf\022\014\n" +
+      "\004in_0\030\001 \002(\t\022\r\n\005out_0\030\002 \002(\t\"W\n\013InputOpCon" +
+      "f\022\014\n\004tick\030\001 \001(\t\022\013\n\003out\030\002 \002(\t\022-\n\tblob_con" +
+      "f\030\003 \002(\0132\032.oneflow.InterfaceBlobConf\"z\n\022F" +
+      "oreignInputOpConf\022\014\n\004tick\030\001 \001(\t\022\013\n\003out\030\002" +
+      " \002(\t\022-\n\tblob_conf\030\003 \002(\0132\032.oneflow.Interf",
+      "aceBlobConf\022\032\n\022ofblob_buffer_name\030\004 \002(\t\"" +
+      "\'\n\014ReturnOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t" +
+      "\"V\n\014OutputOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(" +
+      "\t\022-\n\tblob_conf\030\003 \002(\0132\032.oneflow.Interface" +
+      "BlobConf\"=\n\023ForeignOutputOpConf\022\n\n\002in\030\001 " +
+      "\002(\t\022\032\n\022ofblob_buffer_name\030\003 \002(\t\"6\n\022Forei" +
+      "gnWatchOpConf\022\n\n\002in\030\001 \002(\t\022\024\n\014handler_uui" +
+      "d\030\002 \002(\t\"\225\003\n\016VariableOpConf\022\014\n\004tick\030\001 \001(\t" +
+      "\022\013\n\003out\030\002 \002(\t\022\"\n\005shape\030\003 \002(\0132\023.oneflow.S" +
+      "hapeProto\022$\n\tdata_type\030\004 \001(\0162\021.oneflow.D",
+      "ataType\022/\n\013initializer\030\005 \001(\0132\030.oneflow.I" +
+      "nitializerConfH\000\022G\n\030initialize_with_snap" +
+      "shot\030\006 \001(\0132#.oneflow.InitializeWithSnaps" +
+      "hotConfH\000\022\032\n\nmodel_name\030\007 \001(\t:\006weight\022\023\n" +
+      "\013random_seed\030\t \001(\003\022-\n\013regularizer\030\n \001(\0132" +
+      "\030.oneflow.RegularizerConf\022\027\n\ttrainable\030\013" +
+      " \001(\010:\004true\022\035\n\025parallel_distribution\030\014 \003(" +
+      "\tB\014\n\ninitialize\"\301\001\n\022DecodeRandomOpConf\022\014" +
+      "\n\004tick\030\001 \001(\t\022\013\n\003out\030\002 \002(\t\022\"\n\005shape\030\003 \002(\013" +
+      "2\023.oneflow.ShapeProto\022$\n\tdata_type\030\004 \002(\016",
+      "2\021.oneflow.DataType\0222\n\020data_initializer\030" +
+      "\005 \002(\0132\030.oneflow.InitializerConf\022\022\n\nbatch" +
+      "_size\030\010 \002(\003\"\'\n\nTickOpConf\022\014\n\004tick\030\001 \003(\t\022" +
+      "\013\n\003out\030\002 \002(\t\"V\n\020DeviceTickOpConf\022\014\n\004tick" +
+      "\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\022\'\n\ntime_shape\030\003 \001(\0132" +
+      "\023.oneflow.ShapeProto\"\220\001\n\024WaitAndSendIdsO" +
+      "pConf\022\013\n\003out\030\001 \002(\t\022\030\n\020wait_buffer_name\030\002" +
+      " \002(\t\022#\n\007id_list\030\003 \003(\0132\022.oneflow.Int64Lis" +
+      "t\022,\n\tdata_type\030\004 \002(\0162\021.oneflow.DataType:" +
+      "\006kInt32\"@\n\024CallbackNotifyOpConf\022\n\n\002in\030\001 ",
+      "\002(\t\022\034\n\024callback_buffer_name\030\002 \003(\t\"y\n\023Ree" +
+      "ntrantLockOpConf\022\r\n\005start\030\001 \002(\t\022\013\n\003end\030\002" +
+      " \001(\t\022\013\n\003out\030\003 \002(\t\0229\n\035lock_id2intersectin" +
+      "g_lock_ids\030\004 \003(\0132\022.oneflow.Int64List\".\n\023" +
+      "SrcSubsetTickOpConf\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002" +
+      " \002(\t\".\n\023DstSubsetTickOpConf\022\n\n\002in\030\001 \003(\t\022" +
+      "\013\n\003out\030\002 \002(\t\"\037\n\020SourceTickOpConf\022\013\n\003out\030" +
+      "\001 \002(\t\"+\n\016SinkTickOpConf\022\014\n\004tick\030\001 \003(\t\022\013\n" +
+      "\003out\030\002 \002(\t\"5\n\032TotalLossInstanceNumOpConf" +
+      "\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \002(\t\"$\n\024ShapeElemCn",
+      "tAxisConf\022\014\n\004axis\030\001 \003(\005\"H\n\031ShapeElemCntR" +
+      "angeAxisConf\022\025\n\nbegin_axis\030\001 \001(\005:\0010\022\024\n\010e" +
+      "nd_axis\030\002 \001(\005:\002-1\"\234\002\n\022ShapeElemCntOpConf" +
+      "\022\t\n\001x\030\001 \002(\t\022\t\n\001y\030\002 \002(\t\022,\n\tdata_type\030\003 \001(" +
+      "\0162\021.oneflow.DataType:\006kInt32\022:\n\021exclude_" +
+      "axis_conf\030\004 \001(\0132\035.oneflow.ShapeElemCntAx" +
+      "isConfH\000\022:\n\021include_axis_conf\030\005 \001(\0132\035.on" +
+      "eflow.ShapeElemCntAxisConfH\000\022=\n\017range_ax" +
+      "is_conf\030\006 \001(\0132\".oneflow.ShapeElemCntRang" +
+      "eAxisConfH\000B\013\n\taxis_conf\"A\n\rAccTickOpCon",
+      "f\022\013\n\003one\030\001 \002(\t\022\013\n\003acc\030\002 \002(\t\022\026\n\013max_acc_n" +
+      "um\030\003 \001(\005:\0011\"\177\n\017ModelInitOpConf\022\014\n\004tick\030\001" +
+      " \001(\t\022\013\n\003out\030\002 \003(\t\022\030\n\020variable_op_name\030\003 " +
+      "\003(\t\0227\n\026original_variable_conf\030\004 \003(\0132\027.on" +
+      "eflow.VariableOpConf\"\177\n\017ModelLoadOpConf\022" +
+      "\014\n\004path\030\001 \002(\t\022\013\n\003out\030\002 \003(\t\022\030\n\020variable_o" +
+      "p_name\030\003 \003(\t\0227\n\026original_variable_conf\030\004" +
+      " \003(\0132\027.oneflow.VariableOpConf\")\n\016Identit" +
+      "yOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t\"%\n\nCopy" +
+      "OpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t\"[\n\024CastT",
+      "oMirroredOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t" +
+      "\022*\n\014sbp_parallel\030\003 \002(\0132\024.oneflow.SbpPara" +
+      "llel\"]\n\026CastFromMirroredOpConf\022\n\n\002in\030\001 \002" +
+      "(\t\022\013\n\003out\030\002 \002(\t\022*\n\014sbp_parallel\030\003 \002(\0132\024." +
+      "oneflow.SbpParallel\"%\n\nCaseOpConf\022\n\n\002in\030" +
+      "\001 \002(\t\022\013\n\003out\030\002 \003(\t\"S\n\nEsacOpConf\022\n\n\002in\030\001" +
+      " \003(\t\022\013\n\003out\030\002 \002(\t\022,\n\tdata_type\030\003 \001(\0162\021.o" +
+      "neflow.DataType:\006kInt32\"*\n\014AssignOpConf\022" +
+      "\013\n\003ref\030\001 \002(\t\022\r\n\005value\030\002 \002(\t\"8\n\017ModelSave" +
+      "OpConf\022\014\n\004path\030\001 \002(\t\022\n\n\002in\030\002 \003(\t\022\013\n\003key\030",
+      "\003 \003(\t\"\273\001\n\032LearningRateScheduleOpConf\022\022\n\n" +
+      "train_step\030\001 \002(\t\022\013\n\003out\030\002 \002(\t\022\025\n\rlearnin" +
+      "g_rate\030\003 \002(\002\022;\n\023learning_rate_decay\030\004 \001(" +
+      "\0132\036.oneflow.LearningRateDecayConf\022(\n\013war" +
+      "mup_conf\030\005 \001(\0132\023.oneflow.WarmupConf\"\301\001\n\017" +
+      "SliceBoxingConf\022#\n\003lbi\030\001 \002(\0132\026.oneflow.L" +
+      "ogicalBlobId\022/\n\010in_slice\030\002 \003(\0132\035.oneflow" +
+      ".TensorSliceViewProto\0220\n\tout_slice\030\003 \002(\013" +
+      "2\035.oneflow.TensorSliceViewProto\022&\n\tout_s" +
+      "hape\030\004 \001(\0132\023.oneflow.ShapeProto\"L\n\025Slice",
+      "BoxingCopyOpConf\0223\n\021slice_boxing_conf\030\001 " +
+      "\002(\0132\030.oneflow.SliceBoxingConf\"K\n\024SliceBo" +
+      "xingAddOpConf\0223\n\021slice_boxing_conf\030\001 \002(\013" +
+      "2\030.oneflow.SliceBoxingConf\"\211\007\n\017XrtLaunch" +
+      "OpConf\022\n\n\002in\030\001 \003(\t\022\013\n\003out\030\002 \003(\t\0223\n\010funct" +
+      "ion\030\003 \002(\0132!.oneflow.XrtLaunchOpConf.Func" +
+      "tion\022\016\n\006engine\030\004 \002(\t\022G\n\020input_mutability" +
+      "\030\005 \003(\0132-.oneflow.XrtLaunchOpConf.InputMu" +
+      "tabilityEntry\022N\n\024input_output_mapping\030\006 " +
+      "\003(\01320.oneflow.XrtLaunchOpConf.InputOutpu",
+      "tMappingEntry\022C\n\016sbp_signatures\030\010 \003(\0132+." +
+      "oneflow.XrtLaunchOpConf.SbpSignaturesEnt" +
+      "ry\022\033\n\014model_update\030\t \001(\010:\005false\022P\n\025lbn2l" +
+      "ogical_blob_desc\030\n \003(\01321.oneflow.XrtLaun" +
+      "chOpConf.Lbn2logicalBlobDescEntry\032Q\n\010Arg" +
+      "ument\022\014\n\004name\030\001 \002(\t\022\r\n\005value\030\002 \002(\t\022(\n\013de" +
+      "vice_type\030\003 \002(\0162\023.oneflow.DeviceType\032d\n\010" +
+      "Function\0223\n\010argument\030\001 \003(\0132!.oneflow.Xrt" +
+      "LaunchOpConf.Argument\022#\n\004node\030\002 \003(\0132\025.on" +
+      "eflow.OperatorConf\0326\n\024InputMutabilityEnt",
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001\0329\n\027In" +
+      "putOutputMappingEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032K\n\022SbpSignaturesEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022$\n\005value\030\002 \001(\0132\025.oneflow.SbpSig" +
+      "nature:\0028\001\032R\n\030Lbn2logicalBlobDescEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022%\n\005value\030\002 \001(\0132\026.oneflow.Blo" +
+      "bDescProto:\0028\001\"s\n\021ModelInitV2OpConf\022\013\n\003r" +
+      "ef\030\001 \003(\t\022\030\n\020variable_op_name\030\002 \003(\t\0227\n\026or" +
+      "iginal_variable_conf\030\003 \003(\0132\027.oneflow.Var" +
+      "iableOpConf\"\201\001\n\021ModelLoadV2OpConf\022\014\n\004pat",
+      "h\030\001 \002(\t\022\013\n\003ref\030\002 \003(\t\022\030\n\020variable_op_name" +
+      "\030\003 \003(\t\0227\n\026original_variable_conf\030\004 \003(\0132\027" +
+      ".oneflow.VariableOpConf\"\200\001\n\021ModelSaveV2O" +
+      "pConf\022\014\n\004path\030\001 \002(\t\022\n\n\002in\030\002 \003(\t\022\030\n\020varia" +
       "ble_op_name\030\003 \003(\t\0227\n\026original_variable_c" +
-      "onf\030\004 \003(\0132\027.oneflow.VariableOpConf\"\200\001\n\021M" +
-      "odelSaveV2OpConf\022\014\n\004path\030\001 \002(\t\022\n\n\002in\030\002 \003",
-      "(\t\022\030\n\020variable_op_name\030\003 \003(\t\0227\n\026original" +
-      "_variable_conf\030\004 \003(\0132\027.oneflow.VariableO" +
-      "pConf\"\227\001\n\022ConstantLikeOpConf\022\014\n\004like\030\001 \002" +
-      "(\t\022\013\n\003out\030\002 \002(\t\022$\n\tdata_type\030\003 \001(\0162\021.one" +
-      "flow.DataType\022\025\n\013int_operand\030\004 \001(\003H\000\022\027\n\r" +
-      "float_operand\030\005 \001(\001H\000B\020\n\016scalar_operand\"" +
-      "d\n\027SyncDynamicResizeOpConf\022\n\n\002in\030\001 \002(\t\022\014" +
-      "\n\004size\030\002 \002(\t\022\013\n\003out\030\003 \002(\t\022\014\n\004axis\030\004 \002(\003\022" +
-      "\024\n\005eager\030\005 \001(\010:\005false\"K\n\037BroadcastToComp" +
-      "atibleWithOpConf\022\t\n\001x\030\001 \002(\t\022\022\n\ncompatibl",
-      "e\030\002 \003(\t\022\t\n\001y\030\003 \002(\t\"|\n\035CollectiveBoxingGe" +
-      "nericOpConf\022#\n\003lbi\030\001 \002(\0132\026.oneflow.Logic" +
-      "alBlobId\0226\n\trank_desc\030\002 \002(\0132#.oneflow.bo" +
-      "xing.collective.RankDesc\";\n\024BoxingIdenti" +
-      "tyOpConf\022#\n\003lbi\030\001 \002(\0132\026.oneflow.LogicalB" +
-      "lobId\"\340\001\n\032CollectiveBoxingPackOpConf\022#\n\003" +
-      "lbi\030\001 \002(\0132\026.oneflow.LogicalBlobId\022.\n\020src" +
-      "_sbp_parallel\030\002 \002(\0132\024.oneflow.SbpParalle" +
-      "l\022.\n\020dst_sbp_parallel\030\003 \002(\0132\024.oneflow.Sb" +
-      "pParallel\022\021\n\tnum_ranks\030\004 \002(\003\022*\n\rlogical_",
-      "shape\030\005 \002(\0132\023.oneflow.ShapeProto\"\342\001\n\034Col" +
-      "lectiveBoxingUnpackOpConf\022#\n\003lbi\030\001 \002(\0132\026" +
+      "onf\030\004 \003(\0132\027.oneflow.VariableOpConf\"\227\001\n\022C" +
+      "onstantLikeOpConf\022\014\n\004like\030\001 \002(\t\022\013\n\003out\030\002" +
+      " \002(\t\022$\n\tdata_type\030\003 \001(\0162\021.oneflow.DataTy" +
+      "pe\022\025\n\013int_operand\030\004 \001(\003H\000\022\027\n\rfloat_opera" +
+      "nd\030\005 \001(\001H\000B\020\n\016scalar_operand\"d\n\027SyncDyna",
+      "micResizeOpConf\022\n\n\002in\030\001 \002(\t\022\014\n\004size\030\002 \002(" +
+      "\t\022\013\n\003out\030\003 \002(\t\022\014\n\004axis\030\004 \002(\003\022\024\n\005eager\030\005 " +
+      "\001(\010:\005false\"K\n\037BroadcastToCompatibleWithO" +
+      "pConf\022\t\n\001x\030\001 \002(\t\022\022\n\ncompatible\030\002 \003(\t\022\t\n\001" +
+      "y\030\003 \002(\t\"|\n\035CollectiveBoxingGenericOpConf" +
+      "\022#\n\003lbi\030\001 \002(\0132\026.oneflow.LogicalBlobId\0226\n" +
+      "\trank_desc\030\002 \002(\0132#.oneflow.boxing.collec" +
+      "tive.RankDesc\";\n\024BoxingIdentityOpConf\022#\n" +
+      "\003lbi\030\001 \002(\0132\026.oneflow.LogicalBlobId\"\340\001\n\032C" +
+      "ollectiveBoxingPackOpConf\022#\n\003lbi\030\001 \002(\0132\026",
       ".oneflow.LogicalBlobId\022.\n\020src_sbp_parall" +
       "el\030\002 \002(\0132\024.oneflow.SbpParallel\022.\n\020dst_sb" +
       "p_parallel\030\003 \002(\0132\024.oneflow.SbpParallel\022\021" +
       "\n\tnum_ranks\030\004 \002(\003\022*\n\rlogical_shape\030\005 \002(\013" +
-      "2\023.oneflow.ShapeProto\"\364\002\n\"ImageDecoderRa" +
-      "ndomCropResizeOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030" +
-      "\002 \002(\t\022\024\n\014target_width\030\003 \002(\003\022\025\n\rtarget_he" +
-      "ight\030\004 \002(\003\022\026\n\013num_workers\030\005 \001(\003:\0013\022 \n\016ma",
-      "x_num_pixels\030\006 \001(\003:\01067108864\022\031\n\013warmup_s" +
-      "ize\030\007 \001(\003:\0046400\022\014\n\004seed\030\010 \001(\003\022\030\n\014num_att" +
-      "empts\030\t \001(\003:\00210\022\035\n\017random_area_min\030\n \001(\002" +
-      ":\0040.08\022\032\n\017random_area_max\030\013 \001(\002:\0011\022%\n\027ra" +
-      "ndom_aspect_ratio_min\030\014 \001(\002:\0040.75\022)\n\027ran" +
-      "dom_aspect_ratio_max\030\r \001(\002:\0101.333333\"\202\001\n" +
-      "\021BoxingZerosOpConf\022#\n\003lbi\030\001 \002(\0132\026.oneflo" +
-      "w.LogicalBlobId\022\"\n\005shape\030\002 \002(\0132\023.oneflow" +
-      ".ShapeProto\022$\n\tdata_type\030\003 \002(\0162\021.oneflow" +
-      ".DataType\"\331\033\n\014OperatorConf\022\014\n\004name\030\001 \002(\t",
-      "\022\"\n\ndevice_tag\030\004 \001(\t:\016invalid_device\022\027\n\017" +
-      "ctrl_in_op_name\030\007 \003(\t\022\027\n\017scope_symbol_id" +
-      "\030\010 \001(\003\022\031\n\021stream_index_hint\030\t \001(\r\022\020\n\010pas" +
-      "s_tag\030\n \001(\t\0229\n\022decode_random_conf\030f \001(\0132" +
-      "\033.oneflow.DecodeRandomOpConfH\000\022-\n\014copy_h" +
-      "d_conf\030i \001(\0132\025.oneflow.CopyHdOpConfH\000\0228\n" +
-      "\022copy_comm_net_conf\030j \001(\0132\032.oneflow.Copy" +
-      "CommNetOpConfH\000\022,\n\013boxing_conf\030l \001(\0132\025.o" +
-      "neflow.BoxingOpConfH\000\0220\n\rvariable_conf\030z" +
-      " \001(\0132\027.oneflow.VariableOpConfH\000\022(\n\ttick_",
-      "conf\030| \001(\0132\023.oneflow.TickOpConfH\000\022K\n\034tot" +
-      "al_loss_instance_num_conf\030~ \001(\0132#.oneflo" +
-      "w.TotalLossInstanceNumOpConfH\000\022;\n\023shape_" +
-      "elem_cnt_conf\030\204\001 \001(\0132\033.oneflow.ShapeElem" +
-      "CntOpConfH\000\022=\n\024src_subset_tick_conf\030\205\001 \001" +
-      "(\0132\034.oneflow.SrcSubsetTickOpConfH\000\022=\n\024ds" +
-      "t_subset_tick_conf\030\206\001 \001(\0132\034.oneflow.DstS" +
-      "ubsetTickOpConfH\000\0226\n\020source_tick_conf\030\207\001" +
-      " \001(\0132\031.oneflow.SourceTickOpConfH\000\0222\n\016sin" +
-      "k_tick_conf\030\210\001 \001(\0132\027.oneflow.SinkTickOpC",
-      "onfH\000\022+\n\ninput_conf\030\211\001 \001(\0132\024.oneflow.Inp" +
-      "utOpConfH\000\022-\n\013output_conf\030\212\001 \001(\0132\025.onefl" +
-      "ow.OutputOpConfH\000\022@\n\026wait_and_send_ids_c" +
-      "onf\030\213\001 \001(\0132\035.oneflow.WaitAndSendIdsOpCon" +
-      "fH\000\022<\n\023reentrant_lock_conf\030\214\001 \001(\0132\034.onef" +
-      "low.ReentrantLockOpConfH\000\022>\n\024callback_no" +
-      "tify_conf\030\215\001 \001(\0132\035.oneflow.CallbackNotif" +
-      "yOpConfH\000\022:\n\022foreign_input_conf\030\216\001 \001(\0132\033" +
-      ".oneflow.ForeignInputOpConfH\000\022<\n\023foreign" +
-      "_output_conf\030\217\001 \001(\0132\034.oneflow.ForeignOut",
-      "putOpConfH\000\0220\n\racc_tick_conf\030\220\001 \001(\0132\026.on" +
-      "eflow.AccTickOpConfH\000\022-\n\013return_conf\030\222\001 " +
-      "\001(\0132\025.oneflow.ReturnOpConfH\000\022:\n\022foreign_" +
-      "watch_conf\030\227\001 \001(\0132\033.oneflow.ForeignWatch" +
-      "OpConfH\000\022B\n\026distribute_concat_conf\030\233\001 \001(" +
-      "\0132\037.oneflow.DistributeConcatOpConfH\000\022@\n\025" +
-      "distribute_split_conf\030\234\001 \001(\0132\036.oneflow.D" +
-      "istributeSplitOpConfH\000\022@\n\025distribute_clo" +
-      "ne_conf\030\235\001 \001(\0132\036.oneflow.DistributeClone" +
-      "OpConfH\000\022<\n\023distribute_add_conf\030\236\001 \001(\0132\034",
-      ".oneflow.DistributeAddOpConfH\000\0226\n\020device" +
-      "_tick_conf\030\237\001 \001(\0132\031.oneflow.DeviceTickOp" +
-      "ConfH\000\022A\n\026slice_boxing_copy_conf\030\246\001 \001(\0132" +
-      "\036.oneflow.SliceBoxingCopyOpConfH\000\022?\n\025sli" +
-      "ce_boxing_add_conf\030\247\001 \001(\0132\035.oneflow.Slic" +
-      "eBoxingAddOpConfH\000\022Q\n\036collective_boxing_" +
-      "generic_conf\030\252\001 \001(\0132&.oneflow.Collective" +
-      "BoxingGenericOpConfH\000\022>\n\024boxing_identity" +
-      "_conf\030\253\001 \001(\0132\035.oneflow.BoxingIdentityOpC" +
-      "onfH\000\022K\n\033collective_boxing_pack_conf\030\256\001 ",
-      "\001(\0132#.oneflow.CollectiveBoxingPackOpConf" +
-      "H\000\022O\n\035collective_boxing_unpack_conf\030\257\001 \001" +
-      "(\0132%.oneflow.CollectiveBoxingUnpackOpCon" +
-      "fH\000\0228\n\021boxing_zeros_conf\030\260\001 \001(\0132\032.oneflo" +
-      "w.BoxingZerosOpConfH\000\022)\n\tuser_conf\030\307\001 \001(" +
-      "\0132\023.oneflow.UserOpConfH\000\022>\n\024dynamic_resh" +
-      "ape_conf\030\313\001 \001(\0132\035.oneflow.DynamicReshape" +
-      "OpConfH\000\022G\n\031dynamic_reshape_like_conf\030\237\002" +
-      " \001(\0132!.oneflow.DynamicReshapeLikeOpConfH" +
-      "\000\0221\n\ridentity_conf\030\242\002 \001(\0132\027.oneflow.Iden",
-      "tityOpConfH\000\022)\n\tcase_conf\030\243\002 \001(\0132\023.onefl" +
-      "ow.CaseOpConfH\000\022)\n\tesac_conf\030\244\002 \001(\0132\023.on" +
-      "eflow.EsacOpConfH\000\0224\n\017model_init_conf\030\245\002" +
-      " \001(\0132\030.oneflow.ModelInitOpConfH\000\022-\n\013assi" +
-      "gn_conf\030\250\002 \001(\0132\025.oneflow.AssignOpConfH\000\022" +
-      "4\n\017model_save_conf\030\251\002 \001(\0132\030.oneflow.Mode" +
-      "lSaveOpConfH\000\022K\n\033learning_rate_schedule_" +
-      "conf\030\252\002 \001(\0132#.oneflow.LearningRateSchedu" +
-      "leOpConfH\000\0224\n\017model_load_conf\030\255\002 \001(\0132\030.o" +
-      "neflow.ModelLoadOpConfH\000\022:\n\022constant_lik",
-      "e_conf\030\323\002 \001(\0132\033.oneflow.ConstantLikeOpCo" +
-      "nfH\000\022E\n\030sync_dynamic_resize_conf\030\324\002 \001(\0132" +
-      " .oneflow.SyncDynamicResizeOpConfH\000\022)\n\tc" +
-      "opy_conf\030\327\002 \001(\0132\023.oneflow.CopyOpConfH\000\022?" +
-      "\n\025cast_to_mirrored_conf\030\330\002 \001(\0132\035.oneflow" +
-      ".CastToMirroredOpConfH\000\022C\n\027cast_from_mir" +
-      "rored_conf\030\331\002 \001(\0132\037.oneflow.CastFromMirr" +
-      "oredOpConfH\000\0229\n\022model_init_v2_conf\030\332\002 \001(" +
-      "\0132\032.oneflow.ModelInitV2OpConfH\000\0229\n\022model" +
-      "_load_v2_conf\030\333\002 \001(\0132\032.oneflow.ModelLoad",
-      "V2OpConfH\000\0229\n\022model_save_v2_conf\030\334\002 \001(\0132" +
-      "\032.oneflow.ModelSaveV2OpConfH\000\022]\n%image_d" +
-      "ecoder_random_crop_resize_conf\030\335\002 \001(\0132+." +
-      "oneflow.ImageDecoderRandomCropResizeOpCo" +
-      "nfH\000\0224\n\017xrt_launch_conf\030\232\003 \001(\0132\030.oneflow" +
-      ".XrtLaunchOpConfH\000\022V\n!broadcast_to_compa" +
-      "tible_with_conf\030\215\004 \001(\0132(.oneflow.Broadca" +
-      "stToCompatibleWithOpConfH\000B\t\n\007op_type\"\241\001" +
-      "\n\017OpNameRelations\022R\n\027src_op_name2dst_op_" +
-      "name\030\001 \003(\01321.oneflow.OpNameRelations.Src",
-      "OpName2dstOpNameEntry\032:\n\030SrcOpName2dstOp" +
-      "NameEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"h\n\014OpNameGroups\0228\n\rop_name_group\030\002 \003(\013" +
-      "2!.oneflow.OpNameGroups.OpNameGroup\032\036\n\013O" +
-      "pNameGroup\022\017\n\007op_name\030\001 \003(\t*?\n\016Activatio" +
-      "nType\022\t\n\005kNone\020\000\022\t\n\005kTanH\020\001\022\014\n\010kSigmoid\020" +
-      "\002\022\t\n\005kRelu\020\003B\033\n\031org.oneflow.core.operato" +
-      "r"
+      "2\023.oneflow.ShapeProto\"\342\001\n\034CollectiveBoxi" +
+      "ngUnpackOpConf\022#\n\003lbi\030\001 \002(\0132\026.oneflow.Lo" +
+      "gicalBlobId\022.\n\020src_sbp_parallel\030\002 \002(\0132\024." +
+      "oneflow.SbpParallel\022.\n\020dst_sbp_parallel\030" +
+      "\003 \002(\0132\024.oneflow.SbpParallel\022\021\n\tnum_ranks" +
+      "\030\004 \002(\003\022*\n\rlogical_shape\030\005 \002(\0132\023.oneflow.",
+      "ShapeProto\"\364\002\n\"ImageDecoderRandomCropRes" +
+      "izeOpConf\022\n\n\002in\030\001 \002(\t\022\013\n\003out\030\002 \002(\t\022\024\n\014ta" +
+      "rget_width\030\003 \002(\003\022\025\n\rtarget_height\030\004 \002(\003\022" +
+      "\026\n\013num_workers\030\005 \001(\003:\0013\022 \n\016max_num_pixel" +
+      "s\030\006 \001(\003:\01067108864\022\031\n\013warmup_size\030\007 \001(\003:\004" +
+      "6400\022\014\n\004seed\030\010 \001(\003\022\030\n\014num_attempts\030\t \001(\003" +
+      ":\00210\022\035\n\017random_area_min\030\n \001(\002:\0040.08\022\032\n\017r" +
+      "andom_area_max\030\013 \001(\002:\0011\022%\n\027random_aspect" +
+      "_ratio_min\030\014 \001(\002:\0040.75\022)\n\027random_aspect_" +
+      "ratio_max\030\r \001(\002:\0101.333333\"\202\001\n\021BoxingZero",
+      "sOpConf\022#\n\003lbi\030\001 \002(\0132\026.oneflow.LogicalBl" +
+      "obId\022\"\n\005shape\030\002 \002(\0132\023.oneflow.ShapeProto" +
+      "\022$\n\tdata_type\030\003 \002(\0162\021.oneflow.DataType\"\205" +
+      "\035\n\014OperatorConf\022\014\n\004name\030\001 \002(\t\022\"\n\ndevice_" +
+      "tag\030\004 \001(\t:\016invalid_device\022\027\n\017ctrl_in_op_" +
+      "name\030\007 \003(\t\022\027\n\017scope_symbol_id\030\010 \001(\003\022\031\n\021s" +
+      "tream_index_hint\030\t \001(\r\022\020\n\010pass_tag\030\n \001(\t" +
+      "\0229\n\022decode_random_conf\030f \001(\0132\033.oneflow.D" +
+      "ecodeRandomOpConfH\000\022-\n\014copy_hd_conf\030i \001(" +
+      "\0132\025.oneflow.CopyHdOpConfH\000\0228\n\022copy_comm_",
+      "net_conf\030j \001(\0132\032.oneflow.CopyCommNetOpCo" +
+      "nfH\000\022,\n\013boxing_conf\030l \001(\0132\025.oneflow.Boxi" +
+      "ngOpConfH\000\0220\n\rvariable_conf\030z \001(\0132\027.onef" +
+      "low.VariableOpConfH\000\022(\n\ttick_conf\030| \001(\0132" +
+      "\023.oneflow.TickOpConfH\000\022K\n\034total_loss_ins" +
+      "tance_num_conf\030~ \001(\0132#.oneflow.TotalLoss" +
+      "InstanceNumOpConfH\000\022;\n\023shape_elem_cnt_co" +
+      "nf\030\204\001 \001(\0132\033.oneflow.ShapeElemCntOpConfH\000" +
+      "\022=\n\024src_subset_tick_conf\030\205\001 \001(\0132\034.oneflo" +
+      "w.SrcSubsetTickOpConfH\000\022=\n\024dst_subset_ti",
+      "ck_conf\030\206\001 \001(\0132\034.oneflow.DstSubsetTickOp" +
+      "ConfH\000\0226\n\020source_tick_conf\030\207\001 \001(\0132\031.onef" +
+      "low.SourceTickOpConfH\000\0222\n\016sink_tick_conf" +
+      "\030\210\001 \001(\0132\027.oneflow.SinkTickOpConfH\000\022+\n\nin" +
+      "put_conf\030\211\001 \001(\0132\024.oneflow.InputOpConfH\000\022" +
+      "-\n\013output_conf\030\212\001 \001(\0132\025.oneflow.OutputOp" +
+      "ConfH\000\022@\n\026wait_and_send_ids_conf\030\213\001 \001(\0132" +
+      "\035.oneflow.WaitAndSendIdsOpConfH\000\022<\n\023reen" +
+      "trant_lock_conf\030\214\001 \001(\0132\034.oneflow.Reentra" +
+      "ntLockOpConfH\000\022>\n\024callback_notify_conf\030\215",
+      "\001 \001(\0132\035.oneflow.CallbackNotifyOpConfH\000\022:" +
+      "\n\022foreign_input_conf\030\216\001 \001(\0132\033.oneflow.Fo" +
+      "reignInputOpConfH\000\022<\n\023foreign_output_con" +
+      "f\030\217\001 \001(\0132\034.oneflow.ForeignOutputOpConfH\000" +
+      "\0220\n\racc_tick_conf\030\220\001 \001(\0132\026.oneflow.AccTi" +
+      "ckOpConfH\000\022-\n\013return_conf\030\222\001 \001(\0132\025.onefl" +
+      "ow.ReturnOpConfH\000\022:\n\022foreign_watch_conf\030" +
+      "\227\001 \001(\0132\033.oneflow.ForeignWatchOpConfH\000\022B\n" +
+      "\026distribute_concat_conf\030\233\001 \001(\0132\037.oneflow" +
+      ".DistributeConcatOpConfH\000\022@\n\025distribute_",
+      "split_conf\030\234\001 \001(\0132\036.oneflow.DistributeSp" +
+      "litOpConfH\000\022@\n\025distribute_clone_conf\030\235\001 " +
+      "\001(\0132\036.oneflow.DistributeCloneOpConfH\000\022<\n" +
+      "\023distribute_add_conf\030\236\001 \001(\0132\034.oneflow.Di" +
+      "stributeAddOpConfH\000\0226\n\020device_tick_conf\030" +
+      "\237\001 \001(\0132\031.oneflow.DeviceTickOpConfH\000\022A\n\026s" +
+      "lice_boxing_copy_conf\030\246\001 \001(\0132\036.oneflow.S" +
+      "liceBoxingCopyOpConfH\000\022?\n\025slice_boxing_a" +
+      "dd_conf\030\247\001 \001(\0132\035.oneflow.SliceBoxingAddO" +
+      "pConfH\000\022Q\n\036collective_boxing_generic_con",
+      "f\030\252\001 \001(\0132&.oneflow.CollectiveBoxingGener" +
+      "icOpConfH\000\022>\n\024boxing_identity_conf\030\253\001 \001(" +
+      "\0132\035.oneflow.BoxingIdentityOpConfH\000\022K\n\033co" +
+      "llective_boxing_pack_conf\030\256\001 \001(\0132#.onefl" +
+      "ow.CollectiveBoxingPackOpConfH\000\022O\n\035colle" +
+      "ctive_boxing_unpack_conf\030\257\001 \001(\0132%.oneflo" +
+      "w.CollectiveBoxingUnpackOpConfH\000\0228\n\021boxi" +
+      "ng_zeros_conf\030\260\001 \001(\0132\032.oneflow.BoxingZer" +
+      "osOpConfH\000\022)\n\tuser_conf\030\307\001 \001(\0132\023.oneflow" +
+      ".UserOpConfH\000\022>\n\024dynamic_reshape_conf\030\313\001",
+      " \001(\0132\035.oneflow.DynamicReshapeOpConfH\000\022G\n" +
+      "\031dynamic_reshape_like_conf\030\237\002 \001(\0132!.onef" +
+      "low.DynamicReshapeLikeOpConfH\000\0221\n\ridenti" +
+      "ty_conf\030\242\002 \001(\0132\027.oneflow.IdentityOpConfH" +
+      "\000\022)\n\tcase_conf\030\243\002 \001(\0132\023.oneflow.CaseOpCo" +
+      "nfH\000\022)\n\tesac_conf\030\244\002 \001(\0132\023.oneflow.EsacO" +
+      "pConfH\000\0224\n\017model_init_conf\030\245\002 \001(\0132\030.onef" +
+      "low.ModelInitOpConfH\000\022-\n\013assign_conf\030\250\002 " +
+      "\001(\0132\025.oneflow.AssignOpConfH\000\0224\n\017model_sa" +
+      "ve_conf\030\251\002 \001(\0132\030.oneflow.ModelSaveOpConf",
+      "H\000\022K\n\033learning_rate_schedule_conf\030\252\002 \001(\013" +
+      "2#.oneflow.LearningRateScheduleOpConfH\000\022" +
+      "4\n\017model_load_conf\030\255\002 \001(\0132\030.oneflow.Mode" +
+      "lLoadOpConfH\000\022:\n\022constant_like_conf\030\323\002 \001" +
+      "(\0132\033.oneflow.ConstantLikeOpConfH\000\022E\n\030syn" +
+      "c_dynamic_resize_conf\030\324\002 \001(\0132 .oneflow.S" +
+      "yncDynamicResizeOpConfH\000\022)\n\tcopy_conf\030\327\002" +
+      " \001(\0132\023.oneflow.CopyOpConfH\000\022?\n\025cast_to_m" +
+      "irrored_conf\030\330\002 \001(\0132\035.oneflow.CastToMirr" +
+      "oredOpConfH\000\022C\n\027cast_from_mirrored_conf\030",
+      "\331\002 \001(\0132\037.oneflow.CastFromMirroredOpConfH" +
+      "\000\0229\n\022model_init_v2_conf\030\332\002 \001(\0132\032.oneflow" +
+      ".ModelInitV2OpConfH\000\0229\n\022model_load_v2_co" +
+      "nf\030\333\002 \001(\0132\032.oneflow.ModelLoadV2OpConfH\000\022" +
+      "9\n\022model_save_v2_conf\030\334\002 \001(\0132\032.oneflow.M" +
+      "odelSaveV2OpConfH\000\022]\n%image_decoder_rand" +
+      "om_crop_resize_conf\030\335\002 \001(\0132+.oneflow.Ima" +
+      "geDecoderRandomCropResizeOpConfH\000\0224\n\017xrt" +
+      "_launch_conf\030\232\003 \001(\0132\030.oneflow.XrtLaunchO" +
+      "pConfH\000\022V\n!broadcast_to_compatible_with_",
+      "conf\030\215\004 \001(\0132(.oneflow.BroadcastToCompati" +
+      "bleWithOpConfH\000\0224\n\017feed_input_conf\030\330\004 \001(" +
+      "\0132\030.oneflow.FeedInputOpConfH\000\022:\n\022feed_va" +
+      "riable_conf\030\331\004 \001(\0132\033.oneflow.FeedVariabl" +
+      "eOpConfH\000\0228\n\021fetch_output_conf\030\332\004 \001(\0132\032." +
+      "oneflow.FetchOutputOpConfH\000B\t\n\007op_type\"\241" +
+      "\001\n\017OpNameRelations\022R\n\027src_op_name2dst_op" +
+      "_name\030\001 \003(\01321.oneflow.OpNameRelations.Sr" +
+      "cOpName2dstOpNameEntry\032:\n\030SrcOpName2dstO" +
+      "pNameEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002",
+      "8\001\"h\n\014OpNameGroups\0228\n\rop_name_group\030\002 \003(" +
+      "\0132!.oneflow.OpNameGroups.OpNameGroup\032\036\n\013" +
+      "OpNameGroup\022\017\n\007op_name\030\001 \003(\t*?\n\016Activati" +
+      "onType\022\t\n\005kNone\020\000\022\t\n\005kTanH\020\001\022\014\n\010kSigmoid" +
+      "\020\002\022\t\n\005kRelu\020\003B\033\n\031org.oneflow.core.operat" +
+      "or"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -78967,224 +82044,242 @@ public final class OpConf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DynamicReshapeLikeOpConf_descriptor,
         new java.lang.String[] { "X", "Y", "Like", });
-    internal_static_oneflow_InputOpConf_descriptor =
+    internal_static_oneflow_FeedInputOpConf_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_oneflow_FeedInputOpConf_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_oneflow_FeedInputOpConf_descriptor,
+        new java.lang.String[] { "In0", "Out0", });
+    internal_static_oneflow_FeedVariableOpConf_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_oneflow_FeedVariableOpConf_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_oneflow_FeedVariableOpConf_descriptor,
+        new java.lang.String[] { "In0", "Out0", });
+    internal_static_oneflow_FetchOutputOpConf_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_oneflow_FetchOutputOpConf_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_oneflow_FetchOutputOpConf_descriptor,
+        new java.lang.String[] { "In0", "Out0", });
+    internal_static_oneflow_InputOpConf_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_oneflow_InputOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_InputOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "BlobConf", });
     internal_static_oneflow_ForeignInputOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_oneflow_ForeignInputOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ForeignInputOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "BlobConf", "OfblobBufferName", });
     internal_static_oneflow_ReturnOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_oneflow_ReturnOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ReturnOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_OutputOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_oneflow_OutputOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OutputOpConf_descriptor,
         new java.lang.String[] { "In", "Out", "BlobConf", });
     internal_static_oneflow_ForeignOutputOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_oneflow_ForeignOutputOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ForeignOutputOpConf_descriptor,
         new java.lang.String[] { "In", "OfblobBufferName", });
     internal_static_oneflow_ForeignWatchOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_oneflow_ForeignWatchOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ForeignWatchOpConf_descriptor,
         new java.lang.String[] { "In", "HandlerUuid", });
     internal_static_oneflow_VariableOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_oneflow_VariableOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_VariableOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "Shape", "DataType", "Initializer", "InitializeWithSnapshot", "ModelName", "RandomSeed", "Regularizer", "Trainable", "ParallelDistribution", "Initialize", });
     internal_static_oneflow_DecodeRandomOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_oneflow_DecodeRandomOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DecodeRandomOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "Shape", "DataType", "DataInitializer", "BatchSize", });
     internal_static_oneflow_TickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_oneflow_TickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_TickOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", });
     internal_static_oneflow_DeviceTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_oneflow_DeviceTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DeviceTickOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "TimeShape", });
     internal_static_oneflow_WaitAndSendIdsOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_oneflow_WaitAndSendIdsOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_WaitAndSendIdsOpConf_descriptor,
         new java.lang.String[] { "Out", "WaitBufferName", "IdList", "DataType", });
     internal_static_oneflow_CallbackNotifyOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_oneflow_CallbackNotifyOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CallbackNotifyOpConf_descriptor,
         new java.lang.String[] { "In", "CallbackBufferName", });
     internal_static_oneflow_ReentrantLockOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_oneflow_ReentrantLockOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ReentrantLockOpConf_descriptor,
         new java.lang.String[] { "Start", "End", "Out", "LockId2IntersectingLockIds", });
     internal_static_oneflow_SrcSubsetTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_oneflow_SrcSubsetTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SrcSubsetTickOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_DstSubsetTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_oneflow_DstSubsetTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_DstSubsetTickOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_SourceTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_oneflow_SourceTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SourceTickOpConf_descriptor,
         new java.lang.String[] { "Out", });
     internal_static_oneflow_SinkTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_oneflow_SinkTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SinkTickOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", });
     internal_static_oneflow_TotalLossInstanceNumOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_oneflow_TotalLossInstanceNumOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_TotalLossInstanceNumOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_ShapeElemCntAxisConf_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_oneflow_ShapeElemCntAxisConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ShapeElemCntAxisConf_descriptor,
         new java.lang.String[] { "Axis", });
     internal_static_oneflow_ShapeElemCntRangeAxisConf_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_oneflow_ShapeElemCntRangeAxisConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ShapeElemCntRangeAxisConf_descriptor,
         new java.lang.String[] { "BeginAxis", "EndAxis", });
     internal_static_oneflow_ShapeElemCntOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_oneflow_ShapeElemCntOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ShapeElemCntOpConf_descriptor,
         new java.lang.String[] { "X", "Y", "DataType", "ExcludeAxisConf", "IncludeAxisConf", "RangeAxisConf", "AxisConf", });
     internal_static_oneflow_AccTickOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_oneflow_AccTickOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_AccTickOpConf_descriptor,
         new java.lang.String[] { "One", "Acc", "MaxAccNum", });
     internal_static_oneflow_ModelInitOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_oneflow_ModelInitOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelInitOpConf_descriptor,
         new java.lang.String[] { "Tick", "Out", "VariableOpName", "OriginalVariableConf", });
     internal_static_oneflow_ModelLoadOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_oneflow_ModelLoadOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelLoadOpConf_descriptor,
         new java.lang.String[] { "Path", "Out", "VariableOpName", "OriginalVariableConf", });
     internal_static_oneflow_IdentityOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_oneflow_IdentityOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_IdentityOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_CopyOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_oneflow_CopyOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CopyOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_CastToMirroredOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_oneflow_CastToMirroredOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CastToMirroredOpConf_descriptor,
         new java.lang.String[] { "In", "Out", "SbpParallel", });
     internal_static_oneflow_CastFromMirroredOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_oneflow_CastFromMirroredOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CastFromMirroredOpConf_descriptor,
         new java.lang.String[] { "In", "Out", "SbpParallel", });
     internal_static_oneflow_CaseOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_oneflow_CaseOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CaseOpConf_descriptor,
         new java.lang.String[] { "In", "Out", });
     internal_static_oneflow_EsacOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_oneflow_EsacOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_EsacOpConf_descriptor,
         new java.lang.String[] { "In", "Out", "DataType", });
     internal_static_oneflow_AssignOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_oneflow_AssignOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_AssignOpConf_descriptor,
         new java.lang.String[] { "Ref", "Value", });
     internal_static_oneflow_ModelSaveOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_oneflow_ModelSaveOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelSaveOpConf_descriptor,
         new java.lang.String[] { "Path", "In", "Key", });
     internal_static_oneflow_LearningRateScheduleOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_oneflow_LearningRateScheduleOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_LearningRateScheduleOpConf_descriptor,
         new java.lang.String[] { "TrainStep", "Out", "LearningRate", "LearningRateDecay", "WarmupConf", });
     internal_static_oneflow_SliceBoxingConf_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_oneflow_SliceBoxingConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SliceBoxingConf_descriptor,
         new java.lang.String[] { "Lbi", "InSlice", "OutSlice", "OutShape", });
     internal_static_oneflow_SliceBoxingCopyOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_oneflow_SliceBoxingCopyOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SliceBoxingCopyOpConf_descriptor,
         new java.lang.String[] { "SliceBoxingConf", });
     internal_static_oneflow_SliceBoxingAddOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_oneflow_SliceBoxingAddOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SliceBoxingAddOpConf_descriptor,
         new java.lang.String[] { "SliceBoxingConf", });
     internal_static_oneflow_XrtLaunchOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_oneflow_XrtLaunchOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_XrtLaunchOpConf_descriptor,
@@ -79226,85 +82321,85 @@ public final class OpConf {
         internal_static_oneflow_XrtLaunchOpConf_Lbn2logicalBlobDescEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_ModelInitV2OpConf_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_oneflow_ModelInitV2OpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelInitV2OpConf_descriptor,
         new java.lang.String[] { "Ref", "VariableOpName", "OriginalVariableConf", });
     internal_static_oneflow_ModelLoadV2OpConf_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_oneflow_ModelLoadV2OpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelLoadV2OpConf_descriptor,
         new java.lang.String[] { "Path", "Ref", "VariableOpName", "OriginalVariableConf", });
     internal_static_oneflow_ModelSaveV2OpConf_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_oneflow_ModelSaveV2OpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ModelSaveV2OpConf_descriptor,
         new java.lang.String[] { "Path", "In", "VariableOpName", "OriginalVariableConf", });
     internal_static_oneflow_ConstantLikeOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_oneflow_ConstantLikeOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ConstantLikeOpConf_descriptor,
         new java.lang.String[] { "Like", "Out", "DataType", "IntOperand", "FloatOperand", "ScalarOperand", });
     internal_static_oneflow_SyncDynamicResizeOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_oneflow_SyncDynamicResizeOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_SyncDynamicResizeOpConf_descriptor,
         new java.lang.String[] { "In", "Size", "Out", "Axis", "Eager", });
     internal_static_oneflow_BroadcastToCompatibleWithOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_oneflow_BroadcastToCompatibleWithOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_BroadcastToCompatibleWithOpConf_descriptor,
         new java.lang.String[] { "X", "Compatible", "Y", });
     internal_static_oneflow_CollectiveBoxingGenericOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_oneflow_CollectiveBoxingGenericOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CollectiveBoxingGenericOpConf_descriptor,
         new java.lang.String[] { "Lbi", "RankDesc", });
     internal_static_oneflow_BoxingIdentityOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_oneflow_BoxingIdentityOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_BoxingIdentityOpConf_descriptor,
         new java.lang.String[] { "Lbi", });
     internal_static_oneflow_CollectiveBoxingPackOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_oneflow_CollectiveBoxingPackOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CollectiveBoxingPackOpConf_descriptor,
         new java.lang.String[] { "Lbi", "SrcSbpParallel", "DstSbpParallel", "NumRanks", "LogicalShape", });
     internal_static_oneflow_CollectiveBoxingUnpackOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_oneflow_CollectiveBoxingUnpackOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CollectiveBoxingUnpackOpConf_descriptor,
         new java.lang.String[] { "Lbi", "SrcSbpParallel", "DstSbpParallel", "NumRanks", "LogicalShape", });
     internal_static_oneflow_ImageDecoderRandomCropResizeOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_oneflow_ImageDecoderRandomCropResizeOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ImageDecoderRandomCropResizeOpConf_descriptor,
         new java.lang.String[] { "In", "Out", "TargetWidth", "TargetHeight", "NumWorkers", "MaxNumPixels", "WarmupSize", "Seed", "NumAttempts", "RandomAreaMin", "RandomAreaMax", "RandomAspectRatioMin", "RandomAspectRatioMax", });
     internal_static_oneflow_BoxingZerosOpConf_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_oneflow_BoxingZerosOpConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_BoxingZerosOpConf_descriptor,
         new java.lang.String[] { "Lbi", "Shape", "DataType", });
     internal_static_oneflow_OperatorConf_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_oneflow_OperatorConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OperatorConf_descriptor,
-        new java.lang.String[] { "Name", "DeviceTag", "CtrlInOpName", "ScopeSymbolId", "StreamIndexHint", "PassTag", "DecodeRandomConf", "CopyHdConf", "CopyCommNetConf", "BoxingConf", "VariableConf", "TickConf", "TotalLossInstanceNumConf", "ShapeElemCntConf", "SrcSubsetTickConf", "DstSubsetTickConf", "SourceTickConf", "SinkTickConf", "InputConf", "OutputConf", "WaitAndSendIdsConf", "ReentrantLockConf", "CallbackNotifyConf", "ForeignInputConf", "ForeignOutputConf", "AccTickConf", "ReturnConf", "ForeignWatchConf", "DistributeConcatConf", "DistributeSplitConf", "DistributeCloneConf", "DistributeAddConf", "DeviceTickConf", "SliceBoxingCopyConf", "SliceBoxingAddConf", "CollectiveBoxingGenericConf", "BoxingIdentityConf", "CollectiveBoxingPackConf", "CollectiveBoxingUnpackConf", "BoxingZerosConf", "UserConf", "DynamicReshapeConf", "DynamicReshapeLikeConf", "IdentityConf", "CaseConf", "EsacConf", "ModelInitConf", "AssignConf", "ModelSaveConf", "LearningRateScheduleConf", "ModelLoadConf", "ConstantLikeConf", "SyncDynamicResizeConf", "CopyConf", "CastToMirroredConf", "CastFromMirroredConf", "ModelInitV2Conf", "ModelLoadV2Conf", "ModelSaveV2Conf", "ImageDecoderRandomCropResizeConf", "XrtLaunchConf", "BroadcastToCompatibleWithConf", "OpType", });
+        new java.lang.String[] { "Name", "DeviceTag", "CtrlInOpName", "ScopeSymbolId", "StreamIndexHint", "PassTag", "DecodeRandomConf", "CopyHdConf", "CopyCommNetConf", "BoxingConf", "VariableConf", "TickConf", "TotalLossInstanceNumConf", "ShapeElemCntConf", "SrcSubsetTickConf", "DstSubsetTickConf", "SourceTickConf", "SinkTickConf", "InputConf", "OutputConf", "WaitAndSendIdsConf", "ReentrantLockConf", "CallbackNotifyConf", "ForeignInputConf", "ForeignOutputConf", "AccTickConf", "ReturnConf", "ForeignWatchConf", "DistributeConcatConf", "DistributeSplitConf", "DistributeCloneConf", "DistributeAddConf", "DeviceTickConf", "SliceBoxingCopyConf", "SliceBoxingAddConf", "CollectiveBoxingGenericConf", "BoxingIdentityConf", "CollectiveBoxingPackConf", "CollectiveBoxingUnpackConf", "BoxingZerosConf", "UserConf", "DynamicReshapeConf", "DynamicReshapeLikeConf", "IdentityConf", "CaseConf", "EsacConf", "ModelInitConf", "AssignConf", "ModelSaveConf", "LearningRateScheduleConf", "ModelLoadConf", "ConstantLikeConf", "SyncDynamicResizeConf", "CopyConf", "CastToMirroredConf", "CastFromMirroredConf", "ModelInitV2Conf", "ModelLoadV2Conf", "ModelSaveV2Conf", "ImageDecoderRandomCropResizeConf", "XrtLaunchConf", "BroadcastToCompatibleWithConf", "FeedInputConf", "FeedVariableConf", "FetchOutputConf", "OpType", });
     internal_static_oneflow_OpNameRelations_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_oneflow_OpNameRelations_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OpNameRelations_descriptor,
@@ -79316,7 +82411,7 @@ public final class OpConf {
         internal_static_oneflow_OpNameRelations_SrcOpName2dstOpNameEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_OpNameGroups_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_oneflow_OpNameGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OpNameGroups_descriptor,

@@ -1672,19 +1672,6 @@ public final class CtrlBootstrap {
      * <code>optional int64 node_size = 6 [default = -1];</code>
      */
     long getNodeSize();
-
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    boolean hasNumProcessPerNode();
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode();
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder();
   }
   /**
    * Protobuf type {@code oneflow.BootstrapConf}
@@ -1770,19 +1757,6 @@ public final class CtrlBootstrap {
             case 48: {
               bitField0_ |= 0x00000020;
               nodeSize_ = input.readInt64();
-              break;
-            }
-            case 58: {
-              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000040) == 0x00000040)) {
-                subBuilder = numProcessPerNode_.toBuilder();
-              }
-              numProcessPerNode_ = input.readMessage(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(numProcessPerNode_);
-                numProcessPerNode_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000040;
               break;
             }
           }
@@ -1933,27 +1907,6 @@ public final class CtrlBootstrap {
       return nodeSize_;
     }
 
-    public static final int NUM_PROCESS_PER_NODE_FIELD_NUMBER = 7;
-    private org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode numProcessPerNode_;
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    public boolean hasNumProcessPerNode() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode() {
-      return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
-    }
-    /**
-     * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-     */
-    public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder() {
-      return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1975,12 +1928,6 @@ public final class CtrlBootstrap {
       if (!getMasterAddr().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
-      }
-      if (hasNumProcessPerNode()) {
-        if (!getNumProcessPerNode().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -2005,9 +1952,6 @@ public final class CtrlBootstrap {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt64(6, nodeSize_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeMessage(7, getNumProcessPerNode());
       }
       unknownFields.writeTo(output);
     }
@@ -2039,10 +1983,6 @@ public final class CtrlBootstrap {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, nodeSize_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getNumProcessPerNode());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2091,11 +2031,6 @@ public final class CtrlBootstrap {
         result = result && (getNodeSize()
             == other.getNodeSize());
       }
-      result = result && (hasNumProcessPerNode() == other.hasNumProcessPerNode());
-      if (hasNumProcessPerNode()) {
-        result = result && getNumProcessPerNode()
-            .equals(other.getNumProcessPerNode());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2133,10 +2068,6 @@ public final class CtrlBootstrap {
         hash = (37 * hash) + NODE_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getNodeSize());
-      }
-      if (hasNumProcessPerNode()) {
-        hash = (37 * hash) + NUM_PROCESS_PER_NODE_FIELD_NUMBER;
-        hash = (53 * hash) + getNumProcessPerNode().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2253,7 +2184,6 @@ public final class CtrlBootstrap {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getMasterAddrFieldBuilder();
-          getNumProcessPerNodeFieldBuilder();
         }
       }
       public Builder clear() {
@@ -2274,12 +2204,6 @@ public final class CtrlBootstrap {
         bitField0_ = (bitField0_ & ~0x00000010);
         nodeSize_ = -1L;
         bitField0_ = (bitField0_ & ~0x00000020);
-        if (numProcessPerNodeBuilder_ == null) {
-          numProcessPerNode_ = null;
-        } else {
-          numProcessPerNodeBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -2332,14 +2256,6 @@ public final class CtrlBootstrap {
           to_bitField0_ |= 0x00000020;
         }
         result.nodeSize_ = nodeSize_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        if (numProcessPerNodeBuilder_ == null) {
-          result.numProcessPerNode_ = numProcessPerNode_;
-        } else {
-          result.numProcessPerNode_ = numProcessPerNodeBuilder_.build();
-        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2402,9 +2318,6 @@ public final class CtrlBootstrap {
         if (other.hasNodeSize()) {
           setNodeSize(other.getNodeSize());
         }
-        if (other.hasNumProcessPerNode()) {
-          mergeNumProcessPerNode(other.getNumProcessPerNode());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2422,11 +2335,6 @@ public final class CtrlBootstrap {
         }
         if (!getMasterAddr().isInitialized()) {
           return false;
-        }
-        if (hasNumProcessPerNode()) {
-          if (!getNumProcessPerNode().isInitialized()) {
-            return false;
-          }
         }
         return true;
       }
@@ -2770,124 +2678,6 @@ public final class CtrlBootstrap {
         nodeSize_ = -1L;
         onChanged();
         return this;
-      }
-
-      private org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode numProcessPerNode_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder> numProcessPerNodeBuilder_;
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public boolean hasNumProcessPerNode() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode getNumProcessPerNode() {
-        if (numProcessPerNodeBuilder_ == null) {
-          return numProcessPerNode_ == null ? org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
-        } else {
-          return numProcessPerNodeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public Builder setNumProcessPerNode(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode value) {
-        if (numProcessPerNodeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          numProcessPerNode_ = value;
-          onChanged();
-        } else {
-          numProcessPerNodeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public Builder setNumProcessPerNode(
-          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder builderForValue) {
-        if (numProcessPerNodeBuilder_ == null) {
-          numProcessPerNode_ = builderForValue.build();
-          onChanged();
-        } else {
-          numProcessPerNodeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public Builder mergeNumProcessPerNode(org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode value) {
-        if (numProcessPerNodeBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              numProcessPerNode_ != null &&
-              numProcessPerNode_ != org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance()) {
-            numProcessPerNode_ =
-              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.newBuilder(numProcessPerNode_).mergeFrom(value).buildPartial();
-          } else {
-            numProcessPerNode_ = value;
-          }
-          onChanged();
-        } else {
-          numProcessPerNodeBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public Builder clearNumProcessPerNode() {
-        if (numProcessPerNodeBuilder_ == null) {
-          numProcessPerNode_ = null;
-          onChanged();
-        } else {
-          numProcessPerNodeBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder getNumProcessPerNodeBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getNumProcessPerNodeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      public org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder getNumProcessPerNodeOrBuilder() {
-        if (numProcessPerNodeBuilder_ != null) {
-          return numProcessPerNodeBuilder_.getMessageOrBuilder();
-        } else {
-          return numProcessPerNode_ == null ?
-              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.getDefaultInstance() : numProcessPerNode_;
-        }
-      }
-      /**
-       * <code>optional .oneflow.NumProcessPerNode num_process_per_node = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder> 
-          getNumProcessPerNodeFieldBuilder() {
-        if (numProcessPerNodeBuilder_ == null) {
-          numProcessPerNodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNode.Builder, org.oneflow.core.control.CtrlBootstrap.NumProcessPerNodeOrBuilder>(
-                  getNumProcessPerNode(),
-                  getParentForChildren(),
-                  isClean());
-          numProcessPerNode_ = null;
-        }
-        return numProcessPerNodeBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3445,14 +3235,12 @@ public final class CtrlBootstrap {
       "oto\022\007oneflow\"%\n\007Address\022\014\n\004host\030\001 \002(\t\022\014\n" +
       "\004port\030\002 \002(\005\"R\n\nProcessCtx\022#\n\tctrl_addr\030\001" +
       " \003(\0132\020.oneflow.Address\022\014\n\004rank\030\002 \002(\003\022\021\n\t" +
-      "node_size\030\003 \002(\003\"\316\001\n\rBootstrapConf\022%\n\013mas" +
+      "node_size\030\003 \002(\003\"\224\001\n\rBootstrapConf\022%\n\013mas" +
       "ter_addr\030\001 \002(\0132\020.oneflow.Address\022\014\n\004rank" +
       "\030\002 \002(\003\022\022\n\nworld_size\030\003 \002(\003\022\014\n\004host\030\004 \001(\t" +
       "\022\025\n\tctrl_port\030\005 \001(\005:\002-1\022\025\n\tnode_size\030\006 \001" +
-      "(\003:\002-1\0228\n\024num_process_per_node\030\007 \001(\0132\032.o" +
-      "neflow.NumProcessPerNode\"\"\n\021NumProcessPe",
-      "rNode\022\r\n\005value\030\001 \002(\003B\032\n\030org.oneflow.core" +
-      ".control"
+      "(\003:\002-1\"\"\n\021NumProcessPerNode\022\r\n\005value\030\001 \002" +
+      "(\003B\032\n\030org.oneflow.core.control"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3483,7 +3271,7 @@ public final class CtrlBootstrap {
     internal_static_oneflow_BootstrapConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_BootstrapConf_descriptor,
-        new java.lang.String[] { "MasterAddr", "Rank", "WorldSize", "Host", "CtrlPort", "NodeSize", "NumProcessPerNode", });
+        new java.lang.String[] { "MasterAddr", "Rank", "WorldSize", "Host", "CtrlPort", "NodeSize", });
     internal_static_oneflow_NumProcessPerNode_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_oneflow_NumProcessPerNode_fieldAccessorTable = new

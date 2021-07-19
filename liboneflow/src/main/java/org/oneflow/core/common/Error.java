@@ -19239,6 +19239,379 @@ public final class Error {
 
   }
 
+  public interface IndexErrorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oneflow.IndexError)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code oneflow.IndexError}
+   */
+  public  static final class IndexError extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oneflow.IndexError)
+      IndexErrorOrBuilder {
+    // Use IndexError.newBuilder() to construct.
+    private IndexError(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IndexError() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IndexError(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.oneflow.core.common.Error.internal_static_oneflow_IndexError_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.oneflow.core.common.Error.internal_static_oneflow_IndexError_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.oneflow.core.common.Error.IndexError.class, org.oneflow.core.common.Error.IndexError.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.oneflow.core.common.Error.IndexError)) {
+        return super.equals(obj);
+      }
+      org.oneflow.core.common.Error.IndexError other = (org.oneflow.core.common.Error.IndexError) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.oneflow.core.common.Error.IndexError parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.oneflow.core.common.Error.IndexError prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oneflow.IndexError}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oneflow.IndexError)
+        org.oneflow.core.common.Error.IndexErrorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.oneflow.core.common.Error.internal_static_oneflow_IndexError_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.oneflow.core.common.Error.internal_static_oneflow_IndexError_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.oneflow.core.common.Error.IndexError.class, org.oneflow.core.common.Error.IndexError.Builder.class);
+      }
+
+      // Construct using org.oneflow.core.common.Error.IndexError.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.oneflow.core.common.Error.internal_static_oneflow_IndexError_descriptor;
+      }
+
+      public org.oneflow.core.common.Error.IndexError getDefaultInstanceForType() {
+        return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+      }
+
+      public org.oneflow.core.common.Error.IndexError build() {
+        org.oneflow.core.common.Error.IndexError result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.oneflow.core.common.Error.IndexError buildPartial() {
+        org.oneflow.core.common.Error.IndexError result = new org.oneflow.core.common.Error.IndexError(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.oneflow.core.common.Error.IndexError) {
+          return mergeFrom((org.oneflow.core.common.Error.IndexError)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.oneflow.core.common.Error.IndexError other) {
+        if (other == org.oneflow.core.common.Error.IndexError.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.oneflow.core.common.Error.IndexError parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.oneflow.core.common.Error.IndexError) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oneflow.IndexError)
+    }
+
+    // @@protoc_insertion_point(class_scope:oneflow.IndexError)
+    private static final org.oneflow.core.common.Error.IndexError DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.oneflow.core.common.Error.IndexError();
+    }
+
+    public static org.oneflow.core.common.Error.IndexError getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IndexError>
+        PARSER = new com.google.protobuf.AbstractParser<IndexError>() {
+      public IndexError parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IndexError(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IndexError> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IndexError> getParserForType() {
+      return PARSER;
+    }
+
+    public org.oneflow.core.common.Error.IndexError getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ErrorProtoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oneflow.ErrorProto)
       com.google.protobuf.MessageOrBuilder {
@@ -19489,6 +19862,19 @@ public final class Error {
      * <code>optional .oneflow.ValueError value_error = 27;</code>
      */
     org.oneflow.core.common.Error.ValueErrorOrBuilder getValueErrorOrBuilder();
+
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    boolean hasIndexError();
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    org.oneflow.core.common.Error.IndexError getIndexError();
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    org.oneflow.core.common.Error.IndexErrorOrBuilder getIndexErrorOrBuilder();
 
     /**
      * <code>optional .oneflow.JobNameExistError job_name_exist_error = 100;</code>
@@ -20042,6 +20428,20 @@ public final class Error {
               errorTypeCase_ = 27;
               break;
             }
+            case 226: {
+              org.oneflow.core.common.Error.IndexError.Builder subBuilder = null;
+              if (errorTypeCase_ == 28) {
+                subBuilder = ((org.oneflow.core.common.Error.IndexError) errorType_).toBuilder();
+              }
+              errorType_ =
+                  input.readMessage(org.oneflow.core.common.Error.IndexError.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.oneflow.core.common.Error.IndexError) errorType_);
+                errorType_ = subBuilder.buildPartial();
+              }
+              errorTypeCase_ = 28;
+              break;
+            }
             case 802: {
               org.oneflow.core.common.Error.JobNameExistError.Builder subBuilder = null;
               if (errorTypeCase_ == 100) {
@@ -20384,6 +20784,7 @@ public final class Error {
       JOB_SET_EMPTY_ERROR(25),
       DEVICE_TAG_NOT_FOUND_ERROR(26),
       VALUE_ERROR(27),
+      INDEX_ERROR(28),
       JOB_NAME_EXIST_ERROR(100),
       JOB_NAME_EMPTY_ERROR(101),
       JOB_NAME_NOT_EQUAL_ERROR(102),
@@ -20435,6 +20836,7 @@ public final class Error {
           case 25: return JOB_SET_EMPTY_ERROR;
           case 26: return DEVICE_TAG_NOT_FOUND_ERROR;
           case 27: return VALUE_ERROR;
+          case 28: return INDEX_ERROR;
           case 100: return JOB_NAME_EXIST_ERROR;
           case 101: return JOB_NAME_EMPTY_ERROR;
           case 102: return JOB_NAME_NOT_EQUAL_ERROR;
@@ -20978,6 +21380,32 @@ public final class Error {
          return (org.oneflow.core.common.Error.ValueError) errorType_;
       }
       return org.oneflow.core.common.Error.ValueError.getDefaultInstance();
+    }
+
+    public static final int INDEX_ERROR_FIELD_NUMBER = 28;
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    public boolean hasIndexError() {
+      return errorTypeCase_ == 28;
+    }
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    public org.oneflow.core.common.Error.IndexError getIndexError() {
+      if (errorTypeCase_ == 28) {
+         return (org.oneflow.core.common.Error.IndexError) errorType_;
+      }
+      return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+    }
+    /**
+     * <code>optional .oneflow.IndexError index_error = 28;</code>
+     */
+    public org.oneflow.core.common.Error.IndexErrorOrBuilder getIndexErrorOrBuilder() {
+      if (errorTypeCase_ == 28) {
+         return (org.oneflow.core.common.Error.IndexError) errorType_;
+      }
+      return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
     }
 
     public static final int JOB_NAME_EXIST_ERROR_FIELD_NUMBER = 100;
@@ -21610,6 +22038,9 @@ public final class Error {
       if (errorTypeCase_ == 27) {
         output.writeMessage(27, (org.oneflow.core.common.Error.ValueError) errorType_);
       }
+      if (errorTypeCase_ == 28) {
+        output.writeMessage(28, (org.oneflow.core.common.Error.IndexError) errorType_);
+      }
       if (errorTypeCase_ == 100) {
         output.writeMessage(100, (org.oneflow.core.common.Error.JobNameExistError) errorType_);
       }
@@ -21750,6 +22181,10 @@ public final class Error {
       if (errorTypeCase_ == 27) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(27, (org.oneflow.core.common.Error.ValueError) errorType_);
+      }
+      if (errorTypeCase_ == 28) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, (org.oneflow.core.common.Error.IndexError) errorType_);
       }
       if (errorTypeCase_ == 100) {
         size += com.google.protobuf.CodedOutputStream
@@ -21928,6 +22363,10 @@ public final class Error {
           result = result && getValueError()
               .equals(other.getValueError());
           break;
+        case 28:
+          result = result && getIndexError()
+              .equals(other.getIndexError());
+          break;
         case 100:
           result = result && getJobNameExistError()
               .equals(other.getJobNameExistError());
@@ -22098,6 +22537,10 @@ public final class Error {
         case 27:
           hash = (37 * hash) + VALUE_ERROR_FIELD_NUMBER;
           hash = (53 * hash) + getValueError().hashCode();
+          break;
+        case 28:
+          hash = (37 * hash) + INDEX_ERROR_FIELD_NUMBER;
+          hash = (53 * hash) + getIndexError().hashCode();
           break;
         case 100:
           hash = (37 * hash) + JOB_NAME_EXIST_ERROR_FIELD_NUMBER;
@@ -22465,6 +22908,13 @@ public final class Error {
             result.errorType_ = valueErrorBuilder_.build();
           }
         }
+        if (errorTypeCase_ == 28) {
+          if (indexErrorBuilder_ == null) {
+            result.errorType_ = errorType_;
+          } else {
+            result.errorType_ = indexErrorBuilder_.build();
+          }
+        }
         if (errorTypeCase_ == 100) {
           if (jobNameExistErrorBuilder_ == null) {
             result.errorType_ = errorType_;
@@ -22751,6 +23201,10 @@ public final class Error {
           }
           case VALUE_ERROR: {
             mergeValueError(other.getValueError());
+            break;
+          }
+          case INDEX_ERROR: {
+            mergeIndexError(other.getIndexError());
             break;
           }
           case JOB_NAME_EXIST_ERROR: {
@@ -25330,6 +25784,142 @@ public final class Error {
         errorTypeCase_ = 27;
         onChanged();;
         return valueErrorBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Error.IndexError, org.oneflow.core.common.Error.IndexError.Builder, org.oneflow.core.common.Error.IndexErrorOrBuilder> indexErrorBuilder_;
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public boolean hasIndexError() {
+        return errorTypeCase_ == 28;
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public org.oneflow.core.common.Error.IndexError getIndexError() {
+        if (indexErrorBuilder_ == null) {
+          if (errorTypeCase_ == 28) {
+            return (org.oneflow.core.common.Error.IndexError) errorType_;
+          }
+          return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+        } else {
+          if (errorTypeCase_ == 28) {
+            return indexErrorBuilder_.getMessage();
+          }
+          return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public Builder setIndexError(org.oneflow.core.common.Error.IndexError value) {
+        if (indexErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errorType_ = value;
+          onChanged();
+        } else {
+          indexErrorBuilder_.setMessage(value);
+        }
+        errorTypeCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public Builder setIndexError(
+          org.oneflow.core.common.Error.IndexError.Builder builderForValue) {
+        if (indexErrorBuilder_ == null) {
+          errorType_ = builderForValue.build();
+          onChanged();
+        } else {
+          indexErrorBuilder_.setMessage(builderForValue.build());
+        }
+        errorTypeCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public Builder mergeIndexError(org.oneflow.core.common.Error.IndexError value) {
+        if (indexErrorBuilder_ == null) {
+          if (errorTypeCase_ == 28 &&
+              errorType_ != org.oneflow.core.common.Error.IndexError.getDefaultInstance()) {
+            errorType_ = org.oneflow.core.common.Error.IndexError.newBuilder((org.oneflow.core.common.Error.IndexError) errorType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            errorType_ = value;
+          }
+          onChanged();
+        } else {
+          if (errorTypeCase_ == 28) {
+            indexErrorBuilder_.mergeFrom(value);
+          }
+          indexErrorBuilder_.setMessage(value);
+        }
+        errorTypeCase_ = 28;
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public Builder clearIndexError() {
+        if (indexErrorBuilder_ == null) {
+          if (errorTypeCase_ == 28) {
+            errorTypeCase_ = 0;
+            errorType_ = null;
+            onChanged();
+          }
+        } else {
+          if (errorTypeCase_ == 28) {
+            errorTypeCase_ = 0;
+            errorType_ = null;
+          }
+          indexErrorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public org.oneflow.core.common.Error.IndexError.Builder getIndexErrorBuilder() {
+        return getIndexErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      public org.oneflow.core.common.Error.IndexErrorOrBuilder getIndexErrorOrBuilder() {
+        if ((errorTypeCase_ == 28) && (indexErrorBuilder_ != null)) {
+          return indexErrorBuilder_.getMessageOrBuilder();
+        } else {
+          if (errorTypeCase_ == 28) {
+            return (org.oneflow.core.common.Error.IndexError) errorType_;
+          }
+          return org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .oneflow.IndexError index_error = 28;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.oneflow.core.common.Error.IndexError, org.oneflow.core.common.Error.IndexError.Builder, org.oneflow.core.common.Error.IndexErrorOrBuilder> 
+          getIndexErrorFieldBuilder() {
+        if (indexErrorBuilder_ == null) {
+          if (!(errorTypeCase_ == 28)) {
+            errorType_ = org.oneflow.core.common.Error.IndexError.getDefaultInstance();
+          }
+          indexErrorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.oneflow.core.common.Error.IndexError, org.oneflow.core.common.Error.IndexError.Builder, org.oneflow.core.common.Error.IndexErrorOrBuilder>(
+                  (org.oneflow.core.common.Error.IndexError) errorType_,
+                  getParentForChildren(),
+                  isClean());
+          errorType_ = null;
+        }
+        errorTypeCase_ = 28;
+        onChanged();;
+        return indexErrorBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -28437,6 +29027,11 @@ public final class Error {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_ValueError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oneflow_IndexError_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_oneflow_IndexError_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ErrorProto_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -28492,76 +29087,77 @@ public final class Error {
       "eviceNotMatchError\022\014\n\004info\030\001 \003(\t\"H\n\017Erro",
       "rStackFrame\022\020\n\010location\030\001 \002(\t\022\020\n\010functio" +
       "n\030\002 \002(\t\022\021\n\terror_msg\030\003 \002(\t\"\034\n\032SymbolIdUn" +
-      "initializedError\"\014\n\nValueError\"\277\024\n\nError" +
-      "Proto\022\027\n\rerror_summary\030\001 \001(\t:\000\022\r\n\003msg\030\002 " +
-      "\001(\t:\000\022-\n\013stack_frame\030\003 \003(\0132\030.oneflow.Err" +
-      "orStackFrame\022F\n\032config_assert_failed_err" +
-      "or\030\014 \001(\0132 .oneflow.ConfigAssertFailedErr" +
-      "orH\000\022T\n!config_resource_unavailable_erro" +
-      "r\030\r \001(\0132\'.oneflow.ConfigResourceUnavaila" +
-      "bleErrorH\000\022B\n\030proto_parse_failed_error\030\017",
-      " \001(\0132\036.oneflow.ProtoParseFailedErrorH\000\0227" +
-      "\n\022check_failed_error\030\020 \001(\0132\031.oneflow.Che" +
-      "ckFailedErrorH\000\022(\n\ntodo_error\030\021 \001(\0132\022.on" +
-      "eflow.TodoErrorH\000\022:\n\023unimplemented_error" +
-      "\030\022 \001(\0132\033.oneflow.UnimplementedErrorH\000\022F\n" +
-      "\032boxing_not_supported_error\030\023 \001(\0132 .onef" +
-      "low.BoxingNotSupportedErrorH\000\022S\n!gradien" +
-      "t_function_not_found_error\030\024 \001(\0132&.onefl" +
-      "ow.GradientFunctionNotFoundErrorH\000\022C\n\031op" +
-      "_kernel_not_found_error\030\025 \001(\0132\036.oneflow.",
-      "OpKernelNotFoundErrorH\000\022S\n!multiple_op_k" +
-      "ernels_matched_error\030\026 \001(\0132&.oneflow.Mul" +
-      "tipleOpKernelsMatchedErrorH\000\022N\n\037memory_z" +
-      "one_out_of_memory_error\030\027 \001(\0132#.oneflow." +
-      "MemoryZoneOutOfMemoryErrorH\000\022C\n\031loss_blo" +
-      "b_not_found_error\030\030 \001(\0132\036.oneflow.LossBl" +
-      "obNotFoundErrorH\000\0228\n\023job_set_empty_error" +
-      "\030\031 \001(\0132\031.oneflow.JobSetEmptyErrorH\000\022E\n\032d" +
-      "evice_tag_not_found_error\030\032 \001(\0132\037.oneflo" +
-      "w.DeviceTagNotFoundErrorH\000\022*\n\013value_erro",
-      "r\030\033 \001(\0132\023.oneflow.ValueErrorH\000\022:\n\024job_na" +
-      "me_exist_error\030d \001(\0132\032.oneflow.JobNameEx" +
-      "istErrorH\000\022:\n\024job_name_empty_error\030e \001(\013" +
-      "2\032.oneflow.JobNameEmptyErrorH\000\022A\n\030job_na" +
-      "me_not_equal_error\030f \001(\0132\035.oneflow.JobNa" +
-      "meNotEqualErrorH\000\022P\n no_job_build_and_in" +
-      "fer_ctx_error\030\310\001 \001(\0132#.oneflow.NoJobBuil" +
-      "dAndInferCtxErrorH\000\022=\n\025job_conf_frozen_e" +
-      "rror\030\254\002 \001(\0132\033.oneflow.JobConfFrozenError" +
-      "H\000\022>\n\026job_conf_not_set_error\030\255\002 \001(\0132\033.on",
-      "eflow.JobConfNotSetErrorH\000\022H\n\033job_conf_r" +
-      "epeated_set_error\030\256\002 \001(\0132 .oneflow.JobCo" +
-      "nfRepeatedSetErrorH\000\022>\n\026job_type_not_set" +
-      "_error\030\257\002 \001(\0132\033.oneflow.JobTypeNotSetErr" +
-      "orH\000\022S\n!logical_blob_name_not_exist_erro" +
-      "r\030\220\003 \001(\0132%.oneflow.LogicalBlobNameNotExi" +
-      "stErrorH\000\022L\n\035logical_blob_name_exist_err" +
-      "or\030\221\003 \001(\0132\".oneflow.LogicalBlobNameExist" +
-      "ErrorH\000\022P\n\037logical_blob_name_invalid_err" +
-      "or\030\222\003 \001(\0132$.oneflow.LogicalBlobNameInval",
-      "idErrorH\000\0229\n\023op_name_exist_error\030\302\003 \001(\0132" +
-      "\031.oneflow.OpNameExistErrorH\000\022N\n\037op_conf_" +
-      "device_tag_no_set_error\030\314\003 \001(\0132\".oneflow" +
-      ".OpConfDeviceTagNoSetErrorH\000\0223\n\017placemen" +
-      "t_error\030\326\003 \001(\0132\027.oneflow.PlacementErrorH" +
-      "\000\022H\n\033blob_split_axis_infer_error\030\340\003 \001(\0132" +
-      " .oneflow.BlobSplitAxisInferErrorH\000\022S\n!u" +
-      "nknown_job_build_and_infer_error\030\364\003 \001(\0132" +
-      "%.oneflow.UnknownJobBuildAndInferErrorH\000" +
-      "\022S\n!rw_mutexed_object_not_found_error\030\330\004",
-      " \001(\0132%.oneflow.RwMutexedObjectNotFoundEr" +
-      "rorH\000\022M\n\035symbol_id_uninitialized_error\030\274" +
-      "\005 \001(\0132#.oneflow.SymbolIdUninitializedErr" +
-      "orH\000\022/\n\runknown_error\030\204\007 \001(\0132\025.oneflow.U" +
-      "nknownErrorH\000\022G\n\032compile_option_wrong_er" +
-      "ror\030\266\007 \001(\0132 .oneflow.CompileOptionWrongE" +
-      "rrorH\000\022J\n\034input_device_not_match_error\030\350" +
-      "\007 \001(\0132!.oneflow.InputDeviceNotMatchError" +
-      "H\000B\014\n\nerror_type*[\n\nOpcodeType\022\027\n\023kInval" +
-      "idCompareType\020\000\022\007\n\003kEq\020\001\022\007\n\003kNe\020\002\022\007\n\003kGt",
-      "\020\003\022\007\n\003kGe\020\004\022\007\n\003kLt\020\005\022\007\n\003kLe\020\006B\031\n\027org.one" +
-      "flow.core.common"
+      "initializedError\"\014\n\nValueError\"\014\n\nIndexE" +
+      "rror\"\353\024\n\nErrorProto\022\027\n\rerror_summary\030\001 \001" +
+      "(\t:\000\022\r\n\003msg\030\002 \001(\t:\000\022-\n\013stack_frame\030\003 \003(\013" +
+      "2\030.oneflow.ErrorStackFrame\022F\n\032config_ass" +
+      "ert_failed_error\030\014 \001(\0132 .oneflow.ConfigA" +
+      "ssertFailedErrorH\000\022T\n!config_resource_un" +
+      "available_error\030\r \001(\0132\'.oneflow.ConfigRe" +
+      "sourceUnavailableErrorH\000\022B\n\030proto_parse_",
+      "failed_error\030\017 \001(\0132\036.oneflow.ProtoParseF" +
+      "ailedErrorH\000\0227\n\022check_failed_error\030\020 \001(\013" +
+      "2\031.oneflow.CheckFailedErrorH\000\022(\n\ntodo_er" +
+      "ror\030\021 \001(\0132\022.oneflow.TodoErrorH\000\022:\n\023unimp" +
+      "lemented_error\030\022 \001(\0132\033.oneflow.Unimpleme" +
+      "ntedErrorH\000\022F\n\032boxing_not_supported_erro" +
+      "r\030\023 \001(\0132 .oneflow.BoxingNotSupportedErro" +
+      "rH\000\022S\n!gradient_function_not_found_error" +
+      "\030\024 \001(\0132&.oneflow.GradientFunctionNotFoun" +
+      "dErrorH\000\022C\n\031op_kernel_not_found_error\030\025 ",
+      "\001(\0132\036.oneflow.OpKernelNotFoundErrorH\000\022S\n" +
+      "!multiple_op_kernels_matched_error\030\026 \001(\013" +
+      "2&.oneflow.MultipleOpKernelsMatchedError" +
+      "H\000\022N\n\037memory_zone_out_of_memory_error\030\027 " +
+      "\001(\0132#.oneflow.MemoryZoneOutOfMemoryError" +
+      "H\000\022C\n\031loss_blob_not_found_error\030\030 \001(\0132\036." +
+      "oneflow.LossBlobNotFoundErrorH\000\0228\n\023job_s" +
+      "et_empty_error\030\031 \001(\0132\031.oneflow.JobSetEmp" +
+      "tyErrorH\000\022E\n\032device_tag_not_found_error\030" +
+      "\032 \001(\0132\037.oneflow.DeviceTagNotFoundErrorH\000",
+      "\022*\n\013value_error\030\033 \001(\0132\023.oneflow.ValueErr" +
+      "orH\000\022*\n\013index_error\030\034 \001(\0132\023.oneflow.Inde" +
+      "xErrorH\000\022:\n\024job_name_exist_error\030d \001(\0132\032" +
+      ".oneflow.JobNameExistErrorH\000\022:\n\024job_name" +
+      "_empty_error\030e \001(\0132\032.oneflow.JobNameEmpt" +
+      "yErrorH\000\022A\n\030job_name_not_equal_error\030f \001" +
+      "(\0132\035.oneflow.JobNameNotEqualErrorH\000\022P\n n" +
+      "o_job_build_and_infer_ctx_error\030\310\001 \001(\0132#" +
+      ".oneflow.NoJobBuildAndInferCtxErrorH\000\022=\n" +
+      "\025job_conf_frozen_error\030\254\002 \001(\0132\033.oneflow.",
+      "JobConfFrozenErrorH\000\022>\n\026job_conf_not_set" +
+      "_error\030\255\002 \001(\0132\033.oneflow.JobConfNotSetErr" +
+      "orH\000\022H\n\033job_conf_repeated_set_error\030\256\002 \001" +
+      "(\0132 .oneflow.JobConfRepeatedSetErrorH\000\022>" +
+      "\n\026job_type_not_set_error\030\257\002 \001(\0132\033.oneflo" +
+      "w.JobTypeNotSetErrorH\000\022S\n!logical_blob_n" +
+      "ame_not_exist_error\030\220\003 \001(\0132%.oneflow.Log" +
+      "icalBlobNameNotExistErrorH\000\022L\n\035logical_b" +
+      "lob_name_exist_error\030\221\003 \001(\0132\".oneflow.Lo" +
+      "gicalBlobNameExistErrorH\000\022P\n\037logical_blo",
+      "b_name_invalid_error\030\222\003 \001(\0132$.oneflow.Lo" +
+      "gicalBlobNameInvalidErrorH\000\0229\n\023op_name_e" +
+      "xist_error\030\302\003 \001(\0132\031.oneflow.OpNameExistE" +
+      "rrorH\000\022N\n\037op_conf_device_tag_no_set_erro" +
+      "r\030\314\003 \001(\0132\".oneflow.OpConfDeviceTagNoSetE" +
+      "rrorH\000\0223\n\017placement_error\030\326\003 \001(\0132\027.onefl" +
+      "ow.PlacementErrorH\000\022H\n\033blob_split_axis_i" +
+      "nfer_error\030\340\003 \001(\0132 .oneflow.BlobSplitAxi" +
+      "sInferErrorH\000\022S\n!unknown_job_build_and_i" +
+      "nfer_error\030\364\003 \001(\0132%.oneflow.UnknownJobBu",
+      "ildAndInferErrorH\000\022S\n!rw_mutexed_object_" +
+      "not_found_error\030\330\004 \001(\0132%.oneflow.RwMutex" +
+      "edObjectNotFoundErrorH\000\022M\n\035symbol_id_uni" +
+      "nitialized_error\030\274\005 \001(\0132#.oneflow.Symbol" +
+      "IdUninitializedErrorH\000\022/\n\runknown_error\030" +
+      "\204\007 \001(\0132\025.oneflow.UnknownErrorH\000\022G\n\032compi" +
+      "le_option_wrong_error\030\266\007 \001(\0132 .oneflow.C" +
+      "ompileOptionWrongErrorH\000\022J\n\034input_device" +
+      "_not_match_error\030\350\007 \001(\0132!.oneflow.InputD" +
+      "eviceNotMatchErrorH\000B\014\n\nerror_type*[\n\nOp",
+      "codeType\022\027\n\023kInvalidCompareType\020\000\022\007\n\003kEq" +
+      "\020\001\022\007\n\003kNe\020\002\022\007\n\003kGt\020\003\022\007\n\003kGe\020\004\022\007\n\003kLt\020\005\022\007" +
+      "\n\003kLe\020\006B\031\n\027org.oneflow.core.common"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28815,12 +29411,18 @@ public final class Error {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ValueError_descriptor,
         new java.lang.String[] { });
-    internal_static_oneflow_ErrorProto_descriptor =
+    internal_static_oneflow_IndexError_descriptor =
       getDescriptor().getMessageTypes().get(40);
+    internal_static_oneflow_IndexError_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_oneflow_IndexError_descriptor,
+        new java.lang.String[] { });
+    internal_static_oneflow_ErrorProto_descriptor =
+      getDescriptor().getMessageTypes().get(41);
     internal_static_oneflow_ErrorProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ErrorProto_descriptor,
-        new java.lang.String[] { "ErrorSummary", "Msg", "StackFrame", "ConfigAssertFailedError", "ConfigResourceUnavailableError", "ProtoParseFailedError", "CheckFailedError", "TodoError", "UnimplementedError", "BoxingNotSupportedError", "GradientFunctionNotFoundError", "OpKernelNotFoundError", "MultipleOpKernelsMatchedError", "MemoryZoneOutOfMemoryError", "LossBlobNotFoundError", "JobSetEmptyError", "DeviceTagNotFoundError", "ValueError", "JobNameExistError", "JobNameEmptyError", "JobNameNotEqualError", "NoJobBuildAndInferCtxError", "JobConfFrozenError", "JobConfNotSetError", "JobConfRepeatedSetError", "JobTypeNotSetError", "LogicalBlobNameNotExistError", "LogicalBlobNameExistError", "LogicalBlobNameInvalidError", "OpNameExistError", "OpConfDeviceTagNoSetError", "PlacementError", "BlobSplitAxisInferError", "UnknownJobBuildAndInferError", "RwMutexedObjectNotFoundError", "SymbolIdUninitializedError", "UnknownError", "CompileOptionWrongError", "InputDeviceNotMatchError", "ErrorType", });
+        new java.lang.String[] { "ErrorSummary", "Msg", "StackFrame", "ConfigAssertFailedError", "ConfigResourceUnavailableError", "ProtoParseFailedError", "CheckFailedError", "TodoError", "UnimplementedError", "BoxingNotSupportedError", "GradientFunctionNotFoundError", "OpKernelNotFoundError", "MultipleOpKernelsMatchedError", "MemoryZoneOutOfMemoryError", "LossBlobNotFoundError", "JobSetEmptyError", "DeviceTagNotFoundError", "ValueError", "IndexError", "JobNameExistError", "JobNameEmptyError", "JobNameNotEqualError", "NoJobBuildAndInferCtxError", "JobConfFrozenError", "JobConfNotSetError", "JobConfRepeatedSetError", "JobTypeNotSetError", "LogicalBlobNameNotExistError", "LogicalBlobNameExistError", "LogicalBlobNameInvalidError", "OpNameExistError", "OpConfDeviceTagNoSetError", "PlacementError", "BlobSplitAxisInferError", "UnknownJobBuildAndInferError", "RwMutexedObjectNotFoundError", "SymbolIdUninitializedError", "UnknownError", "CompileOptionWrongError", "InputDeviceNotMatchError", "ErrorType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

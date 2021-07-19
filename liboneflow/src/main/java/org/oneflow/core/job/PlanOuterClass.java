@@ -551,686 +551,6 @@ public final class PlanOuterClass {
 
   }
 
-  public interface NetTopoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:oneflow.NetTopo)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-    int getPeerMachineIdsCount();
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-    boolean containsPeerMachineIds(
-        long key);
-    /**
-     * Use {@link #getPeerMachineIdsMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-    getPeerMachineIds();
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-    java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-    getPeerMachineIdsMap();
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrDefault(
-        long key,
-        org.oneflow.core.job.PlanOuterClass.MachineIds defaultValue);
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrThrow(
-        long key);
-  }
-  /**
-   * Protobuf type {@code oneflow.NetTopo}
-   */
-  public  static final class NetTopo extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:oneflow.NetTopo)
-      NetTopoOrBuilder {
-    // Use NetTopo.newBuilder() to construct.
-    private NetTopo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private NetTopo() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NetTopo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                peerMachineIds_ = com.google.protobuf.MapField.newMapField(
-                    PeerMachineIdsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-              peerMachineIds = input.readMessage(
-                  PeerMachineIdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              peerMachineIds_.getMutableMap().put(peerMachineIds.getKey(), peerMachineIds.getValue());
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetPeerMachineIds();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.oneflow.core.job.PlanOuterClass.NetTopo.class, org.oneflow.core.job.PlanOuterClass.NetTopo.Builder.class);
-    }
-
-    public static final int PEER_MACHINE_IDS_FIELD_NUMBER = 1;
-    private static final class PeerMachineIdsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>newDefaultInstance(
-                  org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_PeerMachineIdsEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.INT64,
-                  0L,
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  org.oneflow.core.job.PlanOuterClass.MachineIds.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> peerMachineIds_;
-    private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-    internalGetPeerMachineIds() {
-      if (peerMachineIds_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            PeerMachineIdsDefaultEntryHolder.defaultEntry);
-      }
-      return peerMachineIds_;
-    }
-
-    public int getPeerMachineIdsCount() {
-      return internalGetPeerMachineIds().getMap().size();
-    }
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    public boolean containsPeerMachineIds(
-        long key) {
-      
-      return internalGetPeerMachineIds().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getPeerMachineIdsMap()} instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> getPeerMachineIds() {
-      return getPeerMachineIdsMap();
-    }
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    public java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> getPeerMachineIdsMap() {
-      return internalGetPeerMachineIds().getMap();
-    }
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    public org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrDefault(
-        long key,
-        org.oneflow.core.job.PlanOuterClass.MachineIds defaultValue) {
-      
-      java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> map =
-          internalGetPeerMachineIds().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-     */
-
-    public org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrThrow(
-        long key) {
-      
-      java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> map =
-          internalGetPeerMachineIds().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> entry
-           : internalGetPeerMachineIds().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-        peerMachineIds = PeerMachineIdsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(1, peerMachineIds);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> entry
-           : internalGetPeerMachineIds().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-        peerMachineIds = PeerMachineIdsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, peerMachineIds);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.oneflow.core.job.PlanOuterClass.NetTopo)) {
-        return super.equals(obj);
-      }
-      org.oneflow.core.job.PlanOuterClass.NetTopo other = (org.oneflow.core.job.PlanOuterClass.NetTopo) obj;
-
-      boolean result = true;
-      result = result && internalGetPeerMachineIds().equals(
-          other.internalGetPeerMachineIds());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      if (!internalGetPeerMachineIds().getMap().isEmpty()) {
-        hash = (37 * hash) + PEER_MACHINE_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetPeerMachineIds().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.oneflow.core.job.PlanOuterClass.NetTopo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code oneflow.NetTopo}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:oneflow.NetTopo)
-        org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetPeerMachineIds();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutablePeerMachineIds();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.oneflow.core.job.PlanOuterClass.NetTopo.class, org.oneflow.core.job.PlanOuterClass.NetTopo.Builder.class);
-      }
-
-      // Construct using org.oneflow.core.job.PlanOuterClass.NetTopo.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        internalGetMutablePeerMachineIds().clear();
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.oneflow.core.job.PlanOuterClass.internal_static_oneflow_NetTopo_descriptor;
-      }
-
-      public org.oneflow.core.job.PlanOuterClass.NetTopo getDefaultInstanceForType() {
-        return org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance();
-      }
-
-      public org.oneflow.core.job.PlanOuterClass.NetTopo build() {
-        org.oneflow.core.job.PlanOuterClass.NetTopo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public org.oneflow.core.job.PlanOuterClass.NetTopo buildPartial() {
-        org.oneflow.core.job.PlanOuterClass.NetTopo result = new org.oneflow.core.job.PlanOuterClass.NetTopo(this);
-        int from_bitField0_ = bitField0_;
-        result.peerMachineIds_ = internalGetPeerMachineIds();
-        result.peerMachineIds_.makeImmutable();
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.oneflow.core.job.PlanOuterClass.NetTopo) {
-          return mergeFrom((org.oneflow.core.job.PlanOuterClass.NetTopo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.oneflow.core.job.PlanOuterClass.NetTopo other) {
-        if (other == org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance()) return this;
-        internalGetMutablePeerMachineIds().mergeFrom(
-            other.internalGetPeerMachineIds());
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.oneflow.core.job.PlanOuterClass.NetTopo parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.oneflow.core.job.PlanOuterClass.NetTopo) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.MapField<
-          java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> peerMachineIds_;
-      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-      internalGetPeerMachineIds() {
-        if (peerMachineIds_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              PeerMachineIdsDefaultEntryHolder.defaultEntry);
-        }
-        return peerMachineIds_;
-      }
-      private com.google.protobuf.MapField<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-      internalGetMutablePeerMachineIds() {
-        onChanged();;
-        if (peerMachineIds_ == null) {
-          peerMachineIds_ = com.google.protobuf.MapField.newMapField(
-              PeerMachineIdsDefaultEntryHolder.defaultEntry);
-        }
-        if (!peerMachineIds_.isMutable()) {
-          peerMachineIds_ = peerMachineIds_.copy();
-        }
-        return peerMachineIds_;
-      }
-
-      public int getPeerMachineIdsCount() {
-        return internalGetPeerMachineIds().getMap().size();
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public boolean containsPeerMachineIds(
-          long key) {
-        
-        return internalGetPeerMachineIds().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getPeerMachineIdsMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> getPeerMachineIds() {
-        return getPeerMachineIdsMap();
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> getPeerMachineIdsMap() {
-        return internalGetPeerMachineIds().getMap();
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrDefault(
-          long key,
-          org.oneflow.core.job.PlanOuterClass.MachineIds defaultValue) {
-        
-        java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> map =
-            internalGetPeerMachineIds().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public org.oneflow.core.job.PlanOuterClass.MachineIds getPeerMachineIdsOrThrow(
-          long key) {
-        
-        java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> map =
-            internalGetPeerMachineIds().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearPeerMachineIds() {
-        getMutablePeerMachineIds().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public Builder removePeerMachineIds(
-          long key) {
-        
-        getMutablePeerMachineIds().remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds>
-      getMutablePeerMachineIds() {
-        return internalGetMutablePeerMachineIds().getMutableMap();
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-      public Builder putPeerMachineIds(
-          long key,
-          org.oneflow.core.job.PlanOuterClass.MachineIds value) {
-        
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutablePeerMachineIds().put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;int64, .oneflow.MachineIds&gt; peer_machine_ids = 1;</code>
-       */
-
-      public Builder putAllPeerMachineIds(
-          java.util.Map<java.lang.Long, org.oneflow.core.job.PlanOuterClass.MachineIds> values) {
-        getMutablePeerMachineIds().putAll(values);
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:oneflow.NetTopo)
-    }
-
-    // @@protoc_insertion_point(class_scope:oneflow.NetTopo)
-    private static final org.oneflow.core.job.PlanOuterClass.NetTopo DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.oneflow.core.job.PlanOuterClass.NetTopo();
-    }
-
-    public static org.oneflow.core.job.PlanOuterClass.NetTopo getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<NetTopo>
-        PARSER = new com.google.protobuf.AbstractParser<NetTopo>() {
-      public NetTopo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new NetTopo(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<NetTopo> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<NetTopo> getParserForType() {
-      return PARSER;
-    }
-
-    public org.oneflow.core.job.PlanOuterClass.NetTopo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface JobConfsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oneflow.JobConfs)
       com.google.protobuf.MessageOrBuilder {
@@ -4717,19 +4037,6 @@ public final class PlanOuterClass {
     org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkListOrBuilder getBlockChunkListOrBuilder();
 
     /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    boolean hasNetTopo();
-    /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    org.oneflow.core.job.PlanOuterClass.NetTopo getNetTopo();
-    /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder getNetTopoOrBuilder();
-
-    /**
      * <code>required .oneflow.JobConfs job_confs = 4;</code>
      */
     boolean hasJobConfs();
@@ -4867,22 +4174,9 @@ public final class PlanOuterClass {
               bitField0_ |= 0x00000001;
               break;
             }
-            case 26: {
-              org.oneflow.core.job.PlanOuterClass.NetTopo.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = netTopo_.toBuilder();
-              }
-              netTopo_ = input.readMessage(org.oneflow.core.job.PlanOuterClass.NetTopo.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(netTopo_);
-                netTopo_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
             case 34: {
               org.oneflow.core.job.PlanOuterClass.JobConfs.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = jobConfs_.toBuilder();
               }
               jobConfs_ = input.readMessage(org.oneflow.core.job.PlanOuterClass.JobConfs.PARSER, extensionRegistry);
@@ -4890,12 +4184,12 @@ public final class PlanOuterClass {
                 subBuilder.mergeFrom(jobConfs_);
                 jobConfs_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             }
             case 42: {
               org.oneflow.core.job.PlanOuterClass.CollectiveBoxingPlan.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = collectiveBoxingPlan_.toBuilder();
               }
               collectiveBoxingPlan_ = input.readMessage(org.oneflow.core.job.PlanOuterClass.CollectiveBoxingPlan.PARSER, extensionRegistry);
@@ -4903,12 +4197,12 @@ public final class PlanOuterClass {
                 subBuilder.mergeFrom(collectiveBoxingPlan_);
                 collectiveBoxingPlan_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             }
             case 50: {
               org.oneflow.core.job.PlanOuterClass.CtrlRegstDescInfo.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = ctrlRegstDescInfo_.toBuilder();
               }
               ctrlRegstDescInfo_ = input.readMessage(org.oneflow.core.job.PlanOuterClass.CtrlRegstDescInfo.PARSER, extensionRegistry);
@@ -4916,14 +4210,14 @@ public final class PlanOuterClass {
                 subBuilder.mergeFrom(ctrlRegstDescInfo_);
                 ctrlRegstDescInfo_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 jobId2OpAttributeRefTable_ = com.google.protobuf.MapField.newMapField(
                     JobId2OpAttributeRefTableDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000020;
               }
               com.google.protobuf.MapEntry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.OpAttributeRefTable>
               jobId2OpAttributeRefTable = input.readMessage(
@@ -5026,34 +4320,13 @@ public final class PlanOuterClass {
       return blockChunkList_ == null ? org.oneflow.core.memory.MemoryBlock.MemBlockAndChunkList.getDefaultInstance() : blockChunkList_;
     }
 
-    public static final int NET_TOPO_FIELD_NUMBER = 3;
-    private org.oneflow.core.job.PlanOuterClass.NetTopo netTopo_;
-    /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    public boolean hasNetTopo() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    public org.oneflow.core.job.PlanOuterClass.NetTopo getNetTopo() {
-      return netTopo_ == null ? org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance() : netTopo_;
-    }
-    /**
-     * <code>required .oneflow.NetTopo net_topo = 3;</code>
-     */
-    public org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder getNetTopoOrBuilder() {
-      return netTopo_ == null ? org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance() : netTopo_;
-    }
-
     public static final int JOB_CONFS_FIELD_NUMBER = 4;
     private org.oneflow.core.job.PlanOuterClass.JobConfs jobConfs_;
     /**
      * <code>required .oneflow.JobConfs job_confs = 4;</code>
      */
     public boolean hasJobConfs() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>required .oneflow.JobConfs job_confs = 4;</code>
@@ -5074,7 +4347,7 @@ public final class PlanOuterClass {
      * <code>required .oneflow.CollectiveBoxingPlan collective_boxing_plan = 5;</code>
      */
     public boolean hasCollectiveBoxingPlan() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>required .oneflow.CollectiveBoxingPlan collective_boxing_plan = 5;</code>
@@ -5095,7 +4368,7 @@ public final class PlanOuterClass {
      * <code>required .oneflow.CtrlRegstDescInfo ctrl_regst_desc_info = 6;</code>
      */
     public boolean hasCtrlRegstDescInfo() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>required .oneflow.CtrlRegstDescInfo ctrl_regst_desc_info = 6;</code>
@@ -5196,10 +4469,6 @@ public final class PlanOuterClass {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasNetTopo()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasJobConfs()) {
         memoizedIsInitialized = 0;
         return false;
@@ -5249,15 +4518,12 @@ public final class PlanOuterClass {
         output.writeMessage(2, getBlockChunkList());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(3, getNetTopo());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(4, getJobConfs());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(5, getCollectiveBoxingPlan());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(6, getCtrlRegstDescInfo());
       }
       for (java.util.Map.Entry<java.lang.Long, org.oneflow.core.job.PlanOuterClass.OpAttributeRefTable> entry
@@ -5287,17 +4553,13 @@ public final class PlanOuterClass {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getNetTopo());
+          .computeMessageSize(4, getJobConfs());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getJobConfs());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCollectiveBoxingPlan());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCtrlRegstDescInfo());
       }
@@ -5335,11 +4597,6 @@ public final class PlanOuterClass {
         result = result && getBlockChunkList()
             .equals(other.getBlockChunkList());
       }
-      result = result && (hasNetTopo() == other.hasNetTopo());
-      if (hasNetTopo()) {
-        result = result && getNetTopo()
-            .equals(other.getNetTopo());
-      }
       result = result && (hasJobConfs() == other.hasJobConfs());
       if (hasJobConfs()) {
         result = result && getJobConfs()
@@ -5375,10 +4632,6 @@ public final class PlanOuterClass {
       if (hasBlockChunkList()) {
         hash = (37 * hash) + BLOCK_CHUNK_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getBlockChunkList().hashCode();
-      }
-      if (hasNetTopo()) {
-        hash = (37 * hash) + NET_TOPO_FIELD_NUMBER;
-        hash = (53 * hash) + getNetTopo().hashCode();
       }
       if (hasJobConfs()) {
         hash = (37 * hash) + JOB_CONFS_FIELD_NUMBER;
@@ -5534,7 +4787,6 @@ public final class PlanOuterClass {
                 .alwaysUseFieldBuilders) {
           getTaskFieldBuilder();
           getBlockChunkListFieldBuilder();
-          getNetTopoFieldBuilder();
           getJobConfsFieldBuilder();
           getCollectiveBoxingPlanFieldBuilder();
           getCtrlRegstDescInfoFieldBuilder();
@@ -5554,30 +4806,24 @@ public final class PlanOuterClass {
           blockChunkListBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (netTopoBuilder_ == null) {
-          netTopo_ = null;
-        } else {
-          netTopoBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
         if (jobConfsBuilder_ == null) {
           jobConfs_ = null;
         } else {
           jobConfsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (collectiveBoxingPlanBuilder_ == null) {
           collectiveBoxingPlan_ = null;
         } else {
           collectiveBoxingPlanBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (ctrlRegstDescInfoBuilder_ == null) {
           ctrlRegstDescInfo_ = null;
         } else {
           ctrlRegstDescInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         internalGetMutableJobId2OpAttributeRefTable().clear();
         return this;
       }
@@ -5623,29 +4869,21 @@ public final class PlanOuterClass {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000002;
         }
-        if (netTopoBuilder_ == null) {
-          result.netTopo_ = netTopo_;
-        } else {
-          result.netTopo_ = netTopoBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000004;
-        }
         if (jobConfsBuilder_ == null) {
           result.jobConfs_ = jobConfs_;
         } else {
           result.jobConfs_ = jobConfsBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000008;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
         }
         if (collectiveBoxingPlanBuilder_ == null) {
           result.collectiveBoxingPlan_ = collectiveBoxingPlan_;
         } else {
           result.collectiveBoxingPlan_ = collectiveBoxingPlanBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000010;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
         }
         if (ctrlRegstDescInfoBuilder_ == null) {
           result.ctrlRegstDescInfo_ = ctrlRegstDescInfo_;
@@ -5725,9 +4963,6 @@ public final class PlanOuterClass {
         if (other.hasBlockChunkList()) {
           mergeBlockChunkList(other.getBlockChunkList());
         }
-        if (other.hasNetTopo()) {
-          mergeNetTopo(other.getNetTopo());
-        }
         if (other.hasJobConfs()) {
           mergeJobConfs(other.getJobConfs());
         }
@@ -5746,9 +4981,6 @@ public final class PlanOuterClass {
 
       public final boolean isInitialized() {
         if (!hasBlockChunkList()) {
-          return false;
-        }
-        if (!hasNetTopo()) {
           return false;
         }
         if (!hasJobConfs()) {
@@ -6159,124 +5391,6 @@ public final class PlanOuterClass {
         return blockChunkListBuilder_;
       }
 
-      private org.oneflow.core.job.PlanOuterClass.NetTopo netTopo_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.PlanOuterClass.NetTopo, org.oneflow.core.job.PlanOuterClass.NetTopo.Builder, org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder> netTopoBuilder_;
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public boolean hasNetTopo() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public org.oneflow.core.job.PlanOuterClass.NetTopo getNetTopo() {
-        if (netTopoBuilder_ == null) {
-          return netTopo_ == null ? org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance() : netTopo_;
-        } else {
-          return netTopoBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public Builder setNetTopo(org.oneflow.core.job.PlanOuterClass.NetTopo value) {
-        if (netTopoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          netTopo_ = value;
-          onChanged();
-        } else {
-          netTopoBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public Builder setNetTopo(
-          org.oneflow.core.job.PlanOuterClass.NetTopo.Builder builderForValue) {
-        if (netTopoBuilder_ == null) {
-          netTopo_ = builderForValue.build();
-          onChanged();
-        } else {
-          netTopoBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public Builder mergeNetTopo(org.oneflow.core.job.PlanOuterClass.NetTopo value) {
-        if (netTopoBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              netTopo_ != null &&
-              netTopo_ != org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance()) {
-            netTopo_ =
-              org.oneflow.core.job.PlanOuterClass.NetTopo.newBuilder(netTopo_).mergeFrom(value).buildPartial();
-          } else {
-            netTopo_ = value;
-          }
-          onChanged();
-        } else {
-          netTopoBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public Builder clearNetTopo() {
-        if (netTopoBuilder_ == null) {
-          netTopo_ = null;
-          onChanged();
-        } else {
-          netTopoBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public org.oneflow.core.job.PlanOuterClass.NetTopo.Builder getNetTopoBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getNetTopoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      public org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder getNetTopoOrBuilder() {
-        if (netTopoBuilder_ != null) {
-          return netTopoBuilder_.getMessageOrBuilder();
-        } else {
-          return netTopo_ == null ?
-              org.oneflow.core.job.PlanOuterClass.NetTopo.getDefaultInstance() : netTopo_;
-        }
-      }
-      /**
-       * <code>required .oneflow.NetTopo net_topo = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.PlanOuterClass.NetTopo, org.oneflow.core.job.PlanOuterClass.NetTopo.Builder, org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder> 
-          getNetTopoFieldBuilder() {
-        if (netTopoBuilder_ == null) {
-          netTopoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.oneflow.core.job.PlanOuterClass.NetTopo, org.oneflow.core.job.PlanOuterClass.NetTopo.Builder, org.oneflow.core.job.PlanOuterClass.NetTopoOrBuilder>(
-                  getNetTopo(),
-                  getParentForChildren(),
-                  isClean());
-          netTopo_ = null;
-        }
-        return netTopoBuilder_;
-      }
-
       private org.oneflow.core.job.PlanOuterClass.JobConfs jobConfs_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.PlanOuterClass.JobConfs, org.oneflow.core.job.PlanOuterClass.JobConfs.Builder, org.oneflow.core.job.PlanOuterClass.JobConfsOrBuilder> jobConfsBuilder_;
@@ -6284,7 +5398,7 @@ public final class PlanOuterClass {
        * <code>required .oneflow.JobConfs job_confs = 4;</code>
        */
       public boolean hasJobConfs() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>required .oneflow.JobConfs job_confs = 4;</code>
@@ -6309,7 +5423,7 @@ public final class PlanOuterClass {
         } else {
           jobConfsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -6323,7 +5437,7 @@ public final class PlanOuterClass {
         } else {
           jobConfsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -6331,7 +5445,7 @@ public final class PlanOuterClass {
        */
       public Builder mergeJobConfs(org.oneflow.core.job.PlanOuterClass.JobConfs value) {
         if (jobConfsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
               jobConfs_ != null &&
               jobConfs_ != org.oneflow.core.job.PlanOuterClass.JobConfs.getDefaultInstance()) {
             jobConfs_ =
@@ -6343,7 +5457,7 @@ public final class PlanOuterClass {
         } else {
           jobConfsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -6356,14 +5470,14 @@ public final class PlanOuterClass {
         } else {
           jobConfsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
        * <code>required .oneflow.JobConfs job_confs = 4;</code>
        */
       public org.oneflow.core.job.PlanOuterClass.JobConfs.Builder getJobConfsBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getJobConfsFieldBuilder().getBuilder();
       }
@@ -6402,7 +5516,7 @@ public final class PlanOuterClass {
        * <code>required .oneflow.CollectiveBoxingPlan collective_boxing_plan = 5;</code>
        */
       public boolean hasCollectiveBoxingPlan() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>required .oneflow.CollectiveBoxingPlan collective_boxing_plan = 5;</code>
@@ -6427,7 +5541,7 @@ public final class PlanOuterClass {
         } else {
           collectiveBoxingPlanBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -6441,7 +5555,7 @@ public final class PlanOuterClass {
         } else {
           collectiveBoxingPlanBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -6449,7 +5563,7 @@ public final class PlanOuterClass {
        */
       public Builder mergeCollectiveBoxingPlan(org.oneflow.core.job.PlanOuterClass.CollectiveBoxingPlan value) {
         if (collectiveBoxingPlanBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
               collectiveBoxingPlan_ != null &&
               collectiveBoxingPlan_ != org.oneflow.core.job.PlanOuterClass.CollectiveBoxingPlan.getDefaultInstance()) {
             collectiveBoxingPlan_ =
@@ -6461,7 +5575,7 @@ public final class PlanOuterClass {
         } else {
           collectiveBoxingPlanBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -6474,14 +5588,14 @@ public final class PlanOuterClass {
         } else {
           collectiveBoxingPlanBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
        * <code>required .oneflow.CollectiveBoxingPlan collective_boxing_plan = 5;</code>
        */
       public org.oneflow.core.job.PlanOuterClass.CollectiveBoxingPlan.Builder getCollectiveBoxingPlanBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getCollectiveBoxingPlanFieldBuilder().getBuilder();
       }
@@ -6520,7 +5634,7 @@ public final class PlanOuterClass {
        * <code>required .oneflow.CtrlRegstDescInfo ctrl_regst_desc_info = 6;</code>
        */
       public boolean hasCtrlRegstDescInfo() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>required .oneflow.CtrlRegstDescInfo ctrl_regst_desc_info = 6;</code>
@@ -6545,7 +5659,7 @@ public final class PlanOuterClass {
         } else {
           ctrlRegstDescInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6559,7 +5673,7 @@ public final class PlanOuterClass {
         } else {
           ctrlRegstDescInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6567,7 +5681,7 @@ public final class PlanOuterClass {
        */
       public Builder mergeCtrlRegstDescInfo(org.oneflow.core.job.PlanOuterClass.CtrlRegstDescInfo value) {
         if (ctrlRegstDescInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
               ctrlRegstDescInfo_ != null &&
               ctrlRegstDescInfo_ != org.oneflow.core.job.PlanOuterClass.CtrlRegstDescInfo.getDefaultInstance()) {
             ctrlRegstDescInfo_ =
@@ -6579,7 +5693,7 @@ public final class PlanOuterClass {
         } else {
           ctrlRegstDescInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -6592,14 +5706,14 @@ public final class PlanOuterClass {
         } else {
           ctrlRegstDescInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
       /**
        * <code>required .oneflow.CtrlRegstDescInfo ctrl_regst_desc_info = 6;</code>
        */
       public org.oneflow.core.job.PlanOuterClass.CtrlRegstDescInfo.Builder getCtrlRegstDescInfoBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getCtrlRegstDescInfoFieldBuilder().getBuilder();
       }
@@ -6804,16 +5918,6 @@ public final class PlanOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oneflow_MachineIds_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_oneflow_NetTopo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_oneflow_NetTopo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_oneflow_NetTopo_PeerMachineIdsEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_oneflow_NetTopo_PeerMachineIdsEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_JobConfs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6888,47 +5992,43 @@ public final class PlanOuterClass {
       "y/memory_block.proto\0321oneflow/core/graph" +
       "/boxing/collective_boxing.proto\032(oneflow" +
       "/core/operator/op_attribute.proto\" \n\nMac" +
-      "hineIds\022\022\n\nmachine_id\030\001 \003(\003\"\225\001\n\007NetTopo\022" +
-      ">\n\020peer_machine_ids\030\001 \003(\0132$.oneflow.NetT" +
-      "opo.PeerMachineIdsEntry\032J\n\023PeerMachineId" +
-      "sEntry\022\013\n\003key\030\001 \001(\003\022\"\n\005value\030\002 \001(\0132\023.one",
-      "flow.MachineIds:\0028\001\"\230\001\n\010JobConfs\022=\n\017job_" +
-      "id2job_conf\030\001 \003(\0132$.oneflow.JobConfs.Job" +
-      "Id2jobConfEntry\032M\n\022JobId2jobConfEntry\022\013\n" +
-      "\003key\030\001 \001(\003\022&\n\005value\030\002 \001(\0132\027.oneflow.JobC" +
-      "onfigProto:\0028\001\"\307\001\n\024CollectiveBoxingPlan\022" +
-      "O\n\022job_id2request_set\030\001 \003(\01323.oneflow.Co" +
-      "llectiveBoxingPlan.JobId2requestSetEntry" +
-      "\032^\n\025JobId2requestSetEntry\022\013\n\003key\030\001 \001(\003\0224" +
-      "\n\005value\030\002 \001(\0132%.oneflow.boxing.collectiv" +
-      "e.RequestSet:\0028\001\"\307\001\n\021CtrlRegstDescInfo\022k",
-      "\n#ctrl_regst_desc_id2producer_task_id\030\006 " +
-      "\003(\0132>.oneflow.CtrlRegstDescInfo.CtrlRegs" +
-      "tDescId2producerTaskIdEntry\032E\n#CtrlRegst" +
-      "DescId2producerTaskIdEntry\022\013\n\003key\030\001 \001(\003\022" +
-      "\r\n\005value\030\002 \001(\003:\0028\001\"\272\001\n\023OpAttributeRefTab" +
-      "le\022R\n\024op_name2op_attribute\030\001 \003(\01324.onefl" +
-      "ow.OpAttributeRefTable.OpName2opAttribut" +
-      "eEntry\032O\n\027OpName2opAttributeEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022#\n\005value\030\002 \001(\0132\024.oneflow.OpAttrib" +
-      "ute:\0028\001\"\321\001\n\017OpAttributeInfo\022^\n\035job_id2op",
-      "_attribute_ref_table\030\001 \003(\01327.oneflow.OpA" +
-      "ttributeInfo.JobId2opAttributeRefTableEn" +
-      "try\032^\n\036JobId2opAttributeRefTableEntry\022\013\n" +
-      "\003key\030\001 \001(\003\022+\n\005value\030\002 \001(\0132\034.oneflow.OpAt" +
-      "tributeRefTable:\0028\001\"\331\003\n\004Plan\022 \n\004task\030\001 \003" +
-      "(\0132\022.oneflow.TaskProto\0227\n\020block_chunk_li" +
-      "st\030\002 \002(\0132\035.oneflow.MemBlockAndChunkList\022" +
-      "\"\n\010net_topo\030\003 \002(\0132\020.oneflow.NetTopo\022$\n\tj" +
-      "ob_confs\030\004 \002(\0132\021.oneflow.JobConfs\022=\n\026col" +
-      "lective_boxing_plan\030\005 \002(\0132\035.oneflow.Coll",
-      "ectiveBoxingPlan\0228\n\024ctrl_regst_desc_info" +
-      "\030\006 \002(\0132\032.oneflow.CtrlRegstDescInfo\022S\n\035jo" +
-      "b_id2op_attribute_ref_table\030\007 \003(\0132,.onef" +
-      "low.Plan.JobId2opAttributeRefTableEntry\032" +
-      "^\n\036JobId2opAttributeRefTableEntry\022\013\n\003key" +
-      "\030\001 \001(\003\022+\n\005value\030\002 \001(\0132\034.oneflow.OpAttrib" +
-      "uteRefTable:\0028\001B\026\n\024org.oneflow.core.job"
+      "hineIds\022\022\n\nmachine_id\030\001 \003(\003\"\230\001\n\010JobConfs" +
+      "\022=\n\017job_id2job_conf\030\001 \003(\0132$.oneflow.JobC" +
+      "onfs.JobId2jobConfEntry\032M\n\022JobId2jobConf" +
+      "Entry\022\013\n\003key\030\001 \001(\003\022&\n\005value\030\002 \001(\0132\027.onef",
+      "low.JobConfigProto:\0028\001\"\307\001\n\024CollectiveBox" +
+      "ingPlan\022O\n\022job_id2request_set\030\001 \003(\01323.on" +
+      "eflow.CollectiveBoxingPlan.JobId2request" +
+      "SetEntry\032^\n\025JobId2requestSetEntry\022\013\n\003key" +
+      "\030\001 \001(\003\0224\n\005value\030\002 \001(\0132%.oneflow.boxing.c" +
+      "ollective.RequestSet:\0028\001\"\307\001\n\021CtrlRegstDe" +
+      "scInfo\022k\n#ctrl_regst_desc_id2producer_ta" +
+      "sk_id\030\006 \003(\0132>.oneflow.CtrlRegstDescInfo." +
+      "CtrlRegstDescId2producerTaskIdEntry\032E\n#C" +
+      "trlRegstDescId2producerTaskIdEntry\022\013\n\003ke",
+      "y\030\001 \001(\003\022\r\n\005value\030\002 \001(\003:\0028\001\"\272\001\n\023OpAttribu" +
+      "teRefTable\022R\n\024op_name2op_attribute\030\001 \003(\013" +
+      "24.oneflow.OpAttributeRefTable.OpName2op" +
+      "AttributeEntry\032O\n\027OpName2opAttributeEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022#\n\005value\030\002 \001(\0132\024.oneflow." +
+      "OpAttribute:\0028\001\"\321\001\n\017OpAttributeInfo\022^\n\035j" +
+      "ob_id2op_attribute_ref_table\030\001 \003(\01327.one" +
+      "flow.OpAttributeInfo.JobId2opAttributeRe" +
+      "fTableEntry\032^\n\036JobId2opAttributeRefTable" +
+      "Entry\022\013\n\003key\030\001 \001(\003\022+\n\005value\030\002 \001(\0132\034.onef",
+      "low.OpAttributeRefTable:\0028\001\"\265\003\n\004Plan\022 \n\004" +
+      "task\030\001 \003(\0132\022.oneflow.TaskProto\0227\n\020block_" +
+      "chunk_list\030\002 \002(\0132\035.oneflow.MemBlockAndCh" +
+      "unkList\022$\n\tjob_confs\030\004 \002(\0132\021.oneflow.Job" +
+      "Confs\022=\n\026collective_boxing_plan\030\005 \002(\0132\035." +
+      "oneflow.CollectiveBoxingPlan\0228\n\024ctrl_reg" +
+      "st_desc_info\030\006 \002(\0132\032.oneflow.CtrlRegstDe" +
+      "scInfo\022S\n\035job_id2op_attribute_ref_table\030" +
+      "\007 \003(\0132,.oneflow.Plan.JobId2opAttributeRe" +
+      "fTableEntry\032^\n\036JobId2opAttributeRefTable",
+      "Entry\022\013\n\003key\030\001 \001(\003\022+\n\005value\030\002 \001(\0132\034.onef" +
+      "low.OpAttributeRefTable:\0028\001B\026\n\024org.onefl" +
+      "ow.core.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6953,20 +6053,8 @@ public final class PlanOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_MachineIds_descriptor,
         new java.lang.String[] { "MachineId", });
-    internal_static_oneflow_NetTopo_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_oneflow_NetTopo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_oneflow_NetTopo_descriptor,
-        new java.lang.String[] { "PeerMachineIds", });
-    internal_static_oneflow_NetTopo_PeerMachineIdsEntry_descriptor =
-      internal_static_oneflow_NetTopo_descriptor.getNestedTypes().get(0);
-    internal_static_oneflow_NetTopo_PeerMachineIdsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_oneflow_NetTopo_PeerMachineIdsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_JobConfs_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_oneflow_JobConfs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_JobConfs_descriptor,
@@ -6978,7 +6066,7 @@ public final class PlanOuterClass {
         internal_static_oneflow_JobConfs_JobId2jobConfEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_CollectiveBoxingPlan_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_oneflow_CollectiveBoxingPlan_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CollectiveBoxingPlan_descriptor,
@@ -6990,7 +6078,7 @@ public final class PlanOuterClass {
         internal_static_oneflow_CollectiveBoxingPlan_JobId2requestSetEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_CtrlRegstDescInfo_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_oneflow_CtrlRegstDescInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CtrlRegstDescInfo_descriptor,
@@ -7002,7 +6090,7 @@ public final class PlanOuterClass {
         internal_static_oneflow_CtrlRegstDescInfo_CtrlRegstDescId2producerTaskIdEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_OpAttributeRefTable_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_oneflow_OpAttributeRefTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OpAttributeRefTable_descriptor,
@@ -7014,7 +6102,7 @@ public final class PlanOuterClass {
         internal_static_oneflow_OpAttributeRefTable_OpName2opAttributeEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_OpAttributeInfo_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_oneflow_OpAttributeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_OpAttributeInfo_descriptor,
@@ -7026,11 +6114,11 @@ public final class PlanOuterClass {
         internal_static_oneflow_OpAttributeInfo_JobId2opAttributeRefTableEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_oneflow_Plan_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_oneflow_Plan_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_Plan_descriptor,
-        new java.lang.String[] { "Task", "BlockChunkList", "NetTopo", "JobConfs", "CollectiveBoxingPlan", "CtrlRegstDescInfo", "JobId2OpAttributeRefTable", });
+        new java.lang.String[] { "Task", "BlockChunkList", "JobConfs", "CollectiveBoxingPlan", "CtrlRegstDescInfo", "JobId2OpAttributeRefTable", });
     internal_static_oneflow_Plan_JobId2opAttributeRefTableEntry_descriptor =
       internal_static_oneflow_Plan_descriptor.getNestedTypes().get(0);
     internal_static_oneflow_Plan_JobId2opAttributeRefTableEntry_fieldAccessorTable = new

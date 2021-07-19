@@ -3298,28 +3298,28 @@ public final class JobOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     boolean hasNet();
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     org.oneflow.core.job.DlnetConf.DLNetConf getNet();
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder();
 
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     boolean hasPlacement();
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     org.oneflow.core.job.PlacementOuterClass.Placement getPlacement();
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder();
 
@@ -3497,19 +3497,19 @@ public final class JobOuterClass {
     public static final int NET_FIELD_NUMBER = 1;
     private org.oneflow.core.job.DlnetConf.DLNetConf net_;
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     public boolean hasNet() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     public org.oneflow.core.job.DlnetConf.DLNetConf getNet() {
       return net_ == null ? org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
     }
     /**
-     * <code>required .oneflow.DLNetConf net = 1;</code>
+     * <code>optional .oneflow.DLNetConf net = 1;</code>
      */
     public org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
       return net_ == null ? org.oneflow.core.job.DlnetConf.DLNetConf.getDefaultInstance() : net_;
@@ -3518,19 +3518,19 @@ public final class JobOuterClass {
     public static final int PLACEMENT_FIELD_NUMBER = 2;
     private org.oneflow.core.job.PlacementOuterClass.Placement placement_;
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     public boolean hasPlacement() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     public org.oneflow.core.job.PlacementOuterClass.Placement getPlacement() {
       return placement_ == null ? org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
     }
     /**
-     * <code>required .oneflow.Placement placement = 2;</code>
+     * <code>optional .oneflow.Placement placement = 2;</code>
      */
     public org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
       return placement_ == null ? org.oneflow.core.job.PlacementOuterClass.Placement.getDefaultInstance() : placement_;
@@ -3605,25 +3605,21 @@ public final class JobOuterClass {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasNet()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasPlacement()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasJobConf()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getNet().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasNet()) {
+        if (!getNet().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
-      if (!getPlacement().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasPlacement()) {
+        if (!getPlacement().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       if (!getJobConf().isInitialized()) {
         memoizedIsInitialized = 0;
@@ -4043,20 +4039,18 @@ public final class JobOuterClass {
       }
 
       public final boolean isInitialized() {
-        if (!hasNet()) {
-          return false;
-        }
-        if (!hasPlacement()) {
-          return false;
-        }
         if (!hasJobConf()) {
           return false;
         }
-        if (!getNet().isInitialized()) {
-          return false;
+        if (hasNet()) {
+          if (!getNet().isInitialized()) {
+            return false;
+          }
         }
-        if (!getPlacement().isInitialized()) {
-          return false;
+        if (hasPlacement()) {
+          if (!getPlacement().isInitialized()) {
+            return false;
+          }
         }
         if (!getJobConf().isInitialized()) {
           return false;
@@ -4097,13 +4091,13 @@ public final class JobOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.DlnetConf.DLNetConf, org.oneflow.core.job.DlnetConf.DLNetConf.Builder, org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder> netBuilder_;
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public boolean hasNet() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public org.oneflow.core.job.DlnetConf.DLNetConf getNet() {
         if (netBuilder_ == null) {
@@ -4113,7 +4107,7 @@ public final class JobOuterClass {
         }
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public Builder setNet(org.oneflow.core.job.DlnetConf.DLNetConf value) {
         if (netBuilder_ == null) {
@@ -4129,7 +4123,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public Builder setNet(
           org.oneflow.core.job.DlnetConf.DLNetConf.Builder builderForValue) {
@@ -4143,7 +4137,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public Builder mergeNet(org.oneflow.core.job.DlnetConf.DLNetConf value) {
         if (netBuilder_ == null) {
@@ -4163,7 +4157,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public Builder clearNet() {
         if (netBuilder_ == null) {
@@ -4176,7 +4170,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public org.oneflow.core.job.DlnetConf.DLNetConf.Builder getNetBuilder() {
         bitField0_ |= 0x00000001;
@@ -4184,7 +4178,7 @@ public final class JobOuterClass {
         return getNetFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       public org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder getNetOrBuilder() {
         if (netBuilder_ != null) {
@@ -4195,7 +4189,7 @@ public final class JobOuterClass {
         }
       }
       /**
-       * <code>required .oneflow.DLNetConf net = 1;</code>
+       * <code>optional .oneflow.DLNetConf net = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.DlnetConf.DLNetConf, org.oneflow.core.job.DlnetConf.DLNetConf.Builder, org.oneflow.core.job.DlnetConf.DLNetConfOrBuilder> 
@@ -4215,13 +4209,13 @@ public final class JobOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.PlacementOuterClass.Placement, org.oneflow.core.job.PlacementOuterClass.Placement.Builder, org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder> placementBuilder_;
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public boolean hasPlacement() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public org.oneflow.core.job.PlacementOuterClass.Placement getPlacement() {
         if (placementBuilder_ == null) {
@@ -4231,7 +4225,7 @@ public final class JobOuterClass {
         }
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public Builder setPlacement(org.oneflow.core.job.PlacementOuterClass.Placement value) {
         if (placementBuilder_ == null) {
@@ -4247,7 +4241,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public Builder setPlacement(
           org.oneflow.core.job.PlacementOuterClass.Placement.Builder builderForValue) {
@@ -4261,7 +4255,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public Builder mergePlacement(org.oneflow.core.job.PlacementOuterClass.Placement value) {
         if (placementBuilder_ == null) {
@@ -4281,7 +4275,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public Builder clearPlacement() {
         if (placementBuilder_ == null) {
@@ -4294,7 +4288,7 @@ public final class JobOuterClass {
         return this;
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public org.oneflow.core.job.PlacementOuterClass.Placement.Builder getPlacementBuilder() {
         bitField0_ |= 0x00000002;
@@ -4302,7 +4296,7 @@ public final class JobOuterClass {
         return getPlacementFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       public org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder getPlacementOrBuilder() {
         if (placementBuilder_ != null) {
@@ -4313,7 +4307,7 @@ public final class JobOuterClass {
         }
       }
       /**
-       * <code>required .oneflow.Placement placement = 2;</code>
+       * <code>optional .oneflow.Placement placement = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.PlacementOuterClass.Placement, org.oneflow.core.job.PlacementOuterClass.Placement.Builder, org.oneflow.core.job.PlacementOuterClass.PlacementOrBuilder> 
@@ -4842,8 +4836,8 @@ public final class JobOuterClass {
       "alObjectIdEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\003:\0028\001\032Q\n\030OpName2argSignatureEntry\022\013\n\003k" +
       "ey\030\001 \001(\t\022$\n\005value\030\002 \001(\0132\025.oneflow.ArgSig" +
-      "nature:\0028\001\"\336\001\n\003Job\022\037\n\003net\030\001 \002(\0132\022.oneflo" +
-      "w.DLNetConf\022%\n\tplacement\030\002 \002(\0132\022.oneflow" +
+      "nature:\0028\001\"\336\001\n\003Job\022\037\n\003net\030\001 \001(\0132\022.oneflo" +
+      "w.DLNetConf\022%\n\tplacement\030\002 \001(\0132\022.oneflow" +
       ".Placement\022)\n\010job_conf\030\003 \002(\0132\027.oneflow.J",
       "obConfigProto\022<\n\026job_parallel_view_conf\030" +
       "\004 \001(\0132\034.oneflow.JobParallelViewConf\022&\n\006h" +

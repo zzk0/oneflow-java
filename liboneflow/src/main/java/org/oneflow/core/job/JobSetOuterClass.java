@@ -14,1163 +14,6 @@ public final class JobSetOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface IOConfOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:oneflow.IOConf)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    boolean hasDataFsConf();
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDataFsConf();
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getDataFsConfOrBuilder();
-
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    boolean hasSnapshotFsConf();
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getSnapshotFsConf();
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getSnapshotFsConfOrBuilder();
-
-    /**
-     * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-     */
-    boolean hasSaveDownloadedFileToLocalFs();
-    /**
-     * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-     */
-    boolean getSaveDownloadedFileToLocalFs();
-
-    /**
-     * <code>optional uint64 persistence_buf_byte = 4;</code>
-     */
-    boolean hasPersistenceBufByte();
-    /**
-     * <code>optional uint64 persistence_buf_byte = 4;</code>
-     */
-    long getPersistenceBufByte();
-
-    /**
-     * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-     */
-    boolean hasEnableModelIoV2();
-    /**
-     * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-     */
-    boolean getEnableModelIoV2();
-
-    /**
-     * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-     */
-    boolean hasEnableLegacyModelIo();
-    /**
-     * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-     */
-    boolean getEnableLegacyModelIo();
-  }
-  /**
-   * Protobuf type {@code oneflow.IOConf}
-   */
-  public  static final class IOConf extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:oneflow.IOConf)
-      IOConfOrBuilder {
-    // Use IOConf.newBuilder() to construct.
-    private IOConf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private IOConf() {
-      saveDownloadedFileToLocalFs_ = false;
-      persistenceBufByte_ = 0L;
-      enableModelIoV2_ = false;
-      enableLegacyModelIo_ = false;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private IOConf(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = dataFsConf_.toBuilder();
-              }
-              dataFsConf_ = input.readMessage(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataFsConf_);
-                dataFsConf_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = snapshotFsConf_.toBuilder();
-              }
-              snapshotFsConf_ = input.readMessage(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(snapshotFsConf_);
-                snapshotFsConf_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              saveDownloadedFileToLocalFs_ = input.readBool();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              persistenceBufByte_ = input.readUInt64();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              enableModelIoV2_ = input.readBool();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              enableLegacyModelIo_ = input.readBool();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.oneflow.core.job.JobSetOuterClass.internal_static_oneflow_IOConf_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.oneflow.core.job.JobSetOuterClass.internal_static_oneflow_IOConf_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.oneflow.core.job.JobSetOuterClass.IOConf.class, org.oneflow.core.job.JobSetOuterClass.IOConf.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DATA_FS_CONF_FIELD_NUMBER = 1;
-    private org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf dataFsConf_;
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    public boolean hasDataFsConf() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDataFsConf() {
-      return dataFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : dataFsConf_;
-    }
-    /**
-     * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-     */
-    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getDataFsConfOrBuilder() {
-      return dataFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : dataFsConf_;
-    }
-
-    public static final int SNAPSHOT_FS_CONF_FIELD_NUMBER = 2;
-    private org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf snapshotFsConf_;
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    public boolean hasSnapshotFsConf() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getSnapshotFsConf() {
-      return snapshotFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : snapshotFsConf_;
-    }
-    /**
-     * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-     */
-    public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getSnapshotFsConfOrBuilder() {
-      return snapshotFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : snapshotFsConf_;
-    }
-
-    public static final int SAVE_DOWNLOADED_FILE_TO_LOCAL_FS_FIELD_NUMBER = 3;
-    private boolean saveDownloadedFileToLocalFs_;
-    /**
-     * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-     */
-    public boolean hasSaveDownloadedFileToLocalFs() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-     */
-    public boolean getSaveDownloadedFileToLocalFs() {
-      return saveDownloadedFileToLocalFs_;
-    }
-
-    public static final int PERSISTENCE_BUF_BYTE_FIELD_NUMBER = 4;
-    private long persistenceBufByte_;
-    /**
-     * <code>optional uint64 persistence_buf_byte = 4;</code>
-     */
-    public boolean hasPersistenceBufByte() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional uint64 persistence_buf_byte = 4;</code>
-     */
-    public long getPersistenceBufByte() {
-      return persistenceBufByte_;
-    }
-
-    public static final int ENABLE_MODEL_IO_V2_FIELD_NUMBER = 5;
-    private boolean enableModelIoV2_;
-    /**
-     * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-     */
-    public boolean hasEnableModelIoV2() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-     */
-    public boolean getEnableModelIoV2() {
-      return enableModelIoV2_;
-    }
-
-    public static final int ENABLE_LEGACY_MODEL_IO_FIELD_NUMBER = 6;
-    private boolean enableLegacyModelIo_;
-    /**
-     * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-     */
-    public boolean hasEnableLegacyModelIo() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-     */
-    public boolean getEnableLegacyModelIo() {
-      return enableLegacyModelIo_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasDataFsConf()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSnapshotFsConf()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getDataFsConf().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getSnapshotFsConf().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, getDataFsConf());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, getSnapshotFsConf());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(3, saveDownloadedFileToLocalFs_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeUInt64(4, persistenceBufByte_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(5, enableModelIoV2_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBool(6, enableLegacyModelIo_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getDataFsConf());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSnapshotFsConf());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, saveDownloadedFileToLocalFs_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, persistenceBufByte_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, enableModelIoV2_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, enableLegacyModelIo_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.oneflow.core.job.JobSetOuterClass.IOConf)) {
-        return super.equals(obj);
-      }
-      org.oneflow.core.job.JobSetOuterClass.IOConf other = (org.oneflow.core.job.JobSetOuterClass.IOConf) obj;
-
-      boolean result = true;
-      result = result && (hasDataFsConf() == other.hasDataFsConf());
-      if (hasDataFsConf()) {
-        result = result && getDataFsConf()
-            .equals(other.getDataFsConf());
-      }
-      result = result && (hasSnapshotFsConf() == other.hasSnapshotFsConf());
-      if (hasSnapshotFsConf()) {
-        result = result && getSnapshotFsConf()
-            .equals(other.getSnapshotFsConf());
-      }
-      result = result && (hasSaveDownloadedFileToLocalFs() == other.hasSaveDownloadedFileToLocalFs());
-      if (hasSaveDownloadedFileToLocalFs()) {
-        result = result && (getSaveDownloadedFileToLocalFs()
-            == other.getSaveDownloadedFileToLocalFs());
-      }
-      result = result && (hasPersistenceBufByte() == other.hasPersistenceBufByte());
-      if (hasPersistenceBufByte()) {
-        result = result && (getPersistenceBufByte()
-            == other.getPersistenceBufByte());
-      }
-      result = result && (hasEnableModelIoV2() == other.hasEnableModelIoV2());
-      if (hasEnableModelIoV2()) {
-        result = result && (getEnableModelIoV2()
-            == other.getEnableModelIoV2());
-      }
-      result = result && (hasEnableLegacyModelIo() == other.hasEnableLegacyModelIo());
-      if (hasEnableLegacyModelIo()) {
-        result = result && (getEnableLegacyModelIo()
-            == other.getEnableLegacyModelIo());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      if (hasDataFsConf()) {
-        hash = (37 * hash) + DATA_FS_CONF_FIELD_NUMBER;
-        hash = (53 * hash) + getDataFsConf().hashCode();
-      }
-      if (hasSnapshotFsConf()) {
-        hash = (37 * hash) + SNAPSHOT_FS_CONF_FIELD_NUMBER;
-        hash = (53 * hash) + getSnapshotFsConf().hashCode();
-      }
-      if (hasSaveDownloadedFileToLocalFs()) {
-        hash = (37 * hash) + SAVE_DOWNLOADED_FILE_TO_LOCAL_FS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getSaveDownloadedFileToLocalFs());
-      }
-      if (hasPersistenceBufByte()) {
-        hash = (37 * hash) + PERSISTENCE_BUF_BYTE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getPersistenceBufByte());
-      }
-      if (hasEnableModelIoV2()) {
-        hash = (37 * hash) + ENABLE_MODEL_IO_V2_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getEnableModelIoV2());
-      }
-      if (hasEnableLegacyModelIo()) {
-        hash = (37 * hash) + ENABLE_LEGACY_MODEL_IO_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getEnableLegacyModelIo());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.oneflow.core.job.JobSetOuterClass.IOConf prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code oneflow.IOConf}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:oneflow.IOConf)
-        org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.oneflow.core.job.JobSetOuterClass.internal_static_oneflow_IOConf_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.oneflow.core.job.JobSetOuterClass.internal_static_oneflow_IOConf_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.oneflow.core.job.JobSetOuterClass.IOConf.class, org.oneflow.core.job.JobSetOuterClass.IOConf.Builder.class);
-      }
-
-      // Construct using org.oneflow.core.job.JobSetOuterClass.IOConf.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFsConfFieldBuilder();
-          getSnapshotFsConfFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (dataFsConfBuilder_ == null) {
-          dataFsConf_ = null;
-        } else {
-          dataFsConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (snapshotFsConfBuilder_ == null) {
-          snapshotFsConf_ = null;
-        } else {
-          snapshotFsConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        saveDownloadedFileToLocalFs_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        persistenceBufByte_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        enableModelIoV2_ = false;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        enableLegacyModelIo_ = false;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.oneflow.core.job.JobSetOuterClass.internal_static_oneflow_IOConf_descriptor;
-      }
-
-      public org.oneflow.core.job.JobSetOuterClass.IOConf getDefaultInstanceForType() {
-        return org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance();
-      }
-
-      public org.oneflow.core.job.JobSetOuterClass.IOConf build() {
-        org.oneflow.core.job.JobSetOuterClass.IOConf result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public org.oneflow.core.job.JobSetOuterClass.IOConf buildPartial() {
-        org.oneflow.core.job.JobSetOuterClass.IOConf result = new org.oneflow.core.job.JobSetOuterClass.IOConf(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (dataFsConfBuilder_ == null) {
-          result.dataFsConf_ = dataFsConf_;
-        } else {
-          result.dataFsConf_ = dataFsConfBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (snapshotFsConfBuilder_ == null) {
-          result.snapshotFsConf_ = snapshotFsConf_;
-        } else {
-          result.snapshotFsConf_ = snapshotFsConfBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.saveDownloadedFileToLocalFs_ = saveDownloadedFileToLocalFs_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.persistenceBufByte_ = persistenceBufByte_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.enableModelIoV2_ = enableModelIoV2_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.enableLegacyModelIo_ = enableLegacyModelIo_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.oneflow.core.job.JobSetOuterClass.IOConf) {
-          return mergeFrom((org.oneflow.core.job.JobSetOuterClass.IOConf)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.oneflow.core.job.JobSetOuterClass.IOConf other) {
-        if (other == org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance()) return this;
-        if (other.hasDataFsConf()) {
-          mergeDataFsConf(other.getDataFsConf());
-        }
-        if (other.hasSnapshotFsConf()) {
-          mergeSnapshotFsConf(other.getSnapshotFsConf());
-        }
-        if (other.hasSaveDownloadedFileToLocalFs()) {
-          setSaveDownloadedFileToLocalFs(other.getSaveDownloadedFileToLocalFs());
-        }
-        if (other.hasPersistenceBufByte()) {
-          setPersistenceBufByte(other.getPersistenceBufByte());
-        }
-        if (other.hasEnableModelIoV2()) {
-          setEnableModelIoV2(other.getEnableModelIoV2());
-        }
-        if (other.hasEnableLegacyModelIo()) {
-          setEnableLegacyModelIo(other.getEnableLegacyModelIo());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasDataFsConf()) {
-          return false;
-        }
-        if (!hasSnapshotFsConf()) {
-          return false;
-        }
-        if (!getDataFsConf().isInitialized()) {
-          return false;
-        }
-        if (!getSnapshotFsConf().isInitialized()) {
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.oneflow.core.job.JobSetOuterClass.IOConf parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.oneflow.core.job.JobSetOuterClass.IOConf) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf dataFsConf_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder> dataFsConfBuilder_;
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public boolean hasDataFsConf() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getDataFsConf() {
-        if (dataFsConfBuilder_ == null) {
-          return dataFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : dataFsConf_;
-        } else {
-          return dataFsConfBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public Builder setDataFsConf(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf value) {
-        if (dataFsConfBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          dataFsConf_ = value;
-          onChanged();
-        } else {
-          dataFsConfBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public Builder setDataFsConf(
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder builderForValue) {
-        if (dataFsConfBuilder_ == null) {
-          dataFsConf_ = builderForValue.build();
-          onChanged();
-        } else {
-          dataFsConfBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public Builder mergeDataFsConf(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf value) {
-        if (dataFsConfBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              dataFsConf_ != null &&
-              dataFsConf_ != org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance()) {
-            dataFsConf_ =
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.newBuilder(dataFsConf_).mergeFrom(value).buildPartial();
-          } else {
-            dataFsConf_ = value;
-          }
-          onChanged();
-        } else {
-          dataFsConfBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public Builder clearDataFsConf() {
-        if (dataFsConfBuilder_ == null) {
-          dataFsConf_ = null;
-          onChanged();
-        } else {
-          dataFsConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder getDataFsConfBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getDataFsConfFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getDataFsConfOrBuilder() {
-        if (dataFsConfBuilder_ != null) {
-          return dataFsConfBuilder_.getMessageOrBuilder();
-        } else {
-          return dataFsConf_ == null ?
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : dataFsConf_;
-        }
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf data_fs_conf = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder> 
-          getDataFsConfFieldBuilder() {
-        if (dataFsConfBuilder_ == null) {
-          dataFsConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder>(
-                  getDataFsConf(),
-                  getParentForChildren(),
-                  isClean());
-          dataFsConf_ = null;
-        }
-        return dataFsConfBuilder_;
-      }
-
-      private org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf snapshotFsConf_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder> snapshotFsConfBuilder_;
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public boolean hasSnapshotFsConf() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf getSnapshotFsConf() {
-        if (snapshotFsConfBuilder_ == null) {
-          return snapshotFsConf_ == null ? org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : snapshotFsConf_;
-        } else {
-          return snapshotFsConfBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public Builder setSnapshotFsConf(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf value) {
-        if (snapshotFsConfBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          snapshotFsConf_ = value;
-          onChanged();
-        } else {
-          snapshotFsConfBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public Builder setSnapshotFsConf(
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder builderForValue) {
-        if (snapshotFsConfBuilder_ == null) {
-          snapshotFsConf_ = builderForValue.build();
-          onChanged();
-        } else {
-          snapshotFsConfBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public Builder mergeSnapshotFsConf(org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf value) {
-        if (snapshotFsConfBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              snapshotFsConf_ != null &&
-              snapshotFsConf_ != org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance()) {
-            snapshotFsConf_ =
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.newBuilder(snapshotFsConf_).mergeFrom(value).buildPartial();
-          } else {
-            snapshotFsConf_ = value;
-          }
-          onChanged();
-        } else {
-          snapshotFsConfBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public Builder clearSnapshotFsConf() {
-        if (snapshotFsConfBuilder_ == null) {
-          snapshotFsConf_ = null;
-          onChanged();
-        } else {
-          snapshotFsConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder getSnapshotFsConfBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getSnapshotFsConfFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      public org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder getSnapshotFsConfOrBuilder() {
-        if (snapshotFsConfBuilder_ != null) {
-          return snapshotFsConfBuilder_.getMessageOrBuilder();
-        } else {
-          return snapshotFsConf_ == null ?
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.getDefaultInstance() : snapshotFsConf_;
-        }
-      }
-      /**
-       * <code>required .oneflow.FileSystemConf snapshot_fs_conf = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder> 
-          getSnapshotFsConfFieldBuilder() {
-        if (snapshotFsConfBuilder_ == null) {
-          snapshotFsConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConf.Builder, org.oneflow.core.job.FileSystemConfOuterClass.FileSystemConfOrBuilder>(
-                  getSnapshotFsConf(),
-                  getParentForChildren(),
-                  isClean());
-          snapshotFsConf_ = null;
-        }
-        return snapshotFsConfBuilder_;
-      }
-
-      private boolean saveDownloadedFileToLocalFs_ ;
-      /**
-       * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-       */
-      public boolean hasSaveDownloadedFileToLocalFs() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-       */
-      public boolean getSaveDownloadedFileToLocalFs() {
-        return saveDownloadedFileToLocalFs_;
-      }
-      /**
-       * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-       */
-      public Builder setSaveDownloadedFileToLocalFs(boolean value) {
-        bitField0_ |= 0x00000004;
-        saveDownloadedFileToLocalFs_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool save_downloaded_file_to_local_fs = 3 [default = false];</code>
-       */
-      public Builder clearSaveDownloadedFileToLocalFs() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        saveDownloadedFileToLocalFs_ = false;
-        onChanged();
-        return this;
-      }
-
-      private long persistenceBufByte_ ;
-      /**
-       * <code>optional uint64 persistence_buf_byte = 4;</code>
-       */
-      public boolean hasPersistenceBufByte() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional uint64 persistence_buf_byte = 4;</code>
-       */
-      public long getPersistenceBufByte() {
-        return persistenceBufByte_;
-      }
-      /**
-       * <code>optional uint64 persistence_buf_byte = 4;</code>
-       */
-      public Builder setPersistenceBufByte(long value) {
-        bitField0_ |= 0x00000008;
-        persistenceBufByte_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint64 persistence_buf_byte = 4;</code>
-       */
-      public Builder clearPersistenceBufByte() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        persistenceBufByte_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private boolean enableModelIoV2_ ;
-      /**
-       * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-       */
-      public boolean hasEnableModelIoV2() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-       */
-      public boolean getEnableModelIoV2() {
-        return enableModelIoV2_;
-      }
-      /**
-       * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-       */
-      public Builder setEnableModelIoV2(boolean value) {
-        bitField0_ |= 0x00000010;
-        enableModelIoV2_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool enable_model_io_v2 = 5 [default = false];</code>
-       */
-      public Builder clearEnableModelIoV2() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        enableModelIoV2_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean enableLegacyModelIo_ ;
-      /**
-       * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-       */
-      public boolean hasEnableLegacyModelIo() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-       */
-      public boolean getEnableLegacyModelIo() {
-        return enableLegacyModelIo_;
-      }
-      /**
-       * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-       */
-      public Builder setEnableLegacyModelIo(boolean value) {
-        bitField0_ |= 0x00000020;
-        enableLegacyModelIo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool enable_legacy_model_io = 6 [default = false];</code>
-       */
-      public Builder clearEnableLegacyModelIo() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        enableLegacyModelIo_ = false;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:oneflow.IOConf)
-    }
-
-    // @@protoc_insertion_point(class_scope:oneflow.IOConf)
-    private static final org.oneflow.core.job.JobSetOuterClass.IOConf DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.oneflow.core.job.JobSetOuterClass.IOConf();
-    }
-
-    public static org.oneflow.core.job.JobSetOuterClass.IOConf getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<IOConf>
-        PARSER = new com.google.protobuf.AbstractParser<IOConf>() {
-      public IOConf parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new IOConf(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<IOConf> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IOConf> getParserForType() {
-      return PARSER;
-    }
-
-    public org.oneflow.core.job.JobSetOuterClass.IOConf getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ProfilerConfOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oneflow.ProfilerConf)
       com.google.protobuf.MessageOrBuilder {
@@ -4809,19 +3652,6 @@ public final class JobSetOuterClass {
     org.oneflow.core.job.ResourceOuterClass.ResourceOrBuilder getResourceOrBuilder();
 
     /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    boolean hasIoConf();
-    /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    org.oneflow.core.job.JobSetOuterClass.IOConf getIoConf();
-    /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder getIoConfOrBuilder();
-
-    /**
      * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
      */
     boolean hasProfilerConf();
@@ -4919,22 +3749,9 @@ public final class JobSetOuterClass {
               bitField0_ |= 0x00000001;
               break;
             }
-            case 18: {
-              org.oneflow.core.job.JobSetOuterClass.IOConf.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = ioConf_.toBuilder();
-              }
-              ioConf_ = input.readMessage(org.oneflow.core.job.JobSetOuterClass.IOConf.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ioConf_);
-                ioConf_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
             case 26: {
               org.oneflow.core.job.JobSetOuterClass.ProfilerConf.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = profilerConf_.toBuilder();
               }
               profilerConf_ = input.readMessage(org.oneflow.core.job.JobSetOuterClass.ProfilerConf.PARSER, extensionRegistry);
@@ -4942,20 +3759,20 @@ public final class JobSetOuterClass {
                 subBuilder.mergeFrom(profilerConf_);
                 profilerConf_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 loadLibPath_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               loadLibPath_.add(bs);
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               sessionId_ = input.readInt64();
               break;
             }
@@ -4967,7 +3784,7 @@ public final class JobSetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           loadLibPath_ = loadLibPath_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -5008,34 +3825,13 @@ public final class JobSetOuterClass {
       return resource_ == null ? org.oneflow.core.job.ResourceOuterClass.Resource.getDefaultInstance() : resource_;
     }
 
-    public static final int IO_CONF_FIELD_NUMBER = 2;
-    private org.oneflow.core.job.JobSetOuterClass.IOConf ioConf_;
-    /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    public boolean hasIoConf() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    public org.oneflow.core.job.JobSetOuterClass.IOConf getIoConf() {
-      return ioConf_ == null ? org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance() : ioConf_;
-    }
-    /**
-     * <code>required .oneflow.IOConf io_conf = 2;</code>
-     */
-    public org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder getIoConfOrBuilder() {
-      return ioConf_ == null ? org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance() : ioConf_;
-    }
-
     public static final int PROFILER_CONF_FIELD_NUMBER = 3;
     private org.oneflow.core.job.JobSetOuterClass.ProfilerConf profilerConf_;
     /**
      * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
      */
     public boolean hasProfilerConf() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
@@ -5085,7 +3881,7 @@ public final class JobSetOuterClass {
      * <code>required int64 session_id = 5;</code>
      */
     public boolean hasSessionId() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>required int64 session_id = 5;</code>
@@ -5104,15 +3900,7 @@ public final class JobSetOuterClass {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasIoConf()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasSessionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getIoConf().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -5126,15 +3914,12 @@ public final class JobSetOuterClass {
         output.writeMessage(1, getResource());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, getIoConf());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(3, getProfilerConf());
       }
       for (int i = 0; i < loadLibPath_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, loadLibPath_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeInt64(5, sessionId_);
       }
       unknownFields.writeTo(output);
@@ -5151,10 +3936,6 @@ public final class JobSetOuterClass {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getIoConf());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProfilerConf());
       }
       {
@@ -5165,7 +3946,7 @@ public final class JobSetOuterClass {
         size += dataSize;
         size += 1 * getLoadLibPathList().size();
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, sessionId_);
       }
@@ -5190,11 +3971,6 @@ public final class JobSetOuterClass {
       if (hasResource()) {
         result = result && getResource()
             .equals(other.getResource());
-      }
-      result = result && (hasIoConf() == other.hasIoConf());
-      if (hasIoConf()) {
-        result = result && getIoConf()
-            .equals(other.getIoConf());
       }
       result = result && (hasProfilerConf() == other.hasProfilerConf());
       if (hasProfilerConf()) {
@@ -5222,10 +3998,6 @@ public final class JobSetOuterClass {
       if (hasResource()) {
         hash = (37 * hash) + RESOURCE_FIELD_NUMBER;
         hash = (53 * hash) + getResource().hashCode();
-      }
-      if (hasIoConf()) {
-        hash = (37 * hash) + IO_CONF_FIELD_NUMBER;
-        hash = (53 * hash) + getIoConf().hashCode();
       }
       if (hasProfilerConf()) {
         hash = (37 * hash) + PROFILER_CONF_FIELD_NUMBER;
@@ -5355,7 +4127,6 @@ public final class JobSetOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getResourceFieldBuilder();
-          getIoConfFieldBuilder();
           getProfilerConfFieldBuilder();
         }
       }
@@ -5367,22 +4138,16 @@ public final class JobSetOuterClass {
           resourceBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (ioConfBuilder_ == null) {
-          ioConf_ = null;
-        } else {
-          ioConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (profilerConfBuilder_ == null) {
           profilerConf_ = null;
         } else {
           profilerConfBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         loadLibPath_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         sessionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -5418,26 +4183,18 @@ public final class JobSetOuterClass {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        if (ioConfBuilder_ == null) {
-          result.ioConf_ = ioConf_;
-        } else {
-          result.ioConf_ = ioConfBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
         if (profilerConfBuilder_ == null) {
           result.profilerConf_ = profilerConf_;
         } else {
           result.profilerConf_ = profilerConfBuilder_.build();
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           loadLibPath_ = loadLibPath_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.loadLibPath_ = loadLibPath_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000008;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
         }
         result.sessionId_ = sessionId_;
         result.bitField0_ = to_bitField0_;
@@ -5485,16 +4242,13 @@ public final class JobSetOuterClass {
         if (other.hasResource()) {
           mergeResource(other.getResource());
         }
-        if (other.hasIoConf()) {
-          mergeIoConf(other.getIoConf());
-        }
         if (other.hasProfilerConf()) {
           mergeProfilerConf(other.getProfilerConf());
         }
         if (!other.loadLibPath_.isEmpty()) {
           if (loadLibPath_.isEmpty()) {
             loadLibPath_ = other.loadLibPath_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLoadLibPathIsMutable();
             loadLibPath_.addAll(other.loadLibPath_);
@@ -5513,13 +4267,7 @@ public final class JobSetOuterClass {
         if (!hasResource()) {
           return false;
         }
-        if (!hasIoConf()) {
-          return false;
-        }
         if (!hasSessionId()) {
-          return false;
-        }
-        if (!getIoConf().isInitialized()) {
           return false;
         }
         return true;
@@ -5662,124 +4410,6 @@ public final class JobSetOuterClass {
         return resourceBuilder_;
       }
 
-      private org.oneflow.core.job.JobSetOuterClass.IOConf ioConf_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.JobSetOuterClass.IOConf, org.oneflow.core.job.JobSetOuterClass.IOConf.Builder, org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder> ioConfBuilder_;
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public boolean hasIoConf() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public org.oneflow.core.job.JobSetOuterClass.IOConf getIoConf() {
-        if (ioConfBuilder_ == null) {
-          return ioConf_ == null ? org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance() : ioConf_;
-        } else {
-          return ioConfBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public Builder setIoConf(org.oneflow.core.job.JobSetOuterClass.IOConf value) {
-        if (ioConfBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ioConf_ = value;
-          onChanged();
-        } else {
-          ioConfBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public Builder setIoConf(
-          org.oneflow.core.job.JobSetOuterClass.IOConf.Builder builderForValue) {
-        if (ioConfBuilder_ == null) {
-          ioConf_ = builderForValue.build();
-          onChanged();
-        } else {
-          ioConfBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public Builder mergeIoConf(org.oneflow.core.job.JobSetOuterClass.IOConf value) {
-        if (ioConfBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              ioConf_ != null &&
-              ioConf_ != org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance()) {
-            ioConf_ =
-              org.oneflow.core.job.JobSetOuterClass.IOConf.newBuilder(ioConf_).mergeFrom(value).buildPartial();
-          } else {
-            ioConf_ = value;
-          }
-          onChanged();
-        } else {
-          ioConfBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public Builder clearIoConf() {
-        if (ioConfBuilder_ == null) {
-          ioConf_ = null;
-          onChanged();
-        } else {
-          ioConfBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public org.oneflow.core.job.JobSetOuterClass.IOConf.Builder getIoConfBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getIoConfFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      public org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder getIoConfOrBuilder() {
-        if (ioConfBuilder_ != null) {
-          return ioConfBuilder_.getMessageOrBuilder();
-        } else {
-          return ioConf_ == null ?
-              org.oneflow.core.job.JobSetOuterClass.IOConf.getDefaultInstance() : ioConf_;
-        }
-      }
-      /**
-       * <code>required .oneflow.IOConf io_conf = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.oneflow.core.job.JobSetOuterClass.IOConf, org.oneflow.core.job.JobSetOuterClass.IOConf.Builder, org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder> 
-          getIoConfFieldBuilder() {
-        if (ioConfBuilder_ == null) {
-          ioConfBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.oneflow.core.job.JobSetOuterClass.IOConf, org.oneflow.core.job.JobSetOuterClass.IOConf.Builder, org.oneflow.core.job.JobSetOuterClass.IOConfOrBuilder>(
-                  getIoConf(),
-                  getParentForChildren(),
-                  isClean());
-          ioConf_ = null;
-        }
-        return ioConfBuilder_;
-      }
-
       private org.oneflow.core.job.JobSetOuterClass.ProfilerConf profilerConf_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.oneflow.core.job.JobSetOuterClass.ProfilerConf, org.oneflow.core.job.JobSetOuterClass.ProfilerConf.Builder, org.oneflow.core.job.JobSetOuterClass.ProfilerConfOrBuilder> profilerConfBuilder_;
@@ -5787,7 +4417,7 @@ public final class JobSetOuterClass {
        * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
        */
       public boolean hasProfilerConf() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
@@ -5812,7 +4442,7 @@ public final class JobSetOuterClass {
         } else {
           profilerConfBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
@@ -5826,7 +4456,7 @@ public final class JobSetOuterClass {
         } else {
           profilerConfBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
@@ -5834,7 +4464,7 @@ public final class JobSetOuterClass {
        */
       public Builder mergeProfilerConf(org.oneflow.core.job.JobSetOuterClass.ProfilerConf value) {
         if (profilerConfBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
               profilerConf_ != null &&
               profilerConf_ != org.oneflow.core.job.JobSetOuterClass.ProfilerConf.getDefaultInstance()) {
             profilerConf_ =
@@ -5846,7 +4476,7 @@ public final class JobSetOuterClass {
         } else {
           profilerConfBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
@@ -5859,14 +4489,14 @@ public final class JobSetOuterClass {
         } else {
           profilerConfBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
        * <code>optional .oneflow.ProfilerConf profiler_conf = 3;</code>
        */
       public org.oneflow.core.job.JobSetOuterClass.ProfilerConf.Builder getProfilerConfBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return getProfilerConfFieldBuilder().getBuilder();
       }
@@ -5900,9 +4530,9 @@ public final class JobSetOuterClass {
 
       private com.google.protobuf.LazyStringList loadLibPath_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLoadLibPathIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           loadLibPath_ = new com.google.protobuf.LazyStringArrayList(loadLibPath_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -5973,7 +4603,7 @@ public final class JobSetOuterClass {
        */
       public Builder clearLoadLibPath() {
         loadLibPath_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -5996,7 +4626,7 @@ public final class JobSetOuterClass {
        * <code>required int64 session_id = 5;</code>
        */
       public boolean hasSessionId() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>required int64 session_id = 5;</code>
@@ -6008,7 +4638,7 @@ public final class JobSetOuterClass {
        * <code>required int64 session_id = 5;</code>
        */
       public Builder setSessionId(long value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         sessionId_ = value;
         onChanged();
         return this;
@@ -6017,7 +4647,7 @@ public final class JobSetOuterClass {
        * <code>required int64 session_id = 5;</code>
        */
       public Builder clearSessionId() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         sessionId_ = 0L;
         onChanged();
         return this;
@@ -7028,11 +5658,6 @@ public final class JobSetOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_oneflow_IOConf_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_oneflow_IOConf_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oneflow_ProfilerConf_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7083,34 +5708,26 @@ public final class JobSetOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036oneflow/core/job/job_set.proto\022\007oneflo" +
       "w\032\032oneflow/core/job/job.proto\032\037oneflow/c" +
-      "ore/job/resource.proto\032\'oneflow/core/job" +
-      "/file_system_conf.proto\"\203\002\n\006IOConf\022-\n\014da" +
-      "ta_fs_conf\030\001 \002(\0132\027.oneflow.FileSystemCon" +
-      "f\0221\n\020snapshot_fs_conf\030\002 \002(\0132\027.oneflow.Fi" +
-      "leSystemConf\022/\n save_downloaded_file_to_" +
-      "local_fs\030\003 \001(\010:\005false\022\034\n\024persistence_buf" +
-      "_byte\030\004 \001(\004\022!\n\022enable_model_io_v2\030\005 \001(\010:" +
-      "\005false\022%\n\026enable_legacy_model_io\030\006 \001(\010:\005",
-      "false\"0\n\014ProfilerConf\022 \n\021collect_act_eve" +
-      "nt\030\001 \001(\010:\005false\"\032\n\030ReuseMemPriorityStrat" +
-      "egy\"\035\n\033ParallelismPriorityStrategy\" \n\014Jo" +
-      "bNameGroup\022\020\n\010job_name\030\001 \003(\t\"M\n\031CustomPa" +
-      "rallelismStrategy\0220\n\021nonparallel_group\030\001" +
-      " \003(\0132\025.oneflow.JobNameGroup\"\364\001\n\030InterJob" +
-      "ReuseMemStrategy\022?\n\022reuse_mem_priority\030\001" +
-      " \001(\0132!.oneflow.ReuseMemPriorityStrategyH" +
-      "\000\022D\n\024parallelism_priority\030\002 \001(\0132$.oneflo" +
-      "w.ParallelismPriorityStrategyH\000\022@\n\022custo",
-      "m_parallelism\030\003 \001(\0132\".oneflow.CustomPara" +
-      "llelismStrategyH\000B\017\n\rstrategy_case\"\255\001\n\013C" +
-      "onfigProto\022#\n\010resource\030\001 \002(\0132\021.oneflow.R" +
-      "esource\022 \n\007io_conf\030\002 \002(\0132\017.oneflow.IOCon" +
-      "f\022,\n\rprofiler_conf\030\003 \001(\0132\025.oneflow.Profi" +
-      "lerConf\022\025\n\rload_lib_path\030\004 \003(\t\022\022\n\nsessio" +
-      "n_id\030\005 \002(\003\"l\n\006JobSet\022\031\n\003job\030\001 \003(\0132\014.onef" +
-      "low.Job\022G\n\034inter_job_reuse_mem_strategy\030" +
-      "\005 \001(\0132!.oneflow.InterJobReuseMemStrategy" +
-      "B\026\n\024org.oneflow.core.job"
+      "ore/job/resource.proto\"0\n\014ProfilerConf\022 " +
+      "\n\021collect_act_event\030\001 \001(\010:\005false\"\032\n\030Reus" +
+      "eMemPriorityStrategy\"\035\n\033ParallelismPrior" +
+      "ityStrategy\" \n\014JobNameGroup\022\020\n\010job_name\030" +
+      "\001 \003(\t\"M\n\031CustomParallelismStrategy\0220\n\021no" +
+      "nparallel_group\030\001 \003(\0132\025.oneflow.JobNameG" +
+      "roup\"\364\001\n\030InterJobReuseMemStrategy\022?\n\022reu" +
+      "se_mem_priority\030\001 \001(\0132!.oneflow.ReuseMem",
+      "PriorityStrategyH\000\022D\n\024parallelism_priori" +
+      "ty\030\002 \001(\0132$.oneflow.ParallelismPrioritySt" +
+      "rategyH\000\022@\n\022custom_parallelism\030\003 \001(\0132\".o" +
+      "neflow.CustomParallelismStrategyH\000B\017\n\rst" +
+      "rategy_case\"\213\001\n\013ConfigProto\022#\n\010resource\030" +
+      "\001 \002(\0132\021.oneflow.Resource\022,\n\rprofiler_con" +
+      "f\030\003 \001(\0132\025.oneflow.ProfilerConf\022\025\n\rload_l" +
+      "ib_path\030\004 \003(\t\022\022\n\nsession_id\030\005 \002(\003\"l\n\006Job" +
+      "Set\022\031\n\003job\030\001 \003(\0132\014.oneflow.Job\022G\n\034inter_" +
+      "job_reuse_mem_strategy\030\005 \001(\0132!.oneflow.I",
+      "nterJobReuseMemStrategyB\026\n\024org.oneflow.c" +
+      "ore.job"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7125,65 +5742,57 @@ public final class JobSetOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.oneflow.core.job.JobOuterClass.getDescriptor(),
           org.oneflow.core.job.ResourceOuterClass.getDescriptor(),
-          org.oneflow.core.job.FileSystemConfOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_oneflow_IOConf_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_oneflow_IOConf_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_oneflow_IOConf_descriptor,
-        new java.lang.String[] { "DataFsConf", "SnapshotFsConf", "SaveDownloadedFileToLocalFs", "PersistenceBufByte", "EnableModelIoV2", "EnableLegacyModelIo", });
     internal_static_oneflow_ProfilerConf_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_oneflow_ProfilerConf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ProfilerConf_descriptor,
         new java.lang.String[] { "CollectActEvent", });
     internal_static_oneflow_ReuseMemPriorityStrategy_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_oneflow_ReuseMemPriorityStrategy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ReuseMemPriorityStrategy_descriptor,
         new java.lang.String[] { });
     internal_static_oneflow_ParallelismPriorityStrategy_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_oneflow_ParallelismPriorityStrategy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ParallelismPriorityStrategy_descriptor,
         new java.lang.String[] { });
     internal_static_oneflow_JobNameGroup_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_oneflow_JobNameGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_JobNameGroup_descriptor,
         new java.lang.String[] { "JobName", });
     internal_static_oneflow_CustomParallelismStrategy_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_oneflow_CustomParallelismStrategy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_CustomParallelismStrategy_descriptor,
         new java.lang.String[] { "NonparallelGroup", });
     internal_static_oneflow_InterJobReuseMemStrategy_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_oneflow_InterJobReuseMemStrategy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_InterJobReuseMemStrategy_descriptor,
         new java.lang.String[] { "ReuseMemPriority", "ParallelismPriority", "CustomParallelism", "StrategyCase", });
     internal_static_oneflow_ConfigProto_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_oneflow_ConfigProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_ConfigProto_descriptor,
-        new java.lang.String[] { "Resource", "IoConf", "ProfilerConf", "LoadLibPath", "SessionId", });
+        new java.lang.String[] { "Resource", "ProfilerConf", "LoadLibPath", "SessionId", });
     internal_static_oneflow_JobSet_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_oneflow_JobSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_JobSet_descriptor,
         new java.lang.String[] { "Job", "InterJobReuseMemStrategy", });
     org.oneflow.core.job.JobOuterClass.getDescriptor();
     org.oneflow.core.job.ResourceOuterClass.getDescriptor();
-    org.oneflow.core.job.FileSystemConfOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

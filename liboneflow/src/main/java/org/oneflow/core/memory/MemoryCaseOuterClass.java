@@ -504,15 +504,6 @@ public final class MemoryCaseOuterClass {
      * <code>optional .oneflow.CudaPinnedMemory cuda_pinned_mem = 1;</code>
      */
     org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemoryOrBuilder getCudaPinnedMemOrBuilder();
-
-    /**
-     * <code>optional bool used_by_network = 2 [default = false];</code>
-     */
-    boolean hasUsedByNetwork();
-    /**
-     * <code>optional bool used_by_network = 2 [default = false];</code>
-     */
-    boolean getUsedByNetwork();
   }
   /**
    * Protobuf type {@code oneflow.HostMemory}
@@ -526,7 +517,6 @@ public final class MemoryCaseOuterClass {
       super(builder);
     }
     private HostMemory() {
-      usedByNetwork_ = false;
     }
 
     @java.lang.Override
@@ -568,11 +558,6 @@ public final class MemoryCaseOuterClass {
                 cudaPinnedMem_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000001;
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              usedByNetwork_ = input.readBool();
               break;
             }
           }
@@ -621,21 +606,6 @@ public final class MemoryCaseOuterClass {
       return cudaPinnedMem_ == null ? org.oneflow.core.memory.MemoryCaseOuterClass.CudaPinnedMemory.getDefaultInstance() : cudaPinnedMem_;
     }
 
-    public static final int USED_BY_NETWORK_FIELD_NUMBER = 2;
-    private boolean usedByNetwork_;
-    /**
-     * <code>optional bool used_by_network = 2 [default = false];</code>
-     */
-    public boolean hasUsedByNetwork() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional bool used_by_network = 2 [default = false];</code>
-     */
-    public boolean getUsedByNetwork() {
-      return usedByNetwork_;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -657,9 +627,6 @@ public final class MemoryCaseOuterClass {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(1, getCudaPinnedMem());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBool(2, usedByNetwork_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -671,10 +638,6 @@ public final class MemoryCaseOuterClass {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCudaPinnedMem());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, usedByNetwork_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -698,11 +661,6 @@ public final class MemoryCaseOuterClass {
         result = result && getCudaPinnedMem()
             .equals(other.getCudaPinnedMem());
       }
-      result = result && (hasUsedByNetwork() == other.hasUsedByNetwork());
-      if (hasUsedByNetwork()) {
-        result = result && (getUsedByNetwork()
-            == other.getUsedByNetwork());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -717,11 +675,6 @@ public final class MemoryCaseOuterClass {
       if (hasCudaPinnedMem()) {
         hash = (37 * hash) + CUDA_PINNED_MEM_FIELD_NUMBER;
         hash = (53 * hash) + getCudaPinnedMem().hashCode();
-      }
-      if (hasUsedByNetwork()) {
-        hash = (37 * hash) + USED_BY_NETWORK_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getUsedByNetwork());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -848,8 +801,6 @@ public final class MemoryCaseOuterClass {
           cudaPinnedMemBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        usedByNetwork_ = false;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -882,10 +833,6 @@ public final class MemoryCaseOuterClass {
         } else {
           result.cudaPinnedMem_ = cudaPinnedMemBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.usedByNetwork_ = usedByNetwork_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -930,9 +877,6 @@ public final class MemoryCaseOuterClass {
         if (other == org.oneflow.core.memory.MemoryCaseOuterClass.HostMemory.getDefaultInstance()) return this;
         if (other.hasCudaPinnedMem()) {
           mergeCudaPinnedMem(other.getCudaPinnedMem());
-        }
-        if (other.hasUsedByNetwork()) {
-          setUsedByNetwork(other.getUsedByNetwork());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1083,38 +1027,6 @@ public final class MemoryCaseOuterClass {
           cudaPinnedMem_ = null;
         }
         return cudaPinnedMemBuilder_;
-      }
-
-      private boolean usedByNetwork_ ;
-      /**
-       * <code>optional bool used_by_network = 2 [default = false];</code>
-       */
-      public boolean hasUsedByNetwork() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional bool used_by_network = 2 [default = false];</code>
-       */
-      public boolean getUsedByNetwork() {
-        return usedByNetwork_;
-      }
-      /**
-       * <code>optional bool used_by_network = 2 [default = false];</code>
-       */
-      public Builder setUsedByNetwork(boolean value) {
-        bitField0_ |= 0x00000002;
-        usedByNetwork_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool used_by_network = 2 [default = false];</code>
-       */
-      public Builder clearUsedByNetwork() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        usedByNetwork_ = false;
-        onChanged();
-        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2575,14 +2487,13 @@ public final class MemoryCaseOuterClass {
     java.lang.String[] descriptorData = {
       "\n%oneflow/core/memory/memory_case.proto\022" +
       "\007oneflow\"%\n\020CudaPinnedMemory\022\021\n\tdevice_i" +
-      "d\030\001 \002(\003\"`\n\nHostMemory\0222\n\017cuda_pinned_mem" +
-      "\030\001 \001(\0132\031.oneflow.CudaPinnedMemory\022\036\n\017use" +
-      "d_by_network\030\002 \001(\010:\005false\"%\n\020DeviceCudaM" +
-      "emory\022\021\n\tdevice_id\030\001 \002(\003\"s\n\nMemoryCase\022\'" +
-      "\n\010host_mem\030\001 \001(\0132\023.oneflow.HostMemoryH\000\022" +
-      "4\n\017device_cuda_mem\030\002 \001(\0132\031.oneflow.Devic" +
-      "eCudaMemoryH\000B\006\n\004caseB\031\n\027org.oneflow.cor" +
-      "e.memory"
+      "d\030\001 \002(\003\"@\n\nHostMemory\0222\n\017cuda_pinned_mem" +
+      "\030\001 \001(\0132\031.oneflow.CudaPinnedMemory\"%\n\020Dev" +
+      "iceCudaMemory\022\021\n\tdevice_id\030\001 \002(\003\"s\n\nMemo" +
+      "ryCase\022\'\n\010host_mem\030\001 \001(\0132\023.oneflow.HostM" +
+      "emoryH\000\0224\n\017device_cuda_mem\030\002 \001(\0132\031.onefl" +
+      "ow.DeviceCudaMemoryH\000B\006\n\004caseB\031\n\027org.one" +
+      "flow.core.memory"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2607,7 +2518,7 @@ public final class MemoryCaseOuterClass {
     internal_static_oneflow_HostMemory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_oneflow_HostMemory_descriptor,
-        new java.lang.String[] { "CudaPinnedMem", "UsedByNetwork", });
+        new java.lang.String[] { "CudaPinnedMem", });
     internal_static_oneflow_DeviceCudaMemory_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_oneflow_DeviceCudaMemory_fieldAccessorTable = new
