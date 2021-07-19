@@ -37,15 +37,25 @@ public class InferenceSession {
     }
 
     private final int port;
+    private final Option option;
     private String checkpointPath;
     private InterUserJobInfo interUserJobInfo;
 
     public InferenceSession() {
-        port = ConfigConst.PORT;
+        this(ConfigConst.PORT, new Option());
     }
 
     public InferenceSession(int port) {
+        this(port, new Option());
+    }
+
+    public InferenceSession(Option option) {
+        this(ConfigConst.PORT, option);
+    }
+
+    public InferenceSession(int port, Option option) {
         this.port = port;
+        this.option = option;
     }
 
     /**
@@ -67,14 +77,27 @@ public class InferenceSession {
 
         // 3, session init
         if (!InferenceSession.isSessionInited()) {
-            ConfigProto configProto = ConfigProto.newBuilder()
-                    .setResource(ResourceOuterClass.Resource.newBuilder()
-                            .setMachineNum(1)
-                            .setGpuDeviceNum(1)
-                            .setEnableLegacyModelIo(true)
-                            .build())
-                    .setSessionId(0)
-                    .build();
+            ConfigProto configProto;
+            if ("gpu".equals(option.getDeviceTag())) {
+                configProto = ConfigProto.newBuilder()
+                        .setResource(ResourceOuterClass.Resource.newBuilder()
+                                .setMachineNum(option.getDeviceNum())
+                                .setGpuDeviceNum(option.getDeviceNum())
+                                .setEnableLegacyModelIo(true)
+                                .build())
+                        .setSessionId(0)
+                        .build();
+            }
+            else {
+                configProto = ConfigProto.newBuilder()
+                        .setResource(ResourceOuterClass.Resource.newBuilder()
+                                .setMachineNum(getNodeSize())
+                                .setCpuDeviceNum(option.getDeviceNum())
+                                .setEnableLegacyModelIo(true)
+                                .build())
+                        .setSessionId(0)
+                        .build();
+            }
 
             InferenceSession.initSession(configProto.toString());
         }
@@ -114,7 +137,9 @@ public class InferenceSession {
                 .setPredictConf(JobConf.PredictConf.newBuilder().build())
                 .build();
         InferenceSession.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
-        InferenceSession.setScopeForCurJob(jobConfigProto.toString());
+
+        // Todo: device_id_tags
+        InferenceSession.setScopeForCurJob(jobConfigProto.toString(), "0:0", option.getDeviceTag());
 
         // 2, do the compilation
         for (OperatorConf conf : graphDef.getOpListList()) {
@@ -193,6 +218,7 @@ public class InferenceSession {
 
     // 0 for big endian, 1 for little endian
     private static native int getEndian();
+    private static native int getNodeSize();
 
     // init
     private static native void setIsMultiClient(boolean isMultiClient);
@@ -206,7 +232,7 @@ public class InferenceSession {
     // compile
     private static native void openJobBuildAndInferCtx(String jobName);
     private static native void setJobConfForCurJobBuildAndInferCtx(String jobConfProto);
-    private static native void setScopeForCurJob(String jobConfProto);
+    private static native void setScopeForCurJob(String jobConfProto, String ids, String device);
     private static native void curJobAddOp(String opConfProto);
     private static native void completeCurJobBuildAndInferCtx();
     private static native void rebuildCurJobBuildAndInferCtx();

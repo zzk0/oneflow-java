@@ -19,7 +19,11 @@ public class App {
         tensorMap.put("Input_14", imageTensor);  // Todo: support signature
         tensorMap.put("Input_15", tagTensor);
 
-        InferenceSession inferenceSession = new InferenceSession(8888);
+        // Option
+        Option option = new Option();
+        option.setDeviceTag(args[0]);
+
+        InferenceSession inferenceSession = new InferenceSession(8888, option);
         inferenceSession.open();
         inferenceSession.loadModel(savedModelDir);
         inferenceSession.launch();
@@ -34,7 +38,7 @@ public class App {
             System.out.println();
         }
 
-        int forwardTimes = 1000;
+        int forwardTimes = Integer.parseInt(args[1]);
         long curTime = System.currentTimeMillis();
         for (int i = 0; i < forwardTimes; i++) {
             resultMap = inferenceSession.run(jobName, tensorMap);

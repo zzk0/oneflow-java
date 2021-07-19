@@ -18,7 +18,7 @@ public class Option {
     private boolean mirroredView;
 
     /**
-     * Control port: default 7070
+     * Control port: default 11235
      */
     private int controlPort;
 
@@ -26,18 +26,12 @@ public class Option {
         this.deviceTag = "gpu";
         this.deviceNum = 1;
         this.mirroredView = false;
-        this.controlPort = 7070;
     }
 
     public Option(String deviceTag, int deviceNum, boolean mirroredView) {
         this.deviceTag = deviceTag;
         this.deviceNum = deviceNum;
         this.mirroredView = mirroredView;
-    }
-
-    public Option(String deviceTag, int deviceNum, boolean mirroredView, int controlPort) {
-        this(deviceTag, deviceNum, mirroredView);
-        this.controlPort = controlPort;
     }
 
     public String getDeviceTag() {
@@ -64,11 +58,4 @@ public class Option {
         this.mirroredView = mirroredView;
     }
 
-    public int getControlPort() {
-        return controlPort;
-    }
-
-    public void setControlPort(int controlPort) {
-        this.controlPort = controlPort;
-    }
 }
