@@ -6,6 +6,7 @@ import org.oneflow.core.job.Env.EnvProto;
 import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
+import org.oneflow.core.job.JobSetOuterClass.ConfigProto;
 import org.oneflow.core.operator.OpConf.OperatorConf;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
@@ -50,6 +51,8 @@ public class InferenceSession {
      * Init the Env and Session
      */
     public void open() {
+        setIsMultiClient(false);
+
         // 1, env init
         if (!InferenceSession.isEnvInited()) {
             doEnvInit(this.port);
@@ -182,6 +185,7 @@ public class InferenceSession {
     private static native int getEndian();
 
     // init
+    private static native void setIsMultiClient(boolean isMultiClient);
     private static native void initDefaultSession();
     private static native boolean isEnvInited();
     private static native void initEnv(String envProto);
