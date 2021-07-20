@@ -17,22 +17,11 @@ import org.oneflow.exception.InitializationException;
 import java.io.*;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class InferenceSession {
-
-    static {
-        System.loadLibrary("oneflow");
-
-        // Default Initialization: beyond import oneflow as flow
-        InferenceSession.initDefaultSession();
-        if (getEndian() == 0) {
-            Tensor.endian = ByteOrder.BIG_ENDIAN;
-        }
-    }
 
     private final Option option;
     private String checkpointPath;
@@ -50,21 +39,21 @@ public class InferenceSession {
      * Init the Env and Session
      */
     public void open() {
-        setIsMultiClient(false);
+        OneFlow.setIsMultiClient(false);
 
         // 1, env init
-        if (!InferenceSession.isEnvInited()) {
+        if (!OneFlow.isEnvInited()) {
             doEnvInit(this.option.getControlPort());
 
             // 2, scope init
-            InferenceSession.initScopeStack();
+            OneFlow.initScopeStack();
         }
-        if (!InferenceSession.isEnvInited()) {
+        if (!OneFlow.isEnvInited()) {
             throw new InitializationException("Env is not inited correctly");
         }
 
         // 3, session init
-        if (!InferenceSession.isSessionInited()) {
+        if (!OneFlow.isSessionInited()) {
             ConfigProto configProto;
             if ("gpu".equals(option.getDeviceTag())) {
                 configProto = ConfigProto.newBuilder()
@@ -79,7 +68,7 @@ public class InferenceSession {
             else {
                 configProto = ConfigProto.newBuilder()
                         .setResource(ResourceOuterClass.Resource.newBuilder()
-                                .setMachineNum(getNodeSize())
+                                .setMachineNum(OneFlow.getNodeSize())
                                 .setCpuDeviceNum(option.getDeviceNum())
                                 .setEnableLegacyModelIo(true)
                                 .build())
@@ -87,9 +76,9 @@ public class InferenceSession {
                         .build();
             }
 
-            InferenceSession.initSession(configProto.toString());
+            OneFlow.initSession(configProto.toString());
         }
-        if (!InferenceSession.isSessionInited()) {
+        if (!OneFlow.isSessionInited()) {
             throw new InitializationException("Session is not inited correctly");
         }
     }
@@ -119,32 +108,32 @@ public class InferenceSession {
         GraphDef graphDef = model.getGraphsOrThrow(graphName);
 
         // 1, prepare environment
-        InferenceSession.openJobBuildAndInferCtx(graphName);
+        OneFlow.openJobBuildAndInferCtx(graphName);
         JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
                 .setJobName(graphName)
                 .setPredictConf(JobConf.PredictConf.newBuilder().build())
                 .build();
-        InferenceSession.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
+        OneFlow.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
 
         // Todo: device_id_tags
-        InferenceSession.setScopeForCurJob(jobConfigProto.toString(), "0:0", option.getDeviceTag());
+        OneFlow.setScopeForCurJob(jobConfigProto.toString(), "0:0", option.getDeviceTag());
 
         // 2, do the compilation
         for (OperatorConf conf : graphDef.getOpListList()) {
-            InferenceSession.curJobAddOp(conf.toString());
+            OneFlow.curJobAddOp(conf.toString());
         }
-        InferenceSession.completeCurJobBuildAndInferCtx();
-        InferenceSession.rebuildCurJobBuildAndInferCtx();
+        OneFlow.completeCurJobBuildAndInferCtx();
+        OneFlow.rebuildCurJobBuildAndInferCtx();
 
         // 3, clean the environment
-        InferenceSession.unsetScopeForCurJob();
-        InferenceSession.closeJobBuildAndInferCtx();
+        OneFlow.unsetScopeForCurJob();
+        OneFlow.closeJobBuildAndInferCtx();
     }
 
     public void launch() {
-        InferenceSession.startLazyGlobalSession();
+        OneFlow.startLazyGlobalSession();
 
-        String interUserJobInfo = InferenceSession.getInterUserJobInfo();
+        String interUserJobInfo = OneFlow.getInterUserJobInfo();
         InterUserJobInfo info = null;
         try {
             info = InterUserJobInfo.parseFrom(interUserJobInfo.getBytes());
@@ -159,7 +148,7 @@ public class InferenceSession {
         byte[] checkpointBytes = checkpointPath.getBytes();
         ByteBuffer checkpointBuffer = ByteBuffer.allocateDirect(checkpointBytes.length);
         checkpointBuffer.put(checkpointBytes);
-        InferenceSession.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointBuffer);
+        OneFlow.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointBuffer);
     }
 
     public Map<String, Tensor> run(String jobName, Map<String, Tensor> tensorMap) {
@@ -169,17 +158,17 @@ public class InferenceSession {
             Tensor tensor = tensorMap.get(entry.getKey());
             Buffer dataBuffer = tensor.getDataBuffer();
 
-            InferenceSession.runSinglePushJob(dataBuffer, tensor.getShapeBuffer(),
+            OneFlow.runSinglePushJob(dataBuffer, tensor.getShapeBuffer(),
                     tensor.getDataType().code, entry.getValue(), entry.getKey());
         }
 
         // Inference
-        InferenceSession.runInferenceJob(jobName);
+        OneFlow.runInferenceJob(jobName);
 
         // Pull
         Map<String, Tensor> resultMap = new HashMap<>();
         for (Map.Entry<String, String> entry : interUserJobInfo.getOutputOrVarOpName2PullJobNameMap().entrySet()) {
-            Tensor res = InferenceSession.runPullJob(entry.getValue(), entry.getKey());
+            Tensor res = OneFlow.runPullJob(entry.getValue(), entry.getKey());
             resultMap.put(entry.getKey(), res);
         }
 
@@ -187,10 +176,10 @@ public class InferenceSession {
     }
 
     public void close() {
-        InferenceSession.stopLazyGlobalSession();
-        InferenceSession.destroyLazyGlobalSession();
-        InferenceSession.destroyEnv();
-        InferenceSession.setShuttingDown();
+        OneFlow.stopLazyGlobalSession();
+        OneFlow.destroyLazyGlobalSession();
+        OneFlow.destroyEnv();
+        OneFlow.setShuttingDown();
     }
 
     private static void doEnvInit(int port) {
@@ -201,51 +190,7 @@ public class InferenceSession {
                         .setAddr("127.0.0.1"))
                 .setCtrlPort(port)
                 .build();
-        InferenceSession.initEnv(envProto.toString());
+        OneFlow.initEnv(envProto.toString());
     }
 
-    // 0 for big endian, 1 for little endian
-    private static native int getEndian();
-    private static native int getNodeSize();
-
-    // init
-    private static native void setIsMultiClient(boolean isMultiClient);
-    private static native void initDefaultSession();
-    private static native boolean isEnvInited();
-    private static native void initEnv(String envProto);
-    private static native void initScopeStack();
-    private static native boolean isSessionInited();
-    private static native void initSession(String configProto);
-
-    // compile
-    private static native void openJobBuildAndInferCtx(String jobName);
-    private static native void setJobConfForCurJobBuildAndInferCtx(String jobConfProto);
-    private static native void setScopeForCurJob(String jobConfProto, String ids, String device);
-    private static native void curJobAddOp(String opConfProto);
-    private static native void completeCurJobBuildAndInferCtx();
-    private static native void rebuildCurJobBuildAndInferCtx();
-    private static native void unsetScopeForCurJob();
-    private static native void closeJobBuildAndInferCtx();
-
-    // launch
-    private static native void startLazyGlobalSession();
-    private static native void loadCheckpoint(String jobName, Buffer path);
-
-    // forward
-    private static native void runSinglePushJob(Buffer data,
-                                               Buffer shape,
-                                               int dTypeCode,
-                                               String jobName,
-                                               String opName);
-    private static native void runInferenceJob(String jobName);
-    private static native Tensor runPullJob(String jobName, String opName);
-
-    // clean
-    private static native void stopLazyGlobalSession();
-    private static native void destroyLazyGlobalSession();
-    private static native void destroyEnv();
-    private static native void setShuttingDown();
-
-    // others
-    private static native String getInterUserJobInfo();
 }
