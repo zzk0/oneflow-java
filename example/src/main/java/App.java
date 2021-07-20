@@ -17,10 +17,10 @@ public class App {
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
         Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
         Map<String, Tensor> tensorMap = new HashMap<>();
-        tensorMap.put("Input_14", imageTensor);  // Todo: support signature
+        tensorMap.put("Input_14", imageTensor);
         tensorMap.put("Input_15", tagTensor);
 
-        InferenceSession inferenceSession = new InferenceSession(8888);
+        InferenceSession inferenceSession = new InferenceSession();
         inferenceSession.open();
         inferenceSession.loadModel(savedModelDir);
         inferenceSession.launch();
@@ -35,23 +35,6 @@ public class App {
             System.out.println();
         }
         inferenceSession.close();
-
-        // assert
-        float[] vector = resultMap.get("Return_17").getDataAsFloatArray();
-        if (10 != vector.length) {
-            System.out.println("vector.length is not equal to 10");
-            System.exit(-1);
-        }
-        float[] expectedVector = { -129.57167f, -89.084816f, -139.21355f , -103.455025f, -9.179366f,
-                -69.568474f, -133.39594f,  -16.204329f, -114.90876f,  -47.933548f };
-        float delta = 0.0001f;
-        for (int i = 0; i < 10; i++) {
-            if (Math.abs(expectedVector[i] - vector[i]) > delta) {
-                System.out.println("vector is not expected");
-                System.exit(-1);
-            }
-        }
-        System.out.println("Pass");
     }
 
     public static float[] readImage(String filePath) {

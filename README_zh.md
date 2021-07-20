@@ -52,14 +52,14 @@ export LD_LIBRARY_PATH="{path}/oneflow/build/oneflow/api/java:$LD_LIBRARY_PATH"
 
 ## 使用 Java 版本的 OneFlow
 
-从 Github 上面下载 [release](https://github.com/zzk0/oneflow-java/releases/download/v1.0.0-alpha/liboneflow-1.0.0-alpha.zip)
+从 Github 上面下载 [release](https://github.com/zzk0/oneflow-java/releases/download/v1.1.0-alpha/liboneflow-1.1.0-alpha.zip)
 
 解压，里面有一个 jar 包。这个 jar 包依赖了 `com.google.protobuf` 使用的时候，也需要引入。下面给出 Maven 中的使用办法。
 
-第一，将 liboneflow-1.0.0-alpha.jar 安装到本地 Maven 仓库。
+第一，将 liboneflow-1.1.0-alpha.jar 安装到本地 Maven 仓库。
 
 ```
-mvn install:install-file -DgroupId=org.oneflow -DartifactId=liboneflow -Dversion=1.0.0-alpha -Dpackaging=jar -Dfile={path}\liboneflow-1.0.0-alpha.jar
+mvn install:install-file -DgroupId=org.oneflow -DartifactId=liboneflow -Dversion=1.1.0-alpha -Dpackaging=jar -Dfile={path}\liboneflow-1.1.0-alpha.jar
 ```
 
 第二，在 Maven 中引入如下依赖。
@@ -68,7 +68,7 @@ mvn install:install-file -DgroupId=org.oneflow -DartifactId=liboneflow -Dversion
 <dependency>
     <groupId>org.oneflow</groupId>
     <artifactId>liboneflow</artifactId>
-    <version>1.0.0-alpha</version>
+    <version>1.1.0-alpha</version>
 </dependency>
 
 <dependency>
