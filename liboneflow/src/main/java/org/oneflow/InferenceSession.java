@@ -6,13 +6,16 @@ import org.oneflow.core.job.Env.EnvProto;
 import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
+import org.oneflow.core.job.JobSetOuterClass.ConfigProtoOrBuilder;
 import org.oneflow.core.job.JobSetOuterClass.ConfigProto;
-import org.oneflow.core.job.ResourceOuterClass;
+import org.oneflow.core.job.ResourceOuterClass.Resource;
 import org.oneflow.core.operator.OpConf.OperatorConf;
 import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
 import org.oneflow.exception.CheckNullException;
+import org.oneflow.exception.FileNotExistException;
 import org.oneflow.exception.InitializationException;
+import org.oneflow.util.ConfigConst;
 
 import java.io.*;
 import java.nio.Buffer;
@@ -54,29 +57,23 @@ public class InferenceSession {
 
         // 3, session init
         if (!OneFlow.isSessionInited()) {
-            ConfigProto configProto;
+            Resource.Builder resourceBuilder = Resource.newBuilder();
+            resourceBuilder.setMachineNum(1); // Todo: machine num
+            resourceBuilder.setEnableLegacyModelIo(true);
             if ("gpu".equals(option.getDeviceTag())) {
-                configProto = ConfigProto.newBuilder()
-                        .setResource(ResourceOuterClass.Resource.newBuilder()
-                                .setMachineNum(option.getDeviceNum())
-                                .setGpuDeviceNum(option.getDeviceNum())
-                                .setEnableLegacyModelIo(true)
-                                .build())
-                        .setSessionId(0)
-                        .build();
+                resourceBuilder.setGpuDeviceNum(option.getDeviceNum());
+                resourceBuilder.setCpuDeviceNum(0);
             }
             else {
-                configProto = ConfigProto.newBuilder()
-                        .setResource(ResourceOuterClass.Resource.newBuilder()
-                                .setMachineNum(OneFlow.getNodeSize())
-                                .setCpuDeviceNum(option.getDeviceNum())
-                                .setEnableLegacyModelIo(true)
-                                .build())
-                        .setSessionId(0)
-                        .build();
+                resourceBuilder.setGpuDeviceNum(0);
+                resourceBuilder.setGpuDeviceNum(option.getDeviceNum());
             }
 
-            OneFlow.initSession(configProto.toString());
+            ConfigProto.Builder builder = ConfigProto.newBuilder();
+            builder.setSessionId(0); // Todo: session id
+            builder.setResource(resourceBuilder.build());
+
+            OneFlow.initSession(builder.build().toString());
         }
         if (!OneFlow.isSessionInited()) {
             throw new InitializationException("Session is not inited correctly");
@@ -88,19 +85,9 @@ public class InferenceSession {
      * @param path
      */
     public void loadModel(String path) {
-        String savedModelPath = path + "/1/";  // Todo: support different model version
-        File file = new File(savedModelPath + "saved_model.pb");  // Todo: support different format
-        SavedModel model = SavedModel.newBuilder()
-                .setName("")
-                .setVersion(1)
-                .setCheckpointDir("")
-                .build();
-        try (InputStream fis = new FileInputStream(file)) {
-            model = SavedModel.parseFrom(fis);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        String version = "1"; // Todo: support different version
+        String savedModelPath = path + File.separator + version + File.separator;
+        SavedModel model = readSavedModel(savedModelPath);
         this.checkpointPath= savedModelPath + File.separator + model.getCheckpointDir();
 
         // [Compile]
@@ -193,4 +180,28 @@ public class InferenceSession {
         OneFlow.initEnv(envProto.toString());
     }
 
+    private SavedModel readSavedModel(String path) {
+        File file = null;
+        for (String filename : ConfigConst.MODEL_FILENAMES) {
+            File modelFile = new File(path + filename);
+            if (modelFile.exists()) {
+                file = modelFile;
+                break;
+            }
+        }
+        if (file == null) {
+            throw new FileNotExistException(".pb/.proto file not exist");
+        }
+
+        SavedModel model = null;
+        try (InputStream fis = new FileInputStream(file)) {
+            model = SavedModel.parseFrom(fis);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Todo: need to handle model is null
+        return model;
+    }
 }
