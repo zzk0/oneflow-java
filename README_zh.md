@@ -92,17 +92,15 @@ mvn install:install-file -DgroupId=org.oneflow -DartifactId=liboneflow -Dversion
 
 ## 测试
 
-测试用例呢？在 test 分支。
+测试用例呢？
 
 因为开发环境的限制，这个项目采用的是本地开发 Java，远程运行 jar 包，IDEA 通过监听远程端口来实现调试。
 
-如果使用 Junit 来写测试用例，不太方便调试。所以，新建了一个 test 分支来写测试。后期折腾一下，看看如何将 Junit 的测试打包，并且运行和调试指定测试用例。
+如果使用 Junit 来写测试用例，不太方便调试。所以，在 main 函数里面来写测试。后期折腾一下，看看如何将 Junit 的测试打包，并且运行和调试指定测试用例。
 
 ## OneFlow 版本
 
-OneFlow 版本 0.3.5。
-
-在 0.4.0 版本中，有些类和接口发生了改变，构建直接失败了。比如，`foreign_job_instance` 改了个名字。对于这个问题，目前没有什么比较好的解决办法，只能是多多跟进。
+OneFlow 版本 0.4.0，已经将代码更新到 master 分支（2021/7/19）。
 
 # 其他
 
