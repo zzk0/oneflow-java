@@ -21,6 +21,7 @@ public class IntTensor extends Tensor {
 
     @Override
     public Buffer getDataBuffer() {
+        data.rewind();
         return data;
     }
 

@@ -21,6 +21,7 @@ public class FloatTensor extends Tensor {
 
     @Override
     public Buffer getDataBuffer() {
+        data.rewind();
         return data;
     }
 

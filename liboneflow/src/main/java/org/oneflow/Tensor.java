@@ -94,8 +94,10 @@ public abstract class Tensor {
     static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
         // Todo: why not call fromBlob?
         Tensor tensor = null;
+//        ByteBuffer byteBuffer = ByteBuffer.wrap(data);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(data.length);
         byteBuffer.put(data);
+        byteBuffer.rewind();
 
         if (DType.kFloat.code == dType) {
             tensor = new FloatTensor(shape, byteBuffer.order(endian).asFloatBuffer());
