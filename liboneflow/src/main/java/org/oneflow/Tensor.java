@@ -6,13 +6,9 @@ import org.oneflow.tensor.IntTensor;
 
 import java.nio.*;
 
-/**
- * Some fields and methods that I don't want user to set them or call them,
- * and I need to set them or call them in other classes, how can I make it?
- * e.g. endian and getShapeBuffer
- */
+
 public abstract class Tensor {
-    public static ByteOrder endian = ByteOrder.LITTLE_ENDIAN;
+    static ByteOrder endian = ByteOrder.LITTLE_ENDIAN;
 
     private final long[] shape;
 
@@ -44,7 +40,7 @@ public abstract class Tensor {
      * The byte order will depend on host machine, for x86, it will be little endian
      * @return specifically It is a DirectBuffer
      */
-    public Buffer getShapeBuffer() {
+    Buffer getShapeBuffer() {
         LongBuffer buffer = ByteBuffer.allocateDirect(shape.length * Long.BYTES)
                 .order(endian)
                 .asLongBuffer();
@@ -95,9 +91,11 @@ public abstract class Tensor {
      * This function will be called from native code, so when the function
      * signature changed, you need to changed the native code too
      */
-    public static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
+    static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
+        // Todo: why not call fromBlob?
         Tensor tensor = null;
-        ByteBuffer byteBuffer = ByteBuffer.wrap(data);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(data.length);
+        byteBuffer.put(data);
 
         if (DType.kFloat.code == dType) {
             tensor = new FloatTensor(shape, byteBuffer.order(endian).asFloatBuffer());
