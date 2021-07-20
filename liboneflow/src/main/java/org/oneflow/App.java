@@ -23,7 +23,7 @@ public class App {
         Option option = new Option();
         option.setDeviceTag(args[0]);
 
-        InferenceSession inferenceSession = new InferenceSession(8888, option);
+        InferenceSession inferenceSession = new InferenceSession(option);
         inferenceSession.open();
         inferenceSession.loadModel(savedModelDir);
         inferenceSession.launch();

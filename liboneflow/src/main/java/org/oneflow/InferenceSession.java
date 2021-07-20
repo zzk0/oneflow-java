@@ -13,13 +13,11 @@ import org.oneflow.core.serving.SavedModelOuterClass.SavedModel;
 import org.oneflow.core.serving.SavedModelOuterClass.GraphDef;
 import org.oneflow.exception.CheckNullException;
 import org.oneflow.exception.InitializationException;
-import org.oneflow.util.ConfigConst;
 
 import java.io.*;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.nio.LongBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,25 +34,15 @@ public class InferenceSession {
         }
     }
 
-    private final int port;
     private final Option option;
     private String checkpointPath;
     private InterUserJobInfo interUserJobInfo;
 
     public InferenceSession() {
-        this(ConfigConst.PORT, new Option());
-    }
-
-    public InferenceSession(int port) {
-        this(port, new Option());
+        this.option = new Option();
     }
 
     public InferenceSession(Option option) {
-        this(ConfigConst.PORT, option);
-    }
-
-    public InferenceSession(int port, Option option) {
-        this.port = port;
         this.option = option;
     }
 
@@ -66,7 +54,7 @@ public class InferenceSession {
 
         // 1, env init
         if (!InferenceSession.isEnvInited()) {
-            doEnvInit(this.port);
+            doEnvInit(this.option.getControlPort());
 
             // 2, scope init
             InferenceSession.initScopeStack();

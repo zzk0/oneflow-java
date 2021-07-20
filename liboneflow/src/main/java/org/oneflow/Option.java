@@ -1,5 +1,7 @@
 package org.oneflow;
 
+import org.oneflow.util.ConfigConst;
+
 public class Option {
 
     /**
@@ -18,7 +20,7 @@ public class Option {
     private boolean mirroredView;
 
     /**
-     * Control port: default 11235
+     * Control port: default ConfigConst.PORT(11235)
      */
     private int controlPort;
 
@@ -26,12 +28,7 @@ public class Option {
         this.deviceTag = "gpu";
         this.deviceNum = 1;
         this.mirroredView = false;
-    }
-
-    public Option(String deviceTag, int deviceNum, boolean mirroredView) {
-        this.deviceTag = deviceTag;
-        this.deviceNum = deviceNum;
-        this.mirroredView = mirroredView;
+        this.controlPort = ConfigConst.PORT;
     }
 
     public String getDeviceTag() {
@@ -58,4 +55,11 @@ public class Option {
         this.mirroredView = mirroredView;
     }
 
+    public int getControlPort() {
+        return controlPort;
+    }
+
+    public void setControlPort(int controlPort) {
+        this.controlPort = controlPort;
+    }
 }

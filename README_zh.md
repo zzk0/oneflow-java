@@ -10,7 +10,7 @@
 
 ## 构建 liboneflow.so
 
-下载 oneflow 源码，并且切换到 liboneflow_java 分支，接着执行命令以构建。步骤如下。
+下载 oneflow 源码，并且切换到 libOneFlow_java 分支，接着执行命令以构建。步骤如下。
 
 **clone 我的源码**
 
