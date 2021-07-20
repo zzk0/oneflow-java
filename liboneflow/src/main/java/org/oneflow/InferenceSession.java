@@ -6,7 +6,6 @@ import org.oneflow.core.job.Env.EnvProto;
 import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
 import org.oneflow.core.job.JobConf;
 import org.oneflow.core.job.JobConf.JobConfigProto;
-import org.oneflow.core.job.JobSetOuterClass.ConfigProtoOrBuilder;
 import org.oneflow.core.job.JobSetOuterClass.ConfigProto;
 import org.oneflow.core.job.ResourceOuterClass.Resource;
 import org.oneflow.core.operator.OpConf.OperatorConf;
@@ -18,7 +17,6 @@ import org.oneflow.exception.InitializationException;
 import org.oneflow.util.ConfigConst;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,9 +44,9 @@ public class InferenceSession {
 
         // 1, env init
         if (!OneFlow.isEnvInited()) {
-            doEnvInit(this.option.getControlPort());
+            doEnvInit(option.getControlPort());
 
-            // 2, scope init
+            // 2, scope init, Todo: pass this if CurrentMachineId not equal 0
             OneFlow.initScopeStack();
         }
         if (!OneFlow.isEnvInited()) {
@@ -66,7 +64,7 @@ public class InferenceSession {
             }
             else {
                 resourceBuilder.setGpuDeviceNum(0);
-                resourceBuilder.setGpuDeviceNum(option.getDeviceNum());
+                resourceBuilder.setCpuDeviceNum(option.getDeviceNum());
             }
 
             ConfigProto.Builder builder = ConfigProto.newBuilder();
@@ -82,6 +80,7 @@ public class InferenceSession {
 
     /**
      * try search the .pb/.prototxt file from given path and load it
+     * Todo: support graph_name, signature_name, model version, model file basename
      * @param path
      */
     public void loadModel(String path) {
@@ -103,7 +102,7 @@ public class InferenceSession {
         OneFlow.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
 
         // Todo: device_id_tags
-        OneFlow.setScopeForCurJob(jobConfigProto.toString(), "0:0", option.getDeviceTag());
+        OneFlow.setScopeForCurJob(jobConfigProto.toString(), ConfigConst.DEVICE_IDS, option.getDeviceTag());
 
         // 2, do the compilation
         for (OperatorConf conf : graphDef.getOpListList()) {
@@ -130,11 +129,12 @@ public class InferenceSession {
         if (info == null) {
             throw new CheckNullException("GetInterUserJobInfo failed");
         }
-
         this.interUserJobInfo = info;
+
         byte[] checkpointBytes = checkpointPath.getBytes();
         ByteBuffer checkpointBuffer = ByteBuffer.allocateDirect(checkpointBytes.length);
         checkpointBuffer.put(checkpointBytes);
+
         OneFlow.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointBuffer);
     }
 
@@ -143,9 +143,8 @@ public class InferenceSession {
         Map<String, String> inputNameToJobName = interUserJobInfo.getInputOrVarOpName2PushJobNameMap();
         for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
             Tensor tensor = tensorMap.get(entry.getKey());
-            Buffer dataBuffer = tensor.getDataBuffer();
 
-            OneFlow.runSinglePushJob(dataBuffer, tensor.getShapeBuffer(),
+            OneFlow.runSinglePushJob(tensor.getDataBuffer(), tensor.getShapeBuffer(),
                     tensor.getDataType().code, entry.getValue(), entry.getKey());
         }
 
@@ -173,10 +172,10 @@ public class InferenceSession {
         // reference: env_util.py 365 line
         EnvProto envProto = EnvProto.newBuilder()
                 .addMachine(Env.Machine.newBuilder()
-                        .setId(0)
-                        .setAddr("127.0.0.1"))
+                        .setId(ConfigConst.MACHINE_ID)
+                        .setAddr(ConfigConst.LOOPBACK))
                 .setCtrlPort(port)
-                .build();
+                .build(); // Todo: setId
         OneFlow.initEnv(envProto.toString());
     }
 
@@ -201,7 +200,7 @@ public class InferenceSession {
             e.printStackTrace();
         }
 
-        // Todo: need to handle model is null
+        // Todo: need to handle if model is null
         return model;
     }
 }
