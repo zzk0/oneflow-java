@@ -1,6 +1,8 @@
 package org.oneflow;
 
+import com.google.protobuf.Descriptors;
 import com.google.protobuf.InvalidProtocolBufferException;
+import org.oneflow.core.common.Shape;
 import org.oneflow.core.job.Env;
 import org.oneflow.core.job.Env.EnvProto;
 import org.oneflow.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
@@ -95,10 +97,20 @@ public class InferenceSession {
 
         // 1, prepare environment
         OneFlow.openJobBuildAndInferCtx(graphName);
+
+        // set signature
+        String signature_name = graphDef.getDefaultSignatureName();
+        JobConf.JobSignatureDef jobSignatureDef = null;
+        if (signature_name != null && !signature_name.equals("")) {
+            jobSignatureDef = graphDef.getSignaturesOrThrow(signature_name);
+        }
+
         JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
                 .setJobName(graphName)
                 .setPredictConf(JobConf.PredictConf.newBuilder().build())
+                .setSignature(jobSignatureDef)
                 .build();
+
         OneFlow.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
 
         // Todo: device_id_tags

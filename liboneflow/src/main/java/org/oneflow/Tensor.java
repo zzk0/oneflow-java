@@ -90,11 +90,11 @@ public abstract class Tensor {
     /**
      * This function will be called from native code, so when the function
      * signature changed, you need to changed the native code too
+     * command: javap -s Tensor.class
      */
     static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
         // Todo: why not call fromBlob?
         Tensor tensor = null;
-//        ByteBuffer byteBuffer = ByteBuffer.wrap(data);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(data.length);
         byteBuffer.put(data);
         byteBuffer.rewind();

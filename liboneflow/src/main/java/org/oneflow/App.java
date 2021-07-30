@@ -16,8 +16,8 @@ public class App {
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
         Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
         Map<String, Tensor> tensorMap = new HashMap<>();
-        tensorMap.put("Input_14", imageTensor);  // Todo: support signature
-        tensorMap.put("Input_15", tagTensor);
+        tensorMap.put("image", imageTensor);  // Todo: support signature
+//        tensorMap.put("Input_15", tagTensor);
 
         // Option
         Option option = new Option();
@@ -54,7 +54,7 @@ public class App {
         inferenceSession.close();
 
         // assert
-        float[] vector = resultMap.get("Return_17").getDataAsFloatArray();
+        float[] vector = resultMap.get("output").getDataAsFloatArray();
         if (10 != vector.length) {
             System.out.println("vector.length is not equal to 10");
             System.exit(-1);

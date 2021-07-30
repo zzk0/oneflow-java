@@ -14,6 +14,7 @@ public class App {
         String jobName = "mlp_inference";
         String savedModelDir = "./models";
         float[] image = readImage("./7.png");
+
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
         Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
         Map<String, Tensor> tensorMap = new HashMap<>();

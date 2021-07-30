@@ -36,7 +36,7 @@ git checkout -b libOneFlow_java FETCH_HEAD
 ```
 mkdir build
 cd build
-cmake .. -DBUILD_JNI=ON
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_JNI=ON -C ../cmake/caches/cn/cuda.cmake
 make oneflow -j$(nproc)
 ```
 
