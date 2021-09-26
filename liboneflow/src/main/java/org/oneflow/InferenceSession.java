@@ -1,21 +1,5 @@
 package org.oneflow;
 
-import com.google.protobuf.InvalidProtocolBufferException;
-import org.oneflow.proto.core.job.Env;
-import org.oneflow.proto.core.job.Env.EnvProto;
-import org.oneflow.proto.core.job.InterUserJobInfoOuterClass.InterUserJobInfo;
-import org.oneflow.proto.core.job.JobConf;
-import org.oneflow.proto.core.job.JobConf.JobConfigProto;
-import org.oneflow.proto.core.job.JobSetOuterClass.ConfigProto;
-import org.oneflow.proto.core.job.ResourceOuterClass.Resource;
-import org.oneflow.proto.core.operator.OpConf.OperatorConf;
-import org.oneflow.proto.core.serving.SavedModelOuterClass.SavedModel;
-import org.oneflow.proto.core.serving.SavedModelOuterClass.GraphDef;
-import org.oneflow.exception.CheckNullException;
-import org.oneflow.exception.FileNotExistException;
-import org.oneflow.exception.InitializationException;
-import org.oneflow.util.ConfigConst;
-
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
@@ -25,192 +9,122 @@ import java.util.Map;
 public class InferenceSession {
 
     private final Option option;
-    private String checkpointPath;
-    private InterUserJobInfo interUserJobInfo;
 
-    public InferenceSession() {
-        this.option = new Option();
-    }
+    private final static String CLOSE = "CLOSE";
+    private final static String OPEN = "OPEN";
+    private String status = CLOSE;
 
     public InferenceSession(Option option) {
         this.option = option;
     }
 
-    /**
-     * Init the Env and Session
-     */
-    public void open() {
-        OneFlow.setIsMultiClient(false);
+    public void open() throws RuntimeException {
+        checkStatus(CLOSE);
+        checkOption();
 
-        // 1, env init
         if (!OneFlow.isEnvInited()) {
-            doEnvInit(option.getControlPort());
-
-            // 2, scope init, Todo: pass this if CurrentMachineId not equal 0
-            OneFlow.initScopeStack();
-        }
-        if (!OneFlow.isEnvInited()) {
-            throw new InitializationException("Env is not inited correctly");
-        }
-
-        // 3, session init
-        if (!OneFlow.isSessionInited()) {
-            Resource.Builder resourceBuilder = Resource.newBuilder();
-            resourceBuilder.setMachineNum(1); // Todo: machine num
-            resourceBuilder.setEnableLegacyModelIo(true);
-            if ("gpu".equals(option.getDeviceTag())) {
-                resourceBuilder.setGpuDeviceNum(option.getDeviceNum());
-                resourceBuilder.setCpuDeviceNum(0);
+            OneFlow.initEnv(option.getControlPort());
+            if (OneFlow.currentMachineId() == 0) {
+                OneFlow.initScopeStack();
             }
-            else {
-                resourceBuilder.setGpuDeviceNum(0);
-                resourceBuilder.setCpuDeviceNum(option.getDeviceNum());
-            }
-
-            ConfigProto.Builder builder = ConfigProto.newBuilder();
-            builder.setSessionId(0); // Todo: session id
-            builder.setResource(resourceBuilder.build());
-
-            OneFlow.initSession(builder.build().toString());
         }
+
         if (!OneFlow.isSessionInited()) {
-            throw new InitializationException("Session is not inited correctly");
+            OneFlow.initSession(option.getDeviceTag());
         }
+
+        status = OPEN;
+        loadModel(option.getSavedModelDir());
+        launch();
     }
 
-    /**
-     * try search the .pb/.prototxt file from given path and load it
-     * Todo: support graph_name, signature_name, model version, model file basename
-     * @param path
-     */
-    public void loadModel(String path) {
-        String version = "1"; // Todo: support different version
+    private void loadModel(String path) throws RuntimeException {
+        String version = option.getModelVersion();
         String savedModelPath = path + File.separator + version + File.separator;
-        SavedModel model = readSavedModel(savedModelPath);
-        this.checkpointPath= savedModelPath + File.separator + model.getCheckpointDir();
-
-        // [Compile]
-        String graphName = model.getDefaultGraphName();
-        GraphDef graphDef = model.getGraphsOrThrow(graphName);
-
-        // 1, prepare environment
-        OneFlow.openJobBuildAndInferCtx(graphName);
-
-        // set signature
-        String signature_name = graphDef.getDefaultSignatureName();
-        JobConf.JobSignatureDef jobSignatureDef = null;
-        if (signature_name != null && !signature_name.equals("")) {
-            jobSignatureDef = graphDef.getSignaturesOrThrow(signature_name);
-        }
-
-        JobConfigProto jobConfigProto = JobConfigProto.newBuilder()
-                .setJobName(graphName)
-                .setPredictConf(JobConf.PredictConf.newBuilder().build())
-                .setSignature(jobSignatureDef)
-                .build();
-
-        OneFlow.setJobConfForCurJobBuildAndInferCtx(jobConfigProto.toString());
-
-        // Todo: device_id_tags
-        OneFlow.setScopeForCurJob(jobConfigProto.toString(), ConfigConst.DEVICE_IDS, option.getDeviceTag());
-
-        // 2, do the compilation
-        for (OperatorConf conf : graphDef.getOpListList()) {
-            OneFlow.curJobAddOp(conf.toString());
-        }
-        OneFlow.completeCurJobBuildAndInferCtx();
-        OneFlow.rebuildCurJobBuildAndInferCtx();
-
-        // 3, clean the environment
-        OneFlow.unsetScopeForCurJob();
-        OneFlow.closeJobBuildAndInferCtx();
+        option.setModelProtoPath(savedModelPath + File.separator + option.getMetaFileBaseName());
+        checkModelProtoFile();
+        OneFlow.loadModel(option);
     }
 
-    public void launch() {
+    private void launch() throws RuntimeException {
         OneFlow.startLazyGlobalSession();
 
-        String interUserJobInfo = OneFlow.getInterUserJobInfo();
-        InterUserJobInfo info = null;
-        try {
-            info = InterUserJobInfo.parseFrom(interUserJobInfo.getBytes());
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-        }
-        if (info == null) {
-            throw new CheckNullException("GetInterUserJobInfo failed");
-        }
-        this.interUserJobInfo = info;
-
-        byte[] checkpointBytes = checkpointPath.getBytes();
+        String path = option.getSavedModelDir() + File.separator +
+                option.getModelVersion() + File.separator +
+                option.getCheckpointDir();
+        checkCheckpointDir(path);
+        byte[] checkpointBytes = path.getBytes();
         ByteBuffer checkpointBuffer = ByteBuffer.allocateDirect(checkpointBytes.length);
         checkpointBuffer.put(checkpointBytes);
 
-        OneFlow.loadCheckpoint(info.getGlobalModelLoadJobName(), checkpointBuffer);
+        OneFlow.loadCheckpoint(checkpointBuffer);
     }
 
-    public Map<String, Tensor> run(String jobName, Map<String, Tensor> tensorMap) {
-        // Push
-        Map<String, String> inputNameToJobName = interUserJobInfo.getInputOrVarOpName2PushJobNameMap();
-        for (Map.Entry<String, String> entry : inputNameToJobName.entrySet()) {
-            Tensor tensor = tensorMap.get(entry.getKey());
-
+    public synchronized Map<String, Tensor> run(String jobName, Map<String, Tensor> tensorMap) throws RuntimeException {
+        checkStatus(OPEN);
+        // push job names: [job, op, job, op, ...]
+        String[] pushJobNames = OneFlow.getPushJobNames().split(",");
+        for (int i = 0; i < pushJobNames.length; i += 2) {
+            Tensor tensor = tensorMap.get(pushJobNames[i]);
             OneFlow.runSinglePushJob(tensor.getDataBuffer(), tensor.getShapeBuffer(),
-                    tensor.getDataType().code, entry.getValue(), entry.getKey());
+                    tensor.getDataType().code, pushJobNames[i + 1], pushJobNames[i]);
         }
 
         // Inference
         OneFlow.runInferenceJob(jobName);
 
         // Pull
+        String[] pullJobNames = OneFlow.getPullJobNames().split(",");
         Map<String, Tensor> resultMap = new HashMap<>();
-        for (Map.Entry<String, String> entry : interUserJobInfo.getOutputOrVarOpName2PullJobNameMap().entrySet()) {
-            Tensor res = OneFlow.runPullJob(entry.getValue(), entry.getKey());
-            resultMap.put(entry.getKey(), res);
+        for (int i = 0; i < pullJobNames.length; i += 2) {
+            Tensor res = OneFlow.runPullJob(pullJobNames[i + 1], pullJobNames[i]);
+            resultMap.put(pullJobNames[i], res);
         }
 
         return resultMap;
     }
 
-    public void close() {
+    public void close() throws RuntimeException {
+        checkStatus(OPEN);
+
         OneFlow.stopLazyGlobalSession();
         OneFlow.destroyLazyGlobalSession();
-        OneFlow.destroyEnv();
-        OneFlow.setShuttingDown();
+
+        status = CLOSE;
     }
 
-    private static void doEnvInit(int port) {
-        // reference: env_util.py 365 line
-        EnvProto envProto = EnvProto.newBuilder()
-                .addMachine(Env.Machine.newBuilder()
-                        .setId(ConfigConst.MACHINE_ID)
-                        .setAddr(ConfigConst.LOOPBACK))
-                .setCtrlPort(port)
-                .build(); // Todo: setId
-        OneFlow.initEnv(envProto.toString());
+    private void checkOption() throws RuntimeException {
+        if (option.getDeviceTag() == null) {
+            throw new RuntimeException("device tag cannot be null");
+        }
+        else if (option.getSavedModelDir() == null) {
+            throw new RuntimeException("saved model dir cannot be null");
+        }
+        else if (option.getControlPort() == null) {
+            throw new RuntimeException("control port cannot be null");
+        }
+        else if (option.getModelVersion() == null) {
+            throw new RuntimeException("model version cannot be null");
+        }
     }
 
-    private SavedModel readSavedModel(String path) {
-        File file = null;
-        for (String filename : ConfigConst.MODEL_FILENAMES) {
-            File modelFile = new File(path + filename);
-            if (modelFile.exists()) {
-                file = modelFile;
-                break;
-            }
+    private void checkModelProtoFile() throws RuntimeException {
+        File protoFile = new File(option.getModelProtoPath());
+        if (!protoFile.exists()) {
+            throw new RuntimeException(".pb file is not exist");
         }
-        if (file == null) {
-            throw new FileNotExistException(".pb/.proto file not exist");
-        }
+    }
 
-        SavedModel model = null;
-        try (InputStream fis = new FileInputStream(file)) {
-            model = SavedModel.parseFrom(fis);
+    private void checkCheckpointDir(String path) throws RuntimeException {
+        File checkpointDir = new File(path);
+        if (!checkpointDir.exists()) {
+            throw new RuntimeException("checkpoint dir is not exist");
         }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+    }
 
-        // Todo: need to handle if model is null
-        return model;
+    private void checkStatus(String expected) throws RuntimeException {
+        if (!status.equals(expected)) {
+            throw new RuntimeException("session status check failed");
+        }
     }
 }

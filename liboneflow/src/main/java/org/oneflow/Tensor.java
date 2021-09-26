@@ -93,7 +93,6 @@ public abstract class Tensor {
      * command: javap -s Tensor.class
      */
     static Tensor nativeNewTensor(byte[] data, long[] shape, int dType) {
-        // Todo: why not call fromBlob?
         Tensor tensor = null;
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(data.length);
         byteBuffer.put(data);
