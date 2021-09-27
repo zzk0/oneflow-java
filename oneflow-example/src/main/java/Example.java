@@ -6,45 +6,48 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.awt.image.Raster;
 import java.io.File;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+public class Example {
 
-public class App {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(args));
-        String jobName = "mlp_inference";
         float[] image = readImage(args[0]);
-        Option option = new Option();
-        option.setDeviceTag(args[1]);
-        option.setModelVersion("1");
-        option.setControlPort(11245);
-        option.setSavedModelDir(args[2]);
-
         Tensor imageTensor = Tensor.fromBlob(image, new long[]{ 1, 1, 28, 28 });
         Tensor tagTensor = Tensor.fromBlob(new int[]{ 1 }, new long[]{ 1 });
         Map<String, Tensor> tensorMap = new HashMap<>();
-        tensorMap.put("image", imageTensor);
-//        tensorMap.put("Input_15", tagTensor);
+        tensorMap.put("Input_14", imageTensor);
+        tensorMap.put("Input_15", tagTensor);
 
+        Option option = new Option();
+        option.setDeviceTag("gpu")
+                .setSavedModelDir("mnist_test/models")
+                .setControlPort(12345)
+                .setModelVersion("1");
+
+        String jobName = "mlp_inference";
         InferenceSession inferenceSession = new InferenceSession(option);
         inferenceSession.open();
+        Map<String, Tensor> resultMap = inferenceSession.run(jobName, tensorMap);
+        for (Map.Entry<String, Tensor> entry : resultMap.entrySet()) {
+            Tensor resTensor = entry.getValue();
+            float[] resFloatArray = resTensor.getDataAsFloatArray();
 
-        long curTime = System.currentTimeMillis();
-        for (int i = 0; i < Integer.parseInt(args[3]); i++) {
-            Map<String, Tensor> resultMap = inferenceSession.run(jobName, tensorMap);
+            float maxVal = resFloatArray[0];
+            int maxPos = 0;
+            for (int i = 1; i < resFloatArray.length; i++) {
+                if (maxVal < resFloatArray[i]) {
+                    maxVal = resFloatArray[i];
+                    maxPos = i;
+                }
+            }
+
+            System.out.println("The prediction of image is: " + maxPos);
         }
-//        for (Map.Entry<String, Tensor> entry : resultMap.entrySet()) {
-//            Tensor resTensor = entry.getValue();
-//            float[] resFloatArray = resTensor.getDataAsFloatArray();
-//            System.out.println(Arrays.toString(resFloatArray));
-//        }
-        System.out.println(System.currentTimeMillis() - curTime);
         inferenceSession.close();
     }
 
-    public static float[] readImage(String filePath) {
+    private static float[] readImage(String filePath) {
         File file = new File(filePath);
         BufferedImage image = null;
         try {
