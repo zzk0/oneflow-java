@@ -72,4 +72,11 @@ oneflow 的动态图和 pytorch 接口基本兼容，除了 max 接口，其他�
 
 ## 结项报告
 
-尚未完成。
+[结项报告](./周泽楷+210130141_结项.pdf)
+
+## 性能对比
+
+下面的初步实验表明，Java 接口相比 Python 接口在推理性能上减少了 33.5% ~ 41.9% 的推理时间。
+
+![performance.png](./img/performance.png)
+
